@@ -1,0 +1,56 @@
+<ion-header>
+    <ion-navbar>
+        <ion-row>
+            <ion-col col-2>
+                <button class="button-nav" (click)="voltar()">
+                    <span ion-text style="font-size: 0.7em;">Voltar</span>
+                </button>
+            </ion-col>
+            <ion-col col-10>
+                <ion-title>Cadastro de Área</ion-title>
+            </ion-col>
+        </ion-row>
+    </ion-navbar>
+</ion-header>
+
+<ion-content has-header>
+    <ion-grid no-padding>
+        <ion-row padding-left padding-right>
+            <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
+                <form #cadastroForm="ngForm" padding-top>
+                    <ion-list radio-group no-margin [(ngModel)]="area.status" name="status">
+                        <ion-grid>
+                            <ion-row>
+                                <ion-col col-6>
+                                    <ion-item radio>
+                                        <ion-label>Em aberto</ion-label>
+                                        <ion-radio [value]="0" checked></ion-radio>
+                                    </ion-item>
+                                </ion-col>
+                                <ion-col col-6>
+                                    <ion-item radio>
+                                        <ion-label>Finalizado</ion-label>
+                                        <ion-radio [value]="1"></ion-radio>
+                                    </ion-item>
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </ion-list>
+                    <ion-item text-center transparent>
+                        <ion-label stacked>ÁREA</ion-label>
+                        <ion-input text-center required type="text" [(ngModel)]="area.descricao" name="area"></ion-input>
+                    </ion-item>
+                    <ion-item text-center transparent>
+                        <ion-label stacked>CHECKLIST</ion-label>
+                        <ion-select required [(ngModel)]="area.itensChecklist" multiple="true" name="checklist" okText="Ok"
+                            cancelText="Cancelar">
+                            <ion-option *ngFor="let item of opcoesItens; let i= index" [value]="item">{{item.descricao}}</ion-option>
+                        </ion-select>
+                    </ion-item>
+                    <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: black !important;"
+                        (click)="salvar(cadastroForm.valid)">Salvar</button>
+                </form>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

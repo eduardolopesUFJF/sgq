@@ -1,0 +1,39 @@
+<!-- Theme Action Sheet - With Text Header -->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle *ngIf="data.showMenu">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title *ngIf="data != null">{{data.headerTitle}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<!-- List Content -->
+<ion-content padding-top>
+  <ion-grid no-padding *ngIf="data != null">
+    <ion-row *ngIf="data != null">
+      <!-- Cards Full Image-->
+      <ion-col col-12 col-sm-6 col-lg-4 *ngFor="let item of data.items;let i = index" (click)="onEvent('onItemClick', item, $event)">
+        <ion-item no-lines transparent>
+          <!-- Card Categoty-->
+          <span new-category transparent no-padding text-uppercase>{{item.category}}</span>
+          <!-- Card Title-->
+          <h2 card-title text-wrap>{{item.title}}</h2>
+          <!-- Card Subtitle-->
+          <h3 card-subtitle>{{item.subtitle}}</h3>
+          <!-- Card Action Sheet Button-->
+          <div item-content text-right>
+            <button *ngIf="data.actionSheet.buttons.length > 0" ion-button ion-text button-action-shit (click)="presentActionSheet(data)">
+              <ion-icon [name]="data.shareIcon"></ion-icon>
+            </button>
+            <ion-badge box-shadow badge-light>{{item.button}}</ion-badge>
+            <ion-badge box-shadow badge-light>{{item.porUsuario}}</ion-badge>
+          </div>
+        </ion-item>
+        <!-- Card Big Image-->
+        <ion-card>
+          <img [src]="item.image" />
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

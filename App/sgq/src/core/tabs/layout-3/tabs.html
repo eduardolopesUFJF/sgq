@@ -1,0 +1,15 @@
+<!-- Theme Tabs Header tab - text -->
+<ion-tabs #tabs tabsPlacement='top' tabs-content>
+  <!-- Background -->
+  <div header>
+    <ion-item transparent  no-lines>
+      <!-- <div title-header> -->
+        <h1 item-title text-wrap>Worldwide Model Agency</h1>
+        <h2 item-subtitle>BEST MODELS</h2>
+      <!-- </div> -->
+    </ion-item>
+  </div>
+
+    <ion-tab [tabTitle]="item.title" [root]="item.page" *ngFor="let item of data.data;let i = index">
+    </ion-tab>
+</ion-tabs>

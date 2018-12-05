@@ -1,0 +1,62 @@
+/*  #Style Search - Simple
+===========================================*/
+search-bar-layout-1 {
+  .searchbar-input {
+    border: 1px solid theme-colors('mainColors', 'secondary');
+  }
+
+  .scroll-content {
+    margin-top: 176px !important;
+  }
+
+  ion-content {
+    ion-card {
+      position: relative;
+      height: 200px;
+      border-radius: $border-radius !important;
+      margin-bottom: 20px !important;
+      box-shadow: none !important;
+
+      &:before {
+        content: "";
+        @include gradient-primary;
+        position: absolute;
+        height: 50%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+      // Card Subtitle
+      [card-subtitle] {
+        color: color($googleCard, card-subtitle-basic) !important;
+      }
+
+      img {
+        height: 200px;
+      }
+
+      [title-block] {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        padding: 10px;
+      }
+      // New Category
+      [new-category] {
+        background: transparent !important;
+        text-align: center;
+        font-size: $h1-font-size !important;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+      }
+    }
+  }
+  // Card Title
+  [card-title] {
+    color: color($googleCard, card-title-full-images-cards) !important;
+  }
+}

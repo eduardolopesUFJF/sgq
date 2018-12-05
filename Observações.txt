@@ -1,0 +1,4 @@
+- Publicar novo app sempre que entrar novo cliente;
+
+- Mais de um usuário com mesmo login;
+

@@ -1,0 +1,17 @@
+/*  # Theme With avatar
+===========================================*/
+
+check-box-layout-3 {
+  .item-checkbox-checked {
+    background: theme-colors('mainColors', 'secondaryBase') !important;
+  }
+  ion-item {
+    [item-title] {
+      padding: 0 0 5px;
+    }
+
+    [item-subtitle] {
+      line-height: 20px;
+    }
+  }
+}

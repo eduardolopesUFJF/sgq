@@ -1,0 +1,43 @@
+/*  #Style Full gallery 1
+===========================================*/
+image-gallery-layout-1 {
+  ion-card {
+    position: relative;
+    width: 100% !important;
+    border-radius: $border-radius !important;
+    box-shadow: none !important;
+
+    img {
+      height: 170px;
+      width: 100%;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      @include gradient-secondary;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 10px;
+      bottom: 0;
+      z-index: 9;
+    }
+
+    ion-card-content {
+      position: absolute;
+      transform: translateY(-50%);
+      top: 50%;
+      padding: 15px;
+      z-index: 9;
+
+      [gallery-subtitle] {
+        color: color($imageGallery, full-gallery-1-subtitle);
+      }
+
+      [gallery-title] {
+        color: color($imageGallery, full-gallery-1-title);
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+<!-- Themes Drag and drop - Products + CTA header -->
+<ion-content>
+  <ion-grid no-padding *ngIf="data != null">
+    <ion-row>
+      <ion-col col-12>
+        <!-- Header Products + CTA header -->
+        <ion-list-header transparent header-section no-lines padding background-size [ngStyle]="{'background-image': 'url(' + data.headerImage + ')'}">
+          <!--Header Big Title-->
+          <h1 header-title text-capitalize>{{data.header}}</h1>
+          <ion-item transparent margin-vertical no-padding no-lines>
+            <!-- Title -->
+            <h2 item-title text-capitalize text-wrap>{{data.title}}</h2>
+            <!-- Subtitle -->
+            <p item-subtitle no-margin text-wrap>{{data.subtitle}}</p>
+          </ion-item>
+          <!-- Button -->
+          <button box-shadow ion-button block default-button (click)="onEvent('onButtonGetClick', 'Ok', $event)">{{data.button}}</button>
+        </ion-list-header>
+        <!-- Content Products + CTA header -->
+        <ion-list no-margin reorder="true" (ionItemReorder)="reorderItems($event)">
+          <ion-item no-lines default-item *ngFor="let item of data.items; let i = index;" (click)="onEvent('onItemClick', item.title, $event)">
+            <!-- Avatar -->
+            <ion-thumbnail item-start no-margin>
+              <img [src]="item.image">
+            </ion-thumbnail>
+            <!-- Title -->
+            <h2 item-title margin-left>{{item.title}}</h2>
+            <!-- Subtitle -->
+            <p item-subtitle margin-left>{{item.subtitle}}</p>
+            <!-- Badge -->
+            <ion-badge box-shadow badge-light margin-left>{{item.price}}</ion-badge>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

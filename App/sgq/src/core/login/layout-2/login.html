@@ -1,0 +1,39 @@
+<ion-content has-header *ngIf="data != null" background-size style="background-color: white;" >
+  <ion-grid no-padding *ngIf="data != null">
+    <ion-row padding-left padding-right align-items-center>
+      <ion-col *ngIf="data.possuiLogo" text-center col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
+        <img [src]="data.logo">
+      </ion-col>
+      <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
+        <ion-item transparent text-center no-lines>
+          <h1 ion-text login-title no-margin text-wrap text-capitalize>{{data.title}}</h1>
+        </ion-item>
+        <form #loginForm="ngForm">
+          <!-- <ion-item text-center margin-top transparent>
+            <select-layout-3 [data]="data.selectData" [events]="data.selectEvents"></select-layout-3>
+          </ion-item> -->
+          <ion-item text-center transparent>
+            <ion-label stacked>EMPRESA</ion-label>
+            <ion-select required [(ngModel)]="empresa" multiple="false" name="empresa" okText="Ok" cancelText="Cancelar">
+              <ion-option *ngFor="let item of data.selectData.items; let i= index" [value]="item.title">{{item.title}}</ion-option>
+            </ion-select>
+          </ion-item>
+          <!---Input field username-->
+          <ion-item text-center transparent>
+            <ion-label stacked>{{data.labelUsername}}</ion-label>
+            <ion-input text-center required type="text" [placeholder]="data.username" [(ngModel)]="usuario" name="usuario"></ion-input>
+          </ion-item>
+          <!---Input field password-->
+          <ion-item text-center transparent>
+            <ion-label stacked>{{data.labelPassword}}</ion-label>
+            <ion-input text-center required type="password" [placeholder]="data.password" [(ngModel)]="senha" name="senha"></ion-input>
+          </ion-item>
+          <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: black !important;" (click)="onEvent('onLogin', loginForm.valid)">{{data.login}}</button>
+          <button *ngIf="data.possuiRegistrar" ion-button default-button block text-capitalize margin-bottom (click)="onEvent('onRegister')">{{data.register}}</button>
+          <button *ngIf="data.possuiEsqueciSenha" ion-button button-clear text-capitalize clear float-right no-padding
+            no-margin>{{data.forgotPassword}}</button>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

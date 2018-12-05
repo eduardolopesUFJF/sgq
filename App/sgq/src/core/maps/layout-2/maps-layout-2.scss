@@ -1,0 +1,31 @@
+// Style Google Maps - Gmaps + About Us
+
+maps-layout-2 {
+  ion-content {
+    background: theme-colors('mainColors', 'primaryTint') !important;
+
+    .sebm-google-map-container {
+      height: 300px;
+    }
+    // Map title
+    [maps-title] {
+      color: color($mapsPage, maps-title-2) !important;
+    }
+    // Map Description Title
+    [maps-description-title] {
+      color: color($mapsPage, maps-description-title-2) !important;
+    }
+    // Map Description
+    [maps-description] {
+      color: color($mapsPage, maps-description-2) !important;
+    }
+    // Map Info
+    [maps-info-description] {
+      color: color($mapsPage, maps-info-description-2) !important;
+    }
+    // Map Name
+    [title] {
+      color: theme-colors('textColors', 'primary');
+    }
+  }
+}

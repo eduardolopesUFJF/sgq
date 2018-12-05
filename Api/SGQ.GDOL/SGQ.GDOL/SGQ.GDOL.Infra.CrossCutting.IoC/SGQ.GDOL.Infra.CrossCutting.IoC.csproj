@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SGQ.GDOL.Domain.Core\SGQ.GDOL.Domain.Core.csproj" />
+    <ProjectReference Include="..\SGQ.GDOL.Domain\SGQ.GDOL.Domain.csproj" />
+    <ProjectReference Include="..\SGQ.GDOL.Infra.Data.SqlServer\SGQ.GDOL.Infra.Data.SqlServer.csproj" />
+  </ItemGroup>
+
+</Project>

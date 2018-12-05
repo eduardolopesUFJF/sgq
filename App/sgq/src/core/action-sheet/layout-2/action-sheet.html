@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar transparent [ngClass]="{'active':isClassActive()}">
+    <button ion-button menuToggle *ngIf="data.showMenu">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title *ngIf="data != null">{{data.headerTitle}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content elastic-header>
+  <ion-item no-lines background-size id="elastic-header" [ngStyle]="{'background-image': 'url(' + headerImage + ')'}">
+    <div title-block *ngIf="data != null">
+      <h1 padding-left parallax-title text-wrap>{{data.title}}</h1>
+      <span new-category transparent padding-left padding-bottom text-uppercase>{{data.category}}</span>
+    </div>
+  </ion-item>
+  <ion-item-group *ngIf="data != null">
+    <ion-item-divider no-lines>
+      <ion-thumbnail item-start>
+        <img [src]="data.avatar" />
+      </ion-thumbnail>
+      <h2 item-title>{{data.subtitle}}</h2>
+      <button *ngIf="data.actionSheet.buttons.length > 0" item-end ion-button ion-text button-action-shit (click)="presentActionSheet(data)">
+        <ion-icon [name]="data.shareIcon"></ion-icon>
+      </button>
+    </ion-item-divider>
+    <ion-item no-margin no-lines>
+      <p parallax-description text-wrap>{{data.description}}</p>
+    </ion-item>
+    <button *ngIf="data.realizarOrcamento" ion-button default-button block text-capitalize box-shadow margin-bottom (click)="onEvent('onRegister')">Ver preços</button>
+    <ion-item no-margin no-lines *ngFor="let item of data.items;let i = index">
+      <h2 parallax-subtitle margin-bottom text-wrap>{{item.title}}</h2>
+      <p parallax-description text-wrap>{{item.subtitle}}</p>
+    </ion-item>
+    <button *ngIf="data.realizarOrcamento" ion-button default-button block text-capitalize box-shadow margin-bottom (click)="onEvent('onRegister')">Ver preços</button>
+  </ion-item-group>
+</ion-content>

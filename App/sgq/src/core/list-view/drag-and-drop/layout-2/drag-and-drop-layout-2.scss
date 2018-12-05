@@ -1,0 +1,31 @@
+/*  #Style Drag and drop - Products + CTA header
+==========================================*/
+drag-and-drop-layout-2 {
+  [header-section] {
+    [item-title] {
+      font-size: $h1-font-size !important;
+    }
+
+    ion-label {
+      margin: 0 !important;
+    }
+
+    .input-wrapper,
+    .item-inner,
+    ion-label {
+      overflow: visible;
+    }
+  }
+
+  .item-inner {
+    padding-right: 0 !important;
+  }
+
+  ion-label {
+    margin: 5px 0 0 0 !important;
+  }
+
+  [badge-light] {
+    margin: 0 0 10px;
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "sgq",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

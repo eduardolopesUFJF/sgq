@@ -1,0 +1,23 @@
+/*  # Themes Swipe To Dismiss - Small item + header
+================================================*/
+swipe-to-dismiss-layout-1 {
+  [header-section] {
+    ion-label {
+      margin: 0 !important;
+    }
+
+    .input-wrapper,
+    .item-inner,
+    ion-label {
+      overflow: visible;
+    }
+
+    [item-title] {
+      font-size: $h1-font-size !important;
+    }
+  }
+
+  .list-md ion-item-options {
+    border-bottom: 1px solid transparent;
+  }
+}

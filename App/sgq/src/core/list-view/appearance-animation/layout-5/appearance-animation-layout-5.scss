@@ -1,0 +1,65 @@
+/*  #Style Appearance animation (Zoom In)
+================================================*/
+
+appearance-animation-layout-5 {
+
+    ion-label {
+        margin: 5px 0px !important;
+    }
+
+    .margin-top-10 {
+        margin-top: 10px !important;
+    }
+
+    .zoom-in {
+        -webkit-animation: zoomIn 500ms;
+        -moz-animation: zoomIn 500ms;
+        -o-animation: zoomIn 500ms;
+        animation: zoomIn 500ms;
+    }
+
+    [item-situacao] {
+        color: white;
+        font-weight: bold;
+    }
+
+    [item-data] {
+        color: black;
+        font-weight: bold;
+        margin: 10px 0px 5px 0px;
+        font-size: 15px;
+    }
+
+    ion-searchbar {
+        background: rgba(33, 177, 75, 0.4) !important;
+        margin: 0px !important;
+        padding: 0px !important;
+        border-radius: $border-radius;
+        z-index: 999;
+    }
+
+    .button-novo {
+        background-color: black !important;
+        margin: 4px 8px 8px 8px !important;
+    }
+
+    .color-black {
+        color: black !important;
+    }
+
+    .color-red {
+        color: red !important;
+    }
+
+    .col-search {
+        padding: 0px 8px 0px 8px !important;
+    }
+
+    .novo-item {
+        border: 4px solid navy !important;
+    }
+
+    .aviso {
+        font-weight: bold;
+    }
+}

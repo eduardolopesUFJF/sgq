@@ -1,0 +1,107 @@
+/*  #Style Parallax - Product
+===========================================*/
+parallax-layout-3 {
+  @include settingAnimationHeader;
+
+  #elastic-header {
+    position: relative;
+    z-index: 9;
+  }
+
+  .toolbar-ios {
+    min-height: 64px;
+  }
+
+  .bar-button-default-ios,
+  .toolbar-title-ios {
+    padding-top: 20px;
+  }
+
+  .content-ios .scroll-content {
+    top: -64px !important;
+  }
+
+  .scroll-content {
+    top: -56px;
+  }
+  // Settings Big Image
+  [background-size] {
+    height: 300px;
+    z-index: 9;
+    position: relative;
+
+    &:before {
+      content: "";
+      @include gradient-primary;
+      position: absolute;
+      height: 50%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  .active .back-button,
+  .active .toolbar-title {
+    color: theme-colors('textColors', 'primary') !important;
+    display: block !important;
+  }
+
+  .back-button,
+  .toolbar-title {
+    color: theme-colors('textColors', 'primary') !important;
+  }
+
+  [button-action-shit] {
+    margin-top: 30px;
+  }
+
+  [parallax-title] {
+    margin-top: 10px;
+    color: color($parallaxPage, parallax-title-product) !important;
+  }
+
+  [parallax-subtitle] {
+    color: color($parallaxPage, parallax-subtitle-product) !important;
+  }
+
+  [parallax-description] {
+    color: color($parallaxPage, parallax-description-basic) !important;
+  }
+
+  [button-action-shit] {
+    color: color($buttonActionShit, color-secondary) !important;
+  }
+
+  [badge-clear] {
+    line-height: 37px !important;
+  }
+
+  [title-block] {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+  }
+
+  [small-description] {
+    background: theme-colors('mainColors', 'primaryTint') !important;
+
+    &::before {
+      content: "";
+      width: 150px;
+      height: 3px;
+      background: theme-colors('mainColors', 'secondary');
+      position: absolute;
+      bottom: 15px;
+      left: 16px;
+      border-radius: $border-radius;
+      z-index: 1;
+    }
+  }
+
+  ion-item {
+    background-color: theme-colors('mainColors', 'primary') !important;
+  }
+}

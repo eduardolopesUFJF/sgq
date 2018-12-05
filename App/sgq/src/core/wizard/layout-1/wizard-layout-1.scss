@@ -1,0 +1,60 @@
+/*  #Style Wizard Simple + image
+===========================================*/
+
+wizard-layout-1 {
+  [background-size] {
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      @include gradient-secondary;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 10px;
+      bottom: 0;
+      z-index: 2;
+    }
+  }
+
+  ion-avatar img {
+    border-radius: 50%;
+    height: 228px !important;
+    width: 228px !important;
+    margin: 0 auto;
+  }
+
+  [ion-button] {
+    position: absolute !important;
+    z-index: 999 !important;
+    bottom: 0;
+    color: theme-colors('textColors', 'primary') !important;
+
+    &[float-right] {
+      right: 0;
+    }
+  }
+
+  [wizard-title] {
+    color: color($wizardPage, wizard-title-simple-image) !important;
+    position: relative;
+    z-index: 999;
+  }
+
+  [wizard-description] {
+    color: color($wizardPage, wizard-description-simple-image);
+    position: relative;
+    z-index: 999;
+  }
+
+  [logo] {
+    width: 170px;
+    position: relative;
+    z-index: 999;
+  }
+
+  .swiper-pagination-bullet {
+    background: theme-colors('mainColors', 'secondary') !important;
+  }
+}

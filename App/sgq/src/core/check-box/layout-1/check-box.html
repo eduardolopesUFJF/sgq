@@ -1,0 +1,20 @@
+<!--Themes Simple -->
+<ion-content>
+  <ion-grid no-padding *ngIf="data != null">
+    <ion-row>
+      <ion-col col-12>
+        <ion-list>
+          <!-- Header Title Top -->
+          <ion-list-header no-lines header-section>
+            <h1 header-title text-capitalize>{{data.title}}</h1>
+          </ion-list-header>
+          <ion-item default-item no-lines *ngFor="let item of data.items" (tap)="onEvent('onButton', item)">
+            <!-- Content Title -->
+            <ion-label item-subtitle>{{item.title}}</ion-label>
+            <ion-checkbox [checked]="item.isChecked"></ion-checkbox>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

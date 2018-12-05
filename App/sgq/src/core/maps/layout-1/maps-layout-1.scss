@@ -1,0 +1,40 @@
+// Style Google Maps - GMAPS + Location  Details
+
+maps-layout-1 {
+  .sebm-google-map-container {
+    height: 350px;
+  }
+
+  [maps-title] {
+    color: color($mapsPage, maps-title-1) !important;
+  }
+
+  [maps-description-title] {
+    color: color($mapsPage, maps-description-title-1) !important;
+  }
+
+  [maps-description] {
+    color: color($mapsPage, maps-description-1) !important;
+  }
+
+  [maps-info-description] {
+    color: color($mapsPage, maps-info-description-1) !important;
+  }
+
+  [span-medium] {
+    line-height: 35px !important;
+    display: block;
+  }
+
+  .icon-star::before {
+    margin: 0 !important;
+  }
+
+  [border]::before {
+    left: 0 !important;
+  }
+
+  ion-item {
+    background: theme-colors('mainColors', 'primaryTint') !important;
+  }
+}

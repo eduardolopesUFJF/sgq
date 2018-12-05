@@ -1,0 +1,12 @@
+/*  #Style Radio Button - Simple 2
+===========================================*/
+radio-button-layout-3 {
+  ion-content {
+    .item-radio-checked {
+      background: theme-colors('mainColors', 'secondaryBase') !important;
+    }
+    [item-start] {
+      margin-right: 16px !important;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+/*  # Style Tabs Header tab - text
+==================================*/
+tabs-layout-3 {
+  .tabs-md .tab-button,
+  .tabs-md .tab-button[aria-selected=false] {
+    color: theme-colors('textColors', 'primary');
+    background: theme-colors('mainColors', 'primaryTint') !important;
+  }
+
+  .tabs-ios .tabbar,
+  .tabs-md .tabbar {
+    background: transparent;
+  }
+
+  .tabs-ios .tab-button[aria-selected=true],
+  .tabs-md .tab-button[aria-selected=true] {
+    color: theme-colors('textColors', 'primary');
+    margin-top: 200px;
+    background: blue !important;
+    border: 10px solid theme-colors('mainColors', 'primaryTint') !important;
+  }
+
+  .tab-button {
+    margin-top: 200px;
+  }
+
+  .tabs-ios [header] {
+    height: 144px;
+  }
+
+  [header] {
+    background: url("../assets/images/background/12.jpg") !important;
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    margin-top: 56px;
+    z-index: 9;
+    height: 144px;
+    position: relative;
+
+    &:before {
+      content: "";
+      @include gradient-primary;
+      position: absolute;
+      height: 70%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    ion-item {
+      position: absolute;
+      bottom: 0;
+
+      [item-title] {
+        font-size: $h1-font-size !important;
+      }
+    }
+  }
+}
