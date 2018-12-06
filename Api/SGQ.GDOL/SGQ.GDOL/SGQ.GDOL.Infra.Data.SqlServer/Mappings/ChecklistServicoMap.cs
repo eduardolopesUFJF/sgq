@@ -4,9 +4,9 @@ using SGQ.GDOL.Domain.ObraRoot.Entity;
 
 namespace SGQ.GDOL.Infra.Data.SqlServer.Mappings
 {
-    class ChecklistServicoMap : IEntityTypeConfiguration<ChecklistServico>
+    class ChecklistServicoMap : IEntityTypeConfiguration<ChecklistItem>
     {
-        public void Configure(EntityTypeBuilder<ChecklistServico> entity)
+        public void Configure(EntityTypeBuilder<ChecklistItem> entity)
         {
             entity.HasKey(e => e.Id);
 

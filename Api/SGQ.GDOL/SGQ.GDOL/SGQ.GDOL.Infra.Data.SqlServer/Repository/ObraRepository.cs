@@ -16,12 +16,24 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Repository
             _serviceContext = serviceContext;
         }
 
-        public List<Obra> ObterTodasAtivasCompletas()
+        public Obra ObterObraComInclude(Obra obra)
         {
-            var result = DbSet
+            using (var ServiceContext = new ServiceContext())
+            {
+                var result = ServiceContext.Obra
+                        .AsNoTracking()
                         .Include(x => x.CentroCusto)
-                        .Include(x => x.Areas)
-                        .Where(x => x.Delete.HasValue && !x.Delete.Value);
+                        .Include(x => x.Areas).ThenInclude(x => x.Servicos)
+                        .FirstOrDefault(x => x.Id == obra.Id);
+
+                return result;
+            }
+            
+        }
+
+        public List<Obra> ObterTodasAtivasSemInclude()
+        {
+            var result = DbSet.AsNoTracking();
             return result.ToList();
         }
     }

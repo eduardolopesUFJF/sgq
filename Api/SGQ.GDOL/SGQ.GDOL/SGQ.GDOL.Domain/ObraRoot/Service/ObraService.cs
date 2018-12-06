@@ -15,9 +15,15 @@ namespace SGQ.GDOL.Domain.ObraRoot.Service
             _obraRepository = obraRepository;
         }
 
-        public List<Obra> ObterTodasAtivasCompletas()
+        public Obra ObterObraComInclude(Obra obra)
         {
-            var result = _obraRepository.ObterTodasAtivasCompletas().ToList();
+            var result = _obraRepository.ObterObraComInclude(obra);
+            return result;
+        }
+
+        public List<Obra> ObterTodasAtivasSemInclude()
+        {
+            var result = _obraRepository.ObterTodasAtivasSemInclude().ToList();
             return result;
         }
     }

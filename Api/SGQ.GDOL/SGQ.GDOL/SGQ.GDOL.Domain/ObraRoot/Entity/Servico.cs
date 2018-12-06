@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace SGQ.GDOL.Domain.ObraRoot.Entity
 {
-    public class ObraChecklistServico : EntityBase
+    public class Servico : EntityBase
     {
-        public ObraChecklistServico()
+        public Servico()
         {
             InspecaoObra = new HashSet<InspecaoObra>();
         }
@@ -19,9 +19,9 @@ namespace SGQ.GDOL.Domain.ObraRoot.Entity
         public DateTime? DataHoraInclusao { get; set; }
         public DateTime? DataHoraAlteracao { get; set; }
 
-        public ChecklistServico ChecklistServico { get; set; }
-        public Area Area { get; set; }
-        public Obra Obra { get; set; }
-        public ICollection<InspecaoObra> InspecaoObra { get; set; }
+        public virtual ChecklistItem ChecklistServico { get; set; }
+        public virtual Area Area { get; set; }
+        public virtual Obra Obra { get; set; }
+        public virtual ICollection<InspecaoObra> InspecaoObra { get; set; }
     }
 }

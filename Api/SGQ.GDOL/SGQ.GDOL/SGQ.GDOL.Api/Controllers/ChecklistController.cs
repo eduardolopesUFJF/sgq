@@ -24,7 +24,7 @@ namespace SGQ.GDOL.Api.Controllers
             try
             {
                 var resultBD = _checklistServicoService.ObterTodosAtivos();
-                var resultVM = Mapper.Map<List<ChecklistServicoVM>>(resultBD);
+                var resultVM = Mapper.Map<List<ChecklistItemVM>>(resultBD);
                 return Ok(resultVM);
             }
             catch (Exception ex)

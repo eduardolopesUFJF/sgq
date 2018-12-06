@@ -24,6 +24,6 @@ namespace SGQ.GDOL.Domain.ObraRoot.Entity
         public DateTime? DataHoraInclusao { get; set; }
         public DateTime? DataHoraAlteracao { get; set; }
 
-        public ObraChecklistServico ObraChecklistServico { get; set; }
+        public Servico ObraChecklistServico { get; set; }
     }
 }

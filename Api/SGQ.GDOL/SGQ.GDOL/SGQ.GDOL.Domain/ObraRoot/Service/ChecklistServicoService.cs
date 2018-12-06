@@ -15,7 +15,7 @@ namespace SGQ.GDOL.Domain.ObraRoot.Service
             _checklistServicoRepository = checklistServicoRepository;
         }
 
-        public List<ChecklistServico> ObterTodosAtivos()
+        public List<ChecklistItem> ObterTodosAtivos()
         {
             var result = _checklistServicoRepository.Buscar(x => x.Ativo.HasValue && x.Ativo.Value);
             return result.ToList();

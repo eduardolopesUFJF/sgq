@@ -20,8 +20,10 @@ namespace SGQ.GDOL.Api.AutoMapper
             CreateMap<Area, AreaVM>()
                 .ForMember(x => x.Situacao, opt => opt.MapFrom(x => x.Status.HasValue && x.Status.Value == 1 ? "Finalizado" : "Em aberto"));
 
-            CreateMap<ChecklistServico, ChecklistServicoVM>()
+            CreateMap<ChecklistItem, ChecklistItemVM>()
                 .ForMember(x => x.Descricao, opt => opt.MapFrom(x => x.Codigo + " - " + x.Descricao));
+
+            CreateMap<Servico, ServicoVM>();
         }
     }
 }

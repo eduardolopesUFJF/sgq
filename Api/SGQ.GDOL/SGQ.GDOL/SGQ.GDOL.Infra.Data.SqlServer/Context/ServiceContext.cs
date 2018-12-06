@@ -16,9 +16,9 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Context
         public DbSet<CentroCusto> CentroCusto { get; set; }
         public DbSet<Area> Area { get; set; }
         public DbSet<InspecaoObra> InspecaoObra { get; set; }
-        public DbSet<ObraChecklistServico> ObraChecklistServico { get; set; }
+        public DbSet<Servico> Servico { get; set; }
         public DbSet<ItemChecklistServico> ItemChecklistServico { get; set; }
-        public DbSet<ChecklistServico> ChecklistServico { get; set; }
+        public DbSet<ChecklistItem> ChecklistServico { get; set; }
 
 protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

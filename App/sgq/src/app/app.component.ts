@@ -10,10 +10,12 @@ import { Storage } from '@ionic/storage';
 import { ChecklistService } from '../services/checklist.service';
 import { AlteracaoService } from '../services/alteracao.service';
 import { Alteracao } from '../models/alteracao';
+import { Obra } from '../models/obra';
+import { ServicoService } from '../services/servico.service';
 
 @Component({
   templateUrl: 'app.html',
-  providers: [ObraService, ChecklistService, AlteracaoService]
+  providers: [ObraService, ChecklistService, AlteracaoService, ServicoService]
 })
 
 export class MyApp {
@@ -31,6 +33,7 @@ export class MyApp {
     public storage: Storage,
     public obraService: ObraService,
     public alteracaoService: AlteracaoService,
+    public servicoService: ServicoService,
     public alertCtrl: AlertController,
     public checklistService: ChecklistService,
     public network: Network,
@@ -183,10 +186,10 @@ export class MyApp {
 
   obterObras() {
     this.loadingService.show();
-    this.obraService.obterTodas().subscribe(
-      data => {
-        this.storage.set('obras', data);
-        this.storage.set('obrasBackup', data);
+    this.obraService.obterTodasAtivas().subscribe(
+      obras => {
+        this.storage.set('obras', obras);
+        this.storage.set('obrasBackup', obras);
         this.storage.set('ultimoDownload', new Date());
         this.loadingService.hide();
         this.nav.setRoot("HomePage");

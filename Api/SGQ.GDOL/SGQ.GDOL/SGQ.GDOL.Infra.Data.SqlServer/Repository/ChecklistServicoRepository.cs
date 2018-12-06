@@ -4,7 +4,7 @@ using SGQ.GDOL.Infra.Data.SqlServer.Context;
 
 namespace SGQ.GDOL.Infra.Data.SqlServer.Repository
 {
-    public class ChecklistServicoRepository : BaseRepository<ChecklistServico>, IChecklistServicoRepository
+    public class ChecklistServicoRepository : BaseRepository<ChecklistItem>, IChecklistServicoRepository
     {
         private readonly ServiceContext _serviceContext;
 

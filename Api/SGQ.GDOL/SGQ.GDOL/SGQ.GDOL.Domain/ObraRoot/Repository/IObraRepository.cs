@@ -6,6 +6,7 @@ namespace SGQ.GDOL.Domain.ObraRoot.Repository
 {
     public interface IObraRepository : IBaseRepository<Obra>
     {
-        List<Obra> ObterTodasAtivasCompletas();
+        List<Obra> ObterTodasAtivasSemInclude();
+        Obra ObterObraComInclude(Obra obra);
     }
 }

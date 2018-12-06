@@ -72,6 +72,7 @@ export class AreaPage {
             this.storage.get('atualizacoes').then(
                 atualizacoes => {
                     area.delete = !area.delete;
+                    area.idObra = this.obraId;
                     let alteracao = new Alteracao({ id: UUID.UUID(), tipo: "Update", entidade: "Area", valor: JSON.stringify(area), data: new Date(), descricao: (area.delete ? "Inativação" : "Ativação") + " da área: " + area.descricao, idObra: this.obraId });
                     if (atualizacoes) {
                         atualizacoesArray = atualizacoes;

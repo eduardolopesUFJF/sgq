@@ -3,7 +3,7 @@ using SGQ.GDOL.Domain.UsuarioRoot.Repository;
 
 namespace SGQ.GDOL.Domain.ObraRoot.Repository
 {
-    public interface IChecklistServicoRepository : IBaseRepository<ChecklistServico>
+    public interface IChecklistServicoRepository : IBaseRepository<ChecklistItem>
     {
     }
 }

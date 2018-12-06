@@ -3,12 +3,12 @@ using System.Collections.Generic;
 
 namespace SGQ.GDOL.Domain.ObraRoot.Entity
 {
-    public class ChecklistServico : EntityBase
+    public class ChecklistItem : EntityBase
     {
-        public ChecklistServico()
+        public ChecklistItem()
         {
             ItensChecklistServico = new HashSet<ItemChecklistServico>();
-            ObrasChecklistServico = new HashSet<ObraChecklistServico>();
+            ObrasChecklistServico = new HashSet<Servico>();
         }
 
         public string Descricao { get; set; }
@@ -17,6 +17,6 @@ namespace SGQ.GDOL.Domain.ObraRoot.Entity
         public bool? Delete { get; set; }
 
         public ICollection<ItemChecklistServico> ItensChecklistServico { get; set; }
-        public ICollection<ObraChecklistServico> ObrasChecklistServico { get; set; }
+        public ICollection<Servico> ObrasChecklistServico { get; set; }
     }
 }

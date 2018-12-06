@@ -12,7 +12,7 @@ export class ObraService extends BaseService {
         super(http, 'obra/');
     }
 
-    public obterTodas(): Observable<Obra[]> {
+    public obterTodasAtivas(): Observable<Obra[]> {
         this.headers = this.headers.set('BancoSchema', localStorage.getItem('BancoSchema'));
         return this.http.get<Obra[]>(this.apiUrl, { headers: this.headers })
             .catch(this.handleError);

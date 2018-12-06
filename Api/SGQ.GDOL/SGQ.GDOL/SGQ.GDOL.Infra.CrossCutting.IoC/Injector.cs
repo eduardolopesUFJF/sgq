@@ -27,14 +27,16 @@ namespace SGQ.GDOL.Infra.CrossCutting.IoC
             services.AddScoped<IObraService, ObraService>();
             services.AddScoped<IChecklistServicoService, ChecklistServicoService>();
             services.AddScoped<IAreaService, AreaService>();
+            services.AddScoped<IServicoService, ServicoService>();
 
             //Infra Data
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
             services.AddScoped<IObraRepository, ObraRepository>();
             services.AddScoped<IChecklistServicoRepository, ChecklistServicoRepository>();
             services.AddScoped<IAreaRepository, AreaRepository>();
+            services.AddScoped<IServicoRepository, ServicoRepository>();
 
-            services.AddScoped<ServiceContext>();
+            services.AddDbContext<ServiceContext>(ServiceLifetime.Transient);
             services.AddScoped<NotificationHandler>();
 
             ServiceProvider = services.BuildServiceProvider();

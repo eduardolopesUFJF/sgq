@@ -4,9 +4,9 @@ using SGQ.GDOL.Domain.ObraRoot.Entity;
 
 namespace SGQ.GDOL.Infra.Data.SqlServer.Mappings
 {
-    class ObraChecklistServicoMap : IEntityTypeConfiguration<ObraChecklistServico>
+    class ObraChecklistServicoMap : IEntityTypeConfiguration<Servico>
     {
-        public void Configure(EntityTypeBuilder<ObraChecklistServico> entity)
+        public void Configure(EntityTypeBuilder<Servico> entity)
         {
             entity.HasKey(e => e.Id);
 
@@ -43,7 +43,7 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Mappings
                 .HasForeignKey(d => d.IdObra);
 
             entity.HasOne(d => d.Area)
-                .WithMany(p => p.ObraChecklistServico)
+                .WithMany(p => p.Servicos)
                 .HasForeignKey(d => d.IdObraAreaChecklist);
         }
     }
