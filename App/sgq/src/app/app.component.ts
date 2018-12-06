@@ -8,10 +8,12 @@ import { LoadingService } from '../utils/loading-service';
 import { ObraService } from '../services/obra.service';
 import { Storage } from '@ionic/storage';
 import { ChecklistService } from '../services/checklist.service';
+import { AlteracaoService } from '../services/alteracao.service';
+import { Alteracao } from '../models/alteracao';
 
 @Component({
   templateUrl: 'app.html',
-  providers: [ObraService, ChecklistService]
+  providers: [ObraService, ChecklistService, AlteracaoService]
 })
 
 export class MyApp {
@@ -28,6 +30,7 @@ export class MyApp {
     public messageService: MessageService,
     public storage: Storage,
     public obraService: ObraService,
+    public alteracaoService: AlteracaoService,
     public alertCtrl: AlertController,
     public checklistService: ChecklistService,
     public network: Network,
@@ -108,7 +111,7 @@ export class MyApp {
       } else {
         this.nav.setRoot(page.component);
       }
-      
+
     }
   }
 
@@ -138,7 +141,7 @@ export class MyApp {
       this.storage.get('atualizacoes').then(
         atualizacoes => {
           if (atualizacoes) {
-            this.atualizarRepositorio();
+            this.atualizarRepositorio(atualizacoes);
           } else {
             this.messageService.exibirMensagem("Não há nada para publicar.");
           }
@@ -206,16 +209,20 @@ export class MyApp {
     );
   }
 
-  atualizarRepositorio() {
-    this.storage.get('atualizacoes').then(
-      atualizacoes => {
-        this.loadingService.show();
-        console.log(atualizacoes);
+  atualizarRepositorio(atualizacoes: Alteracao[]) {
+    this.loadingService.show();
+    this.alteracaoService.publicar(atualizacoes).subscribe(
+      data => {
         this.storage.set('ultimoUpload', new Date());
         this.storage.remove('atualizacoes');
-        this.loadingService.hide();
         this.nav.setRoot("HomePage");
-        //this.obterObras();
+        this.loadingService.hide();
+        this.obterObras();
+        this.messageService.exibirMensagem("Atualizações publicadas com sucesso.");
+      },
+      error => {
+        this.loadingService.hide();
+        this.messageService.exibirMensagem("Falha na comunicação com o servidor, contate o suporte.");
       }
     );
   }

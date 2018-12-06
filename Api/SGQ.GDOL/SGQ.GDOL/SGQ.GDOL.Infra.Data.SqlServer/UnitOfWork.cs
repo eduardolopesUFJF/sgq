@@ -1,4 +1,4 @@
-﻿using SGQ.GDOL.Domain.UsuarioRoot;
+﻿using SGQ.GDOL.Domain;
 using SGQ.GDOL.Infra.Data.SqlServer.Context;
 
 namespace SGQ.GDOL.Infra.Data.SqlServer

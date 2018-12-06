@@ -5,7 +5,7 @@ export class Alteracao {
 
     tipo: string;
     entidade: string;
-    valor: any;
+    valor: string;
     data: Date;
     descricao: string;
 

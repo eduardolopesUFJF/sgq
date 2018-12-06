@@ -47,7 +47,7 @@ export class AreaCadastroPage {
         let atualizacoesArray: Alteracao[] = [];
         this.storage.get('atualizacoes').then(
           atualizacoes => {
-            let alteracao = new Alteracao({ id: UUID.UUID(), tipo: "Insert", entidade: "Area", valor: this.area, data: new Date(), descricao: "Inserção da área: " + this.area.descricao, obraId: this.obraId });
+            let alteracao = new Alteracao({ id: UUID.UUID(), tipo: "Insert", entidade: "Area", valor: JSON.stringify(this.area), data: new Date(), descricao: "Inserção da área: " + this.area.descricao, idObra: this.obraId });
             if (atualizacoes) {
               atualizacoesArray = atualizacoes;
               atualizacoesArray.push(alteracao);

@@ -3,7 +3,7 @@ using SGQ.GDOL.Domain.Core.Notifications;
 using SGQ.GDOL.Domain.UsuarioRoot.Repository;
 using SGQ.GDOL.Domain.UsuarioRoot.Service;
 using SGQ.GDOL.Domain.UsuarioRoot.Service.Interface;
-using SGQ.GDOL.Domain.UsuarioRoot;
+using SGQ.GDOL.Domain;
 using SGQ.GDOL.Infra.Data.SqlServer;
 using SGQ.GDOL.Infra.Data.SqlServer.Context;
 using SGQ.GDOL.Infra.Data.SqlServer.Repository;
@@ -26,11 +26,13 @@ namespace SGQ.GDOL.Infra.CrossCutting.IoC
             services.AddScoped<IUsuarioService, UsuarioService>();
             services.AddScoped<IObraService, ObraService>();
             services.AddScoped<IChecklistServicoService, ChecklistServicoService>();
+            services.AddScoped<IAreaService, AreaService>();
 
             //Infra Data
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
             services.AddScoped<IObraRepository, ObraRepository>();
             services.AddScoped<IChecklistServicoRepository, ChecklistServicoRepository>();
+            services.AddScoped<IAreaRepository, AreaRepository>();
 
             services.AddScoped<ServiceContext>();
             services.AddScoped<NotificationHandler>();

@@ -15,7 +15,7 @@ namespace SGQ.GDOL.Domain.ObraRoot.Entity
         public int? Status { get; set; }
         public bool? Delete { get; set; }
 
-        public ICollection<ObraChecklistServico> ObraChecklistServico { get; set; }
+        public virtual ICollection<ObraChecklistServico> ObraChecklistServico { get; set; }
         public virtual Obra Obra { get; set; }
     }
 }

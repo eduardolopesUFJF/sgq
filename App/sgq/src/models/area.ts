@@ -6,9 +6,9 @@ export class Area {
     descricao: string;
     status: number = 0;
     situacao: string = 'Em aberto';
-    delete: boolean;
+    delete: boolean = false;
 
-    itensChecklist: ItemChecklist[] = [];
+    obraChecklistServico: ItemChecklist[] = [];
 
     constructor(values: Object = {}) {
         Object.assign(this, values);

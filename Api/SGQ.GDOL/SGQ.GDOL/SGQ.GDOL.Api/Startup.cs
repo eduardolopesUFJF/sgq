@@ -29,7 +29,7 @@ namespace SGQ.GDOL.Api
                 options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
                 options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
             });
-            
+
             services.AddAutoMapper();
             services.AddDIConfiguration();
             services.AddCors(options =>

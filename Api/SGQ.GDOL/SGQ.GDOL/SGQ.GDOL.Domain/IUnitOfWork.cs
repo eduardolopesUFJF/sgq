@@ -1,4 +1,4 @@
-﻿namespace SGQ.GDOL.Domain.UsuarioRoot
+﻿namespace SGQ.GDOL.Domain
 {
     public interface IUnitOfWork
     {
