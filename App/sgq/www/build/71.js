@@ -1,14 +1,14 @@
 webpackJsonp([71],{
 
-/***/ 727:
+/***/ 728:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ImageGalleryLayout1Module", function() { return ImageGalleryLayout1Module; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ImageGalleryLayout2Module", function() { return ImageGalleryLayout2Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__image_gallery_layout_1__ = __webpack_require__(843);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__image_gallery_layout_2__ = __webpack_require__(846);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,35 +18,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ImageGalleryLayout1Module = /** @class */ (function () {
-    function ImageGalleryLayout1Module() {
+var ImageGalleryLayout2Module = /** @class */ (function () {
+    function ImageGalleryLayout2Module() {
     }
-    ImageGalleryLayout1Module = __decorate([
+    ImageGalleryLayout2Module = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__image_gallery_layout_1__["a" /* ImageGalleryLayout1 */]
+                __WEBPACK_IMPORTED_MODULE_2__image_gallery_layout_2__["a" /* ImageGalleryLayout2 */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__image_gallery_layout_1__["a" /* ImageGalleryLayout1 */])
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__image_gallery_layout_2__["a" /* ImageGalleryLayout2 */]),
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_2__image_gallery_layout_1__["a" /* ImageGalleryLayout1 */]
+                __WEBPACK_IMPORTED_MODULE_2__image_gallery_layout_2__["a" /* ImageGalleryLayout2 */]
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
         })
-    ], ImageGalleryLayout1Module);
-    return ImageGalleryLayout1Module;
+    ], ImageGalleryLayout2Module);
+    return ImageGalleryLayout2Module;
 }());
 
-//# sourceMappingURL=image-gallery-layout-1.module.js.map
+//# sourceMappingURL=image-gallery-layout-2.module.js.map
 
 /***/ }),
 
-/***/ 843:
+/***/ 846:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ImageGalleryLayout1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ImageGalleryLayout2; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -60,15 +60,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var ImageGalleryLayout1 = /** @class */ (function () {
-    function ImageGalleryLayout1(navCtrl, navParams) {
+var ImageGalleryLayout2 = /** @class */ (function () {
+    function ImageGalleryLayout2(navCtrl, navParams) {
         var _this = this;
         this.navCtrl = navCtrl;
         this.openSubGallery = function (group, index) {
             _this.navCtrl.push(group.subGallery, {
                 'group': group.items[index],
                 'events': _this.events,
-                'layout': 1
+                'layout': 2
             });
         };
         this.onEvent = function (event, item, e) {
@@ -80,27 +80,27 @@ var ImageGalleryLayout1 = /** @class */ (function () {
             }
         };
     }
-    ImageGalleryLayout1.prototype.ngOnChanges = function (changes) {
+    ImageGalleryLayout2.prototype.ngOnChanges = function (changes) {
         this.data = changes['data'].currentValue;
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
-    ], ImageGalleryLayout1.prototype, "data", void 0);
+    ], ImageGalleryLayout2.prototype, "data", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
-    ], ImageGalleryLayout1.prototype, "events", void 0);
-    ImageGalleryLayout1 = __decorate([
+    ], ImageGalleryLayout2.prototype, "events", void 0);
+    ImageGalleryLayout2 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'image-gallery-layout-1',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\image-gallery\layout-1\image-gallery-layout-1.html"*/'<!--Theme Gallery for Full gallery 1-->\n\n<ion-grid *ngIf="data != null">\n\n    <ion-row no-padding>\n\n        <ion-col col-6 col-sm-3 col-md-6 col-lg-4 col-xl-3 *ngFor="let group of data.items;let i = index;">\n\n            <ion-card no-margin (click)="openSubGallery(data, i)">\n\n              <img [src]="group.image" />\n\n                <ion-card-content>\n\n                    <p gallery-subtitle>{{group.items.length}} image(s)</p>\n\n                    <h2 gallery-title text-capitalize>{{group.title}}</h2>\n\n                </ion-card-content>\n\n            </ion-card>\n\n        </ion-col>\n\n    </ion-row>\n\n</ion-grid>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\image-gallery\layout-1\image-gallery-layout-1.html"*/
+            selector: 'image-gallery-layout-2',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\image-gallery\layout-2\image-gallery-layout-2.html"*/'<!---Theme Gallery for Full gallery 2-->\n\n<ion-grid card-background-page no-padding *ngIf="data != null">\n\n    <ion-row>\n\n        <ion-col col-12 col-sm-4 col-md-6 col-lg-4 col-xl-3 *ngFor="let group of data.items;let i = index;">\n\n            <ion-card transparent (click)="openSubGallery(data, i)">\n\n              <img [src]="group.image" />\n\n                <ion-card-content>\n\n                    <h2 gallery-title text-wrap text-capitalize>{{group.title}}</h2>\n\n                    <p gallery-subtitle text-wrap>{{group.subtitle}}</p>\n\n                </ion-card-content>\n\n            </ion-card>\n\n        </ion-col>\n\n    </ion-row>\n\n</ion-grid>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\image-gallery\layout-2\image-gallery-layout-2.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]])
-    ], ImageGalleryLayout1);
-    return ImageGalleryLayout1;
+    ], ImageGalleryLayout2);
+    return ImageGalleryLayout2;
 }());
 
-//# sourceMappingURL=image-gallery-layout-1.js.map
+//# sourceMappingURL=image-gallery-layout-2.js.map
 
 /***/ })
 

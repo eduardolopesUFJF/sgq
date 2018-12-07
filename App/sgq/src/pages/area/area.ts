@@ -21,7 +21,7 @@ export class AreaPage {
 
     events = {
         onItemClick: (data) => {
-            this.abrirServicos(data.areas);
+            this.abrirServicos(data);
         },
         onIconClick: (data) => {
             this.confirmarExclusao(data);
@@ -52,8 +52,8 @@ export class AreaPage {
         this.obraId = this.navParams.data.obraId;
     }
 
-    abrirServicos(areas: Area[]) {
-        this.messageService.exibirMensagem("Sendo implementado, aguarde.");
+    abrirServicos(area: Area) {
+        this.navCtrl.push("ItemAreaPage", {area: area});
     }
 
     confirmarExclusao(area: Area) {
@@ -73,7 +73,7 @@ export class AreaPage {
                 atualizacoes => {
                     area.delete = !area.delete;
                     area.idObra = this.obraId;
-                    let alteracao = new Alteracao({ id: UUID.UUID(), tipo: "Update", entidade: "Area", valor: JSON.stringify(area), data: new Date(), descricao: (area.delete ? "Inativação" : "Ativação") + " da área: " + area.descricao, idObra: this.obraId });
+                    let alteracao = new Alteracao({ id: UUID.UUID(), tipo: "Update", entidade: "Area", valor: JSON.stringify(area), data: new Date(), descricao: (area.delete ? "Inativação" : "Ativação") + " da área '" + area.descricao + "'.", idObra: this.obraId });
                     if (atualizacoes) {
                         atualizacoesArray = atualizacoes;
                         atualizacoesArray.push(alteracao);

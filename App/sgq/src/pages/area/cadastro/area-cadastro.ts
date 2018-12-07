@@ -6,6 +6,7 @@ import { Storage } from '@ionic/storage';
 import { Alteracao } from '../../../models/alteracao';
 import { ToastService } from '../../../utils/toast-service';
 import { UUID } from 'angular2-uuid';
+import { Servico } from '../../../models/servico';
 
 @IonicPage()
 @Component({
@@ -20,6 +21,7 @@ export class AreaCadastroPage {
   area: Area = new Area();
 
   opcoesItens: ItemChecklist[] = [];
+  servicosEscolhidos: number[] = [];
 
   constructor(
     public storage: Storage,
@@ -43,6 +45,12 @@ export class AreaCadastroPage {
 
   salvar(formValido) {
     if(formValido) {
+      this.servicosEscolhidos.forEach(item => {
+        let servico: Servico = new Servico();
+        servico.idChecklist = item;
+        servico.idObra = this.obraId;
+        this.area.servicos.push(servico);
+      });
       this.storage.ready().then(() => {
         let atualizacoesArray: Alteracao[] = [];
         this.storage.get('atualizacoes').then(

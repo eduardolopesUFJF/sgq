@@ -90,11 +90,11 @@ export class AlteracoesPage {
                     switch (alteracao.entidade.toLowerCase()) {
                         case "area":
                         if(alteracao.tipo.toLowerCase() == "insert") {
-                            let index = obras.find(x => x.id == alteracao.obraId).areas.findIndex(x => x.id == JSON.parse(alteracao.valor).id);
-                            obras.find(x => x.id == alteracao.obraId).areas.splice(index,1);
+                            let index = obras.find(x => x.id == alteracao.idObra).areas.findIndex(x => x.id == JSON.parse(alteracao.valor).id);
+                            obras.find(x => x.id == alteracao.idObra).areas.splice(index,1);
                             break;
                         } else {
-                            obras.find(x => x.id == alteracao.obraId).areas.find(x => x.id == JSON.parse(alteracao.valor).id).delete = !JSON.parse(alteracao.valor).delete;
+                            obras.find(x => x.id == alteracao.idObra).areas.find(x => x.id == JSON.parse(alteracao.valor).id).delete = !JSON.parse(alteracao.valor).delete;
                             break;
                         }
                     }

@@ -6,5 +6,6 @@ namespace SGQ.GDOL.Domain.ObraRoot.Service.Interfaces
     public interface IServicoService
     {
         List<Servico> ObterServicosPorArea(int areaId);
+        void Atualizar(Servico servico);
     }
 }

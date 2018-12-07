@@ -23,6 +23,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
   pages: any;
   params: any;
+  atualizacao: boolean = false;
 
   constructor(
     platform: Platform,
@@ -132,6 +133,7 @@ export class MyApp {
             this.messageService.exibirMensagem("Existem atualizações que não foram publicadas, publique-as ou descarte-as antes de baixar novos dados.");
           } else {
             this.obterChecklistServico();
+            this.atualizacao = false;
             this.obterObras();
           }
         }
@@ -144,7 +146,7 @@ export class MyApp {
       this.storage.get('atualizacoes').then(
         atualizacoes => {
           if (atualizacoes) {
-            this.atualizarRepositorio(atualizacoes);
+            this.confirmarAtualizarRepositorio(atualizacoes);
           } else {
             this.messageService.exibirMensagem("Não há nada para publicar.");
           }
@@ -223,6 +225,12 @@ export class MyApp {
       this.loadingService.hide();
       if (qtdErros > 0) {
         this.messageService.exibirMensagem("Ocorreu erro durante a busca de algumas obras.");
+      } else {
+        if (this.atualizacao) {
+          this.messageService.exibirMensagem("Atualizações publicadas com sucesso.");
+        } else {
+          this.messageService.exibirMensagem("Dados recuperados do servidor com sucesso.");
+        }
       }
     }
   }
@@ -238,6 +246,11 @@ export class MyApp {
     );
   }
 
+  confirmarAtualizarRepositorio(atualizacoes: Alteracao[]) {
+    let mensagem = "Deseja atualizar o banco com as alterações realizadas?";
+    this.messageService.exibirMensagemConfirmacao(mensagem, () => { this.atualizarRepositorio(atualizacoes) });
+  }
+
   atualizarRepositorio(atualizacoes: Alteracao[]) {
     this.loadingService.show();
     this.alteracaoService.publicar(atualizacoes).subscribe(
@@ -246,8 +259,8 @@ export class MyApp {
         this.storage.remove('atualizacoes');
         this.nav.setRoot("HomePage");
         this.loadingService.hide();
+        this.atualizacao = true;
         this.obterObras();
-        this.messageService.exibirMensagem("Atualizações publicadas com sucesso.");
       },
       error => {
         this.loadingService.hide();

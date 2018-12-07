@@ -1,79 +1,6 @@
-webpackJsonp([77],{
+webpackJsonp([78],{
 
 /***/ 159:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoadingService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var LoadingService = /** @class */ (function () {
-    function LoadingService(loadingCtrl) {
-        this.loadingCtrl = loadingCtrl;
-    }
-    LoadingService.prototype.show = function () {
-        this.loading = this.loadingCtrl.create({
-            spinner: 'hide',
-            content: "<img src=\"assets/svg/grid.svg\"/>"
-        });
-        this.loading.present();
-    };
-    LoadingService.prototype.hide = function () {
-        this.loading.dismiss();
-    };
-    LoadingService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["B" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0_ionic_angular__["h" /* LoadingController */]])
-    ], LoadingService);
-    return LoadingService;
-}());
-
-//# sourceMappingURL=loading-service.js.map
-
-/***/ }),
-
-/***/ 160:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppSettings; });
-var AppSettings = Object.freeze({
-    "IS_FIREBASE_ENABLED": false,
-    "SHOW_START_WIZARD": false,
-    "SUBSCRIBE": false,
-    "TOAST": {
-        "duration": 5000,
-        "position": "top",
-        "cssClass": "toast-success"
-    },
-    "FIREBASE_CONFIG": {
-        apiKey: "AIzaSyBZYIJQFQ7jMsTMRLuDcANj8k43TsxbeNE",
-        authDomain: "sgq-gdol.firebaseapp.com",
-        databaseURL: "https://sgq-gdol.firebaseio.com",
-        projectId: "sgq-gdol",
-        storageBucket: "sgq-gdol.appspot.com",
-        messagingSenderId: "445415293027"
-    },
-    "MAP_KEY": {
-        "apiKey": 'AIzaSyA4-GoZzOqYTvxMe52YQZch5JaCFN6ACLg'
-    }
-});
-//# sourceMappingURL=app-settings.js.map
-
-/***/ }),
-
-/***/ 161:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -129,6 +56,79 @@ var MessageService = /** @class */ (function () {
 
 /***/ }),
 
+/***/ 160:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoadingService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var LoadingService = /** @class */ (function () {
+    function LoadingService(loadingCtrl) {
+        this.loadingCtrl = loadingCtrl;
+    }
+    LoadingService.prototype.show = function () {
+        this.loading = this.loadingCtrl.create({
+            spinner: 'hide',
+            content: "<img src=\"assets/svg/grid.svg\"/>"
+        });
+        this.loading.present();
+    };
+    LoadingService.prototype.hide = function () {
+        this.loading.dismiss();
+    };
+    LoadingService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["B" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0_ionic_angular__["h" /* LoadingController */]])
+    ], LoadingService);
+    return LoadingService;
+}());
+
+//# sourceMappingURL=loading-service.js.map
+
+/***/ }),
+
+/***/ 161:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppSettings; });
+var AppSettings = Object.freeze({
+    "IS_FIREBASE_ENABLED": false,
+    "SHOW_START_WIZARD": false,
+    "SUBSCRIBE": false,
+    "TOAST": {
+        "duration": 5000,
+        "position": "top",
+        "cssClass": "toast-success"
+    },
+    "FIREBASE_CONFIG": {
+        apiKey: "AIzaSyBZYIJQFQ7jMsTMRLuDcANj8k43TsxbeNE",
+        authDomain: "sgq-gdol.firebaseapp.com",
+        databaseURL: "https://sgq-gdol.firebaseio.com",
+        projectId: "sgq-gdol",
+        storageBucket: "sgq-gdol.appspot.com",
+        messagingSenderId: "445415293027"
+    },
+    "MAP_KEY": {
+        "apiKey": 'AIzaSyA4-GoZzOqYTvxMe52YQZch5JaCFN6ACLg'
+    }
+});
+//# sourceMappingURL=app-settings.js.map
+
+/***/ }),
+
 /***/ 172:
 /***/ (function(module, exports) {
 
@@ -152,102 +152,102 @@ webpackEmptyAsyncContext.id = 172;
 var map = {
 	"../core/action-sheet/layout-1/action-sheet-layout-1.module": [
 		720,
-		17
+		18
 	],
 	"../core/action-sheet/layout-2/action-sheet-layout-2.module": [
 		721,
-		16
+		17
 	],
 	"../core/action-sheet/layout-3/action-sheet-layout-3.module": [
-		724,
-		76
+		722,
+		77
 	],
 	"../core/check-box/layout-1/check-box-layout-1.module": [
-		722,
-		75
+		723,
+		76
 	],
 	"../core/check-box/layout-2/check-box-layout-2.module": [
-		723,
-		74
+		724,
+		75
 	],
 	"../core/check-box/layout-3/check-box-layout-3.module": [
 		725,
-		73
+		74
 	],
 	"../core/full-screen-gallery/full-screen-gallery.module": [
 		726,
-		72
+		73
 	],
 	"../core/image-gallery/layout-1/image-gallery-layout-1.module": [
 		727,
-		71
+		72
 	],
 	"../core/image-gallery/layout-2/image-gallery-layout-2.module": [
 		728,
-		70
+		71
 	],
 	"../core/list-view/appearance-animation/layout-1/appearance-animation-layout-1.module": [
+		729,
+		70
+	],
+	"../core/list-view/appearance-animation/layout-2/appearance-animation-layout-2.module": [
 		730,
 		69
 	],
-	"../core/list-view/appearance-animation/layout-2/appearance-animation-layout-2.module": [
-		729,
-		68
-	],
 	"../core/list-view/appearance-animation/layout-3/appearance-animation-layout-3.module": [
 		731,
-		67
+		68
 	],
 	"../core/list-view/appearance-animation/layout-4/appearance-animation-layout-4.module": [
 		732,
-		66
+		67
 	],
 	"../core/list-view/appearance-animation/layout-5/appearance-animation-layout-5.module": [
 		716,
-		65
+		66
 	],
 	"../core/list-view/drag-and-drop/layout-1/drag-and-drop-layout-1.module": [
 		733,
-		64
+		65
 	],
 	"../core/list-view/drag-and-drop/layout-2/drag-and-drop-layout-2.module": [
 		734,
-		63
+		64
 	],
 	"../core/list-view/drag-and-drop/layout-3/drag-and-drop-layout-3.module": [
 		735,
-		62
+		63
 	],
 	"../core/list-view/expandable/layout-1/expandable-layout-1.module": [
 		736,
-		61
+		62
 	],
 	"../core/list-view/expandable/layout-2/expandable-layout-2.module": [
 		737,
-		60
+		61
 	],
 	"../core/list-view/expandable/layout-3/expandable-layout-3.module": [
 		738,
-		59
+		60
 	],
 	"../core/list-view/google-card/layout-1/google-card-layout-1.module": [
-		741,
-		58
+		739,
+		59
 	],
 	"../core/list-view/google-card/layout-2/google-card-layout-2.module": [
-		739,
-		57
+		740,
+		58
 	],
 	"../core/list-view/google-card/layout-3/google-card-layout-3.module": [
-		740,
-		56
+		741,
+		57
 	],
 	"../core/list-view/sticky-list-header/layout-1/sticky-list-header-layout-1.module": [
-		743,
+		742,
 		6
 	],
 	"../core/list-view/sticky-list-header/layout-2/sticky-list-header-layout-2.module": [
-		742,
+		743,
 		5
 	],
 	"../core/list-view/sticky-list-header/layout-3/sticky-list-header-layout-3.module": [
@@ -255,192 +255,192 @@ var map = {
 		4
 	],
 	"../core/list-view/swipe-to-dismiss/layout-1/swipe-to-dismiss-layout-1.module": [
-		747,
-		55
+		745,
+		56
 	],
 	"../core/list-view/swipe-to-dismiss/layout-2/swipe-to-dismiss-layout-2.module": [
-		745,
-		54
+		746,
+		55
 	],
 	"../core/list-view/swipe-to-dismiss/layout-3/swipe-to-dismiss-layout-3.module": [
-		746,
-		53
+		747,
+		54
 	],
 	"../core/login/layout-1/login-layout-1.module": [
 		748,
-		52
+		53
 	],
 	"../core/login/layout-2/login-layout-2.module": [
 		718,
-		9
+		10
 	],
 	"../core/maps/layout-1/maps-layout-1.module": [
 		749,
 		0
 	],
 	"../core/maps/layout-2/maps-layout-2.module": [
-		752,
+		750,
 		2
 	],
 	"../core/maps/layout-3/maps-layout-3.module": [
-		750,
+		751,
 		1
 	],
 	"../core/parallax/layout-1/parallax-layout-1.module": [
-		751,
-		15
+		752,
+		16
 	],
 	"../core/parallax/layout-2/parallax-layout-2.module": [
 		753,
-		14
+		15
 	],
 	"../core/parallax/layout-3/parallax-layout-3.module": [
 		754,
-		13
+		14
 	],
 	"../core/parallax/layout-4/parallax-layout-4.module": [
-		756,
-		12
+		755,
+		13
 	],
 	"../core/radio-button/layout-1/radio-button-layout-1.module": [
-		755,
-		51
+		756,
+		52
 	],
 	"../core/radio-button/layout-2/radio-button-layout-2.module": [
 		757,
-		50
+		51
 	],
 	"../core/radio-button/layout-3/radio-button-layout-3.module": [
+		758,
+		50
+	],
+	"../core/range/layout-1/range-layout-1.module": [
 		759,
 		49
 	],
-	"../core/range/layout-1/range-layout-1.module": [
+	"../core/range/layout-2/range-layout-2.module": [
 		760,
 		48
 	],
-	"../core/range/layout-2/range-layout-2.module": [
-		758,
-		47
-	],
 	"../core/range/layout-3/range-layout-3.module": [
 		761,
-		46
+		47
 	],
 	"../core/range/layout-4/range-layout-4.module": [
 		762,
-		45
+		46
 	],
 	"../core/register/layout-1/register-layout-1.module": [
+		763,
+		45
+	],
+	"../core/register/layout-2/register-layout-2.module": [
 		764,
 		44
 	],
-	"../core/register/layout-2/register-layout-2.module": [
-		763,
-		43
-	],
 	"../core/search-bar/layout-1/search-bar-layout-1.module": [
 		765,
-		42
+		43
 	],
 	"../core/search-bar/layout-2/search-bar-layout-2.module": [
 		766,
-		41
+		42
 	],
 	"../core/search-bar/layout-3/search-bar-layout-3.module": [
 		767,
-		40
+		41
 	],
 	"../core/select/layout-1/select-layout-1.module": [
 		717,
-		39
+		40
 	],
 	"../core/select/layout-2/select-layout-2.module": [
 		768,
-		38
+		39
 	],
 	"../core/select/layout-3/select-layout-3.module": [
 		719,
-		37
+		38
 	],
 	"../core/select/layout-4/select-layout-4.module": [
 		769,
-		36
+		37
 	],
 	"../core/select/layout-5/select-layout-5.module": [
 		770,
-		35
+		36
 	],
 	"../core/select/layout-6/select-layout-6.module": [
+		771,
+		35
+	],
+	"../core/spinner/spinner.module": [
 		772,
 		34
 	],
-	"../core/spinner/spinner.module": [
-		771,
-		33
-	],
 	"../core/splash-screen/layout-1/splash-screen-layout-1.module": [
 		773,
-		32
+		33
 	],
 	"../core/splash-screen/layout-2/splash-screen-layout-2.module": [
+		774,
+		32
+	],
+	"../core/splash-screen/layout-3/splash-screen-layout-3.module": [
 		775,
 		31
 	],
-	"../core/splash-screen/layout-3/splash-screen-layout-3.module": [
-		774,
-		30
-	],
 	"../core/sub-image-gallery/layout-1/sub-image-gallery-layout-1.module": [
 		776,
-		29
+		30
 	],
 	"../core/sub-image-gallery/layout-2/sub-image-gallery-layout-2.module": [
 		777,
-		28
+		29
 	],
 	"../core/tabs/layout-1/tabs-layout-1.module": [
+		778,
+		28
+	],
+	"../core/tabs/layout-2/tabs-layout-2.module": [
 		779,
 		27
 	],
-	"../core/tabs/layout-2/tabs-layout-2.module": [
-		778,
-		26
-	],
 	"../core/tabs/layout-3/tabs-layout-3.module": [
 		780,
-		25
+		26
 	],
 	"../core/toggle/layout-1/toggle-layout-1.module": [
 		781,
-		24
+		25
 	],
 	"../core/toggle/layout-2/toggle-layout-2.module": [
 		782,
-		23
+		24
 	],
 	"../core/toggle/layout-3/toggle-layout-3.module": [
 		783,
-		22
+		23
 	],
 	"../core/wizard/layout-1/wizard-layout-1.module": [
 		784,
-		21
+		22
 	],
 	"../core/wizard/layout-2/wizard-layout-2.module": [
 		785,
-		20
+		21
 	],
 	"../core/wizard/layout-3/wizard-layout-3.module": [
 		786,
-		19
+		20
 	],
 	"../pages/alteracoes/alteracoes.module": [
 		787,
-		11
+		12
 	],
 	"../pages/area/area.module": [
 		788,
-		7
+		9
 	],
 	"../pages/area/cadastro/area-cadastro.module": [
 		789,
@@ -448,7 +448,11 @@ var map = {
 	],
 	"../pages/home/home.module": [
 		790,
-		18
+		19
+	],
+	"../pages/item-area/item-area.module": [
+		793,
+		7
 	],
 	"../pages/login/login.component.module": [
 		791,
@@ -456,7 +460,7 @@ var map = {
 	],
 	"../pages/obra/obra.module": [
 		792,
-		10
+		11
 	]
 };
 function webpackAsyncContext(req) {
@@ -482,7 +486,7 @@ module.exports = webpackAsyncContext;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ToastService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config_app_settings__ = __webpack_require__(160);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config_app_settings__ = __webpack_require__(161);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -622,14 +626,14 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(693);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angularfire2_database__ = __webpack_require__(697);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angularfire2_database___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_angularfire2_database__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__config_app_settings__ = __webpack_require__(160);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__config_app_settings__ = __webpack_require__(161);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angularfire2__ = __webpack_require__(714);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angularfire2___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_angularfire2__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_network__ = __webpack_require__(354);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__utils_toast_service__ = __webpack_require__(364);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__utils_loading_service__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__utils_loading_service__ = __webpack_require__(160);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__angular_common_http__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__utils_message_service__ = __webpack_require__(161);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__utils_message_service__ = __webpack_require__(159);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ionic_storage__ = __webpack_require__(158);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__directives_mask_directive__ = __webpack_require__(715);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -670,15 +674,15 @@ var AppModule = /** @class */ (function () {
                     links: [
                         { loadChildren: '../core/action-sheet/layout-1/action-sheet-layout-1.module#ActionSheetLayout1Module', name: 'ActionSheetLayout1', segment: 'action-sheet-layout-1', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/action-sheet/layout-2/action-sheet-layout-2.module#ActionSheetLayout2Module', name: 'ActionSheetLayout2', segment: 'action-sheet-layout-2', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/action-sheet/layout-3/action-sheet-layout-3.module#ActionSheetLayout3Module', name: 'ActionSheetLayout3', segment: 'action-sheet-layout-3', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/check-box/layout-1/check-box-layout-1.module#CheckBoxLayout1Module', name: 'CheckBoxLayout1', segment: 'check-box-layout-1', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/check-box/layout-2/check-box-layout-2.module#CheckBoxLayout2Module', name: 'CheckBoxLayout2', segment: 'check-box-layout-2', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../core/action-sheet/layout-3/action-sheet-layout-3.module#ActionSheetLayout3Module', name: 'ActionSheetLayout3', segment: 'action-sheet-layout-3', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/check-box/layout-3/check-box-layout-3.module#CheckBoxLayout3Module', name: 'CheckBoxLayout3', segment: 'check-box-layout-3', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/full-screen-gallery/full-screen-gallery.module#FullScreenGalleryModule', name: 'FullScreenGallery', segment: 'full-screen-gallery', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/image-gallery/layout-1/image-gallery-layout-1.module#ImageGalleryLayout1Module', name: 'ImageGalleryLayout1', segment: 'image-gallery-layout-1', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/image-gallery/layout-2/image-gallery-layout-2.module#ImageGalleryLayout2Module', name: 'ImageGalleryLayout2', segment: 'image-gallery-layout-2', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../core/list-view/appearance-animation/layout-2/appearance-animation-layout-2.module#AppearanceAnimationLayout2Module', name: 'AppearanceAnimationLayout2', segment: 'appearance-animation-layout-2', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/list-view/appearance-animation/layout-1/appearance-animation-layout-1.module#AppearanceAnimationLayout1Module', name: 'AppearanceAnimationLayout1', segment: 'appearance-animation-layout-1', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/list-view/appearance-animation/layout-2/appearance-animation-layout-2.module#AppearanceAnimationLayout2Module', name: 'AppearanceAnimationLayout2', segment: 'appearance-animation-layout-2', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/list-view/appearance-animation/layout-3/appearance-animation-layout-3.module#AppearanceAnimationLayout3Module', name: 'AppearanceAnimationLayout3', segment: 'appearance-animation-layout-3', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/list-view/appearance-animation/layout-4/appearance-animation-layout-4.module#AppearanceAnimationLayout4Module', name: 'AppearanceAnimationLayout4', segment: 'appearance-animation-layout-4', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/list-view/appearance-animation/layout-5/appearance-animation-layout-5.module#AppearanceAnimationLayout5Module', name: 'AppearanceAnimationLayout5', segment: 'appearance-animation-layout-5', priority: 'low', defaultHistory: [] },
@@ -688,33 +692,33 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../core/list-view/expandable/layout-1/expandable-layout-1.module#ExpandableLayout1Module', name: 'ExpandableLayout1', segment: 'expandable-layout-1', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/list-view/expandable/layout-2/expandable-layout-2.module#ExpandableLayout2Module', name: 'ExpandableLayout2', segment: 'expandable-layout-2', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/list-view/expandable/layout-3/expandable-layout-3.module#ExpandableLayout3Module', name: 'ExpandableLayout3', segment: 'expandable-layout-3', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/list-view/google-card/layout-1/google-card-layout-1.module#GoogleCardLayout1Module', name: 'GoogleCardLayout1', segment: 'google-card-layout-1', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/list-view/google-card/layout-2/google-card-layout-2.module#GoogleCardLayout2Module', name: 'GoogleCardLayout2', segment: 'google-card-layout-2', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/list-view/google-card/layout-3/google-card-layout-3.module#GoogleCardLayout3Module', name: 'GoogleCardLayout3', segment: 'google-card-layout-3', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../core/list-view/google-card/layout-1/google-card-layout-1.module#GoogleCardLayout1Module', name: 'GoogleCardLayout1', segment: 'google-card-layout-1', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../core/list-view/sticky-list-header/layout-2/sticky-list-header-layout-2.module#StickyListHeaderLayout2Module', name: 'StickyListHeaderLayout2', segment: 'sticky-list-header-layout-2', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/list-view/sticky-list-header/layout-1/sticky-list-header-layout-1.module#StickyListHeaderLayout1Module', name: 'StickyListHeaderLayout1', segment: 'sticky-list-header-layout-1', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/list-view/sticky-list-header/layout-2/sticky-list-header-layout-2.module#StickyListHeaderLayout2Module', name: 'StickyListHeaderLayout2', segment: 'sticky-list-header-layout-2', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/list-view/sticky-list-header/layout-3/sticky-list-header-layout-3.module#StickyListHeaderLayout3Module', name: 'StickyListHeaderLayout3', segment: 'sticky-list-header-layout-3', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/list-view/swipe-to-dismiss/layout-1/swipe-to-dismiss-layout-1.module#SwipeToDismissLayout1Module', name: 'SwipeToDismissLayout1', segment: 'swipe-to-dismiss-layout-1', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/list-view/swipe-to-dismiss/layout-2/swipe-to-dismiss-layout-2.module#SwipeToDismissLayout2Module', name: 'SwipeToDismissLayout2', segment: 'swipe-to-dismiss-layout-2', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/list-view/swipe-to-dismiss/layout-3/swipe-to-dismiss-layout-3.module#SwipeToDismissLayout3Module', name: 'SwipeToDismissLayout3', segment: 'swipe-to-dismiss-layout-3', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../core/list-view/swipe-to-dismiss/layout-1/swipe-to-dismiss-layout-1.module#SwipeToDismissLayout1Module', name: 'SwipeToDismissLayout1', segment: 'swipe-to-dismiss-layout-1', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/login/layout-1/login-layout-1.module#LoginLayout1Module', name: 'LoginLayout1', segment: 'login-layout-1', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/login/layout-2/login-layout-2.module#LoginLayout2Module', name: 'LoginLayout2', segment: 'login-layout-2', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/maps/layout-1/maps-layout-1.module#MapsLayout1Module', name: 'MapsLayout1', segment: 'maps-layout-1', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/maps/layout-2/maps-layout-2.module#MapsLayout2Module', name: 'MapsLayout2', segment: 'maps-layout-2', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/maps/layout-3/maps-layout-3.module#MapsLayout3Module', name: 'MapsLayout3', segment: 'maps-layout-3', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/parallax/layout-1/parallax-layout-1.module#ParallaxLayout1Module', name: 'ParallaxLayout1', segment: 'parallax-layout-1', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../core/maps/layout-2/maps-layout-2.module#MapsLayout2Module', name: 'MapsLayout2', segment: 'maps-layout-2', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../core/login/layout-2/login-layout-2.module#LoginLayout2Module', name: 'LoginLayout2', segment: 'login-layout-2', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/parallax/layout-2/parallax-layout-2.module#ParallaxLayout2Module', name: 'ParallaxLayout2', segment: 'parallax-layout-2', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/parallax/layout-3/parallax-layout-3.module#ParallaxLayout3Module', name: 'ParallaxLayout3', segment: 'parallax-layout-3', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../core/radio-button/layout-1/radio-button-layout-1.module#RadioButtonLayout1Module', name: 'RadioButtonLayout1', segment: 'radio-button-layout-1', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/parallax/layout-4/parallax-layout-4.module#ParallaxLayout4Module', name: 'ParallaxLayout4', segment: 'parallax-layout-4', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/radio-button/layout-1/radio-button-layout-1.module#RadioButtonLayout1Module', name: 'RadioButtonLayout1', segment: 'radio-button-layout-1', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/radio-button/layout-2/radio-button-layout-2.module#RadioButtonLayout2Module', name: 'RadioButtonLayout2', segment: 'radio-button-layout-2', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../core/range/layout-2/range-layout-2.module#RangeLayout2Module', name: 'RangeLayout2', segment: 'range-layout-2', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/radio-button/layout-3/radio-button-layout-3.module#RadioButtonLayout3Module', name: 'RadioButtonLayout3', segment: 'radio-button-layout-3', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/range/layout-1/range-layout-1.module#RangeLayout1Module', name: 'RangeLayout1', segment: 'range-layout-1', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/range/layout-2/range-layout-2.module#RangeLayout2Module', name: 'RangeLayout2', segment: 'range-layout-2', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/range/layout-3/range-layout-3.module#RangeLayout3Module', name: 'RangeLayout3', segment: 'range-layout-3', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/range/layout-4/range-layout-4.module#RangeLayout4Module', name: 'RangeLayout4', segment: 'range-layout-4', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../core/register/layout-2/register-layout-2.module#RegisterLayout2Module', name: 'RegisterLayout2', segment: 'register-layout-2', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/register/layout-1/register-layout-1.module#RegisterLayout1Module', name: 'RegisterLayout1', segment: 'register-layout-1', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/register/layout-2/register-layout-2.module#RegisterLayout2Module', name: 'RegisterLayout2', segment: 'register-layout-2', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/search-bar/layout-1/search-bar-layout-1.module#SearchBarLayout1Module', name: 'SearchBarLayout1', segment: 'search-bar-layout-1', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/search-bar/layout-2/search-bar-layout-2.module#SearchBarLayout2Module', name: 'SearchBarLayout2', segment: 'search-bar-layout-2', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/search-bar/layout-3/search-bar-layout-3.module#SearchBarLayout3Module', name: 'SearchBarLayout3', segment: 'search-bar-layout-3', priority: 'low', defaultHistory: [] },
@@ -723,15 +727,15 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../core/select/layout-3/select-layout-3.module#SelectLayout3Module', name: 'SelectLayout3', segment: 'select-layout-3', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/select/layout-4/select-layout-4.module#SelectLayout4Module', name: 'SelectLayout4', segment: 'select-layout-4', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/select/layout-5/select-layout-5.module#SelectLayout5Module', name: 'SelectLayout5', segment: 'select-layout-5', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../core/spinner/spinner.module#SpinnerModule', name: 'Spinner', segment: 'spinner', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/select/layout-6/select-layout-6.module#SelectLayout6Module', name: 'SelectLayout6', segment: 'select-layout-6', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/spinner/spinner.module#SpinnerModule', name: 'Spinner', segment: 'spinner', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/splash-screen/layout-1/splash-screen-layout-1.module#SplashScreenLayout1Module', name: 'SplashScreenLayout1', segment: 'splash-screen-layout-1', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../core/splash-screen/layout-3/splash-screen-layout-3.module#SplashScreenLayout3Module', name: 'SplashScreenLayout3', segment: 'splash-screen-layout-3', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/splash-screen/layout-2/splash-screen-layout-2.module#SplashScreenLayout2Module', name: 'SplashScreenLayout2', segment: 'splash-screen-layout-2', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/splash-screen/layout-3/splash-screen-layout-3.module#SplashScreenLayout3Module', name: 'SplashScreenLayout3', segment: 'splash-screen-layout-3', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/sub-image-gallery/layout-1/sub-image-gallery-layout-1.module#SubImageGalleryLayout1Module', name: 'SubImageGalleryLayout1', segment: 'sub-image-gallery-layout-1', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/sub-image-gallery/layout-2/sub-image-gallery-layout-2.module#SubImageGalleryLayout2Module', name: 'SubImageGalleryLayout2', segment: 'sub-image-gallery-layout-2', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../core/tabs/layout-2/tabs-layout-2.module#TabsLayout2Module', name: 'TabsLayout2', segment: 'tabs-layout-2', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/tabs/layout-1/tabs-layout-1.module#TabsLayout1Module', name: 'TabsLayout1', segment: 'tabs-layout-1', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/tabs/layout-2/tabs-layout-2.module#TabsLayout2Module', name: 'TabsLayout2', segment: 'tabs-layout-2', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/tabs/layout-3/tabs-layout-3.module#TabsLayout3Module', name: 'TabsLayout3', segment: 'tabs-layout-3', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/toggle/layout-1/toggle-layout-1.module#ToggleLayout1Module', name: 'ToggleLayout1', segment: 'toggle-layout-1', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/toggle/layout-2/toggle-layout-2.module#ToggleLayout2Module', name: 'ToggleLayout2', segment: 'toggle-layout-2', priority: 'low', defaultHistory: [] },
@@ -744,7 +748,8 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/area/cadastro/area-cadastro.module#AreaCadastroPageModule', name: 'AreaCadastroPage', segment: 'area-cadastro', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.component.module#LoginPageModule', name: 'LoginPage', segment: 'login.component', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/obra/obra.module#ObraPageModule', name: 'ObraPage', segment: 'obra', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/obra/obra.module#ObraPageModule', name: 'ObraPage', segment: 'obra', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/item-area/item-area.module#ItemAreaPageModule', name: 'ItemAreaPage', segment: 'item-area', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_8_angularfire2__["AngularFireModule"].initializeApp(__WEBPACK_IMPORTED_MODULE_7__config_app_settings__["a" /* AppSettings */].FIREBASE_CONFIG),
@@ -850,8 +855,8 @@ var BaseService = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(353);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(351);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_network__ = __webpack_require__(354);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_message_service__ = __webpack_require__(161);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__utils_loading_service__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_message_service__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__utils_loading_service__ = __webpack_require__(160);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_obra_service__ = __webpack_require__(365);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_storage__ = __webpack_require__(158);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__services_checklist_service__ = __webpack_require__(694);
@@ -892,6 +897,7 @@ var MyApp = /** @class */ (function () {
         this.checklistService = checklistService;
         this.network = network;
         this.rootPage = "LoginPage";
+        this.atualizacao = false;
         platform.ready().then(function () {
             statusBar.styleDefault();
             splashScreen.hide();
@@ -983,6 +989,7 @@ var MyApp = /** @class */ (function () {
                 }
                 else {
                     _this.obterChecklistServico();
+                    _this.atualizacao = false;
                     _this.obterObras();
                 }
             });
@@ -993,7 +1000,7 @@ var MyApp = /** @class */ (function () {
         this.storage.ready().then(function () {
             _this.storage.get('atualizacoes').then(function (atualizacoes) {
                 if (atualizacoes) {
-                    _this.atualizarRepositorio(atualizacoes);
+                    _this.confirmarAtualizarRepositorio(atualizacoes);
                 }
                 else {
                     _this.messageService.exibirMensagem("Não há nada para publicar.");
@@ -1063,6 +1070,14 @@ var MyApp = /** @class */ (function () {
             if (qtdErros > 0) {
                 this.messageService.exibirMensagem("Ocorreu erro durante a busca de algumas obras.");
             }
+            else {
+                if (this.atualizacao) {
+                    this.messageService.exibirMensagem("Atualizações publicadas com sucesso.");
+                }
+                else {
+                    this.messageService.exibirMensagem("Dados recuperados do servidor com sucesso.");
+                }
+            }
         }
     };
     MyApp.prototype.obterChecklistServico = function () {
@@ -1073,6 +1088,11 @@ var MyApp = /** @class */ (function () {
             _this.messageService.exibirMensagem("Falha na comunicação com o servidor, contate o suporte.");
         });
     };
+    MyApp.prototype.confirmarAtualizarRepositorio = function (atualizacoes) {
+        var _this = this;
+        var mensagem = "Deseja atualizar o banco com as alterações realizadas?";
+        this.messageService.exibirMensagemConfirmacao(mensagem, function () { _this.atualizarRepositorio(atualizacoes); });
+    };
     MyApp.prototype.atualizarRepositorio = function (atualizacoes) {
         var _this = this;
         this.loadingService.show();
@@ -1081,8 +1101,8 @@ var MyApp = /** @class */ (function () {
             _this.storage.remove('atualizacoes');
             _this.nav.setRoot("HomePage");
             _this.loadingService.hide();
+            _this.atualizacao = true;
             _this.obterObras();
-            _this.messageService.exibirMensagem("Atualizações publicadas com sucesso.");
         }, function (error) {
             _this.loadingService.hide();
             _this.messageService.exibirMensagem("Falha na comunicação com o servidor, contate o suporte.");

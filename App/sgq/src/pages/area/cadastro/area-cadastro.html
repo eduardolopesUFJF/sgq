@@ -42,9 +42,9 @@
                     </ion-item>
                     <ion-item text-center transparent>
                         <ion-label stacked>CHECKLIST</ion-label>
-                        <ion-select required [(ngModel)]="area.itensChecklist" multiple="true" name="checklist" okText="Ok"
+                        <ion-select required [(ngModel)]="servicosEscolhidos" multiple="true" name="checklist" okText="Ok"
                             cancelText="Cancelar">
-                            <ion-option *ngFor="let item of opcoesItens; let i= index" [value]="item">{{item.descricao}}</ion-option>
+                            <ion-option *ngFor="let item of opcoesItens; let i= index" [value]="item.id">{{item.descricao}}</ion-option>
                         </ion-select>
                     </ion-item>
                     <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: black !important;"

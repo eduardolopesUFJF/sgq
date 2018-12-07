@@ -36,7 +36,7 @@ namespace SGQ.GDOL.Infra.CrossCutting.IoC
             services.AddScoped<IAreaRepository, AreaRepository>();
             services.AddScoped<IServicoRepository, ServicoRepository>();
 
-            services.AddDbContext<ServiceContext>(ServiceLifetime.Transient);
+            services.AddScoped<ServiceContext>();
             services.AddScoped<NotificationHandler>();
 
             ServiceProvider = services.BuildServiceProvider();

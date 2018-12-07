@@ -7,11 +7,16 @@ namespace SGQ.GDOL.Domain.ObraRoot.Service
     public class AreaService : IAreaService
     {
         private readonly IAreaRepository _areaRepository;
+        private readonly IServicoRepository _servicoRepository;
         private readonly IUnitOfWork _unitOfWork;
 
-        public AreaService(IAreaRepository areaRepository, IUnitOfWork unitOfWork)
+        public AreaService(
+            IAreaRepository areaRepository,
+            IServicoRepository servicoRepository,
+            IUnitOfWork unitOfWork)
         {
             _areaRepository = areaRepository;
+            _servicoRepository = servicoRepository;
             _unitOfWork = unitOfWork;
         }
 
@@ -23,8 +28,11 @@ namespace SGQ.GDOL.Domain.ObraRoot.Service
 
         public void Atualizar(Area area)
         {
-            _areaRepository.Update(area);
-            _unitOfWork.Commit();
+            if(area.Id != 0)
+            {
+                _areaRepository.Update(area);
+                _unitOfWork.Commit();
+            }
         }
     }
 }

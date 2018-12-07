@@ -1,7 +1,7 @@
 export class Alteracao {
     
     id: string;
-    obraId: number;
+    idObra: number;
 
     tipo: string;
     entidade: string;

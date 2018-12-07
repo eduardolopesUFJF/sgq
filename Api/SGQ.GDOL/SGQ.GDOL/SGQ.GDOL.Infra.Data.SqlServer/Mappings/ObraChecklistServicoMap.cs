@@ -34,7 +34,7 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Mappings
 
             entity.Property(e => e.Status).HasColumnName("STATUS");
 
-            entity.HasOne(d => d.ChecklistServico)
+            entity.HasOne(d => d.ChecklistItem)
                 .WithMany(p => p.ObrasChecklistServico)
                 .HasForeignKey(d => d.IdChecklistServico);
 

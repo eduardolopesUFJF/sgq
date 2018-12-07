@@ -19,7 +19,7 @@ namespace SGQ.GDOL.Domain.ObraRoot.Entity
         public DateTime? DataHoraInclusao { get; set; }
         public DateTime? DataHoraAlteracao { get; set; }
 
-        public virtual ChecklistItem ChecklistServico { get; set; }
+        public virtual ChecklistItem ChecklistItem { get; set; }
         public virtual Area Area { get; set; }
         public virtual Obra Obra { get; set; }
         public virtual ICollection<InspecaoObra> InspecaoObra { get; set; }
