@@ -18,4 +18,16 @@ export class ObraService extends BaseService {
             .catch(this.handleError);
     }
 
+    public obterIdsTodasAtivas(): Observable<number[]> {
+        this.headers = this.headers.set('BancoSchema', localStorage.getItem('BancoSchema'));
+        return this.http.get<number[]>(this.apiUrl + 'ids', { headers: this.headers })
+            .catch(this.handleError);
+    }
+
+    public obterObraCompleta(idObra: number): Observable<Obra> {
+        this.headers = this.headers.set('BancoSchema', localStorage.getItem('BancoSchema'));
+        return this.http.get<Obra>(this.apiUrl + idObra, { headers: this.headers })
+            .catch(this.handleError);
+    }
+
 }

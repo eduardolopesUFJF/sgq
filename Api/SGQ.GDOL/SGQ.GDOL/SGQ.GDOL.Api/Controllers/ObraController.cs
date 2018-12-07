@@ -37,10 +37,39 @@ namespace SGQ.GDOL.Api.Controllers
                     consultas.Add(task);
                 }
 
-                var result = Task.WhenAll(consultas.ToArray()).Result;
-                
+                var result = await Task.WhenAll(consultas.ToArray());
+
                 var resultVM = Mapper.Map<List<ObraVM>>(result);
                 return Ok(resultVM);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        [HttpGet("ids")]
+        public IActionResult GetIds()
+        {
+            try
+            {
+                var ids = _obraService.ObterTodasAtivasSemInclude().Select(x => x.Id).ToArray();
+                return Ok(ids);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        [HttpGet("{idObra}")]
+        public IActionResult GetById(int idObra)
+        {
+            try
+            {
+                var obraBD = _obraService.ObterObraComInclude(new Obra{ Id = idObra});
+                var obraVM = Mapper.Map<ObraVM>(obraBD);
+                return Ok(obraVM);
             }
             catch (Exception ex)
             {

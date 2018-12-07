@@ -186,19 +186,45 @@ export class MyApp {
 
   obterObras() {
     this.loadingService.show();
-    this.obraService.obterTodasAtivas().subscribe(
-      obras => {
-        this.storage.set('obras', obras);
-        this.storage.set('obrasBackup', obras);
-        this.storage.set('ultimoDownload', new Date());
-        this.loadingService.hide();
-        this.nav.setRoot("HomePage");
+    this.obraService.obterIdsTodasAtivas().subscribe(
+      idsObra => {
+        this.obterObraCompleta(idsObra);
       },
       error => {
         this.loadingService.hide();
         this.messageService.exibirMensagem("Falha na comunicação com o servidor, contate o suporte.");
       }
     );
+  }
+  
+  obterObraCompleta(idsObra: number[]) {
+    let obras: Obra[] = [];
+    let qtdErros: number = 0;
+    idsObra.forEach(idObra => {
+      this.obraService.obterObraCompleta(idObra).subscribe(
+        obra => {
+          obras.push(obra);
+          this.setarValoresObras(obras, idsObra, qtdErros);
+        },
+        error => {
+          qtdErros++;
+          this.setarValoresObras(obras, idsObra, qtdErros);
+        }
+      );
+    });
+  }
+
+  setarValoresObras(obras: Obra[], idsObra: number[], qtdErros: number) {
+    if ((obras.length + qtdErros) >= idsObra.length) {
+      this.storage.set('obras', obras);
+      this.storage.set('obrasBackup', obras);
+      this.storage.set('ultimoDownload', new Date());
+      this.nav.setRoot("HomePage");
+      this.loadingService.hide();
+      if (qtdErros > 0) {
+        this.messageService.exibirMensagem("Ocorreu erro durante a busca de algumas obras.");
+      }
+    }
   }
 
   obterChecklistServico() {
