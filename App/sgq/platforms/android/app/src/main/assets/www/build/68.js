@@ -1,14 +1,14 @@
 webpackJsonp([68],{
 
-/***/ 725:
+/***/ 734:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ImageGalleryLayout2Module", function() { return ImageGalleryLayout2Module; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DragAndDropLayout1Module", function() { return DragAndDropLayout1Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__image_gallery_layout_2__ = __webpack_require__(837);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__drag_and_drop_layout_1__ = __webpack_require__(857);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,37 +18,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ImageGalleryLayout2Module = /** @class */ (function () {
-    function ImageGalleryLayout2Module() {
+var DragAndDropLayout1Module = /** @class */ (function () {
+    function DragAndDropLayout1Module() {
     }
-    ImageGalleryLayout2Module = __decorate([
+    DragAndDropLayout1Module = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__image_gallery_layout_2__["a" /* ImageGalleryLayout2 */],
+                __WEBPACK_IMPORTED_MODULE_2__drag_and_drop_layout_1__["a" /* DragAndDropLayout1 */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__image_gallery_layout_2__["a" /* ImageGalleryLayout2 */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__drag_and_drop_layout_1__["a" /* DragAndDropLayout1 */]),
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_2__image_gallery_layout_2__["a" /* ImageGalleryLayout2 */]
+                __WEBPACK_IMPORTED_MODULE_2__drag_and_drop_layout_1__["a" /* DragAndDropLayout1 */]
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
         })
-    ], ImageGalleryLayout2Module);
-    return ImageGalleryLayout2Module;
+    ], DragAndDropLayout1Module);
+    return DragAndDropLayout1Module;
 }());
 
-//# sourceMappingURL=image-gallery-layout-2.module.js.map
+//# sourceMappingURL=drag-and-drop-layout-1.module.js.map
 
 /***/ }),
 
-/***/ 837:
+/***/ 857:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ImageGalleryLayout2; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DragAndDropLayout1; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -60,47 +60,40 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var ImageGalleryLayout2 = /** @class */ (function () {
-    function ImageGalleryLayout2(navCtrl, navParams) {
+var DragAndDropLayout1 = /** @class */ (function () {
+    function DragAndDropLayout1() {
         var _this = this;
-        this.navCtrl = navCtrl;
-        this.openSubGallery = function (group, index) {
-            _this.navCtrl.push(group.subGallery, {
-                'group': group.items[index],
-                'events': _this.events,
-                'layout': 2
-            });
-        };
-        this.onEvent = function (event, item, e) {
-            if (e) {
-                e.stopPropagation();
-            }
-            if (_this.events[event]) {
-                _this.events[event](item);
-            }
+        this.reorderItems = function (indexes) {
+            _this.data.items = Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* reorderArray */])(_this.data.items, indexes);
         };
     }
-    ImageGalleryLayout2.prototype.ngOnChanges = function (changes) {
-        this.data = changes['data'].currentValue;
+    DragAndDropLayout1.prototype.onEvent = function (event, item, e) {
+        if (this.events[event]) {
+            this.events[event](item);
+        }
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
-    ], ImageGalleryLayout2.prototype, "data", void 0);
+    ], DragAndDropLayout1.prototype, "data", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
-    ], ImageGalleryLayout2.prototype, "events", void 0);
-    ImageGalleryLayout2 = __decorate([
+    ], DragAndDropLayout1.prototype, "events", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */])
+    ], DragAndDropLayout1.prototype, "content", void 0);
+    DragAndDropLayout1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'image-gallery-layout-2',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\image-gallery\layout-2\image-gallery-layout-2.html"*/'<!---Theme Gallery for Full gallery 2-->\n\n<ion-grid card-background-page no-padding *ngIf="data != null">\n\n    <ion-row>\n\n        <ion-col col-12 col-sm-4 col-md-6 col-lg-4 col-xl-3 *ngFor="let group of data.items;let i = index;">\n\n            <ion-card transparent (click)="openSubGallery(data, i)">\n\n              <img [src]="group.image" />\n\n                <ion-card-content>\n\n                    <h2 gallery-title text-wrap text-capitalize>{{group.title}}</h2>\n\n                    <p gallery-subtitle text-wrap>{{group.subtitle}}</p>\n\n                </ion-card-content>\n\n            </ion-card>\n\n        </ion-col>\n\n    </ion-row>\n\n</ion-grid>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\image-gallery\layout-2\image-gallery-layout-2.html"*/
+            selector: 'drag-and-drop-layout-1',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\drag-and-drop\layout-1\drag-and-drop.html"*/'<!-- Themes Drag and drop - Small item + header -->\n\n<ion-content>\n\n    <ion-grid no-padding *ngIf="data != null">\n\n        <!--Header-->\n\n        <ion-row>\n\n            <!--Content-->\n\n            <ion-col col-12>\n\n                <ion-list-header transparent header-section no-lines padding-horizontal no-margin>\n\n                    <h1 header-title text-capitalize>{{data.header}}</h1>\n\n                </ion-list-header>\n\n                <!-- Item List Section -->\n\n                <ion-list no-margin reorder="true" (ionItemReorder)="reorderItems($event)">\n\n                    <ion-item default-item no-lines padding-left *ngFor="let item of data.items; let i = index;"\n\n                    (click)="onEvent(\'onItemClick\', item.title, $event)">\n\n                        <h2 item-title>{{item.title}}</h2>\n\n                        <h3 item-subtitle>{{item.subtitle}}</h3>\n\n                        <span span-medium>{{item.textIcon}}</span>\n\n                    </ion-item>\n\n                </ion-list>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\drag-and-drop\layout-1\drag-and-drop.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */]])
-    ], ImageGalleryLayout2);
-    return ImageGalleryLayout2;
+        __metadata("design:paramtypes", [])
+    ], DragAndDropLayout1);
+    return DragAndDropLayout1;
 }());
 
-//# sourceMappingURL=image-gallery-layout-2.js.map
+//# sourceMappingURL=drag-and-drop-layout-1.js.map
 
 /***/ })
 

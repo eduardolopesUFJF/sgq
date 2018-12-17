@@ -3786,6 +3786,10 @@ ion-reorder .ion-ios-reorder {
   background-color: green !important;
 }
 
+.toast-warning > div {
+  background-color: yellowgreen !important;
+}
+
 @font-face {
   font-family: 'fontello';
   src: url("../assets/fontello/fontello.eot?89574879");
@@ -31671,6 +31675,14 @@ appearance-animation-layout-4 .fade-in-item {
 
 /*  #Style Appearance animation (Zoom In)
 ================================================*/
+appearance-animation-layout-5 ion-label {
+  margin: 5px 0px !important;
+}
+
+appearance-animation-layout-5 .margin-top-10 {
+  margin-top: 10px !important;
+}
+
 appearance-animation-layout-5 .zoom-in {
   -webkit-animation: zoomIn 500ms;
   animation: zoomIn 500ms;
@@ -31678,6 +31690,11 @@ appearance-animation-layout-5 .zoom-in {
 
 appearance-animation-layout-5 [item-situacao] {
   color: white;
+  font-weight: bold;
+}
+
+appearance-animation-layout-5 [item-tipo] {
+  color: black;
   font-weight: bold;
 }
 
@@ -31690,11 +31707,10 @@ appearance-animation-layout-5 [item-data] {
 
 appearance-animation-layout-5 ion-searchbar {
   background: rgba(33, 177, 75, 0.4) !important;
-  margin: 5px 10px 0px 8px !important;
+  margin: 0px !important;
   padding: 0px !important;
   border-radius: 4px;
   z-index: 999;
-  width: 96% !important;
 }
 
 appearance-animation-layout-5 .button-novo {
@@ -31708,6 +31724,27 @@ appearance-animation-layout-5 .color-black {
 
 appearance-animation-layout-5 .color-red {
   color: red !important;
+}
+
+appearance-animation-layout-5 .col-search {
+  padding: 0px 8px 0px 8px !important;
+}
+
+appearance-animation-layout-5 .novo-item {
+  border: 4px solid navy !important;
+}
+
+appearance-animation-layout-5 .aviso {
+  font-weight: bold;
+}
+
+appearance-animation-layout-5 .espacamento {
+  padding: 0 !important;
+  padding-left: 5px !important;
+}
+
+appearance-animation-layout-5 .tipo {
+  padding: 0 5px !important;
 }
 
 /*  #Style Drag and drop - Small item + header
@@ -34106,6 +34143,338 @@ page-area .button-novo {
   width: 100%;
 }
 
+page-area-cadastro .button-nav {
+  height: 30px !important;
+  background: none !important;
+  color: white !important;
+  font-size: 1.5em;
+  margin: 2px 0px 0px 2px !important;
+  padding: 0;
+}
+
+page-area-cadastro [background-size] {
+  background-position: right !important;
+}
+
+page-area-cadastro .scroll-content {
+  padding-bottom: 0 !important;
+  top: 0px !important;
+}
+
+page-area-cadastro .scroll-content ion-grid {
+  height: 100%;
+}
+
+page-area-cadastro .scroll-content ion-grid ion-row {
+  height: 100%;
+}
+
+page-area-cadastro .scroll-content ion-grid ion-row img {
+  height: 150px;
+  width: 275px;
+}
+
+page-area-cadastro .scroll-content ion-grid ion-row form ion-item {
+  padding-left: 0 !important;
+  padding-bottom: 15px !important;
+}
+
+page-area-cadastro .scroll-content ion-grid ion-row form ion-item.item-input-has-value ion-input {
+  background: rgba(33, 177, 75, 0.6) !important;
+}
+
+page-area-cadastro .scroll-content ion-grid ion-row form ion-item.item-input-has-value ion-select {
+  background: rgba(33, 177, 75, 0.6) !important;
+}
+
+page-area-cadastro .scroll-content ion-grid ion-row form ion-item.item-input-has-focus ion-input {
+  background: rgba(33, 177, 75, 0.6) !important;
+}
+
+page-area-cadastro .scroll-content ion-grid ion-row form ion-item.item-input-has-focus ion-select {
+  background: rgba(33, 177, 75, 0.6) !important;
+}
+
+page-area-cadastro .scroll-content ion-grid ion-row form ion-item [error-field] {
+  margin: 0 !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  right: 5px !important;
+  font-size: 12px;
+}
+
+page-area-cadastro .scroll-content ion-grid ion-row form ion-item .item-inner {
+  border-bottom: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  padding-right: 0 !important;
+}
+
+page-area-cadastro .scroll-content ion-grid ion-row form ion-item ion-label {
+  margin: 0 5px !important;
+  color: black;
+}
+
+page-area-cadastro .scroll-content ion-grid ion-row form ion-item ion-input {
+  background: rgba(33, 177, 75, 0.4) !important;
+  margin: 5px 10px 0px 10px !important;
+  padding: 5px 10px !important;
+  border-radius: 4px;
+  z-index: 999;
+}
+
+page-area-cadastro .scroll-content ion-grid ion-row form ion-item ion-input .input-cover {
+  display: none;
+}
+
+page-area-cadastro .scroll-content ion-grid ion-row form ion-item ion-select {
+  background: rgba(33, 177, 75, 0.4) !important;
+  margin: 5px 0px 0px 0px !important;
+  padding: 10px !important;
+  border-radius: 4px;
+  z-index: 999;
+}
+
+page-area-cadastro .scroll-content ion-grid ion-row form ion-item ion-select .input-cover {
+  display: none;
+}
+
+page-area-cadastro .scroll-content ion-grid ion-row form [stacked] {
+  font-size: 14px !important;
+  color: black !important;
+}
+
+page-area-cadastro .scroll-content ion-grid ion-row form [bottom-form] {
+  position: relative;
+  display: inline-block;
+  padding-top: 50px;
+  width: 100%;
+}
+
+page-area-cadastro .scroll-content ion-grid ion-row form [bottom-form]::after {
+  content: "or try";
+  font-size: 12px;
+  color: #f1f1f1;
+  width: 140px;
+  border-bottom: 1px solid #21b14b;
+  position: absolute;
+  top: 30px;
+  left: calc(50% - 70px);
+}
+
+page-area-cadastro .scroll-content ion-grid ion-row form [button-icon-clear] {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-area-cadastro .scroll-content ion-grid ion-row [login-title] {
+  color: black;
+}
+
+page-area-cadastro .scroll-content ion-grid ion-row [padding-top] {
+  padding-top: 10px;
+}
+
+page-area-cadastro .scroll-content ion-grid ion-row [radio] {
+  padding: 0px !important;
+  border-radius: 10px;
+}
+
 page-home .boas-vindas {
   font-weight: bold;
+}
+
+page-verificacao .aviso {
+  font-weight: bold;
+}
+
+page-verificacao .button-novo {
+  background-color: black !important;
+  margin: 4px 8px 8px 8px !important;
+}
+
+page-verificacao .col-search {
+  padding: 0px 8px 0px 8px !important;
+}
+
+page-verificacao .margin-top-10 {
+  margin-top: 10px !important;
+}
+
+page-verificacao ion-label {
+  margin: 0 !important;
+}
+
+page-verificacao ion-searchbar {
+  background: rgba(33, 177, 75, 0.4) !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  border-radius: 4px;
+  z-index: 999;
+}
+
+page-verificacao .novo-item {
+  border: 4px solid navy !important;
+}
+
+page-verificacao .color-black {
+  color: black !important;
+}
+
+page-verificacao .color-red {
+  color: red !important;
+}
+
+page-verificacao .espacamento {
+  padding: 0 !important;
+  padding-left: 5px !important;
+}
+
+page-verificacao [item-situacao] {
+  color: white;
+  font-weight: bold;
+}
+
+page-verificacao [item-data] {
+  color: black;
+  font-weight: bold;
+  margin: 10px 0px 5px 0px;
+  font-size: 15px;
+}
+
+page-manter-verificacao .button-nav {
+  height: 30px !important;
+  background: none !important;
+  color: white !important;
+  font-size: 1.5em;
+  margin: 2px 0px 0px 2px !important;
+  padding: 0;
+}
+
+page-manter-verificacao [background-size] {
+  background-position: right !important;
+}
+
+page-manter-verificacao .scroll-content {
+  padding-bottom: 0 !important;
+  top: 0px !important;
+}
+
+page-manter-verificacao .scroll-content ion-grid {
+  height: 100%;
+}
+
+page-manter-verificacao .scroll-content ion-grid ion-row {
+  height: 100%;
+}
+
+page-manter-verificacao .scroll-content ion-grid ion-row img {
+  height: 150px;
+  width: 275px;
+}
+
+page-manter-verificacao .scroll-content ion-grid ion-row form ion-item {
+  padding-left: 0 !important;
+  padding-bottom: 15px !important;
+}
+
+page-manter-verificacao .scroll-content ion-grid ion-row form ion-item.item-input-has-value ion-input {
+  background: rgba(33, 177, 75, 0.6) !important;
+}
+
+page-manter-verificacao .scroll-content ion-grid ion-row form ion-item.item-input-has-value ion-select {
+  background: rgba(33, 177, 75, 0.6) !important;
+}
+
+page-manter-verificacao .scroll-content ion-grid ion-row form ion-item.item-input-has-focus ion-input {
+  background: rgba(33, 177, 75, 0.6) !important;
+}
+
+page-manter-verificacao .scroll-content ion-grid ion-row form ion-item.item-input-has-focus ion-select {
+  background: rgba(33, 177, 75, 0.6) !important;
+}
+
+page-manter-verificacao .scroll-content ion-grid ion-row form ion-item [error-field] {
+  margin: 0 !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  right: 5px !important;
+  font-size: 12px;
+}
+
+page-manter-verificacao .scroll-content ion-grid ion-row form ion-item .item-inner {
+  border-bottom: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  padding-right: 0 !important;
+}
+
+page-manter-verificacao .scroll-content ion-grid ion-row form ion-item ion-label {
+  margin: 0 5px !important;
+  color: black;
+}
+
+page-manter-verificacao .scroll-content ion-grid ion-row form ion-item ion-input {
+  background: rgba(33, 177, 75, 0.4) !important;
+  margin: 5px 10px 0px 10px !important;
+  padding: 5px 10px !important;
+  border-radius: 4px;
+  z-index: 999;
+}
+
+page-manter-verificacao .scroll-content ion-grid ion-row form ion-item ion-input .input-cover {
+  display: none;
+}
+
+page-manter-verificacao .scroll-content ion-grid ion-row form ion-item ion-select {
+  background: rgba(33, 177, 75, 0.4) !important;
+  margin: 5px 0px 0px 0px !important;
+  padding: 10px !important;
+  border-radius: 4px;
+  z-index: 999;
+}
+
+page-manter-verificacao .scroll-content ion-grid ion-row form ion-item ion-select .input-cover {
+  display: none;
+}
+
+page-manter-verificacao .scroll-content ion-grid ion-row form [stacked] {
+  font-size: 14px !important;
+  color: black !important;
+}
+
+page-manter-verificacao .scroll-content ion-grid ion-row form [bottom-form] {
+  position: relative;
+  display: inline-block;
+  padding-top: 50px;
+  width: 100%;
+}
+
+page-manter-verificacao .scroll-content ion-grid ion-row form [bottom-form]::after {
+  content: "or try";
+  font-size: 12px;
+  color: #f1f1f1;
+  width: 140px;
+  border-bottom: 1px solid #21b14b;
+  position: absolute;
+  top: 30px;
+  left: calc(50% - 70px);
+}
+
+page-manter-verificacao .scroll-content ion-grid ion-row form [button-icon-clear] {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-manter-verificacao .scroll-content ion-grid ion-row [login-title] {
+  color: black;
+}
+
+page-manter-verificacao .scroll-content ion-grid ion-row [padding-top] {
+  padding-top: 10px;
+}
+
+page-manter-verificacao .scroll-content ion-grid ion-row [radio] {
+  padding: 0px !important;
+  border-radius: 10px;
 }

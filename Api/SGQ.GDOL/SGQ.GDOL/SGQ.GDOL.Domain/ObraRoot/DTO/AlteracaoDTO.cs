@@ -11,6 +11,15 @@ namespace SGQ.GDOL.Domain.ObraRoot.DTO
         public DateTime Data { get; set; }
         public string Descricao { get; set; }
 
+        public int IdArea { get; set; }
+        public string IdGuidArea { get; set; }
+
+        public int IdServico { get; set; }
+        public string IdGuidServico { get; set; }
+
+        public int IdInspecao { get; set; }
+        public string IdGuidInspecao { get; set; }
+
         public string Valor { get; set; }
     }
 }

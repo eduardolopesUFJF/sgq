@@ -1,14 +1,14 @@
 webpackJsonp([8],{
 
-/***/ 789:
+/***/ 797:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AreaCadastroPageModule", function() { return AreaCadastroPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VerificacaoPageModule", function() { return VerificacaoPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__area_cadastro__ = __webpack_require__(907);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__verificacao__ = __webpack_require__(922);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,28 +18,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AreaCadastroPageModule = /** @class */ (function () {
-    function AreaCadastroPageModule() {
+var VerificacaoPageModule = /** @class */ (function () {
+    function VerificacaoPageModule() {
     }
-    AreaCadastroPageModule = __decorate([
+    VerificacaoPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__area_cadastro__["a" /* AreaCadastroPage */]
+                __WEBPACK_IMPORTED_MODULE_2__verificacao__["a" /* VerificacaoPage */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__area_cadastro__["a" /* AreaCadastroPage */])
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__verificacao__["a" /* VerificacaoPage */])
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
         })
-    ], AreaCadastroPageModule);
-    return AreaCadastroPageModule;
+    ], VerificacaoPageModule);
+    return VerificacaoPageModule;
 }());
 
-//# sourceMappingURL=area-cadastro.module.js.map
+//# sourceMappingURL=verificacao.module.js.map
 
 /***/ }),
 
-/***/ 833:
+/***/ 826:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -56,7 +56,7 @@ var Alteracao = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 834:
+/***/ 827:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -100,43 +100,78 @@ exports.UUID = UUID;
 
 /***/ }),
 
-/***/ 837:
+/***/ 839:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Area; });
-var Area = /** @class */ (function () {
-    function Area(values) {
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Inspecao; });
+var Inspecao = /** @class */ (function () {
+    function Inspecao(values) {
         if (values === void 0) { values = {}; }
         this.id = 0;
-        this.idObra = 0;
+        this.idGuidInspecao = '';
+        this.local = "";
+        this.nomeFuncionarioAprovado = "";
+        this.nomeFuncionarioInspecionado = "";
         this.status = 0;
         this.situacao = 'Em aberto';
         this.delete = false;
-        this.servicos = [];
+        this.dataHoraAlteracao = new Date();
         Object.assign(this, values);
     }
-    return Area;
+    return Inspecao;
 }());
 
-//# sourceMappingURL=area.js.map
+//# sourceMappingURL=inspecao.js.map
 
 /***/ }),
 
-/***/ 907:
+/***/ 843:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AreaCadastroPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Servico; });
+var Servico = /** @class */ (function () {
+    function Servico(values) {
+        if (values === void 0) { values = {}; }
+        this.id = 0;
+        this.idGuidServico = '';
+        this.descricao = '';
+        this.tipo = '';
+        this.idObra = 0;
+        this.idChecklist = 0;
+        this.idArea = 0;
+        this.idAreaGuid = "";
+        this.metaAprovacao = 90;
+        this.status = 0;
+        this.situacao = 'Em aberto';
+        this.delete = false;
+        this.dataHoraInclusao = new Date();
+        this.dataHoraAlteracao = new Date();
+        this.inspecoesObra = [];
+        Object.assign(this, values);
+    }
+    return Servico;
+}());
+
+//# sourceMappingURL=servico.js.map
+
+/***/ }),
+
+/***/ 922:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VerificacaoPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_area__ = __webpack_require__(837);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(158);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_alteracao__ = __webpack_require__(833);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_toast_service__ = __webpack_require__(364);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__ = __webpack_require__(834);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_servico__ = __webpack_require__(843);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_inspecao__ = __webpack_require__(839);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(158);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__models_alteracao__ = __webpack_require__(826);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__ = __webpack_require__(827);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_uuid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_angular2_uuid__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__models_servico__ = __webpack_require__(908);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__utils_message_service__ = __webpack_require__(159);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -154,111 +189,168 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var AreaCadastroPage = /** @class */ (function () {
-    function AreaCadastroPage(storage, navParams, toastService, viewCtrl) {
-        this.storage = storage;
+var VerificacaoPage = /** @class */ (function () {
+    function VerificacaoPage(navParams, storage, modalCtrl, messageService) {
         this.navParams = navParams;
-        this.toastService = toastService;
-        this.viewCtrl = viewCtrl;
-        this.itens = [];
-        this.area = new __WEBPACK_IMPORTED_MODULE_2__models_area__["a" /* Area */]();
-        this.opcoesItens = [];
-        this.servicosEscolhidos = [];
-        this.obraId = this.navParams.data.obraId;
-        this.obterItensChecklist();
+        this.storage = storage;
+        this.modalCtrl = modalCtrl;
+        this.messageService = messageService;
+        this.servico = new __WEBPACK_IMPORTED_MODULE_2__models_servico__["a" /* Servico */]();
+        this.inspecoes = [];
+        this.inspecoesBackup = [];
+        this.servico = navParams.data.servico;
+        this.inspecoes = this.servico.inspecoesObra.slice();
+        this.inspecoesBackup = this.servico.inspecoesObra.slice();
     }
-    AreaCadastroPage.prototype.obterItensChecklist = function () {
+    VerificacaoPage.prototype.novaInspecao = function () {
+        var _this = this;
+        var modal = this.modalCtrl.create("ManterVerificacaoPage", { inspecao: new __WEBPACK_IMPORTED_MODULE_3__models_inspecao__["a" /* Inspecao */]() });
+        modal.present();
+        modal.onWillDismiss(function (inspecao) {
+            if (inspecao) {
+                inspecao.idGuidInspecao = __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__["UUID"].UUID();
+                inspecao.idServico = _this.servico.id;
+                _this.inspecoes.unshift(inspecao);
+                _this.inspecoesBackup.unshift(inspecao);
+                _this.criarInspecao(inspecao);
+            }
+        });
+    };
+    VerificacaoPage.prototype.abrirItensInspecao = function (inspecao) {
+    };
+    VerificacaoPage.prototype.editar = function (inspecao) {
+        var _this = this;
+        var modal = this.modalCtrl.create("ManterVerificacaoPage", { inspecao: inspecao });
+        modal.present();
+        modal.onWillDismiss(function (inspecao) {
+            if (inspecao) {
+                _this.editarInspecao(inspecao);
+                var index = _this.inspecoesBackup.findIndex(function (x) { return inspecao.id != 0 ? (x.id == inspecao.id) : (x.idGuidInspecao == inspecao.idGuidInspecao); });
+                _this.inspecoesBackup[index] = inspecao;
+                _this.inspecoes = _this.inspecoesBackup.slice();
+                _this.editarInspecao(inspecao);
+            }
+        });
+    };
+    VerificacaoPage.prototype.editarInspecao = function (inspecao) {
         var _this = this;
         this.storage.ready().then(function () {
-            _this.storage.get('itensChecklist').then(function (itens) {
-                _this.opcoesItens = itens;
+            var atualizacoesArray = [];
+            _this.storage.get('atualizacoes').then(function (atualizacoes) {
+                var alteracao = new __WEBPACK_IMPORTED_MODULE_5__models_alteracao__["a" /* Alteracao */]({ id: __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__["UUID"].UUID(), idInspecao: inspecao.id, idGuidInspecao: inspecao.idGuidInspecao, idArea: _this.servico.idArea, idGuidArea: _this.servico.idAreaGuid, idServico: _this.servico.id, idGuidServico: _this.servico.idGuidServico, tipo: "Update", entidade: "Inspecao", valor: JSON.stringify(inspecao), data: new Date(), descricao: "Edição da verificação '" + inspecao.local + "' no serviço '" + _this.servico.descricao + "'.", obraId: _this.servico.idObra });
+                if (atualizacoes) {
+                    atualizacoesArray = atualizacoes;
+                    atualizacoesArray.push(alteracao);
+                }
+                else {
+                    atualizacoesArray.push(alteracao);
+                }
+                _this.storage.set('atualizacoes', atualizacoesArray);
+                _this.atualizarObraEdicao(inspecao);
             });
         });
     };
-    AreaCadastroPage.prototype.salvar = function (formValido) {
+    VerificacaoPage.prototype.criarInspecao = function (inspecao) {
         var _this = this;
-        if (formValido) {
-            this.servicosEscolhidos.forEach(function (item) {
-                var servico = new __WEBPACK_IMPORTED_MODULE_7__models_servico__["a" /* Servico */]();
-                servico.idChecklist = item;
-                servico.idObra = _this.obraId;
-                _this.area.servicos.push(servico);
+        this.storage.ready().then(function () {
+            var atualizacoesArray = [];
+            _this.storage.get('atualizacoes').then(function (atualizacoes) {
+                var alteracao = new __WEBPACK_IMPORTED_MODULE_5__models_alteracao__["a" /* Alteracao */]({ id: __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__["UUID"].UUID(), idInspecao: inspecao.id, idGuidInspecao: inspecao.idGuidInspecao, idArea: _this.servico.idArea, idGuidArea: _this.servico.idAreaGuid, idServico: _this.servico.id, idGuidServico: _this.servico.idGuidServico, tipo: "Insert", entidade: "Inspecao", valor: JSON.stringify(inspecao), data: new Date(), descricao: "Criação da verificação '" + inspecao.local + "' no serviço '" + _this.servico.descricao + "'.", obraId: _this.servico.idObra });
+                if (atualizacoes) {
+                    atualizacoesArray = atualizacoes;
+                    atualizacoesArray.push(alteracao);
+                }
+                else {
+                    atualizacoesArray.push(alteracao);
+                }
+                _this.storage.set('atualizacoes', atualizacoesArray);
+                _this.atualizarObraCriacao(inspecao);
             });
-            this.storage.ready().then(function () {
-                var atualizacoesArray = [];
-                _this.storage.get('atualizacoes').then(function (atualizacoes) {
-                    _this.area.idObra = _this.obraId;
-                    var alteracao = new __WEBPACK_IMPORTED_MODULE_4__models_alteracao__["a" /* Alteracao */]({ id: __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__["UUID"].UUID(), tipo: "Insert", entidade: "Area", valor: JSON.stringify(_this.area), data: new Date(), descricao: "Inserção da área: " + _this.area.descricao, idObra: _this.obraId });
-                    if (atualizacoes) {
-                        atualizacoesArray = atualizacoes;
-                        atualizacoesArray.push(alteracao);
-                    }
-                    else {
-                        atualizacoesArray.push(alteracao);
-                    }
-                    _this.storage.set('atualizacoes', atualizacoesArray);
-                    _this.atualizarObra();
-                });
-            });
+        });
+    };
+    VerificacaoPage.prototype.filtrar = function (valor) {
+        if (valor.length == 0) {
+            this.inspecoes = this.inspecoesBackup.slice();
         }
         else {
-            this.toastService.presentToastWarning("Preencha todos os campos.");
+            this.inspecoes = this.inspecoesBackup.filter(function (item) {
+                return item.local.toLowerCase().indexOf(valor.toLowerCase()) > -1;
+            });
         }
     };
-    AreaCadastroPage.prototype.atualizarObra = function () {
+    VerificacaoPage.prototype.confirmarExclusao = function (item) {
+        var _this = this;
+        var mensagem;
+        if (!item.delete) {
+            mensagem = "Deseja realmente excluir a verificação '" + item.local + "'?";
+        }
+        else {
+            mensagem = "Deseja realmente reativar a verificação '" + item.local + "'?";
+        }
+        this.messageService.exibirMensagemConfirmacao(mensagem, function () { _this.alterarSituacaoVerificacao(item); });
+    };
+    VerificacaoPage.prototype.alterarSituacaoVerificacao = function (item) {
+        var _this = this;
+        this.storage.ready().then(function () {
+            var atualizacoesArray = [];
+            _this.storage.get('atualizacoes').then(function (atualizacoes) {
+                item.delete = !item.delete;
+                var alteracao = new __WEBPACK_IMPORTED_MODULE_5__models_alteracao__["a" /* Alteracao */]({ id: __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__["UUID"].UUID(), idInspecao: item.id, idGuidInspecao: item.idGuidInspecao, idArea: _this.servico.idArea, idGuidArea: _this.servico.idAreaGuid, idServico: _this.servico.id, idGuidServico: _this.servico.idGuidServico, tipo: "Update", entidade: "Inspecao", valor: JSON.stringify(item), data: new Date(), descricao: (item.delete ? "Inativação" : "Ativação") + " da verificação '" + item.local + "' no serviço '" + _this.servico.descricao + "'.", obraId: _this.servico.idObra });
+                if (atualizacoes) {
+                    atualizacoesArray = atualizacoes;
+                    atualizacoesArray.push(alteracao);
+                }
+                else {
+                    atualizacoesArray.push(alteracao);
+                }
+                _this.storage.set('atualizacoes', atualizacoesArray);
+                _this.atualizarObraSituacao(item);
+            });
+        });
+    };
+    VerificacaoPage.prototype.atualizarObraSituacao = function (item) {
         var _this = this;
         this.storage.ready().then(function () {
             _this.storage.get('obras').then(function (obras) {
-                _this.area.situacao = _this.area.status == 0 ? 'Em aberto' : 'Finalizado';
-                obras.find(function (x) { return x.id == _this.obraId; }).areas.unshift(_this.area);
+                obras.find(function (x) { return x.id == _this.servico.idObra; }).areas.find(function (x) { return _this.servico.idAreaGuid ? (x.idGuid == _this.servico.idAreaGuid) : (x.id == _this.servico.idArea); }).servicos.find(function (x) { return _this.servico.idGuidServico ? (x.idGuidServico == _this.servico.idGuidServico) : (x.id == _this.servico.id); }).inspecoesObra.find(function (x) { return item.idGuidInspecao ? (x.idGuidInspecao == item.idGuidInspecao) : (x.id == item.id); }).delete = item.delete;
                 _this.storage.set('obras', obras);
-                _this.viewCtrl.dismiss(_this.area);
             });
         });
     };
-    AreaCadastroPage.prototype.voltar = function () {
-        this.viewCtrl.dismiss(null);
+    VerificacaoPage.prototype.atualizarObraEdicao = function (item) {
+        var _this = this;
+        this.storage.ready().then(function () {
+            _this.storage.get('obras').then(function (obras) {
+                var inspecao = obras.find(function (x) { return x.id == _this.servico.idObra; }).areas.find(function (x) { return _this.servico.idAreaGuid ? (x.idGuid == _this.servico.idAreaGuid) : (x.id == _this.servico.idArea); }).servicos.find(function (x) { return _this.servico.idGuidServico ? (x.idGuidServico == _this.servico.idGuidServico) : (x.id == _this.servico.id); }).inspecoesObra.find(function (x) { return item.idGuidInspecao ? (x.idGuidInspecao == item.idGuidInspecao) : (x.id == item.id); });
+                inspecao.local = item.local;
+                inspecao.dataInspecao = item.dataInspecao;
+                inspecao.dataEncerramento = item.dataEncerramento;
+                _this.storage.set('obras', obras);
+            });
+        });
     };
-    AreaCadastroPage = __decorate([
+    VerificacaoPage.prototype.atualizarObraCriacao = function (item) {
+        var _this = this;
+        this.storage.ready().then(function () {
+            _this.storage.get('obras').then(function (obras) {
+                obras.find(function (x) { return x.id == _this.servico.idObra; }).areas.find(function (x) { return _this.servico.idAreaGuid ? (x.idGuid == _this.servico.idAreaGuid) : (x.id == _this.servico.idArea); }).servicos.find(function (x) { return _this.servico.idGuidServico ? (x.idGuidServico == _this.servico.idGuidServico) : (x.id == _this.servico.id); }).inspecoesObra.unshift(item);
+                _this.storage.set('obras', obras);
+            });
+        });
+    };
+    VerificacaoPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-area-cadastro',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\area\cadastro\area-cadastro.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <ion-row>\n\n            <ion-col col-2>\n\n                <button class="button-nav" (click)="voltar()">\n\n                    <span ion-text style="font-size: 0.7em;">Voltar</span>\n\n                </button>\n\n            </ion-col>\n\n            <ion-col col-10>\n\n                <ion-title>Cadastro de Área</ion-title>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content has-header>\n\n    <ion-grid no-padding>\n\n        <ion-row padding-left padding-right>\n\n            <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n\n                <form #cadastroForm="ngForm" padding-top>\n\n                    <ion-list radio-group no-margin [(ngModel)]="area.status" name="status">\n\n                        <ion-grid>\n\n                            <ion-row>\n\n                                <ion-col col-6>\n\n                                    <ion-item radio>\n\n                                        <ion-label>Em aberto</ion-label>\n\n                                        <ion-radio [value]="0" checked></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                                <ion-col col-6>\n\n                                    <ion-item radio>\n\n                                        <ion-label>Finalizado</ion-label>\n\n                                        <ion-radio [value]="1"></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                            </ion-row>\n\n                        </ion-grid>\n\n                    </ion-list>\n\n                    <ion-item text-center transparent>\n\n                        <ion-label stacked>ÁREA</ion-label>\n\n                        <ion-input text-center required type="text" [(ngModel)]="area.descricao" name="area"></ion-input>\n\n                    </ion-item>\n\n                    <ion-item text-center transparent>\n\n                        <ion-label stacked>CHECKLIST</ion-label>\n\n                        <ion-select required [(ngModel)]="servicosEscolhidos" multiple="true" name="checklist" okText="Ok"\n\n                            cancelText="Cancelar">\n\n                            <ion-option *ngFor="let item of opcoesItens; let i= index" [value]="item.id">{{item.descricao}}</ion-option>\n\n                        </ion-select>\n\n                    </ion-item>\n\n                    <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: black !important;"\n\n                        (click)="salvar(cadastroForm.valid)">Salvar</button>\n\n                </form>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-grid>\n\n</ion-content>'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\area\cadastro\area-cadastro.html"*/
+            selector: 'page-verificacao',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\verificacao\verificacao.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <button ion-button menuToggle>\n\n            <ion-icon class="icon-menu" name="menu"></ion-icon>\n\n        </button>\n\n        <div buy>\n\n            <ion-title>\n\n                Verificação\n\n            </ion-title>\n\n        </div>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n    <h2 padding text-center class="aviso" *ngIf="inspecoes.length < 1">Nenhum registro encontrado.</h2>\n\n    <ion-grid no-padding>\n\n        <ion-row>\n\n            <button ion-button default-button block text-capitalize box-shadow margin-bottom class="button-novo"\n\n                (click)="novaInspecao()">Nova inspeção</button>\n\n        </ion-row>\n\n        <ion-row>\n\n            <ion-col class="col-search" col-12 *ngIf="inspecoesBackup.length > 0">\n\n                <ion-searchbar [placeholder]="\'Filtrar pelo local\'" (ionInput)="filtrar($event.target.value)"></ion-searchbar>\n\n            </ion-col>\n\n            <ion-col col-12>\n\n                <ion-list no-margin>\n\n                    <ion-item default-item no-lines [ngClass]="{\'novo-item\': !item.id}" *ngFor="let item of inspecoes; let i = index;"\n\n                        (click)="abrirItensInspecao(item)">\n\n                        <ion-row class="espacamento">\n\n                            <ion-col col-10>\n\n                                <h2 item-title text-wrap>Local: {{item.local}}</h2>\n\n                                <h3 item-situacao text-wrap>Situação: {{item.situacao}}</h3>\n\n                                <h3 item-situacao text-wrap>Abertura: {{item.dataInspecao ? (item.dataInspecao | date: \'dd/MM/yyyy\') : \'Não informada\'}}</h3>\n\n                                <h3 item-situacao text-wrap>Encerramento: {{item.dataEncerramento ? (item.dataEncerramento | date: \'dd/MM/yyyy\') : \'Não informada\'}}</h3>\n\n                            </ion-col>\n\n                            <ion-col col-2>\n\n                                <ion-icon icon-small name="trash" item-right (click)="confirmarExclusao(item)"\n\n                                    style="font-size: 32px !important; margin: 0px" [ngClass]="{\'color-black\': !item.delete , \'color-red\' : item.delete}"></ion-icon>\n\n                                <br>\n\n                                <ion-icon icon-small name="create" item-right (click)="editar(item)"\n\n                                    style="font-size: 32px !important; margin: 0px"></ion-icon>\n\n                            </ion-col>\n\n                        </ion-row>\n\n                        <ion-row class="espacamento" style="padding: 0 0 10px 0 !important;">\n\n                            <ion-col col-1></ion-col>\n\n                            <ion-col col-2 style="background-color: blue;">\n\n                                <h2 item-title text-wrap no-margin text-center>NA</h2>\n\n                                <h3 item-situacao text-wrap no-margin text-center>{{item.qtdNA}}</h3>\n\n                            </ion-col>\n\n                            <ion-col col-2 style="background-color: darkgreen;">\n\n                                <h2 item-title text-wrap no-margin text-center>A</h2>\n\n                                <h3 item-situacao text-wrap no-margin text-center>{{item.qtdA}}</h3>\n\n                            </ion-col>\n\n                            <ion-col col-2 style="background-color: yellow;">\n\n                                <h2 text-wrap negrito no-margin text-center>R</h2>\n\n                                <h3 text-wrap negrito no-margin text-center>{{item.qtdR}}</h3>\n\n                            </ion-col>\n\n                            <ion-col col-2 style="background-color: red;">\n\n                                <h2 item-title text-wrap no-margin text-center>X</h2>\n\n                                <h3 item-situacao text-wrap no-margin text-center>{{item.qtdX}}</h3>\n\n                            </ion-col>\n\n                            <ion-col col-2 style="background-color: orange;">\n\n                                <h2 item-title text-wrap no-margin text-center>RA</h2>\n\n                                <h3 item-situacao text-wrap no-margin text-center>{{item.qtdRA}}</h3>\n\n                            </ion-col>\n\n                            <ion-col col-1></ion-col>\n\n                        </ion-row>\n\n                    </ion-item>\n\n                </ion-list>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-grid>\n\n</ion-content>'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\verificacao\verificacao.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_5__utils_toast_service__["a" /* ToastService */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* ViewController */]])
-    ], AreaCadastroPage);
-    return AreaCadastroPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ModalController */],
+            __WEBPACK_IMPORTED_MODULE_7__utils_message_service__["a" /* MessageService */]])
+    ], VerificacaoPage);
+    return VerificacaoPage;
 }());
 
-//# sourceMappingURL=area-cadastro.js.map
-
-/***/ }),
-
-/***/ 908:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Servico; });
-var Servico = /** @class */ (function () {
-    function Servico(values) {
-        if (values === void 0) { values = {}; }
-        this.id = 0;
-        this.descricao = '';
-        this.idObra = 0;
-        this.idChecklist = 0;
-        this.idArea = 0;
-        this.metaAprovacao = 90;
-        this.status = 0;
-        this.delete = false;
-        this.dataHoraInclusao = new Date();
-        this.dataHoraAlteracao = new Date();
-        Object.assign(this, values);
-    }
-    return Servico;
-}());
-
-//# sourceMappingURL=servico.js.map
+//# sourceMappingURL=verificacao.js.map
 
 /***/ })
 

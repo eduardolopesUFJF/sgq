@@ -1,14 +1,14 @@
 webpackJsonp([60],{
 
-/***/ 738:
+/***/ 742:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExpandableLayout3Module", function() { return ExpandableLayout3Module; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GoogleCardLayout3Module", function() { return GoogleCardLayout3Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__expandable_layout_3__ = __webpack_require__(856);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__google_card_layout_3__ = __webpack_require__(865);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,35 +18,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ExpandableLayout3Module = /** @class */ (function () {
-    function ExpandableLayout3Module() {
+var GoogleCardLayout3Module = /** @class */ (function () {
+    function GoogleCardLayout3Module() {
     }
-    ExpandableLayout3Module = __decorate([
+    GoogleCardLayout3Module = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__expandable_layout_3__["a" /* ExpandableLayout3 */],
+                __WEBPACK_IMPORTED_MODULE_2__google_card_layout_3__["a" /* GoogleCardLayout3 */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__expandable_layout_3__["a" /* ExpandableLayout3 */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__google_card_layout_3__["a" /* GoogleCardLayout3 */]),
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_2__expandable_layout_3__["a" /* ExpandableLayout3 */]
+                __WEBPACK_IMPORTED_MODULE_2__google_card_layout_3__["a" /* GoogleCardLayout3 */]
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
         })
-    ], ExpandableLayout3Module);
-    return ExpandableLayout3Module;
+    ], GoogleCardLayout3Module);
+    return GoogleCardLayout3Module;
 }());
 
-//# sourceMappingURL=expandable-layout-3.module.js.map
+//# sourceMappingURL=google-card-layout-3.module.js.map
 
 /***/ }),
 
-/***/ 856:
+/***/ 865:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExpandableLayout3; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GoogleCardLayout3; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -60,42 +60,63 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var ExpandableLayout3 = /** @class */ (function () {
-    function ExpandableLayout3() {
+var GoogleCardLayout3 = /** @class */ (function () {
+    function GoogleCardLayout3() {
+        this.slider = {};
     }
-    ExpandableLayout3.prototype.onEvent = function (event, item, e) {
+    GoogleCardLayout3.prototype.slideHasChanged = function (slider, index) {
+        this.slider[index] = slider;
+        if (2 == slider._activeIndex) {
+            if (this.data.items) {
+                this.data.items.splice(index, 1);
+            }
+            else {
+                this.data.splice(index, 1);
+            }
+        }
+    };
+    GoogleCardLayout3.prototype.onStarClass = function (items, index, e) {
+        if (e) {
+            e.stopPropagation();
+        }
+        for (var i = 0; i < items.length; i++) {
+            items[i].isActive = i <= index;
+        }
+        this.onEvent("onRates", index, e);
+    };
+    ;
+    GoogleCardLayout3.prototype.onClickEvent = function (index) {
+        if (this.slider[index]) {
+            this.slider[index].slidePrev(300);
+        }
+    };
+    GoogleCardLayout3.prototype.onEvent = function (event, item, e) {
         if (this.events[event]) {
             this.events[event](item);
         }
     };
-    ExpandableLayout3.prototype.toggleGroup = function (group) {
-        group.show = !group.show;
-    };
-    ExpandableLayout3.prototype.isGroupShown = function (group) {
-        return group.show;
-    };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
-    ], ExpandableLayout3.prototype, "data", void 0);
+    ], GoogleCardLayout3.prototype, "data", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
-    ], ExpandableLayout3.prototype, "events", void 0);
+    ], GoogleCardLayout3.prototype, "events", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */])
-    ], ExpandableLayout3.prototype, "content", void 0);
-    ExpandableLayout3 = __decorate([
+    ], GoogleCardLayout3.prototype, "content", void 0);
+    GoogleCardLayout3 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'expandable-layout-3',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\expandable\layout-3\expandable.html"*/'<!-- Themes Expandable - Filters Products -->\n\n<ion-content>\n\n  <ion-grid no-padding *ngIf="data != null">\n\n    <ion-row>\n\n      <ion-col col-12 no-padding no-margin>\n\n        <!-- Header -->\n\n        <ion-list>\n\n          <ion-list-header transparent header-section no-lines padding-horizontal>\n\n            <h1 header-title text-capitalize>{{data.header}}</h1>\n\n          </ion-list-header>\n\n          <!--- List Content -->\n\n          <ul no-margin no-padding class="collapsible">\n\n            <li no-margin *ngFor="let group of data.items;">\n\n              <!-- Expandable - Filters Products - Header-->\n\n              <div class="collapsible-header" no-margin no-padding (click)="toggleGroup(group)">\n\n                <ion-item default-item no-lines>\n\n                  <h2 item-title text-capitalize>{{group.title}}</h2>\n\n                  <div item-content>\n\n                    <ion-icon icon-medium>\n\n                      <i class="icon {{group.icon}}"></i>\n\n                    </ion-icon>\n\n                  </div>\n\n                </ion-item>\n\n              </div>\n\n              <!-- End Expandable - Filters Products - Header-->\n\n              <!-- Expandable - Filters Productsr - Body -->\n\n              <div class="item-accordion" [ngClass]="{\'active\': isGroupShown(group) }" [hidden]="!isGroupShown(group)">\n\n                <ion-item default-item no-lines *ngFor="let item of group.expandItems;" (tap)="onEvent(\'onCheckBoxClick\', item, $event);">\n\n                  <ion-label item-title>{{item.title}}</ion-label>\n\n                  <ion-checkbox [checked]="item.isChecked"></ion-checkbox>\n\n                </ion-item>\n\n              </div>\n\n              <!-- End Expandable - Filters Productsr- Body -->\n\n            </li>\n\n          </ul>\n\n        </ion-list>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n<ion-footer padding>\n\n  <button box-shadow block ion-button default-button *ngIf="data != null" (click)="onEvent(\'onButtonClick\', null, $event)">{{data.button}}</button>\n\n</ion-footer>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\expandable\layout-3\expandable.html"*/
+            selector: 'google-card-layout-3',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\google-card\layout-3\google-card.html"*/'<!--Theme Google Card - Styled cards-->\n\n<ion-content>\n\n  <ion-grid no-padding>\n\n    <ion-row *ngIf="data != null">\n\n      <ion-col col-12 col-md-6 col-lg-6 col-xl-4 *ngFor="let item of data.items;let i = index">\n\n        <!--Header Styled cards-->\n\n        <ion-item padding-top no-lines transparent>\n\n          <!-- Card Title -->\n\n          <h2 card-title>{{item.title}}</h2>\n\n          <!-- Card Subtitle -->\n\n          <h3 card-subtitle>{{item.subtitle}}</h3>\n\n          <!-- Card Badge -->\n\n          <ion-badge box-shadow item-end badge-light>{{item.button}}</ion-badge>\n\n        </ion-item>\n\n        <!-- End Header Styled Cards-->\n\n        <!-- Card Background -->\n\n        <ion-card box-shadow (click)="onEvent(\'onItemClick\', item.subtitle, $event)">\n\n          <img [src]="item.image" />\n\n          <span new-category transparent no-padding text-uppercase>{{item.category}}</span>\n\n        </ion-card>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\google-card\layout-3\google-card.html"*/
         }),
         __metadata("design:paramtypes", [])
-    ], ExpandableLayout3);
-    return ExpandableLayout3;
+    ], GoogleCardLayout3);
+    return GoogleCardLayout3;
 }());
 
-//# sourceMappingURL=expandable-layout-3.js.map
+//# sourceMappingURL=google-card-layout-3.js.map
 
 /***/ })
 

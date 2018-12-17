@@ -1,14 +1,14 @@
 webpackJsonp([45],{
 
-/***/ 757:
+/***/ 767:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RangeLayout2Module", function() { return RangeLayout2Module; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchBarLayout2Module", function() { return SearchBarLayout2Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__range_layout_2__ = __webpack_require__(869);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__search_bar_layout_2__ = __webpack_require__(890);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,35 +18,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var RangeLayout2Module = /** @class */ (function () {
-    function RangeLayout2Module() {
+var SearchBarLayout2Module = /** @class */ (function () {
+    function SearchBarLayout2Module() {
     }
-    RangeLayout2Module = __decorate([
+    SearchBarLayout2Module = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__range_layout_2__["a" /* RangeLayout2 */],
+                __WEBPACK_IMPORTED_MODULE_2__search_bar_layout_2__["a" /* SearchBarLayout2 */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__range_layout_2__["a" /* RangeLayout2 */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__search_bar_layout_2__["a" /* SearchBarLayout2 */]),
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_2__range_layout_2__["a" /* RangeLayout2 */]
+                __WEBPACK_IMPORTED_MODULE_2__search_bar_layout_2__["a" /* SearchBarLayout2 */]
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
         })
-    ], RangeLayout2Module);
-    return RangeLayout2Module;
+    ], SearchBarLayout2Module);
+    return SearchBarLayout2Module;
 }());
 
-//# sourceMappingURL=range-layout-2.module.js.map
+//# sourceMappingURL=search-bar-layout-2.module.js.map
 
 /***/ }),
 
-/***/ 869:
+/***/ 890:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RangeLayout2; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SearchBarLayout2; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -58,36 +58,49 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var RangeLayout2 = /** @class */ (function () {
-    function RangeLayout2() {
-        var _this = this;
-        this.onEvent = function (event, item) {
-            if (_this.events[event]) {
-                _this.events[event](item);
-            }
-        };
+var SearchBarLayout2 = /** @class */ (function () {
+    function SearchBarLayout2() {
+        this.searchTerm = "";
     }
-    RangeLayout2.prototype.ngOnChanges = function (changes) {
-        this.data = changes['data'].currentValue;
+    SearchBarLayout2.prototype.getItems = function (event) {
+        var _this = this;
+        if (!this.allItems) {
+            this.allItems = this.data.items;
+        }
+        this.data.items = this.allItems.filter(function (item) {
+            return item.title.toLowerCase().indexOf(_this.searchTerm.toLowerCase()) > -1;
+        });
+    };
+    SearchBarLayout2.prototype.onEvent = function (event, item) {
+        if (this.events[event]) {
+            if ('onTextChange' === event) {
+                this.getItems(item);
+                this.events[event](this.searchTerm);
+            }
+            else {
+                this.events[event](item);
+            }
+        }
+        console.log(event);
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])('data'),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
-    ], RangeLayout2.prototype, "data", void 0);
+    ], SearchBarLayout2.prototype, "data", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])('events'),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
-    ], RangeLayout2.prototype, "events", void 0);
-    RangeLayout2 = __decorate([
+    ], SearchBarLayout2.prototype, "events", void 0);
+    SearchBarLayout2 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'range-button-layout-2',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\range\layout-2\range.html"*/'<!-- RANGE COMPONENTS - With icons -->\n\n<ion-list no-lines *ngIf="data != null">\n\n   <!--- Divider item-->\n\n    <ion-item-divider no-lines no-margin transparent>\n\n      <p ion-text color="primaryBase">{{data.title}}</p>\n\n      <ion-badge item-end>{{data.value}}</ion-badge>\n\n    </ion-item-divider>\n\n    <ion-item transparent>\n\n        <ion-range [min]="data.min" [max]="data.max" pin="true" (ionChange)="onEvent(\'onChange\', data.value, $event)" [(ngModel)]="data.value">\n\n            <ion-icon range-left color="primaryBase" [name]="data.iconLeft"></ion-icon>\n\n            <ion-icon range-right color="primaryBase" [name]="data.iconRight"></ion-icon>\n\n        </ion-range>\n\n    </ion-item>\n\n</ion-list>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\range\layout-2\range.html"*/
+            selector: 'search-bar-layout-2',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\search-bar\layout-2\search-bar.html"*/'<!-- Theme Search - Field + Header -->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n        <ion-icon [name]="menu"></ion-icon>\n\n      </button>\n\n    <ion-title *ngIf="data != null">{{data.headerTitle}}</ion-title>\n\n  </ion-navbar>\n\n  <ion-toolbar no-padding>\n\n    <div background-size *ngIf="data != null" [ngStyle]="{\'background-image\': \'url(\' + data.headerImage + \')\'}">\n\n      <div search-bar-bcg>\n\n        <!-- Header Title -->\n\n        <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="onEvent(\'onTextChange\', $event)"></ion-searchbar>\n\n      </div>\n\n    </div>\n\n  </ion-toolbar>\n\n</ion-header>\n\n<!-- Content -->\n\n<ion-content>\n\n  <ion-grid no-padding *ngIf="data != null">\n\n    <ion-row>\n\n      <!-- List Search-->\n\n      <ion-col col-12>\n\n        <ion-list no-margin>\n\n          <ion-item default-item no-lines *ngFor="let item of data.items;" (click)="onEvent(\'onItemClick\', item)">\n\n            <ion-thumbnail item-start>\n\n              <img [src]="item.avatar">\n\n            </ion-thumbnail>\n\n            <!-- Big Title -->\n\n            <h2 item-title text-capitalize>{{item.title}}</h2>\n\n            <!-- Description -->\n\n            <h2 item-subtitle text-wrap>{{item.subtitle}}</h2>\n\n            <!-- Button get -->\n\n            <button box-shadow text-capitalize button-follow ion-button item-end>{{item.button}}</button>\n\n          </ion-item>\n\n        </ion-list>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\search-bar\layout-2\search-bar.html"*/
         }),
         __metadata("design:paramtypes", [])
-    ], RangeLayout2);
-    return RangeLayout2;
+    ], SearchBarLayout2);
+    return SearchBarLayout2;
 }());
 
-//# sourceMappingURL=range-layout-2.js.map
+//# sourceMappingURL=search-bar-layout-2.js.map
 
 /***/ })
 

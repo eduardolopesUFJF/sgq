@@ -1,14 +1,14 @@
 webpackJsonp([24],{
 
-/***/ 776:
+/***/ 786:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabsLayout2Module", function() { return TabsLayout2Module; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WizardLayout2Module", function() { return WizardLayout2Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs_layout_2__ = __webpack_require__(888);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wizard_layout_2__ = __webpack_require__(909);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,36 +18,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var TabsLayout2Module = /** @class */ (function () {
-    function TabsLayout2Module() {
+var WizardLayout2Module = /** @class */ (function () {
+    function WizardLayout2Module() {
     }
-    TabsLayout2Module = __decorate([
+    WizardLayout2Module = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__tabs_layout_2__["a" /* TabsLayout2 */],
+                __WEBPACK_IMPORTED_MODULE_2__wizard_layout_2__["a" /* WizardLayout2 */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__tabs_layout_2__["a" /* TabsLayout2 */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__wizard_layout_2__["a" /* WizardLayout2 */]),
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_2__tabs_layout_2__["a" /* TabsLayout2 */]
+                __WEBPACK_IMPORTED_MODULE_2__wizard_layout_2__["a" /* WizardLayout2 */]
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
         })
-    ], TabsLayout2Module);
-    return TabsLayout2Module;
+    ], WizardLayout2Module);
+    return WizardLayout2Module;
 }());
 
-//# sourceMappingURL=tabs-layout-2.module.js.map
+//# sourceMappingURL=wizard-layout-2.module.js.map
 
 /***/ }),
 
-/***/ 888:
+/***/ 909:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsLayout2; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WizardLayout2; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -58,31 +59,60 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var TabsLayout2 = /** @class */ (function () {
-    function TabsLayout2() {
+
+var WizardLayout2 = /** @class */ (function () {
+    function WizardLayout2() {
+        this.next = true;
+        this.finish = true;
+        this.next = true;
+        this.finish = false;
     }
+    WizardLayout2.prototype.changeSlide = function (index) {
+        if (index > 0) {
+            this.slider.slideNext(300);
+        }
+        else {
+            this.slider.slidePrev(300);
+        }
+    };
+    WizardLayout2.prototype.slideHasChanged = function (index) {
+        try {
+            this.next = this.slider.getActiveIndex() < (this.slider.length() - 1);
+            this.finish = this.slider.isEnd();
+        }
+        catch (e) { }
+    };
+    WizardLayout2.prototype.ngOnChanges = function (changes) {
+        this.data = changes['data'].currentValue;
+    };
+    WizardLayout2.prototype.onEvent = function (event) {
+        if (this.events[event]) {
+            this.events[event]();
+        }
+        console.log(event);
+    };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])('data'),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
-    ], TabsLayout2.prototype, "data", void 0);
+    ], WizardLayout2.prototype, "data", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])('events'),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
-    ], TabsLayout2.prototype, "events", void 0);
+    ], WizardLayout2.prototype, "events", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])('tabs'),
-        __metadata("design:type", Object)
-    ], TabsLayout2.prototype, "tabRef", void 0);
-    TabsLayout2 = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])('wizardSlider'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* Slides */])
+    ], WizardLayout2.prototype, "slider", void 0);
+    WizardLayout2 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'tabs-layout-2',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\tabs\layout-2\tabs.html"*/'<!-- Theme Tabs Footer tab - icons -->\n\n<ion-tabs #tabs tabsPlacement=\'bottom\'>\n\n    <ion-tab [tabIcon]="item.icon" [root]="item.page" *ngFor="let item of data;let i = index"></ion-tab>\n\n</ion-tabs>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\tabs\layout-2\tabs.html"*/
+            selector: 'wizard-layout-2',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\wizard\layout-2\wizard.html"*/'<ion-slides #wizardSlider (ionSlideDidChange)="slideHasChanged()" pager="true" *ngIf="data != null">\n\n  <ion-slide background-size padding *ngFor="let item of data.items;" [ngStyle]="{\'background-image\': \'url(\' + item.backgroundSlider + \')\'}">\n\n    <!--Wizard Content -->\n\n    <div wizard-content text-center>\n\n      <!--Wizard Subitem -->\n\n      <h3 wizard-subtitle margin-bottom>{{item.welcome}}</h3>\n\n      <!--Wizard Title -->\n\n      <h1 margin-bottom wizard-title>{{item.title}}</h1>\n\n      <!--Wizard Description -->\n\n      <h3 wizard-description>{{item.description}}</h3>\n\n    </div>\n\n  </ion-slide>\n\n</ion-slides>\n\n<!--Button section-->\n\n<div *ngIf="data != null" text-center>\n\n  <button ion-button default-button wizard-button text-capitalize (click)="changeSlide(1)" *ngIf="next">\n\n        {{data.btnNext}}\n\n    </button>\n\n  <button ion-button default-button wizard-button text-capitalize (click)="onEvent(\'onFinish\')" *ngIf="finish">\n\n        {{data.btnFinish}}\n\n    </button>\n\n</div>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\wizard\layout-2\wizard.html"*/
         }),
         __metadata("design:paramtypes", [])
-    ], TabsLayout2);
-    return TabsLayout2;
+    ], WizardLayout2);
+    return WizardLayout2;
 }());
 
-//# sourceMappingURL=tabs-layout-2.js.map
+//# sourceMappingURL=wizard-layout-2.js.map
 
 /***/ })
 

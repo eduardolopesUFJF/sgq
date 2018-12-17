@@ -29,7 +29,7 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Mappings
                 .HasMaxLength(500)
                 .IsUnicode(false);
 
-            entity.Property(e => e.IdChecklistServico).HasColumnName("ID_CHECKLIST_SERVICO");
+            entity.Property(e => e.IdServico).HasColumnName("ID_CHECKLIST_SERVICO");
 
             entity.Property(e => e.Ordem)
                 .HasColumnName("ORDEM")
@@ -38,7 +38,7 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Mappings
 
             entity.HasOne(d => d.ChecklistServico)
                 .WithMany(p => p.ItensChecklistServico)
-                .HasForeignKey(d => d.IdChecklistServico);
+                .HasForeignKey(d => d.IdServico);
         }
     }
 }

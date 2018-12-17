@@ -7,7 +7,7 @@ namespace SGQ.GDOL.Domain.ObraRoot.Entity
     {
         public Servico()
         {
-            InspecaoObra = new HashSet<InspecaoObra>();
+            InspecoesObra = new HashSet<InspecaoObra>();
         }
 
         public int? IdObra { get; set; }
@@ -22,6 +22,6 @@ namespace SGQ.GDOL.Domain.ObraRoot.Entity
         public virtual ChecklistItem ChecklistItem { get; set; }
         public virtual Area Area { get; set; }
         public virtual Obra Obra { get; set; }
-        public virtual ICollection<InspecaoObra> InspecaoObra { get; set; }
+        public virtual ICollection<InspecaoObra> InspecoesObra { get; set; }
     }
 }

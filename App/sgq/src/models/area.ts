@@ -3,6 +3,7 @@ import { Servico } from "./servico";
 export class Area {
     
     id: number = 0;
+    idGuid: string = '';
     idObra: number = 0;
     descricao: string;
     status: number = 0;

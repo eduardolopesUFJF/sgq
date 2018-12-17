@@ -1,14 +1,14 @@
 webpackJsonp([32],{
 
-/***/ 768:
+/***/ 778:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SelectLayout6Module", function() { return SelectLayout6Module; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SubImageGalleryLayout2Module", function() { return SubImageGalleryLayout2Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__select_layout_6__ = __webpack_require__(880);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sub_image_gallery_layout_2__ = __webpack_require__(901);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,36 +18,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SelectLayout6Module = /** @class */ (function () {
-    function SelectLayout6Module() {
+var SubImageGalleryLayout2Module = /** @class */ (function () {
+    function SubImageGalleryLayout2Module() {
     }
-    SelectLayout6Module = __decorate([
+    SubImageGalleryLayout2Module = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__select_layout_6__["a" /* SelectLayout6 */],
+                __WEBPACK_IMPORTED_MODULE_2__sub_image_gallery_layout_2__["a" /* SubImageGalleryLayout2 */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__select_layout_6__["a" /* SelectLayout6 */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__sub_image_gallery_layout_2__["a" /* SubImageGalleryLayout2 */]),
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_2__select_layout_6__["a" /* SelectLayout6 */]
+                __WEBPACK_IMPORTED_MODULE_2__sub_image_gallery_layout_2__["a" /* SubImageGalleryLayout2 */]
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
         })
-    ], SelectLayout6Module);
-    return SelectLayout6Module;
+    ], SubImageGalleryLayout2Module);
+    return SubImageGalleryLayout2Module;
 }());
 
-//# sourceMappingURL=select-layout-6.module.js.map
+//# sourceMappingURL=sub-image-gallery-layout-2.module.js.map
 
 /***/ }),
 
-/***/ 880:
+/***/ 901:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SelectLayout6; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SubImageGalleryLayout2; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -58,33 +59,44 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var SelectLayout6 = /** @class */ (function () {
-    function SelectLayout6() {
+
+var SubImageGalleryLayout2 = /** @class */ (function () {
+    function SubImageGalleryLayout2(navCtrl, navParams) {
         var _this = this;
-        this.onEvent = function (event, item) {
+        this.navCtrl = navCtrl;
+        this.onEvent = function (event, item, e) {
+            if (e) {
+                e.stopPropagation();
+            }
             if (_this.events[event]) {
                 _this.events[event](item);
             }
         };
+        this.openImageSlider = function (group, index) {
+            _this.navCtrl.push(group.fullscreen, {
+                'group': group.items,
+                'index': index
+            });
+        };
     }
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])('data'),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
-    ], SelectLayout6.prototype, "data", void 0);
+    ], SubImageGalleryLayout2.prototype, "data", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])('events'),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
-    ], SelectLayout6.prototype, "events", void 0);
-    SelectLayout6 = __decorate([
+    ], SubImageGalleryLayout2.prototype, "events", void 0);
+    SubImageGalleryLayout2 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'select-layout-6',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\select\layout-6\select.html"*/'<ion-item color="secondary" no-lines *ngIf="data != null">\n\n    <ion-label>{{data.title}}</ion-label>\n\n    <ion-select interface="popover" [(ngModel)]="data.selectedItemMonth" multiple="true">\n\n        <ion-option *ngFor="let item of data.itemsMonth; let i= index" [value]="item.id">{{item.title}}</ion-option>\n\n    </ion-select>\n\n\n\n    <ion-select interface="popover" [(ngModel)]="data.selectedItemYear" [multiple]="true">\n\n        <ion-option *ngFor="let item of data.itemsYears; let i= index" [value]="item.id">{{item.title}}</ion-option>\n\n    </ion-select>\n\n</ion-item>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\select\layout-6\select.html"*/
+            selector: 'sub-image-gallery-layout-2',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\sub-image-gallery\layout-2\sub-image-gallery-layout-2.html"*/'<!-- Theme Image Sub-Gallery for Thumb grid -->\n\n<ion-grid *ngIf="data != null">\n\n    <ion-row>\n\n        <ion-col no-padding col-4 col-sm-3 col-md-6 col-lg-4 col-xl-3 *ngFor="let item of data.items;let i = index;">\n\n            <ion-card background-size (click)="openImageSlider(data, i)">\n\n              <img [src]="item.image"  />\n\n            </ion-card>\n\n        </ion-col>\n\n    </ion-row>\n\n</ion-grid>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\sub-image-gallery\layout-2\sub-image-gallery-layout-2.html"*/
         }),
-        __metadata("design:paramtypes", [])
-    ], SelectLayout6);
-    return SelectLayout6;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavParams */]])
+    ], SubImageGalleryLayout2);
+    return SubImageGalleryLayout2;
 }());
 
-//# sourceMappingURL=select-layout-6.js.map
+//# sourceMappingURL=sub-image-gallery-layout-2.js.map
 
 /***/ })
 

@@ -13,6 +13,7 @@ namespace SGQ.GDOL.Domain.ObraRoot.Entity
 
         public string Descricao { get; set; }
         public string Codigo { get; set; }
+        public string Tipo { get; set; }
         public bool? Ativo { get; set; }
         public bool? Delete { get; set; }
 

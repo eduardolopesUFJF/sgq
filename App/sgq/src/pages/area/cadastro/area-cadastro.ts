@@ -44,11 +44,16 @@ export class AreaCadastroPage {
   }
 
   salvar(formValido) {
-    if(formValido) {
+    if (formValido) {
+      this.area.idGuid = UUID.UUID();
       this.servicosEscolhidos.forEach(item => {
         let servico: Servico = new Servico();
+        servico.idGuidServico = UUID.UUID();
         servico.idChecklist = item;
         servico.idObra = this.obraId;
+        servico.idAreaGuid = this.area.idGuid;
+        servico.descricao = this.opcoesItens.find(x => x.id == item).descricao;
+        servico.tipo = this.opcoesItens.find(x => x.id == item).tipo;
         this.area.servicos.push(servico);
       });
       this.storage.ready().then(() => {
@@ -56,7 +61,7 @@ export class AreaCadastroPage {
         this.storage.get('atualizacoes').then(
           atualizacoes => {
             this.area.idObra = this.obraId;
-            let alteracao = new Alteracao({ id: UUID.UUID(), tipo: "Insert", entidade: "Area", valor: JSON.stringify(this.area), data: new Date(), descricao: "Inserção da área: " + this.area.descricao, idObra: this.obraId });
+            let alteracao = new Alteracao({ id: UUID.UUID(), idArea: this.area.id, idGuidArea: this.area.idGuid, tipo: "Insert", entidade: "Area", valor: JSON.stringify(this.area), data: new Date(), descricao: "Inserção da área: " + this.area.descricao, obraId: this.obraId });
             if (atualizacoes) {
               atualizacoesArray = atualizacoes;
               atualizacoesArray.push(alteracao);
@@ -82,12 +87,12 @@ export class AreaCadastroPage {
           this.storage.set('obras', obras);
           this.viewCtrl.dismiss(this.area);
         }
-        );
-      });
-    }
-    
-    voltar() {
-      this.viewCtrl.dismiss(null);
+      );
+    });
+  }
+
+  voltar() {
+    this.viewCtrl.dismiss(null);
   }
 
 }

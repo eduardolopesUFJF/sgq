@@ -1,14 +1,14 @@
 webpackJsonp([58],{
 
-/***/ 734:
+/***/ 747:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExpandableLayout2Module", function() { return ExpandableLayout2Module; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SwipeToDismissLayout2Module", function() { return SwipeToDismissLayout2Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__expandable_layout_2__ = __webpack_require__(846);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__swipe_to_dismiss_layout_2__ = __webpack_require__(870);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,37 +18,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ExpandableLayout2Module = /** @class */ (function () {
-    function ExpandableLayout2Module() {
+var SwipeToDismissLayout2Module = /** @class */ (function () {
+    function SwipeToDismissLayout2Module() {
     }
-    ExpandableLayout2Module = __decorate([
+    SwipeToDismissLayout2Module = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__expandable_layout_2__["a" /* ExpandableLayout2 */],
+                __WEBPACK_IMPORTED_MODULE_2__swipe_to_dismiss_layout_2__["a" /* SwipeToDismissLayout2 */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__expandable_layout_2__["a" /* ExpandableLayout2 */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__swipe_to_dismiss_layout_2__["a" /* SwipeToDismissLayout2 */]),
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_2__expandable_layout_2__["a" /* ExpandableLayout2 */]
+                __WEBPACK_IMPORTED_MODULE_2__swipe_to_dismiss_layout_2__["a" /* SwipeToDismissLayout2 */]
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
         })
-    ], ExpandableLayout2Module);
-    return ExpandableLayout2Module;
+    ], SwipeToDismissLayout2Module);
+    return SwipeToDismissLayout2Module;
 }());
 
-//# sourceMappingURL=expandable-layout-2.module.js.map
+//# sourceMappingURL=swipe-to-dismiss-layout-2.module.js.map
 
 /***/ }),
 
-/***/ 846:
+/***/ 870:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExpandableLayout2; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SwipeToDismissLayout2; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -60,49 +60,46 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var ExpandableLayout2 = /** @class */ (function () {
-    function ExpandableLayout2() {
+var SwipeToDismissLayout2 = /** @class */ (function () {
+    function SwipeToDismissLayout2() {
+        var _this = this;
+        this.undo = function (slidingItem) {
+            slidingItem.close();
+        };
+        this.delete = function (item) {
+            var index = _this.data.items.indexOf(item);
+            if (index > -1) {
+                _this.data.items.splice(index, 1);
+            }
+        };
     }
-    ExpandableLayout2.prototype.onEvent = function (event, item, e) {
+    SwipeToDismissLayout2.prototype.onEvent = function (event, item, e) {
         if (this.events[event]) {
             this.events[event](item);
         }
     };
-    ExpandableLayout2.prototype.onStarClass = function (items, index, e) {
-        for (var i = 0; i < items.length; i++) {
-            items[i].isActive = i <= index;
-        }
-        this.onEvent("onRates", index, e);
-    };
-    ;
-    ExpandableLayout2.prototype.toggleGroup = function (group) {
-        group.show = !group.show;
-    };
-    ExpandableLayout2.prototype.isGroupShown = function (group) {
-        return group.show;
-    };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
-    ], ExpandableLayout2.prototype, "data", void 0);
+    ], SwipeToDismissLayout2.prototype, "data", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
-    ], ExpandableLayout2.prototype, "events", void 0);
+    ], SwipeToDismissLayout2.prototype, "events", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */])
-    ], ExpandableLayout2.prototype, "content", void 0);
-    ExpandableLayout2 = __decorate([
+    ], SwipeToDismissLayout2.prototype, "content", void 0);
+    SwipeToDismissLayout2 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'expandable-layout-2',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\expandable\layout-2\expandable.html"*/'<!-- Themes Expandable - Full image with CTA -->\n\n<ion-content>\n\n  <ion-grid no-padding *ngIf="data != null">\n\n    <ion-row>\n\n      <ion-col col-12 no-padding no-margin>\n\n        <ion-list>\n\n          <ul no-margin no-padding class="collapsible">\n\n            <li margin *ngFor="let group of data.items;">\n\n              <!-- Expandable Full image with CTA Header-->\n\n              <div class="collapsible-header" (click)="toggleGroup(group)">\n\n                <ion-item no-margin no-padding no-lines background-size text-center [ngStyle]="{\'background-image\': \'url(\' + group.backgroundImage + \')\'}">\n\n                  <div watch-now text-center>\n\n                    <!-- Icon And Text For Read More-->\n\n                    <button ion-button button-icon icon-center>\n\n                    <ion-icon icon-large [name]="group.icon"></ion-icon>\n\n                  </button >\n\n                    </div>\n\n                </ion-item>\n\n              </div>\n\n              <!-- Expandable Full image with CTA Body -->\n\n              <div class="item-accordion" background-size [ngClass]="{\'active\': isGroupShown(group) }" [hidden]="!isGroupShown(group)" [ngStyle]="{\'background-image\': \'url(\' + data.listBackgroundImage + \')\'}">\n\n                <ion-item text-wrap no-lines text-center padding transparent>\n\n                  <!-- Titile -->\n\n                  <h2 subitem-title>{{group.expandItems.title}}</h2>\n\n                  <!-- Icon Rating Star -->\n\n                  <ion-icon padding-top *ngFor="let item of group.expandItems.iconsStars;let i = index"\n\n                  (click)="onStarClass(group.expandItems.iconsStars, i, $event);">\n\n                    <i icon-small *ngIf="item.isActive" class="icon {{item.iconActive}}"></i>\n\n                    <i icon-small *ngIf="!item.isActive" class="icon {{item.iconInactive}}"></i>\n\n                  </ion-icon>\n\n                  <!-- Reviews Star -->\n\n                  <span span-medium>{{group.expandItems.reviews}}</span>\n\n                  <div padding-top (click)="onEvent(\'onItemClick\', group, $event)">\n\n                    <!-- Description -->\n\n                    <p subitem-subtitle>{{group.expandItems.description}}</p>\n\n                  </div>\n\n                </ion-item>\n\n              </div>\n\n            </li>\n\n          </ul>\n\n        </ion-list>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\expandable\layout-2\expandable.html"*/
+            selector: 'swipe-to-dismiss-layout-2',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\swipe-to-dismiss\layout-2\swipe-to-dismiss.html"*/'<!-- Themes Swipe To Dismiss - Products + CTA -->\n\n<ion-content>\n\n  <ion-grid no-padding *ngIf="data != null">\n\n    <ion-row>\n\n      <ion-col col-12>\n\n        <!-- Header top Swipe To Dismiss Products + CTA -->\n\n        <ion-list-header transparent no-lines header-section no-margin>\n\n          <!-- Big Title Swipe To Dismiss Products + CTA -->\n\n          <h1 header-title text-capitalize>{{data.header}}</h1>\n\n        </ion-list-header>\n\n        <!-- Content -->\n\n        <ion-list no-margin>\n\n          <ion-item-sliding default-item *ngFor="let item of data.items" #slidingItem>\n\n            <ion-item transparent no-padding no-lines (click)="onEvent(\'onItemClick\', item.title, $event)">\n\n              <!-- Images -->\n\n                <ion-thumbnail item-start>\n\n                  <img [src]="item.image">\n\n                </ion-thumbnail>\n\n                <!-- Title -->\n\n                <h2 item-title>{{item.title}}</h2>\n\n                <!-- Subtitle -->\n\n                <p item-subtitle text-wrap>{{item.subtitle}}</p>\n\n                <!-- Button -->\n\n                <button ion-button button-follow text-capitalize box-shadow item-end>{{item.ionButton}}</button>\n\n            </ion-item>\n\n            <!--Action Button-->\n\n            <ion-item-options no-lines>\n\n              <!-- Button -->\n\n              <button ion-button text-capitalize (click)="delete(item)">\n\n              {{item.delate}}\n\n            </button>\n\n            </ion-item-options>\n\n          </ion-item-sliding>\n\n        </ion-list>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\swipe-to-dismiss\layout-2\swipe-to-dismiss.html"*/
         }),
         __metadata("design:paramtypes", [])
-    ], ExpandableLayout2);
-    return ExpandableLayout2;
+    ], SwipeToDismissLayout2);
+    return SwipeToDismissLayout2;
 }());
 
-//# sourceMappingURL=expandable-layout-2.js.map
+//# sourceMappingURL=swipe-to-dismiss-layout-2.js.map
 
 /***/ })
 

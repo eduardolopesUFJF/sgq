@@ -2,7 +2,7 @@
 <ion-content>
     <h2 padding text-center class="aviso" *ngIf="animateItems.length < 1 || data.length < 1">Nenhum registro encontrado.</h2>
     <ion-grid no-padding *ngIf="data != null">
-        <ion-row *ngIf="config.exibirDatas">
+        <ion-row *ngIf="config.exibirDatas && animateItems.length > 0">
             <ion-col col-12>
                 <h3 item-data text-wrap text-center *ngIf="ultimoDownload != 'Nunca'">Último download: {{ultimoDownload | date: 'dd/MM/yyyy  HH:mm'}}</h3>
                 <h3 item-data text-wrap text-center *ngIf="ultimoUpload != 'Nunca'">Última publicação: {{ultimoUpload | date: 'dd/MM/yyyy  HH:mm'}}</h3>
@@ -19,9 +19,29 @@
             </ion-col>
             <ion-col col-12>
                 <ion-list no-margin *ngIf="animacaoAtiva">
-                    <ion-item default-item no-lines [ngClass]="{'novo-item': !item.id && !config.alteracoes, 'zoom-in': true}" *ngFor="let item of animateItems; let i = index;"
+                    <ion-item default-item no-lines [ngClass]="{'novo-item': verificaNovoItem(item) && !config.alteracoes, 'zoom-in': true}" *ngFor="let item of animateItems; let i = index;"
                         (click)="onEvent('onItemClick', item, $event)">
-                        <ion-row>
+                        <ion-row class="espacamento">
+                            <ion-col col-10>
+                                <h2 item-title text-wrap>{{item.descricao}}</h2>
+                                <h3 item-situacao text-wrap *ngIf="config.subTitulo">{{config.subTitulo}}: {{config.alteracoes ? (item.data | date: 'dd/MM/yyyy hh:mm') : item.situacao}}</h3>
+                            </ion-col>
+                            <ion-col col-2 *ngIf="config.exclusaoPossivel" (click)="onEvent('onIconClick', item, $event)">
+                                <ion-icon icon-small name="{{config.icon}}" item-right
+                                    style="font-size: 25px !important; margin: 0px" [ngClass]="{'color-black': !item.delete , 'color-red' : item.delete}"></ion-icon>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row class="espacamento" *ngIf="config.tipo">
+                            <ion-col col-12 class="tipo">
+                                <h3 no-margin item-tipo text-wrap>{{item.tipo.toUpperCase()}}</h3>
+                            </ion-col>
+                        </ion-row>
+                    </ion-item>
+                </ion-list>
+
+                <ion-list no-margin *ngIf="!animacaoAtiva">
+                    <ion-item default-item no-lines [ngClass]="{'novo-item': verificaNovoItem(item) && !config.alteracoes}" *ngFor="let item of data; let i = index;" (click)="onEvent('onItemClick', item, $event)">
+                        <ion-row class="espacamento">
                             <ion-col col-10>
                                 <h2 item-title text-wrap>{{item.descricao}}</h2>
                                 <h3 item-situacao text-wrap *ngIf="config.subTitulo">{{config.subTitulo}}: {{config.alteracoes ? (item.data | date: 'dd/MM/yyyy hh:mm') : item.situacao}}</h3>
@@ -31,19 +51,9 @@
                                     style="font-size: 25px !important; margin: 0px" [ngClass]="{'color-black': !item.delete , 'color-red' : item.delete}"></ion-icon>
                             </ion-col>
                         </ion-row>
-                    </ion-item>
-                </ion-list>
-
-                <ion-list no-margin *ngIf="!animacaoAtiva">
-                    <ion-item default-item no-lines [ngClass]="{'novo-item': !item.id && !config.alteracoes}" *ngFor="let item of data; let i = index;" (click)="onEvent('onItemClick', item, $event)">
-                        <ion-row>
-                            <ion-col col-10>
-                                <h2 item-title text-wrap>{{item.descricao}}</h2>
-                                <h3 item-situacao text-wrap *ngIf="config.subTitulo">{{config.subTitulo}}: {{config.alteracoes ? (item.data | date: 'dd/MM/yyyy hh:mm') : item.situacao}}</h3>
-                            </ion-col>
-                            <ion-col col-2 *ngIf="config.exclusaoPossivel">
-                                <ion-icon icon-small name="{{config.icon}}" item-right (click)="onEvent('onIconClick', item, $event)"
-                                    style="font-size: 25px !important; margin: 0px" [ngClass]="{'color-black': !item.delete , 'color-red' : item.delete}"></ion-icon>
+                        <ion-row class="espacamento" *ngIf="config.tipo">
+                            <ion-col col-12 class="tipo">
+                                <h3 no-margin item-tipo text-wrap>{{item.tipo.toUpperCase()}}</h3>
                             </ion-col>
                         </ion-row>
                     </ion-item>

@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using SGQ.GDOL.Domain;
 using SGQ.GDOL.Domain.ComercialRoot.Entity;
 using SGQ.GDOL.Domain.ObraRoot.Entity;
+using SGQ.GDOL.Domain.RHRoot.Entity;
 using SGQ.GDOL.Domain.UsuarioRoot.Entity;
 using SGQ.GDOL.Infra.Data.SqlServer.Mappings;
 using System.IO;
@@ -19,8 +20,10 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Context
         public DbSet<Servico> Servico { get; set; }
         public DbSet<ItemChecklistServico> ItemChecklistServico { get; set; }
         public DbSet<ChecklistItem> ChecklistServico { get; set; }
+        public DbSet<Funcionario> Funcionario { get; set; }
+        public DbSet<InspecaoObraItem> InspecaoObraItem { get; set; }
 
-protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new UsuarioMap());
             modelBuilder.ApplyConfiguration(new ObraMap());
@@ -30,6 +33,8 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
             modelBuilder.ApplyConfiguration(new ObraChecklistServicoMap());
             modelBuilder.ApplyConfiguration(new ItemChecklistServicoMap());
             modelBuilder.ApplyConfiguration(new ChecklistServicoMap());
+            modelBuilder.ApplyConfiguration(new FuncionarioMap());
+            modelBuilder.ApplyConfiguration(new InspecaoObraItemMap());
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

@@ -1,14 +1,14 @@
 webpackJsonp([28],{
 
-/***/ 772:
+/***/ 782:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SplashScreenLayout3Module", function() { return SplashScreenLayout3Module; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ToggleLayout1Module", function() { return ToggleLayout1Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__splash_screen_layout_3__ = __webpack_require__(884);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__toggle_layout_1__ = __webpack_require__(905);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,35 +18,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SplashScreenLayout3Module = /** @class */ (function () {
-    function SplashScreenLayout3Module() {
+var ToggleLayout1Module = /** @class */ (function () {
+    function ToggleLayout1Module() {
     }
-    SplashScreenLayout3Module = __decorate([
+    ToggleLayout1Module = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__splash_screen_layout_3__["a" /* SplashScreenLayout3 */],
+                __WEBPACK_IMPORTED_MODULE_2__toggle_layout_1__["a" /* ToggleLayout1 */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__splash_screen_layout_3__["a" /* SplashScreenLayout3 */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__toggle_layout_1__["a" /* ToggleLayout1 */]),
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_2__splash_screen_layout_3__["a" /* SplashScreenLayout3 */]
+                __WEBPACK_IMPORTED_MODULE_2__toggle_layout_1__["a" /* ToggleLayout1 */]
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
         })
-    ], SplashScreenLayout3Module);
-    return SplashScreenLayout3Module;
+    ], ToggleLayout1Module);
+    return ToggleLayout1Module;
 }());
 
-//# sourceMappingURL=splash-screen-layout-3.module.js.map
+//# sourceMappingURL=toggle-layout-1.module.js.map
 
 /***/ }),
 
-/***/ 884:
+/***/ 905:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SplashScreenLayout3; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ToggleLayout1; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -58,52 +58,36 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var SplashScreenLayout3 = /** @class */ (function () {
-    function SplashScreenLayout3() {
-    }
-    SplashScreenLayout3.prototype.ngOnChanges = function (changes) {
-        clearInterval(this.timer);
-        this.executeEvents();
-    };
-    SplashScreenLayout3.prototype.getData = function () {
-        return this.data;
-    };
-    SplashScreenLayout3.prototype.getEvents = function () {
-        return this.events;
-    };
-    SplashScreenLayout3.prototype.executeEvents = function () {
-        var duration = (this.getData() && this.getData().duration) ? this.getData().duration : 10000;
-        var events = null;
-        if (this.getEvents()) {
-            events = this.getEvents()['onRedirect'];
-        }
-        this.timer = setTimeout(function () {
-            if (events) {
-                events();
+var ToggleLayout1 = /** @class */ (function () {
+    function ToggleLayout1() {
+        var _this = this;
+        this.onEvent = function (event, item) {
+            if (_this.events[event]) {
+                _this.events[event](item);
             }
-        }, duration);
-    };
-    SplashScreenLayout3.prototype.ngOnDestroy = function () {
-        clearInterval(this.timer);
+        };
+    }
+    ToggleLayout1.prototype.ngOnChanges = function (changes) {
+        this.data = changes['data'].currentValue;
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])('data'),
         __metadata("design:type", Object)
-    ], SplashScreenLayout3.prototype, "data", void 0);
+    ], ToggleLayout1.prototype, "data", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])('events'),
         __metadata("design:type", Object)
-    ], SplashScreenLayout3.prototype, "events", void 0);
-    SplashScreenLayout3 = __decorate([
+    ], ToggleLayout1.prototype, "events", void 0);
+    ToggleLayout1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'splash-screen-layout-3',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\splash-screen\layout-3\splash-screen.html"*/'<!--Theme Logo + Title + Ken Burns-->\n\n<div id="splash-background-image">\n\n  <img splash-screen [src]="data.backgroundImage" />\n\n    <img logo [src]="data.logo" />\n\n    <h1 header-title text-wrap>{{data.title}}</h1>\n\n</div>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\splash-screen\layout-3\splash-screen.html"*/
+            selector: 'toggle-layout-1',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\toggle\layout-1\toggle.html"*/'<!--Themes Toggle - With avatars -->\n\n<ion-content>\n\n  <ion-grid no-padding>\n\n    <!-- List Section -->\n\n    <ion-list no-lines *ngIf="data != null">\n\n      <ion-list-header header-section no-lines>\n\n        <!-- Header-title -->\n\n        <h1 header-title text-capitalize>{{data.title}}</h1>\n\n      </ion-list-header>\n\n      <ion-item default-item *ngFor="let item of data.items; let i= index">\n\n        <!-- Avatar-->\n\n        <ion-thumbnail item-start>\n\n          <img [src]="item.avatar" />\n\n        </ion-thumbnail>\n\n        <!-- Item-title -->\n\n        <ion-label item-title padding-top>{{item.title}}</ion-label>\n\n        <!-- Item-subtitle -->\n\n        <ion-label item-subtitle text-wrap>{{item.subtitle}}</ion-label>\n\n        <!-- Toggle -->\n\n        <ion-toggle item-end [value]="item.id" (ionChange)="onEvent(\'onSelect\',item)" [checked]="item.isChecked"></ion-toggle>\n\n      </ion-item>\n\n    </ion-list>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\toggle\layout-1\toggle.html"*/
         }),
         __metadata("design:paramtypes", [])
-    ], SplashScreenLayout3);
-    return SplashScreenLayout3;
+    ], ToggleLayout1);
+    return ToggleLayout1;
 }());
 
-//# sourceMappingURL=splash-screen-layout-3.js.map
+//# sourceMappingURL=toggle-layout-1.js.map
 
 /***/ })
 

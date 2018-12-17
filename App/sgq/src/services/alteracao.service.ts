@@ -12,9 +12,9 @@ export class AlteracaoService extends BaseService {
         super(http, 'alteracao/');
     }
 
-    public publicar(alteracoes: Alteracao[]): Observable<boolean> {
+    public publicar(alteracoes: Alteracao[]): Observable<string> {
         this.headers = this.headers.set('BancoSchema', localStorage.getItem('BancoSchema'));
-        return this.http.post<boolean>(this.apiUrl, alteracoes, { headers: this.headers })
+        return this.http.post<string>(this.apiUrl, alteracoes, { headers: this.headers })
             .catch(this.handleError);
     }
 

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavParams } from 'ionic-angular';
+import { IonicPage, NavParams, NavController } from 'ionic-angular';
 import { Servico } from '../../models/servico';
 import { MessageService } from '../../utils/message-service';
 import { Storage } from '@ionic/storage';
@@ -19,7 +19,7 @@ export class ItemAreaPage {
 
     events = {
         onItemClick: (data) => {
-            this.abrirInspecao(data);
+            this.abrirVerificacoes(data);
         },
         onIconClick: (data) => {
             this.confirmarExclusao(data);
@@ -30,6 +30,7 @@ export class ItemAreaPage {
         "exclusaoPossivel": true,
         "icon": "trash",
         "exibirDatas": false,
+        "tipo": true,
         "subTitulo": "Situação",
         "alteracoes": false
     }
@@ -37,13 +38,14 @@ export class ItemAreaPage {
     constructor(
         public navParams: NavParams,
         public messageService: MessageService,
+        public navCtrl: NavController,
         public storage: Storage
     ) { 
         this.area = this.navParams.data.area;
     }
 
-    abrirInspecao(inspecao: any) {
-        this.messageService.exibirMensagem("Sendo implementado.");
+    abrirVerificacoes(servico: Servico) {
+        this.navCtrl.push("VerificacaoPage", {servico: servico});
     }
 
     confirmarExclusao(item: Servico) {
@@ -51,7 +53,7 @@ export class ItemAreaPage {
         if (!item.delete) {
             mensagem = "Deseja realmente excluir o item '" + item.descricao + "'?";
         } else {
-            mensagem = "Deseja realmente reativar a área '" + item.descricao + "'?";
+            mensagem = "Deseja realmente reativar o item '" + item.descricao + "'?";
         }
         this.messageService.exibirMensagemConfirmacao(mensagem, () => { this.alterarSituacaoArea(item) });
     }
@@ -62,7 +64,7 @@ export class ItemAreaPage {
             this.storage.get('atualizacoes').then(
                 atualizacoes => {
                     item.delete = !item.delete;
-                    let alteracao = new Alteracao({ id: UUID.UUID(), tipo: "Update", entidade: "Servico", valor: JSON.stringify(item), data: new Date(), descricao: (item.delete ? "Inativação" : "Ativação") + " do serviço '" + item.descricao + "' na área '" + this.area.descricao + "'." });
+                    let alteracao = new Alteracao({ id: UUID.UUID(), idServico: item.id, idGuidServico: item.idGuidServico, idArea: this.area.id, idGuidArea: this.area.idGuid, tipo: "Update", entidade: "Servico", valor: JSON.stringify(item), data: new Date(), descricao: (item.delete ? "Inativação" : "Ativação") + " do serviço '" + item.descricao + "' na área '" + this.area.descricao + "'.", obraId: this.area.idObra });
                     if (atualizacoes) {
                         atualizacoesArray = atualizacoes;
                         atualizacoesArray.push(alteracao);
@@ -80,7 +82,7 @@ export class ItemAreaPage {
         this.storage.ready().then(() => {
             this.storage.get('obras').then(
                 obras => {
-                    obras.find(x => x.id == this.area.idObra).areas.find(x => x.id == this.area.id).servicos.find(x => x.id == item.id).delete = item.delete;
+                    obras.find(x => x.id == this.area.idObra).areas.find(x => this.area.idGuid ? (x.idGuid == this.area.idGuid) : (x.id == this.area.id)).servicos.find(x => item.idGuidServico ? (x.idGuid == item.idGuidServico) : (x.id == item.id)).delete = item.delete;
                     this.storage.set('obras', obras);
                 }
             );

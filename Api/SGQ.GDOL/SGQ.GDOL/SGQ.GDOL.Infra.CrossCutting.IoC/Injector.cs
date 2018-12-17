@@ -11,6 +11,9 @@ using System;
 using SGQ.GDOL.Domain.ObraRoot.Repository;
 using SGQ.GDOL.Domain.ObraRoot.Service.Interfaces;
 using SGQ.GDOL.Domain.ObraRoot.Service;
+using SGQ.GDOL.Domain.RHRoot.Repository;
+using SGQ.GDOL.Domain.RHRoot.Service;
+using SGQ.GDOL.Domain.RHRoot.Service.Interface;
 
 namespace SGQ.GDOL.Infra.CrossCutting.IoC
 {
@@ -28,6 +31,8 @@ namespace SGQ.GDOL.Infra.CrossCutting.IoC
             services.AddScoped<IChecklistServicoService, ChecklistServicoService>();
             services.AddScoped<IAreaService, AreaService>();
             services.AddScoped<IServicoService, ServicoService>();
+            services.AddScoped<IInspecaoService, InspecaoService>();
+            services.AddScoped<IFuncionarioService, FuncionarioService>();
 
             //Infra Data
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
@@ -35,6 +40,8 @@ namespace SGQ.GDOL.Infra.CrossCutting.IoC
             services.AddScoped<IChecklistServicoRepository, ChecklistServicoRepository>();
             services.AddScoped<IAreaRepository, AreaRepository>();
             services.AddScoped<IServicoRepository, ServicoRepository>();
+            services.AddScoped<IInspecaoRepository, InspecaoRepository>();
+            services.AddScoped<IFuncionarioRepository, FuncionarioRepository>();
 
             services.AddScoped<ServiceContext>();
             services.AddScoped<NotificationHandler>();

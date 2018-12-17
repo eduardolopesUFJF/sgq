@@ -1,15 +1,15 @@
-webpackJsonp([13],{
+webpackJsonp([13,69],{
 
-/***/ 755:
+/***/ 717:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ParallaxLayout4Module", function() { return ParallaxLayout4Module; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppearanceAnimationLayout5Module", function() { return AppearanceAnimationLayout5Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__parallax_layout_4__ = __webpack_require__(873);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__elastic_header_elastic_header_module__ = __webpack_require__(798);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_5__ = __webpack_require__(814);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(158);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -20,140 +20,81 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ParallaxLayout4Module = /** @class */ (function () {
-    function ParallaxLayout4Module() {
+var AppearanceAnimationLayout5Module = /** @class */ (function () {
+    function AppearanceAnimationLayout5Module() {
     }
-    ParallaxLayout4Module = __decorate([
+    AppearanceAnimationLayout5Module = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__parallax_layout_4__["a" /* ParallaxLayout4 */],
+                __WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_5__["a" /* AppearanceAnimationLayout5 */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__parallax_layout_4__["a" /* ParallaxLayout4 */]),
-                __WEBPACK_IMPORTED_MODULE_3__elastic_header_elastic_header_module__["a" /* ElasticHeaderModule */]
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_5__["a" /* AppearanceAnimationLayout5 */]),
+                __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["a" /* IonicStorageModule */].forRoot()
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_2__parallax_layout_4__["a" /* ParallaxLayout4 */]
+                __WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_5__["a" /* AppearanceAnimationLayout5 */]
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
         })
-    ], ParallaxLayout4Module);
-    return ParallaxLayout4Module;
+    ], AppearanceAnimationLayout5Module);
+    return AppearanceAnimationLayout5Module;
 }());
 
-//# sourceMappingURL=parallax-layout-4.module.js.map
+//# sourceMappingURL=appearance-animation-layout-5.module.js.map
 
 /***/ }),
 
-/***/ 798:
+/***/ 788:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ElasticHeaderModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__elastic_header__ = __webpack_require__(799);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-var ElasticHeaderModule = /** @class */ (function () {
-    function ElasticHeaderModule() {
-    }
-    ElasticHeaderModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_1__elastic_header__["a" /* ElasticHeader */],
-            ],
-            exports: [
-                __WEBPACK_IMPORTED_MODULE_1__elastic_header__["a" /* ElasticHeader */]
-            ],
-            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
-        })
-    ], ElasticHeaderModule);
-    return ElasticHeaderModule;
-}());
-
-//# sourceMappingURL=elastic-header.module.js.map
-
-/***/ }),
-
-/***/ 799:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ElasticHeader; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var ElasticHeader = /** @class */ (function () {
-    function ElasticHeader(element, renderer) {
-        this.element = element;
-        this.renderer = renderer;
-    }
-    ElasticHeader.prototype.ngOnInit = function () {
-        var _this = this;
-        this.scrollerHandle = this.element.nativeElement.getElementsByClassName('scroll-content')[0];
-        this.header = this.scrollerHandle.firstElementChild;
-        this.headerHeight = this.scrollerHandle.clientHeight;
-        this.ticking = false;
-        this.renderer.setElementStyle(this.header, 'webkitTransformOrigin', 'center bottom');
-        window.addEventListener('resize', function () {
-            _this.headerHeight = _this.scrollerHandle.clientHeight;
-        }, false);
-        this.scrollerHandle.addEventListener('scroll', function () {
-            if (!_this.ticking) {
-                window.requestAnimationFrame(function () {
-                    _this.updateElasticHeader();
-                });
-            }
-            _this.ticking = true;
-        });
-    };
-    ElasticHeader.prototype.updateElasticHeader = function () {
-        this.scrollTop = this.scrollerHandle.scrollTop;
-        if (this.scrollTop >= 0) {
-            this.translateAmt = this.scrollTop / 2;
-            this.scaleAmt = 1;
-        }
-        else {
-            this.translateAmt = 0;
-            this.scaleAmt = -this.scrollTop / this.headerHeight + 1;
-        }
-        this.renderer.setElementStyle(this.header, 'webkitTransform', 'translate3d(0,' + this.translateAmt + 'px,0) scale(' + this.scaleAmt + ',' + this.scaleAmt + ')');
-        this.ticking = false;
-    };
-    ElasticHeader = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* Directive */])({
-            selector: '[elastic-header]'
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["W" /* Renderer */]])
-    ], ElasticHeader);
-    return ElasticHeader;
-}());
-
-//# sourceMappingURL=elastic-header.js.map
-
-/***/ }),
-
-/***/ 873:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ParallaxLayout4; });
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AlteracoesPageModule", function() { return AlteracoesPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__alteracoes__ = __webpack_require__(911);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_list_view_appearance_animation_layout_5_appearance_animation_layout_5_module__ = __webpack_require__(717);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var AlteracoesPageModule = /** @class */ (function () {
+    function AlteracoesPageModule() {
+    }
+    AlteracoesPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__alteracoes__["a" /* AlteracoesPage */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__alteracoes__["a" /* AlteracoesPage */]),
+                __WEBPACK_IMPORTED_MODULE_3__core_list_view_appearance_animation_layout_5_appearance_animation_layout_5_module__["AppearanceAnimationLayout5Module"]
+            ],
+            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
+        })
+    ], AlteracoesPageModule);
+    return AlteracoesPageModule;
+}());
+
+//# sourceMappingURL=alteracoes.module.js.map
+
+/***/ }),
+
+/***/ 814:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppearanceAnimationLayout5; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(158);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -165,11 +106,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var ParallaxLayout4 = /** @class */ (function () {
-    function ParallaxLayout4() {
-        this.headerImage = "";
+
+var AppearanceAnimationLayout5 = /** @class */ (function () {
+    function AppearanceAnimationLayout5(storage) {
+        var _this = this;
+        this.storage = storage;
+        this.dataBackup = [];
+        this.animateItems = [];
+        this.animacaoAtiva = true;
+        this.descricao = "";
+        this.animateClass = { 'zoom-in': true };
+        this.storage.ready().then(function () {
+            _this.storage.get('ultimoDownload').then(function (data) {
+                _this.ultimoDownload = data ? data : "Nunca";
+            });
+            _this.storage.get('ultimoUpload').then(function (data) {
+                _this.ultimoUpload = data ? data : "Nunca";
+            });
+        });
     }
-    ParallaxLayout4.prototype.onEvent = function (event, item, e) {
+    AppearanceAnimationLayout5.prototype.onEvent = function (event, item, e) {
         if (e) {
             e.stopPropagation();
         }
@@ -177,61 +133,191 @@ var ParallaxLayout4 = /** @class */ (function () {
             this.events[event](item);
         }
     };
-    ParallaxLayout4.prototype.onStarClass = function (items, index, e) {
-        for (var i = 0; i < items.length; i++) {
-            items[i].isActive = i <= index;
+    AppearanceAnimationLayout5.prototype.ngOnChanges = function (changes) {
+        var that = this;
+        that.data = changes['data'].currentValue;
+        if (that.data && that.data) {
+            that.animateItems = [];
+            var _loop_1 = function (i) {
+                setTimeout(function () {
+                    that.animateItems.push(that.data[i]);
+                }, 200 * i);
+            };
+            for (var i = 0; i < that.data.length; i++) {
+                _loop_1(i);
+            }
         }
-        this.onEvent("onRates", index, e);
-    };
-    ParallaxLayout4.prototype.ngOnChanges = function (changes) {
-        if (changes.data && changes.data.currentValue) {
-            this.headerImage = changes.data.currentValue.headerImage;
+        if (this.dataBackup.length == 0) {
+            this.dataBackup = this.data.slice();
         }
-        this.subscribeToIonScroll();
     };
-    ParallaxLayout4.prototype.ngAfterViewInit = function () {
-        this.subscribeToIonScroll();
-    };
-    ParallaxLayout4.prototype.ngAfterViewChecked = function () {
-        this.subscribeToIonScroll();
-    };
-    ParallaxLayout4.prototype.isClassActive = function () {
-        return this.active;
-    };
-    ParallaxLayout4.prototype.subscribeToIonScroll = function () {
-        var _this = this;
-        if (this.content != null && this.content.ionScroll != null) {
-            this.content.ionScroll.subscribe(function (d) {
-                if (d.scrollTop < 200) {
-                    _this.active = false;
-                    return;
-                }
-                _this.active = true;
+    AppearanceAnimationLayout5.prototype.filtrar = function (valor) {
+        this.animacaoAtiva = false;
+        if (valor.length == 0) {
+            this.data = this.dataBackup.slice();
+        }
+        else {
+            this.data = this.dataBackup.filter(function (item) {
+                return item.descricao.toLowerCase().indexOf(valor.toLowerCase()) > -1;
             });
         }
     };
+    AppearanceAnimationLayout5.prototype.verificaNovoItem = function (item) {
+        return item.id == 0;
+    };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
-    ], ParallaxLayout4.prototype, "data", void 0);
+    ], AppearanceAnimationLayout5.prototype, "data", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
-    ], ParallaxLayout4.prototype, "events", void 0);
+    ], AppearanceAnimationLayout5.prototype, "events", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], AppearanceAnimationLayout5.prototype, "config", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */])
-    ], ParallaxLayout4.prototype, "content", void 0);
-    ParallaxLayout4 = __decorate([
+    ], AppearanceAnimationLayout5.prototype, "content", void 0);
+    AppearanceAnimationLayout5 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'parallax-layout-4',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\parallax\layout-4\parallax.html"*/'<!--- Theme Parallax - News -->\n\n<ion-header header-ios>\n\n  <ion-navbar transparent [ngClass]="{\'active\':isClassActive()}">\n\n    <button ion-button menuToggle>\n\n      <ion-icon [name]="menu"></ion-icon>\n\n    </button>\n\n    <ion-title *ngIf="data != null">{{data.headerTitle}}</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<!--- Header Big Image-->\n\n<ion-content elastic-header>\n\n  <ion-item no-lines background-size id="elastic-header" [ngStyle]="{\'background-image\': \'url(\' + headerImage + \')\'}">\n\n    <div title-block *ngIf="data != null">\n\n      <!--- Parallax Title -->\n\n      <h1 padding-left parallax-title text-wrap>{{data.title}}</h1>\n\n      <!--- Category -->\n\n      <span new-category transparent no-margin padding-bottom padding-left text-uppercase>{{data.category}}</span>\n\n    </div>\n\n  </ion-item>\n\n  <ion-item-group *ngIf="data != null">\n\n    <ion-item-divider no-lines>\n\n      <!--- Avatar -->\n\n      <ion-thumbnail item-start>\n\n        <img [src]="data.avatar" />\n\n      </ion-thumbnail>\n\n      <!-- Avatar Title -->\n\n      <h2 item-title>{{data.subtitle}}</h2>\n\n      <!--- Button Share-->\n\n      <button item-end ion-button ion-text button-action-shit (click)="onEvent(\'onShare\', data)">\n\n        <ion-icon [name]="data.shareIcon"></ion-icon>\n\n      </button>\n\n    </ion-item-divider>\n\n    <ion-item no-margin no-lines>\n\n      <p parallax-description text-wrap>{{data.description}}</p>\n\n    </ion-item>\n\n    <!-- Content -->\n\n    <ion-item no-margin no-lines *ngFor="let item of data.items;let i = index">\n\n      <!-- Content Title-->\n\n      <h2 parallax-subtitle margin-bottom text-wrap>{{item.title}}</h2>\n\n      <!-- Content Description-->\n\n      <p parallax-description text-wrap>{{item.subtitle}}</p>\n\n    </ion-item>\n\n  </ion-item-group>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\parallax\layout-4\parallax.html"*/
+            selector: 'appearance-animation-layout-5',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\appearance-animation\layout-5\appearance-animation.html"*/'<!--Theme Appearance animation (Zoom In)-->\n\n<ion-content>\n\n    <h2 padding text-center class="aviso" *ngIf="animateItems.length < 1 || data.length < 1">Nenhum registro encontrado.</h2>\n\n    <ion-grid no-padding *ngIf="data != null">\n\n        <ion-row *ngIf="config.exibirDatas && animateItems.length > 0">\n\n            <ion-col col-12>\n\n                <h3 item-data text-wrap text-center *ngIf="ultimoDownload != \'Nunca\'">Último download: {{ultimoDownload | date: \'dd/MM/yyyy  HH:mm\'}}</h3>\n\n                <h3 item-data text-wrap text-center *ngIf="ultimoUpload != \'Nunca\'">Última publicação: {{ultimoUpload | date: \'dd/MM/yyyy  HH:mm\'}}</h3>\n\n                <h3 item-data text-wrap text-center *ngIf="ultimoDownload == \'Nunca\'">Último download: {{ultimoDownload}}</h3>\n\n                <h3 item-data text-wrap text-center *ngIf="ultimoUpload == \'Nunca\'">Última publicação: {{ultimoUpload}}</h3>\n\n            </ion-col>\n\n        </ion-row>\n\n        <ion-row *ngIf="config.btnNovoLabel">\n\n                <button ion-button default-button block text-capitalize box-shadow margin-bottom class="button-novo" (click)="onEvent(\'onAddClick\')">{{config.btnNovoLabel}}</button>\n\n        </ion-row>\n\n        <ion-row>\n\n            <ion-col class="col-search" col-12 *ngIf="data.length > 0 || !animacaoAtiva" [ngClass]="{\'margin-top-10\': !config.exibirDatas}">\n\n                <ion-searchbar [placeholder]="\'Filtrar pela descrição\'" (ionInput)="filtrar($event.target.value)"></ion-searchbar>\n\n            </ion-col>\n\n            <ion-col col-12>\n\n                <ion-list no-margin *ngIf="animacaoAtiva">\n\n                    <ion-item default-item no-lines [ngClass]="{\'novo-item\': verificaNovoItem(item) && !config.alteracoes, \'zoom-in\': true}" *ngFor="let item of animateItems; let i = index;"\n\n                        (click)="onEvent(\'onItemClick\', item, $event)">\n\n                        <ion-row class="espacamento">\n\n                            <ion-col col-10>\n\n                                <h2 item-title text-wrap>{{item.descricao}}</h2>\n\n                                <h3 item-situacao text-wrap *ngIf="config.subTitulo">{{config.subTitulo}}: {{config.alteracoes ? (item.data | date: \'dd/MM/yyyy hh:mm\') : item.situacao}}</h3>\n\n                            </ion-col>\n\n                            <ion-col col-2 *ngIf="config.exclusaoPossivel" (click)="onEvent(\'onIconClick\', item, $event)">\n\n                                <ion-icon icon-small name="{{config.icon}}" item-right\n\n                                    style="font-size: 25px !important; margin: 0px" [ngClass]="{\'color-black\': !item.delete , \'color-red\' : item.delete}"></ion-icon>\n\n                            </ion-col>\n\n                        </ion-row>\n\n                        <ion-row class="espacamento" *ngIf="config.tipo">\n\n                            <ion-col col-12 class="tipo">\n\n                                <h3 no-margin item-tipo text-wrap>{{item.tipo.toUpperCase()}}</h3>\n\n                            </ion-col>\n\n                        </ion-row>\n\n                    </ion-item>\n\n                </ion-list>\n\n\n\n                <ion-list no-margin *ngIf="!animacaoAtiva">\n\n                    <ion-item default-item no-lines [ngClass]="{\'novo-item\': verificaNovoItem(item) && !config.alteracoes}" *ngFor="let item of data; let i = index;" (click)="onEvent(\'onItemClick\', item, $event)">\n\n                        <ion-row class="espacamento">\n\n                            <ion-col col-10>\n\n                                <h2 item-title text-wrap>{{item.descricao}}</h2>\n\n                                <h3 item-situacao text-wrap *ngIf="config.subTitulo">{{config.subTitulo}}: {{config.alteracoes ? (item.data | date: \'dd/MM/yyyy hh:mm\') : item.situacao}}</h3>\n\n                            </ion-col>\n\n                            <ion-col col-2 *ngIf="config.exclusaoPossivel">\n\n                                <ion-icon icon-small name="{{config.icon}}" item-right (click)="onEvent(\'onIconClick\', item, $event)"\n\n                                    style="font-size: 25px !important; margin: 0px" [ngClass]="{\'color-black\': !item.delete , \'color-red\' : item.delete}"></ion-icon>\n\n                            </ion-col>\n\n                        </ion-row>\n\n                        <ion-row class="espacamento" *ngIf="config.tipo">\n\n                            <ion-col col-12 class="tipo">\n\n                                <h3 no-margin item-tipo text-wrap>{{item.tipo.toUpperCase()}}</h3>\n\n                            </ion-col>\n\n                        </ion-row>\n\n                    </ion-item>\n\n                </ion-list>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-grid>\n\n</ion-content>'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\appearance-animation\layout-5\appearance-animation.html"*/
         }),
-        __metadata("design:paramtypes", [])
-    ], ParallaxLayout4);
-    return ParallaxLayout4;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]])
+    ], AppearanceAnimationLayout5);
+    return AppearanceAnimationLayout5;
 }());
 
-//# sourceMappingURL=parallax-layout-4.js.map
+//# sourceMappingURL=appearance-animation-layout-5.js.map
+
+/***/ }),
+
+/***/ 911:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AlteracoesPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(158);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_message_service__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_loading_service__ = __webpack_require__(160);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var AlteracoesPage = /** @class */ (function () {
+    function AlteracoesPage(storage, messageService, loadingService, navCtrl) {
+        var _this = this;
+        this.storage = storage;
+        this.messageService = messageService;
+        this.loadingService = loadingService;
+        this.navCtrl = navCtrl;
+        this.reload = true;
+        this.alteracoes = [];
+        this.events = {
+            onIconClick: function (data) {
+                _this.confirmarExclusao(data);
+            }
+        };
+        this.config = {
+            "exclusaoPossivel": true,
+            "icon": "trash",
+            "exibirDatas": false,
+            "subTitulo": "Data",
+            "tipo": false,
+            "alteracoes": true
+        };
+        this.obterAlteracoes();
+    }
+    AlteracoesPage.prototype.obterAlteracoes = function () {
+        var _this = this;
+        this.storage.ready().then(function () {
+            _this.storage.get('atualizacoes').then(function (atualizacoes) {
+                if (atualizacoes && atualizacoes.length > 0) {
+                    _this.alteracoes = atualizacoes;
+                }
+                else {
+                    _this.alteracoes = [];
+                    _this.messageService.exibirMensagem("Não há nenhuma alteração pendente.");
+                    _this.navCtrl.setRoot("HomePage");
+                }
+            });
+        });
+    };
+    AlteracoesPage.prototype.confirmarExclusao = function (alteracao) {
+        var _this = this;
+        var mensagem = "Deseja realmente desfazer a alteração '" + alteracao.descricao + "'?";
+        ;
+        this.messageService.exibirMensagemConfirmacao(mensagem, function () { _this.excluirAlteracao(alteracao); });
+    };
+    AlteracoesPage.prototype.excluirAlteracao = function (alteracao) {
+        var _this = this;
+        this.storage.ready().then(function () {
+            _this.storage.get('atualizacoes').then(function (atualizacoes) {
+                var indexArea = atualizacoes.findIndex(function (x) { return x.id == alteracao.id; });
+                atualizacoes.splice(indexArea, 1);
+                _this.storage.set('atualizacoes', atualizacoes);
+                _this.alteracoes = atualizacoes;
+                _this.atualizarLista();
+                _this.atualizarObra(alteracao);
+            });
+        });
+    };
+    AlteracoesPage.prototype.atualizarLista = function () {
+        var _this = this;
+        this.reload = false;
+        this.loadingService.show();
+        setTimeout(function () {
+            _this.reload = true;
+            _this.loadingService.hide();
+        }, 700);
+    };
+    AlteracoesPage.prototype.atualizarObra = function (alteracao) {
+        var _this = this;
+        this.storage.ready().then(function () {
+            _this.storage.get('obras').then(function (obras) {
+                switch (alteracao.entidade.toLowerCase()) {
+                    case "area":
+                        if (alteracao.tipo.toLowerCase() == "insert") {
+                            var index = obras.find(function (x) { return x.id == alteracao.obraId; }).areas.findIndex(function (x) { return x.id == JSON.parse(alteracao.valor).id; });
+                            obras.find(function (x) { return x.id == alteracao.obraId; }).areas.splice(index, 1);
+                            break;
+                        }
+                        else {
+                            obras.find(function (x) { return x.id == alteracao.obraId; }).areas.find(function (x) { return x.id == JSON.parse(alteracao.valor).id; }).delete = !JSON.parse(alteracao.valor).delete;
+                            break;
+                        }
+                }
+                _this.storage.set('obras', obras);
+            });
+        });
+    };
+    AlteracoesPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'page-alteracoes',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\alteracoes\alteracoes.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <button ion-button menuToggle>\n\n            <ion-icon class="icon-menu" name="menu"></ion-icon>\n\n        </button>\n\n        <div buy>\n\n            <ion-title>\n\n                Alterações\n\n            </ion-title>\n\n        </div>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<appearance-animation-layout-5 *ngIf="reload" has-header [data]="alteracoes" [events]="events" [config]="config"></appearance-animation-layout-5>'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\alteracoes\alteracoes.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */],
+            __WEBPACK_IMPORTED_MODULE_3__utils_message_service__["a" /* MessageService */],
+            __WEBPACK_IMPORTED_MODULE_4__utils_loading_service__["a" /* LoadingService */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavController */]])
+    ], AlteracoesPage);
+    return AlteracoesPage;
+}());
+
+//# sourceMappingURL=alteracoes.js.map
 
 /***/ })
 

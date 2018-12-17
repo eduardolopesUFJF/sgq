@@ -1,14 +1,14 @@
 webpackJsonp([27],{
 
-/***/ 773:
+/***/ 783:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SubImageGalleryLayout1Module", function() { return SubImageGalleryLayout1Module; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ToggleLayout2Module", function() { return ToggleLayout2Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sub_image_gallery_layout_1__ = __webpack_require__(885);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__toggle_layout_2__ = __webpack_require__(906);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,37 +18,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SubImageGalleryLayout1Module = /** @class */ (function () {
-    function SubImageGalleryLayout1Module() {
+var ToggleLayout2Module = /** @class */ (function () {
+    function ToggleLayout2Module() {
     }
-    SubImageGalleryLayout1Module = __decorate([
+    ToggleLayout2Module = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__sub_image_gallery_layout_1__["a" /* SubImageGalleryLayout1 */],
+                __WEBPACK_IMPORTED_MODULE_2__toggle_layout_2__["a" /* ToggleLayout2 */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__sub_image_gallery_layout_1__["a" /* SubImageGalleryLayout1 */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__toggle_layout_2__["a" /* ToggleLayout2 */]),
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_2__sub_image_gallery_layout_1__["a" /* SubImageGalleryLayout1 */]
+                __WEBPACK_IMPORTED_MODULE_2__toggle_layout_2__["a" /* ToggleLayout2 */]
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
         })
-    ], SubImageGalleryLayout1Module);
-    return SubImageGalleryLayout1Module;
+    ], ToggleLayout2Module);
+    return ToggleLayout2Module;
 }());
 
-//# sourceMappingURL=sub-image-gallery-layout-1.module.js.map
+//# sourceMappingURL=toggle-layout-2.module.js.map
 
 /***/ }),
 
-/***/ 885:
+/***/ 906:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SubImageGalleryLayout1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ToggleLayout2; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(47);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -59,44 +58,36 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-
-var SubImageGalleryLayout1 = /** @class */ (function () {
-    function SubImageGalleryLayout1(navCtrl, navParams) {
+var ToggleLayout2 = /** @class */ (function () {
+    function ToggleLayout2() {
         var _this = this;
-        this.navCtrl = navCtrl;
-        this.onEvent = function (event, item, e) {
-            if (e) {
-                e.stopPropagation();
-            }
+        this.onEvent = function (event, item) {
             if (_this.events[event]) {
                 _this.events[event](item);
             }
         };
-        this.openImageSlider = function (group, index) {
-            _this.navCtrl.push(group.fullscreen, {
-                'group': group.items,
-                'index': index
-            });
-        };
     }
+    ToggleLayout2.prototype.ngOnChanges = function (changes) {
+        this.data = changes['data'].currentValue;
+    };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])('data'),
         __metadata("design:type", Object)
-    ], SubImageGalleryLayout1.prototype, "data", void 0);
+    ], ToggleLayout2.prototype, "data", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])('events'),
         __metadata("design:type", Object)
-    ], SubImageGalleryLayout1.prototype, "events", void 0);
-    SubImageGalleryLayout1 = __decorate([
+    ], ToggleLayout2.prototype, "events", void 0);
+    ToggleLayout2 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'sub-image-gallery-layout-1',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\sub-image-gallery\layout-1\sub-image-gallery-layout-1.html"*/'<!-- Theme Image Sub-Gallery for Thumb grid -->\n\n<ion-grid *ngIf="data != null">\n\n    <ion-row>\n\n        <ion-col no-padding col-3 col-sm-3 col-md-6 col-lg-4 col-xl-3 *ngFor="let item of data.items;let i = index;">\n\n            <ion-card background-size (click)="openImageSlider(data, i)">\n\n              <img [src]="item.image"  />\n\n            </ion-card>\n\n        </ion-col>\n\n    </ion-row>\n\n</ion-grid>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\sub-image-gallery\layout-1\sub-image-gallery-layout-1.html"*/
+            selector: 'toggle-layout-2',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\toggle\layout-2\toggle.html"*/'<!--Themes Toggle - Simple 2 -->\n\n<ion-content>\n\n  <ion-grid no-padding>\n\n    <!-- List Section -->\n\n    <ion-list no-lines *ngIf="data != null">\n\n      <ion-list-header header-section>\n\n        <!-- Header-title -->\n\n        <h1 header-title text-capitalize no-lines>{{data.title}}</h1>\n\n      </ion-list-header>\n\n      <ion-item default-item *ngFor="let item of data.items; let i= index">\n\n        <!-- Toggle -->\n\n        <ion-toggle item-start [value]="item.id" (ionChange)="onEvent(\'onSelect\',item)" [checked]="item.isChecked"></ion-toggle>\n\n        <!-- Item-subtitle -->\n\n        <ion-label item-subtitle>{{item.subtitle}}</ion-label>\n\n        <!-- Item-title -->\n\n        <ion-label item-title>{{item.title}}</ion-label>\n\n      </ion-item>\n\n    </ion-list>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\toggle\layout-2\toggle.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* NavParams */]])
-    ], SubImageGalleryLayout1);
-    return SubImageGalleryLayout1;
+        __metadata("design:paramtypes", [])
+    ], ToggleLayout2);
+    return ToggleLayout2;
 }());
 
-//# sourceMappingURL=sub-image-gallery-layout-1.js.map
+//# sourceMappingURL=toggle-layout-2.js.map
 
 /***/ })
 

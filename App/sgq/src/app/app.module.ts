@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MessageService } from '../utils/message-service';
 import { IonicStorageModule } from '@ionic/storage';
 import { MaskDirective } from '../directives/mask.directive';
+import { DatePicker } from '@ionic-native/date-picker';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { MaskDirective } from '../directives/mask.directive';
     LoadingService,
     MessageService,
     Network,
+    DatePicker,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

@@ -1,14 +1,14 @@
 webpackJsonp([71],{
 
-/***/ 722:
+/***/ 732:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CheckBoxLayout3Module", function() { return CheckBoxLayout3Module; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppearanceAnimationLayout3Module", function() { return AppearanceAnimationLayout3Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__check_box_layout_3__ = __webpack_require__(834);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_3__ = __webpack_require__(855);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,36 +18,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var CheckBoxLayout3Module = /** @class */ (function () {
-    function CheckBoxLayout3Module() {
+var AppearanceAnimationLayout3Module = /** @class */ (function () {
+    function AppearanceAnimationLayout3Module() {
     }
-    CheckBoxLayout3Module = __decorate([
+    AppearanceAnimationLayout3Module = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__check_box_layout_3__["a" /* CheckBoxLayout3 */],
+                __WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_3__["a" /* AppearanceAnimationLayout3 */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__check_box_layout_3__["a" /* CheckBoxLayout3 */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_3__["a" /* AppearanceAnimationLayout3 */]),
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_2__check_box_layout_3__["a" /* CheckBoxLayout3 */]
+                __WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_3__["a" /* AppearanceAnimationLayout3 */]
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
         })
-    ], CheckBoxLayout3Module);
-    return CheckBoxLayout3Module;
+    ], AppearanceAnimationLayout3Module);
+    return AppearanceAnimationLayout3Module;
 }());
 
-//# sourceMappingURL=check-box-layout-3.module.js.map
+//# sourceMappingURL=appearance-animation-layout-3.module.js.map
 
 /***/ }),
 
-/***/ 834:
+/***/ 855:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CheckBoxLayout3; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppearanceAnimationLayout3; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -58,33 +59,57 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var CheckBoxLayout3 = /** @class */ (function () {
-    function CheckBoxLayout3() {
-        var _this = this;
-        this.onEvent = function (event, item) {
-            if (_this.events[event]) {
-                _this.events[event](item);
-            }
-        };
+
+var AppearanceAnimationLayout3 = /** @class */ (function () {
+    function AppearanceAnimationLayout3() {
+        this.animateItems = [];
+        this.animateClass = { 'fade-in-down-item': true };
     }
+    AppearanceAnimationLayout3.prototype.onEvent = function (event, item, e) {
+        if (e) {
+            e.stopPropagation();
+        }
+        if (this.events[event]) {
+            this.events[event](item);
+        }
+    };
+    AppearanceAnimationLayout3.prototype.ngOnChanges = function (changes) {
+        var that = this;
+        that.data = changes['data'].currentValue;
+        if (that.data && that.data.items) {
+            that.animateItems = [];
+            var _loop_1 = function (i) {
+                setTimeout(function () {
+                    that.animateItems.push(that.data.items[i]);
+                }, 200 * i);
+            };
+            for (var i = 0; i < that.data.items.length; i++) {
+                _loop_1(i);
+            }
+        }
+    };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])('data'),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
-    ], CheckBoxLayout3.prototype, "data", void 0);
+    ], AppearanceAnimationLayout3.prototype, "data", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])('events'),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
-    ], CheckBoxLayout3.prototype, "events", void 0);
-    CheckBoxLayout3 = __decorate([
+    ], AppearanceAnimationLayout3.prototype, "events", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */])
+    ], AppearanceAnimationLayout3.prototype, "content", void 0);
+    AppearanceAnimationLayout3 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'check-box-layout-3',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\check-box\layout-3\check-box.html"*/'<!--Themes With avatar -->\n\n<ion-content>\n\n  <ion-grid no-padding *ngIf="data != null">\n\n    <ion-row>\n\n      <ion-col col-12>\n\n        <!-- Header Title Top -->\n\n        <ion-list-header no-lines header-section>\n\n          <h1 header-title text-capitalize>{{data.title}}</h1>\n\n        </ion-list-header>\n\n        <!-- Content List -->\n\n        <ion-list>\n\n          <ion-item default-item no-lines *ngFor="let item of data.items" (tap)="onEvent(\'onButton\', item)">\n\n            <div item-start>\n\n              <!-- Content Title -->\n\n              <h2 item-title no-margin>{{item.title}}</h2>\n\n              <!-- Content Subtitle -->\n\n              <h3 item-subtitle no-margin>{{item.subtitle}}</h3>\n\n              <span span-medium>{{item.detail}}</span>\n\n            </div>\n\n            <ion-checkbox item-end [checked]="item.isChecked"></ion-checkbox>\n\n          </ion-item>\n\n        </ion-list>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\check-box\layout-3\check-box.html"*/
+            selector: 'appearance-animation-layout-3',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\appearance-animation\layout-3\appearance-animation.html"*/'<!--Theme Appearance animation (Fade In Down)-->\n\n<ion-content>\n\n    <ion-grid no-padding *ngIf="data != null">\n\n        <ion-row>\n\n            <ion-col col-12>\n\n                <ion-list no-margin>\n\n                    <ion-item default-item no-lines [ngClass]="animateClass" *ngFor="let item of animateItems; let i = index;" (click)="onEvent(\'onItemClick\', item, $event)">\n\n                        <ion-thumbnail item-left>\n\n                            <img [src]="item.image" [alt]="item.title" />\n\n                        </ion-thumbnail>\n\n                        <h2 item-title>{{item.title}}</h2>\n\n                        <ion-icon icon-small item-right (click)="onEvent(\'onFavorite\', item, $event)">\n\n                            <i class="icon" [ngClass]="{\'icon-heart\': item.favorite, \'icon-heart-outline\': !item.favorite}"></i>\n\n                        </ion-icon>\n\n                    </ion-item>\n\n                </ion-list>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\appearance-animation\layout-3\appearance-animation.html"*/
         }),
         __metadata("design:paramtypes", [])
-    ], CheckBoxLayout3);
-    return CheckBoxLayout3;
+    ], AppearanceAnimationLayout3);
+    return AppearanceAnimationLayout3;
 }());
 
-//# sourceMappingURL=check-box-layout-3.js.map
+//# sourceMappingURL=appearance-animation-layout-3.js.map
 
 /***/ })
 

@@ -1,14 +1,15 @@
 webpackJsonp([19],{
 
-/***/ 781:
+/***/ 721:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WizardLayout1Module", function() { return WizardLayout1Module; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ActionSheetLayout1Module", function() { return ActionSheetLayout1Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wizard_layout_1__ = __webpack_require__(893);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__action_sheet_layout_1__ = __webpack_require__(844);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__elastic_header_elastic_header_module__ = __webpack_require__(802);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,37 +19,141 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var WizardLayout1Module = /** @class */ (function () {
-    function WizardLayout1Module() {
+
+var ActionSheetLayout1Module = /** @class */ (function () {
+    function ActionSheetLayout1Module() {
     }
-    WizardLayout1Module = __decorate([
+    ActionSheetLayout1Module = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__wizard_layout_1__["a" /* WizardLayout1 */],
+                __WEBPACK_IMPORTED_MODULE_2__action_sheet_layout_1__["a" /* ActionSheetLayout1 */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__wizard_layout_1__["a" /* WizardLayout1 */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__action_sheet_layout_1__["a" /* ActionSheetLayout1 */]),
+                __WEBPACK_IMPORTED_MODULE_3__elastic_header_elastic_header_module__["a" /* ElasticHeaderModule */]
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_2__wizard_layout_1__["a" /* WizardLayout1 */]
+                __WEBPACK_IMPORTED_MODULE_2__action_sheet_layout_1__["a" /* ActionSheetLayout1 */]
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
         })
-    ], WizardLayout1Module);
-    return WizardLayout1Module;
+    ], ActionSheetLayout1Module);
+    return ActionSheetLayout1Module;
 }());
 
-//# sourceMappingURL=wizard-layout-1.module.js.map
+//# sourceMappingURL=action-sheet-layout-1.module.js.map
 
 /***/ }),
 
-/***/ 893:
+/***/ 802:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WizardLayout1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ElasticHeaderModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__elastic_header__ = __webpack_require__(803);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+var ElasticHeaderModule = /** @class */ (function () {
+    function ElasticHeaderModule() {
+    }
+    ElasticHeaderModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_1__elastic_header__["a" /* ElasticHeader */],
+            ],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_1__elastic_header__["a" /* ElasticHeader */]
+            ],
+            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
+        })
+    ], ElasticHeaderModule);
+    return ElasticHeaderModule;
+}());
+
+//# sourceMappingURL=elastic-header.module.js.map
+
+/***/ }),
+
+/***/ 803:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ElasticHeader; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ElasticHeader = /** @class */ (function () {
+    function ElasticHeader(element, renderer) {
+        this.element = element;
+        this.renderer = renderer;
+    }
+    ElasticHeader.prototype.ngOnInit = function () {
+        var _this = this;
+        this.scrollerHandle = this.element.nativeElement.getElementsByClassName('scroll-content')[0];
+        this.header = this.scrollerHandle.firstElementChild;
+        this.headerHeight = this.scrollerHandle.clientHeight;
+        this.ticking = false;
+        this.renderer.setElementStyle(this.header, 'webkitTransformOrigin', 'center bottom');
+        window.addEventListener('resize', function () {
+            _this.headerHeight = _this.scrollerHandle.clientHeight;
+        }, false);
+        this.scrollerHandle.addEventListener('scroll', function () {
+            if (!_this.ticking) {
+                window.requestAnimationFrame(function () {
+                    _this.updateElasticHeader();
+                });
+            }
+            _this.ticking = true;
+        });
+    };
+    ElasticHeader.prototype.updateElasticHeader = function () {
+        this.scrollTop = this.scrollerHandle.scrollTop;
+        if (this.scrollTop >= 0) {
+            this.translateAmt = this.scrollTop / 2;
+            this.scaleAmt = 1;
+        }
+        else {
+            this.translateAmt = 0;
+            this.scaleAmt = -this.scrollTop / this.headerHeight + 1;
+        }
+        this.renderer.setElementStyle(this.header, 'webkitTransform', 'translate3d(0,' + this.translateAmt + 'px,0) scale(' + this.scaleAmt + ',' + this.scaleAmt + ')');
+        this.ticking = false;
+    };
+    ElasticHeader = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* Directive */])({
+            selector: '[elastic-header]'
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["W" /* Renderer */]])
+    ], ElasticHeader);
+    return ElasticHeader;
+}());
+
+//# sourceMappingURL=elastic-header.js.map
+
+/***/ }),
+
+/***/ 844:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ActionSheetLayout1; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -60,64 +165,75 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var WizardLayout1 = /** @class */ (function () {
-    function WizardLayout1() {
-        this.sliderOptions = { pager: true };
-        this.path = false;
-        this.prev = true;
-        this.next = true;
-        this.finish = true;
-        this.prev = false;
-        this.next = true;
-        this.finish = false;
+var ActionSheetLayout1 = /** @class */ (function () {
+    function ActionSheetLayout1(actionSheetCtrl) {
+        this.actionSheetCtrl = actionSheetCtrl;
+        this.headerImage = "";
     }
-    WizardLayout1.prototype.changeSlide = function (index) {
-        if (index > 0) {
-            this.slider.slideNext(300);
+    ActionSheetLayout1.prototype.onEvent = function (event, item, e) {
+        if (e) {
+            e.stopPropagation();
         }
-        else {
-            this.slider.slidePrev(300);
-        }
-    };
-    WizardLayout1.prototype.slideHasChanged = function (index) {
-        try {
-            this.prev = !this.slider.isBeginning();
-            this.next = this.slider.getActiveIndex() < (this.slider.length() - 1);
-            this.finish = this.slider.isEnd();
-        }
-        catch (e) { }
-    };
-    WizardLayout1.prototype.ngOnChanges = function (changes) {
-        this.data = changes['data'].currentValue;
-    };
-    WizardLayout1.prototype.onEvent = function (event) {
         if (this.events[event]) {
-            this.events[event]();
+            this.events[event](item);
         }
-        console.log(event);
+    };
+    ActionSheetLayout1.prototype.ngOnChanges = function (changes) {
+        if (changes.data && changes.data.currentValue) {
+            this.headerImage = changes.data.currentValue.headerImage;
+        }
+        this.subscribeToIonScroll();
+    };
+    ActionSheetLayout1.prototype.ngAfterViewInit = function () {
+        this.subscribeToIonScroll();
+    };
+    ActionSheetLayout1.prototype.isClassActive = function () {
+        return this.active;
+    };
+    ActionSheetLayout1.prototype.subscribeToIonScroll = function () {
+        var _this = this;
+        if (this.content != null && this.content.ionScroll != null) {
+            this.content.ionScroll.subscribe(function (d) {
+                if (d.scrollTop < 200) {
+                    _this.active = false;
+                    return;
+                }
+                _this.active = true;
+            });
+        }
+    };
+    ActionSheetLayout1.prototype.presentActionSheet = function (item, index) {
+        var that = this;
+        this.data.actionSheet.buttons.forEach(function (element) {
+            element["handler"] = function () {
+                that.onEvent("onItemClickActionSheet", { "button": element, "item": item }, null);
+            };
+        });
+        var actionSheet = this.actionSheetCtrl.create(this.data.actionSheet);
+        actionSheet.present();
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
-    ], WizardLayout1.prototype, "data", void 0);
+    ], ActionSheetLayout1.prototype, "data", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
-    ], WizardLayout1.prototype, "events", void 0);
+    ], ActionSheetLayout1.prototype, "events", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])('wizardSlider'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* Slides */])
-    ], WizardLayout1.prototype, "slider", void 0);
-    WizardLayout1 = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */])
+    ], ActionSheetLayout1.prototype, "content", void 0);
+    ActionSheetLayout1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'wizard-layout-1',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\wizard\layout-1\wizard.html"*/'<!--Theme Wizard Simple + image-->\n\n<!--Content -->\n\n<ion-slides #wizardSlider effect="fade" (ionSlideDidChange)="slideHasChanged()" pager="true" *ngIf="data != null">\n\n  <ion-slide background-size padding *ngFor="let item of data.items;" [ngStyle]="{\'background-image\': \'url(\' + item.backgroundImage + \')\'}">\n\n    <img logo [src]="item.logo" />\n\n    <h2 wizard-title padding-horizontal>{{item.title}}</h2>\n\n    <p wizard-description padding>{{item.description}}</p>\n\n  </ion-slide>\n\n\n\n</ion-slides>\n\n<!-- Button section-->\n\n<div *ngIf="data != null">\n\n  <button ion-button clear text-capitalize float-left (click)="changeSlide(-1)" *ngIf="prev">\n\n      {{data.btnPrev}}\n\n  </button>\n\n  <button ion-button clear text-capitalize float-right (click)="changeSlide(1)" *ngIf="next">\n\n      {{data.btnNext}}\n\n  </button>\n\n  <button ion-button clear text-capitalize float-right (click)="onEvent(\'onFinish\')" *ngIf="finish">\n\n      {{data.btnFinish}}\n\n  </button>\n\n</div>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\wizard\layout-1\wizard.html"*/
+            selector: 'action-sheet-layout-1',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\action-sheet\layout-1\action-sheet.html"*/'<!--- Theme Parallax - Product -->\n\n<ion-header>\n\n  <ion-navbar transparent [ngClass]="{\'active\':isClassActive()}">\n\n    <button ion-button menuToggle>\n\n      <ion-icon [name]="menu"></ion-icon>\n\n    </button>\n\n    <ion-title *ngIf="data != null">{{data.headerTitle}}</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content elastic-header *ngIf="data != null">\n\n  <!-- Parallax Big Image -->\n\n  <div id="elastic-header">\n\n    <div background-size [ngStyle]="{\'background-image\': \'url(\' + headerImage + \')\'}" *ngFor="let item of data.items;let i = index">\n\n      <div title-block>\n\n        <ion-item transparent no-lines (click)="onEvent(\'onItemClick\', data)">\n\n          <!-- Parallax Title -->\n\n          <h2 text-wrap parallax-title>{{item.title}}</h2>\n\n          <!-- Parallax Subtitle -->\n\n          <h3 text-wrap parallax-subtitle>{{item.subtitle}}</h3>\n\n          <div item-content>\n\n            <button item-end ion-button ion-text button-action-shit (click)="presentActionSheet(data)">\n\n                  <ion-icon  [name]="data.shareIcon"></ion-icon>\n\n                </button>\n\n          </div>\n\n        </ion-item>\n\n      </div>\n\n    </div>\n\n    <!-- Description Products -->\n\n    <ion-item no-lines no-padding small-description *ngFor="let item of data.items;let i = index">\n\n      <!-- Name Category-->\n\n      <span new-category text-uppercase>{{item.category}}</span>\n\n      <ion-badge float-right text-uppercase badge-clear no-padding (click)="onEvent(\'onProceed\', item, $event)">{{item.button}}</ion-badge>\n\n      <p padding-left margin-top margin-bottom parallax-description text-wrap>{{item.description}}</p>\n\n    </ion-item>\n\n  </div>\n\n  <!--Content-->\n\n  <ion-grid no-padding *ngIf="data != null">\n\n    <ion-row>\n\n      <ion-col col-12 *ngFor="let item of data.items;let i = index" (click)="onEvent(\'onItemClick\', item)">\n\n        <!--Content With Text-->\n\n        <ion-item no-lines *ngFor="let productDescription of item.productDescriptions">\n\n          <p parallax-description text-wrap>{{productDescription.description}}</p>\n\n        </ion-item>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\action-sheet\layout-1\action-sheet.html"*/
         }),
-        __metadata("design:paramtypes", [])
-    ], WizardLayout1);
-    return WizardLayout1;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */]])
+    ], ActionSheetLayout1);
+    return ActionSheetLayout1;
 }());
 
-//# sourceMappingURL=wizard-layout-1.js.map
+//# sourceMappingURL=action-sheet-layout-1.js.map
 
 /***/ })
 

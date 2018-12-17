@@ -28,6 +28,7 @@ export class ObraPage {
     config = {
         "exclusaoPossivel": false,
         "icon": "na",
+        "tipo": false,
         "exibirDatas": true,
         "subTitulo": "Situação"
     }

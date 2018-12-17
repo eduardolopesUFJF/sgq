@@ -12,10 +12,11 @@ import { AlteracaoService } from '../services/alteracao.service';
 import { Alteracao } from '../models/alteracao';
 import { Obra } from '../models/obra';
 import { ServicoService } from '../services/servico.service';
+import { FuncionarioService } from '../services/funcionario.service';
 
 @Component({
   templateUrl: 'app.html',
-  providers: [ObraService, ChecklistService, AlteracaoService, ServicoService]
+  providers: [ObraService, ChecklistService, AlteracaoService, ServicoService, FuncionarioService]
 })
 
 export class MyApp {
@@ -24,6 +25,7 @@ export class MyApp {
   pages: any;
   params: any;
   atualizacao: boolean = false;
+  statusAtualizacao: string = "";
 
   constructor(
     platform: Platform,
@@ -34,6 +36,7 @@ export class MyApp {
     public storage: Storage,
     public obraService: ObraService,
     public alteracaoService: AlteracaoService,
+    public funcionarioService: FuncionarioService,
     public servicoService: ServicoService,
     public alertCtrl: AlertController,
     public checklistService: ChecklistService,
@@ -133,6 +136,7 @@ export class MyApp {
             this.messageService.exibirMensagem("Existem atualizações que não foram publicadas, publique-as ou descarte-as antes de baixar novos dados.");
           } else {
             this.obterChecklistServico();
+            this.obterFuncionarios();
             this.atualizacao = false;
             this.obterObras();
           }
@@ -198,7 +202,7 @@ export class MyApp {
       }
     );
   }
-  
+
   obterObraCompleta(idsObra: number[]) {
     let obras: Obra[] = [];
     let qtdErros: number = 0;
@@ -223,15 +227,20 @@ export class MyApp {
       this.storage.set('ultimoDownload', new Date());
       this.nav.setRoot("HomePage");
       this.loadingService.hide();
-      if (qtdErros > 0) {
-        this.messageService.exibirMensagem("Ocorreu erro durante a busca de algumas obras.");
-      } else {
-        if (this.atualizacao) {
-          this.messageService.exibirMensagem("Atualizações publicadas com sucesso.");
+      if(this.statusAtualizacao == "") {
+        if (qtdErros > 0) {
+          this.messageService.exibirMensagem("Ocorreu erro durante a busca de algumas obras.");
         } else {
-          this.messageService.exibirMensagem("Dados recuperados do servidor com sucesso.");
+          if (this.atualizacao) {
+            this.messageService.exibirMensagem("Atualizações publicadas com sucesso.");
+          } else {
+            this.messageService.exibirMensagem("Dados recuperados do servidor com sucesso.");
+          }
         }
+      } else {
+        this.messageService.exibirMensagem("Algumas atualizações não foram realizadas: "+this.statusAtualizacao);
       }
+      this.statusAtualizacao = "";
     }
   }
 
@@ -241,7 +250,18 @@ export class MyApp {
         this.storage.set('itensChecklist', data);
       },
       error => {
-        this.messageService.exibirMensagem("Falha na comunicação com o servidor, contate o suporte.");
+        this.messageService.exibirMensagem("Falha na comunicação com o servidor ao buscar serviços, contate o suporte.");
+      }
+    );
+  }
+
+  obterFuncionarios() {
+    this.funcionarioService.obterTodos().subscribe(
+      data => {
+        this.storage.set('funcionarios', data);
+      },
+      error => {
+        this.messageService.exibirMensagem("Falha na comunicação com o servidor ao buscar funcionários, contate o suporte.");
       }
     );
   }
@@ -260,6 +280,7 @@ export class MyApp {
         this.nav.setRoot("HomePage");
         this.loadingService.hide();
         this.atualizacao = true;
+        this.statusAtualizacao = data;
         this.obterObras();
       },
       error => {

@@ -23,6 +23,11 @@ appearance-animation-layout-5 {
         font-weight: bold;
     }
 
+    [item-tipo] {
+        color: black;
+        font-weight: bold;
+    }
+
     [item-data] {
         color: black;
         font-weight: bold;
@@ -61,5 +66,14 @@ appearance-animation-layout-5 {
 
     .aviso {
         font-weight: bold;
+    }
+
+    .espacamento {
+        padding: 0 !important;
+        padding-left: 5px !important;
+    }
+
+    .tipo {
+        padding: 0 5px !important;
     }
 }

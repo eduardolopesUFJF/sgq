@@ -1,14 +1,14 @@
 webpackJsonp([20],{
 
-/***/ 786:
+/***/ 796:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WizardLayout3Module", function() { return WizardLayout3Module; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RealizarVerificacaoPageModule", function() { return RealizarVerificacaoPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wizard_layout_3__ = __webpack_require__(904);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__realizar_verificacao__ = __webpack_require__(921);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,37 +18,60 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var WizardLayout3Module = /** @class */ (function () {
-    function WizardLayout3Module() {
+var RealizarVerificacaoPageModule = /** @class */ (function () {
+    function RealizarVerificacaoPageModule() {
     }
-    WizardLayout3Module = __decorate([
+    RealizarVerificacaoPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__wizard_layout_3__["a" /* WizardLayout3 */],
+                __WEBPACK_IMPORTED_MODULE_2__realizar_verificacao__["a" /* RealizarVerificacaoPage */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__wizard_layout_3__["a" /* WizardLayout3 */]),
-            ],
-            exports: [
-                __WEBPACK_IMPORTED_MODULE_2__wizard_layout_3__["a" /* WizardLayout3 */]
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__realizar_verificacao__["a" /* RealizarVerificacaoPage */])
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
         })
-    ], WizardLayout3Module);
-    return WizardLayout3Module;
+    ], RealizarVerificacaoPageModule);
+    return RealizarVerificacaoPageModule;
 }());
 
-//# sourceMappingURL=wizard-layout-3.module.js.map
+//# sourceMappingURL=realizar-verificacao.module.js.map
 
 /***/ }),
 
-/***/ 904:
+/***/ 839:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WizardLayout3; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Inspecao; });
+var Inspecao = /** @class */ (function () {
+    function Inspecao(values) {
+        if (values === void 0) { values = {}; }
+        this.id = 0;
+        this.idGuidInspecao = '';
+        this.local = "";
+        this.nomeFuncionarioAprovado = "";
+        this.nomeFuncionarioInspecionado = "";
+        this.status = 0;
+        this.situacao = 'Em aberto';
+        this.delete = false;
+        this.dataHoraAlteracao = new Date();
+        Object.assign(this, values);
+    }
+    return Inspecao;
+}());
+
+//# sourceMappingURL=inspecao.js.map
+
+/***/ }),
+
+/***/ 921:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RealizarVerificacaoPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_inspecao__ = __webpack_require__(839);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -60,58 +83,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var WizardLayout3 = /** @class */ (function () {
-    function WizardLayout3() {
-        this.next = true;
-        this.finish = true;
-        this.next = true;
-        this.finish = false;
+var RealizarVerificacaoPage = /** @class */ (function () {
+    function RealizarVerificacaoPage() {
+        this.inspecao = new __WEBPACK_IMPORTED_MODULE_1__models_inspecao__["a" /* Inspecao */]();
     }
-    WizardLayout3.prototype.changeSlide = function (index) {
-        if (index > 0) {
-            this.slider.slideNext(300);
-        }
-        else {
-            this.slider.slidePrev(300);
-        }
-    };
-    WizardLayout3.prototype.slideHasChanged = function (index) {
-        try {
-            this.next = this.slider.getActiveIndex() < (this.slider.length() - 1);
-            this.finish = this.slider.isEnd();
-        }
-        catch (e) { }
-    };
-    WizardLayout3.prototype.ngOnChanges = function (changes) {
-        this.data = changes['data'].currentValue;
-    };
-    WizardLayout3.prototype.onEvent = function (event) {
-        if (this.events[event]) {
-            this.events[event]();
-        }
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
-        __metadata("design:type", Object)
-    ], WizardLayout3.prototype, "data", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
-        __metadata("design:type", Object)
-    ], WizardLayout3.prototype, "events", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])('wizardSlider'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* Slides */])
-    ], WizardLayout3.prototype, "slider", void 0);
-    WizardLayout3 = __decorate([
+    RealizarVerificacaoPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'wizard-layout-3',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\wizard\layout-3\wizard.html"*/'<!--Theme Wizard Big Image With Text -->\n\n<ion-slides #wizardSlider (ionSlideDidChange)="slideHasChanged()" pager="true" *ngIf="data != null">\n\n  <ion-slide background-size padding *ngFor="let item of data.items;" [ngStyle]="{\'background-image\': \'url(\' + item.backgroundImage + \')\'}">\n\n    <!--Wizard Content -->\n\n    <div wizard-content text-center>\n\n      <!--Wizard Subitem -->\n\n      <h3 wizard-subtitle margin-bottom>{{item.subtitle}}</h3>\n\n      <!--Wizard Title -->\n\n      <h1 wizard-title no-margin>{{item.title}}</h1>\n\n    </div>\n\n  </ion-slide>\n\n</ion-slides>\n\n<!--Button section-->\n\n<div *ngIf="data != null" text-center>\n\n  <button ion-button default-button wizard-button text-capitalize (click)="changeSlide(1)" *ngIf="next">\n\n        {{data.btnNext}}\n\n    </button>\n\n  <button ion-button default-button wizard-button text-capitalize (click)="onEvent(\'onFinish\')" *ngIf="finish">\n\n        {{data.btnFinish}}\n\n    </button>\n\n</div>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\wizard\layout-3\wizard.html"*/
+            selector: 'page-realizar-verificacao',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\verificacao\realizar\realizar-verificacao.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <button ion-button menuToggle>\n\n            <ion-icon class="icon-menu" name="menu"></ion-icon>\n\n        </button>\n\n        <div buy>\n\n            <ion-title>\n\n                Verificação\n\n            </ion-title>\n\n        </div>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n    <h1 padding text-center class="boas-vindas">Verificar</h1>\n\n</ion-content>'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\verificacao\realizar\realizar-verificacao.html"*/
         }),
         __metadata("design:paramtypes", [])
-    ], WizardLayout3);
-    return WizardLayout3;
+    ], RealizarVerificacaoPage);
+    return RealizarVerificacaoPage;
 }());
 
-//# sourceMappingURL=wizard-layout-3.js.map
+//# sourceMappingURL=realizar-verificacao.js.map
 
 /***/ })
 

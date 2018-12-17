@@ -1,7 +1,16 @@
 export class Alteracao {
     
     id: string;
-    idObra: number;
+    obraId: number;
+
+    idArea: number;
+    idGuidArea: string;
+
+    idServico: number;
+    idGuidServico: string;
+
+    idInspecao: number;
+    idGuidInspecao: string;
 
     tipo: string;
     entidade: string;

@@ -24,43 +24,10 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Repository
                         .AsNoTracking()
                         .Include(x => x.CentroCusto)
                         .Include(x => x.Areas).ThenInclude(x => x.Servicos).ThenInclude(x => x.ChecklistItem)
+                        .Include(x => x.Areas).ThenInclude(x => x.Servicos).ThenInclude(x => x.InspecoesObra).ThenInclude(x => x.InspecaoObraItens)
+                        .Include(x => x.Areas).ThenInclude(x => x.Servicos).ThenInclude(x => x.InspecoesObra).ThenInclude(x => x.FuncionarioAprovado)
+                        .Include(x => x.Areas).ThenInclude(x => x.Servicos).ThenInclude(x => x.InspecoesObra).ThenInclude(x => x.FuncionarioInspecionado)
                         .Where(x => x.Delete.HasValue && !x.Delete.Value)
-                        //.Select(y => new Obra
-                        //{
-                        //    CentroCusto = y.CentroCusto,
-                        //    ObraChecklistServicos = y.ObraChecklistServicos,
-                        //    Delete = y.Delete,
-                        //    Id = y.Id,
-                        //    IdCentroCusto = y.IdCentroCusto,
-                        //    Status = y.Status,
-                        //    Areas = y.Areas.Where(x => x.Delete.HasValue && !x.Delete.Value).Select(z => new Area
-                        //    {
-                        //        Delete = z.Delete,
-                        //        Descricao = z.Descricao,
-                        //        Id = z.Id,
-                        //        IdObra = z.IdObra,
-                        //        Obra = z.Obra,
-                        //        Status = z.Status,
-                        //        Servicos = z.Servicos.Where(x => x.Delete.HasValue && !x.Delete.Value).Select(w => new Servico
-                        //        {
-                        //            Delete = w.Delete,
-                        //            Id = w.Id,
-                        //            IdObra = w.IdObra,
-                        //            Obra = w.Obra,
-                        //            Status = w.Status,
-                        //            Area = w.Area,
-                        //            ChecklistItem = w.ChecklistItem,
-                        //            DataHoraAlteracao = w.DataHoraAlteracao,
-                        //            DataHoraInclusao = w.DataHoraInclusao,
-                        //            IdChecklistServico = w.IdChecklistServico,
-                        //            IdObraAreaChecklist = w.IdObraAreaChecklist,
-                        //            InspecaoObra = w.InspecaoObra,
-                        //            MetaAprovacao = w.MetaAprovacao
-                        //        })
-                        //        .ToList()
-                        //    })
-                        //    .ToList()
-                        //})
                         .FirstOrDefault(x => x.Id == obra.Id);
 
                 return result;

@@ -1,0 +1,73 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon class="icon-menu" name="menu"></ion-icon>
+        </button>
+        <div buy>
+            <ion-title>
+                Verificação
+            </ion-title>
+        </div>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <h2 padding text-center class="aviso" *ngIf="inspecoes.length < 1">Nenhum registro encontrado.</h2>
+    <ion-grid no-padding>
+        <ion-row>
+            <button ion-button default-button block text-capitalize box-shadow margin-bottom class="button-novo"
+                (click)="novaInspecao()">Nova inspeção</button>
+        </ion-row>
+        <ion-row>
+            <ion-col class="col-search" col-12 *ngIf="inspecoesBackup.length > 0">
+                <ion-searchbar [placeholder]="'Filtrar pelo local'" (ionInput)="filtrar($event.target.value)"></ion-searchbar>
+            </ion-col>
+            <ion-col col-12>
+                <ion-list no-margin>
+                    <ion-item default-item no-lines [ngClass]="{'novo-item': !item.id}" *ngFor="let item of inspecoes; let i = index;"
+                        (click)="abrirItensInspecao(item)">
+                        <ion-row class="espacamento">
+                            <ion-col col-10>
+                                <h2 item-title text-wrap>Local: {{item.local}}</h2>
+                                <h3 item-situacao text-wrap>Situação: {{item.situacao}}</h3>
+                                <h3 item-situacao text-wrap>Abertura: {{item.dataInspecao ? (item.dataInspecao | date: 'dd/MM/yyyy') : 'Não informada'}}</h3>
+                                <h3 item-situacao text-wrap>Encerramento: {{item.dataEncerramento ? (item.dataEncerramento | date: 'dd/MM/yyyy') : 'Não informada'}}</h3>
+                            </ion-col>
+                            <ion-col col-2>
+                                <ion-icon icon-small name="trash" item-right (click)="confirmarExclusao(item)"
+                                    style="font-size: 32px !important; margin: 0px" [ngClass]="{'color-black': !item.delete , 'color-red' : item.delete}"></ion-icon>
+                                <br>
+                                <ion-icon icon-small name="create" item-right (click)="editar(item)"
+                                    style="font-size: 32px !important; margin: 0px"></ion-icon>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row class="espacamento" style="padding: 0 0 10px 0 !important;">
+                            <ion-col col-1></ion-col>
+                            <ion-col col-2 style="background-color: blue;">
+                                <h2 item-title text-wrap no-margin text-center>NA</h2>
+                                <h3 item-situacao text-wrap no-margin text-center>{{item.qtdNA}}</h3>
+                            </ion-col>
+                            <ion-col col-2 style="background-color: darkgreen;">
+                                <h2 item-title text-wrap no-margin text-center>A</h2>
+                                <h3 item-situacao text-wrap no-margin text-center>{{item.qtdA}}</h3>
+                            </ion-col>
+                            <ion-col col-2 style="background-color: yellow;">
+                                <h2 text-wrap negrito no-margin text-center>R</h2>
+                                <h3 text-wrap negrito no-margin text-center>{{item.qtdR}}</h3>
+                            </ion-col>
+                            <ion-col col-2 style="background-color: red;">
+                                <h2 item-title text-wrap no-margin text-center>X</h2>
+                                <h3 item-situacao text-wrap no-margin text-center>{{item.qtdX}}</h3>
+                            </ion-col>
+                            <ion-col col-2 style="background-color: orange;">
+                                <h2 item-title text-wrap no-margin text-center>RA</h2>
+                                <h3 item-situacao text-wrap no-margin text-center>{{item.qtdRA}}</h3>
+                            </ion-col>
+                            <ion-col col-1></ion-col>
+                        </ion-row>
+                    </ion-item>
+                </ion-list>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

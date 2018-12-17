@@ -1,14 +1,14 @@
 webpackJsonp([51],{
 
-/***/ 744:
+/***/ 761:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SwipeToDismissLayout3Module", function() { return SwipeToDismissLayout3Module; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RangeLayout2Module", function() { return RangeLayout2Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__swipe_to_dismiss_layout_3__ = __webpack_require__(856);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__range_layout_2__ = __webpack_require__(884);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,37 +18,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SwipeToDismissLayout3Module = /** @class */ (function () {
-    function SwipeToDismissLayout3Module() {
+var RangeLayout2Module = /** @class */ (function () {
+    function RangeLayout2Module() {
     }
-    SwipeToDismissLayout3Module = __decorate([
+    RangeLayout2Module = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__swipe_to_dismiss_layout_3__["a" /* SwipeToDismissLayout3 */],
+                __WEBPACK_IMPORTED_MODULE_2__range_layout_2__["a" /* RangeLayout2 */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__swipe_to_dismiss_layout_3__["a" /* SwipeToDismissLayout3 */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__range_layout_2__["a" /* RangeLayout2 */]),
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_2__swipe_to_dismiss_layout_3__["a" /* SwipeToDismissLayout3 */]
+                __WEBPACK_IMPORTED_MODULE_2__range_layout_2__["a" /* RangeLayout2 */]
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
         })
-    ], SwipeToDismissLayout3Module);
-    return SwipeToDismissLayout3Module;
+    ], RangeLayout2Module);
+    return RangeLayout2Module;
 }());
 
-//# sourceMappingURL=swipe-to-dismiss-layout-3.module.js.map
+//# sourceMappingURL=range-layout-2.module.js.map
 
 /***/ }),
 
-/***/ 856:
+/***/ 884:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SwipeToDismissLayout3; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RangeLayout2; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(47);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -59,47 +58,36 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-
-var SwipeToDismissLayout3 = /** @class */ (function () {
-    function SwipeToDismissLayout3() {
+var RangeLayout2 = /** @class */ (function () {
+    function RangeLayout2() {
         var _this = this;
-        this.undo = function (slidingItem) {
-            slidingItem.close();
-        };
-        this.delete = function (item) {
-            var index = _this.data.items.indexOf(item);
-            if (index > -1) {
-                _this.data.items.splice(index, 1);
+        this.onEvent = function (event, item) {
+            if (_this.events[event]) {
+                _this.events[event](item);
             }
         };
     }
-    SwipeToDismissLayout3.prototype.onEvent = function (event, item, e) {
-        if (this.events[event]) {
-            this.events[event](item);
-        }
+    RangeLayout2.prototype.ngOnChanges = function (changes) {
+        this.data = changes['data'].currentValue;
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])('data'),
         __metadata("design:type", Object)
-    ], SwipeToDismissLayout3.prototype, "data", void 0);
+    ], RangeLayout2.prototype, "data", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])('events'),
         __metadata("design:type", Object)
-    ], SwipeToDismissLayout3.prototype, "events", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */])
-    ], SwipeToDismissLayout3.prototype, "content", void 0);
-    SwipeToDismissLayout3 = __decorate([
+    ], RangeLayout2.prototype, "events", void 0);
+    RangeLayout2 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'swipe-to-dismiss-layout-3',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\swipe-to-dismiss\layout-3\swipe-to-dismiss.html"*/'<!-- Themes Swipe To Dismiss - Full width image -->\n\n<ion-content has-header padding-top>\n\n  <ion-grid no-padding *ngIf="data != null">\n\n    <ion-row>\n\n      <ion-col col-12 align-self-end>\n\n        <ion-list>\n\n          <ion-item-sliding transparent *ngFor="let item of data.items" #slidingItem>\n\n            <ion-item no-lines box-shadow background-size (click)="onEvent(\'onItemClick\', item.title, $event)" [ngStyle]="{\'background-image\': \'url(\' + item.image + \')\'}">\n\n              <div title-block>\n\n                <!-- Subtitle -->\n\n                <p card-subtitle>{{item.subtitle}}</p>\n\n                <!-- Title -->\n\n                <h1 card-title text-wrap>{{item.title}}</h1>\n\n              </div>\n\n            </ion-item>\n\n            <!---Action Button-->\n\n            <ion-item-options>\n\n              <button ion-button text-capitalize transparent (click)="delete(item)">\n\n              {{item.delate}}\n\n            </button>\n\n            </ion-item-options>\n\n          </ion-item-sliding>\n\n        </ion-list>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\swipe-to-dismiss\layout-3\swipe-to-dismiss.html"*/
+            selector: 'range-button-layout-2',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\range\layout-2\range.html"*/'<!-- RANGE COMPONENTS - With icons -->\n\n<ion-list no-lines *ngIf="data != null">\n\n   <!--- Divider item-->\n\n    <ion-item-divider no-lines no-margin transparent>\n\n      <p ion-text color="primaryBase">{{data.title}}</p>\n\n      <ion-badge item-end>{{data.value}}</ion-badge>\n\n    </ion-item-divider>\n\n    <ion-item transparent>\n\n        <ion-range [min]="data.min" [max]="data.max" pin="true" (ionChange)="onEvent(\'onChange\', data.value, $event)" [(ngModel)]="data.value">\n\n            <ion-icon range-left color="primaryBase" [name]="data.iconLeft"></ion-icon>\n\n            <ion-icon range-right color="primaryBase" [name]="data.iconRight"></ion-icon>\n\n        </ion-range>\n\n    </ion-item>\n\n</ion-list>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\range\layout-2\range.html"*/
         }),
         __metadata("design:paramtypes", [])
-    ], SwipeToDismissLayout3);
-    return SwipeToDismissLayout3;
+    ], RangeLayout2);
+    return RangeLayout2;
 }());
 
-//# sourceMappingURL=swipe-to-dismiss-layout-3.js.map
+//# sourceMappingURL=range-layout-2.js.map
 
 /***/ })
 

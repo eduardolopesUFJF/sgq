@@ -73,4 +73,8 @@ export class AppearanceAnimationLayout5 implements OnChanges {
             });
         }
     }
+
+    verificaNovoItem(item) {
+        return item.id == 0;
+    }
 }

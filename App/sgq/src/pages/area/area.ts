@@ -34,6 +34,7 @@ export class AreaPage {
     config = {
         "exclusaoPossivel": true,
         "icon": "trash",
+        "tipo": false,
         "exibirDatas": true,
         "btnNovoLabel": "Adicionar área",
         "subTitulo": "Situação"
@@ -73,7 +74,7 @@ export class AreaPage {
                 atualizacoes => {
                     area.delete = !area.delete;
                     area.idObra = this.obraId;
-                    let alteracao = new Alteracao({ id: UUID.UUID(), tipo: "Update", entidade: "Area", valor: JSON.stringify(area), data: new Date(), descricao: (area.delete ? "Inativação" : "Ativação") + " da área '" + area.descricao + "'.", idObra: this.obraId });
+                    let alteracao = new Alteracao({ id: UUID.UUID(), idArea: area.id, idGuidArea: area.idGuid, tipo: "Update", entidade: "Area", valor: JSON.stringify(area), data: new Date(), descricao: (area.delete ? "Inativação" : "Ativação") + " da área '" + area.descricao + "'.", obraId: this.obraId });
                     if (atualizacoes) {
                         atualizacoesArray = atualizacoes;
                         atualizacoesArray.push(alteracao);
@@ -91,7 +92,7 @@ export class AreaPage {
         this.storage.ready().then(() => {
             this.storage.get('obras').then(
                 obras => {
-                    obras.find(x => x.id == this.obraId).areas.find(x => x.id == area.id).delete = area.delete;
+                    obras.find(x => x.id == this.obraId).areas.find(x => area.idGuid ? (x.idGuid == area.idGuid) : (x.id == area.id)).delete = area.delete;
                     this.storage.set('obras', obras);
                 }
             );

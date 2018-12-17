@@ -1,14 +1,14 @@
 webpackJsonp([44],{
 
-/***/ 758:
+/***/ 768:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RangeLayout3Module", function() { return RangeLayout3Module; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchBarLayout3Module", function() { return SearchBarLayout3Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__range_layout_3__ = __webpack_require__(870);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__search_bar_layout_3__ = __webpack_require__(891);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,35 +18,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var RangeLayout3Module = /** @class */ (function () {
-    function RangeLayout3Module() {
+var SearchBarLayout3Module = /** @class */ (function () {
+    function SearchBarLayout3Module() {
     }
-    RangeLayout3Module = __decorate([
+    SearchBarLayout3Module = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__range_layout_3__["a" /* RangeLayout3 */],
+                __WEBPACK_IMPORTED_MODULE_2__search_bar_layout_3__["a" /* SearchBarLayout3 */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__range_layout_3__["a" /* RangeLayout3 */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__search_bar_layout_3__["a" /* SearchBarLayout3 */]),
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_2__range_layout_3__["a" /* RangeLayout3 */]
+                __WEBPACK_IMPORTED_MODULE_2__search_bar_layout_3__["a" /* SearchBarLayout3 */]
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
         })
-    ], RangeLayout3Module);
-    return RangeLayout3Module;
+    ], SearchBarLayout3Module);
+    return SearchBarLayout3Module;
 }());
 
-//# sourceMappingURL=range-layout-3.module.js.map
+//# sourceMappingURL=search-bar-layout-3.module.js.map
 
 /***/ }),
 
-/***/ 870:
+/***/ 891:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RangeLayout3; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SearchBarLayout3; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -58,36 +58,49 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var RangeLayout3 = /** @class */ (function () {
-    function RangeLayout3() {
-        var _this = this;
-        this.onEvent = function (event, item) {
-            if (_this.events[event]) {
-                _this.events[event](item);
-            }
-        };
+var SearchBarLayout3 = /** @class */ (function () {
+    function SearchBarLayout3() {
+        this.searchTerm = "";
     }
-    RangeLayout3.prototype.ngOnChanges = function (changes) {
-        this.data = changes['data'].currentValue;
+    SearchBarLayout3.prototype.getItems = function (event) {
+        var _this = this;
+        if (!this.allItems) {
+            this.allItems = this.data.items;
+        }
+        this.data.items = this.allItems.filter(function (item) {
+            return item.title.toLowerCase().indexOf(_this.searchTerm.toLowerCase()) > -1;
+        });
+    };
+    SearchBarLayout3.prototype.onEvent = function (event, item) {
+        if (this.events[event]) {
+            if ('onTextChange' === event) {
+                this.getItems(item);
+                this.events[event](this.searchTerm);
+            }
+            else {
+                this.events[event](item);
+            }
+        }
+        console.log(event);
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])('data'),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
-    ], RangeLayout3.prototype, "data", void 0);
+    ], SearchBarLayout3.prototype, "data", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])('events'),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
-    ], RangeLayout3.prototype, "events", void 0);
-    RangeLayout3 = __decorate([
+    ], SearchBarLayout3.prototype, "events", void 0);
+    SearchBarLayout3 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'range-button-layout-3',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\range\layout-3\range.html"*/'<!-- RANGE COMPONENTS - With perdefined steps -->\n\n<ion-list no-lines *ngIf="data != null">\n\n    <!--- Divider item-->\n\n    <ion-item-divider no-lines no-margin transparent>\n\n        <p ion-text color="primaryBase">{{data.title}}</p>\n\n        <ion-badge item-end>{{data.value}}</ion-badge>\n\n    </ion-item-divider>\n\n    <ion-item transparent>\n\n        <ion-range [min]="data.min" [max]="data.max" [step]="data.step" snaps="true" (ionChange)="onEvent(\'onChange\', data.value, $event)" [(ngModel)]="data.value">\n\n            <ion-label range-left margin-right color="primaryBase" span-medium>{{data.textLeft}}</ion-label>\n\n            <ion-label range-right margin-left span-large color="primaryBase">{{data.textRight}}</ion-label>\n\n        </ion-range>\n\n    </ion-item>\n\n</ion-list>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\range\layout-3\range.html"*/
+            selector: 'search-bar-layout-3',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\search-bar\layout-3\search-bar.html"*/'<!-- Theme Search Field + Header 2 -->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n        <ion-icon name="menu"></ion-icon>\n\n      </button>\n\n    <ion-title *ngIf="data != null">{{data.headerTitle}}</ion-title>\n\n  </ion-navbar>\n\n  <ion-toolbar no-padding transparent>\n\n    <div background-size *ngIf="data != null" [ngStyle]="{\'background-image\': \'url(\' + data.headerImage + \')\'}">\n\n      <div search-bar-bcg>\n\n        <!-- Header Title -->\n\n        <h1 ion-text no-margin search-bar-title>{{data.title}}</h1>\n\n        <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="onEvent(\'onTextChange\', $event)"></ion-searchbar>\n\n      </div>\n\n    </div>\n\n  </ion-toolbar>\n\n</ion-header>\n\n<!--Content -->\n\n<ion-content>\n\n  <ion-grid no-padding>\n\n    <ion-row>\n\n      <!-- List Search-->\n\n      <ion-col col-12 *ngIf="data != null">\n\n        <!-- Content List -->\n\n        <ion-list no-margin>\n\n          <ion-item default-item no-lines *ngFor="let item of data.items;" (click)="onEvent(\'onItemClick\', item)">\n\n            <ion-thumbnail item-start>\n\n              <img [src]="item.avatar">\n\n            </ion-thumbnail>\n\n            <!--Title -->\n\n            <h2 ion-text item-title>{{item.title}}</h2>\n\n            <!--Subtitle -->\n\n            <p ion-text item-subtitle>{{item.subtitle}}</p>\n\n            <span span-medium>\n\n              {{item.detail}}\n\n            </span>\n\n          </ion-item>\n\n        </ion-list>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\search-bar\layout-3\search-bar.html"*/
         }),
         __metadata("design:paramtypes", [])
-    ], RangeLayout3);
-    return RangeLayout3;
+    ], SearchBarLayout3);
+    return SearchBarLayout3;
 }());
 
-//# sourceMappingURL=range-layout-3.js.map
+//# sourceMappingURL=search-bar-layout-3.js.map
 
 /***/ })
 

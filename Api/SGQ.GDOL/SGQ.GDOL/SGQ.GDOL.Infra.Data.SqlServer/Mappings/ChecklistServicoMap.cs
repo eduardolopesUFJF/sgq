@@ -26,6 +26,10 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Mappings
             entity.Property(e => e.Descricao)
                 .HasColumnName("DESCRICAO")
                 .IsUnicode(false);
+
+            entity.Property(e => e.Tipo)
+                .HasColumnName("TIPO_SERVICO")
+                .IsUnicode(false);
         }
     }
 }
