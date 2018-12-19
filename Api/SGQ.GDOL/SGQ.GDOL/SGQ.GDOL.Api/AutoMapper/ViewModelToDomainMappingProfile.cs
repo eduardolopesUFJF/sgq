@@ -11,6 +11,7 @@ namespace SGQ.GDOL.Api.AutoMapper
         {
             CreateMap<CentroCustoVM, CentroCusto>();
             CreateMap<ChecklistItemVM, ChecklistItem>();
+            CreateMap<InspecaoObraItemVM, InspecaoObraItem>();
 
             CreateMap<ObraVM, Obra>()
                 .ForMember(x => x.Status, opt => opt.MapFrom(x => x.Situacao == "Finalizado" ? 1 : 0));

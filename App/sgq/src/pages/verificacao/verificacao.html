@@ -24,10 +24,9 @@
             </ion-col>
             <ion-col col-12>
                 <ion-list no-margin>
-                    <ion-item default-item no-lines [ngClass]="{'novo-item': !item.id}" *ngFor="let item of inspecoes; let i = index;"
-                        (click)="abrirItensInspecao(item)">
+                    <ion-item default-item no-lines [ngClass]="{'novo-item': !item.id}" *ngFor="let item of inspecoes; let i = index;">
                         <ion-row class="espacamento">
-                            <ion-col col-10>
+                            <ion-col col-10 (click)="abrirItensInspecao(item)">
                                 <h2 item-title text-wrap>Local: {{item.local}}</h2>
                                 <h3 item-situacao text-wrap>Situação: {{item.situacao}}</h3>
                                 <h3 item-situacao text-wrap>Abertura: {{item.dataInspecao ? (item.dataInspecao | date: 'dd/MM/yyyy') : 'Não informada'}}</h3>

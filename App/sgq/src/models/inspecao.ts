@@ -1,3 +1,5 @@
+import { ItemInspecao } from "./item-inspecao";
+
 export class Inspecao {
     
     id: number = 0;
@@ -7,9 +9,7 @@ export class Inspecao {
     dataEncerramento: Date;
     local: string = "";
     idFuncionarioAprovado: number;
-    nomeFuncionarioAprovado: string = "";
     idFuncionarioInspecionado: number;
-    nomeFuncionarioInspecionado: string = "";
     status: number = 0;
     situacao: string = 'Em aberto';
     delete: boolean = false;
@@ -20,6 +20,8 @@ export class Inspecao {
     qtdR: number = 0;
     qtdRA: number = 0;
     qtdX: number = 0;
+
+    inspecaoObraItens: ItemInspecao[] = [];
 
     constructor(values: Object = {}) {
         Object.assign(this, values);

@@ -1,16 +1,62 @@
 <ion-header>
     <ion-navbar>
-        <button ion-button menuToggle>
-            <ion-icon class="icon-menu" name="menu"></ion-icon>
-        </button>
-        <div buy>
-            <ion-title>
-                Verificação
-            </ion-title>
-        </div>
+        <ion-row>
+            <ion-col col-2>
+                <button class="button-nav" (click)="voltar()">
+                    <span ion-text style="font-size: 0.7em;">Voltar</span>
+                </button>
+            </ion-col>
+            <ion-col col-10>
+                <ion-title>Verificação</ion-title>
+            </ion-col>
+        </ion-row>
     </ion-navbar>
 </ion-header>
 
-<ion-content>
-    <h1 padding text-center class="boas-vindas">Verificar</h1>
+<ion-content has-header>
+    <ion-grid no-padding>
+        <ion-row padding-left padding-right>
+            <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
+                <form #cadastroForm="ngForm" padding-top>
+                    <ion-item text-center transparent style="padding-bottom: 0 !important;">
+                        <ion-label style="font-size: 22px !important;" stacked>{{descServico}}</ion-label>
+                    </ion-item>
+                    <ion-item text-center transparent>
+                        <ion-label stacked>INSPECIONADO POR</ion-label>
+                        <ion-select [(ngModel)]="inspecao.idFuncionarioInspecionado" multiple="false" name="idFuncionarioInspecionado"
+                            okText="Ok" cancelText="Cancelar">
+                            <ion-option *ngFor="let item of funcionarios; let i= index" [value]="item.id">{{item.nome}}</ion-option>
+                        </ion-select>
+                    </ion-item>
+                    <ion-item text-center transparent>
+                        <ion-label stacked>APROVADOR POR</ion-label>
+                        <ion-select [(ngModel)]="inspecao.idFuncionarioAprovado" multiple="false" name="idFuncionarioAprovado"
+                            okText="Ok" cancelText="Cancelar">
+                            <ion-option *ngFor="let item of funcionarios; let i= index" [value]="item.id">{{item.nome}}</ion-option>
+                        </ion-select>
+                    </ion-item>
+                    <ion-list radio-group no-margin [(ngModel)]="inspecao.status" name="status" (ngModelChange)="atualizarSituacao()">
+                        <ion-grid>
+                            <ion-row>
+                                <ion-col col-6>
+                                    <ion-item radio>
+                                        <ion-label>Em aberto</ion-label>
+                                        <ion-radio [value]="0" checked></ion-radio>
+                                    </ion-item>
+                                </ion-col>
+                                <ion-col col-6>
+                                    <ion-item radio>
+                                        <ion-label>Finalizado</ion-label>
+                                        <ion-radio [value]="1"></ion-radio>
+                                    </ion-item>
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </ion-list>
+                    <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: black !important;"
+                        (click)="salvar(cadastroForm.valid)">Salvar</button>
+                </form>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-content>

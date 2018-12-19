@@ -1,4 +1,5 @@
 import { Inspecao } from "./inspecao";
+import { ItemChecklistServico } from "./item-checklist-servico";
 
 export class Servico {
 
@@ -18,6 +19,7 @@ export class Servico {
     dataHoraAlteracao: Date = new Date();
 
     inspecoesObra: Inspecao[] = [];
+    itensChecklistServico: ItemChecklistServico[] = [];
 
     constructor(values: Object = {}) {
         Object.assign(this, values);

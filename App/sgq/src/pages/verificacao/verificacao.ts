@@ -6,6 +6,7 @@ import { Storage } from '@ionic/storage';
 import { Alteracao } from '../../models/alteracao';
 import { UUID } from 'angular2-uuid';
 import { MessageService } from '../../utils/message-service';
+import { ItemInspecao } from '../../models/item-inspecao';
 
 @IonicPage()
 @Component({
@@ -31,45 +32,70 @@ export class VerificacaoPage {
     }
 
     novaInspecao() {
-        let modal = this.modalCtrl.create("ManterVerificacaoPage", {inspecao: new Inspecao()});
+        let modal = this.modalCtrl.create("ManterVerificacaoPage", { inspecao: new Inspecao() });
         modal.present();
 
         modal.onWillDismiss((inspecao: Inspecao) => {
-            if(inspecao) {
+            if (inspecao) {
                 inspecao.idGuidInspecao = UUID.UUID();
                 inspecao.idServico = this.servico.id;
-                this.inspecoes.unshift(inspecao);
-                this.inspecoesBackup.unshift(inspecao);
-                this.criarInspecao(inspecao);
+                this.storage.ready().then(() => {
+                    this.storage.get('itensChecklist').then(
+                        servicos => {
+                            let servico = servicos.find(x => x.id == this.servico.idChecklist);
+                            servico.itensChecklistServico.forEach(item => {
+                                let novoItem = new ItemInspecao();
+                                novoItem.dataHoraInclusao = new Date();
+                                novoItem.descricao = item.descricao;
+                                novoItem.idItemServico = item.id;
+                                novoItem.idGuidInspecao = inspecao.idGuidInspecao;
+                                novoItem.ordem = item.ordem.toString();
+                                inspecao.inspecaoObraItens.push(novoItem);
+                            });
+                            this.inspecoes.unshift(inspecao);
+                            this.inspecoesBackup.unshift(inspecao);
+                            this.criarInspecao(inspecao);
+                        }
+                    );
+                });
             }
         });
     }
 
     abrirItensInspecao(inspecao: Inspecao) {
-        
-    }
-
-    editar(inspecao: Inspecao) {
-        let modal = this.modalCtrl.create("ManterVerificacaoPage", {inspecao: inspecao});
+        let modal = this.modalCtrl.create("RealizarVerificacaoPage", { inspecao: inspecao, descServico: this.servico.descricao });
         modal.present();
 
         modal.onWillDismiss((inspecao: Inspecao) => {
-            if(inspecao) {
-                this.editarInspecao(inspecao);
+            if (inspecao) {
                 let index = this.inspecoesBackup.findIndex(x => inspecao.id != 0 ? (x.id == inspecao.id) : (x.idGuidInspecao == inspecao.idGuidInspecao));
                 this.inspecoesBackup[index] = inspecao;
                 this.inspecoes = [...this.inspecoesBackup];
-                this.editarInspecao(inspecao);
+                this.editarInspecao(inspecao, "Realização da verificação");
             }
         });
     }
 
-    editarInspecao(inspecao: Inspecao) {
+    editar(inspecao: Inspecao) {
+        let modal = this.modalCtrl.create("ManterVerificacaoPage", { inspecao: inspecao });
+        modal.present();
+
+        modal.onWillDismiss((inspecao: Inspecao) => {
+            if (inspecao) {
+                let index = this.inspecoesBackup.findIndex(x => inspecao.id != 0 ? (x.id == inspecao.id) : (x.idGuidInspecao == inspecao.idGuidInspecao));
+                this.inspecoesBackup[index] = inspecao;
+                this.inspecoes = [...this.inspecoesBackup];
+                this.editarInspecao(inspecao, "Edição da verificação");
+            }
+        });
+    }
+
+    editarInspecao(inspecao: Inspecao, acao: string) {
         this.storage.ready().then(() => {
             let atualizacoesArray: Alteracao[] = [];
             this.storage.get('atualizacoes').then(
                 atualizacoes => {
-                    let alteracao = new Alteracao({ id: UUID.UUID(), idInspecao: inspecao.id, idGuidInspecao: inspecao.idGuidInspecao, idArea: this.servico.idArea, idGuidArea: this.servico.idAreaGuid, idServico: this.servico.id, idGuidServico: this.servico.idGuidServico, tipo: "Update", entidade: "Inspecao", valor: JSON.stringify(inspecao), data: new Date(), descricao: "Edição da verificação '" + inspecao.local + "' no serviço '" + this.servico.descricao + "'.", obraId: this.servico.idObra });
+                    let alteracao = new Alteracao({ id: UUID.UUID(), idInspecao: inspecao.id, idGuidInspecao: inspecao.idGuidInspecao, idArea: this.servico.idArea, idGuidArea: this.servico.idAreaGuid, idServico: this.servico.id, idGuidServico: this.servico.idGuidServico, tipo: "Update", entidade: "Inspecao", valor: JSON.stringify(inspecao), data: new Date(), descricao: acao + "'" + inspecao.local + "' no serviço '" + this.servico.descricao + "'.", obraId: this.servico.idObra });
                     if (atualizacoes) {
                         atualizacoesArray = atualizacoes;
                         atualizacoesArray.push(alteracao);

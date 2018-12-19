@@ -275,7 +275,8 @@ namespace SGQ.GDOL.Api.Controllers
                     else
                     {
                         inspecaoBD.ObraChecklistServico = null;
-                        //inspecaoBD.Func = null;
+                        inspecaoBD.FuncionarioAprovado = null;
+                        inspecaoBD.FuncionarioInspecionado = null;
                         _inspecaoService.Atualizar(inspecaoBD);
                     }
                 }

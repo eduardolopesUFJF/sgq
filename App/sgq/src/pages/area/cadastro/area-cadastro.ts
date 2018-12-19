@@ -48,12 +48,17 @@ export class AreaCadastroPage {
       this.area.idGuid = UUID.UUID();
       this.servicosEscolhidos.forEach(item => {
         let servico: Servico = new Servico();
+        
         servico.idGuidServico = UUID.UUID();
         servico.idChecklist = item;
         servico.idObra = this.obraId;
         servico.idAreaGuid = this.area.idGuid;
-        servico.descricao = this.opcoesItens.find(x => x.id == item).descricao;
-        servico.tipo = this.opcoesItens.find(x => x.id == item).tipo;
+
+        let servicoEscolhido = this.opcoesItens.find(x => x.id == item);
+        servico.itensChecklistServico = servicoEscolhido.itensChecklistServico;
+        servico.descricao = servicoEscolhido.descricao;
+        servico.tipo = servicoEscolhido.tipo;
+
         this.area.servicos.push(servico);
       });
       this.storage.ready().then(() => {

@@ -11,12 +11,11 @@ import { ChecklistService } from '../services/checklist.service';
 import { AlteracaoService } from '../services/alteracao.service';
 import { Alteracao } from '../models/alteracao';
 import { Obra } from '../models/obra';
-import { ServicoService } from '../services/servico.service';
 import { FuncionarioService } from '../services/funcionario.service';
 
 @Component({
   templateUrl: 'app.html',
-  providers: [ObraService, ChecklistService, AlteracaoService, ServicoService, FuncionarioService]
+  providers: [ObraService, ChecklistService, AlteracaoService, FuncionarioService]
 })
 
 export class MyApp {
@@ -37,7 +36,6 @@ export class MyApp {
     public obraService: ObraService,
     public alteracaoService: AlteracaoService,
     public funcionarioService: FuncionarioService,
-    public servicoService: ServicoService,
     public alertCtrl: AlertController,
     public checklistService: ChecklistService,
     public network: Network,

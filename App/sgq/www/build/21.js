@@ -50,12 +50,16 @@ var Inspecao = /** @class */ (function () {
         this.id = 0;
         this.idGuidInspecao = '';
         this.local = "";
-        this.nomeFuncionarioAprovado = "";
-        this.nomeFuncionarioInspecionado = "";
         this.status = 0;
         this.situacao = 'Em aberto';
         this.delete = false;
         this.dataHoraAlteracao = new Date();
+        this.qtdNA = 0;
+        this.qtdA = 0;
+        this.qtdR = 0;
+        this.qtdRA = 0;
+        this.qtdX = 0;
+        this.inspecaoObraItens = [];
         Object.assign(this, values);
     }
     return Inspecao;

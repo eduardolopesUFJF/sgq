@@ -20,5 +20,6 @@ namespace SGQ.GDOL.Api.ViewModels
         public DateTime? DataHoraAlteracao { get; set; }
 
         public List<InspecaoObraVM> InspecoesObra { get; set; }
+        public List<ItemChecklistServicoVM> ItensChecklistServico { get; set; }
     }
 }

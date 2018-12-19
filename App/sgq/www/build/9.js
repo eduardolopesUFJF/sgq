@@ -147,6 +147,7 @@ var Servico = /** @class */ (function () {
         this.dataHoraInclusao = new Date();
         this.dataHoraAlteracao = new Date();
         this.inspecoesObra = [];
+        this.itensChecklistServico = [];
         Object.assign(this, values);
     }
     return Servico;
@@ -218,8 +219,10 @@ var AreaCadastroPage = /** @class */ (function () {
                 servico.idChecklist = item;
                 servico.idObra = _this.obraId;
                 servico.idAreaGuid = _this.area.idGuid;
-                servico.descricao = _this.opcoesItens.find(function (x) { return x.id == item; }).descricao;
-                servico.tipo = _this.opcoesItens.find(function (x) { return x.id == item; }).tipo;
+                var servicoEscolhido = _this.opcoesItens.find(function (x) { return x.id == item; });
+                servico.itensChecklistServico = servicoEscolhido.itensChecklistServico;
+                servico.descricao = servicoEscolhido.descricao;
+                servico.tipo = servicoEscolhido.tipo;
                 _this.area.servicos.push(servico);
             });
             this.storage.ready().then(function () {
