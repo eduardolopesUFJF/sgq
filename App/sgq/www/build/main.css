@@ -34284,6 +34284,26 @@ page-home .boas-vindas {
   font-weight: bold;
 }
 
+page-home .progress-outer {
+  width: 96%;
+  margin: 10px 2%;
+  padding: 3px;
+  text-align: center;
+  background-color: #f4f4f4;
+  border: 1px solid #dcdcdc;
+  color: #fff;
+  border-radius: 20px;
+}
+
+page-home .progress-inner {
+  min-width: 15%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 5px;
+  border-radius: 20px;
+  background-color: #21b14b;
+}
+
 page-verificacao .aviso {
   font-weight: bold;
 }

@@ -26,6 +26,10 @@ export class MyApp {
   atualizacao: boolean = false;
   statusAtualizacao: string = "";
 
+  static progress: number = 0;
+  static progressbarAtivo: boolean = false;
+  static segundos: number = 0;
+
   constructor(
     platform: Platform,
     statusBar: StatusBar,
@@ -190,20 +194,63 @@ export class MyApp {
 
   obterObras() {
     this.loadingService.show();
+    MyApp.progressbarAtivo = true;
+    MyApp.progress = 0;
+    MyApp.segundos = 0;
+    this.controlarSegundos();
+    this.subirProgressAutomatico();
+    this.subirProgressObterIds();
     this.obraService.obterIdsTodasAtivas().subscribe(
       idsObra => {
         this.obterObraCompleta(idsObra);
       },
       error => {
+        MyApp.progressbarAtivo = false;
+        MyApp.progress = 0;
         this.loadingService.hide();
         this.messageService.exibirMensagem("Falha na comunicação com o servidor, contate o suporte.");
       }
     );
   }
 
+  controlarSegundos() {
+    let segundos = setInterval(() => {
+      if(MyApp.progressbarAtivo) {
+        MyApp.segundos += 1;
+      } else {
+        clearInterval(segundos);
+      }
+    }, 1100);
+  }
+  
+  subirProgressAutomatico() {
+    let obterIds = setInterval(() => {
+      if (MyApp.progress < 50) {
+        MyApp.progress += 0.2;
+      } else if (MyApp.progress < 70) {
+        MyApp.progress += 0.1;
+      } else if (MyApp.progress < 99) {
+        MyApp.progress += 0.05;
+      } else {
+        clearInterval(obterIds);
+      }
+    }, 500);
+  }
+
+  subirProgressObterIds() {
+    let obterIds = setInterval(() => {
+      if (MyApp.progress < 15) {
+        MyApp.progress += 1;
+      } else {
+        clearInterval(obterIds);
+      }
+    }, 300);
+  }
+
   obterObraCompleta(idsObra: number[]) {
     let obras: Obra[] = [];
     let qtdErros: number = 0;
+    this.subirProgressObraCompleta();
     idsObra.forEach(idObra => {
       this.obraService.obterObraCompleta(idObra).subscribe(
         obra => {
@@ -218,12 +265,26 @@ export class MyApp {
     });
   }
 
+  subirProgressObraCompleta() {
+    if(MyApp.progress == 15) {
+      let obterIds = setInterval(() => {
+        if (MyApp.progress < 40) {
+          MyApp.progress += 1;
+        } else {
+          clearInterval(obterIds);
+        }
+      }, 300);
+    }
+  }
+
   setarValoresObras(obras: Obra[], idsObra: number[], qtdErros: number) {
     if ((obras.length + qtdErros) >= idsObra.length) {
       this.storage.set('obras', obras);
       this.storage.set('obrasBackup', obras);
       this.storage.set('ultimoDownload', new Date());
       this.nav.setRoot("HomePage");
+      MyApp.progressbarAtivo = false;
+      MyApp.progress = 0;
       this.loadingService.hide();
       if(this.statusAtualizacao == "") {
         if (qtdErros > 0) {
@@ -239,6 +300,10 @@ export class MyApp {
         this.messageService.exibirMensagem("Algumas atualizações não foram realizadas: "+this.statusAtualizacao);
       }
       this.statusAtualizacao = "";
+    } else {
+      if(MyApp.progress + (60/idsObra.length) < 75) {
+        MyApp.progress += (60/idsObra.length);
+      }
     }
   }
 

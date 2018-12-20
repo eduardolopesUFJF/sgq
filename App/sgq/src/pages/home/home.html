@@ -12,5 +12,11 @@
 </ion-header>
 
 <ion-content>
-  <h1 padding text-center class="boas-vindas">Bem vindo ao Sistema de Gestão de Qualidade</h1>
+  <h1 *ngIf="!progressbarAtivo" padding text-center class="boas-vindas">Bem vindo ao Sistema de Gestão de Qualidade</h1>
+  <div class="progress-outer" *ngIf="progressbarAtivo">
+    <div class="progress-inner" [style.width]="progress + '%'">
+        {{this.Math.round(progress*100)/100}}%
+    </div>
+  </div>
+  <h2 *ngIf="progressbarAtivo" text-center style="color: red; font-weight: bold;">{{segundos}} segundos</h2>
 </ion-content>

@@ -440,11 +440,11 @@ var map = {
 	],
 	"../pages/area/area.module": [
 		789,
-		9
+		10
 	],
 	"../pages/area/cadastro/area-cadastro.module": [
 		790,
-		8
+		9
 	],
 	"../pages/home/home.module": [
 		791,
@@ -452,7 +452,7 @@ var map = {
 	],
 	"../pages/item-area/item-area.module": [
 		792,
-		7
+		8
 	],
 	"../pages/login/login.component.module": [
 		793,
@@ -472,7 +472,7 @@ var map = {
 	],
 	"../pages/verificacao/verificacao.module": [
 		797,
-		10
+		7
 	]
 };
 function webpackAsyncContext(req) {
@@ -548,6 +548,405 @@ var ToastService = /** @class */ (function () {
 /***/ }),
 
 /***/ 365:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(312);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(314);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_network__ = __webpack_require__(315);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_message_service__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__utils_loading_service__ = __webpack_require__(160);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_obra_service__ = __webpack_require__(366);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_storage__ = __webpack_require__(158);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__services_checklist_service__ = __webpack_require__(677);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__services_alteracao_service__ = __webpack_require__(678);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_funcionario_service__ = __webpack_require__(679);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+
+
+
+
+var MyApp = /** @class */ (function () {
+    function MyApp(platform, statusBar, menu, loadingService, messageService, storage, obraService, alteracaoService, funcionarioService, alertCtrl, checklistService, network, splashScreen) {
+        var _this = this;
+        this.menu = menu;
+        this.loadingService = loadingService;
+        this.messageService = messageService;
+        this.storage = storage;
+        this.obraService = obraService;
+        this.alteracaoService = alteracaoService;
+        this.funcionarioService = funcionarioService;
+        this.alertCtrl = alertCtrl;
+        this.checklistService = checklistService;
+        this.network = network;
+        this.rootPage = "LoginPage";
+        this.atualizacao = false;
+        this.statusAtualizacao = "";
+        platform.ready().then(function () {
+            statusBar.styleDefault();
+            splashScreen.hide();
+            statusBar.backgroundColorByHexString('rgb(33,177,75)');
+            _this.definirRoot();
+        });
+        this.pages = [
+            { "title": "Home", "icon": "home", "component": "HomePage" },
+            { "title": "Baixar dados", "icon": "cloud-download", "component": "Baixar" },
+            { "title": "Listar alterações", "icon": "list", "component": "AlteracoesPage" },
+            { "title": "Publicar alterações", "icon": "cloud-upload", "component": "Subir" },
+            { "title": "Descartar alterações", "icon": "trash", "component": "Descartar" },
+            { "title": "Checklist de área", "icon": "checkmark-circle-outline", "component": "ObraPage" },
+            { "title": "Sair", "icon": "exit", "component": "LoginPage" },
+        ];
+        this.params = {
+            "background": "assets/images/background/5.jpg",
+            "image": "assets/images/logo/logo.png"
+        };
+    }
+    MyApp_1 = MyApp;
+    MyApp.prototype.definirRoot = function () {
+        var _this = this;
+        this.storage.ready().then(function () {
+            _this.storage.get('Usuario').then(function (usuario) {
+                if (usuario) {
+                    localStorage.setItem('isLogged', 'true');
+                    localStorage.setItem("Usuario", usuario);
+                    _this.storage.get('BancoSchema').then(function (empresa) {
+                        localStorage.setItem("BanchoSchema", empresa);
+                    });
+                    _this.rootPage = "HomePage";
+                }
+                else {
+                    _this.rootPage = "LoginPage";
+                }
+            });
+        });
+    };
+    MyApp.prototype.openPage = function (page) {
+        var _this = this;
+        if (page.component != "") {
+            if (page.component == 'Baixar') {
+                if (this.network.type === 'none') {
+                    this.messageService.exibirMensagem("Você precisa de uma conexão com internet para obter os dados e poder então trabalhar offline.");
+                }
+                else {
+                    this.baixarDados();
+                }
+            }
+            else if (page.component == 'Subir') {
+                if (this.network.type === 'none') {
+                    this.messageService.exibirMensagem("Você precisa de uma conexão com internet para subir os dados trabalhados offline.");
+                }
+                else {
+                    this.subirDados();
+                }
+            }
+            else if (page.component == 'Descartar') {
+                this.descartarDados();
+            }
+            else if (page.component == 'LoginPage') {
+                this.storage.ready().then(function () {
+                    _this.storage.get('atualizacoes').then(function (atualizacoes) {
+                        if (atualizacoes) {
+                            _this.messageService.exibirMensagemConfirmacao("Existem atualizações que não foram publicadas, ao sair da sua conta elas serão perdidas. Deseja sair mesmo assim?", function () { _this.deslogar(); });
+                        }
+                        else {
+                            _this.deslogar();
+                        }
+                    });
+                });
+            }
+            else {
+                this.nav.setRoot(page.component);
+            }
+        }
+    };
+    MyApp.prototype.deslogar = function () {
+        localStorage.clear();
+        this.storage.clear();
+        this.nav.setRoot("LoginPage");
+    };
+    MyApp.prototype.baixarDados = function () {
+        var _this = this;
+        this.storage.ready().then(function () {
+            _this.storage.get('atualizacoes').then(function (atualizacoes) {
+                if (atualizacoes) {
+                    _this.messageService.exibirMensagem("Existem atualizações que não foram publicadas, publique-as ou descarte-as antes de baixar novos dados.");
+                }
+                else {
+                    _this.obterChecklistServico();
+                    _this.obterFuncionarios();
+                    _this.atualizacao = false;
+                    _this.obterObras();
+                }
+            });
+        });
+    };
+    MyApp.prototype.subirDados = function () {
+        var _this = this;
+        this.storage.ready().then(function () {
+            _this.storage.get('atualizacoes').then(function (atualizacoes) {
+                if (atualizacoes) {
+                    _this.confirmarAtualizarRepositorio(atualizacoes);
+                }
+                else {
+                    _this.messageService.exibirMensagem("Não há nada para publicar.");
+                }
+            });
+        });
+    };
+    MyApp.prototype.descartarDados = function () {
+        var _this = this;
+        this.storage.ready().then(function () {
+            _this.storage.get('atualizacoes').then(function (atualizacoes) {
+                if (atualizacoes) {
+                    _this.confirmarDescartarDados();
+                }
+                else {
+                    _this.messageService.exibirMensagem("Não há nada para descartar.");
+                }
+            });
+        });
+    };
+    MyApp.prototype.confirmarDescartarDados = function () {
+        var _this = this;
+        var mensagem = "Todas as alterações feitas desde a última publicação serão perdidas. Deseja realmente descartá-las?";
+        this.messageService.exibirMensagemConfirmacao(mensagem, function () { _this.executarDescartarDados(); });
+    };
+    MyApp.prototype.executarDescartarDados = function () {
+        var _this = this;
+        this.storage.remove('atualizacoes');
+        this.storage.ready().then(function () {
+            _this.storage.get('obrasBackup').then(function (obrasBackup) {
+                _this.storage.set('obras', obrasBackup);
+                _this.nav.setRoot("HomePage");
+            });
+        });
+    };
+    MyApp.prototype.obterObras = function () {
+        var _this = this;
+        this.loadingService.show();
+        MyApp_1.progressbarAtivo = true;
+        MyApp_1.progress = 0;
+        MyApp_1.segundos = 0;
+        this.controlarSegundos();
+        this.subirProgressAutomatico();
+        this.subirProgressObterIds();
+        this.obraService.obterIdsTodasAtivas().subscribe(function (idsObra) {
+            _this.obterObraCompleta(idsObra);
+        }, function (error) {
+            MyApp_1.progressbarAtivo = false;
+            MyApp_1.progress = 0;
+            _this.loadingService.hide();
+            _this.messageService.exibirMensagem("Falha na comunicação com o servidor, contate o suporte.");
+        });
+    };
+    MyApp.prototype.controlarSegundos = function () {
+        var segundos = setInterval(function () {
+            if (MyApp_1.progressbarAtivo) {
+                MyApp_1.segundos += 1;
+            }
+            else {
+                clearInterval(segundos);
+            }
+        }, 1100);
+    };
+    MyApp.prototype.subirProgressAutomatico = function () {
+        var obterIds = setInterval(function () {
+            if (MyApp_1.progress < 50) {
+                MyApp_1.progress += 0.2;
+            }
+            else if (MyApp_1.progress < 70) {
+                MyApp_1.progress += 0.1;
+            }
+            else if (MyApp_1.progress < 99) {
+                MyApp_1.progress += 0.05;
+            }
+            else {
+                clearInterval(obterIds);
+            }
+        }, 500);
+    };
+    MyApp.prototype.subirProgressObterIds = function () {
+        var obterIds = setInterval(function () {
+            if (MyApp_1.progress < 15) {
+                MyApp_1.progress += 1;
+            }
+            else {
+                clearInterval(obterIds);
+            }
+        }, 300);
+    };
+    MyApp.prototype.obterObraCompleta = function (idsObra) {
+        var _this = this;
+        var obras = [];
+        var qtdErros = 0;
+        this.subirProgressObraCompleta();
+        idsObra.forEach(function (idObra) {
+            _this.obraService.obterObraCompleta(idObra).subscribe(function (obra) {
+                obras.push(obra);
+                _this.setarValoresObras(obras, idsObra, qtdErros);
+            }, function (error) {
+                qtdErros++;
+                _this.setarValoresObras(obras, idsObra, qtdErros);
+            });
+        });
+    };
+    MyApp.prototype.subirProgressObraCompleta = function () {
+        if (MyApp_1.progress == 15) {
+            var obterIds_1 = setInterval(function () {
+                if (MyApp_1.progress < 40) {
+                    MyApp_1.progress += 1;
+                }
+                else {
+                    clearInterval(obterIds_1);
+                }
+            }, 300);
+        }
+    };
+    MyApp.prototype.setarValoresObras = function (obras, idsObra, qtdErros) {
+        if ((obras.length + qtdErros) >= idsObra.length) {
+            this.storage.set('obras', obras);
+            this.storage.set('obrasBackup', obras);
+            this.storage.set('ultimoDownload', new Date());
+            this.nav.setRoot("HomePage");
+            MyApp_1.progressbarAtivo = false;
+            MyApp_1.progress = 0;
+            this.loadingService.hide();
+            if (this.statusAtualizacao == "") {
+                if (qtdErros > 0) {
+                    this.messageService.exibirMensagem("Ocorreu erro durante a busca de algumas obras.");
+                }
+                else {
+                    if (this.atualizacao) {
+                        this.messageService.exibirMensagem("Atualizações publicadas com sucesso.");
+                    }
+                    else {
+                        this.messageService.exibirMensagem("Dados recuperados do servidor com sucesso.");
+                    }
+                }
+            }
+            else {
+                this.messageService.exibirMensagem("Algumas atualizações não foram realizadas: " + this.statusAtualizacao);
+            }
+            this.statusAtualizacao = "";
+        }
+        else {
+            if (MyApp_1.progress + (60 / idsObra.length) < 75) {
+                MyApp_1.progress += (60 / idsObra.length);
+            }
+        }
+    };
+    MyApp.prototype.obterChecklistServico = function () {
+        var _this = this;
+        this.checklistService.obterTodas().subscribe(function (data) {
+            _this.storage.set('itensChecklist', data);
+        }, function (error) {
+            _this.messageService.exibirMensagem("Falha na comunicação com o servidor ao buscar serviços, contate o suporte.");
+        });
+    };
+    MyApp.prototype.obterFuncionarios = function () {
+        var _this = this;
+        this.funcionarioService.obterTodos().subscribe(function (data) {
+            _this.storage.set('funcionarios', data);
+        }, function (error) {
+            _this.messageService.exibirMensagem("Falha na comunicação com o servidor ao buscar funcionários, contate o suporte.");
+        });
+    };
+    MyApp.prototype.confirmarAtualizarRepositorio = function (atualizacoes) {
+        var _this = this;
+        var mensagem = "Deseja atualizar o banco com as alterações realizadas?";
+        this.messageService.exibirMensagemConfirmacao(mensagem, function () { _this.atualizarRepositorio(atualizacoes); });
+    };
+    MyApp.prototype.atualizarRepositorio = function (atualizacoes) {
+        var _this = this;
+        this.loadingService.show();
+        this.alteracaoService.publicar(atualizacoes).subscribe(function (data) {
+            _this.storage.set('ultimoUpload', new Date());
+            _this.storage.remove('atualizacoes');
+            _this.nav.setRoot("HomePage");
+            _this.loadingService.hide();
+            _this.atualizacao = true;
+            _this.statusAtualizacao = data;
+            _this.obterObras();
+        }, function (error) {
+            _this.loadingService.hide();
+            _this.messageService.exibirMensagem("Falha na comunicação com o servidor, contate o suporte.");
+        });
+    };
+    Object.defineProperty(MyApp.prototype, "isLogged", {
+        get: function () {
+            return localStorage.getItem('isLogged');
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MyApp.prototype, "empresa", {
+        get: function () {
+            return localStorage.getItem('BancoSchema');
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MyApp.prototype, "usuario", {
+        get: function () {
+            return localStorage.getItem('Usuario');
+        },
+        enumerable: true,
+        configurable: true
+    });
+    MyApp.progress = 0;
+    MyApp.progressbarAtivo = false;
+    MyApp.segundos = 0;
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Nav */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Nav */])
+    ], MyApp.prototype, "nav", void 0);
+    MyApp = MyApp_1 = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\app\app.html"*/'<!---Settings Main Header-->\n<ion-split-pane when="md">\n    <!-- Menu Main Top -->\n    <ion-menu [content]="content" *ngIf="params != null">\n        <!-- Menu Main List -->\n        <ion-content *ngIf="isLogged == \'true\'">\n            <div header-background-image>\n                <ion-grid>\n                    <ion-row>\n                        <ion-col col-5>\n                            <img [src]="params.image">\n                        </ion-col>\n                        <ion-col col-7>\n                            <h1 ion-text header-title text-wrap>{{empresa}}</h1>\n                            <h2 ion-text header-title text-wrap>{{usuario}}</h2>\n                        </ion-col>\n                    </ion-row>\n                </ion-grid>\n            </div>\n            <ion-list no-margin>\n                <button menuClose ion-item default-item item-title main-menu no-lines *ngFor="let p of pages" (click)="openPage(p)">\n                    <ion-icon outline icon-small icon-left>\n                        <ion-icon [name]="p.icon"></ion-icon>\n                    </ion-icon>\n                    {{p.title}}\n                </button>\n            </ion-list>\n        </ion-content>\n    </ion-menu>\n    <!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n    <ion-nav [root]="rootPage" #content main swipeBackEnabled="false" main></ion-nav>\n</ion-split-pane>'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\app\app.html"*/,
+            providers: [__WEBPACK_IMPORTED_MODULE_7__services_obra_service__["a" /* ObraService */], __WEBPACK_IMPORTED_MODULE_9__services_checklist_service__["a" /* ChecklistService */], __WEBPACK_IMPORTED_MODULE_10__services_alteracao_service__["a" /* AlteracaoService */], __WEBPACK_IMPORTED_MODULE_11__services_funcionario_service__["a" /* FuncionarioService */]]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* Platform */],
+            __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* MenuController */],
+            __WEBPACK_IMPORTED_MODULE_6__utils_loading_service__["a" /* LoadingService */],
+            __WEBPACK_IMPORTED_MODULE_5__utils_message_service__["a" /* MessageService */],
+            __WEBPACK_IMPORTED_MODULE_8__ionic_storage__["b" /* Storage */],
+            __WEBPACK_IMPORTED_MODULE_7__services_obra_service__["a" /* ObraService */],
+            __WEBPACK_IMPORTED_MODULE_10__services_alteracao_service__["a" /* AlteracaoService */],
+            __WEBPACK_IMPORTED_MODULE_11__services_funcionario_service__["a" /* FuncionarioService */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_9__services_checklist_service__["a" /* ChecklistService */],
+            __WEBPACK_IMPORTED_MODULE_4__ionic_native_network__["a" /* Network */],
+            __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+    ], MyApp);
+    return MyApp;
+    var MyApp_1;
+}());
+
+//# sourceMappingURL=app.component.js.map
+
+/***/ }),
+
+/***/ 366:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -633,22 +1032,22 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(352);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(353);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(694);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angularfire2_database__ = __webpack_require__(698);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(314);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(312);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(365);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angularfire2_database__ = __webpack_require__(697);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angularfire2_database___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_angularfire2_database__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__config_app_settings__ = __webpack_require__(161);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angularfire2__ = __webpack_require__(715);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angularfire2__ = __webpack_require__(714);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_angularfire2___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_angularfire2__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_network__ = __webpack_require__(354);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_network__ = __webpack_require__(315);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__utils_toast_service__ = __webpack_require__(364);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__utils_loading_service__ = __webpack_require__(160);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__angular_common_http__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__utils_message_service__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ionic_storage__ = __webpack_require__(158);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__directives_mask_directive__ = __webpack_require__(716);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ionic_native_date_picker__ = __webpack_require__(366);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__ionic_storage__ = __webpack_require__(158);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__directives_mask_directive__ = __webpack_require__(715);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__ionic_native_date_picker__ = __webpack_require__(716);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__utils_message_service__ = __webpack_require__(159);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -679,7 +1078,7 @@ var AppModule = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["J" /* NgModule */])({
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_15__directives_mask_directive__["a" /* MaskDirective */]
+                __WEBPACK_IMPORTED_MODULE_14__directives_mask_directive__["a" /* MaskDirective */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_12__angular_common_http__["b" /* HttpClientModule */],
@@ -771,7 +1170,7 @@ var AppModule = /** @class */ (function () {
                 }),
                 __WEBPACK_IMPORTED_MODULE_8_angularfire2__["AngularFireModule"].initializeApp(__WEBPACK_IMPORTED_MODULE_7__config_app_settings__["a" /* AppSettings */].FIREBASE_CONFIG),
                 __WEBPACK_IMPORTED_MODULE_6_angularfire2_database__["AngularFireDatabaseModule"],
-                __WEBPACK_IMPORTED_MODULE_14__ionic_storage__["a" /* IonicStorageModule */].forRoot()
+                __WEBPACK_IMPORTED_MODULE_13__ionic_storage__["a" /* IonicStorageModule */].forRoot()
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicApp */]],
             entryComponents: [
@@ -783,9 +1182,9 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
                 __WEBPACK_IMPORTED_MODULE_10__utils_toast_service__["a" /* ToastService */],
                 __WEBPACK_IMPORTED_MODULE_11__utils_loading_service__["a" /* LoadingService */],
-                __WEBPACK_IMPORTED_MODULE_13__utils_message_service__["a" /* MessageService */],
+                __WEBPACK_IMPORTED_MODULE_16__utils_message_service__["a" /* MessageService */],
                 __WEBPACK_IMPORTED_MODULE_9__ionic_native_network__["a" /* Network */],
-                __WEBPACK_IMPORTED_MODULE_16__ionic_native_date_picker__["a" /* DatePicker */],
+                __WEBPACK_IMPORTED_MODULE_15__ionic_native_date_picker__["a" /* DatePicker */],
                 { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicErrorHandler */] }
             ]
         })
@@ -797,7 +1196,7 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 673:
+/***/ 676:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -816,375 +1215,7 @@ var environment = {
 
 /***/ }),
 
-/***/ 68:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BaseService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(673);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-var BaseService = /** @class */ (function () {
-    function BaseService(http, rota) {
-        this.http = http;
-        this.headers = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]();
-        this.apiUrl = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].urlAPI + rota;
-        if (localStorage.getItem('BancoSchema'))
-            this.headers = this.headers.set('BancoSchema', localStorage.getItem('BancoSchema'));
-    }
-    BaseService.prototype.handleError = function (error) {
-        if (error.status == '401' || error.status == '403') {
-            location.href = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].urlAPI;
-        }
-        else {
-            return Promise.reject(error);
-        }
-    };
-    BaseService = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */], String])
-    ], BaseService);
-    return BaseService;
-}());
-
-//# sourceMappingURL=base.service.js.map
-
-/***/ }),
-
-/***/ 694:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(353);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(352);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_network__ = __webpack_require__(354);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_message_service__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__utils_loading_service__ = __webpack_require__(160);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_obra_service__ = __webpack_require__(365);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_storage__ = __webpack_require__(158);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__services_checklist_service__ = __webpack_require__(695);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__services_alteracao_service__ = __webpack_require__(696);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_servico_service__ = __webpack_require__(697);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-
-
-
-
-
-var MyApp = /** @class */ (function () {
-    function MyApp(platform, statusBar, menu, loadingService, messageService, storage, obraService, alteracaoService, servicoService, alertCtrl, checklistService, network, splashScreen) {
-        var _this = this;
-        this.menu = menu;
-        this.loadingService = loadingService;
-        this.messageService = messageService;
-        this.storage = storage;
-        this.obraService = obraService;
-        this.alteracaoService = alteracaoService;
-        this.servicoService = servicoService;
-        this.alertCtrl = alertCtrl;
-        this.checklistService = checklistService;
-        this.network = network;
-        this.rootPage = "LoginPage";
-        this.atualizacao = false;
-        this.statusAtualizacao = "";
-        platform.ready().then(function () {
-            statusBar.styleDefault();
-            splashScreen.hide();
-            statusBar.backgroundColorByHexString('rgb(33,177,75)');
-            _this.definirRoot();
-        });
-        this.pages = [
-            { "title": "Home", "icon": "home", "component": "HomePage" },
-            { "title": "Baixar dados", "icon": "cloud-download", "component": "Baixar" },
-            { "title": "Listar alterações", "icon": "list", "component": "AlteracoesPage" },
-            { "title": "Publicar alterações", "icon": "cloud-upload", "component": "Subir" },
-            { "title": "Descartar alterações", "icon": "trash", "component": "Descartar" },
-            { "title": "Checklist de área", "icon": "checkmark-circle-outline", "component": "ObraPage" },
-            { "title": "Sair", "icon": "exit", "component": "LoginPage" },
-        ];
-        this.params = {
-            "background": "assets/images/background/5.jpg",
-            "image": "assets/images/logo/logo.png"
-        };
-    }
-    MyApp.prototype.definirRoot = function () {
-        var _this = this;
-        this.storage.ready().then(function () {
-            _this.storage.get('Usuario').then(function (usuario) {
-                if (usuario) {
-                    localStorage.setItem('isLogged', 'true');
-                    localStorage.setItem("Usuario", usuario);
-                    _this.storage.get('BancoSchema').then(function (empresa) {
-                        localStorage.setItem("BanchoSchema", empresa);
-                    });
-                    _this.rootPage = "HomePage";
-                }
-                else {
-                    _this.rootPage = "LoginPage";
-                }
-            });
-        });
-    };
-    MyApp.prototype.openPage = function (page) {
-        var _this = this;
-        if (page.component != "") {
-            if (page.component == 'Baixar') {
-                if (this.network.type === 'none') {
-                    this.messageService.exibirMensagem("Você precisa de uma conexão com internet para obter os dados e poder então trabalhar offline.");
-                }
-                else {
-                    this.baixarDados();
-                }
-            }
-            else if (page.component == 'Subir') {
-                if (this.network.type === 'none') {
-                    this.messageService.exibirMensagem("Você precisa de uma conexão com internet para subir os dados trabalhados offline.");
-                }
-                else {
-                    this.subirDados();
-                }
-            }
-            else if (page.component == 'Descartar') {
-                this.descartarDados();
-            }
-            else if (page.component == 'LoginPage') {
-                this.storage.ready().then(function () {
-                    _this.storage.get('atualizacoes').then(function (atualizacoes) {
-                        if (atualizacoes) {
-                            _this.messageService.exibirMensagemConfirmacao("Existem atualizações que não foram publicadas, ao sair da sua conta elas serão perdidas. Deseja sair mesmo assim?", function () { _this.deslogar(); });
-                        }
-                        else {
-                            _this.deslogar();
-                        }
-                    });
-                });
-            }
-            else {
-                this.nav.setRoot(page.component);
-            }
-        }
-    };
-    MyApp.prototype.deslogar = function () {
-        localStorage.clear();
-        this.storage.clear();
-        this.nav.setRoot("LoginPage");
-    };
-    MyApp.prototype.baixarDados = function () {
-        var _this = this;
-        this.storage.ready().then(function () {
-            _this.storage.get('atualizacoes').then(function (atualizacoes) {
-                if (atualizacoes) {
-                    _this.messageService.exibirMensagem("Existem atualizações que não foram publicadas, publique-as ou descarte-as antes de baixar novos dados.");
-                }
-                else {
-                    _this.obterChecklistServico();
-                    _this.atualizacao = false;
-                    _this.obterObras();
-                }
-            });
-        });
-    };
-    MyApp.prototype.subirDados = function () {
-        var _this = this;
-        this.storage.ready().then(function () {
-            _this.storage.get('atualizacoes').then(function (atualizacoes) {
-                if (atualizacoes) {
-                    _this.confirmarAtualizarRepositorio(atualizacoes);
-                }
-                else {
-                    _this.messageService.exibirMensagem("Não há nada para publicar.");
-                }
-            });
-        });
-    };
-    MyApp.prototype.descartarDados = function () {
-        var _this = this;
-        this.storage.ready().then(function () {
-            _this.storage.get('atualizacoes').then(function (atualizacoes) {
-                if (atualizacoes) {
-                    _this.confirmarDescartarDados();
-                }
-                else {
-                    _this.messageService.exibirMensagem("Não há nada para descartar.");
-                }
-            });
-        });
-    };
-    MyApp.prototype.confirmarDescartarDados = function () {
-        var _this = this;
-        var mensagem = "Todas as alterações feitas desde a última publicação serão perdidas. Deseja realmente descartá-las?";
-        this.messageService.exibirMensagemConfirmacao(mensagem, function () { _this.executarDescartarDados(); });
-    };
-    MyApp.prototype.executarDescartarDados = function () {
-        var _this = this;
-        this.storage.remove('atualizacoes');
-        this.storage.ready().then(function () {
-            _this.storage.get('obrasBackup').then(function (obrasBackup) {
-                _this.storage.set('obras', obrasBackup);
-                _this.nav.setRoot("HomePage");
-            });
-        });
-    };
-    MyApp.prototype.obterObras = function () {
-        var _this = this;
-        this.loadingService.show();
-        this.obraService.obterIdsTodasAtivas().subscribe(function (idsObra) {
-            _this.obterObraCompleta(idsObra);
-        }, function (error) {
-            _this.loadingService.hide();
-            _this.messageService.exibirMensagem("Falha na comunicação com o servidor, contate o suporte.");
-        });
-    };
-    MyApp.prototype.obterObraCompleta = function (idsObra) {
-        var _this = this;
-        var obras = [];
-        var qtdErros = 0;
-        idsObra.forEach(function (idObra) {
-            _this.obraService.obterObraCompleta(idObra).subscribe(function (obra) {
-                obras.push(obra);
-                _this.setarValoresObras(obras, idsObra, qtdErros);
-            }, function (error) {
-                qtdErros++;
-                _this.setarValoresObras(obras, idsObra, qtdErros);
-            });
-        });
-    };
-    MyApp.prototype.setarValoresObras = function (obras, idsObra, qtdErros) {
-        if ((obras.length + qtdErros) >= idsObra.length) {
-            this.storage.set('obras', obras);
-            this.storage.set('obrasBackup', obras);
-            this.storage.set('ultimoDownload', new Date());
-            this.nav.setRoot("HomePage");
-            this.loadingService.hide();
-            if (this.statusAtualizacao == "") {
-                if (qtdErros > 0) {
-                    this.messageService.exibirMensagem("Ocorreu erro durante a busca de algumas obras.");
-                }
-                else {
-                    if (this.atualizacao) {
-                        this.messageService.exibirMensagem("Atualizações publicadas com sucesso.");
-                    }
-                    else {
-                        this.messageService.exibirMensagem("Dados recuperados do servidor com sucesso.");
-                    }
-                }
-            }
-            else {
-                this.messageService.exibirMensagem("Algumas atualizações não foram realizadas: " + this.statusAtualizacao);
-            }
-            this.statusAtualizacao = "";
-        }
-    };
-    MyApp.prototype.obterChecklistServico = function () {
-        var _this = this;
-        this.checklistService.obterTodas().subscribe(function (data) {
-            _this.storage.set('itensChecklist', data);
-        }, function (error) {
-            _this.messageService.exibirMensagem("Falha na comunicação com o servidor, contate o suporte.");
-        });
-    };
-    MyApp.prototype.confirmarAtualizarRepositorio = function (atualizacoes) {
-        var _this = this;
-        var mensagem = "Deseja atualizar o banco com as alterações realizadas?";
-        this.messageService.exibirMensagemConfirmacao(mensagem, function () { _this.atualizarRepositorio(atualizacoes); });
-    };
-    MyApp.prototype.atualizarRepositorio = function (atualizacoes) {
-        var _this = this;
-        this.loadingService.show();
-        this.alteracaoService.publicar(atualizacoes).subscribe(function (data) {
-            _this.storage.set('ultimoUpload', new Date());
-            _this.storage.remove('atualizacoes');
-            _this.nav.setRoot("HomePage");
-            _this.loadingService.hide();
-            _this.atualizacao = true;
-            _this.statusAtualizacao = data;
-            _this.obterObras();
-        }, function (error) {
-            _this.loadingService.hide();
-            _this.messageService.exibirMensagem("Falha na comunicação com o servidor, contate o suporte.");
-        });
-    };
-    Object.defineProperty(MyApp.prototype, "isLogged", {
-        get: function () {
-            return localStorage.getItem('isLogged');
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(MyApp.prototype, "empresa", {
-        get: function () {
-            return localStorage.getItem('BancoSchema');
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(MyApp.prototype, "usuario", {
-        get: function () {
-            return localStorage.getItem('Usuario');
-        },
-        enumerable: true,
-        configurable: true
-    });
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Nav */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Nav */])
-    ], MyApp.prototype, "nav", void 0);
-    MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\app\app.html"*/'<!---Settings Main Header-->\n<ion-split-pane when="md">\n    <!-- Menu Main Top -->\n    <ion-menu [content]="content" *ngIf="params != null">\n        <!-- Menu Main List -->\n        <ion-content *ngIf="isLogged == \'true\'">\n            <div header-background-image>\n                <ion-grid>\n                    <ion-row>\n                        <ion-col col-5>\n                            <img [src]="params.image">\n                        </ion-col>\n                        <ion-col col-7>\n                            <h1 ion-text header-title text-wrap>{{empresa}}</h1>\n                            <h2 ion-text header-title text-wrap>{{usuario}}</h2>\n                        </ion-col>\n                    </ion-row>\n                </ion-grid>\n            </div>\n            <ion-list no-margin>\n                <button menuClose ion-item default-item item-title main-menu no-lines *ngFor="let p of pages" (click)="openPage(p)">\n                    <ion-icon outline icon-small icon-left>\n                        <ion-icon [name]="p.icon"></ion-icon>\n                    </ion-icon>\n                    {{p.title}}\n                </button>\n            </ion-list>\n        </ion-content>\n    </ion-menu>\n    <!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n    <ion-nav [root]="rootPage" #content main swipeBackEnabled="false" main></ion-nav>\n</ion-split-pane>'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\app\app.html"*/,
-            providers: [__WEBPACK_IMPORTED_MODULE_7__services_obra_service__["a" /* ObraService */], __WEBPACK_IMPORTED_MODULE_9__services_checklist_service__["a" /* ChecklistService */], __WEBPACK_IMPORTED_MODULE_10__services_alteracao_service__["a" /* AlteracaoService */], __WEBPACK_IMPORTED_MODULE_11__services_servico_service__["a" /* ServicoService */]]
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* Platform */],
-            __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* MenuController */],
-            __WEBPACK_IMPORTED_MODULE_6__utils_loading_service__["a" /* LoadingService */],
-            __WEBPACK_IMPORTED_MODULE_5__utils_message_service__["a" /* MessageService */],
-            __WEBPACK_IMPORTED_MODULE_8__ionic_storage__["b" /* Storage */],
-            __WEBPACK_IMPORTED_MODULE_7__services_obra_service__["a" /* ObraService */],
-            __WEBPACK_IMPORTED_MODULE_10__services_alteracao_service__["a" /* AlteracaoService */],
-            __WEBPACK_IMPORTED_MODULE_11__services_servico_service__["a" /* ServicoService */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */],
-            __WEBPACK_IMPORTED_MODULE_9__services_checklist_service__["a" /* ChecklistService */],
-            __WEBPACK_IMPORTED_MODULE_4__ionic_native_network__["a" /* Network */],
-            __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
-    ], MyApp);
-    return MyApp;
-}());
-
-//# sourceMappingURL=app.component.js.map
-
-/***/ }),
-
-/***/ 695:
+/***/ 677:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1238,7 +1269,7 @@ var ChecklistService = /** @class */ (function (_super) {
 
 /***/ }),
 
-/***/ 696:
+/***/ 678:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1292,11 +1323,11 @@ var AlteracaoService = /** @class */ (function (_super) {
 
 /***/ }),
 
-/***/ 697:
+/***/ 679:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ServicoService; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FuncionarioService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__base_service__ = __webpack_require__(68);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(43);
@@ -1325,28 +1356,75 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var ServicoService = /** @class */ (function (_super) {
-    __extends(ServicoService, _super);
-    function ServicoService(http) {
-        return _super.call(this, http, 'servico/') || this;
+var FuncionarioService = /** @class */ (function (_super) {
+    __extends(FuncionarioService, _super);
+    function FuncionarioService(http) {
+        return _super.call(this, http, 'funcionario/') || this;
     }
-    ServicoService.prototype.obterServicos = function (areaId) {
+    FuncionarioService.prototype.obterTodos = function () {
         this.headers = this.headers.set('BancoSchema', localStorage.getItem('BancoSchema'));
-        return this.http.get(this.apiUrl + areaId, { headers: this.headers })
+        return this.http.get(this.apiUrl + 'ativos/', { headers: this.headers })
             .catch(this.handleError);
     };
-    ServicoService = __decorate([
+    FuncionarioService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */]])
-    ], ServicoService);
-    return ServicoService;
+    ], FuncionarioService);
+    return FuncionarioService;
 }(__WEBPACK_IMPORTED_MODULE_1__base_service__["a" /* BaseService */]));
 
-//# sourceMappingURL=servico.service.js.map
+//# sourceMappingURL=funcionario.service.js.map
 
 /***/ }),
 
-/***/ 716:
+/***/ 68:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BaseService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(676);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var BaseService = /** @class */ (function () {
+    function BaseService(http, rota) {
+        this.http = http;
+        this.headers = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]();
+        this.apiUrl = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].urlAPI + rota;
+        if (localStorage.getItem('BancoSchema'))
+            this.headers = this.headers.set('BancoSchema', localStorage.getItem('BancoSchema'));
+    }
+    BaseService.prototype.handleError = function (error) {
+        if (error.status == '401' || error.status == '403') {
+            location.href = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].urlAPI;
+        }
+        else {
+            return Promise.reject(error);
+        }
+    };
+    BaseService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */], String])
+    ], BaseService);
+    return BaseService;
+}());
+
+//# sourceMappingURL=base.service.js.map
+
+/***/ }),
+
+/***/ 715:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

@@ -12,10 +12,10 @@ import { Network } from '@ionic-native/network';
 import { ToastService } from '../utils/toast-service';
 import { LoadingService } from '../utils/loading-service';
 import { HttpClientModule } from '@angular/common/http';
-import { MessageService } from '../utils/message-service';
 import { IonicStorageModule } from '@ionic/storage';
 import { MaskDirective } from '../directives/mask.directive';
 import { DatePicker } from '@ionic-native/date-picker';
+import { MessageService } from '../utils/message-service';
 
 @NgModule({
   declarations: [

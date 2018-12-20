@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage } from 'ionic-angular';
+import { MyApp } from '../../app/app.component';
 
 @IonicPage()
 @Component({
@@ -9,6 +10,22 @@ import { IonicPage } from 'ionic-angular';
 
 export class HomePage {
 
-  constructor() { }
+  Math: any;
+
+  constructor() {
+    this.Math = Math;
+  }
+
+  get progressbarAtivo() {
+    return MyApp.progressbarAtivo;
+  }
+
+  get progress() {
+    return MyApp.progress;
+  }
+
+  get segundos() {
+    return MyApp.segundos;
+  }
 
 }
