@@ -4,6 +4,7 @@ export class Obra {
     
     id: number;
     descricaoCentroCusto: string;
+    descricao: string;
     status: number;
 
     areas: Area[] = [];

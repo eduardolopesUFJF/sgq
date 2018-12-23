@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage } from 'ionic-angular';
+import { IonicPage, NavParams, Events } from 'ionic-angular';
 import { MyApp } from '../../app/app.component';
 
 @IonicPage()
@@ -11,9 +11,19 @@ import { MyApp } from '../../app/app.component';
 export class HomePage {
 
   Math: any;
+  pages: any;
 
-  constructor() {
+  constructor(public navParams: NavParams, public events: Events) {
     this.Math = Math;
+    this.pages = [
+      { "title": "Home", "icon": "home", "component": "HomePage" },
+      { "title": "Baixar dados", "icon": "cloud-download", "component": "Baixar" },
+      { "title": "Listar alterações", "icon": "list", "component": "AlteracoesPage" },
+      { "title": "Publicar alterações", "icon": "cloud-upload", "component": "Subir" },
+      { "title": "Descartar alterações", "icon": "trash", "component": "Descartar" },
+      { "title": "Acesso ás obras", "icon": "checkmark-circle-outline", "component": "ObraPage" },
+      { "title": "Sair", "icon": "exit", "component": "LoginPage" },
+    ];
   }
 
   get progressbarAtivo() {
@@ -26,6 +36,10 @@ export class HomePage {
 
   get segundos() {
     return MyApp.segundos;
+  }
+
+  openPage(page) {
+    this.events.publish('openPage',page);
   }
 
 }

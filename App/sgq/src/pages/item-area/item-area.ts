@@ -32,7 +32,8 @@ export class ItemAreaPage {
         "exibirDatas": false,
         "tipo": true,
         "subTitulo": "Situação",
-        "alteracoes": false
+        "alteracoes": false,
+        "broadcomb": ""
     }
 
     constructor(
@@ -42,10 +43,11 @@ export class ItemAreaPage {
         public storage: Storage
     ) { 
         this.area = this.navParams.data.area;
+        this.config.broadcomb = this.navParams.data.obra + " >> " + this.area.descricao;
     }
 
     abrirVerificacoes(servico: Servico) {
-        this.navCtrl.push("VerificacaoPage", {servico: servico});
+        this.navCtrl.push("VerificacaoPage", {servico: servico, broadcomb: this.config.broadcomb});
     }
 
     confirmarExclusao(item: Servico) {

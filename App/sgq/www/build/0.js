@@ -35,7 +35,7 @@ var MapsLayout1Module = /** @class */ (function () {
             imports: [
                 __WEBPACK_IMPORTED_MODULE_3__elastic_header_elastic_header_module__["a" /* ElasticHeaderModule */],
                 __WEBPACK_IMPORTED_MODULE_4__agm_core__["a" /* AgmCoreModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__config_app_settings__["a" /* AppSettings */].MAP_KEY),
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__maps_layout_1__["a" /* MapsLayout1 */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__maps_layout_1__["a" /* MapsLayout1 */]),
             ],
             exports: [
                 __WEBPACK_IMPORTED_MODULE_2__maps_layout_1__["a" /* MapsLayout1 */]

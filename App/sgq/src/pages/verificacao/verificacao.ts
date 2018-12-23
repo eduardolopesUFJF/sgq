@@ -19,6 +19,7 @@ export class VerificacaoPage {
     servico: Servico = new Servico();
     inspecoes: Inspecao[] = [];
     inspecoesBackup: Inspecao[] = [];
+    broadcomb: string;
 
     constructor(
         public navParams: NavParams,
@@ -29,6 +30,7 @@ export class VerificacaoPage {
         this.servico = navParams.data.servico;
         this.inspecoes = [...this.servico.inspecoesObra];
         this.inspecoesBackup = [...this.servico.inspecoesObra];
+        this.broadcomb = navParams.data.broadcomb + " >> " + this.servico.descricao;
     }
 
     novaInspecao() {

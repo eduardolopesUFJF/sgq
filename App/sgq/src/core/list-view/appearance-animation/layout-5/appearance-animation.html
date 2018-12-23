@@ -1,5 +1,6 @@
 <!--Theme Appearance animation (Zoom In)-->
 <ion-content>
+    <h2 text-center text-wrap class="broadcomb" *ngIf="config.broadcomb">{{config.broadcomb.toUpperCase()}}</h2>
     <h2 padding text-center class="aviso" *ngIf="animateItems.length < 1 || data.length < 1">Nenhum registro encontrado.</h2>
     <ion-grid no-padding *ngIf="data != null">
         <ion-row *ngIf="config.exibirDatas && animateItems.length > 0">

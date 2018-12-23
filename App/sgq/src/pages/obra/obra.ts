@@ -21,7 +21,7 @@ export class ObraPage {
 
     events = {
         onItemClick: (data) => {
-            this.abrirAreas(data.id, data.areas);
+            this.abrirAreas(data);
         }
     };
 
@@ -42,8 +42,8 @@ export class ObraPage {
         public navCtrl: NavController
     ) { }
 
-    abrirAreas(obraId: number, areas: Area[]) {
-        this.navCtrl.push("AreaPage", { areas: areas, obraId: obraId });
+    abrirAreas(obra: Obra) {
+        this.navCtrl.push("AreaPage", { obra: obra });
     }
 
     ionViewDidLoad() {

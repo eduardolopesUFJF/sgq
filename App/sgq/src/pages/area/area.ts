@@ -6,6 +6,7 @@ import { Alteracao } from '../../models/alteracao';
 import { MessageService } from '../../utils/message-service';
 import { LoadingService } from '../../utils/loading-service';
 import { UUID } from 'angular2-uuid';
+import { Obra } from '../../models/obra';
 
 @IonicPage()
 @Component({
@@ -16,6 +17,7 @@ import { UUID } from 'angular2-uuid';
 export class AreaPage {
 
     areas: Area[] = [];
+    obra: Obra = new Obra();
     obraId: number;
     reload = true;
 
@@ -37,7 +39,8 @@ export class AreaPage {
         "tipo": false,
         "exibirDatas": true,
         "btnNovoLabel": "Adicionar área",
-        "subTitulo": "Situação"
+        "subTitulo": "Situação",
+        "broadcomb": ""
     }
 
     constructor(
@@ -49,12 +52,14 @@ export class AreaPage {
         public modalCtrl: ModalController,
         public loadingService: LoadingService
     ) {
-        this.areas = this.navParams.data.areas;
-        this.obraId = this.navParams.data.obraId;
+        this.obra = this.navParams.data.obra;
+        this.areas = this.navParams.data.obra.areas;
+        this.obraId = this.obra.id;
+        this.config.broadcomb = this.obra.descricao;
     }
 
     abrirServicos(area: Area) {
-        this.navCtrl.push("ItemAreaPage", {area: area});
+        this.navCtrl.push("ItemAreaPage", {area: area, obra: this.obra.descricao});
     }
 
     confirmarExclusao(area: Area) {

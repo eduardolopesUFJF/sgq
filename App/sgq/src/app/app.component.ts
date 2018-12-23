@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Platform, Nav, MenuController, AlertController } from 'ionic-angular';
+import { Platform, Nav, MenuController, AlertController, Events } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Network } from '@ionic-native/network';
@@ -43,12 +43,14 @@ export class MyApp {
     public alertCtrl: AlertController,
     public checklistService: ChecklistService,
     public network: Network,
+    public events: Events,
     splashScreen: SplashScreen) {
     platform.ready().then(() => {
       statusBar.styleDefault();
       splashScreen.hide();
       statusBar.backgroundColorByHexString('rgb(33,177,75)');
       this.definirRoot();
+      this.definirEventoMenu();
     });
 
     this.pages = [
@@ -57,7 +59,7 @@ export class MyApp {
       { "title": "Listar alterações", "icon": "list", "component": "AlteracoesPage" },
       { "title": "Publicar alterações", "icon": "cloud-upload", "component": "Subir" },
       { "title": "Descartar alterações", "icon": "trash", "component": "Descartar" },
-      { "title": "Checklist de área", "icon": "checkmark-circle-outline", "component": "ObraPage" },
+      { "title": "Acesso às obras", "icon": "checkmark-circle-outline", "component": "ObraPage" },
       { "title": "Sair", "icon": "exit", "component": "LoginPage" },
     ];
 
@@ -65,6 +67,12 @@ export class MyApp {
       "background": "assets/images/background/5.jpg",
       "image": "assets/images/logo/logo.png"
     };
+  }
+
+  definirEventoMenu() {
+    this.events.subscribe('openPage', (page) => {
+      this.openPage(page);
+    });
   }
 
   definirRoot() {
@@ -88,7 +96,7 @@ export class MyApp {
     });
   }
 
-  openPage(page) {
+  public openPage(page) {
     if (page.component != "") {
 
       if (page.component == 'Baixar') {
@@ -120,7 +128,6 @@ export class MyApp {
       } else {
         this.nav.setRoot(page.component);
       }
-
     }
   }
 
@@ -137,6 +144,7 @@ export class MyApp {
           if (atualizacoes) {
             this.messageService.exibirMensagem("Existem atualizações que não foram publicadas, publique-as ou descarte-as antes de baixar novos dados.");
           } else {
+            this.nav.setRoot("HomePage");
             this.obterChecklistServico();
             this.obterFuncionarios();
             this.atualizacao = false;

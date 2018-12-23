@@ -27,7 +27,7 @@ var DragAndDropLayout2Module = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2__drag_and_drop_layout_2__["a" /* DragAndDropLayout2 */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__drag_and_drop_layout_2__["a" /* DragAndDropLayout2 */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__drag_and_drop_layout_2__["a" /* DragAndDropLayout2 */]),
             ],
             exports: [
                 __WEBPACK_IMPORTED_MODULE_2__drag_and_drop_layout_2__["a" /* DragAndDropLayout2 */]
@@ -64,7 +64,7 @@ var DragAndDropLayout2 = /** @class */ (function () {
     function DragAndDropLayout2() {
         var _this = this;
         this.reorderItems = function (indexes) {
-            _this.data.items = Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* reorderArray */])(_this.data.items, indexes);
+            _this.data.items = Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* reorderArray */])(_this.data.items, indexes);
         };
     }
     DragAndDropLayout2.prototype.onEvent = function (event, item, e) {

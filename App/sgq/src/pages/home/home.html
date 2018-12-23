@@ -5,7 +5,7 @@
     </button>
     <div buy>
       <ion-title>
-        SGQ - Home
+        SGQ - Menu Principal
       </ion-title>
     </div>
   </ion-navbar>
@@ -13,9 +13,19 @@
 
 <ion-content>
   <h1 *ngIf="!progressbarAtivo" padding text-center class="boas-vindas">Bem vindo ao Sistema de Gestão de Qualidade</h1>
+  <ion-grid *ngIf="!progressbarAtivo">
+    <ion-row>
+      <button menuClose ion-item default-item item-title main-menu no-lines class="mt-6 mb-6" *ngFor="let p of pages" (click)="openPage(p)">
+        <ion-icon outline icon-small icon-left>
+          <ion-icon [name]="p.icon"></ion-icon>
+        </ion-icon>
+        {{p.title}}
+      </button>
+    </ion-row>
+  </ion-grid>
   <div class="progress-outer" *ngIf="progressbarAtivo">
     <div class="progress-inner" [style.width]="progress + '%'">
-        {{this.Math.round(progress*100)/100}}%
+      {{this.Math.round(progress*100)/100}}%
     </div>
   </div>
   <h2 *ngIf="progressbarAtivo" text-center style="color: red; font-weight: bold;">{{segundos}} segundos</h2>
