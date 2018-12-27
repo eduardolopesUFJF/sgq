@@ -12,9 +12,11 @@ namespace SGQ.GDOL.Api.AutoMapper
         public DomainToViewModelMappingProfile()
         {
             CreateMap<CentroCusto, CentroCustoVM>();
-            CreateMap<InspecaoObraItem, InspecaoObraItemVM>();
             CreateMap<Funcionario, FuncionarioVM>();
             CreateMap<ItemChecklistServico, ItemChecklistServicoVM>();
+
+            CreateMap<InspecaoObraItem, InspecaoObraItemVM>()
+                .ForMember(x => x.Inspecao2, opt => opt.MapFrom(x => x.Inspecao2 == "A" ? "RA" : x.Inspecao2));
 
             CreateMap<Servico, ServicoVM>()
                 .ForMember(x => x.IdArea, opt => opt.MapFrom(x => x.IdObraAreaChecklist))
@@ -37,8 +39,8 @@ namespace SGQ.GDOL.Api.AutoMapper
                 .ForMember(x => x.Situacao, opt => opt.MapFrom(x => x.Status == 1 ? "Finalizado" : "Em aberto"))
                 .ForMember(x => x.Local, opt => opt.MapFrom(x => x.Campo1))
                 .ForMember(x => x.InspecaoObraItens, opt => opt.MapFrom(x => x.InspecaoObraItens.Where(y => !y.Delete)))
-                .ForMember(x => x.FuncionarioAprovado, opt => opt.MapFrom(x => x.FuncionarioAprovado.Nome))
-                .ForMember(x => x.FuncionarioInspecionado, opt => opt.MapFrom(x => x.FuncionarioInspecionado.Nome))
+                .ForMember(x => x.FuncionarioAprovado, opt => opt.MapFrom(x => x.FuncionarioAprovadoObj.Nome))
+                .ForMember(x => x.FuncionarioInspecionado, opt => opt.MapFrom(x => x.FuncionarioInspecionadoObj.Nome))
                 .ForMember(x => x.QtdNA, opt => opt.MapFrom(x => x.InspecaoObraItens.Count(y => y.Inspecao1.Equals("N"))))
                 .ForMember(x => x.QtdA, opt => opt.MapFrom(x => x.InspecaoObraItens.Count(y => y.Inspecao1.Equals("A"))))
                 .ForMember(x => x.QtdR, opt => opt.MapFrom(x => x.InspecaoObraItens.Count(y => y.Inspecao1.Equals("R"))))

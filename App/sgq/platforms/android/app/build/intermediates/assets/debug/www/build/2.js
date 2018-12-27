@@ -32,7 +32,7 @@ var MapsLayout2Module = /** @class */ (function () {
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_3__agm_core__["a" /* AgmCoreModule */].forRoot(__WEBPACK_IMPORTED_MODULE_4__config_app_settings__["a" /* AppSettings */].MAP_KEY),
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__maps_layout_2__["a" /* MapsLayout2 */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__maps_layout_2__["a" /* MapsLayout2 */]),
             ],
             exports: [
                 __WEBPACK_IMPORTED_MODULE_2__maps_layout_2__["a" /* MapsLayout2 */]

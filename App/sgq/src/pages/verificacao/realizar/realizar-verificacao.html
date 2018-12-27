@@ -19,11 +19,11 @@
             <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
                 <form #cadastroForm="ngForm" padding-top>
                     <ion-item text-center transparent style="padding-bottom: 0 !important;">
-                        <ion-label style="font-size: 22px !important;" stacked>{{descServico}}</ion-label>
+                        <ion-label style="font-size: 22px !important; font-weight: bold;" stacked>{{descServico}}</ion-label>
                     </ion-item>
                     <ion-item text-center transparent>
                         <ion-label stacked>INSPECIONADO POR</ion-label>
-                        <ion-select [(ngModel)]="inspecao.idFuncionarioInspecionado" multiple="false" name="idFuncionarioInspecionado"
+                        <ion-select required [(ngModel)]="inspecao.idFuncionarioInspecionado" multiple="false" name="idFuncionarioInspecionado"
                             okText="Ok" cancelText="Cancelar">
                             <ion-option *ngFor="let item of funcionarios; let i= index" [value]="item.id">{{item.nome}}</ion-option>
                         </ion-select>
@@ -50,6 +50,59 @@
                                         <ion-radio [value]="1"></ion-radio>
                                     </ion-item>
                                 </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </ion-list>
+                    <ion-list radio-group no-margin [(ngModel)]="item.inspecao1" name="itemInspecao1+{{i}}" *ngFor="let item of inspecao.inspecaoObraItens; let i=index;">
+                        <h2 text-wrap style="font-weight: bold;">{{item.descricao}}</h2>
+                        <ion-grid>
+                            <ion-row>
+                                <ion-col col-3>
+                                    <ion-item radio style="background-color: blue;">
+                                        <ion-label>NA</ion-label>
+                                        <ion-radio [value]="'NA'" checked></ion-radio>
+                                    </ion-item>
+                                </ion-col>
+                                <ion-col col-3>
+                                    <ion-item radio style="background-color: darkgreen;">
+                                        <ion-label>A</ion-label>
+                                        <ion-radio [value]="'A'"></ion-radio>
+                                    </ion-item>
+                                </ion-col>
+                                <ion-col col-3>
+                                    <ion-item radio style="background-color: yellow;">
+                                        <ion-label>R</ion-label>
+                                        <ion-radio [value]="'R'"></ion-radio>
+                                    </ion-item>
+                                </ion-col>
+                                <ion-col col-3>
+                                    <ion-item radio style="background-color: red;">
+                                        <ion-label>X</ion-label>
+                                        <ion-radio [value]="'X'"></ion-radio>
+                                    </ion-item>
+                                </ion-col>
+                            </ion-row>
+                            <ion-row *ngIf="item.inspecao1 == 'R'">
+                                <ion-list radio-group no-margin [(ngModel)]="item.inspecao2" name="itemInspecao2+{{i}}" style="width: 100%">
+                                    <ion-grid>
+                                        <ion-row>
+                                            <ion-col col-3></ion-col>
+                                            <ion-col col-3>
+                                                <ion-item radio style="background-color: orange;">
+                                                    <ion-label>RA</ion-label>
+                                                    <ion-radio [value]="'RA'" checked></ion-radio>
+                                                </ion-item>
+                                            </ion-col>
+                                            <ion-col col-3>
+                                                <ion-item radio style="background-color: red;">
+                                                    <ion-label>X</ion-label>
+                                                    <ion-radio [value]="'X'"></ion-radio>
+                                                </ion-item>
+                                            </ion-col>
+                                            <ion-col col-3></ion-col>
+                                        </ion-row>
+                                    </ion-grid>
+                                </ion-list>
                             </ion-row>
                         </ion-grid>
                     </ion-list>

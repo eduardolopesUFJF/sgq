@@ -45,11 +45,11 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Mappings
                 .WithMany(p => p.InspecoesObra)
                 .HasForeignKey(d => d.IdServico);
 
-            entity.HasOne(d => d.FuncionarioAprovado)
+            entity.HasOne(d => d.FuncionarioAprovadoObj)
                     .WithMany(p => p.FuncionariosAprovado)
                     .HasForeignKey(d => d.IdFuncionarioAprovado);
 
-            entity.HasOne(d => d.FuncionarioInspecionado)
+            entity.HasOne(d => d.FuncionarioInspecionadoObj)
                 .WithMany(p => p.FuncionariosInspecionado)
                 .HasForeignKey(d => d.IdFuncionarioInspecionado);
         }

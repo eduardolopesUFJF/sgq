@@ -3,6 +3,7 @@ import { IonicPage, ViewController, NavParams } from 'ionic-angular';
 import { Inspecao } from '../../../models/inspecao';
 import { Funcionario } from '../../../models/funcionario';
 import { Storage } from '@ionic/storage';
+import { ToastService } from '../../../utils/toast-service';
 
 @IonicPage()
 @Component({
@@ -19,6 +20,7 @@ export class RealizarVerificacaoPage {
     constructor(
         public viewCtrl: ViewController,
         public storage: Storage,
+        public toastService: ToastService,
         public navParams: NavParams
     ) {
         this.inspecao = this.navParams.data.inspecao;
@@ -43,6 +45,8 @@ export class RealizarVerificacaoPage {
     salvar(valido: boolean) {
         if (valido) {
             this.viewCtrl.dismiss(this.inspecao);
+        } else {
+            this.toastService.presentToastWarning("É obrigatório informar o funcionário da inspeção.");
         }
     }
 

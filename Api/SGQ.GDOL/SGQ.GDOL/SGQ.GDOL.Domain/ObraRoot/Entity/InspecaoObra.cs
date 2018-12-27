@@ -18,7 +18,7 @@ namespace SGQ.GDOL.Domain.ObraRoot.Entity
 
         public Servico ObraChecklistServico { get; set; }
         public ICollection<InspecaoObraItem> InspecaoObraItens { get; set; }
-        public Funcionario FuncionarioAprovado { get; set; }
-        public Funcionario FuncionarioInspecionado { get; set; }
+        public Funcionario FuncionarioAprovadoObj { get; set; }
+        public Funcionario FuncionarioInspecionadoObj { get; set; }
     }
 }

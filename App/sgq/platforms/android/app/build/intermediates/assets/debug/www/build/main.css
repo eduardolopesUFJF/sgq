@@ -31747,6 +31747,13 @@ appearance-animation-layout-5 .tipo {
   padding: 0 5px !important;
 }
 
+appearance-animation-layout-5 .broadcomb {
+  margin: 6px 6px 4px 6px;
+  font-weight: bold;
+  font-size: 15px;
+  color: darkgreen;
+}
+
 /*  #Style Drag and drop - Small item + header
 ================================================*/
 drag-and-drop-layout-1 .item-inner {
@@ -34304,6 +34311,14 @@ page-home .progress-inner {
   background-color: #21b14b;
 }
 
+page-home .mt-6 {
+  margin-top: 6px !important;
+}
+
+page-home .mb-6 {
+  margin-bottom: 6px !important;
+}
+
 page-verificacao .aviso {
   font-weight: bold;
 }
@@ -34365,6 +34380,13 @@ page-verificacao [item-data] {
   font-weight: bold;
   margin: 10px 0px 5px 0px;
   font-size: 15px;
+}
+
+page-verificacao .broadcomb {
+  margin: 6px 6px 4px 6px;
+  font-weight: bold;
+  font-size: 15px;
+  color: darkgreen;
 }
 
 page-manter-verificacao .button-nav {

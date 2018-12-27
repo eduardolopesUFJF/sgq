@@ -33,6 +33,7 @@ namespace SGQ.GDOL.Infra.CrossCutting.IoC
             services.AddScoped<IServicoService, ServicoService>();
             services.AddScoped<IInspecaoService, InspecaoService>();
             services.AddScoped<IFuncionarioService, FuncionarioService>();
+            services.AddScoped<IInspecaoObraItemService, InspecaoObraItemService>();
 
             //Infra Data
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
@@ -41,6 +42,7 @@ namespace SGQ.GDOL.Infra.CrossCutting.IoC
             services.AddScoped<IAreaRepository, AreaRepository>();
             services.AddScoped<IServicoRepository, ServicoRepository>();
             services.AddScoped<IInspecaoRepository, InspecaoRepository>();
+            services.AddScoped<IInspecaoObraItemRepository, InspecaoObraItemRepository>();
             services.AddScoped<IFuncionarioRepository, FuncionarioRepository>();
 
             services.AddScoped<ServiceContext>();

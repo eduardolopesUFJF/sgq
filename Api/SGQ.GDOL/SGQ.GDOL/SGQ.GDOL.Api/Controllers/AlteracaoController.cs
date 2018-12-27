@@ -18,15 +18,18 @@ namespace SGQ.GDOL.Api.Controllers
         private readonly IAreaService _areaService;
         private readonly IServicoService _servicoService;
         private readonly IInspecaoService _inspecaoService;
+        private readonly IInspecaoObraItemService _inspecaoObraItemService;
 
         public AlteracaoController(
             IAreaService areaService,
             IServicoService servicoService,
-            IInspecaoService inspecaoService)
+            IInspecaoService inspecaoService,
+            IInspecaoObraItemService inspecaoObraItemService)
         {
             _areaService = areaService;
             _servicoService = servicoService;
             _inspecaoService = inspecaoService;
+            _inspecaoObraItemService = inspecaoObraItemService;
         }
 
         [HttpPost]
@@ -275,9 +278,19 @@ namespace SGQ.GDOL.Api.Controllers
                     else
                     {
                         inspecaoBD.ObraChecklistServico = null;
-                        inspecaoBD.FuncionarioAprovado = null;
-                        inspecaoBD.FuncionarioInspecionado = null;
+                        inspecaoBD.FuncionarioAprovadoObj = null;
+                        inspecaoBD.FuncionarioInspecionadoObj = null;
                         _inspecaoService.Atualizar(inspecaoBD);
+                        foreach (var item in inspecaoVM.InspecaoObraItens)
+                        {
+                            var inspecaoItem = inspecaoBD.InspecaoObraItens.FirstOrDefault(x => x.IdItemServico == item.IdItemServico);
+                            if (inspecaoItem != null)
+                            {
+                                inspecaoItem.Inspecao1 = item.Inspecao1;
+                                inspecaoItem.Inspecao2 = item.Inspecao2 == "RA" ? "A" : item.Inspecao2;
+                                _inspecaoObraItemService.Atualizar(inspecaoItem);
+                            }
+                        }
                     }
                 }
                 catch (Exception ex)
