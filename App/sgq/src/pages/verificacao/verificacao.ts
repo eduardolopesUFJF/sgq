@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavParams, ModalController } from 'ionic-angular';
+import { IonicPage, NavParams, ModalController, ActionSheetController } from 'ionic-angular';
 import { Servico } from '../../models/servico';
 import { Inspecao } from '../../models/inspecao';
 import { Storage } from '@ionic/storage';
@@ -7,6 +7,7 @@ import { Alteracao } from '../../models/alteracao';
 import { UUID } from 'angular2-uuid';
 import { MessageService } from '../../utils/message-service';
 import { ItemInspecao } from '../../models/item-inspecao';
+import { ItemChecklist } from '../../models/item-checklist';
 
 @IonicPage()
 @Component({
@@ -17,6 +18,7 @@ import { ItemInspecao } from '../../models/item-inspecao';
 export class VerificacaoPage {
 
     servico: Servico = new Servico();
+    itemChecklist: ItemChecklist = new ItemChecklist();
     inspecoes: Inspecao[] = [];
     inspecoesBackup: Inspecao[] = [];
     broadcomb: string;
@@ -24,17 +26,29 @@ export class VerificacaoPage {
     constructor(
         public navParams: NavParams,
         public storage: Storage,
+        public actionSheetCtrl: ActionSheetController,
         public modalCtrl: ModalController,
         public messageService: MessageService
     ) {
         this.servico = navParams.data.servico;
         this.inspecoes = [...this.servico.inspecoesObra];
         this.inspecoesBackup = [...this.servico.inspecoesObra];
+        this.obterItemChecklist();
         this.broadcomb = navParams.data.broadcomb + " >> " + this.servico.descricao;
     }
 
+    obterItemChecklist() {
+        this.storage.ready().then(() => {
+            this.storage.get('itensChecklist').then(
+                itens => {
+                    this.itemChecklist = itens.find(x => x.id == this.servico.idChecklist);
+                }
+            );
+        });
+    }
+
     novaInspecao() {
-        let modal = this.modalCtrl.create("ManterVerificacaoPage", { inspecao: new Inspecao() });
+        let modal = this.modalCtrl.create("ManterVerificacaoPage", { inspecao: new Inspecao(), itemChecklist: this.itemChecklist });
         modal.present();
 
         modal.onWillDismiss((inspecao: Inspecao) => {
@@ -65,11 +79,16 @@ export class VerificacaoPage {
     }
 
     abrirItensInspecao(inspecao: Inspecao) {
-        let modal = this.modalCtrl.create("RealizarVerificacaoPage", { inspecao: inspecao, descServico: this.servico.descricao });
+        let modal = this.modalCtrl.create("RealizarVerificacaoPage", { inspecao: inspecao, descServico: this.broadcomb });
         modal.present();
 
         modal.onWillDismiss((inspecao: Inspecao) => {
             if (inspecao) {
+                inspecao.qtdA = inspecao.inspecaoObraItens.filter(x => x.inspecao1 == 'A').length;
+                inspecao.qtdNA = inspecao.inspecaoObraItens.filter(x => x.inspecao1 == 'NA').length;
+                inspecao.qtdR = inspecao.inspecaoObraItens.filter(x => x.inspecao1 == 'R').length;
+                inspecao.qtdX = inspecao.inspecaoObraItens.filter(x => x.inspecao1 == 'X').length;
+                inspecao.qtdRA = inspecao.inspecaoObraItens.filter(x => x.inspecao2 == 'RA').length;
                 let index = this.inspecoesBackup.findIndex(x => inspecao.id != 0 ? (x.id == inspecao.id) : (x.idGuidInspecao == inspecao.idGuidInspecao));
                 this.inspecoesBackup[index] = inspecao;
                 this.inspecoes = [...this.inspecoesBackup];
@@ -79,7 +98,7 @@ export class VerificacaoPage {
     }
 
     editar(inspecao: Inspecao) {
-        let modal = this.modalCtrl.create("ManterVerificacaoPage", { inspecao: inspecao });
+        let modal = this.modalCtrl.create("ManterVerificacaoPage", { inspecao: inspecao, itemChecklist: this.itemChecklist });
         modal.present();
 
         modal.onWillDismiss((inspecao: Inspecao) => {
@@ -97,7 +116,7 @@ export class VerificacaoPage {
             let atualizacoesArray: Alteracao[] = [];
             this.storage.get('atualizacoes').then(
                 atualizacoes => {
-                    let alteracao = new Alteracao({ id: UUID.UUID(), idInspecao: inspecao.id, idGuidInspecao: inspecao.idGuidInspecao, idArea: this.servico.idArea, idGuidArea: this.servico.idAreaGuid, idServico: this.servico.id, idGuidServico: this.servico.idGuidServico, tipo: "Update", entidade: "Inspecao", valor: JSON.stringify(inspecao), data: new Date(), descricao: acao + "'" + inspecao.local + "' no serviço '" + this.servico.descricao + "'.", obraId: this.servico.idObra });
+                    let alteracao = new Alteracao({ id: UUID.UUID(), idInspecao: inspecao.id, idGuidInspecao: inspecao.idGuidInspecao, idArea: this.servico.idArea, idGuidArea: this.servico.idAreaGuid, idServico: this.servico.id, idGuidServico: this.servico.idGuidServico, tipo: "Update", entidade: "Inspecao", valor: JSON.stringify(inspecao), data: new Date(), descricao: acao + "'" + inspecao.campo1 + "' no serviço '" + this.servico.descricao + "'.", obraId: this.servico.idObra });
                     if (atualizacoes) {
                         atualizacoesArray = atualizacoes;
                         atualizacoesArray.push(alteracao);
@@ -116,7 +135,7 @@ export class VerificacaoPage {
             let atualizacoesArray: Alteracao[] = [];
             this.storage.get('atualizacoes').then(
                 atualizacoes => {
-                    let alteracao = new Alteracao({ id: UUID.UUID(), idInspecao: inspecao.id, idGuidInspecao: inspecao.idGuidInspecao, idArea: this.servico.idArea, idGuidArea: this.servico.idAreaGuid, idServico: this.servico.id, idGuidServico: this.servico.idGuidServico, tipo: "Insert", entidade: "Inspecao", valor: JSON.stringify(inspecao), data: new Date(), descricao: "Criação da verificação '" + inspecao.local + "' no serviço '" + this.servico.descricao + "'.", obraId: this.servico.idObra });
+                    let alteracao = new Alteracao({ id: UUID.UUID(), idInspecao: inspecao.id, idGuidInspecao: inspecao.idGuidInspecao, idArea: this.servico.idArea, idGuidArea: this.servico.idAreaGuid, idServico: this.servico.id, idGuidServico: this.servico.idGuidServico, tipo: "Insert", entidade: "Inspecao", valor: JSON.stringify(inspecao), data: new Date(), descricao: "Criação da verificação '" + inspecao.campo1 + "' no serviço '" + this.servico.descricao + "'.", obraId: this.servico.idObra });
                     if (atualizacoes) {
                         atualizacoesArray = atualizacoes;
                         atualizacoesArray.push(alteracao);
@@ -135,7 +154,7 @@ export class VerificacaoPage {
             this.inspecoes = [...this.inspecoesBackup];
         } else {
             this.inspecoes = this.inspecoesBackup.filter((item) => {
-                return item.local.toLowerCase().indexOf(valor.toLowerCase()) > -1;
+                return item.campo1.toLowerCase().indexOf(valor.toLowerCase()) > -1;
             });
         }
     }
@@ -143,9 +162,9 @@ export class VerificacaoPage {
     confirmarExclusao(item: Inspecao) {
         let mensagem: string;
         if (!item.delete) {
-            mensagem = "Deseja realmente excluir a verificação '" + item.local + "'?";
+            mensagem = "Deseja realmente excluir a verificação '" + item.campo1 + "'?";
         } else {
-            mensagem = "Deseja realmente reativar a verificação '" + item.local + "'?";
+            mensagem = "Deseja realmente reativar a verificação '" + item.campo1 + "'?";
         }
         this.messageService.exibirMensagemConfirmacao(mensagem, () => { this.alterarSituacaoVerificacao(item) });
     }
@@ -156,7 +175,7 @@ export class VerificacaoPage {
             this.storage.get('atualizacoes').then(
                 atualizacoes => {
                     item.delete = !item.delete;
-                    let alteracao = new Alteracao({ id: UUID.UUID(), idInspecao: item.id, idGuidInspecao: item.idGuidInspecao, idArea: this.servico.idArea, idGuidArea: this.servico.idAreaGuid, idServico: this.servico.id, idGuidServico: this.servico.idGuidServico, tipo: "Update", entidade: "Inspecao", valor: JSON.stringify(item), data: new Date(), descricao: (item.delete ? "Inativação" : "Ativação") + " da verificação '" + item.local + "' no serviço '" + this.servico.descricao + "'.", obraId: this.servico.idObra });
+                    let alteracao = new Alteracao({ id: UUID.UUID(), idInspecao: item.id, idGuidInspecao: item.idGuidInspecao, idArea: this.servico.idArea, idGuidArea: this.servico.idAreaGuid, idServico: this.servico.id, idGuidServico: this.servico.idGuidServico, tipo: "Update", entidade: "Inspecao", valor: JSON.stringify(item), data: new Date(), descricao: (item.delete ? "Inativação" : "Ativação") + " da verificação '" + item.campo1 + "' no serviço '" + this.servico.descricao + "'.", obraId: this.servico.idObra });
                     if (atualizacoes) {
                         atualizacoesArray = atualizacoes;
                         atualizacoesArray.push(alteracao);
@@ -186,7 +205,10 @@ export class VerificacaoPage {
             this.storage.get('obras').then(
                 obras => {
                     let inspecao = obras.find(x => x.id == this.servico.idObra).areas.find(x => this.servico.idAreaGuid ? (x.idGuid == this.servico.idAreaGuid) : (x.id == this.servico.idArea)).servicos.find(x => this.servico.idGuidServico ? (x.idGuidServico == this.servico.idGuidServico) : (x.id == this.servico.id)).inspecoesObra.find(x => item.idGuidInspecao ? (x.idGuidInspecao == item.idGuidInspecao) : (x.id == item.id));
-                    inspecao.local = item.local;
+                    inspecao.campo1 = item.campo1;
+                    inspecao.campo2 = item.campo2;
+                    inspecao.campo3 = item.campo3;
+                    inspecao.campo4 = item.campo4;
                     inspecao.dataInspecao = item.dataInspecao;
                     inspecao.dataEncerramento = item.dataEncerramento;
                     this.storage.set('obras', obras);
@@ -204,6 +226,38 @@ export class VerificacaoPage {
                 }
             );
         });
+    }
+
+    exibirOpcoes(inspecao: Inspecao) {
+        const actionSheet = this.actionSheetCtrl.create(
+            {
+                "buttons": [
+                    {
+                        "text": "Realizar inspeção",
+                        handler: () => {
+                            this.abrirItensInspecao(inspecao);
+                        }
+                    },
+                    {
+                        "text": "Editar",
+                        handler: () => {
+                            this.editar(inspecao);
+                        }
+                    },
+                    {
+                        "text": "Excluir",
+                        handler: () => {
+                            this.confirmarExclusao(inspecao);
+                        }
+                    },
+                    {
+                        "text": "Cancelar",
+                        "role": "cancel"
+                    }
+                ]
+            }
+        );
+        actionSheet.present();
     }
 
 }

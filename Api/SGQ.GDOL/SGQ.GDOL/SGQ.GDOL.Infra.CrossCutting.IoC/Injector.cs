@@ -44,6 +44,7 @@ namespace SGQ.GDOL.Infra.CrossCutting.IoC
             services.AddScoped<IInspecaoRepository, InspecaoRepository>();
             services.AddScoped<IInspecaoObraItemRepository, InspecaoObraItemRepository>();
             services.AddScoped<IFuncionarioRepository, FuncionarioRepository>();
+            services.AddScoped<IUsuarioCentroCustoRepository, UsuarioCentroCustoRepository>();
 
             services.AddScoped<ServiceContext>();
             services.AddScoped<NotificationHandler>();

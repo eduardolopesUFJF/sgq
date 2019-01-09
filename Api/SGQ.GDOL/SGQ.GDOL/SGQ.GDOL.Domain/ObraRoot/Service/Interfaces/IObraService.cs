@@ -5,7 +5,7 @@ namespace SGQ.GDOL.Domain.ObraRoot.Service.Interfaces
 {
     public interface IObraService
     {
-        List<Obra> ObterTodasAtivasSemInclude();
+        List<Obra> ObterTodasAtivasSemInclude(string usuario);
         Obra ObterObraComInclude(Obra obra);
     }
 }

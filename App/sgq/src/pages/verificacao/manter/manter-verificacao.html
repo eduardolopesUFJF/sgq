@@ -7,7 +7,7 @@
                 </button>
             </ion-col>
             <ion-col col-10>
-                <ion-title>Verificação</ion-title>
+                <ion-title>Localização do Serviço</ion-title>
             </ion-col>
         </ion-row>
     </ion-navbar>
@@ -27,8 +27,20 @@
                         <ion-datetime displayFormat="DD/MM/YYYY" name="inspecao.dataEncerramento" [(ngModel)]="inspecao.dataEncerramento" cancelText="Cancelar" doneText="Ok"></ion-datetime>
                     </ion-item>
                     <ion-item text-center transparent>
-                        <ion-label stacked>LOCAL</ion-label>
-                        <ion-input text-center type="text" [(ngModel)]="inspecao.local" name="local"></ion-input>
+                        <ion-label stacked>{{itemChecklist.campo1}}</ion-label>
+                        <ion-input text-center type="text" [(ngModel)]="inspecao.campo1" name="local1"></ion-input>
+                    </ion-item>
+                    <ion-item text-center transparent *ngIf="itemChecklist.campo2">
+                        <ion-label stacked>{{itemChecklist.campo2}}</ion-label>
+                        <ion-input text-center type="text" [(ngModel)]="inspecao.campo2" name="local2"></ion-input>
+                    </ion-item>
+                    <ion-item text-center transparent *ngIf="itemChecklist.campo3">
+                        <ion-label stacked>{{itemChecklist.campo3}}</ion-label>
+                        <ion-input text-center type="text" [(ngModel)]="inspecao.campo3" name="local3"></ion-input>
+                    </ion-item>
+                    <ion-item text-center transparent *ngIf="itemChecklist.campo4">
+                        <ion-label stacked>{{itemChecklist.campo4}}</ion-label>
+                        <ion-input text-center type="text" [(ngModel)]="inspecao.campo4" name="local4"></ion-input>
                     </ion-item>
                     <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: black !important;"
                         (click)="salvar(cadastroForm.valid)">Salvar</button>

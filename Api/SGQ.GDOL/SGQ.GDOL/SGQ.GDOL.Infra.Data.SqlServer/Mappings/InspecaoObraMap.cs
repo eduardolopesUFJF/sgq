@@ -18,7 +18,22 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Mappings
                 .HasColumnName("CAMPO_1")
                 .HasMaxLength(500)
                 .IsUnicode(false);
-           
+
+            entity.Property(e => e.Campo2)
+                .HasColumnName("CAMPO_2")
+                .HasMaxLength(500)
+                .IsUnicode(false);
+
+            entity.Property(e => e.Campo3)
+                .HasColumnName("CAMPO_3")
+                .HasMaxLength(500)
+                .IsUnicode(false);
+
+            entity.Property(e => e.Campo4)
+                .HasColumnName("CAMPO_4")
+                .HasMaxLength(500)
+                .IsUnicode(false);
+
             entity.Property(e => e.DataEncerramento)
                 .HasColumnName("DATA_ENCERRAMENTO")
                 .HasColumnType("datetime");

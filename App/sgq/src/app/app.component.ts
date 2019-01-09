@@ -296,7 +296,11 @@ export class MyApp {
       this.loadingService.hide();
       if(this.statusAtualizacao == "") {
         if (qtdErros > 0) {
-          this.messageService.exibirMensagem("Ocorreu erro durante a busca de algumas obras.");
+          if (this.atualizacao) {
+            this.messageService.exibirMensagem("Atualizações publicadas com sucesso, porém houve um erro ao buscar as obras, tente novamente com uma internet melhor.");
+          } else {
+            this.messageService.exibirMensagem("Ocorreu erro durante a busca de algumas obras, tente novamente com usando uma internet melhor.");
+          }
         } else {
           if (this.atualizacao) {
             this.messageService.exibirMensagem("Atualizações publicadas com sucesso.");

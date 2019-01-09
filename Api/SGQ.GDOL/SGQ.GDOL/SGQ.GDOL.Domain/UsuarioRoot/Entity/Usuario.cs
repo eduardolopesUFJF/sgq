@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SGQ.GDOL.Domain.UsuarioRoot.Entity
 {
@@ -16,5 +17,7 @@ namespace SGQ.GDOL.Domain.UsuarioRoot.Entity
         public bool? Bloqueado { get; set; }
         public bool? CentroCustoRestrito { get; set; }
         public bool? Delete { get; set; }
+
+        public virtual ICollection<UsuarioCentroCusto> CentrosCusto { get; set; }
     }
 }

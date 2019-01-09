@@ -10,6 +10,9 @@ namespace SGQ.GDOL.Domain.ObraRoot.Entity
         public DateTime? DataInspecao { get; set; }
         public DateTime? DataEncerramento { get; set; }
         public string Campo1 { get; set; }
+        public string Campo2 { get; set; }
+        public string Campo3 { get; set; }
+        public string Campo4 { get; set; }
         public int? IdFuncionarioAprovado { get; set; }
         public int? IdFuncionarioInspecionado { get; set; }
         public int Status { get; set; }

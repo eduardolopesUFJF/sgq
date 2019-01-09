@@ -1,14 +1,14 @@
 webpackJsonp([5],{
 
-/***/ 744:
+/***/ 745:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StickyListHeaderLayout2Module", function() { return StickyListHeaderLayout2Module; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StickyListHeaderLayout3Module", function() { return StickyListHeaderLayout3Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sticky_list_header_layout_2__ = __webpack_require__(867);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sticky_list_header_layout_3__ = __webpack_require__(869);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ion_affix__ = __webpack_require__(828);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -20,28 +20,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var StickyListHeaderLayout2Module = /** @class */ (function () {
-    function StickyListHeaderLayout2Module() {
+var StickyListHeaderLayout3Module = /** @class */ (function () {
+    function StickyListHeaderLayout3Module() {
     }
-    StickyListHeaderLayout2Module = __decorate([
+    StickyListHeaderLayout3Module = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__sticky_list_header_layout_2__["a" /* StickyListHeaderLayout2 */],
+                __WEBPACK_IMPORTED_MODULE_2__sticky_list_header_layout_3__["a" /* StickyListHeaderLayout3 */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__sticky_list_header_layout_2__["a" /* StickyListHeaderLayout2 */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__sticky_list_header_layout_3__["a" /* StickyListHeaderLayout3 */]),
                 __WEBPACK_IMPORTED_MODULE_3_ion_affix__["a" /* IonAffixModule */]
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_2__sticky_list_header_layout_2__["a" /* StickyListHeaderLayout2 */]
+                __WEBPACK_IMPORTED_MODULE_2__sticky_list_header_layout_3__["a" /* StickyListHeaderLayout3 */]
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
         })
-    ], StickyListHeaderLayout2Module);
-    return StickyListHeaderLayout2Module;
+    ], StickyListHeaderLayout3Module);
+    return StickyListHeaderLayout3Module;
 }());
 
-//# sourceMappingURL=sticky-list-header-layout-2.module.js.map
+//# sourceMappingURL=sticky-list-header-layout-3.module.js.map
 
 /***/ }),
 
@@ -361,11 +361,11 @@ ScrollAdapter = (function () {
 
 /***/ }),
 
-/***/ 867:
+/***/ 869:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StickyListHeaderLayout2; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StickyListHeaderLayout3; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -379,14 +379,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var StickyListHeaderLayout2 = /** @class */ (function () {
-    function StickyListHeaderLayout2() {
+var StickyListHeaderLayout3 = /** @class */ (function () {
+    function StickyListHeaderLayout3() {
         this.slider = {};
     }
-    StickyListHeaderLayout2.prototype.ngOnChanges = function (changes) {
+    StickyListHeaderLayout3.prototype.ngOnChanges = function (changes) {
         this.data = changes['data'].currentValue;
     };
-    StickyListHeaderLayout2.prototype.onEvent = function (event, item, e) {
+    StickyListHeaderLayout3.prototype.onEvent = function (event, item, e) {
         if (e) {
             e.stopPropagation();
         }
@@ -397,25 +397,25 @@ var StickyListHeaderLayout2 = /** @class */ (function () {
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
-    ], StickyListHeaderLayout2.prototype, "data", void 0);
+    ], StickyListHeaderLayout3.prototype, "data", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
-    ], StickyListHeaderLayout2.prototype, "events", void 0);
+    ], StickyListHeaderLayout3.prototype, "events", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */])
-    ], StickyListHeaderLayout2.prototype, "content", void 0);
-    StickyListHeaderLayout2 = __decorate([
+    ], StickyListHeaderLayout3.prototype, "content", void 0);
+    StickyListHeaderLayout3 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'sticky-list-header-layout-2',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\sticky-list-header\layout-2\sticky-list-header.html"*/'<!-- Theme Sticky List Header - Product -->\n\n<ion-content no-padding>\n\n  <div *ngIf="data != null">\n\n    <ion-list *ngFor="let item of data.items">\n\n      <!--Text Header Top-->\n\n      <ion-list-header no-lines header-title text-capitalize ion-affix [content]="content">\n\n        {{item.groupName}}\n\n      </ion-list-header>\n\n      <ion-card *ngFor="let element of item.items">\n\n        <h2 card-title item-start text-wrap>{{element.title}}</h2>\n\n        <!--Big Card -->\n\n        <div images-gallery>\n\n          <div big-image>\n\n            <img [src]="element.image1" [alt]="element.title" />\n\n          </div>\n\n          <!--Gallery Card -->\n\n          <div list-images (click)="onEvent(\'onItemClick\', element.title, $event)">\n\n            <div images background-size [ngStyle]="{\'background-image\': \'url(\' + element.image2 + \')\'}" [title]="element.title"></div>\n\n            <div images background-size [ngStyle]="{\'background-image\': \'url(\' + element.image3 + \')\'}" [title]="element.title"></div>\n\n            <div images background-size [ngStyle]="{\'background-image\': \'url(\' + element.image4 + \')\'}" [title]="element.title"></div>\n\n          </div>\n\n        </div>\n\n\n\n        <!-- Card Content -->\n\n        <ion-card-content>\n\n          <ion-item no-padding no-lines transparent>\n\n            <span padding-left span-large>{{element.price}}</span>\n\n            <span new-category no-padding transparent text-uppercase text-wrap>{{element.subtitle}}</span>\n\n            <div margin-right button-block item-content>\n\n              <button box-shadow full ion-button default-button (click)="onEvent(\'onBuy\', \'Buy\', $event)">{{element.buy}}</button>\n\n            </div>\n\n          </ion-item>\n\n        </ion-card-content>\n\n      </ion-card>\n\n    </ion-list>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\sticky-list-header\layout-2\sticky-list-header.html"*/
+            selector: 'sticky-list-header-layout-3',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\sticky-list-header\layout-3\sticky-list-header.html"*/'<!-- Theme Sticky List Header - Post -->\n\n<ion-content no-padding>\n\n  <div *ngIf="data != null">\n\n    <ion-list *ngFor="let item of data.items">\n\n      <!--Text Header Top-->\n\n      <ion-list-header no-lines ion-affix [content]="content">\n\n        <ion-item transparent no-margin no-padding no-lines>\n\n          <h2 item-start no-margin header-title text-capitalize>{{item.groupName}}</h2>\n\n          <div item-content item-subtitle>\n\n            {{item.dateTime}}\n\n          </div>\n\n        </ion-item>\n\n      </ion-list-header>\n\n      <!--Text Content List -->\n\n      <ion-card no-margin *ngFor="let element of item.items" (click)="onEvent(\'onItemClick\', element.title, $event)">\n\n        <ion-item transparent no-lines>\n\n          <ion-thumbnail item-start>\n\n            <img [src]="element.image" [alt]="element.title" />\n\n          </ion-thumbnail>\n\n          <h2 item-title text-capitalize>{{element.name}}</h2>\n\n          <button item-end ion-button ion-text button-action-shit (click)="onEvent(\'onShare\', \'Share\', $event)">\n\n            <ion-icon [name]="element.shareIcon"></ion-icon>\n\n          </button>\n\n        </ion-item>\n\n        <ion-card-content>\n\n          <!--Content List Title -->\n\n          <h2 card-title margin-bottom>{{element.title}}</h2>\n\n          <!--Content List Subtitle -->\n\n          <p card-subtitle text-wrap>{{element.subtitle}}</p>\n\n        </ion-card-content>\n\n      </ion-card>\n\n    </ion-list>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\sticky-list-header\layout-3\sticky-list-header.html"*/
         }),
         __metadata("design:paramtypes", [])
-    ], StickyListHeaderLayout2);
-    return StickyListHeaderLayout2;
+    ], StickyListHeaderLayout3);
+    return StickyListHeaderLayout3;
 }());
 
-//# sourceMappingURL=sticky-list-header-layout-2.js.map
+//# sourceMappingURL=sticky-list-header-layout-3.js.map
 
 /***/ })
 

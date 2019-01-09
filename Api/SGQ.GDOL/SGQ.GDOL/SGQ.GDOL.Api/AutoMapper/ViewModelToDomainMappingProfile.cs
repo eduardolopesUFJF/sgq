@@ -29,8 +29,7 @@ namespace SGQ.GDOL.Api.AutoMapper
                 .ForMember(x => x.Status, opt => opt.MapFrom(x => x.Situacao == "Finalizado" ? 1 : 0));
 
             CreateMap<InspecaoObraVM, InspecaoObra>()
-                .ForMember(x => x.Status, opt => opt.MapFrom(x => x.Situacao == "Finalizado" ? 1 : 0))
-                .ForMember(x => x.Campo1, opt => opt.MapFrom(x => x.Local));
+                .ForMember(x => x.Status, opt => opt.MapFrom(x => x.Situacao == "Finalizado" ? 1 : 0));
             
         }
     }

@@ -7,7 +7,7 @@
                 </button>
             </ion-col>
             <ion-col col-10>
-                <ion-title>Verificação</ion-title>
+                <ion-title>Inspeção do Serviço</ion-title>
             </ion-col>
         </ion-row>
     </ion-navbar>
@@ -18,8 +18,8 @@
         <ion-row padding-left padding-right>
             <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
                 <form #cadastroForm="ngForm" padding-top>
-                    <ion-item text-center transparent style="padding-bottom: 0 !important;">
-                        <ion-label style="font-size: 22px !important; font-weight: bold;" stacked>{{descServico}}</ion-label>
+                    <ion-item text-center text-wrap transparent style="padding-bottom: 0 !important;">
+                        <ion-label style="font-size: 18px !important; font-weight: bold;" stacked>{{descServico.toUpperCase()}}</ion-label>
                     </ion-item>
                     <ion-item text-center transparent>
                         <ion-label stacked>INSPECIONADO POR</ion-label>
@@ -41,7 +41,7 @@
                                 <ion-col col-6>
                                     <ion-item radio>
                                         <ion-label>Em aberto</ion-label>
-                                        <ion-radio [value]="0" checked></ion-radio>
+                                        <ion-radio [value]="0"></ion-radio>
                                     </ion-item>
                                 </ion-col>
                                 <ion-col col-6>
@@ -106,10 +106,13 @@
                             </ion-row>
                         </ion-grid>
                     </ion-list>
-                    <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: black !important;"
-                        (click)="salvar(cadastroForm.valid)">Salvar</button>
                 </form>
             </ion-col>
         </ion-row>
     </ion-grid>
 </ion-content>
+
+<ion-footer>
+    <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: black !important;"
+    (click)="salvar(cadastroForm.valid)">Salvar</button>
+</ion-footer>

@@ -166,11 +166,19 @@ namespace SGQ.GDOL.Api.Controllers
                             {
                                 inspecaoCadastrada.DataEncerramento = inspecaoVM.DataEncerramento;
                                 inspecaoCadastrada.DataInspecao = inspecaoVM.DataInspecao;
-                                inspecaoCadastrada.Local = inspecaoVM.Local;
+                                inspecaoCadastrada.Campo1 = inspecaoVM.Campo1;
+                                inspecaoCadastrada.Campo2 = inspecaoVM.Campo2;
+                                inspecaoCadastrada.Campo3 = inspecaoVM.Campo3;
+                                inspecaoCadastrada.Campo4 = inspecaoVM.Campo4;
                                 inspecaoCadastrada.Delete = inspecaoVM.Delete;
                                 inspecaoCadastrada.IdFuncionarioAprovado = inspecaoVM.IdFuncionarioAprovado;
                                 inspecaoCadastrada.IdFuncionarioInspecionado = inspecaoVM.IdFuncionarioInspecionado;
                                 inspecaoCadastrada.Status = inspecaoVM.Status;
+                                for (int i = 0; i < inspecaoVM.InspecaoObraItens.ToArray().Length; i++)
+                                {
+                                    inspecaoCadastrada.InspecaoObraItens[i].Inspecao1 = inspecaoVM.InspecaoObraItens[i].Inspecao1;
+                                    inspecaoCadastrada.InspecaoObraItens[i].Inspecao2 = inspecaoVM.InspecaoObraItens[i].Inspecao2;
+                                }
                             }
                         }
                     }
@@ -295,7 +303,7 @@ namespace SGQ.GDOL.Api.Controllers
                 }
                 catch (Exception ex)
                 {
-                    status += "Falha ao " + (inspecaoVM.Id != 0 ? "editar" : "inserir") + " inspeção " + inspecaoVM.Local + " com id " + inspecaoVM.Id + "; ";
+                    status += "Falha ao " + (inspecaoVM.Id != 0 ? "editar" : "inserir") + " inspeção " + inspecaoVM.Campo1 + " com id " + inspecaoVM.Id + "; ";
                     continue;
                 }
             }

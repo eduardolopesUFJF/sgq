@@ -44,7 +44,17 @@ export class RealizarVerificacaoPage {
 
     salvar(valido: boolean) {
         if (valido) {
-            this.viewCtrl.dismiss(this.inspecao);
+            if (this.inspecao.status == 0) {
+                this.viewCtrl.dismiss(this.inspecao);
+            } else {
+                const naoFinalizado = this.inspecao.inspecaoObraItens.some(x =>
+                    x.inspecao1 == "" || (x.inspecao1 == "R" && x.inspecao2 == ""));
+                if (naoFinalizado) {
+                    this.toastService.presentToastWarning("Não é possível salvar com status de finalizado pois existem inspeções pendentes.");
+                } else {
+                    this.viewCtrl.dismiss(this.inspecao);
+                }
+            }
         } else {
             this.toastService.presentToastWarning("É obrigatório informar o funcionário da inspeção.");
         }

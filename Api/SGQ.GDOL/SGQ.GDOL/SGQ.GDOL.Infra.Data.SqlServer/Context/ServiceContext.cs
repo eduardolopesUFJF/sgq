@@ -22,6 +22,7 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Context
         public DbSet<ChecklistItem> ChecklistServico { get; set; }
         public DbSet<Funcionario> Funcionario { get; set; }
         public DbSet<InspecaoObraItem> InspecaoObraItem { get; set; }
+        public DbSet<UsuarioCentroCusto> UsuarioCentroCusto { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -35,6 +36,7 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Context
             modelBuilder.ApplyConfiguration(new ChecklistServicoMap());
             modelBuilder.ApplyConfiguration(new FuncionarioMap());
             modelBuilder.ApplyConfiguration(new InspecaoObraItemMap());
+            modelBuilder.ApplyConfiguration(new UsuarioCentroCustoMap());
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

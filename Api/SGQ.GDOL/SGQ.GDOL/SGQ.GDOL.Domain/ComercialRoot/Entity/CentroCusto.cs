@@ -1,4 +1,5 @@
 ﻿using SGQ.GDOL.Domain.ObraRoot.Entity;
+using SGQ.GDOL.Domain.UsuarioRoot.Entity;
 using System.Collections.Generic;
 
 namespace SGQ.GDOL.Domain.ComercialRoot.Entity
@@ -11,5 +12,6 @@ namespace SGQ.GDOL.Domain.ComercialRoot.Entity
         public bool? Delete { get; set; }
 
         public virtual ICollection<Obra> Obras { get; set; }
+        public virtual ICollection<UsuarioCentroCusto> Usuarios { get; set; }
     }
 }

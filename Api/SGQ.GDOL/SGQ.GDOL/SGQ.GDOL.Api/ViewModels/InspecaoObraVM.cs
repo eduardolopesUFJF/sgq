@@ -10,7 +10,10 @@ namespace SGQ.GDOL.Api.ViewModels
         public int? IdServico { get; set; }
         public DateTime? DataInspecao { get; set; }
         public DateTime? DataEncerramento { get; set; }
-        public string Local { get; set; }
+        public string Campo1 { get; set; }
+        public string Campo2 { get; set; }
+        public string Campo3 { get; set; }
+        public string Campo4 { get; set; }
         public int? IdFuncionarioAprovado { get; set; }
         public string FuncionarioAprovado { get; set; }
         public int? IdFuncionarioInspecionado { get; set; }

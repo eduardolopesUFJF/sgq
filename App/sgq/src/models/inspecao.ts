@@ -7,7 +7,10 @@ export class Inspecao {
     idServico: number;
     dataInspecao: Date;
     dataEncerramento: Date;
-    local: string = "";
+    campo1: string = "";
+    campo2: string = "";
+    campo3: string = "";
+    campo4: string = "";
     idFuncionarioAprovado: number;
     idFuncionarioInspecionado: number;
     status: number = 0;

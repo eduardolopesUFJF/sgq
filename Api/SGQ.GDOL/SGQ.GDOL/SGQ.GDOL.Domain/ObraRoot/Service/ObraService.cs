@@ -21,9 +21,9 @@ namespace SGQ.GDOL.Domain.ObraRoot.Service
             return result;
         }
 
-        public List<Obra> ObterTodasAtivasSemInclude()
+        public List<Obra> ObterTodasAtivasSemInclude(string usuario)
         {
-            var result = _obraRepository.ObterTodasAtivasSemInclude().ToList();
+            var result = _obraRepository.ObterTodasAtivasSemInclude(usuario).ToList();
             return result;
         }
     }

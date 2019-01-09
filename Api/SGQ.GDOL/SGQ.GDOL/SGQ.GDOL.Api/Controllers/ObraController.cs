@@ -22,38 +22,13 @@ namespace SGQ.GDOL.Api.Controllers
         {
             _obraService = obraService;
         }
-
-        [HttpGet]
-        public async Task<IActionResult> Get()
+        
+        [HttpGet("ids/{usuario}")]
+        public IActionResult GetIds(string usuario)
         {
             try
             {
-                var resultBD = _obraService.ObterTodasAtivasSemInclude();
-
-                List<Task<Obra>> consultas = new List<Task<Obra>>();
-                foreach (var obra in resultBD)
-                {
-                    Task<Obra> task = Task.Run(() => _obraService.ObterObraComInclude(obra));
-                    consultas.Add(task);
-                }
-
-                var result = await Task.WhenAll(consultas.ToArray());
-
-                var resultVM = Mapper.Map<List<ObraVM>>(result);
-                return Ok(resultVM);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-        }
-
-        [HttpGet("ids")]
-        public IActionResult GetIds()
-        {
-            try
-            {
-                var ids = _obraService.ObterTodasAtivasSemInclude().Select(x => x.Id).ToArray();
+                var ids = _obraService.ObterTodasAtivasSemInclude(usuario).Select(x => x.Id).ToArray();
                 return Ok(ids);
             }
             catch (Exception ex)

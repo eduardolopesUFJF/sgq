@@ -4,7 +4,7 @@ using SGQ.GDOL.Domain.ObraRoot.Entity;
 
 namespace SGQ.GDOL.Infra.Data.SqlServer.Mappings
 {
-    class ObraMap : IEntityTypeConfiguration<Obra>
+    public class ObraMap : IEntityTypeConfiguration<Obra>
     {
         public void Configure(EntityTypeBuilder<Obra> entity)
         {
