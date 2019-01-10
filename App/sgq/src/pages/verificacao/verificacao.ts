@@ -21,6 +21,7 @@ export class VerificacaoPage {
     itemChecklist: ItemChecklist = new ItemChecklist();
     inspecoes: Inspecao[] = [];
     inspecoesBackup: Inspecao[] = [];
+    itensBackup: ItemInspecao[] = [];
     broadcomb: string;
 
     constructor(
@@ -80,19 +81,28 @@ export class VerificacaoPage {
 
     abrirItensInspecao(inspecao: Inspecao) {
         let modal = this.modalCtrl.create("RealizarVerificacaoPage", { inspecao: inspecao, descServico: this.broadcomb });
+        this.itensBackup = [];
+        inspecao.inspecaoObraItens.forEach(element => {
+            this.itensBackup.push(new ItemInspecao(element));
+        });
         modal.present();
 
-        modal.onWillDismiss((inspecao: Inspecao) => {
-            if (inspecao) {
-                inspecao.qtdA = inspecao.inspecaoObraItens.filter(x => x.inspecao1 == 'A').length;
-                inspecao.qtdNA = inspecao.inspecaoObraItens.filter(x => x.inspecao1 == 'NA').length;
-                inspecao.qtdR = inspecao.inspecaoObraItens.filter(x => x.inspecao1 == 'R').length;
-                inspecao.qtdX = inspecao.inspecaoObraItens.filter(x => x.inspecao1 == 'X').length;
-                inspecao.qtdRA = inspecao.inspecaoObraItens.filter(x => x.inspecao2 == 'RA').length;
-                let index = this.inspecoesBackup.findIndex(x => inspecao.id != 0 ? (x.id == inspecao.id) : (x.idGuidInspecao == inspecao.idGuidInspecao));
-                this.inspecoesBackup[index] = inspecao;
+        modal.onWillDismiss((data: any) => {
+            if (data.concluido) {
+                data.inspecao.qtdA = data.inspecao.inspecaoObraItens.filter(x => x.inspecao1 == 'A').length;
+                data.inspecao.qtdNA = data.inspecao.inspecaoObraItens.filter(x => x.inspecao1 == 'NA').length;
+                data.inspecao.qtdR = data.inspecao.inspecaoObraItens.filter(x => x.inspecao1 == 'R').length;
+                data.inspecao.qtdX = data.inspecao.inspecaoObraItens.filter(x => x.inspecao1 == 'X').length;
+                data.inspecao.qtdRA = data.inspecao.inspecaoObraItens.filter(x => x.inspecao2 == 'RA').length;
+                let index = this.inspecoesBackup.findIndex(x => data.inspecao.id != 0 ? (x.id == data.inspecao.id) : (x.idGuidInspecao == data.inspecao.idGuidInspecao));
+                this.inspecoesBackup[index] = data.inspecao;
                 this.inspecoes = [...this.inspecoesBackup];
-                this.editarInspecao(inspecao, "Realização da verificação");
+                this.editarInspecao(data.inspecao, "Realização da verificação");
+            } else {
+                data.inspecao.inspecaoObraItens = [...this.itensBackup];
+                let index = this.inspecoesBackup.findIndex(x => data.inspecao.id != 0 ? (x.id == data.inspecao.id) : (x.idGuidInspecao == data.inspecao.idGuidInspecao));
+                this.inspecoesBackup[index] = data.inspecao;
+                this.inspecoes = [...this.inspecoesBackup];
             }
         });
     }

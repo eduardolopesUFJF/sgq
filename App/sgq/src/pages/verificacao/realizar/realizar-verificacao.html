@@ -60,25 +60,25 @@
                                 <ion-col col-3>
                                     <ion-item radio style="background-color: blue;">
                                         <ion-label>NA</ion-label>
-                                        <ion-radio [value]="'NA'" checked></ion-radio>
+                                        <ion-radio [value]="'NA'" (ionSelect)="verificaLimparNA1(item)"></ion-radio>
                                     </ion-item>
                                 </ion-col>
                                 <ion-col col-3>
                                     <ion-item radio style="background-color: darkgreen;">
                                         <ion-label>A</ion-label>
-                                        <ion-radio [value]="'A'"></ion-radio>
+                                        <ion-radio [value]="'A'" (ionSelect)="verificaLimparA1(item)"></ion-radio>
                                     </ion-item>
                                 </ion-col>
                                 <ion-col col-3>
                                     <ion-item radio style="background-color: yellow;">
                                         <ion-label>R</ion-label>
-                                        <ion-radio [value]="'R'"></ion-radio>
+                                        <ion-radio [value]="'R'" (ionSelect)="verificaLimparR1(item)"></ion-radio>
                                     </ion-item>
                                 </ion-col>
                                 <ion-col col-3>
                                     <ion-item radio style="background-color: red;">
                                         <ion-label>X</ion-label>
-                                        <ion-radio [value]="'X'"></ion-radio>
+                                        <ion-radio [value]="'X'" (ionSelect)="verificaLimparX1(item)"></ion-radio>
                                     </ion-item>
                                 </ion-col>
                             </ion-row>
@@ -90,13 +90,13 @@
                                             <ion-col col-3>
                                                 <ion-item radio style="background-color: orange;">
                                                     <ion-label>RA</ion-label>
-                                                    <ion-radio [value]="'RA'" checked></ion-radio>
+                                                    <ion-radio [value]="'RA'" (ionSelect)="verificaLimparRA2(item)"></ion-radio>
                                                 </ion-item>
                                             </ion-col>
                                             <ion-col col-3>
                                                 <ion-item radio style="background-color: red;">
                                                     <ion-label>X</ion-label>
-                                                    <ion-radio [value]="'X'"></ion-radio>
+                                                    <ion-radio [value]="'X'" (ionSelect)="verificaLimparX2(item)"></ion-radio>
                                                 </ion-item>
                                             </ion-col>
                                             <ion-col col-3></ion-col>
