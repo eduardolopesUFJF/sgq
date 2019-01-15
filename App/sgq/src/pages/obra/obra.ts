@@ -4,7 +4,6 @@ import { ObraService } from '../../services/obra.service';
 import { LoadingService } from '../../utils/loading-service';
 import { ToastService } from '../../utils/toast-service';
 import { Obra } from '../../models/obra';
-import { Area } from '../../models/area';
 import { Storage } from '@ionic/storage';
 import { MessageService } from '../../utils/message-service';
 

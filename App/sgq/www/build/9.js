@@ -1,14 +1,14 @@
-webpackJsonp([9,69],{
+webpackJsonp([9,71],{
 
-/***/ 717:
+/***/ 718:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppearanceAnimationLayout5Module", function() { return AppearanceAnimationLayout5Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_5__ = __webpack_require__(814);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_5__ = __webpack_require__(817);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(158);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -29,7 +29,7 @@ var AppearanceAnimationLayout5Module = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_5__["a" /* AppearanceAnimationLayout5 */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_5__["a" /* AppearanceAnimationLayout5 */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_5__["a" /* AppearanceAnimationLayout5 */]),
                 __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["a" /* IonicStorageModule */].forRoot()
             ],
             exports: [
@@ -45,16 +45,16 @@ var AppearanceAnimationLayout5Module = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 792:
+/***/ 790:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ItemAreaPageModule", function() { return ItemAreaPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AreaPageModule", function() { return AreaPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__item_area__ = __webpack_require__(917);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_list_view_appearance_animation_layout_5_appearance_animation_layout_5_module__ = __webpack_require__(717);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__area__ = __webpack_require__(918);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_list_view_appearance_animation_layout_5_appearance_animation_layout_5_module__ = __webpack_require__(718);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -65,35 +65,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ItemAreaPageModule = /** @class */ (function () {
-    function ItemAreaPageModule() {
+var AreaPageModule = /** @class */ (function () {
+    function AreaPageModule() {
     }
-    ItemAreaPageModule = __decorate([
+    AreaPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__item_area__["a" /* ItemAreaPage */],
+                __WEBPACK_IMPORTED_MODULE_2__area__["a" /* AreaPage */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__item_area__["a" /* ItemAreaPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__area__["a" /* AreaPage */]),
                 __WEBPACK_IMPORTED_MODULE_3__core_list_view_appearance_animation_layout_5_appearance_animation_layout_5_module__["AppearanceAnimationLayout5Module"]
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
         })
-    ], ItemAreaPageModule);
-    return ItemAreaPageModule;
+    ], AreaPageModule);
+    return AreaPageModule;
 }());
 
-//# sourceMappingURL=item-area.module.js.map
+//# sourceMappingURL=area.module.js.map
 
 /***/ }),
 
-/***/ 814:
+/***/ 817:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppearanceAnimationLayout5; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(158);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -194,7 +194,7 @@ var AppearanceAnimationLayout5 = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 826:
+/***/ 818:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -211,7 +211,7 @@ var Alteracao = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 827:
+/***/ 819:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -255,43 +255,20 @@ exports.UUID = UUID;
 
 /***/ }),
 
-/***/ 842:
+/***/ 918:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Area; });
-var Area = /** @class */ (function () {
-    function Area(values) {
-        if (values === void 0) { values = {}; }
-        this.id = 0;
-        this.idGuid = '';
-        this.idObra = 0;
-        this.status = 0;
-        this.situacao = 'Em aberto';
-        this.delete = false;
-        this.servicos = [];
-        Object.assign(this, values);
-    }
-    return Area;
-}());
-
-//# sourceMappingURL=area.js.map
-
-/***/ }),
-
-/***/ 917:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ItemAreaPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AreaPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_message_service__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(158);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_alteracao__ = __webpack_require__(826);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_uuid__ = __webpack_require__(827);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_uuid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_angular2_uuid__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__models_area__ = __webpack_require__(842);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(158);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_alteracao__ = __webpack_require__(818);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_message_service__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_loading_service__ = __webpack_require__(160);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__ = __webpack_require__(819);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_uuid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_angular2_uuid__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__models_obra__ = __webpack_require__(919);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -308,55 +285,67 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var ItemAreaPage = /** @class */ (function () {
-    function ItemAreaPage(navParams, messageService, navCtrl, storage) {
+
+var AreaPage = /** @class */ (function () {
+    function AreaPage(navCtrl, storage, alertCtrl, messageService, navParams, modalCtrl, loadingService) {
         var _this = this;
-        this.navParams = navParams;
-        this.messageService = messageService;
         this.navCtrl = navCtrl;
         this.storage = storage;
-        this.area = new __WEBPACK_IMPORTED_MODULE_6__models_area__["a" /* Area */]();
+        this.alertCtrl = alertCtrl;
+        this.messageService = messageService;
+        this.navParams = navParams;
+        this.modalCtrl = modalCtrl;
+        this.loadingService = loadingService;
+        this.areas = [];
+        this.obra = new __WEBPACK_IMPORTED_MODULE_7__models_obra__["a" /* Obra */]();
+        this.reload = true;
         this.events = {
             onItemClick: function (data) {
-                _this.abrirVerificacoes(data);
+                _this.abrirServicos(data);
             },
             onIconClick: function (data) {
                 _this.confirmarExclusao(data);
+            },
+            onAddClick: function () {
+                _this.addArea();
             }
         };
         this.config = {
             "exclusaoPossivel": true,
             "icon": "trash",
-            "exibirDatas": false,
-            "tipo": true,
+            "tipo": false,
+            "exibirDatas": true,
+            "btnNovoLabel": "Adicionar área",
             "subTitulo": "Situação",
-            "alteracoes": false,
             "broadcomb": ""
         };
-        this.area = this.navParams.data.area;
-        this.config.broadcomb = this.navParams.data.obra + " >> " + this.area.descricao;
+        this.obra = this.navParams.data.obra;
+        this.areas = this.navParams.data.obra.areas;
+        this.obraId = this.obra.id;
+        this.config.broadcomb = this.obra.descricao;
     }
-    ItemAreaPage.prototype.abrirVerificacoes = function (servico) {
-        this.navCtrl.push("VerificacaoPage", { servico: servico, broadcomb: this.config.broadcomb });
+    AreaPage.prototype.abrirServicos = function (area) {
+        this.navCtrl.push("ItemAreaPage", { area: area, obra: this.obra.descricao });
     };
-    ItemAreaPage.prototype.confirmarExclusao = function (item) {
+    AreaPage.prototype.confirmarExclusao = function (area) {
         var _this = this;
         var mensagem;
-        if (!item.delete) {
-            mensagem = "Deseja realmente excluir o item '" + item.descricao + "'?";
+        if (!area.delete) {
+            mensagem = "Deseja realmente excluir a área '" + area.descricao + "'?";
         }
         else {
-            mensagem = "Deseja realmente reativar o item '" + item.descricao + "'?";
+            mensagem = "Deseja realmente reativar a área '" + area.descricao + "'?";
         }
-        this.messageService.exibirMensagemConfirmacao(mensagem, function () { _this.alterarSituacaoArea(item); });
+        this.messageService.exibirMensagemConfirmacao(mensagem, function () { _this.alterarSituacaoArea(area); });
     };
-    ItemAreaPage.prototype.alterarSituacaoArea = function (item) {
+    AreaPage.prototype.alterarSituacaoArea = function (area) {
         var _this = this;
         this.storage.ready().then(function () {
             var atualizacoesArray = [];
             _this.storage.get('atualizacoes').then(function (atualizacoes) {
-                item.delete = !item.delete;
-                var alteracao = new __WEBPACK_IMPORTED_MODULE_4__models_alteracao__["a" /* Alteracao */]({ id: __WEBPACK_IMPORTED_MODULE_5_angular2_uuid__["UUID"].UUID(), idServico: item.id, idGuidServico: item.idGuidServico, idArea: _this.area.id, idGuidArea: _this.area.idGuid, tipo: "Update", entidade: "Servico", valor: JSON.stringify(item), data: new Date(), descricao: (item.delete ? "Inativação" : "Ativação") + " do serviço '" + item.descricao + "' na área '" + _this.area.descricao + "'.", obraId: _this.area.idObra });
+                area.delete = !area.delete;
+                area.idObra = _this.obraId;
+                var alteracao = new __WEBPACK_IMPORTED_MODULE_3__models_alteracao__["a" /* Alteracao */]({ id: __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__["UUID"].UUID(), idArea: area.id, idGuidArea: area.idGuid, tipo: "Update", entidade: "Area", valor: JSON.stringify(area), data: new Date(), descricao: (area.delete ? "Inativação" : "Ativação") + " da área '" + area.descricao + "'.", obraId: _this.obraId });
                 if (atualizacoes) {
                     atualizacoesArray = atualizacoes;
                     atualizacoesArray.push(alteracao);
@@ -365,32 +354,72 @@ var ItemAreaPage = /** @class */ (function () {
                     atualizacoesArray.push(alteracao);
                 }
                 _this.storage.set('atualizacoes', atualizacoesArray);
-                _this.atualizarObra(item);
+                _this.atualizarObra(area);
             });
         });
     };
-    ItemAreaPage.prototype.atualizarObra = function (item) {
+    AreaPage.prototype.atualizarObra = function (area) {
         var _this = this;
         this.storage.ready().then(function () {
             _this.storage.get('obras').then(function (obras) {
-                obras.find(function (x) { return x.id == _this.area.idObra; }).areas.find(function (x) { return _this.area.idGuid ? (x.idGuid == _this.area.idGuid) : (x.id == _this.area.id); }).servicos.find(function (x) { return item.idGuidServico ? (x.idGuid == item.idGuidServico) : (x.id == item.id); }).delete = item.delete;
+                obras.find(function (x) { return x.id == _this.obraId; }).areas.find(function (x) { return area.idGuid ? (x.idGuid == area.idGuid) : (x.id == area.id); }).delete = area.delete;
                 _this.storage.set('obras', obras);
             });
         });
     };
-    ItemAreaPage = __decorate([
+    AreaPage.prototype.addArea = function () {
+        var _this = this;
+        var modal = this.modalCtrl.create("AreaCadastroPage", { obraId: this.obraId });
+        modal.present();
+        modal.onWillDismiss(function (area) {
+            if (area) {
+                _this.areas.unshift(area);
+                _this.reload = false;
+                _this.loadingService.show();
+                setTimeout(function () {
+                    _this.reload = true;
+                    _this.loadingService.hide();
+                }, 700);
+            }
+        });
+    };
+    AreaPage.prototype.voltarHome = function () {
+        this.navCtrl.setRoot("HomePage");
+    };
+    AreaPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-item-area',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\item-area\item-area.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <button ion-button menuToggle>\n\n            <ion-icon class="icon-menu" name="menu"></ion-icon>\n\n        </button>\n\n        <div buy>\n\n            <ion-title>\n\n                Área - Itens\n\n            </ion-title>\n\n        </div>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<appearance-animation-layout-5 has-header [data]="area.servicos" [events]="events" [config]="config"></appearance-animation-layout-5>'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\item-area\item-area.html"*/
+            selector: 'page-area',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\area\area.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <ion-row>\n\n            <ion-col col-2>\n\n                <button ion-button menuToggle>\n\n                    <ion-icon class="icon-menu" name="menu"></ion-icon>\n\n                </button>\n\n            </ion-col>\n\n            <ion-col col-8 m-auto>\n\n                <div buy>\n\n                    <ion-title>\n\n                        Áreas\n\n                    </ion-title>\n\n                </div>\n\n            </ion-col>\n\n            <ion-col col-2>\n\n                <div buy (click)="voltarHome()">\n\n                    <ion-icon class="icon-menu home-icon" name="home"></ion-icon>\n\n                </div>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<appearance-animation-layout-5 *ngIf="reload" has-header [data]="areas" [events]="events" [config]="config"></appearance-animation-layout-5>'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\area\area.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_2__utils_message_service__["a" /* MessageService */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */]])
-    ], ItemAreaPage);
-    return ItemAreaPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_4__utils_message_service__["a" /* MessageService */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ModalController */],
+            __WEBPACK_IMPORTED_MODULE_5__utils_loading_service__["a" /* LoadingService */]])
+    ], AreaPage);
+    return AreaPage;
 }());
 
-//# sourceMappingURL=item-area.js.map
+//# sourceMappingURL=area.js.map
+
+/***/ }),
+
+/***/ 919:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Obra; });
+var Obra = /** @class */ (function () {
+    function Obra(values) {
+        if (values === void 0) { values = {}; }
+        this.areas = [];
+        Object.assign(this, values);
+    }
+    return Obra;
+}());
+
+//# sourceMappingURL=obra.js.map
 
 /***/ })
 

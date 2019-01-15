@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
-import { IonicPage, ViewController, NavParams } from 'ionic-angular';
+import { IonicPage, ViewController, NavParams, ModalController, NavController } from 'ionic-angular';
 import { Inspecao } from '../../../models/inspecao';
 import { Funcionario } from '../../../models/funcionario';
 import { Storage } from '@ionic/storage';
 import { ToastService } from '../../../utils/toast-service';
 import { ItemInspecao } from '../../../models/item-inspecao';
+import { Servico } from '../../../models/servico';
+import { IonicSelectableComponent } from 'ionic-selectable';
 
 @IonicPage()
 @Component({
@@ -15,24 +17,42 @@ import { ItemInspecao } from '../../../models/item-inspecao';
 export class RealizarVerificacaoPage {
 
     inspecao: Inspecao = new Inspecao();
+    servico: Servico = new Servico();
     descServico: string = '';
     funcionarios: Funcionario[] = [];
+    funcionarioInspecionado: Funcionario = new Funcionario();
+    funcionarioAprovado: Funcionario = new Funcionario();
     limpaNA1: boolean = false;
     limpaA1: boolean = false;
     limpaR1: boolean = false;
     limpaX1: boolean = false;
     limpaRA2: boolean = false;
     limpaX2: boolean = false;
+    ultimoItem: ItemInspecao = new ItemInspecao();
+    dataDescricao: Date;
+    dataTratativa: Date;
 
     constructor(
         public viewCtrl: ViewController,
         public storage: Storage,
         public toastService: ToastService,
-        public navParams: NavParams
+        public modalCtrl: ModalController,
+        public navParams: NavParams,
+        public navCtrl: NavController
     ) {
-        this.inspecao = this.navParams.data.inspecao;
         this.descServico = this.navParams.data.descServico;
+        this.servico = this.navParams.data.servico;
+        this.inspecao = this.navParams.data.inspecao;
         this.obterFuncionarios();
+        this.alterarPlaceholder();
+    }
+
+    setaFuncionarioInspecionado(event: {component: IonicSelectableComponent, value: any}) {
+        this.inspecao.idFuncionarioInspecionado = event.value.id;
+    }
+
+    setaFuncionarioAprovado(event: {component: IonicSelectableComponent, value: any}) {
+        this.inspecao.idFuncionarioAprovado = event.value.id;
     }
 
     obterFuncionarios() {
@@ -40,6 +60,8 @@ export class RealizarVerificacaoPage {
             this.storage.get('funcionarios').then(
                 funcionarios => {
                     this.funcionarios = funcionarios;
+                    this.funcionarioAprovado = this.funcionarios.find(x => x.id == this.inspecao.idFuncionarioAprovado);
+                    this.funcionarioInspecionado = this.funcionarios.find(x => x.id == this.inspecao.idFuncionarioInspecionado);
                 }
             );
         });
@@ -52,14 +74,13 @@ export class RealizarVerificacaoPage {
     salvar(valido: boolean) {
         if (valido) {
             if (this.inspecao.status == 0) {
-                this.viewCtrl.dismiss(this.inspecao);
+                this.viewCtrl.dismiss({ inspecao: this.inspecao, concluido: true });
             } else {
-                const naoFinalizado = this.inspecao.inspecaoObraItens.some(x =>
-                    x.inspecao1 == "" || (x.inspecao1 == "R" && x.inspecao2 == ""));
+                const naoFinalizado = this.inspecao.inspecaoObraItens.some(x => x.inspecao1 == "" || (x.inspecao1 == "R" && x.inspecao2 == ""));
                 if (naoFinalizado) {
                     this.toastService.presentToastWarning("Não é possível salvar com status de finalizado pois existem inspeções pendentes.");
                 } else {
-                    this.viewCtrl.dismiss(this.inspecao);
+                    this.viewCtrl.dismiss({ inspecao: this.inspecao, concluido: true });
                 }
             }
         } else {
@@ -71,75 +92,15 @@ export class RealizarVerificacaoPage {
         this.viewCtrl.dismiss({ inspecao: this.inspecao, concluido: false });
     }
 
-    verificaLimparNA1(item: ItemInspecao) {
-        this.limpaA1 = false;
-        this.limpaR1 = false;
-        this.limpaX1 = false;
-        if (this.limpaNA1) {
-            item.inspecao1 = '';
-            this.limpaNA1 = false;
-        } else {
-            this.limpaNA1 = true;
-        }
-        item.inspecao2 = "";
+    abrirOcorrencias() {
+        this.navCtrl.push("OcorrenciaPage", { inspecao: this.inspecao, broadcomb: this.descServico, servico: this.servico });
     }
 
-    verificaLimparA1(item: ItemInspecao) {
-        this.limpaNA1 = false;
-        this.limpaR1 = false;
-        this.limpaX1 = false;
-        if (this.limpaA1) {
-            item.inspecao1 = '';
-            this.limpaA1 = false;
-        } else {
-            this.limpaA1 = true;
-        }
-        item.inspecao2 = "";
-    }
-
-    verificaLimparR1(item: ItemInspecao) {
-        this.limpaA1 = false;
-        this.limpaNA1 = false;
-        this.limpaX1 = false;
-        if (this.limpaR1) {
-            item.inspecao1 = '';
-            this.limpaR1 = false;
-        } else {
-            this.limpaR1 = true;
-        }
-        item.inspecao2 = "";
-    }
-
-    verificaLimparX1(item: ItemInspecao) {
-        this.limpaA1 = false;
-        this.limpaR1 = false;
-        this.limpaNA1 = false;
-        if (this.limpaX1) {
-            item.inspecao1 = '';
-            this.limpaX1 = false;
-        } else {
-            this.limpaX1 = true;
-        }
-        item.inspecao2 = "";
-    }
-
-    verificaLimparRA2(item: ItemInspecao) {
-        this.limpaX2 = false;
-        if (this.limpaRA2) {
-            item.inspecao2 = '';
-            this.limpaRA2 = false;
-        } else {
-            this.limpaRA2 = true;
-        }
-    }
-
-    verificaLimparX2(item: ItemInspecao) {
-        this.limpaRA2 = false;
-        if (this.limpaX2) {
-            item.inspecao2 = '';
-            this.limpaX2 = false;
-        } else {
-            this.limpaX2 = true;
+    alterarPlaceholder() {
+        var element = document.getElementsByClassName('searchbar-input');
+        for (let index = 0; index < element.length; index++) {
+            const elemento = element[index];
+            // elemento.setAttribute('placeholder') = 'Buscar';
         }
     }
 

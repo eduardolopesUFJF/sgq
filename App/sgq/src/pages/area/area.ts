@@ -121,4 +121,8 @@ export class AreaPage {
         });
     }
 
+    voltarHome() {
+        this.navCtrl.setRoot("HomePage");
+    }
+
 }

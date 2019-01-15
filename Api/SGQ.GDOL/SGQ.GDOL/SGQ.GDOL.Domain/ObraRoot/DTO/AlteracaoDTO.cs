@@ -20,6 +20,9 @@ namespace SGQ.GDOL.Domain.ObraRoot.DTO
         public int IdInspecao { get; set; }
         public string IdGuidInspecao { get; set; }
 
+        public int IdOcorrencia { get; set; }
+        public string IdGuidOcorrencia { get; set; }
+
         public string Valor { get; set; }
     }
 }

@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-navbar>
+        <ion-row>
+            <ion-col col-2>
+                <button class="button-nav" (click)="voltar()">
+                    <span ion-text style="font-size: 0.7em;">Voltar</span>
+                </button>
+            </ion-col>
+            <ion-col col-10 m-auto>
+                <ion-title>Ocorrência</ion-title>
+            </ion-col>
+        </ion-row>
+    </ion-navbar>
+</ion-header>
+
+<ion-content has-header>
+    <ion-grid no-padding>
+        <ion-row padding-left padding-right>
+            <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
+                <form #cadastroForm="ngForm" padding-top>
+                    <ion-item text-center transparent>
+                        <ion-label stacked>DATA DA DESCRIÇÃO</ion-label>
+                        <ion-datetime displayFormat="DD/MM/YYYY" name="dataDescricao" [(ngModel)]="ocorrencia.dataDescricao"
+                            cancelText="Cancelar" doneText="Ok" required></ion-datetime>
+                    </ion-item>
+                    <ion-item text-center transparent>
+                        <ion-label stacked>DESCRIÇÃO</ion-label>
+                        <ion-input text-center type="text" [(ngModel)]="ocorrencia.descricao" name="descricao" required></ion-input>
+                    </ion-item>
+                    <ion-item text-center transparent>
+                        <ion-label stacked>DATA DA TRATATIVA</ion-label>
+                        <ion-datetime displayFormat="DD/MM/YYYY" name="dataTratativa" [(ngModel)]="ocorrencia.dataTratativa"
+                            cancelText="Cancelar" doneText="Ok"></ion-datetime>
+                    </ion-item>
+                    <ion-item text-center transparent>
+                        <ion-label stacked>TRATATIVA</ion-label>
+                        <ion-input text-center type="text" [(ngModel)]="ocorrencia.tratativa" name="tratativa"></ion-input>
+                    </ion-item>
+                    <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: rgb(33,177,75) !important;"
+                        (click)="salvar(cadastroForm.valid)">Salvar</button>
+                </form>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

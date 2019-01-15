@@ -30,5 +30,6 @@ namespace SGQ.GDOL.Api.ViewModels
         public int QtdX { get; set; }
 
         public List<InspecaoObraItemVM> InspecaoObraItens { get; set; }
+        public List<OcorrenciaVM> Ocorrencias { get; set; }
     }
 }

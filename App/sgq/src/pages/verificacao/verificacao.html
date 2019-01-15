@@ -1,13 +1,24 @@
 <ion-header>
     <ion-navbar>
-        <button ion-button menuToggle>
-            <ion-icon class="icon-menu" name="menu"></ion-icon>
-        </button>
-        <div buy>
-            <ion-title>
-                Localização do Serviço
-            </ion-title>
-        </div>
+        <ion-row>
+            <ion-col col-2>
+                <button ion-button menuToggle>
+                    <ion-icon class="icon-menu" name="menu"></ion-icon>
+                </button>
+            </ion-col>
+            <ion-col col-8 m-auto>
+                <div buy>
+                    <ion-title>
+                        Localização do Serviço
+                    </ion-title>
+                </div>
+            </ion-col>
+            <ion-col col-2>
+                <div buy (click)="voltarHome()">
+                    <ion-icon class="icon-menu home-icon" name="home"></ion-icon>
+                </div>
+            </ion-col>
+        </ion-row>
     </ion-navbar>
 </ion-header>
 
@@ -24,25 +35,48 @@
                 <ion-searchbar [placeholder]="'Filtrar pelo local'" (ionInput)="filtrar($event.target.value)"></ion-searchbar>
             </ion-col>
             <ion-col col-12>
+                <ion-list radio-group no-margin [(ngModel)]="servico.status" name="status" (ngModelChange)="atualizarStatus()">
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col col-6>
+                                <ion-item radio>
+                                    <ion-label text-center>Em aberto</ion-label>
+                                    <ion-radio [value]="0"></ion-radio>
+                                </ion-item>
+                            </ion-col>
+                            <ion-col col-6>
+                                <ion-item radio>
+                                    <ion-label text-center>Finalizado</ion-label>
+                                    <ion-radio [value]="1"></ion-radio>
+                                </ion-item>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </ion-list>
+            </ion-col>
+            <ion-col col-12>
                 <ion-list no-margin>
-                    <ion-item default-item no-lines [ngClass]="{'novo-item': !item.id}" *ngFor="let item of inspecoes; let i = index;">
+                    <ion-item default-item no-lines [ngClass]="{'novo-item': !item.id, 'item-removido': item.delete}"
+                        *ngFor="let item of inspecoes; let i = index;">
                         <ion-row class="espacamento">
                             <ion-col col-10 (click)="abrirItensInspecao(item)">
-                                <h2 item-title text-wrap *ngIf="itemChecklist.campo1">{{itemChecklist.campo1}}: {{item.campo1}}</h2>
-                                <h2 item-title text-wrap *ngIf="itemChecklist.campo2">{{itemChecklist.campo2}}: {{item.campo2}}</h2>
-                                <h2 item-title text-wrap *ngIf="itemChecklist.campo3">{{itemChecklist.campo3}}: {{item.campo3}}</h2>
-                                <h2 item-title text-wrap *ngIf="itemChecklist.campo4">{{itemChecklist.campo4}}: {{item.campo4}}</h2>
+                                <h2 item-title text-wrap *ngIf="itemChecklist.campo1">{{itemChecklist.campo1}}:
+                                    {{item.campo1}}</h2>
+                                <h2 item-title text-wrap *ngIf="itemChecklist.campo2">{{itemChecklist.campo2}}:
+                                    {{item.campo2}}</h2>
+                                <h2 item-title text-wrap *ngIf="itemChecklist.campo3">{{itemChecklist.campo3}}:
+                                    {{item.campo3}}</h2>
+                                <h2 item-title text-wrap *ngIf="itemChecklist.campo4">{{itemChecklist.campo4}}:
+                                    {{item.campo4}}</h2>
                                 <h3 item-situacao text-wrap>Situação: {{item.situacao}}</h3>
-                                <h3 item-situacao text-wrap>Abertura: {{item.dataInspecao ? (item.dataInspecao | date: 'dd/MM/yyyy') : 'Não informada'}}</h3>
-                                <h3 item-situacao text-wrap>Encerramento: {{item.dataEncerramento ? (item.dataEncerramento | date: 'dd/MM/yyyy') : 'Não informada'}}</h3>
+                                <h3 item-situacao text-wrap>Abertura: {{item.dataInspecao ? (item.dataInspecao | date:
+                                    'dd/MM/yyyy') : 'Não informada'}}</h3>
+                                <h3 item-situacao text-wrap>Encerramento: {{item.dataEncerramento ?
+                                    (item.dataEncerramento | date: 'dd/MM/yyyy') : 'Não informada'}}</h3>
                             </ion-col>
                             <ion-col col-2>
-                                <!-- <ion-icon icon-small name="trash" item-right (click)="confirmarExclusao(item)"
-                                    style="font-size: 32px !important; margin: 0px" [ngClass]="{'color-black': !item.delete , 'color-red' : item.delete}"></ion-icon>
-                                <br>
-                                <ion-icon icon-small name="create" item-right (click)="editar(item)"
-                                    style="font-size: 32px !important; margin: 0px"></ion-icon> -->
-                                    <ion-icon name="more" icon-small item-right style="font-size: 32px !important; margin: 0px" (click)="exibirOpcoes(item)"></ion-icon>
+                                <ion-icon name="more" icon-small item-right style="font-size: 32px !important; margin: 0px"
+                                    (click)="exibirOpcoes(item)"></ion-icon>
                             </ion-col>
                         </ion-row>
                         <ion-row class="espacamento" style="padding: 0 0 10px 0 !important;">

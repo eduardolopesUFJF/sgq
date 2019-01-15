@@ -1,13 +1,24 @@
 <ion-header>
     <ion-navbar>
-        <button ion-button menuToggle>
-            <ion-icon class="icon-menu" name="menu"></ion-icon>
-        </button>
-        <div buy>
-            <ion-title>
-                Áreas
-            </ion-title>
-        </div>
+        <ion-row>
+            <ion-col col-2>
+                <button ion-button menuToggle>
+                    <ion-icon class="icon-menu" name="menu"></ion-icon>
+                </button>
+            </ion-col>
+            <ion-col col-8 m-auto>
+                <div buy>
+                    <ion-title>
+                        Áreas
+                    </ion-title>
+                </div>
+            </ion-col>
+            <ion-col col-2>
+                <div buy (click)="voltarHome()">
+                    <ion-icon class="icon-menu home-icon" name="home"></ion-icon>
+                </div>
+            </ion-col>
+        </ion-row>
     </ion-navbar>
 </ion-header>
 

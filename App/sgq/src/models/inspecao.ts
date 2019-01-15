@@ -1,4 +1,5 @@
 import { ItemInspecao } from "./item-inspecao";
+import { Ocorrencia } from "./ocorrencia";
 
 export class Inspecao {
     
@@ -25,6 +26,7 @@ export class Inspecao {
     qtdX: number = 0;
 
     inspecaoObraItens: ItemInspecao[] = [];
+    ocorrencias: Ocorrencia[] = [];
 
     constructor(values: Object = {}) {
         Object.assign(this, values);

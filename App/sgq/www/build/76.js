@@ -1,14 +1,14 @@
 webpackJsonp([76],{
 
-/***/ 727:
+/***/ 730:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FullScreenGalleryModule", function() { return FullScreenGalleryModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ImageGalleryLayout2Module", function() { return ImageGalleryLayout2Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__full_screen_gallery__ = __webpack_require__(851);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__image_gallery_layout_2__ = __webpack_require__(858);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,37 +18,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var FullScreenGalleryModule = /** @class */ (function () {
-    function FullScreenGalleryModule() {
+var ImageGalleryLayout2Module = /** @class */ (function () {
+    function ImageGalleryLayout2Module() {
     }
-    FullScreenGalleryModule = __decorate([
+    ImageGalleryLayout2Module = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__full_screen_gallery__["a" /* FullScreenGallery */],
+                __WEBPACK_IMPORTED_MODULE_2__image_gallery_layout_2__["a" /* ImageGalleryLayout2 */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__full_screen_gallery__["a" /* FullScreenGallery */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__image_gallery_layout_2__["a" /* ImageGalleryLayout2 */]),
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_2__full_screen_gallery__["a" /* FullScreenGallery */]
+                __WEBPACK_IMPORTED_MODULE_2__image_gallery_layout_2__["a" /* ImageGalleryLayout2 */]
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
         })
-    ], FullScreenGalleryModule);
-    return FullScreenGalleryModule;
+    ], ImageGalleryLayout2Module);
+    return ImageGalleryLayout2Module;
 }());
 
-//# sourceMappingURL=full-screen-gallery.module.js.map
+//# sourceMappingURL=image-gallery-layout-2.module.js.map
 
 /***/ }),
 
-/***/ 851:
+/***/ 858:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FullScreenGallery; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ImageGalleryLayout2; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -60,11 +60,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var FullScreenGallery = /** @class */ (function () {
-    function FullScreenGallery(navCtrl, navParams) {
+var ImageGalleryLayout2 = /** @class */ (function () {
+    function ImageGalleryLayout2(navCtrl, navParams) {
         var _this = this;
         this.navCtrl = navCtrl;
-        this.isLocked = false;
+        this.openSubGallery = function (group, index) {
+            _this.navCtrl.push(group.subGallery, {
+                'group': group.items[index],
+                'events': _this.events,
+                'layout': 2
+            });
+        };
         this.onEvent = function (event, item, e) {
             if (e) {
                 e.stopPropagation();
@@ -73,44 +79,28 @@ var FullScreenGallery = /** @class */ (function () {
                 _this.events[event](item);
             }
         };
-        this.onDoubleClick = function (e, slides) {
-            _this.isLocked = !_this.isLocked;
-            slides.lockSwipes(_this.isLocked);
-        };
-        this.sliderOptions = {
-            pager: true
-        };
     }
-    FullScreenGallery.prototype.ngAfterViewInit = function () {
-        this.sliderOptions = {
-            pager: true,
-            loop: true,
-            zoom: true,
-            initialSlide: this.data.index
-        };
+    ImageGalleryLayout2.prototype.ngOnChanges = function (changes) {
+        this.data = changes['data'].currentValue;
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
-    ], FullScreenGallery.prototype, "data", void 0);
+    ], ImageGalleryLayout2.prototype, "data", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
-    ], FullScreenGallery.prototype, "events", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])('slider'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* Slides */])
-    ], FullScreenGallery.prototype, "slider", void 0);
-    FullScreenGallery = __decorate([
+    ], ImageGalleryLayout2.prototype, "events", void 0);
+    ImageGalleryLayout2 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'full-screen-gallery',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\full-screen-gallery\full-screen-gallery.html"*/'<!--Screen Gallery-->\n\n<ion-slides #slider pager="true" zoom="true" [initialSlide]="data.index">\n\n    <ion-slide *ngFor="let item of data.items;">\n\n        <img [src]="item.image" />\n\n    </ion-slide>\n\n</ion-slides>'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\full-screen-gallery\full-screen-gallery.html"*/
+            selector: 'image-gallery-layout-2',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\image-gallery\layout-2\image-gallery-layout-2.html"*/'<!---Theme Gallery for Full gallery 2-->\n\n<ion-grid card-background-page no-padding *ngIf="data != null">\n\n    <ion-row>\n\n        <ion-col col-12 col-sm-4 col-md-6 col-lg-4 col-xl-3 *ngFor="let group of data.items;let i = index;">\n\n            <ion-card transparent (click)="openSubGallery(data, i)">\n\n              <img [src]="group.image" />\n\n                <ion-card-content>\n\n                    <h2 gallery-title text-wrap text-capitalize>{{group.title}}</h2>\n\n                    <p gallery-subtitle text-wrap>{{group.subtitle}}</p>\n\n                </ion-card-content>\n\n            </ion-card>\n\n        </ion-col>\n\n    </ion-row>\n\n</ion-grid>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\image-gallery\layout-2\image-gallery-layout-2.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* NavParams */]])
-    ], FullScreenGallery);
-    return FullScreenGallery;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */]])
+    ], ImageGalleryLayout2);
+    return ImageGalleryLayout2;
 }());
 
-//# sourceMappingURL=full-screen-gallery.js.map
+//# sourceMappingURL=image-gallery-layout-2.js.map
 
 /***/ })
 

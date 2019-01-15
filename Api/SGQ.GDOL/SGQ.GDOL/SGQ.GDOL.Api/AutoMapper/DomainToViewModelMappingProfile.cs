@@ -13,6 +13,7 @@ namespace SGQ.GDOL.Api.AutoMapper
         {
             CreateMap<CentroCusto, CentroCustoVM>();
             CreateMap<Funcionario, FuncionarioVM>();
+            CreateMap<Ocorrencia, OcorrenciaVM>();
             CreateMap<ItemChecklistServico, ItemChecklistServicoVM>();
 
             CreateMap<InspecaoObraItem, InspecaoObraItemVM>()

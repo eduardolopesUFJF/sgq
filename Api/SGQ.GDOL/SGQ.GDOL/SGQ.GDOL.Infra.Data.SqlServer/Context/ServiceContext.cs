@@ -23,6 +23,7 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Context
         public DbSet<Funcionario> Funcionario { get; set; }
         public DbSet<InspecaoObraItem> InspecaoObraItem { get; set; }
         public DbSet<UsuarioCentroCusto> UsuarioCentroCusto { get; set; }
+        public DbSet<Ocorrencia> Ocorrencia { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -37,6 +38,7 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Context
             modelBuilder.ApplyConfiguration(new FuncionarioMap());
             modelBuilder.ApplyConfiguration(new InspecaoObraItemMap());
             modelBuilder.ApplyConfiguration(new UsuarioCentroCustoMap());
+            modelBuilder.ApplyConfiguration(new OcorrenciaMap());
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

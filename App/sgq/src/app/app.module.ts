@@ -16,6 +16,7 @@ import { IonicStorageModule } from '@ionic/storage';
 import { MaskDirective } from '../directives/mask.directive';
 import { DatePicker } from '@ionic-native/date-picker';
 import { MessageService } from '../utils/message-service';
+import { IonicSelectableModule } from 'ionic-selectable';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { MessageService } from '../utils/message-service';
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(AppSettings.FIREBASE_CONFIG),
     AngularFireDatabaseModule,
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
+    IonicSelectableModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

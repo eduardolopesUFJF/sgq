@@ -1,14 +1,14 @@
 webpackJsonp([49],{
 
-/***/ 763:
+/***/ 766:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RangeLayout4Module", function() { return RangeLayout4Module; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RegisterLayout2Module", function() { return RegisterLayout2Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__range_layout_4__ = __webpack_require__(887);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__register_layout_2__ = __webpack_require__(894);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,35 +18,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var RangeLayout4Module = /** @class */ (function () {
-    function RangeLayout4Module() {
+var RegisterLayout2Module = /** @class */ (function () {
+    function RegisterLayout2Module() {
     }
-    RangeLayout4Module = __decorate([
+    RegisterLayout2Module = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__range_layout_4__["a" /* RangeLayout4 */],
+                __WEBPACK_IMPORTED_MODULE_2__register_layout_2__["a" /* RegisterLayout2 */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__range_layout_4__["a" /* RangeLayout4 */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__register_layout_2__["a" /* RegisterLayout2 */]),
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_2__range_layout_4__["a" /* RangeLayout4 */]
+                __WEBPACK_IMPORTED_MODULE_2__register_layout_2__["a" /* RegisterLayout2 */]
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
         })
-    ], RangeLayout4Module);
-    return RangeLayout4Module;
+    ], RegisterLayout2Module);
+    return RegisterLayout2Module;
 }());
 
-//# sourceMappingURL=range-layout-4.module.js.map
+//# sourceMappingURL=register-layout-2.module.js.map
 
 /***/ }),
 
-/***/ 887:
+/***/ 894:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RangeLayout4; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterLayout2; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -58,36 +58,76 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var RangeLayout4 = /** @class */ (function () {
-    function RangeLayout4() {
+var RegisterLayout2 = /** @class */ (function () {
+    function RegisterLayout2() {
         var _this = this;
-        this.onEvent = function (event, item) {
+        this.isEmailValid = true;
+        this.isUsernameValid = true;
+        this.isPasswordValid = true;
+        this.isCityValid = true;
+        this.isCountryValid = true;
+        this.regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        this.onEvent = function (event) {
+            if (event == "onRegister" && !_this.validate()) {
+                return;
+            }
             if (_this.events[event]) {
-                _this.events[event](item);
+                _this.events[event]({
+                    'username': _this.username,
+                    'password': _this.password,
+                    'country': _this.country,
+                    'city': _this.city,
+                    'email': _this.email
+                });
             }
         };
     }
-    RangeLayout4.prototype.ngOnChanges = function (changes) {
-        this.data = changes['data'].currentValue;
+    RegisterLayout2.prototype.validate = function () {
+        this.isEmailValid = true;
+        this.isUsernameValid = true;
+        this.isPasswordValid = true;
+        this.isCityValid = true;
+        this.isCountryValid = true;
+        if (!this.username || this.username.length == 0) {
+            this.isUsernameValid = false;
+        }
+        if (!this.password || this.password.length == 0) {
+            this.isPasswordValid = false;
+        }
+        if (!this.password || this.password.length == 0) {
+            this.isPasswordValid = false;
+        }
+        if (!this.city || this.city.length == 0) {
+            this.isCityValid = false;
+        }
+        if (!this.country || this.country.length == 0) {
+            this.isCountryValid = false;
+        }
+        this.isEmailValid = this.regex.test(this.email);
+        return this.isEmailValid &&
+            this.isPasswordValid &&
+            this.isUsernameValid &&
+            this.isCityValid &&
+            this.isCountryValid;
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])('data'),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
-    ], RangeLayout4.prototype, "data", void 0);
+    ], RegisterLayout2.prototype, "data", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])('events'),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
-    ], RangeLayout4.prototype, "events", void 0);
-    RangeLayout4 = __decorate([
+    ], RegisterLayout2.prototype, "events", void 0);
+    RegisterLayout2 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'range-button-layout-4',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\range\layout-4\range.html"*/'<!-- RANGE COMPONENTS - Two sliders -->\n\n<ion-list no-lines *ngIf="data != null">\n\n    <!--- Divider item-->\n\n    <ion-item-divider no-lines no-margin transparent>\n\n        <p ion-text color="primaryBase">{{data.title}}</p>\n\n    </ion-item-divider>\n\n    <ion-item transparent>\n\n        <ion-range dualKnobs="true" pin="true" [(ngModel)]="data.value" (ionChange)="onEvent(\'onChange\', data.value, $event)">\n\n            <ion-label range-left span-large color="primaryBase">{{data.textLeft}}</ion-label>\n\n            <ion-label range-right span-large color="primaryBase">{{data.textRight}}</ion-label>\n\n        </ion-range>\n\n    </ion-item>\n\n</ion-list>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\range\layout-4\range.html"*/
+            selector: 'register-layout-2',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\register\layout-2\register.html"*/'<!-- Themes Register + Image -->\n\n\n\n<!--Content -->\n\n<ion-content has-header no-padding background-size *ngIf="data != null" [ngStyle]="{\'background-image\': \'url(\' + data.background + \')\'}">\n\n  <ion-grid no-padding>\n\n    <ion-row padding-horizontal align-items-center>\n\n      <ion-col text-center col-12 margin-bottom>\n\n        <!-- Header Title -->\n\n        <h1 register-title no-margin text-wrap>{{data.title}}</h1>\n\n      </ion-col>\n\n      <ion-col text-center col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n\n        <!--Form-->\n\n        <form>\n\n          <ion-item transparent text-center>\n\n            <!---Input field username-->\n\n            <ion-label stacked>{{data.lableUsername}}</ion-label>\n\n            <ion-input text-center required [placeholder]="data.username" type="text" [(ngModel)]="username" [ngModelOptions]="{standalone: true}"></ion-input>\n\n            <ion-label error-field no-margin *ngIf="!isUsernameValid">{{data.errorUser}}</ion-label>\n\n          </ion-item>\n\n          <ion-item transparent text-center>\n\n            <!---Input field password-->\n\n            <ion-label stacked>{{data.lablePassword}}</ion-label>\n\n            <ion-input text-center required [placeholder]="data.password" type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}"></ion-input>\n\n            <ion-label error-field no-margin *ngIf="!isPasswordValid">{{data.errorPassword}}</ion-label>\n\n          </ion-item>\n\n          <ion-item transparent text-center>\n\n            <!---Input field email-->\n\n            <ion-label stacked>{{data.lableEmail}}</ion-label>\n\n            <ion-input text-center required [placeholder]="data.email" type="email" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" required [(ngModel)]="email" [ngModelOptions]="{standalone: true}"></ion-input>\n\n            <ion-label error-field no-margin *ngIf="!isEmailValid">{{data.errorEmail}}</ion-label>\n\n          </ion-item>\n\n          <ion-item transparent text-center>\n\n            <!---Input field country-->\n\n            <ion-label stacked>{{data.lableCountry}}</ion-label>\n\n            <ion-input text-center required [placeholder]="data.country" type="text" pattern="[a-zA-Z ]*" required [(ngModel)]="country" [ngModelOptions]="{standalone: true}"></ion-input>\n\n            <ion-label error-field no-margin *ngIf="!isCountryValid">{{data.errorCountry}}</ion-label>\n\n          </ion-item>\n\n          <ion-item transparent text-center>\n\n            <!---Input field city-->\n\n            <ion-label stacked>{{data.lableCity}}</ion-label>\n\n            <ion-input text-center required [placeholder]="data.city" type="text" pattern="[a-zA-Z ]*" required [(ngModel)]="city" [ngModelOptions]="{standalone: true}"></ion-input>\n\n            <ion-label error-field no-margin *ngIf="!isCityValid">{{data.errorCity}}</ion-label>\n\n          </ion-item>\n\n          <!---Register button-->\n\n          <button ion-button block default-button text-capitalize box-shadow margin-bottom margin-top (click)="onEvent(\'onRegister\')">{{data.register}}</button>\n\n        </form>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\register\layout-2\register.html"*/
         }),
         __metadata("design:paramtypes", [])
-    ], RangeLayout4);
-    return RangeLayout4;
+    ], RegisterLayout2);
+    return RegisterLayout2;
 }());
 
-//# sourceMappingURL=range-layout-4.js.map
+//# sourceMappingURL=register-layout-2.js.map
 
 /***/ })
 

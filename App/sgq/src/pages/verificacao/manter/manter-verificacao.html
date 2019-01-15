@@ -6,7 +6,7 @@
                     <span ion-text style="font-size: 0.7em;">Voltar</span>
                 </button>
             </ion-col>
-            <ion-col col-10>
+            <ion-col col-10 m-auto>
                 <ion-title>Localização do Serviço</ion-title>
             </ion-col>
         </ion-row>
@@ -42,7 +42,7 @@
                         <ion-label stacked>{{itemChecklist.campo4}}</ion-label>
                         <ion-input text-center type="text" [(ngModel)]="inspecao.campo4" name="local4"></ion-input>
                     </ion-item>
-                    <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: black !important;"
+                    <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: rgb(33,177,75) !important;"
                         (click)="salvar(cadastroForm.valid)">Salvar</button>
                 </form>
             </ion-col>

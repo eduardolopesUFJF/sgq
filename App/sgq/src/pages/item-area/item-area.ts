@@ -91,4 +91,8 @@ export class ItemAreaPage {
         });
     }
 
+    voltarHome() {
+        this.navCtrl.setRoot("HomePage");
+    }
+
 }

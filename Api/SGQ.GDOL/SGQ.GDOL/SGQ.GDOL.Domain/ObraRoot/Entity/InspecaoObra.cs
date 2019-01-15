@@ -19,8 +19,9 @@ namespace SGQ.GDOL.Domain.ObraRoot.Entity
         public bool Delete { get; set; }
         public DateTime? DataHoraAlteracao { get; set; }
 
-        public Servico ObraChecklistServico { get; set; }
         public ICollection<InspecaoObraItem> InspecaoObraItens { get; set; }
+        public ICollection<Ocorrencia> Ocorrencias { get; set; }
+        public Servico ObraChecklistServico { get; set; }
         public Funcionario FuncionarioAprovadoObj { get; set; }
         public Funcionario FuncionarioInspecionadoObj { get; set; }
     }

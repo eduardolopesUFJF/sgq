@@ -12,6 +12,9 @@ export class Alteracao {
     idInspecao: number;
     idGuidInspecao: string;
 
+    idOcorrencia: number;
+    idGuidOcorrencia: string;
+
     tipo: string;
     entidade: string;
     valor: string;

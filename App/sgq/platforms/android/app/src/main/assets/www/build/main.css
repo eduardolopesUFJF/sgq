@@ -3274,6 +3274,10 @@ img {
   font-weight: bold;
 }
 
+[m-auto] {
+  margin: auto !important;
+}
+
 /* # Settings Header Section
 ================================================
 ================================================*/
@@ -31082,6 +31086,196 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+.item-label-stacked .ionic-selectable, .item-label-floating .ionic-selectable {
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  max-width: 100%;
+  padding-left: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.item-label-stacked .ionic-selectable-value, .item-label-floating .ionic-selectable-value {
+  padding-top: 0;
+  padding-bottom: 0;
+  min-height: 19px;
+}
+
+.item-label-stacked .ionic-selectable-icon-inner, .item-label-floating .ionic-selectable-icon-inner {
+  top: 7px;
+}
+
+.item-label-stacked .ionic-selectable-ios .ionic-selectable-value, .item-label-floating .ionic-selectable-ios .ionic-selectable-value {
+  padding-top: 0;
+  padding-bottom: 0;
+  min-height: 20px;
+}
+
+.item-label-stacked .ionic-selectable-ios .ionic-selectable-icon-inner, .item-label-floating .ionic-selectable-ios .ionic-selectable-icon-inner {
+  top: 8px;
+}
+
+.item:not(.item-label-stacked):not(.item-label-floating) .ionic-selectable-md .ionic-selectable-value {
+  padding-left: 16px;
+}
+
+.item:not(.item-label-stacked):not(.item-label-floating) .ionic-selectable-ios .ionic-selectable-value {
+  padding-left: 16px;
+}
+
+.item-ionic-selectable .item-inner .input-wrapper {
+  -webkit-box-align: normal;
+  -webkit-align-items: normal;
+  -ms-flex-align: normal;
+  align-items: normal;
+}
+
+.item-ionic-selectable ion-label {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  max-width: initial;
+}
+
+.ionic-selectable {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 45%;
+}
+
+.ionic-selectable:not(.ionic-selectable-is-enabled) {
+  opacity: 0.4;
+}
+
+.ionic-selectable-has-placeholder .ionic-selectable-value-item {
+  color: #999;
+}
+
+.ionic-selectable-value {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  overflow: hidden;
+}
+
+.ionic-selectable-value-item {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ionic-selectable-value-item:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.ionic-selectable-icon {
+  position: relative;
+  width: 20px;
+}
+
+.ionic-selectable-icon-inner {
+  position: absolute;
+  top: 20px;
+  left: 5px;
+  border-top: 5px solid;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  pointer-events: none;
+}
+
+.ionic-selectable-item-button {
+  width: 25px;
+}
+
+.ionic-selectable-ios.ionic-selectable-has-placeholder .ionic-selectable-value-item {
+  color: #999;
+}
+
+.ionic-selectable-ios .ionic-selectable-value {
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+
+.ionic-selectable-ios .ionic-selectable-icon-inner {
+  top: 19px;
+  color: #999;
+}
+
+.ionic-selectable-md .ionic-selectable-icon-inner {
+  color: #999;
+}
+
+.ionic-selectable-spinner {
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.ionic-selectable-spinner-background {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  background-color: #000000;
+  opacity: 0.05;
+}
+
+.ionic-selectable-spinner ion-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  margin-top: -14px;
+  margin-left: -14px;
+}
+
+.ionic-selectable-add-item-template {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+}
+
+.ionic-selectable-page-ios .ionic-selectable-message {
+  padding: 8px;
+}
+
+.ionic-selectable-page-md .ionic-selectable-message {
+  padding: 8px 12px;
+}
+
+.ionic-selectable-page.ionic-selectable-page-can-clear.ionic-selectable-page-is-multiple .footer .col:first-child {
+  padding-right: 8px;
+}
+
+.ionic-selectable-page.ionic-selectable-page-can-clear.ionic-selectable-page-is-multiple .footer .col:last-child {
+  padding-left: 8px;
+}
+
+.ionic-selectable-page.ionic-selectable-page-is-searching .scroll-content {
+  overflow-y: hidden;
+}
+
+.ionic-selectable-page.ionic-selectable-page-is-add-item-template-visible > .content > .scroll-content {
+  overflow-y: hidden;
+}
+
+.ionic-selectable-page ion-footer ion-toolbar {
+  padding: 5px 16px;
+}
+
 [header-background-image] {
   height: 90px;
   position: relative;
@@ -34150,6 +34344,13 @@ page-area .button-novo {
   width: 100%;
 }
 
+page-area .home-icon {
+  background-color: transparent;
+  font-size: 25px;
+  margin-top: 1px;
+  color: #f1f1f1;
+}
+
 page-area-cadastro .button-nav {
   height: 30px !important;
   background: none !important;
@@ -34319,6 +34520,252 @@ page-home .mb-6 {
   margin-bottom: 6px !important;
 }
 
+page-item-area .home-icon {
+  background-color: transparent;
+  font-size: 25px;
+  margin-top: 1px;
+  color: #f1f1f1;
+}
+
+page-ocorrencia .button-nav {
+  height: 30px !important;
+  background: none !important;
+  color: white !important;
+  font-size: 1.5em;
+  margin: 2px 0px 0px 2px !important;
+  padding: 0;
+}
+
+page-ocorrencia .aviso {
+  font-weight: bold;
+}
+
+page-ocorrencia .button-novo {
+  background-color: black !important;
+  margin: 4px 8px 8px 8px !important;
+}
+
+page-ocorrencia .item-removido {
+  border: 4px solid red !important;
+}
+
+page-ocorrencia .col-search {
+  padding: 0px 8px 0px 8px !important;
+}
+
+page-ocorrencia .margin-top-10 {
+  margin-top: 10px !important;
+}
+
+page-ocorrencia ion-label {
+  margin: 0 !important;
+}
+
+page-ocorrencia ion-searchbar {
+  background: rgba(33, 177, 75, 0.4) !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  border-radius: 4px;
+  z-index: 999;
+}
+
+page-ocorrencia .novo-item {
+  border: 4px solid navy !important;
+}
+
+page-ocorrencia .color-black {
+  color: black !important;
+}
+
+page-ocorrencia .color-red {
+  color: red !important;
+}
+
+page-ocorrencia .espacamento {
+  padding: 0 !important;
+  padding-left: 5px !important;
+}
+
+page-ocorrencia [item-situacao] {
+  color: #fce7e7;
+  font-weight: bold;
+}
+
+page-ocorrencia [negrito] {
+  font-weight: bold;
+  line-height: 24px;
+}
+
+page-ocorrencia [item-data] {
+  color: black;
+  font-weight: bold;
+  margin: 10px 0px 5px 0px;
+  font-size: 15px;
+}
+
+page-ocorrencia .broadcomb {
+  margin: 6px 6px 4px 6px;
+  font-weight: bold;
+  font-size: 15px;
+  color: darkgreen;
+}
+
+page-ocorrencia [radio] {
+  padding: 0px !important;
+  border-radius: 10px;
+}
+
+page-manter-ocorrencia .button-nav {
+  height: 30px !important;
+  background: none !important;
+  color: white !important;
+  font-size: 1.5em;
+  margin: 2px 0px 0px 2px !important;
+  padding: 0;
+}
+
+page-manter-ocorrencia [background-size] {
+  background-position: right !important;
+}
+
+page-manter-ocorrencia .scroll-content {
+  padding-bottom: 0 !important;
+  top: 0px !important;
+}
+
+page-manter-ocorrencia .scroll-content ion-grid {
+  height: 100%;
+}
+
+page-manter-ocorrencia .scroll-content ion-grid ion-row {
+  height: 100%;
+}
+
+page-manter-ocorrencia .scroll-content ion-grid ion-row img {
+  height: 150px;
+  width: 275px;
+}
+
+page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item {
+  padding-left: 0 !important;
+  padding-bottom: 15px !important;
+}
+
+page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item.item-input-has-value ion-input {
+  background: rgba(33, 177, 75, 0.6) !important;
+}
+
+page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item.item-input-has-value ion-select {
+  background: rgba(33, 177, 75, 0.6) !important;
+}
+
+page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item.item-input-has-focus ion-input {
+  background: rgba(33, 177, 75, 0.6) !important;
+}
+
+page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item.item-input-has-focus ion-select {
+  background: rgba(33, 177, 75, 0.6) !important;
+}
+
+page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item [error-field] {
+  margin: 0 !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  right: 5px !important;
+  font-size: 12px;
+}
+
+page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item .item-inner {
+  border-bottom: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  padding-right: 0 !important;
+}
+
+page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item ion-label {
+  margin: 0 5px !important;
+  color: black;
+}
+
+page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item ion-input {
+  background: rgba(33, 177, 75, 0.4) !important;
+  margin: 5px 10px 0px 10px !important;
+  padding: 5px 10px !important;
+  border-radius: 4px;
+  z-index: 999;
+}
+
+page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item ion-input .input-cover {
+  display: none;
+}
+
+page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item ion-datetime {
+  background: rgba(33, 177, 75, 0.4) !important;
+  margin: 5px 10px 0px 10px !important;
+  padding: 5px 10px !important;
+  border-radius: 4px;
+  z-index: 999;
+  height: 38px !important;
+  padding-top: 9px !important;
+}
+
+page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item ion-datetime .input-cover {
+  display: none;
+}
+
+page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item ion-select {
+  background: rgba(33, 177, 75, 0.4) !important;
+  margin: 5px 0px 0px 0px !important;
+  padding: 10px !important;
+  border-radius: 4px;
+  z-index: 999;
+}
+
+page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item ion-select .input-cover {
+  display: none;
+}
+
+page-manter-ocorrencia .scroll-content ion-grid ion-row form [stacked] {
+  font-size: 14px !important;
+  color: black !important;
+}
+
+page-manter-ocorrencia .scroll-content ion-grid ion-row form [bottom-form] {
+  position: relative;
+  display: inline-block;
+  padding-top: 50px;
+  width: 100%;
+}
+
+page-manter-ocorrencia .scroll-content ion-grid ion-row form [bottom-form]::after {
+  content: "or try";
+  font-size: 12px;
+  color: #f1f1f1;
+  width: 140px;
+  border-bottom: 1px solid #21b14b;
+  position: absolute;
+  top: 30px;
+  left: calc(50% - 70px);
+}
+
+page-manter-ocorrencia .scroll-content ion-grid ion-row form [button-icon-clear] {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-manter-ocorrencia .scroll-content ion-grid ion-row [login-title] {
+  color: black;
+}
+
+page-manter-ocorrencia .scroll-content ion-grid ion-row [padding-top] {
+  padding-top: 10px;
+}
+
+page-manter-ocorrencia .scroll-content ion-grid ion-row [radio] {
+  padding: 0px !important;
+  border-radius: 10px;
+}
+
 page-verificacao .aviso {
   font-weight: bold;
 }
@@ -34350,6 +34797,10 @@ page-verificacao ion-searchbar {
 
 page-verificacao .novo-item {
   border: 4px solid navy !important;
+}
+
+page-verificacao .item-removido {
+  border: 4px solid red !important;
 }
 
 page-verificacao .color-black {
@@ -34387,6 +34838,18 @@ page-verificacao .broadcomb {
   font-weight: bold;
   font-size: 15px;
   color: darkgreen;
+}
+
+page-verificacao [radio] {
+  padding: 0px !important;
+  border-radius: 10px;
+}
+
+page-verificacao .home-icon {
+  background-color: transparent;
+  font-size: 25px;
+  margin-top: 1px;
+  color: #f1f1f1;
 }
 
 page-manter-verificacao .button-nav {
@@ -34538,6 +35001,15 @@ page-manter-verificacao .scroll-content ion-grid ion-row [padding-top] {
 page-manter-verificacao .scroll-content ion-grid ion-row [radio] {
   padding: 0px !important;
   border-radius: 10px;
+}
+
+page-realizar-verificacao ionic-selectable {
+  background: rgba(33, 177, 75, 0.6) !important;
+  margin: 5px 0px 0px 0px !important;
+  padding: 10px !important;
+  border-radius: 4px;
+  z-index: 999;
+  color: white;
 }
 
 page-realizar-verificacao .button-nav {

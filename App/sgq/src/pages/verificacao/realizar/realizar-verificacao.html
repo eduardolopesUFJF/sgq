@@ -6,14 +6,24 @@
                     <span ion-text style="font-size: 0.7em;">Voltar</span>
                 </button>
             </ion-col>
-            <ion-col col-10>
+            <ion-col col-8 m-auto>
                 <ion-title>Inspeção do Serviço</ion-title>
+            </ion-col>
+            <ion-col col-2 (click)="abrirOcorrencias()">
+                <ion-icon name="archive" style="font-size: 23px;margin-left: 16px;"></ion-icon>
             </ion-col>
         </ion-row>
     </ion-navbar>
 </ion-header>
 
 <ion-content has-header>
+    <!-- <form margin-bottom>
+        <ion-item>
+            <ion-label>Port</ion-label>
+            <ionic-selectable item-content [(ngModel)]="inspecao.idFuncionarioInspecionado" [ngModelOptions]="{standalone: true}" itemValueField="id" itemTextField="nome" [items]="funcionarios">
+            </ionic-selectable>
+        </ion-item>
+    </form> -->
     <ion-grid no-padding>
         <ion-row padding-left padding-right>
             <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
@@ -23,19 +33,43 @@
                     </ion-item>
                     <ion-item text-center transparent>
                         <ion-label stacked>INSPECIONADO POR</ion-label>
-                        <ion-select required [(ngModel)]="inspecao.idFuncionarioInspecionado" multiple="false" name="idFuncionarioInspecionado"
+                        <ionic-selectable 
+                            item-content
+                            [(ngModel)]="funcionarioInspecionado"
+                            [items]="funcionarios"
+                            itemValueField="id"
+                            itemTextField="nome"
+                            [canSearch]="true"
+                            name="idFuncionarioInspecionado"
+                            (onChange)="setaFuncionarioInspecionado($event)"
+                            (onOpen)="alterarPlaceholder()"
+                            required>
+                        </ionic-selectable>
+                        <!-- <ion-select required [(ngModel)]="inspecao.idFuncionarioInspecionado" multiple="false" name="idFuncionarioInspecionado"
                             okText="Ok" cancelText="Cancelar">
                             <ion-option *ngFor="let item of funcionarios; let i= index" [value]="item.id">{{item.nome}}</ion-option>
-                        </ion-select>
+                        </ion-select> -->
                     </ion-item>
                     <ion-item text-center transparent>
                         <ion-label stacked>APROVADOR POR</ion-label>
-                        <ion-select [(ngModel)]="inspecao.idFuncionarioAprovado" multiple="false" name="idFuncionarioAprovado"
+                        <ionic-selectable 
+                            item-content
+                            [(ngModel)]="funcionarioAprovado"
+                            [items]="funcionarios"
+                            itemValueField="id"
+                            itemTextField="nome"
+                            [canSearch]="true"
+                            name="idFuncionarioAprovado"
+                            (onChange)="setaFuncionarioAprovado($event)"
+                            (onOpen)="alterarPlaceholder()">
+                        </ionic-selectable>
+                        <!-- <ion-select [(ngModel)]="inspecao.idFuncionarioAprovado" multiple="false" name="idFuncionarioAprovado"
                             okText="Ok" cancelText="Cancelar">
                             <ion-option *ngFor="let item of funcionarios; let i= index" [value]="item.id">{{item.nome}}</ion-option>
-                        </ion-select>
+                        </ion-select> -->
                     </ion-item>
-                    <ion-list radio-group no-margin [(ngModel)]="inspecao.status" name="status" (ngModelChange)="atualizarSituacao()">
+                    <ion-list radio-group no-margin [(ngModel)]="inspecao.status" name="status" (ngModelChange)="atualizarSituacao()"
+                        [disabled]="servico.status == 1">
                         <ion-grid>
                             <ion-row>
                                 <ion-col col-6>
@@ -53,50 +87,52 @@
                             </ion-row>
                         </ion-grid>
                     </ion-list>
+                    <hr style="margin: 2px 0 0 0;">
                     <ion-list radio-group no-margin [(ngModel)]="item.inspecao1" name="itemInspecao1+{{i}}" *ngFor="let item of inspecao.inspecaoObraItens; let i=index;">
-                        <h2 text-wrap style="font-weight: bold;">{{item.descricao}}</h2>
+                        <h2 text-wrap style="font-weight: bold;margin-top: 10px;">{{item.descricao}}</h2>
                         <ion-grid>
                             <ion-row>
                                 <ion-col col-3>
                                     <ion-item radio style="background-color: blue;">
                                         <ion-label>NA</ion-label>
-                                        <ion-radio [value]="'NA'" (ionSelect)="verificaLimparNA1(item)"></ion-radio>
+                                        <ion-radio [value]="'NA'"></ion-radio>
                                     </ion-item>
                                 </ion-col>
                                 <ion-col col-3>
                                     <ion-item radio style="background-color: darkgreen;">
                                         <ion-label>A</ion-label>
-                                        <ion-radio [value]="'A'" (ionSelect)="verificaLimparA1(item)"></ion-radio>
+                                        <ion-radio [value]="'A'"></ion-radio>
                                     </ion-item>
                                 </ion-col>
                                 <ion-col col-3>
                                     <ion-item radio style="background-color: yellow;">
                                         <ion-label>R</ion-label>
-                                        <ion-radio [value]="'R'" (ionSelect)="verificaLimparR1(item)"></ion-radio>
+                                        <ion-radio [value]="'R'"></ion-radio>
                                     </ion-item>
                                 </ion-col>
                                 <ion-col col-3>
                                     <ion-item radio style="background-color: red;">
                                         <ion-label>X</ion-label>
-                                        <ion-radio [value]="'X'" (ionSelect)="verificaLimparX1(item)"></ion-radio>
+                                        <ion-radio [value]="'X'"></ion-radio>
                                     </ion-item>
                                 </ion-col>
                             </ion-row>
                             <ion-row *ngIf="item.inspecao1 == 'R'">
-                                <ion-list radio-group no-margin [(ngModel)]="item.inspecao2" name="itemInspecao2+{{i}}" style="width: 100%">
+                                <ion-list radio-group no-margin [(ngModel)]="item.inspecao2" name="itemInspecao2+{{i}}"
+                                    style="width: 100%">
                                     <ion-grid>
                                         <ion-row>
                                             <ion-col col-3></ion-col>
                                             <ion-col col-3>
                                                 <ion-item radio style="background-color: orange;">
                                                     <ion-label>RA</ion-label>
-                                                    <ion-radio [value]="'RA'" (ionSelect)="verificaLimparRA2(item)"></ion-radio>
+                                                    <ion-radio [value]="'RA'"></ion-radio>
                                                 </ion-item>
                                             </ion-col>
                                             <ion-col col-3>
                                                 <ion-item radio style="background-color: red;">
                                                     <ion-label>X</ion-label>
-                                                    <ion-radio [value]="'X'" (ionSelect)="verificaLimparX2(item)"></ion-radio>
+                                                    <ion-radio [value]="'X'"></ion-radio>
                                                 </ion-item>
                                             </ion-col>
                                             <ion-col col-3></ion-col>
@@ -104,7 +140,12 @@
                                     </ion-grid>
                                 </ion-list>
                             </ion-row>
+                            <ion-row>
+                                <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: black !important;"
+                                    (click)="item.inspecao1='';item.inspecao2=''">Limpar</button>
+                            </ion-row>
                         </ion-grid>
+                        <hr style="margin: 2px 0 0 0;">
                     </ion-list>
                 </form>
             </ion-col>
@@ -113,6 +154,6 @@
 </ion-content>
 
 <ion-footer>
-    <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: black !important;"
-    (click)="salvar(cadastroForm.valid)">Salvar</button>
+    <button ion-button default-button block text-capitalize box-shadow margin-bottom no-margin style="background-color: rgb(33,177,75) !important;"
+        (click)="salvar(cadastroForm.valid)">Salvar</button>
 </ion-footer>

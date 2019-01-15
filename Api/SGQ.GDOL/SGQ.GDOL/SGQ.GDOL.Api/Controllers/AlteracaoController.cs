@@ -19,17 +19,20 @@ namespace SGQ.GDOL.Api.Controllers
         private readonly IServicoService _servicoService;
         private readonly IInspecaoService _inspecaoService;
         private readonly IInspecaoObraItemService _inspecaoObraItemService;
+        private readonly IOcorrenciaService _ocorrenciaService;
 
         public AlteracaoController(
             IAreaService areaService,
             IServicoService servicoService,
             IInspecaoService inspecaoService,
-            IInspecaoObraItemService inspecaoObraItemService)
+            IInspecaoObraItemService inspecaoObraItemService,
+            IOcorrenciaService ocorrenciaService)
         {
             _areaService = areaService;
             _servicoService = servicoService;
             _inspecaoService = inspecaoService;
             _inspecaoObraItemService = inspecaoObraItemService;
+            _ocorrenciaService = ocorrenciaService;
         }
 
         [HttpPost]
@@ -52,14 +55,17 @@ namespace SGQ.GDOL.Api.Controllers
             List<AreaVM> areas = new List<AreaVM>();
             List<ServicoVM> servicos = new List<ServicoVM>();
             List<InspecaoObraVM> inspecoes = new List<InspecaoObraVM>();
+            List<OcorrenciaVM> ocorrencias = new List<OcorrenciaVM>();
 
             PrepararAreas(alteracoes, areas);
             PrepararServicos(alteracoes, areas, servicos);
             PrepararInspecoes(alteracoes, areas, servicos, inspecoes);
+            PrepararOcorrencias(alteracoes, areas, servicos, inspecoes, ocorrencias);
 
             status = PersistirServicos(servicos, status);
             status = PersistirAreas(areas, status);
             status = PersistirInspecoes(inspecoes, status);
+            status = PersistirOcorrencias(ocorrencias, status);
 
             return status;
         }
@@ -223,6 +229,117 @@ namespace SGQ.GDOL.Api.Controllers
             }
         }
 
+        private static void PrepararOcorrencias(List<AlteracaoDTO> alteracoes, List<AreaVM> areas, List<ServicoVM> servicos, List<InspecaoObraVM> inspecoes, List<OcorrenciaVM> ocorrencias)
+        {
+            var ocorrenciasAlteradas = alteracoes.Where(x => x.Entidade.ToUpper() == "OCORRENCIA");
+
+            foreach (var alteracao in ocorrenciasAlteradas)
+            {
+                var ocorrenciaVM = JsonConvert.DeserializeObject<OcorrenciaVM>(alteracao.Valor);
+                var areaCadastrada = areas.FirstOrDefault(x => x.IdGuidArea == alteracao.IdGuidArea && alteracao.IdGuidArea != null);
+
+                if (areaCadastrada != null)
+                {
+                    ServicoVM servicoCadastrado;
+                    if (alteracao.IdServico != 0)
+                    {
+                        servicoCadastrado = areaCadastrada.Servicos.FirstOrDefault(x => x.Id == alteracao.IdServico);
+                    }
+                    else
+                    {
+                        servicoCadastrado = areaCadastrada.Servicos.FirstOrDefault(x => x.IdGuidServico == alteracao.IdGuidServico);
+                    }
+                    if (servicoCadastrado != null)
+                    {
+                        InspecaoObraVM inspecaoCadastrada;
+                        if (alteracao.IdInspecao != 0)
+                        {
+                            inspecaoCadastrada = servicoCadastrado.InspecoesObra.FirstOrDefault(x => x.Id == alteracao.IdInspecao);
+                        }
+                        else
+                        {
+                            inspecaoCadastrada = servicoCadastrado.InspecoesObra.FirstOrDefault(x => x.IdGuidInspecao == alteracao.IdGuidInspecao);
+                        }
+                        if (inspecaoCadastrada != null)
+                        {
+                            if (alteracao.Tipo.ToUpper() == "INSERT")
+                            {
+                                inspecaoCadastrada.Ocorrencias.Add(ocorrenciaVM);
+                            }
+                            else
+                            {
+                                OcorrenciaVM ocorrenciaCadastrada;
+                                if (alteracao.IdOcorrencia != 0)
+                                {
+                                    ocorrenciaCadastrada = inspecaoCadastrada.Ocorrencias.FirstOrDefault(x => x.Id == alteracao.IdOcorrencia);
+                                }
+                                else
+                                {
+                                    ocorrenciaCadastrada = inspecaoCadastrada.Ocorrencias.FirstOrDefault(x => x.IdGuidOcorrencia == alteracao.IdGuidOcorrencia);
+                                }
+                                if (ocorrenciaCadastrada != null)
+                                {
+                                    ocorrenciaCadastrada.DataDescricao = ocorrenciaVM.DataDescricao;
+                                    ocorrenciaCadastrada.Descricao = ocorrenciaVM.Descricao;
+                                    ocorrenciaCadastrada.DataTratativa = ocorrenciaVM.DataTratativa;
+                                    ocorrenciaCadastrada.Tratativa = ocorrenciaVM.Tratativa;
+                                    ocorrenciaCadastrada.Delete = ocorrenciaVM.Delete;
+                                }
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    InspecaoObraVM inspecaoCadastrada = inspecoes.FirstOrDefault(x => x.IdGuidInspecao == alteracao.IdGuidInspecao && alteracao.IdGuidInspecao != null);
+                    if (inspecaoCadastrada != null)
+                    {
+                        if (alteracao.Tipo.ToUpper() == "INSERT")
+                        {
+                            inspecaoCadastrada.Ocorrencias.Add(ocorrenciaVM);
+                        }
+                        else
+                        {
+                            OcorrenciaVM ocorrenciaCadastrada;
+                            if (alteracao.IdOcorrencia != 0)
+                            {
+                                ocorrenciaCadastrada = inspecaoCadastrada.Ocorrencias.FirstOrDefault(x => x.Id == alteracao.IdOcorrencia);
+                            }
+                            else
+                            {
+                                ocorrenciaCadastrada = inspecaoCadastrada.Ocorrencias.FirstOrDefault(x => x.IdGuidOcorrencia == alteracao.IdGuidOcorrencia);
+                            }
+                            if (ocorrenciaCadastrada != null)
+                            {
+                                ocorrenciaCadastrada.DataDescricao = ocorrenciaVM.DataDescricao;
+                                ocorrenciaCadastrada.Descricao = ocorrenciaVM.Descricao;
+                                ocorrenciaCadastrada.DataTratativa = ocorrenciaVM.DataTratativa;
+                                ocorrenciaCadastrada.Tratativa = ocorrenciaVM.Tratativa;
+                                ocorrenciaCadastrada.Delete = ocorrenciaVM.Delete;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        var ocorrenciaInserida = ocorrencias.FirstOrDefault(x => x.IdGuidOcorrencia != null ? (x.IdGuidOcorrencia == ocorrenciaVM.IdGuidOcorrencia) : (x.Id == ocorrenciaVM.Id));
+                        if (ocorrenciaInserida == null)
+                        {
+                            ocorrencias.Add(ocorrenciaVM);
+                        }
+                        else
+                        {
+                            var indice = ocorrencias.FindIndex(x => x.IdGuidOcorrencia != null ? (x.IdGuidOcorrencia == ocorrenciaVM.IdGuidOcorrencia) : (x.Id == ocorrenciaVM.Id));
+                            if (indice > -1)
+                            {
+                                ocorrencias.RemoveAt(indice);
+                                ocorrencias.Add(ocorrenciaVM);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         private string PersistirAreas(List<AreaVM> areas, string status)
         {
             foreach (var areaVM in areas)
@@ -304,6 +421,32 @@ namespace SGQ.GDOL.Api.Controllers
                 catch (Exception ex)
                 {
                     status += "Falha ao " + (inspecaoVM.Id != 0 ? "editar" : "inserir") + " inspeção " + inspecaoVM.Campo1 + " com id " + inspecaoVM.Id + "; ";
+                    continue;
+                }
+            }
+            return status;
+        }
+
+        private string PersistirOcorrencias(List<OcorrenciaVM> ocorrencias, string status)
+        {
+            foreach (var ocorrenciaVM in ocorrencias)
+            {
+                try
+                {
+                    var ocorrenciaBD = Mapper.Map<Ocorrencia>(ocorrenciaVM);
+                    ocorrenciaBD.InspecaoObra = null;
+                    if(ocorrenciaBD.Id == 0)
+                    {
+                        _ocorrenciaService.Adicionar(ocorrenciaBD);
+                    }
+                    else
+                    {
+                        _ocorrenciaService.Atualizar(ocorrenciaBD);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    status += "Falha ao criar/editar/excluir a ocorrência " + ocorrenciaVM.Descricao + ";";
                     continue;
                 }
             }

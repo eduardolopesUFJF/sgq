@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon class="icon-menu" name="menu"></ion-icon>
+        </button>
+        <div buy>
+            <ion-title>Ocorrências</ion-title>
+        </div>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <h2 text-center text-wrap class="broadcomb">{{broadcomb.toUpperCase()}}</h2>
+    <h2 padding text-center class="aviso" *ngIf="inspecao.ocorrencias.length < 1">Nenhum registro encontrado.</h2>
+    <ion-grid no-padding>
+        <ion-row>
+            <button ion-button default-button block text-capitalize box-shadow margin-bottom class="button-novo"
+                (click)="novaOcorrencia()">Nova ocorrência</button>
+        </ion-row>
+        <ion-row>
+            <ion-col col-12>
+                <ion-list no-margin>
+                    <ion-item default-item no-lines [ngClass]="{'novo-item': !item.id, 'item-removido': item.delete}" *ngFor="let item of inspecao.ocorrencias; let i = index;">
+                        <ion-row class="espacamento">
+                            <ion-col col-10 (click)="editar(item)">
+                                <h2 item-title text-wrap>Data da descrição: {{item.dataDescricao ? (item.dataDescricao
+                                    | date:
+                                    'dd/MM/yyyy') : '--'}}</h2>
+                                <h2 item-title text-wrap>Descrição: {{item.descricao}}</h2>
+                                <h2 item-title text-wrap>Data da tratativa: {{item.dataTratativa ? (item.dataTratativa
+                                    | date:
+                                    'dd/MM/yyyy') : '--'}}</h2>
+                                <h2 item-title text-wrap>Tratativa: {{item.tratativa}}</h2>
+                            </ion-col>
+                            <ion-col col-2>
+                                <ion-icon name="more" icon-small item-right style="font-size: 32px !important; margin: 0px"
+                                    (click)="exibirOpcoes(item)"></ion-icon>
+                            </ion-col>
+                        </ion-row>
+                    </ion-item>
+                </ion-list>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
