@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, ViewController, NavParams } from 'ionic-angular';
 import { Ocorrencia } from '../../../models/ocorrencia';
+import { ToastService } from '../../../utils/toast-service';
 
 @IonicPage()
 @Component({
@@ -14,6 +15,7 @@ export class ManterOcorrenciaPage {
 
     constructor(
         public viewCtrl: ViewController,
+        public toastService: ToastService,
         public navParams: NavParams
     ) {
         this.ocorrencia = this.navParams.data.ocorrencia;
@@ -22,6 +24,8 @@ export class ManterOcorrenciaPage {
     salvar(valido: boolean) {
         if (valido) {
             this.viewCtrl.dismiss(this.ocorrencia);
+        } else {
+            this.toastService.presentToastWarning("É obrigatório informar a descrição e sua data.");
         }
     }
 

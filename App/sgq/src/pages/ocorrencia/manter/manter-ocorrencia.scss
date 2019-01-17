@@ -34,7 +34,7 @@ page-manter-ocorrencia {
             padding-bottom: 15px !important;
 
             &.item-input-has-value {
-                ion-input {
+                ion-textarea {
                 background: rgba(33, 177, 75, 0.6) !important;
                 }
                 ion-select {
@@ -43,7 +43,7 @@ page-manter-ocorrencia {
             }
 
             &.item-input-has-focus {
-                ion-input {
+                ion-textarea {
                 background: rgba(33, 177, 75, 0.6) !important;
                 }
                 ion-select {
@@ -70,9 +70,9 @@ page-manter-ocorrencia {
                 color: black;
             }
 
-            ion-input {
+            ion-textarea {
                 background: rgba(33, 177, 75, 0.4) !important;
-                margin: 5px 10px 0px 10px !important;
+                margin: 5px 10px 0px 0px !important;
                 padding: 5px 10px !important;
                 border-radius: $border-radius;
                 z-index: 999;

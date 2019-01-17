@@ -34651,7 +34651,7 @@ page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item {
   padding-bottom: 15px !important;
 }
 
-page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item.item-input-has-value ion-input {
+page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item.item-input-has-value ion-textarea {
   background: rgba(33, 177, 75, 0.6) !important;
 }
 
@@ -34659,7 +34659,7 @@ page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item.item-input
   background: rgba(33, 177, 75, 0.6) !important;
 }
 
-page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item.item-input-has-focus ion-input {
+page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item.item-input-has-focus ion-textarea {
   background: rgba(33, 177, 75, 0.6) !important;
 }
 
@@ -34687,15 +34687,15 @@ page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item ion-label 
   color: black;
 }
 
-page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item ion-input {
+page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item ion-textarea {
   background: rgba(33, 177, 75, 0.4) !important;
-  margin: 5px 10px 0px 10px !important;
+  margin: 5px 10px 0px 0px !important;
   padding: 5px 10px !important;
   border-radius: 4px;
   z-index: 999;
 }
 
-page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item ion-input .input-cover {
+page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item ion-textarea .input-cover {
   display: none;
 }
 

@@ -44,7 +44,6 @@ export class RealizarVerificacaoPage {
         this.servico = this.navParams.data.servico;
         this.inspecao = this.navParams.data.inspecao;
         this.obterFuncionarios();
-        this.alterarPlaceholder();
     }
 
     setaFuncionarioInspecionado(event: {component: IonicSelectableComponent, value: any}) {
@@ -94,14 +93,6 @@ export class RealizarVerificacaoPage {
 
     abrirOcorrencias() {
         this.navCtrl.push("OcorrenciaPage", { inspecao: this.inspecao, broadcomb: this.descServico, servico: this.servico });
-    }
-
-    alterarPlaceholder() {
-        var element = document.getElementsByClassName('searchbar-input');
-        for (let index = 0; index < element.length; index++) {
-            const elemento = element[index];
-            // elemento.setAttribute('placeholder') = 'Buscar';
-        }
     }
 
 }

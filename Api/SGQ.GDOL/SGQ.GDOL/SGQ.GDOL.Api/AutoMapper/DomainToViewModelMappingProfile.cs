@@ -16,8 +16,7 @@ namespace SGQ.GDOL.Api.AutoMapper
             CreateMap<Ocorrencia, OcorrenciaVM>();
             CreateMap<ItemChecklistServico, ItemChecklistServicoVM>();
 
-            CreateMap<InspecaoObraItem, InspecaoObraItemVM>()
-                .ForMember(x => x.Inspecao2, opt => opt.MapFrom(x => x.Inspecao2 == "A" ? "RA" : x.Inspecao2));
+            CreateMap<InspecaoObraItem, InspecaoObraItemVM>();
 
             CreateMap<Servico, ServicoVM>()
                 .ForMember(x => x.IdArea, opt => opt.MapFrom(x => x.IdObraAreaChecklist))

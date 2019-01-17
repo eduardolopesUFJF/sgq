@@ -6,11 +6,13 @@
                     <span ion-text style="font-size: 0.7em;">Voltar</span>
                 </button>
             </ion-col>
-            <ion-col col-8 m-auto>
+            <ion-col col-7 m-auto>
                 <ion-title>Inspeção do Serviço</ion-title>
             </ion-col>
-            <ion-col col-2 (click)="abrirOcorrencias()">
-                <ion-icon name="archive" style="font-size: 23px;margin-left: 16px;"></ion-icon>
+            <ion-col col-3 (click)="abrirOcorrencias()">
+                    <button class="button-nav">
+                        <span ion-text style="font-size: 0.7em;">Ocorrências</span>
+                    </button>
             </ion-col>
         </ion-row>
     </ion-navbar>
@@ -95,7 +97,7 @@
                                 <ion-col col-3>
                                     <ion-item radio style="background-color: blue;">
                                         <ion-label>NA</ion-label>
-                                        <ion-radio [value]="'NA'"></ion-radio>
+                                        <ion-radio [value]="'N'"></ion-radio>
                                     </ion-item>
                                 </ion-col>
                                 <ion-col col-3>
@@ -126,7 +128,7 @@
                                             <ion-col col-3>
                                                 <ion-item radio style="background-color: orange;">
                                                     <ion-label>RA</ion-label>
-                                                    <ion-radio [value]="'RA'"></ion-radio>
+                                                    <ion-radio [value]="'A'"></ion-radio>
                                                 </ion-item>
                                             </ion-col>
                                             <ion-col col-3>

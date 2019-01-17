@@ -5,9 +5,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { AppSettings } from '../config/app-settings';
-import { AngularFireModule } from 'angularfire2';
 import { Network } from '@ionic-native/network';
 import { ToastService } from '../utils/toast-service';
 import { LoadingService } from '../utils/loading-service';
@@ -27,8 +24,6 @@ import { IonicSelectableModule } from 'ionic-selectable';
     HttpClientModule,
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    AngularFireModule.initializeApp(AppSettings.FIREBASE_CONFIG),
-    AngularFireDatabaseModule,
     IonicStorageModule.forRoot(),
     IonicSelectableModule
   ],

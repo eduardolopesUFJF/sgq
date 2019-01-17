@@ -145,10 +145,10 @@ export class VerificacaoPage {
         modal.onWillDismiss((data: any) => {
             if (data.concluido) {
                 data.inspecao.qtdA = data.inspecao.inspecaoObraItens.filter(x => x.inspecao1 == 'A').length;
-                data.inspecao.qtdNA = data.inspecao.inspecaoObraItens.filter(x => x.inspecao1 == 'NA').length;
+                data.inspecao.qtdNA = data.inspecao.inspecaoObraItens.filter(x => x.inspecao1 == 'N').length;
                 data.inspecao.qtdR = data.inspecao.inspecaoObraItens.filter(x => x.inspecao1 == 'R').length;
                 data.inspecao.qtdX = data.inspecao.inspecaoObraItens.filter(x => x.inspecao1 == 'X').length;
-                data.inspecao.qtdRA = data.inspecao.inspecaoObraItens.filter(x => x.inspecao2 == 'RA').length;
+                data.inspecao.qtdRA = data.inspecao.inspecaoObraItens.filter(x => x.inspecao2 == 'A').length;
                 let index = this.inspecoesBackup.findIndex(x => data.inspecao.id != 0 ? (x.id == data.inspecao.id) : (x.idGuidInspecao == data.inspecao.idGuidInspecao));
                 this.inspecoesBackup[index] = data.inspecao;
                 this.inspecoes = [...this.inspecoesBackup];

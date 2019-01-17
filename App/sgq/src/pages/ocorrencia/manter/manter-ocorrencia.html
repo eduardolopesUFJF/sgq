@@ -25,7 +25,7 @@
                     </ion-item>
                     <ion-item text-center transparent>
                         <ion-label stacked>DESCRIÇÃO</ion-label>
-                        <ion-input text-center type="text" [(ngModel)]="ocorrencia.descricao" name="descricao" required></ion-input>
+                        <ion-textarea text-center type="text" rows="4" [(ngModel)]="ocorrencia.descricao" name="descricao" required></ion-textarea>
                     </ion-item>
                     <ion-item text-center transparent>
                         <ion-label stacked>DATA DA TRATATIVA</ion-label>
@@ -34,7 +34,7 @@
                     </ion-item>
                     <ion-item text-center transparent>
                         <ion-label stacked>TRATATIVA</ion-label>
-                        <ion-input text-center type="text" [(ngModel)]="ocorrencia.tratativa" name="tratativa"></ion-input>
+                        <ion-textarea text-center type="text" rows="4" [(ngModel)]="ocorrencia.tratativa" name="tratativa"></ion-textarea>
                     </ion-item>
                     <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: rgb(33,177,75) !important;"
                         (click)="salvar(cadastroForm.valid)">Salvar</button>
