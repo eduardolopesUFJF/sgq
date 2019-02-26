@@ -1,1 +1,272 @@
-webpackJsonp([11],{706:function(l,n,u){"use strict";Object.defineProperty(n,"__esModule",{value:!0}),u.d(n,"SelectLayout1ModuleNgFactory",function(){return h});var t=u(2),e=u(780),a=u(190),i=u(191),o=u(192),c=u(193),_=u(194),s=u(195),r=u(196),d=u(197),f=u(198),p=u(787),g=u(15),v=u(20),b=u(128),m=u(49),y=u(765),h=t._7(e.a,[],function(l){return t._18([t._19(512,t.k,t._3,[[8,[a.a,i.a,o.a,c.a,_.a,s.a,r.a,d.a,f.a,p.a]],[3,t.k],t.A]),t._19(4608,g.l,g.k,[t.y,[2,g.u]]),t._19(4608,v.r,v.r,[]),t._19(4608,v.d,v.d,[]),t._19(512,g.b,g.b,[]),t._19(512,v.p,v.p,[]),t._19(512,v.e,v.e,[]),t._19(512,v.n,v.n,[]),t._19(512,b.a,b.a,[]),t._19(512,b.b,b.b,[]),t._19(512,e.a,e.a,[]),t._19(256,m.a,y.a,[])])})},743:function(l,n,u){"use strict";function t(l){return i._33(0,[(l()(),i._10(0,0,null,null,1,"div",[["class","select-placeholder select-text"]],null,null,null,null,null)),(l()(),i._31(1,null,["",""]))],null,function(l,n){l(n,1,0,n.component.placeholder)})}function e(l){return i._33(0,[(l()(),i._10(0,0,null,null,1,"div",[["class","select-text"]],null,null,null,null,null)),(l()(),i._31(1,null,["",""]))],null,function(l,n){var u=n.component;l(n,1,0,u.selectedText||u._text)})}function a(l){return i._33(0,[(l()(),i._5(16777216,null,null,1,null,t)),i._9(1,16384,null,0,o.j,[i.T,i.P],{ngIf:[0,"ngIf"]},null),(l()(),i._5(16777216,null,null,1,null,e)),i._9(3,16384,null,0,o.j,[i.T,i.P],{ngIf:[0,"ngIf"]},null),(l()(),i._10(4,0,null,null,1,"div",[["class","select-icon"]],null,null,null,null,null)),(l()(),i._10(5,0,null,null,0,"div",[["class","select-icon-inner"]],null,null,null,null,null)),(l()(),i._10(6,0,null,null,1,"button",[["aria-haspopup","true"],["class","item-cover"],["ion-button","item-cover"],["type","button"]],[[8,"id",0],[1,"aria-labelledby",0],[1,"aria-disabled",0]],null,null,c.b,c.a)),i._9(7,1097728,null,0,_.a,[[8,"item-cover"],s.a,i.n,i.J],null,null)],function(l,n){var u=n.component;l(n,1,0,!u._text);l(n,3,0,u._text)},function(l,n){var u=n.component;l(n,6,0,u.id,u._labelId,u._disabled)})}u.d(n,"a",function(){return r}),n.b=a;var i=u(2),o=u(15),c=u(38),_=u(27),s=u(3),r=(u(21),u(25),i._8({encapsulation:2,styles:[],data:{}}))},765:function(l,n,u){"use strict";u.d(n,"a",function(){return t});u(0);var t=function(){return function(){var l=this;this.onEvent=function(n,u){l.events[n]&&l.events[n](u)}}}()},780:function(l,n,u){"use strict";u.d(n,"a",function(){return t});u(0),u(55);var t=function(){return function(){}}()},787:function(l,n,u){"use strict";function t(l){return i._33(0,[(l()(),i._10(0,0,null,null,2,"ion-option",[],null,null,null,null,null)),i._9(1,16384,[[4,4]],0,o.a,[i.n],{value:[0,"value"]},null),(l()(),i._31(2,null,["",""]))],function(l,n){l(n,1,0,n.context.$implicit.id)},function(l,n){l(n,2,0,n.context.$implicit.title)})}function e(l){return i._33(0,[(l()(),i._10(0,0,null,null,26,"ion-item",[["class","item item-block"],["color","secondary"],["no-lines",""]],null,null,null,c.b,c.a)),i._9(1,1097728,null,3,_.a,[s.a,r.a,i.n,i.J,[2,d.a]],{color:[0,"color"]},null),i._29(335544320,1,{contentLabel:0}),i._29(603979776,2,{_buttons:1}),i._29(603979776,3,{_icons:1}),i._9(5,16384,null,0,f.a,[],null,null),(l()(),i._31(-1,2,["\n    "])),(l()(),i._10(7,0,null,1,2,"ion-label",[],null,null,null,null,null)),i._9(8,16384,[[1,4]],0,p.a,[r.a,i.n,i.J,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),i._31(9,null,["",""])),(l()(),i._31(-1,2,["\n    "])),(l()(),i._10(11,0,null,3,14,"ion-select",[["multiple","false"]],[[2,"select-disabled",null],[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"],[null,"click"],[null,"keyup.space"]],function(l,n,u){var t=!0,e=l.component;if("click"===n){t=!1!==i._22(l,12)._click(u)&&t}if("keyup.space"===n){t=!1!==i._22(l,12)._keyup()&&t}if("ngModelChange"===n){t=!1!==(e.data.selectedItem=u)&&t}return t},g.b,g.a)),i._9(12,1228800,null,1,v.a,[b.a,s.a,r.a,i.n,i.J,[2,_.a],m.a],{multiple:[0,"multiple"]},null),i._29(603979776,4,{options:1}),i._27(1024,null,y.g,function(l){return[l]},[v.a]),i._9(15,671744,null,0,y.l,[[8,null],[8,null],[8,null],[2,y.g]],{model:[0,"model"]},{update:"ngModelChange"}),i._27(2048,null,y.h,null,[y.l]),i._9(17,16384,null,0,y.i,[y.h],null,null),(l()(),i._31(-1,null,["\n        "])),(l()(),i._10(19,0,null,null,2,"ion-option",[["value","0"]],null,null,null,null,null)),i._9(20,16384,[[4,4]],0,o.a,[i.n],{value:[0,"value"]},null),(l()(),i._31(-1,null,["Selecione"])),(l()(),i._31(-1,null,["\n        "])),(l()(),i._5(16777216,null,null,1,null,t)),i._9(24,802816,null,0,h.i,[i.T,i.P,i.w],{ngForOf:[0,"ngForOf"]},null),(l()(),i._31(-1,null,["\n    "])),(l()(),i._31(-1,2,["\n"]))],function(l,n){var u=n.component;l(n,1,0,"secondary");l(n,12,0,"false");l(n,15,0,u.data.selectedItem);l(n,20,0,"0");l(n,24,0,u.data.items)},function(l,n){l(n,9,0,n.component.data.title);l(n,11,0,i._22(n,12)._disabled,i._22(n,17).ngClassUntouched,i._22(n,17).ngClassTouched,i._22(n,17).ngClassPristine,i._22(n,17).ngClassDirty,i._22(n,17).ngClassValid,i._22(n,17).ngClassInvalid,i._22(n,17).ngClassPending)})}function a(l){return i._33(0,[(l()(),i._5(16777216,null,null,1,null,e)),i._9(1,16384,null,0,h.j,[i.T,i.P],{ngIf:[0,"ngIf"]},null)],function(l,n){l(n,1,0,null!=n.component.data)},null)}u.d(n,"a",function(){return I});var i=u(2),o=u(134),c=u(129),_=u(24),s=u(21),r=u(3),d=u(50),f=u(60),p=u(62),g=u(743),v=u(200),b=u(12),m=u(25),y=u(20),h=u(15),k=u(765),C=i._8({encapsulation:2,styles:[],data:{}}),I=i._6("select-layout-1",k.a,function(l){return i._33(0,[(l()(),i._10(0,0,null,null,1,"select-layout-1",[],null,null,null,a,C)),i._9(1,49152,null,0,k.a,[],null,null)],null,null)},{data:"data",events:"events"},{},[])}});
+webpackJsonp([11],{
+
+/***/ 769:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RealizarVerificacaoPageModule", function() { return RealizarVerificacaoPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__realizar_verificacao__ = __webpack_require__(900);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_selectable__ = __webpack_require__(354);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var RealizarVerificacaoPageModule = /** @class */ (function () {
+    function RealizarVerificacaoPageModule() {
+    }
+    RealizarVerificacaoPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__realizar_verificacao__["a" /* RealizarVerificacaoPage */]
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__realizar_verificacao__["a" /* RealizarVerificacaoPage */]),
+                __WEBPACK_IMPORTED_MODULE_3_ionic_selectable__["a" /* IonicSelectableModule */]
+            ],
+            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
+        })
+    ], RealizarVerificacaoPageModule);
+    return RealizarVerificacaoPageModule;
+}());
+
+//# sourceMappingURL=realizar-verificacao.module.js.map
+
+/***/ }),
+
+/***/ 801:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Servico; });
+var Servico = /** @class */ (function () {
+    function Servico(values) {
+        if (values === void 0) { values = {}; }
+        this.id = 0;
+        this.idGuidServico = '';
+        this.descricao = '';
+        this.tipo = '';
+        this.idObra = 0;
+        this.idChecklist = 0;
+        this.idArea = 0;
+        this.idAreaGuid = "";
+        this.metaAprovacao = 90;
+        this.status = 0;
+        this.situacao = 'Em aberto';
+        this.delete = false;
+        this.dataHoraInclusao = new Date();
+        this.dataHoraAlteracao = new Date();
+        this.inspecoesObra = [];
+        this.itensChecklistServico = [];
+        Object.assign(this, values);
+    }
+    return Servico;
+}());
+
+//# sourceMappingURL=servico.js.map
+
+/***/ }),
+
+/***/ 802:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Inspecao; });
+var Inspecao = /** @class */ (function () {
+    function Inspecao(values) {
+        if (values === void 0) { values = {}; }
+        this.id = 0;
+        this.idGuidInspecao = '';
+        this.campo1 = "";
+        this.campo2 = "";
+        this.campo3 = "";
+        this.campo4 = "";
+        this.status = 0;
+        this.situacao = 'Em aberto';
+        this.delete = false;
+        this.dataHoraAlteracao = new Date();
+        this.qtdNA = 0;
+        this.qtdA = 0;
+        this.qtdR = 0;
+        this.qtdRA = 0;
+        this.qtdX = 0;
+        this.inspecaoObraItens = [];
+        this.ocorrencias = [];
+        Object.assign(this, values);
+    }
+    return Inspecao;
+}());
+
+//# sourceMappingURL=inspecao.js.map
+
+/***/ }),
+
+/***/ 819:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ItemInspecao; });
+var ItemInspecao = /** @class */ (function () {
+    function ItemInspecao(values) {
+        if (values === void 0) { values = {}; }
+        this.id = 0;
+        this.idInspecaoObra = 0;
+        this.idGuidInspecao = '';
+        this.inspecao1 = '';
+        this.inspecao2 = '';
+        this.delete = false;
+        this.dataHoraAlteracao = new Date();
+        Object.assign(this, values);
+    }
+    return ItemInspecao;
+}());
+
+//# sourceMappingURL=item-inspecao.js.map
+
+/***/ }),
+
+/***/ 900:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RealizarVerificacaoPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_inspecao__ = __webpack_require__(802);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_funcionario__ = __webpack_require__(901);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(153);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_toast_service__ = __webpack_require__(350);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__models_item_inspecao__ = __webpack_require__(819);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__models_servico__ = __webpack_require__(801);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+var RealizarVerificacaoPage = /** @class */ (function () {
+    function RealizarVerificacaoPage(viewCtrl, storage, toastService, modalCtrl, navParams, navCtrl) {
+        this.viewCtrl = viewCtrl;
+        this.storage = storage;
+        this.toastService = toastService;
+        this.modalCtrl = modalCtrl;
+        this.navParams = navParams;
+        this.navCtrl = navCtrl;
+        this.inspecao = new __WEBPACK_IMPORTED_MODULE_2__models_inspecao__["a" /* Inspecao */]();
+        this.servico = new __WEBPACK_IMPORTED_MODULE_7__models_servico__["a" /* Servico */]();
+        this.descServico = '';
+        this.funcionarios = [];
+        this.funcionarioInspecionado = new __WEBPACK_IMPORTED_MODULE_3__models_funcionario__["a" /* Funcionario */]();
+        this.funcionarioAprovado = new __WEBPACK_IMPORTED_MODULE_3__models_funcionario__["a" /* Funcionario */]();
+        this.limpaNA1 = false;
+        this.limpaA1 = false;
+        this.limpaR1 = false;
+        this.limpaX1 = false;
+        this.limpaRA2 = false;
+        this.limpaX2 = false;
+        this.ultimoItem = new __WEBPACK_IMPORTED_MODULE_6__models_item_inspecao__["a" /* ItemInspecao */]();
+        this.descServico = this.navParams.data.descServico;
+        this.servico = this.navParams.data.servico;
+        this.inspecao = this.navParams.data.inspecao;
+        this.obterFuncionarios();
+    }
+    RealizarVerificacaoPage.prototype.setaFuncionarioInspecionado = function (event) {
+        this.inspecao.idFuncionarioInspecionado = event.value.id;
+    };
+    RealizarVerificacaoPage.prototype.setaFuncionarioAprovado = function (event) {
+        this.inspecao.idFuncionarioAprovado = event.value.id;
+    };
+    RealizarVerificacaoPage.prototype.obterFuncionarios = function () {
+        var _this = this;
+        this.storage.ready().then(function () {
+            _this.storage.get('funcionarios').then(function (funcionarios) {
+                _this.funcionarios = funcionarios;
+                _this.funcionarioAprovado = _this.funcionarios.find(function (x) { return x.id == _this.inspecao.idFuncionarioAprovado; });
+                _this.funcionarioInspecionado = _this.funcionarios.find(function (x) { return x.id == _this.inspecao.idFuncionarioInspecionado; });
+            });
+        });
+    };
+    RealizarVerificacaoPage.prototype.atualizarSituacao = function () {
+        this.inspecao.situacao = this.inspecao.status == 0 ? 'Em aberto' : 'Finalizado';
+    };
+    RealizarVerificacaoPage.prototype.salvar = function (valido) {
+        if (valido) {
+            if (this.inspecao.status == 0) {
+                this.viewCtrl.dismiss({ inspecao: this.inspecao, concluido: true });
+            }
+            else {
+                var naoFinalizado = this.inspecao.inspecaoObraItens.some(function (x) { return x.inspecao1 == "" || (x.inspecao1 == "R" && x.inspecao2 == ""); });
+                if (naoFinalizado) {
+                    this.toastService.presentToastWarning("Não é possível salvar com status de finalizado pois existem inspeções pendentes.");
+                }
+                else {
+                    this.viewCtrl.dismiss({ inspecao: this.inspecao, concluido: true });
+                }
+            }
+        }
+        else {
+            this.toastService.presentToastWarning("É obrigatório informar o funcionário da inspeção.");
+        }
+    };
+    RealizarVerificacaoPage.prototype.voltar = function () {
+        this.viewCtrl.dismiss({ inspecao: this.inspecao, concluido: false });
+    };
+    RealizarVerificacaoPage.prototype.abrirOcorrencias = function () {
+        this.navCtrl.push("OcorrenciaPage", { inspecao: this.inspecao, broadcomb: this.descServico, servico: this.servico });
+    };
+    RealizarVerificacaoPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'page-realizar-verificacao',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\verificacao\realizar\realizar-verificacao.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <ion-row>\n\n            <ion-col col-2>\n\n                <button class="button-nav" (click)="voltar()">\n\n                    <span ion-text style="font-size: 0.7em;">Voltar</span>\n\n                </button>\n\n            </ion-col>\n\n            <ion-col col-7 m-auto>\n\n                <ion-title>Inspeção do Serviço</ion-title>\n\n            </ion-col>\n\n            <ion-col col-3 (click)="abrirOcorrencias()">\n\n                    <button class="button-nav">\n\n                        <span ion-text style="font-size: 0.7em;">Ocorrências</span>\n\n                    </button>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content has-header>\n\n    <!-- <form margin-bottom>\n\n        <ion-item>\n\n            <ion-label>Port</ion-label>\n\n            <ionic-selectable item-content [(ngModel)]="inspecao.idFuncionarioInspecionado" [ngModelOptions]="{standalone: true}" itemValueField="id" itemTextField="nome" [items]="funcionarios">\n\n            </ionic-selectable>\n\n        </ion-item>\n\n    </form> -->\n\n    <ion-grid no-padding>\n\n        <ion-row padding-left padding-right>\n\n            <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n\n                <form #cadastroForm="ngForm" padding-top>\n\n                    <ion-item text-center text-wrap transparent style="padding-bottom: 0 !important;">\n\n                        <ion-label style="font-size: 18px !important; font-weight: bold;" stacked>{{descServico.toUpperCase()}}</ion-label>\n\n                    </ion-item>\n\n                    <ion-item text-center transparent>\n\n                        <ion-label stacked>INSPECIONADO POR</ion-label>\n\n                        <ionic-selectable \n\n                            item-content\n\n                            [(ngModel)]="funcionarioInspecionado"\n\n                            [items]="funcionarios"\n\n                            itemValueField="id"\n\n                            itemTextField="nome"\n\n                            [canSearch]="true"\n\n                            name="idFuncionarioInspecionado"\n\n                            (onChange)="setaFuncionarioInspecionado($event)"\n\n                            (onOpen)="alterarPlaceholder()"\n\n                            required>\n\n                        </ionic-selectable>\n\n                        <!-- <ion-select required [(ngModel)]="inspecao.idFuncionarioInspecionado" multiple="false" name="idFuncionarioInspecionado"\n\n                            okText="Ok" cancelText="Cancelar">\n\n                            <ion-option *ngFor="let item of funcionarios; let i= index" [value]="item.id">{{item.nome}}</ion-option>\n\n                        </ion-select> -->\n\n                    </ion-item>\n\n                    <ion-item text-center transparent>\n\n                        <ion-label stacked>APROVADOR POR</ion-label>\n\n                        <ionic-selectable \n\n                            item-content\n\n                            [(ngModel)]="funcionarioAprovado"\n\n                            [items]="funcionarios"\n\n                            itemValueField="id"\n\n                            itemTextField="nome"\n\n                            [canSearch]="true"\n\n                            name="idFuncionarioAprovado"\n\n                            (onChange)="setaFuncionarioAprovado($event)"\n\n                            (onOpen)="alterarPlaceholder()">\n\n                        </ionic-selectable>\n\n                        <!-- <ion-select [(ngModel)]="inspecao.idFuncionarioAprovado" multiple="false" name="idFuncionarioAprovado"\n\n                            okText="Ok" cancelText="Cancelar">\n\n                            <ion-option *ngFor="let item of funcionarios; let i= index" [value]="item.id">{{item.nome}}</ion-option>\n\n                        </ion-select> -->\n\n                    </ion-item>\n\n                    <ion-list radio-group no-margin [(ngModel)]="inspecao.status" name="status" (ngModelChange)="atualizarSituacao()"\n\n                        [disabled]="servico.status == 1">\n\n                        <ion-grid>\n\n                            <ion-row>\n\n                                <ion-col col-6>\n\n                                    <ion-item radio>\n\n                                        <ion-label>Em aberto</ion-label>\n\n                                        <ion-radio [value]="0"></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                                <ion-col col-6>\n\n                                    <ion-item radio>\n\n                                        <ion-label>Finalizado</ion-label>\n\n                                        <ion-radio [value]="1"></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                            </ion-row>\n\n                        </ion-grid>\n\n                    </ion-list>\n\n                    <hr style="margin: 2px 0 0 0;">\n\n                    <ion-list radio-group no-margin [(ngModel)]="item.inspecao1" name="itemInspecao1+{{i}}" *ngFor="let item of inspecao.inspecaoObraItens; let i=index;">\n\n                        <h2 text-wrap style="font-weight: bold;margin-top: 10px;">{{item.descricao}}</h2>\n\n                        <ion-grid>\n\n                            <ion-row>\n\n                                <ion-col col-3>\n\n                                    <ion-item radio style="background-color: blue;">\n\n                                        <ion-label>NA</ion-label>\n\n                                        <ion-radio [value]="\'N\'"></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                                <ion-col col-3>\n\n                                    <ion-item radio style="background-color: darkgreen;">\n\n                                        <ion-label>A</ion-label>\n\n                                        <ion-radio [value]="\'A\'"></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                                <ion-col col-3>\n\n                                    <ion-item radio style="background-color: yellow;">\n\n                                        <ion-label>R</ion-label>\n\n                                        <ion-radio [value]="\'R\'"></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                                <ion-col col-3>\n\n                                    <ion-item radio style="background-color: red;">\n\n                                        <ion-label>X</ion-label>\n\n                                        <ion-radio [value]="\'X\'"></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                            </ion-row>\n\n                            <ion-row *ngIf="item.inspecao1 == \'R\'">\n\n                                <ion-list radio-group no-margin [(ngModel)]="item.inspecao2" name="itemInspecao2+{{i}}"\n\n                                    style="width: 100%">\n\n                                    <ion-grid>\n\n                                        <ion-row>\n\n                                            <ion-col col-3></ion-col>\n\n                                            <ion-col col-3>\n\n                                                <ion-item radio style="background-color: orange;">\n\n                                                    <ion-label>RA</ion-label>\n\n                                                    <ion-radio [value]="\'A\'"></ion-radio>\n\n                                                </ion-item>\n\n                                            </ion-col>\n\n                                            <ion-col col-3>\n\n                                                <ion-item radio style="background-color: red;">\n\n                                                    <ion-label>X</ion-label>\n\n                                                    <ion-radio [value]="\'X\'"></ion-radio>\n\n                                                </ion-item>\n\n                                            </ion-col>\n\n                                            <ion-col col-3></ion-col>\n\n                                        </ion-row>\n\n                                    </ion-grid>\n\n                                </ion-list>\n\n                            </ion-row>\n\n                            <ion-row>\n\n                                <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: black !important;"\n\n                                    (click)="item.inspecao1=\'\';item.inspecao2=\'\'">Limpar</button>\n\n                            </ion-row>\n\n                        </ion-grid>\n\n                        <hr style="margin: 2px 0 0 0;">\n\n                    </ion-list>\n\n                </form>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-grid>\n\n</ion-content>\n\n\n\n<ion-footer>\n\n    <button ion-button default-button block text-capitalize box-shadow margin-bottom no-margin style="background-color: rgb(33,177,75) !important;"\n\n        (click)="salvar(cadastroForm.valid)">Salvar</button>\n\n</ion-footer>'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\verificacao\realizar\realizar-verificacao.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["u" /* ViewController */],
+            __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */],
+            __WEBPACK_IMPORTED_MODULE_5__utils_toast_service__["a" /* ToastService */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ModalController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */]])
+    ], RealizarVerificacaoPage);
+    return RealizarVerificacaoPage;
+}());
+
+//# sourceMappingURL=realizar-verificacao.js.map
+
+/***/ }),
+
+/***/ 901:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Funcionario; });
+var Funcionario = /** @class */ (function () {
+    function Funcionario(values) {
+        if (values === void 0) { values = {}; }
+        Object.assign(this, values);
+    }
+    return Funcionario;
+}());
+
+//# sourceMappingURL=funcionario.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=11.js.map

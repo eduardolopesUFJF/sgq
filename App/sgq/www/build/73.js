@@ -1,1 +1,117 @@
-webpackJsonp([73],{672:function(l,n,u){"use strict";function t(l){return i._33(0,[(l()(),i._10(0,0,null,null,21,"ion-item",[["class","item item-block"],["default-item",""],["no-lines",""]],null,[[null,"click"]],function(l,n,u){var t=!0;if("click"===n){t=!1!==l.component.onEvent("onItemClick",l.context.$implicit.title,u)&&t}return t},v.b,v.a)),i._9(1,1097728,null,3,I.a,[k.a,y.a,i.n,i.J,[2,J.a]],null,null),i._29(335544320,5,{contentLabel:0}),i._29(603979776,6,{_buttons:1}),i._29(603979776,7,{_icons:1}),i._9(5,16384,null,0,R.a,[],null,null),(l()(),i._31(-1,2,["\n            "])),(l()(),i._31(-1,2,["\n            "])),(l()(),i._10(8,0,null,0,4,"ion-thumbnail",[["item-left",""]],null,null,null,null,null)),i._9(9,16384,null,0,x.a,[],null,null),(l()(),i._31(-1,null,["\n              "])),(l()(),i._10(11,0,null,null,0,"img",[],[[8,"src",4]],null,null,null,null)),(l()(),i._31(-1,null,["\n            "])),(l()(),i._31(-1,2,["\n            "])),(l()(),i._31(-1,2,["\n            "])),(l()(),i._10(15,0,null,2,1,"h2",[["item-title",""]],null,null,null,null,null)),(l()(),i._31(16,null,["",""])),(l()(),i._31(-1,2,["\n            "])),(l()(),i._31(-1,2,["\n            "])),(l()(),i._10(19,0,null,2,1,"h3",[["item-subtitle",""]],null,null,null,null,null)),(l()(),i._31(20,null,["",""])),(l()(),i._31(-1,2,["\n          "]))],null,function(l,n){l(n,11,0,n.context.$implicit.image);l(n,16,0,n.context.$implicit.title);l(n,20,0,n.context.$implicit.subtitle)})}function e(l){return i._33(0,[(l()(),i._10(0,0,null,null,31,"ion-grid",[["class","grid"],["no-padding",""]],null,null,null,null,null)),i._9(1,16384,null,0,w.a,[],null,null),(l()(),i._31(-1,null,["\n    "])),(l()(),i._10(3,0,null,null,27,"ion-row",[["class","row"]],null,null,null,null,null)),i._9(4,16384,null,0,O.a,[],null,null),(l()(),i._31(-1,null,["\n      "])),(l()(),i._10(6,0,null,null,23,"ion-col",[["class","col"],["col-12",""]],null,null,null,null,null)),i._9(7,16384,null,0,P.a,[],null,null),(l()(),i._31(-1,null,["\n        "])),(l()(),i._31(-1,null,["\n        "])),(l()(),i._10(10,0,null,null,9,"ion-list-header",[["class","item"],["header-section",""],["no-lines",""],["padding-horizontal",""],["transparent",""]],null,null,null,v.b,v.a)),i._9(11,1097728,null,3,I.a,[k.a,y.a,i.n,i.J,[2,J.a]],null,null),i._29(335544320,2,{contentLabel:0}),i._29(603979776,3,{_buttons:1}),i._29(603979776,4,{_icons:1}),i._9(15,16384,null,0,$.a,[y.a,i.J,i.n,[8,null]],null,null),(l()(),i._31(-1,2,["\n          "])),(l()(),i._10(17,0,null,2,1,"h1",[["header-title",""],["text-capitalize",""]],null,null,null,null,null)),(l()(),i._31(18,null,["",""])),(l()(),i._31(-1,2,["\n        "])),(l()(),i._31(-1,null,["\n        "])),(l()(),i._31(-1,null,["\n        "])),(l()(),i._10(22,0,null,null,6,"ion-list",[["no-margin",""],["reorder","true"]],[[2,"reorder-enabled",null],[2,"reorder-visible",null],[2,"reorder-side-start",null]],[[null,"ionItemReorder"]],function(l,n,u){var t=!0;if("ionItemReorder"===n){t=!1!==l.component.reorderItems(u)&&t}return t},null,null)),i._9(23,147456,null,0,J.a,[j.a,C.a,i.n,i.J,i.C,[2,F.a]],{reorder:[0,"reorder"]},{ionItemReorder:"ionItemReorder"}),i._9(24,16384,null,0,L.a,[y.a,i.n,i.J,j.a,z.l,C.a],null,null),(l()(),i._31(-1,null,["\n          "])),(l()(),i._5(16777216,null,null,1,null,t)),i._9(27,802816,null,0,A.i,[i.T,i.P,i.w],{ngForOf:[0,"ngForOf"]},null),(l()(),i._31(-1,null,["\n        "])),(l()(),i._31(-1,null,["\n      "])),(l()(),i._31(-1,null,["\n    "])),(l()(),i._31(-1,null,["\n  "]))],function(l,n){var u=n.component;l(n,23,0,"true");l(n,27,0,u.data.items)},function(l,n){l(n,18,0,n.component.data.header);l(n,22,0,i._22(n,23)._enableReorder,i._22(n,23)._visibleReorder,i._22(n,23)._isStart)})}function a(l){return i._33(0,[i._29(402653184,1,{content:0}),(l()(),i._31(-1,null,["\n"])),(l()(),i._10(2,0,null,null,5,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,D.b,D.a)),i._9(3,4374528,[[1,4]],0,F.a,[y.a,j.a,C.a,i.n,i.J,E.a,M.a,i.C,[2,T.a],[2,N.a]],null,null),(l()(),i._31(-1,1,["\n  "])),(l()(),i._5(16777216,null,1,1,null,e)),i._9(6,16384,null,0,A.j,[i.T,i.P],{ngIf:[0,"ngIf"]},null),(l()(),i._31(-1,1,["\n"])),(l()(),i._31(-1,null,["\n"]))],function(l,n){l(n,6,0,null!=n.component.data)},function(l,n){l(n,2,0,i._22(n,3).statusbarPadding,i._22(n,3)._hasRefresher)})}Object.defineProperty(n,"__esModule",{value:!0});var i=u(2),r=(u(0),u(55)),_=function(){function l(){var l=this;this.reorderItems=function(n){l.data.items=Object(r.i)(l.data.items,n)}}return l.prototype.onEvent=function(l,n,u){this.events[l]&&this.events[l](n)},l}(),o=function(){return function(){}}(),c=u(190),s=u(191),d=u(192),f=u(193),m=u(194),p=u(195),b=u(196),g=u(197),h=u(198),v=u(129),I=u(24),k=u(21),y=u(3),J=u(50),R=u(60),x=u(202),w=u(130),O=u(81),P=u(82),$=u(133),j=u(6),C=u(13),F=u(30),L=u(56),z=u(10),A=u(15),D=u(199),E=u(12),M=u(32),T=u(7),N=u(29),S=i._8({encapsulation:2,styles:[],data:{}}),q=i._6("drag-and-drop-layout-3",_,function(l){return i._33(0,[(l()(),i._10(0,0,null,null,1,"drag-and-drop-layout-3",[],null,null,null,a,S)),i._9(1,49152,null,0,_,[],null,null)],null,null)},{data:"data",events:"events"},{},[]),B=u(20),G=u(128),H=u(49);u.d(n,"DragAndDropLayout3ModuleNgFactory",function(){return K});var K=i._7(o,[],function(l){return i._18([i._19(512,i.k,i._3,[[8,[c.a,s.a,d.a,f.a,m.a,p.a,b.a,g.a,h.a,q]],[3,i.k],i.A]),i._19(4608,A.l,A.k,[i.y,[2,A.u]]),i._19(4608,B.r,B.r,[]),i._19(4608,B.d,B.d,[]),i._19(512,A.b,A.b,[]),i._19(512,B.p,B.p,[]),i._19(512,B.e,B.e,[]),i._19(512,B.n,B.n,[]),i._19(512,G.a,G.a,[]),i._19(512,G.b,G.b,[]),i._19(512,o,o,[]),i._19(256,H.a,_,[])])})}});
+webpackJsonp([73],{
+
+/***/ 703:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppearanceAnimationLayout3Module", function() { return AppearanceAnimationLayout3Module; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_3__ = __webpack_require__(831);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var AppearanceAnimationLayout3Module = /** @class */ (function () {
+    function AppearanceAnimationLayout3Module() {
+    }
+    AppearanceAnimationLayout3Module = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_3__["a" /* AppearanceAnimationLayout3 */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_3__["a" /* AppearanceAnimationLayout3 */]),
+            ],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_3__["a" /* AppearanceAnimationLayout3 */]
+            ],
+            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
+        })
+    ], AppearanceAnimationLayout3Module);
+    return AppearanceAnimationLayout3Module;
+}());
+
+//# sourceMappingURL=appearance-animation-layout-3.module.js.map
+
+/***/ }),
+
+/***/ 831:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppearanceAnimationLayout3; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var AppearanceAnimationLayout3 = /** @class */ (function () {
+    function AppearanceAnimationLayout3() {
+        this.animateItems = [];
+        this.animateClass = { 'fade-in-down-item': true };
+    }
+    AppearanceAnimationLayout3.prototype.onEvent = function (event, item, e) {
+        if (e) {
+            e.stopPropagation();
+        }
+        if (this.events[event]) {
+            this.events[event](item);
+        }
+    };
+    AppearanceAnimationLayout3.prototype.ngOnChanges = function (changes) {
+        var that = this;
+        that.data = changes['data'].currentValue;
+        if (that.data && that.data.items) {
+            that.animateItems = [];
+            var _loop_1 = function (i) {
+                setTimeout(function () {
+                    that.animateItems.push(that.data.items[i]);
+                }, 200 * i);
+            };
+            for (var i = 0; i < that.data.items.length; i++) {
+                _loop_1(i);
+            }
+        }
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], AppearanceAnimationLayout3.prototype, "data", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], AppearanceAnimationLayout3.prototype, "events", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */])
+    ], AppearanceAnimationLayout3.prototype, "content", void 0);
+    AppearanceAnimationLayout3 = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'appearance-animation-layout-3',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\appearance-animation\layout-3\appearance-animation.html"*/'<!--Theme Appearance animation (Fade In Down)-->\n\n<ion-content>\n\n    <ion-grid no-padding *ngIf="data != null">\n\n        <ion-row>\n\n            <ion-col col-12>\n\n                <ion-list no-margin>\n\n                    <ion-item default-item no-lines [ngClass]="animateClass" *ngFor="let item of animateItems; let i = index;" (click)="onEvent(\'onItemClick\', item, $event)">\n\n                        <ion-thumbnail item-left>\n\n                            <img [src]="item.image" [alt]="item.title" />\n\n                        </ion-thumbnail>\n\n                        <h2 item-title>{{item.title}}</h2>\n\n                        <ion-icon icon-small item-right (click)="onEvent(\'onFavorite\', item, $event)">\n\n                            <i class="icon" [ngClass]="{\'icon-heart\': item.favorite, \'icon-heart-outline\': !item.favorite}"></i>\n\n                        </ion-icon>\n\n                    </ion-item>\n\n                </ion-list>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\appearance-animation\layout-3\appearance-animation.html"*/
+        }),
+        __metadata("design:paramtypes", [])
+    ], AppearanceAnimationLayout3);
+    return AppearanceAnimationLayout3;
+}());
+
+//# sourceMappingURL=appearance-animation-layout-3.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=73.js.map

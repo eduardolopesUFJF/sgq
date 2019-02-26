@@ -98,10 +98,6 @@ export class LoginPage {
                     "title": "RMG"
                 },
                 {
-                    "id": 16,
-                    "title": "RMG"
-                },
-                {
                     "id": 17,
                     "title": "SOLTRON"
                 },

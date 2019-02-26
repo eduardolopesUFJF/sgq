@@ -17,7 +17,13 @@ export class LoginLayout2 {
     public senha: string;
     public empresa: string;
 
+    passwordType: string = 'password';
+
     constructor(private toastService: ToastService) { }
+
+    hideShowPassword() {
+        this.passwordType = this.passwordType == 'text' ? 'password' : 'text';
+    }
 
     onEvent = (event: string, formValido): void => {
         if(event == 'onLogin'){

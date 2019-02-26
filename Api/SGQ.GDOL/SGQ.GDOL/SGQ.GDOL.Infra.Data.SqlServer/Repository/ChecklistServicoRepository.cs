@@ -20,7 +20,7 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Repository
         {
             var result = DbSet.Where(x => x.Ativo.HasValue && x.Ativo.Value)
                             .Include(x => x.ItensChecklistServico)
-                            .OrderBy(x => x.Descricao)
+                            .OrderBy(x => x.Codigo)
                             .ToList();
 
             return result;

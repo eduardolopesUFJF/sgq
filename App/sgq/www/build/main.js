@@ -1,1 +1,1534 @@
-webpackJsonp([83],{146:function(a,o,e){"use strict";e.d(o,"a",function(){return t});e(0),e(55),e(124),e(126),e(127);var t=function(){function a(a,o,e,t,l,r,n,i,u,s,c,y,d,g){var m=this;this.menu=e,this.loadingService=t,this.messageService=l,this.storage=r,this.obraService=n,this.alteracaoService=i,this.funcionarioService=u,this.alertCtrl=s,this.checklistService=c,this.network=y,this.events=d,this.rootPage="LoginPage",this.atualizacao=!1,this.statusAtualizacao="",a.ready().then(function(){o.styleDefault(),g.hide(),o.backgroundColorByHexString("rgb(33,177,75)"),m.definirRoot(),m.definirEventoMenu()}),this.pages=[{title:"Home",icon:"home",component:"HomePage"},{title:"Baixar dados",icon:"cloud-download",component:"Baixar"},{title:"Listar alterações",icon:"list",component:"AlteracoesPage"},{title:"Publicar alterações",icon:"cloud-upload",component:"Subir"},{title:"Descartar alterações",icon:"trash",component:"Descartar"},{title:"Acesso às obras",icon:"checkmark-circle-outline",component:"ObraPage"},{title:"Sair",icon:"exit",component:"LoginPage"}],this.params={background:"assets/images/background/5.jpg",image:"assets/images/logo/logo.png"}}return o=a,a.prototype.definirEventoMenu=function(){var a=this;this.events.subscribe("openPage",function(o){a.openPage(o)})},a.prototype.definirRoot=function(){var a=this;this.storage.ready().then(function(){a.storage.get("Usuario").then(function(o){o?(localStorage.setItem("isLogged","true"),localStorage.setItem("Usuario",o),a.storage.get("BancoSchema").then(function(a){localStorage.setItem("BanchoSchema",a)}),a.rootPage="HomePage"):a.rootPage="LoginPage"})})},a.prototype.openPage=function(a){var o=this;""!=a.component&&("Baixar"==a.component?"none"===this.network.type?this.messageService.exibirMensagem("Você precisa de uma conexão com internet para obter os dados e poder então trabalhar offline."):this.baixarDados():"Subir"==a.component?"none"===this.network.type?this.messageService.exibirMensagem("Você precisa de uma conexão com internet para subir os dados trabalhados offline."):this.subirDados():"Descartar"==a.component?this.descartarDados():"LoginPage"==a.component?this.storage.ready().then(function(){o.storage.get("atualizacoes").then(function(a){a?o.messageService.exibirMensagemConfirmacao("Existem atualizações que não foram publicadas, ao sair da sua conta elas serão perdidas. Deseja sair mesmo assim?",function(){o.deslogar()}):o.deslogar()})}):this.nav.setRoot(a.component))},a.prototype.deslogar=function(){localStorage.clear(),this.storage.clear(),this.nav.setRoot("LoginPage")},a.prototype.baixarDados=function(){var a=this;this.storage.ready().then(function(){a.storage.get("atualizacoes").then(function(o){o?a.messageService.exibirMensagem("Existem atualizações que não foram publicadas, publique-as ou descarte-as antes de baixar novos dados."):(a.nav.setRoot("HomePage"),a.obterChecklistServico(),a.obterFuncionarios(),a.atualizacao=!1,a.obterObras())})})},a.prototype.subirDados=function(){var a=this;this.storage.ready().then(function(){a.storage.get("atualizacoes").then(function(o){o?a.confirmarAtualizarRepositorio(o):a.messageService.exibirMensagem("Não há nada para publicar.")})})},a.prototype.descartarDados=function(){var a=this;this.storage.ready().then(function(){a.storage.get("atualizacoes").then(function(o){o?a.confirmarDescartarDados():a.messageService.exibirMensagem("Não há nada para descartar.")})})},a.prototype.confirmarDescartarDados=function(){var a=this;this.messageService.exibirMensagemConfirmacao("Todas as alterações feitas desde a última publicação serão perdidas. Deseja realmente descartá-las?",function(){a.executarDescartarDados()})},a.prototype.executarDescartarDados=function(){var a=this;this.storage.remove("atualizacoes"),this.storage.ready().then(function(){a.storage.get("obrasBackup").then(function(o){a.storage.set("obras",o),a.nav.setRoot("HomePage")})})},a.prototype.obterObras=function(){var a=this;this.loadingService.show(),o.progressbarAtivo=!0,o.progress=0,o.segundos=0,this.controlarSegundos(),this.subirProgressAutomatico(),this.subirProgressObterIds(),this.obraService.obterIdsTodasAtivas().subscribe(function(o){a.obterObraCompleta(o)},function(e){o.progressbarAtivo=!1,o.progress=0,a.loadingService.hide(),a.messageService.exibirMensagem("Falha na comunicação com o servidor, contate o suporte.")})},a.prototype.controlarSegundos=function(){var a=setInterval(function(){o.progressbarAtivo?o.segundos+=1:clearInterval(a)},1100)},a.prototype.subirProgressAutomatico=function(){var a=setInterval(function(){o.progress<50?o.progress+=.2:o.progress<70?o.progress+=.1:o.progress<99?o.progress+=.05:clearInterval(a)},500)},a.prototype.subirProgressObterIds=function(){var a=setInterval(function(){o.progress<15?o.progress+=1:clearInterval(a)},300)},a.prototype.obterObraCompleta=function(a){var o=this,e=[],t=0;this.subirProgressObraCompleta(),a.forEach(function(l){o.obraService.obterObraCompleta(l).subscribe(function(l){e.push(l),o.setarValoresObras(e,a,t)},function(l){o.setarValoresObras(e,a,++t)})})},a.prototype.subirProgressObraCompleta=function(){if(15==o.progress)var a=setInterval(function(){o.progress<40?o.progress+=1:clearInterval(a)},300)},a.prototype.setarValoresObras=function(a,e,t){a.length+t>=e.length?(this.storage.set("obras",a),this.storage.set("obrasBackup",a),this.storage.set("ultimoDownload",new Date),this.nav.setRoot("HomePage"),o.progressbarAtivo=!1,o.progress=0,this.loadingService.hide(),this.messageService.exibirMensagem(""==this.statusAtualizacao?t>0?this.atualizacao?"Atualizações publicadas com sucesso, porém houve um erro ao buscar as obras, tente novamente com uma internet melhor.":"Ocorreu erro durante a busca de algumas obras, tente novamente com usando uma internet melhor.":this.atualizacao?"Atualizações publicadas com sucesso.":"Dados recuperados do servidor com sucesso.":"Algumas atualizações não foram realizadas: "+this.statusAtualizacao),this.statusAtualizacao=""):o.progress+60/e.length<75&&(o.progress+=60/e.length)},a.prototype.obterChecklistServico=function(){var a=this;this.checklistService.obterTodas().subscribe(function(o){a.storage.set("itensChecklist",o)},function(o){a.messageService.exibirMensagem("Falha na comunicação com o servidor ao buscar serviços, contate o suporte.")})},a.prototype.obterFuncionarios=function(){var a=this;this.funcionarioService.obterTodos().subscribe(function(o){a.storage.set("funcionarios",o)},function(o){a.messageService.exibirMensagem("Falha na comunicação com o servidor ao buscar funcionários, contate o suporte.")})},a.prototype.confirmarAtualizarRepositorio=function(a){var o=this;this.messageService.exibirMensagemConfirmacao("Deseja atualizar o banco com as alterações realizadas?",function(){o.atualizarRepositorio(a)})},a.prototype.atualizarRepositorio=function(a){var o=this;this.loadingService.show(),this.alteracaoService.publicar(a).subscribe(function(a){o.storage.set("ultimoUpload",new Date),o.storage.remove("atualizacoes"),o.nav.setRoot("HomePage"),o.loadingService.hide(),o.atualizacao=!0,o.statusAtualizacao=a,o.obterObras()},function(a){o.loadingService.hide(),o.messageService.exibirMensagem("Falha na comunicação com o servidor, contate o suporte.")})},Object.defineProperty(a.prototype,"isLogged",{get:function(){return localStorage.getItem("isLogged")},enumerable:!0,configurable:!0}),Object.defineProperty(a.prototype,"empresa",{get:function(){return localStorage.getItem("BancoSchema")},enumerable:!0,configurable:!0}),Object.defineProperty(a.prototype,"usuario",{get:function(){return localStorage.getItem("Usuario")},enumerable:!0,configurable:!0}),a.progress=0,a.progressbarAtivo=!1,a.segundos=0,a;var o}()},205:function(a,o,e){"use strict";e.d(o,"a",function(){return l});e(0),e(55);var t=e(365),l=function(){function a(a){this.toastCtrl=a}return a.prototype.presentToastError=function(a){var o=t.a.TOAST;o.cssClass="toast-error",o.message=a;this.toastCtrl.create(o).present()},a.prototype.presentToastSuccess=function(a){var o=t.a.TOAST;o.cssClass="toast-success",o.message=a;this.toastCtrl.create(o).present()},a.prototype.presentToastWarning=function(a){var o=t.a.TOAST;o.cssClass="toast-warning",o.message=a;this.toastCtrl.create(o).present()},a}()},218:function(a,o,e){"use strict";e.d(o,"a",function(){return n});var t=e(0),l=e(94),r=e(61),n=(e.n(r),function(a){function o(o){return a.call(this,o,"obra/")||this}return Object(t.__extends)(o,a),o.prototype.obterIdsTodasAtivas=function(){this.headers=this.headers.set("BancoSchema",localStorage.getItem("BancoSchema"));var a=localStorage.getItem("Usuario").toUpperCase();return this.http.get(this.apiUrl+"ids/"+a,{headers:this.headers}).catch(this.handleError)},o.prototype.obterObraCompleta=function(a){return this.headers=this.headers.set("BancoSchema",localStorage.getItem("BancoSchema")),this.http.get(this.apiUrl+a,{headers:this.headers}).catch(this.handleError)},o}(l.a))},230:function(a,o){function e(a){return Promise.resolve().then(function(){throw new Error("Cannot find module '"+a+"'.")})}e.keys=function(){return[]},e.resolve=e,a.exports=e,e.id=230},250:function(a,o,e){function t(a){var o=l[a];return o?e.e(o[1]).then(function(){return e(o[0])}):Promise.reject(new Error("Cannot find module '"+a+"'."))}var l={"../core/action-sheet/layout-1/action-sheet-layout-1.module.ngfactory":[656,27],"../core/action-sheet/layout-2/action-sheet-layout-2.module.ngfactory":[657,26],"../core/action-sheet/layout-3/action-sheet-layout-3.module.ngfactory":[658,82],"../core/check-box/layout-1/check-box-layout-1.module.ngfactory":[659,54],"../core/check-box/layout-2/check-box-layout-2.module.ngfactory":[660,53],"../core/check-box/layout-3/check-box-layout-3.module.ngfactory":[661,52],"../core/full-screen-gallery/full-screen-gallery.module.ngfactory":[662,34],"../core/image-gallery/layout-1/image-gallery-layout-1.module.ngfactory":[663,81],"../core/image-gallery/layout-2/image-gallery-layout-2.module.ngfactory":[664,80],"../core/list-view/appearance-animation/layout-1/appearance-animation-layout-1.module.ngfactory":[665,79],"../core/list-view/appearance-animation/layout-2/appearance-animation-layout-2.module.ngfactory":[666,78],"../core/list-view/appearance-animation/layout-3/appearance-animation-layout-3.module.ngfactory":[667,77],"../core/list-view/appearance-animation/layout-4/appearance-animation-layout-4.module.ngfactory":[668,76],"../core/list-view/appearance-animation/layout-5/appearance-animation-layout-5.module.ngfactory":[669,16],"../core/list-view/drag-and-drop/layout-1/drag-and-drop-layout-1.module.ngfactory":[670,75],"../core/list-view/drag-and-drop/layout-2/drag-and-drop-layout-2.module.ngfactory":[671,74],"../core/list-view/drag-and-drop/layout-3/drag-and-drop-layout-3.module.ngfactory":[672,73],"../core/list-view/expandable/layout-1/expandable-layout-1.module.ngfactory":[673,72],"../core/list-view/expandable/layout-2/expandable-layout-2.module.ngfactory":[674,71],"../core/list-view/expandable/layout-3/expandable-layout-3.module.ngfactory":[675,51],"../core/list-view/google-card/layout-1/google-card-layout-1.module.ngfactory":[676,70],"../core/list-view/google-card/layout-2/google-card-layout-2.module.ngfactory":[677,69],"../core/list-view/google-card/layout-3/google-card-layout-3.module.ngfactory":[678,68],"../core/list-view/sticky-list-header/layout-1/sticky-list-header-layout-1.module.ngfactory":[679,21],"../core/list-view/sticky-list-header/layout-2/sticky-list-header-layout-2.module.ngfactory":[680,20],"../core/list-view/sticky-list-header/layout-3/sticky-list-header-layout-3.module.ngfactory":[681,19],"../core/list-view/swipe-to-dismiss/layout-1/swipe-to-dismiss-layout-1.module.ngfactory":[682,48],"../core/list-view/swipe-to-dismiss/layout-2/swipe-to-dismiss-layout-2.module.ngfactory":[683,47],"../core/list-view/swipe-to-dismiss/layout-3/swipe-to-dismiss-layout-3.module.ngfactory":[684,46],"../core/login/layout-1/login-layout-1.module.ngfactory":[685,50],"../core/login/layout-2/login-layout-2.module.ngfactory":[686,4],"../core/maps/layout-1/maps-layout-1.module.ngfactory":[687,0],"../core/maps/layout-2/maps-layout-2.module.ngfactory":[688,2],"../core/maps/layout-3/maps-layout-3.module.ngfactory":[689,1],"../core/parallax/layout-1/parallax-layout-1.module.ngfactory":[690,25],"../core/parallax/layout-2/parallax-layout-2.module.ngfactory":[691,24],"../core/parallax/layout-3/parallax-layout-3.module.ngfactory":[692,23],"../core/parallax/layout-4/parallax-layout-4.module.ngfactory":[693,22],"../core/radio-button/layout-1/radio-button-layout-1.module.ngfactory":[694,67],"../core/radio-button/layout-2/radio-button-layout-2.module.ngfactory":[695,66],"../core/radio-button/layout-3/radio-button-layout-3.module.ngfactory":[696,65],"../core/range/layout-1/range-layout-1.module.ngfactory":[697,45],"../core/range/layout-2/range-layout-2.module.ngfactory":[698,44],"../core/range/layout-3/range-layout-3.module.ngfactory":[699,43],"../core/range/layout-4/range-layout-4.module.ngfactory":[700,42],"../core/register/layout-1/register-layout-1.module.ngfactory":[701,18],"../core/register/layout-2/register-layout-2.module.ngfactory":[702,49],"../core/search-bar/layout-1/search-bar-layout-1.module.ngfactory":[703,64],"../core/search-bar/layout-2/search-bar-layout-2.module.ngfactory":[704,63],"../core/search-bar/layout-3/search-bar-layout-3.module.ngfactory":[705,62],"../core/select/layout-1/select-layout-1.module.ngfactory":[706,11],"../core/select/layout-2/select-layout-2.module.ngfactory":[707,41],"../core/select/layout-3/select-layout-3.module.ngfactory":[708,10],"../core/select/layout-4/select-layout-4.module.ngfactory":[709,40],"../core/select/layout-5/select-layout-5.module.ngfactory":[710,39],"../core/select/layout-6/select-layout-6.module.ngfactory":[711,38],"../core/spinner/spinner.module.ngfactory":[712,61],"../core/splash-screen/layout-1/splash-screen-layout-1.module.ngfactory":[713,60],"../core/splash-screen/layout-2/splash-screen-layout-2.module.ngfactory":[714,59],"../core/splash-screen/layout-3/splash-screen-layout-3.module.ngfactory":[715,58],"../core/sub-image-gallery/layout-1/sub-image-gallery-layout-1.module.ngfactory":[716,57],"../core/sub-image-gallery/layout-2/sub-image-gallery-layout-2.module.ngfactory":[717,56],"../core/tabs/layout-1/tabs-layout-1.module.ngfactory":[718,30],"../core/tabs/layout-2/tabs-layout-2.module.ngfactory":[719,29],"../core/tabs/layout-3/tabs-layout-3.module.ngfactory":[720,28],"../core/toggle/layout-1/toggle-layout-1.module.ngfactory":[721,37],"../core/toggle/layout-2/toggle-layout-2.module.ngfactory":[722,36],"../core/toggle/layout-3/toggle-layout-3.module.ngfactory":[723,35],"../core/wizard/layout-1/wizard-layout-1.module.ngfactory":[724,33],"../core/wizard/layout-2/wizard-layout-2.module.ngfactory":[725,32],"../core/wizard/layout-3/wizard-layout-3.module.ngfactory":[726,31],"../pages/alteracoes/alteracoes.module.ngfactory":[727,15],"../pages/area/area.module.ngfactory":[728,9],"../pages/area/cadastro/area-cadastro.module.ngfactory":[729,7],"../pages/home/home.module.ngfactory":[730,55],"../pages/item-area/item-area.module.ngfactory":[731,6],"../pages/login/login.component.module.ngfactory":[732,3],"../pages/obra/obra.module.ngfactory":[733,14],"../pages/ocorrencia/manter/manter-ocorrencia.module.ngfactory":[734,17],"../pages/ocorrencia/ocorrencia.module.ngfactory":[735,8],"../pages/verificacao/manter/manter-verificacao.module.ngfactory":[736,12],"../pages/verificacao/realizar/realizar-verificacao.module.ngfactory":[737,13],"../pages/verificacao/verificacao.module.ngfactory":[738,5]};t.keys=function(){return Object.keys(l)},t.id=250,a.exports=t},354:function(a,o,e){"use strict";e.d(o,"a",function(){return n});var t=e(0),l=e(94),r=e(61),n=(e.n(r),function(a){function o(o){return a.call(this,o,"checklist/")||this}return Object(t.__extends)(o,a),o.prototype.obterTodas=function(){return this.headers=this.headers.set("BancoSchema",localStorage.getItem("BancoSchema")),this.http.get(this.apiUrl+"itens-ativos/",{headers:this.headers}).catch(this.handleError)},o}(l.a))},355:function(a,o,e){"use strict";e.d(o,"a",function(){return n});var t=e(0),l=e(94),r=e(61),n=(e.n(r),function(a){function o(o){return a.call(this,o,"alteracao/")||this}return Object(t.__extends)(o,a),o.prototype.publicar=function(a){return this.headers=this.headers.set("BancoSchema",localStorage.getItem("BancoSchema")),this.http.post(this.apiUrl,a,{headers:this.headers}).catch(this.handleError)},o}(l.a))},356:function(a,o,e){"use strict";e.d(o,"a",function(){return n});var t=e(0),l=e(94),r=e(61),n=(e.n(r),function(a){function o(o){return a.call(this,o,"funcionario/")||this}return Object(t.__extends)(o,a),o.prototype.obterTodos=function(){return this.headers=this.headers.set("BancoSchema",localStorage.getItem("BancoSchema")),this.http.get(this.apiUrl+"ativos/",{headers:this.headers}).catch(this.handleError)},o}(l.a))},365:function(a,o,e){"use strict";e.d(o,"a",function(){return t});var t=Object.freeze({IS_FIREBASE_ENABLED:!1,SHOW_START_WIZARD:!1,SUBSCRIBE:!1,TOAST:{duration:5e3,position:"top",cssClass:"toast-success"},FIREBASE_CONFIG:{apiKey:"AIzaSyBZYIJQFQ7jMsTMRLuDcANj8k43TsxbeNE",authDomain:"sgq-gdol.firebaseapp.com",databaseURL:"https://sgq-gdol.firebaseio.com",projectId:"sgq-gdol",storageBucket:"sgq-gdol.appspot.com",messagingSenderId:"445415293027"},MAP_KEY:{apiKey:"AIzaSyA4-GoZzOqYTvxMe52YQZch5JaCFN6ACLg"}})},367:function(a,o,e){"use strict";function t(a){return u._33(0,[(a()(),u._10(0,0,null,null,14,"button",[["class","item item-block"],["default-item",""],["ion-item",""],["item-title",""],["main-menu",""],["menuClose",""],["no-lines",""]],null,[[null,"click"]],function(a,o,e){var t=!0,l=a.component;if("click"===o){t=!1!==u._22(a,6).close()&&t}if("click"===o){t=!1!==l.openPage(a.context.$implicit)&&t}return t},P.b,P.a)),u._9(1,1097728,null,3,z.a,[I.a,B.a,u.n,u.J,[2,D.a]],null,null),u._29(335544320,5,{contentLabel:0}),u._29(603979776,6,{_buttons:1}),u._29(603979776,7,{_icons:1}),u._9(5,16384,null,0,T.a,[],null,null),u._9(6,16384,null,0,O.a,[R.a],{menuClose:[0,"menuClose"]},null),(a()(),u._31(-1,2,["\n                    "])),(a()(),u._10(8,0,null,2,5,"ion-icon",[["icon-left",""],["icon-small",""],["outline",""],["role","img"]],[[2,"hide",null]],null,null,null,null)),u._9(9,147456,[[7,4]],0,E.a,[B.a,u.n,u.J],null,null),(a()(),u._31(-1,null,["\n                        "])),(a()(),u._10(11,0,null,null,1,"ion-icon",[["role","img"]],[[2,"hide",null]],null,null,null,null)),u._9(12,147456,null,0,E.a,[B.a,u.n,u.J],{name:[0,"name"]},null),(a()(),u._31(-1,null,["\n                    "])),(a()(),u._31(14,2,["\n                    ","\n                "]))],function(a,o){a(o,6,0,"");a(o,12,0,o.context.$implicit.icon)},function(a,o){a(o,8,0,u._22(o,9)._hidden);a(o,11,0,u._22(o,12)._hidden);a(o,14,0,o.context.$implicit.title)})}function l(a){return u._33(0,[(a()(),u._10(0,0,null,null,38,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,j.b,j.a)),u._9(1,4374528,[[3,4]],0,G.a,[B.a,U.a,J.a,u.n,u.J,V.a,q.a,u.C,[2,W.a],[2,K.a]],null,null),(a()(),u._31(-1,1,["\n            "])),(a()(),u._10(3,0,null,1,27,"div",[["header-background-image",""]],null,null,null,null,null)),(a()(),u._31(-1,null,["\n                "])),(a()(),u._10(5,0,null,null,24,"ion-grid",[["class","grid"]],null,null,null,null,null)),u._9(6,16384,null,0,Q.a,[],null,null),(a()(),u._31(-1,null,["\n                    "])),(a()(),u._10(8,0,null,null,20,"ion-row",[["class","row"]],null,null,null,null,null)),u._9(9,16384,null,0,X.a,[],null,null),(a()(),u._31(-1,null,["\n                        "])),(a()(),u._10(11,0,null,null,4,"ion-col",[["class","col"],["col-5",""]],null,null,null,null,null)),u._9(12,16384,null,0,Y.a,[],null,null),(a()(),u._31(-1,null,["\n                            "])),(a()(),u._10(14,0,null,null,0,"img",[],[[8,"src",4]],null,null,null,null)),(a()(),u._31(-1,null,["\n                        "])),(a()(),u._31(-1,null,["\n                        "])),(a()(),u._10(17,0,null,null,10,"ion-col",[["class","col"],["col-7",""]],null,null,null,null,null)),u._9(18,16384,null,0,Y.a,[],null,null),(a()(),u._31(-1,null,["\n                            "])),(a()(),u._10(20,0,null,null,2,"h1",[["header-title",""],["ion-text",""],["text-wrap",""]],null,null,null,null,null)),u._9(21,16384,null,0,Z.a,[B.a,u.n,u.J],null,null),(a()(),u._31(22,null,["",""])),(a()(),u._31(-1,null,["\n                            "])),(a()(),u._10(24,0,null,null,2,"h2",[["header-title",""],["ion-text",""],["text-wrap",""]],null,null,null,null,null)),u._9(25,16384,null,0,Z.a,[B.a,u.n,u.J],null,null),(a()(),u._31(26,null,["",""])),(a()(),u._31(-1,null,["\n                        "])),(a()(),u._31(-1,null,["\n                    "])),(a()(),u._31(-1,null,["\n                "])),(a()(),u._31(-1,null,["\n            "])),(a()(),u._31(-1,1,["\n            "])),(a()(),u._10(32,0,null,1,5,"ion-list",[["no-margin",""]],null,null,null,null,null)),u._9(33,16384,null,0,$.a,[B.a,u.n,u.J,U.a,aa.l,J.a],null,null),(a()(),u._31(-1,null,["\n                "])),(a()(),u._5(16777216,null,null,1,null,t)),u._9(36,802816,null,0,oa.i,[u.T,u.P,u.w],{ngForOf:[0,"ngForOf"]},null),(a()(),u._31(-1,null,["\n            "])),(a()(),u._31(-1,1,["\n        "]))],function(a,o){a(o,36,0,o.component.pages)},function(a,o){var e=o.component;a(o,0,0,u._22(o,1).statusbarPadding,u._22(o,1)._hasRefresher);a(o,14,0,e.params.image);a(o,22,0,e.empresa);a(o,26,0,e.usuario)})}function r(a){return u._33(0,[(a()(),u._10(0,0,null,null,9,"ion-menu",[["role","navigation"]],null,null,null,ea.b,ea.a)),u._9(1,245760,null,2,ta.a,[R.a,u.n,B.a,U.a,u.J,q.a,aa.l,J.a,V.a],{content:[0,"content"]},null),u._29(603979776,3,{menuContent:0}),u._29(335544320,4,{menuNav:0}),u._27(2048,[[2,4]],la.a,null,[ta.a]),(a()(),u._31(-1,0,["\n        "])),(a()(),u._31(-1,0,["\n        "])),(a()(),u._5(16777216,null,0,1,null,l)),u._9(8,16384,null,0,oa.j,[u.T,u.P],{ngIf:[0,"ngIf"]},null),(a()(),u._31(-1,0,["\n    "]))],function(a,o){var e=o.component;a(o,1,0,u._22(o.parent,13));a(o,8,0,"true"==e.isLogged)},null)}function n(a){return u._33(0,[u._29(402653184,1,{nav:0}),(a()(),u._31(-1,null,["\n"])),(a()(),u._10(2,0,null,null,13,"ion-split-pane",[["when","md"]],null,null,null,null,null)),u._9(3,4341760,null,1,la.b,[u.C,U.a,B.a,u.n,u.J],{when:[0,"when"]},null),u._29(603979776,2,{_setchildren:1}),u._27(2048,[[2,4]],la.a,null,[la.b]),(a()(),u._31(-1,null,["\n    "])),(a()(),u._31(-1,null,["\n    "])),(a()(),u._5(16777216,null,null,1,null,r)),u._9(9,16384,null,0,oa.j,[u.T,u.P],{ngIf:[0,"ngIf"]},null),(a()(),u._31(-1,null,["\n    "])),(a()(),u._31(-1,null,["\n    "])),(a()(),u._10(12,0,null,null,2,"ion-nav",[["main",""],["swipeBackEnabled","false"]],null,null,null,ra.b,ra.a)),u._9(13,4374528,[[1,4],["content",4]],0,na.a,[[2,W.a],[2,K.a],V.a,B.a,U.a,u.n,u.C,u.J,u.k,aa.l,ia.a,[2,ua.a],J.a,u.o],{swipeBackEnabled:[0,"swipeBackEnabled"],root:[1,"root"]},null),u._27(2048,[[2,4]],la.a,null,[na.a]),(a()(),u._31(-1,null,["\n"]))],function(a,o){var e=o.component;a(o,3,0,"md");a(o,9,0,null!=e.params);a(o,13,0,"false",e.rootPage)},null)}Object.defineProperty(o,"__esModule",{value:!0});var i=e(52),u=e(2),s=(e(0),e(55),e(126)),c=e(124),y=e(146),d=e(127),g=e(205),m=e(88),p=e(43),f=e(83),h=e(358),b=e(86),_=e(142),w=function(){return function(){}}(),v=e(67),L=e(190),C=e(191),S=e(192),x=e(193),M=e(194),F=e(195),H=e(196),N=e(197),k=e(198),A=e(366),P=e(129),z=e(24),I=e(21),B=e(3),D=e(50),T=e(60),O=e(145),R=e(33),E=e(36),j=e(199),G=e(30),U=e(6),J=e(13),V=e(12),q=e(32),W=e(7),K=e(29),Q=e(130),X=e(81),Y=e(82),Z=e(85),$=e(56),aa=e(10),oa=e(15),ea=e(654),ta=e(109),la=e(42),ra=e(655),na=e(73),ia=e(41),ua=e(25),sa=e(218),ca=e(355),ya=e(356),da=e(354),ga=e(92),ma=e(93),pa=u._8({encapsulation:2,styles:[],data:{}}),fa=u._6("ng-component",y.a,function(a){return u._33(0,[(a()(),u._10(0,0,null,null,5,"ng-component",[],null,null,null,n,pa)),u._27(512,null,sa.a,sa.a,[p.c]),u._27(512,null,ca.a,ca.a,[p.c]),u._27(512,null,ya.a,ya.a,[p.c]),u._27(512,null,da.a,da.a,[p.c]),u._9(5,49152,null,0,y.a,[U.a,c.a,R.a,m.a,b.a,f.b,sa.a,ca.a,ya.a,ga.a,da.a,d.a,ma.a,s.a],null,null)],null,null)},{},{},[]),ha=e(161),ba=e(20),_a=e(138),wa=e(40),va=e(158),La=e(128),Ca=e(69),Sa=e(49),xa=e(91),Ma=e(89),Fa=e(167),Ha=e(163),Na=e(173),ka=e(357),Aa=e(162),Pa=e(159),za=e(164),Ia=u._7(w,[v.b],function(a){return u._18([u._19(512,u.k,u._3,[[8,[L.a,C.a,S.a,x.a,M.a,F.a,H.a,N.a,k.a,A.a,A.b,fa]],[3,u.k],u.A]),u._19(4608,p.i,p.o,[oa.c,u.F,p.m]),u._19(4608,p.p,p.p,[p.i,p.n]),u._19(5120,p.a,function(a){return[a]},[p.p]),u._19(4608,p.l,p.l,[]),u._19(6144,p.j,null,[p.l]),u._19(4608,p.h,p.h,[p.j]),u._19(6144,p.b,null,[p.h]),u._19(4608,p.f,p.k,[p.b,u.u]),u._19(4608,p.c,p.c,[p.f]),u._19(5120,u.y,u._28,[[3,u.y]]),u._19(4608,oa.l,oa.k,[u.y,[2,oa.u]]),u._19(5120,u.b,u._12,[]),u._19(5120,u.w,u._20,[]),u._19(5120,u.x,u._23,[]),u._19(4608,i.c,i.q,[oa.c]),u._19(6144,u.N,null,[i.c]),u._19(4608,i.f,ha.a,[]),u._19(5120,i.d,function(a,o,e,t,l){return[new i.k(a,o),new i.o(e),new i.n(t,l)]},[oa.c,u.C,oa.c,oa.c,i.f]),u._19(4608,i.e,i.e,[i.d,u.C]),u._19(135680,i.m,i.m,[oa.c]),u._19(4608,i.l,i.l,[i.e,i.m]),u._19(6144,u.L,null,[i.l]),u._19(6144,i.p,null,[i.m]),u._19(4608,u.Q,u.Q,[u.C]),u._19(4608,i.h,i.h,[oa.c]),u._19(4608,i.i,i.i,[oa.c]),u._19(4608,ba.r,ba.r,[]),u._19(4608,ba.d,ba.d,[]),u._19(4608,_a.a,_a.a,[V.a,B.a]),u._19(4608,ga.a,ga.a,[V.a,B.a]),u._19(4608,ma.a,ma.a,[]),u._19(4608,I.a,I.a,[]),u._19(4608,wa.a,wa.a,[U.a]),u._19(4608,q.a,q.a,[B.a,U.a,u.C,J.a]),u._19(4608,va.a,va.a,[V.a,B.a]),u._19(5120,oa.g,La.c,[oa.s,[2,oa.a],B.a]),u._19(4608,oa.f,oa.f,[oa.g]),u._19(5120,Ca.b,Ca.d,[V.a,Ca.a]),u._19(5120,ua.a,ua.b,[V.a,Ca.b,oa.f,Sa.b,u.k]),u._19(4608,xa.a,xa.a,[V.a,B.a,ua.a]),u._19(4608,Ma.a,Ma.a,[V.a,B.a]),u._19(4608,Fa.a,Fa.a,[V.a,B.a,ua.a]),u._19(4608,Ha.a,Ha.a,[B.a,U.a,J.a,V.a,aa.l]),u._19(4608,Na.a,Na.a,[V.a,B.a]),u._19(4608,ia.a,ia.a,[U.a,B.a]),u._19(5120,f.b,f.d,[f.c]),u._19(4608,c.a,c.a,[]),u._19(4608,s.a,s.a,[]),u._19(4608,g.a,g.a,[Na.a]),u._19(4608,m.a,m.a,[va.a]),u._19(4608,b.a,b.a,[ga.a]),u._19(4608,d.a,d.a,[]),u._19(4608,h.a,h.a,[]),u._19(512,p.e,p.e,[]),u._19(512,p.d,p.d,[]),u._19(512,oa.b,oa.b,[]),u._19(512,u.o,ka.a,[]),u._19(256,B.b,{},[]),u._19(1024,Aa.a,Aa.b,[]),u._19(1024,U.a,U.b,[i.b,Aa.a,u.C]),u._19(1024,B.a,B.c,[B.b,U.a]),u._19(512,J.a,J.a,[U.a]),u._19(512,R.a,R.a,[]),u._19(512,V.a,V.a,[B.a,U.a,[2,R.a]]),u._19(512,aa.l,aa.l,[V.a]),u._19(256,Ca.a,{links:[{loadChildren:"../core/action-sheet/layout-1/action-sheet-layout-1.module.ngfactory#ActionSheetLayout1ModuleNgFactory",name:"ActionSheetLayout1",segment:"action-sheet-layout-1",priority:"low",defaultHistory:[]},{loadChildren:"../core/action-sheet/layout-2/action-sheet-layout-2.module.ngfactory#ActionSheetLayout2ModuleNgFactory",name:"ActionSheetLayout2",segment:"action-sheet-layout-2",priority:"low",defaultHistory:[]},{loadChildren:"../core/action-sheet/layout-3/action-sheet-layout-3.module.ngfactory#ActionSheetLayout3ModuleNgFactory",name:"ActionSheetLayout3",segment:"action-sheet-layout-3",priority:"low",defaultHistory:[]},{loadChildren:"../core/check-box/layout-1/check-box-layout-1.module.ngfactory#CheckBoxLayout1ModuleNgFactory",name:"CheckBoxLayout1",segment:"check-box-layout-1",priority:"low",defaultHistory:[]},{loadChildren:"../core/check-box/layout-2/check-box-layout-2.module.ngfactory#CheckBoxLayout2ModuleNgFactory",name:"CheckBoxLayout2",segment:"check-box-layout-2",priority:"low",defaultHistory:[]},{loadChildren:"../core/check-box/layout-3/check-box-layout-3.module.ngfactory#CheckBoxLayout3ModuleNgFactory",name:"CheckBoxLayout3",segment:"check-box-layout-3",priority:"low",defaultHistory:[]},{loadChildren:"../core/full-screen-gallery/full-screen-gallery.module.ngfactory#FullScreenGalleryModuleNgFactory",name:"FullScreenGallery",segment:"full-screen-gallery",priority:"low",defaultHistory:[]},{loadChildren:"../core/image-gallery/layout-1/image-gallery-layout-1.module.ngfactory#ImageGalleryLayout1ModuleNgFactory",name:"ImageGalleryLayout1",segment:"image-gallery-layout-1",priority:"low",defaultHistory:[]},{loadChildren:"../core/image-gallery/layout-2/image-gallery-layout-2.module.ngfactory#ImageGalleryLayout2ModuleNgFactory",name:"ImageGalleryLayout2",segment:"image-gallery-layout-2",priority:"low",defaultHistory:[]},{loadChildren:"../core/list-view/appearance-animation/layout-1/appearance-animation-layout-1.module.ngfactory#AppearanceAnimationLayout1ModuleNgFactory",name:"AppearanceAnimationLayout1",segment:"appearance-animation-layout-1",priority:"low",defaultHistory:[]},{loadChildren:"../core/list-view/appearance-animation/layout-2/appearance-animation-layout-2.module.ngfactory#AppearanceAnimationLayout2ModuleNgFactory",name:"AppearanceAnimationLayout2",segment:"appearance-animation-layout-2",priority:"low",defaultHistory:[]},{loadChildren:"../core/list-view/appearance-animation/layout-3/appearance-animation-layout-3.module.ngfactory#AppearanceAnimationLayout3ModuleNgFactory",name:"AppearanceAnimationLayout3",segment:"appearance-animation-layout-3",priority:"low",defaultHistory:[]},{loadChildren:"../core/list-view/appearance-animation/layout-4/appearance-animation-layout-4.module.ngfactory#AppearanceAnimationLayout4ModuleNgFactory",name:"AppearanceAnimationLayout4",segment:"appearance-animation-layout-4",priority:"low",defaultHistory:[]},{loadChildren:"../core/list-view/appearance-animation/layout-5/appearance-animation-layout-5.module.ngfactory#AppearanceAnimationLayout5ModuleNgFactory",name:"AppearanceAnimationLayout5",segment:"appearance-animation-layout-5",priority:"low",defaultHistory:[]},{loadChildren:"../core/list-view/drag-and-drop/layout-1/drag-and-drop-layout-1.module.ngfactory#DragAndDropLayout1ModuleNgFactory",name:"DragAndDropLayout1",segment:"drag-and-drop-layout-1",priority:"low",defaultHistory:[]},{loadChildren:"../core/list-view/drag-and-drop/layout-2/drag-and-drop-layout-2.module.ngfactory#DragAndDropLayout2ModuleNgFactory",name:"DragAndDropLayout2",segment:"drag-and-drop-layout-2",priority:"low",defaultHistory:[]},{loadChildren:"../core/list-view/drag-and-drop/layout-3/drag-and-drop-layout-3.module.ngfactory#DragAndDropLayout3ModuleNgFactory",name:"DragAndDropLayout3",segment:"drag-and-drop-layout-3",priority:"low",defaultHistory:[]},{loadChildren:"../core/list-view/expandable/layout-1/expandable-layout-1.module.ngfactory#ExpandableLayout1ModuleNgFactory",name:"ExpandableLayout1",segment:"expandable-layout-1",priority:"low",defaultHistory:[]},{loadChildren:"../core/list-view/expandable/layout-2/expandable-layout-2.module.ngfactory#ExpandableLayout2ModuleNgFactory",name:"ExpandableLayout2",segment:"expandable-layout-2",priority:"low",defaultHistory:[]},{loadChildren:"../core/list-view/expandable/layout-3/expandable-layout-3.module.ngfactory#ExpandableLayout3ModuleNgFactory",name:"ExpandableLayout3",segment:"expandable-layout-3",priority:"low",defaultHistory:[]},{loadChildren:"../core/list-view/google-card/layout-1/google-card-layout-1.module.ngfactory#GoogleCardLayout1ModuleNgFactory",name:"GoogleCardLayout1",segment:"google-card-layout-1",priority:"low",defaultHistory:[]},{loadChildren:"../core/list-view/google-card/layout-2/google-card-layout-2.module.ngfactory#GoogleCardLayout2ModuleNgFactory",name:"GoogleCardLayout2",segment:"google-card-layout-2",priority:"low",defaultHistory:[]},{loadChildren:"../core/list-view/google-card/layout-3/google-card-layout-3.module.ngfactory#GoogleCardLayout3ModuleNgFactory",name:"GoogleCardLayout3",segment:"google-card-layout-3",priority:"low",defaultHistory:[]},{loadChildren:"../core/list-view/sticky-list-header/layout-1/sticky-list-header-layout-1.module.ngfactory#StickyListHeaderLayout1ModuleNgFactory",name:"StickyListHeaderLayout1",segment:"sticky-list-header-layout-1",priority:"low",defaultHistory:[]},{loadChildren:"../core/list-view/sticky-list-header/layout-2/sticky-list-header-layout-2.module.ngfactory#StickyListHeaderLayout2ModuleNgFactory",name:"StickyListHeaderLayout2",segment:"sticky-list-header-layout-2",priority:"low",defaultHistory:[]},{loadChildren:"../core/list-view/sticky-list-header/layout-3/sticky-list-header-layout-3.module.ngfactory#StickyListHeaderLayout3ModuleNgFactory",name:"StickyListHeaderLayout3",segment:"sticky-list-header-layout-3",priority:"low",defaultHistory:[]},{loadChildren:"../core/list-view/swipe-to-dismiss/layout-1/swipe-to-dismiss-layout-1.module.ngfactory#SwipeToDismissLayout1ModuleNgFactory",name:"SwipeToDismissLayout1",segment:"swipe-to-dismiss-layout-1",priority:"low",defaultHistory:[]},{loadChildren:"../core/list-view/swipe-to-dismiss/layout-2/swipe-to-dismiss-layout-2.module.ngfactory#SwipeToDismissLayout2ModuleNgFactory",name:"SwipeToDismissLayout2",segment:"swipe-to-dismiss-layout-2",priority:"low",defaultHistory:[]},{loadChildren:"../core/list-view/swipe-to-dismiss/layout-3/swipe-to-dismiss-layout-3.module.ngfactory#SwipeToDismissLayout3ModuleNgFactory",name:"SwipeToDismissLayout3",segment:"swipe-to-dismiss-layout-3",priority:"low",defaultHistory:[]},{loadChildren:"../core/login/layout-1/login-layout-1.module.ngfactory#LoginLayout1ModuleNgFactory",name:"LoginLayout1",segment:"login-layout-1",priority:"low",defaultHistory:[]},{loadChildren:"../core/login/layout-2/login-layout-2.module.ngfactory#LoginLayout2ModuleNgFactory",name:"LoginLayout2",segment:"login-layout-2",priority:"low",defaultHistory:[]},{loadChildren:"../core/maps/layout-1/maps-layout-1.module.ngfactory#MapsLayout1ModuleNgFactory",name:"MapsLayout1",segment:"maps-layout-1",priority:"low",defaultHistory:[]},{loadChildren:"../core/maps/layout-2/maps-layout-2.module.ngfactory#MapsLayout2ModuleNgFactory",name:"MapsLayout2",segment:"maps-layout-2",priority:"low",defaultHistory:[]},{loadChildren:"../core/maps/layout-3/maps-layout-3.module.ngfactory#MapsLayout3ModuleNgFactory",name:"MapsLayout3",segment:"maps-layout-3",priority:"low",defaultHistory:[]},{loadChildren:"../core/parallax/layout-1/parallax-layout-1.module.ngfactory#ParallaxLayout1ModuleNgFactory",name:"ParallaxLayout1",segment:"parallax-layout-1",priority:"low",defaultHistory:[]},{loadChildren:"../core/parallax/layout-2/parallax-layout-2.module.ngfactory#ParallaxLayout2ModuleNgFactory",name:"ParallaxLayout2",segment:"parallax-layout-2",priority:"low",defaultHistory:[]},{loadChildren:"../core/parallax/layout-3/parallax-layout-3.module.ngfactory#ParallaxLayout3ModuleNgFactory",name:"ParallaxLayout3",segment:"parallax-layout-3",priority:"low",defaultHistory:[]},{loadChildren:"../core/parallax/layout-4/parallax-layout-4.module.ngfactory#ParallaxLayout4ModuleNgFactory",name:"ParallaxLayout4",segment:"parallax-layout-4",priority:"low",defaultHistory:[]},{loadChildren:"../core/radio-button/layout-1/radio-button-layout-1.module.ngfactory#RadioButtonLayout1ModuleNgFactory",name:"RadioButtonLayout1",segment:"radio-button-layout-1",priority:"low",defaultHistory:[]},{loadChildren:"../core/radio-button/layout-2/radio-button-layout-2.module.ngfactory#RadioButtonLayout2ModuleNgFactory",name:"RadioButtonLayout2",segment:"radio-button-layout-2",priority:"low",defaultHistory:[]},{loadChildren:"../core/radio-button/layout-3/radio-button-layout-3.module.ngfactory#RadioButtonLayout3ModuleNgFactory",name:"RadioButtonLayout3",segment:"radio-button-layout-3",priority:"low",defaultHistory:[]},{loadChildren:"../core/range/layout-1/range-layout-1.module.ngfactory#RangeLayout1ModuleNgFactory",name:"RangeLayout1",segment:"range-layout-1",priority:"low",defaultHistory:[]},{loadChildren:"../core/range/layout-2/range-layout-2.module.ngfactory#RangeLayout2ModuleNgFactory",name:"RangeLayout2",segment:"range-layout-2",priority:"low",defaultHistory:[]},{loadChildren:"../core/range/layout-3/range-layout-3.module.ngfactory#RangeLayout3ModuleNgFactory",name:"RangeLayout3",segment:"range-layout-3",priority:"low",defaultHistory:[]},{loadChildren:"../core/range/layout-4/range-layout-4.module.ngfactory#RangeLayout4ModuleNgFactory",name:"RangeLayout4",segment:"range-layout-4",priority:"low",defaultHistory:[]},{loadChildren:"../core/register/layout-1/register-layout-1.module.ngfactory#RegisterLayout1ModuleNgFactory",name:"RegisterLayout1",segment:"register-layout-1",priority:"low",defaultHistory:[]},{loadChildren:"../core/register/layout-2/register-layout-2.module.ngfactory#RegisterLayout2ModuleNgFactory",name:"RegisterLayout2",segment:"register-layout-2",priority:"low",defaultHistory:[]},{loadChildren:"../core/search-bar/layout-1/search-bar-layout-1.module.ngfactory#SearchBarLayout1ModuleNgFactory",name:"SearchBarLayout1",segment:"search-bar-layout-1",priority:"low",defaultHistory:[]},{loadChildren:"../core/search-bar/layout-2/search-bar-layout-2.module.ngfactory#SearchBarLayout2ModuleNgFactory",name:"SearchBarLayout2",segment:"search-bar-layout-2",priority:"low",defaultHistory:[]},{loadChildren:"../core/search-bar/layout-3/search-bar-layout-3.module.ngfactory#SearchBarLayout3ModuleNgFactory",name:"SearchBarLayout3",segment:"search-bar-layout-3",priority:"low",defaultHistory:[]},{loadChildren:"../core/select/layout-1/select-layout-1.module.ngfactory#SelectLayout1ModuleNgFactory",name:"SelectLayout1",segment:"select-layout-1",priority:"low",defaultHistory:[]},{loadChildren:"../core/select/layout-2/select-layout-2.module.ngfactory#SelectLayout2ModuleNgFactory",name:"SelectLayout2",segment:"select-layout-2",priority:"low",defaultHistory:[]},{loadChildren:"../core/select/layout-3/select-layout-3.module.ngfactory#SelectLayout3ModuleNgFactory",name:"SelectLayout3",segment:"select-layout-3",priority:"low",defaultHistory:[]},{loadChildren:"../core/select/layout-4/select-layout-4.module.ngfactory#SelectLayout4ModuleNgFactory",name:"SelectLayout4",segment:"select-layout-4",priority:"low",defaultHistory:[]},{loadChildren:"../core/select/layout-5/select-layout-5.module.ngfactory#SelectLayout5ModuleNgFactory",name:"SelectLayout5",segment:"select-layout-5",priority:"low",defaultHistory:[]},{loadChildren:"../core/select/layout-6/select-layout-6.module.ngfactory#SelectLayout6ModuleNgFactory",name:"SelectLayout6",segment:"select-layout-6",priority:"low",defaultHistory:[]},{loadChildren:"../core/spinner/spinner.module.ngfactory#SpinnerModuleNgFactory",name:"Spinner",segment:"spinner",priority:"low",defaultHistory:[]},{loadChildren:"../core/splash-screen/layout-1/splash-screen-layout-1.module.ngfactory#SplashScreenLayout1ModuleNgFactory",name:"SplashScreenLayout1",segment:"splash-screen-layout-1",priority:"low",defaultHistory:[]},{loadChildren:"../core/splash-screen/layout-2/splash-screen-layout-2.module.ngfactory#SplashScreenLayout2ModuleNgFactory",name:"SplashScreenLayout2",segment:"splash-screen-layout-2",priority:"low",defaultHistory:[]},{loadChildren:"../core/splash-screen/layout-3/splash-screen-layout-3.module.ngfactory#SplashScreenLayout3ModuleNgFactory",name:"SplashScreenLayout3",segment:"splash-screen-layout-3",priority:"low",defaultHistory:[]},{loadChildren:"../core/sub-image-gallery/layout-1/sub-image-gallery-layout-1.module.ngfactory#SubImageGalleryLayout1ModuleNgFactory",name:"SubImageGalleryLayout1",segment:"sub-image-gallery-layout-1",priority:"low",defaultHistory:[]},{loadChildren:"../core/sub-image-gallery/layout-2/sub-image-gallery-layout-2.module.ngfactory#SubImageGalleryLayout2ModuleNgFactory",name:"SubImageGalleryLayout2",segment:"sub-image-gallery-layout-2",priority:"low",defaultHistory:[]},{loadChildren:"../core/tabs/layout-1/tabs-layout-1.module.ngfactory#TabsLayout1ModuleNgFactory",name:"TabsLayout1",segment:"tabs-layout-1",priority:"low",defaultHistory:[]},{loadChildren:"../core/tabs/layout-2/tabs-layout-2.module.ngfactory#TabsLayout2ModuleNgFactory",name:"TabsLayout2",segment:"tabs-layout-2",priority:"low",defaultHistory:[]},{loadChildren:"../core/tabs/layout-3/tabs-layout-3.module.ngfactory#TabsLayout3ModuleNgFactory",name:"TabsLayout3",segment:"tabs-layout-3",priority:"low",defaultHistory:[]},{loadChildren:"../core/toggle/layout-1/toggle-layout-1.module.ngfactory#ToggleLayout1ModuleNgFactory",name:"ToggleLayout1",segment:"toggle-layout-1",priority:"low",defaultHistory:[]},{loadChildren:"../core/toggle/layout-2/toggle-layout-2.module.ngfactory#ToggleLayout2ModuleNgFactory",name:"ToggleLayout2",segment:"toggle-layout-2",priority:"low",defaultHistory:[]},{loadChildren:"../core/toggle/layout-3/toggle-layout-3.module.ngfactory#ToggleLayout3ModuleNgFactory",name:"ToggleLayout3",segment:"toggle-layout-3",priority:"low",defaultHistory:[]},{loadChildren:"../core/wizard/layout-1/wizard-layout-1.module.ngfactory#WizardLayout1ModuleNgFactory",name:"WizardLayout1",segment:"wizard-layout-1",priority:"low",defaultHistory:[]},{loadChildren:"../core/wizard/layout-2/wizard-layout-2.module.ngfactory#WizardLayout2ModuleNgFactory",name:"WizardLayout2",segment:"wizard-layout-2",priority:"low",defaultHistory:[]},{loadChildren:"../core/wizard/layout-3/wizard-layout-3.module.ngfactory#WizardLayout3ModuleNgFactory",name:"WizardLayout3",segment:"wizard-layout-3",priority:"low",defaultHistory:[]},{loadChildren:"../pages/alteracoes/alteracoes.module.ngfactory#AlteracoesPageModuleNgFactory",name:"AlteracoesPage",segment:"alteracoes",priority:"low",defaultHistory:[]},{loadChildren:"../pages/area/area.module.ngfactory#AreaPageModuleNgFactory",name:"AreaPage",segment:"area",priority:"low",defaultHistory:[]},{loadChildren:"../pages/area/cadastro/area-cadastro.module.ngfactory#AreaCadastroPageModuleNgFactory",name:"AreaCadastroPage",segment:"area-cadastro",priority:"low",defaultHistory:[]},{loadChildren:"../pages/home/home.module.ngfactory#HomePageModuleNgFactory",name:"HomePage",segment:"home",priority:"low",defaultHistory:[]},{loadChildren:"../pages/item-area/item-area.module.ngfactory#ItemAreaPageModuleNgFactory",name:"ItemAreaPage",segment:"item-area",priority:"low",defaultHistory:[]},{loadChildren:"../pages/login/login.component.module.ngfactory#LoginPageModuleNgFactory",name:"LoginPage",segment:"login.component",priority:"low",defaultHistory:[]},{loadChildren:"../pages/obra/obra.module.ngfactory#ObraPageModuleNgFactory",name:"ObraPage",segment:"obra",priority:"low",defaultHistory:[]},{loadChildren:"../pages/ocorrencia/manter/manter-ocorrencia.module.ngfactory#ManterOcorrenciaPageModuleNgFactory",name:"ManterOcorrenciaPage",segment:"manter-ocorrencia",priority:"low",defaultHistory:[]},{loadChildren:"../pages/ocorrencia/ocorrencia.module.ngfactory#OcorrenciaPageModuleNgFactory",name:"OcorrenciaPage",segment:"ocorrencia",priority:"low",defaultHistory:[]},{loadChildren:"../pages/verificacao/manter/manter-verificacao.module.ngfactory#ManterVerificacaoPageModuleNgFactory",name:"ManterVerificacaoPage",segment:"manter-verificacao",priority:"low",defaultHistory:[]},{loadChildren:"../pages/verificacao/realizar/realizar-verificacao.module.ngfactory#RealizarVerificacaoPageModuleNgFactory",name:"RealizarVerificacaoPage",segment:"realizar-verificacao",priority:"low",defaultHistory:[]},{loadChildren:"../pages/verificacao/verificacao.module.ngfactory#VerificacaoPageModuleNgFactory",name:"VerificacaoPage",segment:"verificacao",priority:"low",defaultHistory:[]}]},[]),u._19(512,u.i,u.i,[]),u._19(512,Pa.a,Pa.a,[u.i]),u._19(1024,Sa.b,Sa.c,[Pa.a,u.u]),u._19(1024,u.c,function(a,o,e,t,l,r,n,u,s,c,y,d,g){return[i.s(a),za.a(o),ma.b(e,t),Ha.b(l,r,n,u,s),Sa.d(c,y,d,g)]},[[2,u.B],B.a,U.a,J.a,B.a,U.a,J.a,V.a,aa.l,B.a,Ca.a,Sa.b,u.C]),u._19(512,u.d,u.d,[[2,u.c]]),u._19(131584,u.f,u.f,[u.C,u._4,u.u,u.o,u.k,u.d]),u._19(512,u.e,u.e,[u.f]),u._19(512,i.a,i.a,[[3,i.a]]),u._19(512,ba.p,ba.p,[]),u._19(512,ba.e,ba.e,[]),u._19(512,ba.n,ba.n,[]),u._19(512,La.a,La.a,[]),u._19(512,f.a,f.a,[]),u._19(512,La.b,La.b,[]),u._19(512,_.b,_.b,[]),u._19(512,w,w,[]),u._19(256,p.m,"XSRF-TOKEN",[]),u._19(256,p.n,"X-XSRF-TOKEN",[]),u._19(256,Sa.a,_.c,[]),u._19(256,v.a,y.a,[]),u._19(256,oa.a,"/",[]),u._19(256,f.c,null,[])])});Object(u.X)(),Object(i.j)().bootstrapModuleFactory(Ia)},86:function(a,o,e){"use strict";e.d(o,"a",function(){return t});e(0),e(55);var t=function(){function a(a){this.alertCtrl=a}return a.prototype.exibirMensagem=function(a){this.alertCtrl.create({subTitle:a,buttons:["Ok"]}).present()},a.prototype.exibirMensagemConfirmacao=function(a,o){this.alertCtrl.create({message:a,enableBackdropDismiss:!1,buttons:[{text:"Cancelar"},{text:"Confirmar",handler:o}]}).present()},a}()},88:function(a,o,e){"use strict";e.d(o,"a",function(){return t});e(0),e(55);var t=function(){function a(a){this.loadingCtrl=a}return a.prototype.show=function(){this.loading=this.loadingCtrl.create({spinner:"hide",content:'<img src="assets/svg/grid.svg"/>'}),this.loading.present()},a.prototype.hide=function(){this.loading.dismiss()},a}()},94:function(a,o,e){"use strict";e(0),e(2);var t=e(43),l={production:!1,urlAPI:"http://solvercompany.com:7099/api/",versao:"1.0.2"};e.d(o,"a",function(){return r});var r=function(){function a(a,o){this.http=a,this.headers=new t.g,this.apiUrl=l.urlAPI+o,localStorage.getItem("BancoSchema")&&(this.headers=this.headers.set("BancoSchema",localStorage.getItem("BancoSchema")))}return a.prototype.handleError=function(a){if("401"!=a.status&&"403"!=a.status)return Promise.reject(a);location.href=l.urlAPI},a}()}},[367]);
+webpackJsonp([83],{
+
+/***/ 154:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MessageService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var MessageService = /** @class */ (function () {
+    function MessageService(alertCtrl) {
+        this.alertCtrl = alertCtrl;
+    }
+    MessageService.prototype.exibirMensagem = function (mensagem) {
+        var alert = this.alertCtrl.create({
+            subTitle: mensagem,
+            buttons: ['Ok']
+        });
+        alert.present();
+    };
+    MessageService.prototype.exibirMensagemConfirmacao = function (mensagem, acaoConfirmar) {
+        var confirm = this.alertCtrl.create({
+            message: mensagem,
+            enableBackdropDismiss: false,
+            buttons: [
+                {
+                    text: 'Cancelar'
+                },
+                {
+                    text: 'Confirmar',
+                    handler: acaoConfirmar
+                }
+            ]
+        });
+        confirm.present();
+    };
+    MessageService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */]])
+    ], MessageService);
+    return MessageService;
+}());
+
+//# sourceMappingURL=message-service.js.map
+
+/***/ }),
+
+/***/ 155:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoadingService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var LoadingService = /** @class */ (function () {
+    function LoadingService(loadingCtrl) {
+        this.loadingCtrl = loadingCtrl;
+    }
+    LoadingService.prototype.show = function () {
+        this.loading = this.loadingCtrl.create({
+            spinner: 'hide',
+            content: "<img src=\"assets/svg/grid.svg\"/>"
+        });
+        this.loading.present();
+    };
+    LoadingService.prototype.hide = function () {
+        this.loading.dismiss();
+    };
+    LoadingService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["B" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0_ionic_angular__["k" /* LoadingController */]])
+    ], LoadingService);
+    return LoadingService;
+}());
+
+//# sourceMappingURL=loading-service.js.map
+
+/***/ }),
+
+/***/ 166:
+/***/ (function(module, exports) {
+
+function webpackEmptyAsyncContext(req) {
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncatched exception popping up in devtools
+	return Promise.resolve().then(function() {
+		throw new Error("Cannot find module '" + req + "'.");
+	});
+}
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = 166;
+
+/***/ }),
+
+/***/ 210:
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"../core/action-sheet/layout-1/action-sheet-layout-1.module": [
+		692,
+		22
+	],
+	"../core/action-sheet/layout-2/action-sheet-layout-2.module": [
+		693,
+		21
+	],
+	"../core/action-sheet/layout-3/action-sheet-layout-3.module": [
+		694,
+		82
+	],
+	"../core/check-box/layout-1/check-box-layout-1.module": [
+		695,
+		81
+	],
+	"../core/check-box/layout-2/check-box-layout-2.module": [
+		696,
+		80
+	],
+	"../core/check-box/layout-3/check-box-layout-3.module": [
+		697,
+		79
+	],
+	"../core/full-screen-gallery/full-screen-gallery.module": [
+		699,
+		78
+	],
+	"../core/image-gallery/layout-1/image-gallery-layout-1.module": [
+		698,
+		77
+	],
+	"../core/image-gallery/layout-2/image-gallery-layout-2.module": [
+		700,
+		76
+	],
+	"../core/list-view/appearance-animation/layout-1/appearance-animation-layout-1.module": [
+		701,
+		75
+	],
+	"../core/list-view/appearance-animation/layout-2/appearance-animation-layout-2.module": [
+		702,
+		74
+	],
+	"../core/list-view/appearance-animation/layout-3/appearance-animation-layout-3.module": [
+		703,
+		73
+	],
+	"../core/list-view/appearance-animation/layout-4/appearance-animation-layout-4.module": [
+		704,
+		72
+	],
+	"../core/list-view/appearance-animation/layout-5/appearance-animation-layout-5.module": [
+		688,
+		71
+	],
+	"../core/list-view/drag-and-drop/layout-1/drag-and-drop-layout-1.module": [
+		705,
+		70
+	],
+	"../core/list-view/drag-and-drop/layout-2/drag-and-drop-layout-2.module": [
+		706,
+		69
+	],
+	"../core/list-view/drag-and-drop/layout-3/drag-and-drop-layout-3.module": [
+		707,
+		68
+	],
+	"../core/list-view/expandable/layout-1/expandable-layout-1.module": [
+		708,
+		67
+	],
+	"../core/list-view/expandable/layout-2/expandable-layout-2.module": [
+		709,
+		66
+	],
+	"../core/list-view/expandable/layout-3/expandable-layout-3.module": [
+		710,
+		65
+	],
+	"../core/list-view/google-card/layout-1/google-card-layout-1.module": [
+		711,
+		64
+	],
+	"../core/list-view/google-card/layout-2/google-card-layout-2.module": [
+		712,
+		63
+	],
+	"../core/list-view/google-card/layout-3/google-card-layout-3.module": [
+		713,
+		62
+	],
+	"../core/list-view/sticky-list-header/layout-1/sticky-list-header-layout-1.module": [
+		714,
+		7
+	],
+	"../core/list-view/sticky-list-header/layout-2/sticky-list-header-layout-2.module": [
+		715,
+		6
+	],
+	"../core/list-view/sticky-list-header/layout-3/sticky-list-header-layout-3.module": [
+		716,
+		5
+	],
+	"../core/list-view/swipe-to-dismiss/layout-1/swipe-to-dismiss-layout-1.module": [
+		717,
+		61
+	],
+	"../core/list-view/swipe-to-dismiss/layout-2/swipe-to-dismiss-layout-2.module": [
+		718,
+		60
+	],
+	"../core/list-view/swipe-to-dismiss/layout-3/swipe-to-dismiss-layout-3.module": [
+		719,
+		59
+	],
+	"../core/login/layout-1/login-layout-1.module": [
+		720,
+		58
+	],
+	"../core/login/layout-2/login-layout-2.module": [
+		690,
+		14
+	],
+	"../core/maps/layout-1/maps-layout-1.module": [
+		721,
+		0
+	],
+	"../core/maps/layout-2/maps-layout-2.module": [
+		723,
+		2
+	],
+	"../core/maps/layout-3/maps-layout-3.module": [
+		722,
+		1
+	],
+	"../core/parallax/layout-1/parallax-layout-1.module": [
+		724,
+		20
+	],
+	"../core/parallax/layout-2/parallax-layout-2.module": [
+		725,
+		19
+	],
+	"../core/parallax/layout-3/parallax-layout-3.module": [
+		726,
+		18
+	],
+	"../core/parallax/layout-4/parallax-layout-4.module": [
+		727,
+		17
+	],
+	"../core/radio-button/layout-1/radio-button-layout-1.module": [
+		728,
+		57
+	],
+	"../core/radio-button/layout-2/radio-button-layout-2.module": [
+		729,
+		56
+	],
+	"../core/radio-button/layout-3/radio-button-layout-3.module": [
+		730,
+		55
+	],
+	"../core/range/layout-1/range-layout-1.module": [
+		731,
+		54
+	],
+	"../core/range/layout-2/range-layout-2.module": [
+		732,
+		53
+	],
+	"../core/range/layout-3/range-layout-3.module": [
+		733,
+		52
+	],
+	"../core/range/layout-4/range-layout-4.module": [
+		734,
+		51
+	],
+	"../core/register/layout-1/register-layout-1.module": [
+		735,
+		50
+	],
+	"../core/register/layout-2/register-layout-2.module": [
+		736,
+		49
+	],
+	"../core/search-bar/layout-1/search-bar-layout-1.module": [
+		737,
+		48
+	],
+	"../core/search-bar/layout-2/search-bar-layout-2.module": [
+		738,
+		47
+	],
+	"../core/search-bar/layout-3/search-bar-layout-3.module": [
+		739,
+		46
+	],
+	"../core/select/layout-1/select-layout-1.module": [
+		689,
+		45
+	],
+	"../core/select/layout-2/select-layout-2.module": [
+		740,
+		44
+	],
+	"../core/select/layout-3/select-layout-3.module": [
+		691,
+		43
+	],
+	"../core/select/layout-4/select-layout-4.module": [
+		741,
+		42
+	],
+	"../core/select/layout-5/select-layout-5.module": [
+		742,
+		41
+	],
+	"../core/select/layout-6/select-layout-6.module": [
+		743,
+		40
+	],
+	"../core/spinner/spinner.module": [
+		744,
+		39
+	],
+	"../core/splash-screen/layout-1/splash-screen-layout-1.module": [
+		745,
+		38
+	],
+	"../core/splash-screen/layout-2/splash-screen-layout-2.module": [
+		746,
+		37
+	],
+	"../core/splash-screen/layout-3/splash-screen-layout-3.module": [
+		747,
+		36
+	],
+	"../core/sub-image-gallery/layout-1/sub-image-gallery-layout-1.module": [
+		748,
+		35
+	],
+	"../core/sub-image-gallery/layout-2/sub-image-gallery-layout-2.module": [
+		749,
+		34
+	],
+	"../core/tabs/layout-1/tabs-layout-1.module": [
+		750,
+		33
+	],
+	"../core/tabs/layout-2/tabs-layout-2.module": [
+		751,
+		32
+	],
+	"../core/tabs/layout-3/tabs-layout-3.module": [
+		752,
+		31
+	],
+	"../core/toggle/layout-1/toggle-layout-1.module": [
+		753,
+		30
+	],
+	"../core/toggle/layout-2/toggle-layout-2.module": [
+		754,
+		29
+	],
+	"../core/toggle/layout-3/toggle-layout-3.module": [
+		755,
+		28
+	],
+	"../core/wizard/layout-1/wizard-layout-1.module": [
+		756,
+		27
+	],
+	"../core/wizard/layout-2/wizard-layout-2.module": [
+		757,
+		26
+	],
+	"../core/wizard/layout-3/wizard-layout-3.module": [
+		758,
+		25
+	],
+	"../pages/alteracoes/alteracoes.module": [
+		759,
+		16
+	],
+	"../pages/area/area.module": [
+		760,
+		9
+	],
+	"../pages/area/cadastro/area-cadastro.module": [
+		761,
+		12
+	],
+	"../pages/home/home.module": [
+		762,
+		24
+	],
+	"../pages/item-area/item-area.module": [
+		763,
+		10
+	],
+	"../pages/login/login.component.module": [
+		764,
+		3
+	],
+	"../pages/obra/obra.module": [
+		765,
+		15
+	],
+	"../pages/ocorrencia/manter/manter-ocorrencia.module": [
+		766,
+		23
+	],
+	"../pages/ocorrencia/ocorrencia.module": [
+		767,
+		8
+	],
+	"../pages/verificacao/manter/manter-verificacao.module": [
+		768,
+		13
+	],
+	"../pages/verificacao/realizar/realizar-verificacao.module": [
+		769,
+		11
+	],
+	"../pages/verificacao/verificacao.module": [
+		770,
+		4
+	]
+};
+function webpackAsyncContext(req) {
+	var ids = map[req];
+	if(!ids)
+		return Promise.reject(new Error("Cannot find module '" + req + "'."));
+	return __webpack_require__.e(ids[1]).then(function() {
+		return __webpack_require__(ids[0]);
+	});
+};
+webpackAsyncContext.keys = function webpackAsyncContextKeys() {
+	return Object.keys(map);
+};
+webpackAsyncContext.id = 210;
+module.exports = webpackAsyncContext;
+
+/***/ }),
+
+/***/ 350:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ToastService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__config_app_settings__ = __webpack_require__(351);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var ToastService = /** @class */ (function () {
+    function ToastService(toastCtrl) {
+        this.toastCtrl = toastCtrl;
+    }
+    ToastService.prototype.presentToastError = function (message) {
+        var toastItem = __WEBPACK_IMPORTED_MODULE_2__config_app_settings__["a" /* AppSettings */].TOAST;
+        toastItem.cssClass = "toast-error";
+        toastItem["message"] = message;
+        var toast = this.toastCtrl.create(toastItem);
+        toast.present();
+    };
+    ToastService.prototype.presentToastSuccess = function (message) {
+        var toastItem = __WEBPACK_IMPORTED_MODULE_2__config_app_settings__["a" /* AppSettings */].TOAST;
+        toastItem.cssClass = "toast-success";
+        toastItem["message"] = message;
+        var toast = this.toastCtrl.create(toastItem);
+        toast.present();
+    };
+    ToastService.prototype.presentToastWarning = function (message) {
+        var toastItem = __WEBPACK_IMPORTED_MODULE_2__config_app_settings__["a" /* AppSettings */].TOAST;
+        toastItem.cssClass = "toast-warning";
+        toastItem["message"] = message;
+        var toast = this.toastCtrl.create(toastItem);
+        toast.present();
+    };
+    ToastService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["B" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0_ionic_angular__["t" /* ToastController */]])
+    ], ToastService);
+    return ToastService;
+}());
+
+//# sourceMappingURL=toast-service.js.map
+
+/***/ }),
+
+/***/ 351:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppSettings; });
+var AppSettings = Object.freeze({
+    "IS_FIREBASE_ENABLED": false,
+    "SHOW_START_WIZARD": false,
+    "SUBSCRIBE": false,
+    "TOAST": {
+        "duration": 5000,
+        "position": "top",
+        "cssClass": "toast-success"
+    },
+    "FIREBASE_CONFIG": {
+        apiKey: "AIzaSyBZYIJQFQ7jMsTMRLuDcANj8k43TsxbeNE",
+        authDomain: "sgq-gdol.firebaseapp.com",
+        databaseURL: "https://sgq-gdol.firebaseio.com",
+        projectId: "sgq-gdol",
+        storageBucket: "sgq-gdol.appspot.com",
+        messagingSenderId: "445415293027"
+    },
+    "MAP_KEY": {
+        "apiKey": 'AIzaSyA4-GoZzOqYTvxMe52YQZch5JaCFN6ACLg'
+    }
+});
+//# sourceMappingURL=app-settings.js.map
+
+/***/ }),
+
+/***/ 352:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(306);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(308);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_network__ = __webpack_require__(309);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_message_service__ = __webpack_require__(154);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__utils_loading_service__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_obra_service__ = __webpack_require__(353);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_storage__ = __webpack_require__(153);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__services_checklist_service__ = __webpack_require__(666);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__services_alteracao_service__ = __webpack_require__(667);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_funcionario_service__ = __webpack_require__(668);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+
+
+
+
+var MyApp = /** @class */ (function () {
+    function MyApp(platform, statusBar, menu, loadingService, messageService, storage, obraService, alteracaoService, funcionarioService, alertCtrl, checklistService, network, events, splashScreen) {
+        var _this = this;
+        this.menu = menu;
+        this.loadingService = loadingService;
+        this.messageService = messageService;
+        this.storage = storage;
+        this.obraService = obraService;
+        this.alteracaoService = alteracaoService;
+        this.funcionarioService = funcionarioService;
+        this.alertCtrl = alertCtrl;
+        this.checklistService = checklistService;
+        this.network = network;
+        this.events = events;
+        this.rootPage = "LoginPage";
+        this.atualizacao = false;
+        this.statusAtualizacao = "";
+        platform.ready().then(function () {
+            statusBar.styleDefault();
+            splashScreen.hide();
+            statusBar.backgroundColorByHexString('rgb(33,177,75)');
+            _this.definirRoot();
+            _this.definirEventoMenu();
+        });
+        this.pages = [
+            { "title": "Home", "icon": "home", "component": "HomePage" },
+            { "title": "Baixar dados", "icon": "cloud-download", "component": "Baixar" },
+            { "title": "Listar alterações", "icon": "list", "component": "AlteracoesPage" },
+            { "title": "Publicar alterações", "icon": "cloud-upload", "component": "Subir" },
+            { "title": "Descartar alterações", "icon": "trash", "component": "Descartar" },
+            { "title": "Acesso às obras", "icon": "checkmark-circle-outline", "component": "ObraPage" },
+            { "title": "Sair", "icon": "exit", "component": "LoginPage" },
+        ];
+        this.params = {
+            "background": "assets/images/background/5.jpg",
+            "image": "assets/images/logo/logo.png"
+        };
+    }
+    MyApp_1 = MyApp;
+    MyApp.prototype.definirEventoMenu = function () {
+        var _this = this;
+        this.events.subscribe('openPage', function (page) {
+            _this.openPage(page);
+        });
+    };
+    MyApp.prototype.definirRoot = function () {
+        var _this = this;
+        this.storage.ready().then(function () {
+            _this.storage.get('Usuario').then(function (usuario) {
+                if (usuario) {
+                    localStorage.setItem('isLogged', 'true');
+                    localStorage.setItem("Usuario", usuario);
+                    _this.storage.get('BancoSchema').then(function (empresa) {
+                        localStorage.setItem("BanchoSchema", empresa);
+                    });
+                    _this.rootPage = "HomePage";
+                }
+                else {
+                    _this.rootPage = "LoginPage";
+                }
+            });
+        });
+    };
+    MyApp.prototype.openPage = function (page) {
+        var _this = this;
+        if (page.component != "") {
+            if (page.component == 'Baixar') {
+                if (this.network.type === 'none') {
+                    this.messageService.exibirMensagem("Você precisa de uma conexão com internet para obter os dados e poder então trabalhar offline.");
+                }
+                else {
+                    this.baixarDados();
+                }
+            }
+            else if (page.component == 'Subir') {
+                if (this.network.type === 'none') {
+                    this.messageService.exibirMensagem("Você precisa de uma conexão com internet para subir os dados trabalhados offline.");
+                }
+                else {
+                    this.subirDados();
+                }
+            }
+            else if (page.component == 'Descartar') {
+                this.descartarDados();
+            }
+            else if (page.component == 'LoginPage') {
+                this.storage.ready().then(function () {
+                    _this.storage.get('atualizacoes').then(function (atualizacoes) {
+                        if (atualizacoes) {
+                            _this.messageService.exibirMensagemConfirmacao("Existem atualizações que não foram publicadas, ao sair da sua conta elas serão perdidas. Deseja sair mesmo assim?", function () { _this.deslogar(); });
+                        }
+                        else {
+                            _this.deslogar();
+                        }
+                    });
+                });
+            }
+            else {
+                this.nav.setRoot(page.component);
+            }
+        }
+    };
+    MyApp.prototype.deslogar = function () {
+        localStorage.clear();
+        this.storage.clear();
+        this.nav.setRoot("LoginPage");
+    };
+    MyApp.prototype.baixarDados = function () {
+        var _this = this;
+        this.storage.ready().then(function () {
+            _this.storage.get('atualizacoes').then(function (atualizacoes) {
+                if (atualizacoes) {
+                    _this.messageService.exibirMensagem("Existem atualizações que não foram publicadas, publique-as ou descarte-as antes de baixar novos dados.");
+                }
+                else {
+                    _this.nav.setRoot("HomePage");
+                    _this.obterChecklistServico();
+                    _this.obterFuncionarios();
+                    _this.atualizacao = false;
+                    _this.obterObras();
+                }
+            });
+        });
+    };
+    MyApp.prototype.subirDados = function () {
+        var _this = this;
+        this.storage.ready().then(function () {
+            _this.storage.get('atualizacoes').then(function (atualizacoes) {
+                if (atualizacoes) {
+                    _this.confirmarAtualizarRepositorio(atualizacoes);
+                }
+                else {
+                    _this.messageService.exibirMensagem("Não há nada para publicar.");
+                }
+            });
+        });
+    };
+    MyApp.prototype.descartarDados = function () {
+        var _this = this;
+        this.storage.ready().then(function () {
+            _this.storage.get('atualizacoes').then(function (atualizacoes) {
+                if (atualizacoes) {
+                    _this.confirmarDescartarDados();
+                }
+                else {
+                    _this.messageService.exibirMensagem("Não há nada para descartar.");
+                }
+            });
+        });
+    };
+    MyApp.prototype.confirmarDescartarDados = function () {
+        var _this = this;
+        var mensagem = "Todas as alterações feitas desde a última publicação serão perdidas. Deseja realmente descartá-las?";
+        this.messageService.exibirMensagemConfirmacao(mensagem, function () { _this.executarDescartarDados(); });
+    };
+    MyApp.prototype.executarDescartarDados = function () {
+        var _this = this;
+        this.storage.remove('atualizacoes');
+        this.storage.ready().then(function () {
+            _this.storage.get('obrasBackup').then(function (obrasBackup) {
+                _this.storage.set('obras', obrasBackup);
+                _this.nav.setRoot("HomePage");
+            });
+        });
+    };
+    MyApp.prototype.obterObras = function () {
+        var _this = this;
+        this.loadingService.show();
+        MyApp_1.progressbarAtivo = true;
+        MyApp_1.progress = 0;
+        MyApp_1.segundos = 0;
+        this.controlarSegundos();
+        this.subirProgressAutomatico();
+        this.subirProgressObterIds();
+        this.obraService.obterIdsTodasAtivas().subscribe(function (idsObra) {
+            _this.obterObraCompleta(idsObra);
+        }, function (error) {
+            MyApp_1.progressbarAtivo = false;
+            MyApp_1.progress = 0;
+            _this.loadingService.hide();
+            _this.messageService.exibirMensagem("Falha na comunicação com o servidor, contate o suporte.");
+        });
+    };
+    MyApp.prototype.controlarSegundos = function () {
+        var segundos = setInterval(function () {
+            if (MyApp_1.progressbarAtivo) {
+                MyApp_1.segundos += 1;
+            }
+            else {
+                clearInterval(segundos);
+            }
+        }, 1100);
+    };
+    MyApp.prototype.subirProgressAutomatico = function () {
+        var obterIds = setInterval(function () {
+            if (MyApp_1.progress < 50) {
+                MyApp_1.progress += 0.2;
+            }
+            else if (MyApp_1.progress < 70) {
+                MyApp_1.progress += 0.1;
+            }
+            else if (MyApp_1.progress < 99) {
+                MyApp_1.progress += 0.05;
+            }
+            else {
+                clearInterval(obterIds);
+            }
+        }, 500);
+    };
+    MyApp.prototype.subirProgressObterIds = function () {
+        var obterIds = setInterval(function () {
+            if (MyApp_1.progress < 15) {
+                MyApp_1.progress += 1;
+            }
+            else {
+                clearInterval(obterIds);
+            }
+        }, 300);
+    };
+    MyApp.prototype.obterObraCompleta = function (idsObra) {
+        var _this = this;
+        var obras = [];
+        var qtdErros = 0;
+        this.subirProgressObraCompleta();
+        idsObra.forEach(function (idObra) {
+            _this.obraService.obterObraCompleta(idObra).subscribe(function (obra) {
+                obras.push(obra);
+                _this.setarValoresObras(obras, idsObra, qtdErros);
+            }, function (error) {
+                qtdErros++;
+                _this.setarValoresObras(obras, idsObra, qtdErros);
+            });
+        });
+    };
+    MyApp.prototype.subirProgressObraCompleta = function () {
+        if (MyApp_1.progress == 15) {
+            var obterIds_1 = setInterval(function () {
+                if (MyApp_1.progress < 40) {
+                    MyApp_1.progress += 1;
+                }
+                else {
+                    clearInterval(obterIds_1);
+                }
+            }, 300);
+        }
+    };
+    MyApp.prototype.setarValoresObras = function (obras, idsObra, qtdErros) {
+        if ((obras.length + qtdErros) >= idsObra.length) {
+            this.storage.set('obras', obras);
+            this.storage.set('obrasBackup', obras);
+            this.storage.set('ultimoDownload', new Date());
+            this.nav.setRoot("HomePage");
+            MyApp_1.progressbarAtivo = false;
+            MyApp_1.progress = 0;
+            this.loadingService.hide();
+            if (this.statusAtualizacao == "") {
+                if (qtdErros > 0) {
+                    if (this.atualizacao) {
+                        this.messageService.exibirMensagem("Atualizações publicadas com sucesso, porém houve um erro ao buscar as obras, tente novamente com uma internet melhor.");
+                    }
+                    else {
+                        this.messageService.exibirMensagem("Ocorreu erro durante a busca de algumas obras, tente novamente com usando uma internet melhor.");
+                    }
+                }
+                else {
+                    if (this.atualizacao) {
+                        this.messageService.exibirMensagem("Atualizações publicadas com sucesso.");
+                    }
+                    else {
+                        this.messageService.exibirMensagem("Dados recuperados do servidor com sucesso.");
+                    }
+                }
+            }
+            else {
+                this.messageService.exibirMensagem("Algumas atualizações não foram realizadas: " + this.statusAtualizacao);
+            }
+            this.statusAtualizacao = "";
+        }
+        else {
+            if (MyApp_1.progress + (60 / idsObra.length) < 75) {
+                MyApp_1.progress += (60 / idsObra.length);
+            }
+        }
+    };
+    MyApp.prototype.obterChecklistServico = function () {
+        var _this = this;
+        this.checklistService.obterTodas().subscribe(function (data) {
+            _this.storage.set('itensChecklist', data);
+        }, function (error) {
+            _this.messageService.exibirMensagem("Falha na comunicação com o servidor ao buscar serviços, contate o suporte.");
+        });
+    };
+    MyApp.prototype.obterFuncionarios = function () {
+        var _this = this;
+        this.funcionarioService.obterTodos().subscribe(function (data) {
+            _this.storage.set('funcionarios', data);
+        }, function (error) {
+            _this.messageService.exibirMensagem("Falha na comunicação com o servidor ao buscar funcionários, contate o suporte.");
+        });
+    };
+    MyApp.prototype.confirmarAtualizarRepositorio = function (atualizacoes) {
+        var _this = this;
+        var mensagem = "Deseja atualizar o banco com as alterações realizadas?";
+        this.messageService.exibirMensagemConfirmacao(mensagem, function () { _this.atualizarRepositorio(atualizacoes); });
+    };
+    MyApp.prototype.atualizarRepositorio = function (atualizacoes) {
+        var _this = this;
+        this.loadingService.show();
+        this.alteracaoService.publicar(atualizacoes).subscribe(function (data) {
+            _this.storage.set('ultimoUpload', new Date());
+            _this.storage.remove('atualizacoes');
+            _this.nav.setRoot("HomePage");
+            _this.loadingService.hide();
+            _this.atualizacao = true;
+            _this.statusAtualizacao = data;
+            _this.obterObras();
+        }, function (error) {
+            _this.loadingService.hide();
+            _this.messageService.exibirMensagem("Falha na comunicação com o servidor, contate o suporte.");
+        });
+    };
+    Object.defineProperty(MyApp.prototype, "isLogged", {
+        get: function () {
+            return localStorage.getItem('isLogged');
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MyApp.prototype, "empresa", {
+        get: function () {
+            return localStorage.getItem('BancoSchema');
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(MyApp.prototype, "usuario", {
+        get: function () {
+            return localStorage.getItem('Usuario');
+        },
+        enumerable: true,
+        configurable: true
+    });
+    MyApp.progress = 0;
+    MyApp.progressbarAtivo = false;
+    MyApp.segundos = 0;
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* Nav */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* Nav */])
+    ], MyApp.prototype, "nav", void 0);
+    MyApp = MyApp_1 = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\app\app.html"*/'<!---Settings Main Header-->\n<ion-split-pane when="md">\n    <!-- Menu Main Top -->\n    <ion-menu [content]="content" *ngIf="params != null">\n        <!-- Menu Main List -->\n        <ion-content *ngIf="isLogged == \'true\'">\n            <div header-background-image>\n                <ion-grid>\n                    <ion-row>\n                        <ion-col col-5>\n                            <img [src]="params.image">\n                        </ion-col>\n                        <ion-col col-7>\n                            <h1 ion-text header-title text-wrap>{{empresa}}</h1>\n                            <h2 ion-text header-title text-wrap>{{usuario}}</h2>\n                        </ion-col>\n                    </ion-row>\n                </ion-grid>\n            </div>\n            <ion-list no-margin>\n                <button menuClose ion-item default-item item-title main-menu no-lines *ngFor="let p of pages" (click)="openPage(p)">\n                    <ion-icon outline icon-small icon-left>\n                        <ion-icon [name]="p.icon"></ion-icon>\n                    </ion-icon>\n                    {{p.title}}\n                </button>\n            </ion-list>\n        </ion-content>\n    </ion-menu>\n    <!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n    <ion-nav [root]="rootPage" #content main swipeBackEnabled="false" main></ion-nav>\n</ion-split-pane>'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\app\app.html"*/,
+            providers: [__WEBPACK_IMPORTED_MODULE_7__services_obra_service__["a" /* ObraService */], __WEBPACK_IMPORTED_MODULE_9__services_checklist_service__["a" /* ChecklistService */], __WEBPACK_IMPORTED_MODULE_10__services_alteracao_service__["a" /* AlteracaoService */], __WEBPACK_IMPORTED_MODULE_11__services_funcionario_service__["a" /* FuncionarioService */]]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* Platform */],
+            __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* MenuController */],
+            __WEBPACK_IMPORTED_MODULE_6__utils_loading_service__["a" /* LoadingService */],
+            __WEBPACK_IMPORTED_MODULE_5__utils_message_service__["a" /* MessageService */],
+            __WEBPACK_IMPORTED_MODULE_8__ionic_storage__["b" /* Storage */],
+            __WEBPACK_IMPORTED_MODULE_7__services_obra_service__["a" /* ObraService */],
+            __WEBPACK_IMPORTED_MODULE_10__services_alteracao_service__["a" /* AlteracaoService */],
+            __WEBPACK_IMPORTED_MODULE_11__services_funcionario_service__["a" /* FuncionarioService */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_9__services_checklist_service__["a" /* ChecklistService */],
+            __WEBPACK_IMPORTED_MODULE_4__ionic_native_network__["a" /* Network */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Events */],
+            __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+    ], MyApp);
+    return MyApp;
+    var MyApp_1;
+}());
+
+//# sourceMappingURL=app.component.js.map
+
+/***/ }),
+
+/***/ 353:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ObraService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__base_service__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var ObraService = /** @class */ (function (_super) {
+    __extends(ObraService, _super);
+    function ObraService(http) {
+        return _super.call(this, http, 'obra/') || this;
+    }
+    ObraService.prototype.obterIdsTodasAtivas = function () {
+        this.headers = this.headers.set('BancoSchema', localStorage.getItem('BancoSchema'));
+        var usuario = localStorage.getItem('Usuario').toUpperCase();
+        return this.http.get(this.apiUrl + 'ids/' + usuario, { headers: this.headers })
+            .catch(this.handleError);
+    };
+    ObraService.prototype.obterObraCompleta = function (idObra) {
+        this.headers = this.headers.set('BancoSchema', localStorage.getItem('BancoSchema'));
+        return this.http.get(this.apiUrl + idObra, { headers: this.headers })
+            .catch(this.handleError);
+    };
+    ObraService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */]])
+    ], ObraService);
+    return ObraService;
+}(__WEBPACK_IMPORTED_MODULE_1__base_service__["a" /* BaseService */]));
+
+//# sourceMappingURL=obra.service.js.map
+
+/***/ }),
+
+/***/ 355:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(356);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(360);
+
+
+Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
+//# sourceMappingURL=main.js.map
+
+/***/ }),
+
+/***/ 360:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(308);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(306);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(352);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_network__ = __webpack_require__(309);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__utils_toast_service__ = __webpack_require__(350);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utils_loading_service__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_common_http__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_storage__ = __webpack_require__(153);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__directives_mask_directive__ = __webpack_require__(686);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_date_picker__ = __webpack_require__(687);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__utils_message_service__ = __webpack_require__(154);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_ionic_selectable__ = __webpack_require__(354);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var AppModule = /** @class */ (function () {
+    function AppModule() {
+    }
+    AppModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["J" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_11__directives_mask_directive__["a" /* MaskDirective */]
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_9__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {}, {
+                    links: [
+                        { loadChildren: '../core/action-sheet/layout-1/action-sheet-layout-1.module#ActionSheetLayout1Module', name: 'ActionSheetLayout1', segment: 'action-sheet-layout-1', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/action-sheet/layout-2/action-sheet-layout-2.module#ActionSheetLayout2Module', name: 'ActionSheetLayout2', segment: 'action-sheet-layout-2', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/action-sheet/layout-3/action-sheet-layout-3.module#ActionSheetLayout3Module', name: 'ActionSheetLayout3', segment: 'action-sheet-layout-3', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/check-box/layout-1/check-box-layout-1.module#CheckBoxLayout1Module', name: 'CheckBoxLayout1', segment: 'check-box-layout-1', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/check-box/layout-2/check-box-layout-2.module#CheckBoxLayout2Module', name: 'CheckBoxLayout2', segment: 'check-box-layout-2', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/check-box/layout-3/check-box-layout-3.module#CheckBoxLayout3Module', name: 'CheckBoxLayout3', segment: 'check-box-layout-3', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/image-gallery/layout-1/image-gallery-layout-1.module#ImageGalleryLayout1Module', name: 'ImageGalleryLayout1', segment: 'image-gallery-layout-1', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/full-screen-gallery/full-screen-gallery.module#FullScreenGalleryModule', name: 'FullScreenGallery', segment: 'full-screen-gallery', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/image-gallery/layout-2/image-gallery-layout-2.module#ImageGalleryLayout2Module', name: 'ImageGalleryLayout2', segment: 'image-gallery-layout-2', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/list-view/appearance-animation/layout-1/appearance-animation-layout-1.module#AppearanceAnimationLayout1Module', name: 'AppearanceAnimationLayout1', segment: 'appearance-animation-layout-1', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/list-view/appearance-animation/layout-2/appearance-animation-layout-2.module#AppearanceAnimationLayout2Module', name: 'AppearanceAnimationLayout2', segment: 'appearance-animation-layout-2', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/list-view/appearance-animation/layout-3/appearance-animation-layout-3.module#AppearanceAnimationLayout3Module', name: 'AppearanceAnimationLayout3', segment: 'appearance-animation-layout-3', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/list-view/appearance-animation/layout-4/appearance-animation-layout-4.module#AppearanceAnimationLayout4Module', name: 'AppearanceAnimationLayout4', segment: 'appearance-animation-layout-4', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/list-view/appearance-animation/layout-5/appearance-animation-layout-5.module#AppearanceAnimationLayout5Module', name: 'AppearanceAnimationLayout5', segment: 'appearance-animation-layout-5', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/list-view/drag-and-drop/layout-1/drag-and-drop-layout-1.module#DragAndDropLayout1Module', name: 'DragAndDropLayout1', segment: 'drag-and-drop-layout-1', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/list-view/drag-and-drop/layout-2/drag-and-drop-layout-2.module#DragAndDropLayout2Module', name: 'DragAndDropLayout2', segment: 'drag-and-drop-layout-2', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/list-view/drag-and-drop/layout-3/drag-and-drop-layout-3.module#DragAndDropLayout3Module', name: 'DragAndDropLayout3', segment: 'drag-and-drop-layout-3', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/list-view/expandable/layout-1/expandable-layout-1.module#ExpandableLayout1Module', name: 'ExpandableLayout1', segment: 'expandable-layout-1', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/list-view/expandable/layout-2/expandable-layout-2.module#ExpandableLayout2Module', name: 'ExpandableLayout2', segment: 'expandable-layout-2', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/list-view/expandable/layout-3/expandable-layout-3.module#ExpandableLayout3Module', name: 'ExpandableLayout3', segment: 'expandable-layout-3', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/list-view/google-card/layout-1/google-card-layout-1.module#GoogleCardLayout1Module', name: 'GoogleCardLayout1', segment: 'google-card-layout-1', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/list-view/google-card/layout-2/google-card-layout-2.module#GoogleCardLayout2Module', name: 'GoogleCardLayout2', segment: 'google-card-layout-2', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/list-view/google-card/layout-3/google-card-layout-3.module#GoogleCardLayout3Module', name: 'GoogleCardLayout3', segment: 'google-card-layout-3', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/list-view/sticky-list-header/layout-1/sticky-list-header-layout-1.module#StickyListHeaderLayout1Module', name: 'StickyListHeaderLayout1', segment: 'sticky-list-header-layout-1', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/list-view/sticky-list-header/layout-2/sticky-list-header-layout-2.module#StickyListHeaderLayout2Module', name: 'StickyListHeaderLayout2', segment: 'sticky-list-header-layout-2', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/list-view/sticky-list-header/layout-3/sticky-list-header-layout-3.module#StickyListHeaderLayout3Module', name: 'StickyListHeaderLayout3', segment: 'sticky-list-header-layout-3', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/list-view/swipe-to-dismiss/layout-1/swipe-to-dismiss-layout-1.module#SwipeToDismissLayout1Module', name: 'SwipeToDismissLayout1', segment: 'swipe-to-dismiss-layout-1', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/list-view/swipe-to-dismiss/layout-2/swipe-to-dismiss-layout-2.module#SwipeToDismissLayout2Module', name: 'SwipeToDismissLayout2', segment: 'swipe-to-dismiss-layout-2', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/list-view/swipe-to-dismiss/layout-3/swipe-to-dismiss-layout-3.module#SwipeToDismissLayout3Module', name: 'SwipeToDismissLayout3', segment: 'swipe-to-dismiss-layout-3', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/login/layout-1/login-layout-1.module#LoginLayout1Module', name: 'LoginLayout1', segment: 'login-layout-1', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/login/layout-2/login-layout-2.module#LoginLayout2Module', name: 'LoginLayout2', segment: 'login-layout-2', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/maps/layout-1/maps-layout-1.module#MapsLayout1Module', name: 'MapsLayout1', segment: 'maps-layout-1', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/maps/layout-3/maps-layout-3.module#MapsLayout3Module', name: 'MapsLayout3', segment: 'maps-layout-3', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/maps/layout-2/maps-layout-2.module#MapsLayout2Module', name: 'MapsLayout2', segment: 'maps-layout-2', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/parallax/layout-1/parallax-layout-1.module#ParallaxLayout1Module', name: 'ParallaxLayout1', segment: 'parallax-layout-1', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/parallax/layout-2/parallax-layout-2.module#ParallaxLayout2Module', name: 'ParallaxLayout2', segment: 'parallax-layout-2', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/parallax/layout-3/parallax-layout-3.module#ParallaxLayout3Module', name: 'ParallaxLayout3', segment: 'parallax-layout-3', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/parallax/layout-4/parallax-layout-4.module#ParallaxLayout4Module', name: 'ParallaxLayout4', segment: 'parallax-layout-4', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/radio-button/layout-1/radio-button-layout-1.module#RadioButtonLayout1Module', name: 'RadioButtonLayout1', segment: 'radio-button-layout-1', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/radio-button/layout-2/radio-button-layout-2.module#RadioButtonLayout2Module', name: 'RadioButtonLayout2', segment: 'radio-button-layout-2', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/radio-button/layout-3/radio-button-layout-3.module#RadioButtonLayout3Module', name: 'RadioButtonLayout3', segment: 'radio-button-layout-3', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/range/layout-1/range-layout-1.module#RangeLayout1Module', name: 'RangeLayout1', segment: 'range-layout-1', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/range/layout-2/range-layout-2.module#RangeLayout2Module', name: 'RangeLayout2', segment: 'range-layout-2', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/range/layout-3/range-layout-3.module#RangeLayout3Module', name: 'RangeLayout3', segment: 'range-layout-3', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/range/layout-4/range-layout-4.module#RangeLayout4Module', name: 'RangeLayout4', segment: 'range-layout-4', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/register/layout-1/register-layout-1.module#RegisterLayout1Module', name: 'RegisterLayout1', segment: 'register-layout-1', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/register/layout-2/register-layout-2.module#RegisterLayout2Module', name: 'RegisterLayout2', segment: 'register-layout-2', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/search-bar/layout-1/search-bar-layout-1.module#SearchBarLayout1Module', name: 'SearchBarLayout1', segment: 'search-bar-layout-1', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/search-bar/layout-2/search-bar-layout-2.module#SearchBarLayout2Module', name: 'SearchBarLayout2', segment: 'search-bar-layout-2', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/search-bar/layout-3/search-bar-layout-3.module#SearchBarLayout3Module', name: 'SearchBarLayout3', segment: 'search-bar-layout-3', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/select/layout-1/select-layout-1.module#SelectLayout1Module', name: 'SelectLayout1', segment: 'select-layout-1', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/select/layout-2/select-layout-2.module#SelectLayout2Module', name: 'SelectLayout2', segment: 'select-layout-2', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/select/layout-3/select-layout-3.module#SelectLayout3Module', name: 'SelectLayout3', segment: 'select-layout-3', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/select/layout-4/select-layout-4.module#SelectLayout4Module', name: 'SelectLayout4', segment: 'select-layout-4', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/select/layout-5/select-layout-5.module#SelectLayout5Module', name: 'SelectLayout5', segment: 'select-layout-5', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/select/layout-6/select-layout-6.module#SelectLayout6Module', name: 'SelectLayout6', segment: 'select-layout-6', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/spinner/spinner.module#SpinnerModule', name: 'Spinner', segment: 'spinner', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/splash-screen/layout-1/splash-screen-layout-1.module#SplashScreenLayout1Module', name: 'SplashScreenLayout1', segment: 'splash-screen-layout-1', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/splash-screen/layout-2/splash-screen-layout-2.module#SplashScreenLayout2Module', name: 'SplashScreenLayout2', segment: 'splash-screen-layout-2', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/splash-screen/layout-3/splash-screen-layout-3.module#SplashScreenLayout3Module', name: 'SplashScreenLayout3', segment: 'splash-screen-layout-3', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/sub-image-gallery/layout-1/sub-image-gallery-layout-1.module#SubImageGalleryLayout1Module', name: 'SubImageGalleryLayout1', segment: 'sub-image-gallery-layout-1', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/sub-image-gallery/layout-2/sub-image-gallery-layout-2.module#SubImageGalleryLayout2Module', name: 'SubImageGalleryLayout2', segment: 'sub-image-gallery-layout-2', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/tabs/layout-1/tabs-layout-1.module#TabsLayout1Module', name: 'TabsLayout1', segment: 'tabs-layout-1', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/tabs/layout-2/tabs-layout-2.module#TabsLayout2Module', name: 'TabsLayout2', segment: 'tabs-layout-2', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/tabs/layout-3/tabs-layout-3.module#TabsLayout3Module', name: 'TabsLayout3', segment: 'tabs-layout-3', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/toggle/layout-1/toggle-layout-1.module#ToggleLayout1Module', name: 'ToggleLayout1', segment: 'toggle-layout-1', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/toggle/layout-2/toggle-layout-2.module#ToggleLayout2Module', name: 'ToggleLayout2', segment: 'toggle-layout-2', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/toggle/layout-3/toggle-layout-3.module#ToggleLayout3Module', name: 'ToggleLayout3', segment: 'toggle-layout-3', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/wizard/layout-1/wizard-layout-1.module#WizardLayout1Module', name: 'WizardLayout1', segment: 'wizard-layout-1', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/wizard/layout-2/wizard-layout-2.module#WizardLayout2Module', name: 'WizardLayout2', segment: 'wizard-layout-2', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/wizard/layout-3/wizard-layout-3.module#WizardLayout3Module', name: 'WizardLayout3', segment: 'wizard-layout-3', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/alteracoes/alteracoes.module#AlteracoesPageModule', name: 'AlteracoesPage', segment: 'alteracoes', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/area/area.module#AreaPageModule', name: 'AreaPage', segment: 'area', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/area/cadastro/area-cadastro.module#AreaCadastroPageModule', name: 'AreaCadastroPage', segment: 'area-cadastro', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/item-area/item-area.module#ItemAreaPageModule', name: 'ItemAreaPage', segment: 'item-area', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login/login.component.module#LoginPageModule', name: 'LoginPage', segment: 'login.component', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/obra/obra.module#ObraPageModule', name: 'ObraPage', segment: 'obra', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/ocorrencia/manter/manter-ocorrencia.module#ManterOcorrenciaPageModule', name: 'ManterOcorrenciaPage', segment: 'manter-ocorrencia', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/ocorrencia/ocorrencia.module#OcorrenciaPageModule', name: 'OcorrenciaPage', segment: 'ocorrencia', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/verificacao/manter/manter-verificacao.module#ManterVerificacaoPageModule', name: 'ManterVerificacaoPage', segment: 'manter-verificacao', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/verificacao/realizar/realizar-verificacao.module#RealizarVerificacaoPageModule', name: 'RealizarVerificacaoPage', segment: 'realizar-verificacao', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/verificacao/verificacao.module#VerificacaoPageModule', name: 'VerificacaoPage', segment: 'verificacao', priority: 'low', defaultHistory: [] }
+                    ]
+                }),
+                __WEBPACK_IMPORTED_MODULE_10__ionic_storage__["a" /* IonicStorageModule */].forRoot(),
+                __WEBPACK_IMPORTED_MODULE_14_ionic_selectable__["a" /* IonicSelectableModule */]
+            ],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* IonicApp */]],
+            entryComponents: [
+                __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */]
+            ],
+            schemas: [__WEBPACK_IMPORTED_MODULE_1__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]],
+            providers: [
+                __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
+                __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
+                __WEBPACK_IMPORTED_MODULE_7__utils_toast_service__["a" /* ToastService */],
+                __WEBPACK_IMPORTED_MODULE_8__utils_loading_service__["a" /* LoadingService */],
+                __WEBPACK_IMPORTED_MODULE_13__utils_message_service__["a" /* MessageService */],
+                __WEBPACK_IMPORTED_MODULE_6__ionic_native_network__["a" /* Network */],
+                __WEBPACK_IMPORTED_MODULE_12__ionic_native_date_picker__["a" /* DatePicker */],
+                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["v" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* IonicErrorHandler */] }
+            ]
+        })
+    ], AppModule);
+    return AppModule;
+}());
+
+//# sourceMappingURL=app.module.js.map
+
+/***/ }),
+
+/***/ 65:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BaseService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(665);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var BaseService = /** @class */ (function () {
+    function BaseService(http, rota) {
+        this.http = http;
+        this.headers = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]();
+        this.apiUrl = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].urlAPI + rota;
+        if (localStorage.getItem('BancoSchema'))
+            this.headers = this.headers.set('BancoSchema', localStorage.getItem('BancoSchema'));
+    }
+    BaseService.prototype.handleError = function (error) {
+        if (error.status == '401' || error.status == '403') {
+            location.href = __WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].urlAPI;
+        }
+        else {
+            return Promise.reject(error);
+        }
+    };
+    BaseService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */], String])
+    ], BaseService);
+    return BaseService;
+}());
+
+//# sourceMappingURL=base.service.js.map
+
+/***/ }),
+
+/***/ 665:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return environment; });
+// The file contents for the current environment will overwrite these during build.
+// The build system defaults to the dev environment which uses `environment.ts`, but if you do
+// `ng build --env=prod` then `environment.prod.ts` will be used instead.
+// The list of which env maps to which file can be found in `.angular-cli.json`.
+var environment = {
+    production: false,
+    urlAPI: 'http://localhost:49754/api/',
+    // urlAPI: 'http://solvercompany.com:7099/api/',
+    versao: '1.0.2'
+};
+//# sourceMappingURL=environment.js.map
+
+/***/ }),
+
+/***/ 666:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChecklistService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__base_service__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var ChecklistService = /** @class */ (function (_super) {
+    __extends(ChecklistService, _super);
+    function ChecklistService(http) {
+        return _super.call(this, http, 'checklist/') || this;
+    }
+    ChecklistService.prototype.obterTodas = function () {
+        this.headers = this.headers.set('BancoSchema', localStorage.getItem('BancoSchema'));
+        return this.http.get(this.apiUrl + 'itens-ativos/', { headers: this.headers })
+            .catch(this.handleError);
+    };
+    ChecklistService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */]])
+    ], ChecklistService);
+    return ChecklistService;
+}(__WEBPACK_IMPORTED_MODULE_1__base_service__["a" /* BaseService */]));
+
+//# sourceMappingURL=checklist.service.js.map
+
+/***/ }),
+
+/***/ 667:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AlteracaoService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__base_service__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var AlteracaoService = /** @class */ (function (_super) {
+    __extends(AlteracaoService, _super);
+    function AlteracaoService(http) {
+        return _super.call(this, http, 'alteracao/') || this;
+    }
+    AlteracaoService.prototype.publicar = function (alteracoes) {
+        this.headers = this.headers.set('BancoSchema', localStorage.getItem('BancoSchema'));
+        return this.http.post(this.apiUrl, alteracoes, { headers: this.headers })
+            .catch(this.handleError);
+    };
+    AlteracaoService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */]])
+    ], AlteracaoService);
+    return AlteracaoService;
+}(__WEBPACK_IMPORTED_MODULE_1__base_service__["a" /* BaseService */]));
+
+//# sourceMappingURL=alteracao.service.js.map
+
+/***/ }),
+
+/***/ 668:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FuncionarioService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__base_service__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var FuncionarioService = /** @class */ (function (_super) {
+    __extends(FuncionarioService, _super);
+    function FuncionarioService(http) {
+        return _super.call(this, http, 'funcionario/') || this;
+    }
+    FuncionarioService.prototype.obterTodos = function () {
+        this.headers = this.headers.set('BancoSchema', localStorage.getItem('BancoSchema'));
+        return this.http.get(this.apiUrl + 'ativos/', { headers: this.headers })
+            .catch(this.handleError);
+    };
+    FuncionarioService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */]])
+    ], FuncionarioService);
+    return FuncionarioService;
+}(__WEBPACK_IMPORTED_MODULE_1__base_service__["a" /* BaseService */]));
+
+//# sourceMappingURL=funcionario.service.js.map
+
+/***/ }),
+
+/***/ 686:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MaskDirective; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+var MaskDirective = /** @class */ (function () {
+    function MaskDirective(pattern) {
+        this.pattern = pattern;
+    }
+    MaskDirective.prototype.onInputChange = function (e) {
+        try {
+            var value = e.target.value, caret = e.target.selectionStart, pattern = this.pattern, reserve = pattern.replace(/\*/, 'g'), applied = '', ordinal = 0;
+            if (e.keyCode === 8 || e.key === 'Backspace' || e.keyCode === 46 || e.key === 'Delete') {
+                if (value.length) {
+                    //remove all trailing formatting
+                    while (value.length && pattern[value.length] && pattern[value.length] !== '*') {
+                        value = value.substring(0, value.length - 1);
+                    }
+                    //remove all leading formatting to restore placeholder
+                    if (pattern.substring(0, value.length).indexOf('*') < 0) {
+                        value = value.substring(0, value.length - 1);
+                    }
+                }
+            }
+            //apply mask characters 
+            for (var i = 0; i < value.length; i++) {
+                //enforce pattern limit
+                if (i < pattern.length) {
+                    //match mask
+                    if (value[i] === pattern[ordinal]) {
+                        applied += value[i];
+                        ordinal++;
+                    }
+                    else if (reserve.indexOf(value[i]) > -1) {
+                        //skip other reserved characters
+                    }
+                    else {
+                        //apply leading formatting
+                        while (ordinal < pattern.length && pattern[ordinal] !== '*') {
+                            applied += pattern[ordinal];
+                            ordinal++;
+                        }
+                        applied += value[i];
+                        ordinal++;
+                        //apply trailing formatting
+                        while (ordinal < pattern.length && pattern[ordinal] !== '*') {
+                            applied += pattern[ordinal];
+                            ordinal++;
+                        }
+                    }
+                }
+            }
+            e.target.value = applied;
+            if (caret < value.length) {
+                e.target.setSelectionRange(caret, caret);
+            }
+        }
+        catch (ex) {
+            console.error(ex.message);
+        }
+    };
+    MaskDirective = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* Directive */])({
+            selector: '[mask]',
+            host: {
+                '(keyup)': 'onInputChange($event)'
+            }
+        }),
+        __param(0, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["g" /* Attribute */])('mask')),
+        __metadata("design:paramtypes", [String])
+    ], MaskDirective);
+    return MaskDirective;
+}());
+
+//# sourceMappingURL=mask.directive.js.map
+
+/***/ })
+
+},[355]);
+//# sourceMappingURL=main.js.map

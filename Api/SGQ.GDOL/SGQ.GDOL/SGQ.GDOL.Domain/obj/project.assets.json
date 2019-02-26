@@ -495,20 +495,22 @@
       ]
     },
     "FireSharp.Serialization.JsonNet/1.1.0": {
-      "sha512": "Cm2ZuswLT4iPLLpUzKa6oiCKaDv+d1Dc6WxC/xVb19prnQR5zK0jnOfpdVXIabM00SaqzP7kA9l7381FxPSVPA==",
+      "sha512": "nAgFNSUNOOpEgOKPPPRxQhk9pijuCawGwai2Mf1l4vQDwgAZQBDoxRqfoV5PH5Ms8AOeYko0mZzMcM5YVCKMdg==",
       "type": "package",
       "path": "firesharp.serialization.jsonnet/1.1.0",
       "files": [
+        ".signature.p7s",
         "firesharp.serialization.jsonnet.1.1.0.nupkg.sha512",
         "firesharp.serialization.jsonnet.nuspec",
         "lib/net45/FireSharp.Serialization.JsonNet.dll"
       ]
     },
     "FluentValidation/7.6.0": {
-      "sha512": "OSdjofTbA11BPRMPpSKoREH2THCuKq/fCiOUoEaAbj/iCz2Hm89zczYIiQFZpQDYKhuqeHpdEVrFmkmcpNryUQ==",
+      "sha512": "+B3gG6E0SWpsU1S69EN48LCmV84c69zMC2gVynInYcKK86zk6Rj8s5Od/G3E12/kS5IdKw1uLI1KATqmpR/+ow==",
       "type": "package",
       "path": "fluentvalidation/7.6.0",
       "files": [
+        ".signature.p7s",
         "fluentvalidation.7.6.0.nupkg.sha512",
         "fluentvalidation.nuspec",
         "lib/net45/FluentValidation.dll",
@@ -836,10 +838,12 @@
       ]
     },
     "Microsoft.NETCore.Platforms/2.0.0": {
-      "sha512": "VdLJOCXhZaEMY7Hm2GKiULmn7IEPFE4XC5LPSfBVCUIA8YLZVh846gtfBJalsPQF2PlzdD7ecX7DZEulJ402ZQ==",
+      "sha512": "5BdAWDgMNwf90L0J+C/eh6kfHDa37ViL1cBL1nv5zPA4TB2cGV51YiQyvzCEy9DBE0LwwMI4+PkUpIekKyocSA==",
       "type": "package",
       "path": "microsoft.netcore.platforms/2.0.0",
       "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/netstandard1.0/_._",
@@ -992,10 +996,11 @@
       ]
     },
     "Newtonsoft.Json/6.0.4": {
-      "sha512": "FyQLmEpjsCrEP+znauLDGAi+h6i9YnaMkITlfIoiM4RYyX3nki306bTHsr/0okiIvIc7BJhQTbOAIZVocccFUw==",
+      "sha512": "POcHreXEQ0vqCFkYLlQ7+WYiVFvi5z/mhZSMIxLorb1Mm8VUWwSpyFXNEC4Um4APWSaRTkzaYXP/dWrFrub/BA==",
       "type": "package",
       "path": "newtonsoft.json/6.0.4",
       "files": [
+        ".signature.p7s",
         "lib/net20/Newtonsoft.Json.dll",
         "lib/net20/Newtonsoft.Json.xml",
         "lib/net35/Newtonsoft.Json.dll",
@@ -1228,10 +1233,11 @@
       ]
     },
     "System.ComponentModel.Annotations/4.4.1": {
-      "sha512": "ToiYqSCioqhtspq2O/jYKtyTC/T0uwWHBTYlzCi6PRbSSHArN1IaRWeHffDamvms5sye5FDUWCfNZgubQpNRsA==",
+      "sha512": "/8XSRz3cgSSPEdiV6UFhlfk6/FX9P10MAja4XPCyMCz7/0YTqjtCh4e0jjLYOCJL8jK7O/vhtUjYo1TOSuPngQ==",
       "type": "package",
       "path": "system.componentmodel.annotations/4.4.1",
       "files": [
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/MonoAndroid10/_._",
@@ -1313,10 +1319,11 @@
       ]
     },
     "System.ComponentModel.Primitives/4.3.0": {
-      "sha512": "j8GUkCpM8V4d4vhLIIoBLGey2Z5bCkMVNjEZseyAlm4n5arcsJOeI3zkUP+zvZgzsbLTYh4lYeP/ZD/gdIAPrw==",
+      "sha512": "KMVuoQ+8bMQ/Z59M3s64num5AD74X5YSqVc7ibwGkPTfmmkl2W8VuSxLRJtpw4KzQrSKUgR0BLbF0adPfcTSGQ==",
       "type": "package",
       "path": "system.componentmodel.primitives/4.3.0",
       "files": [
+        ".nupkg.metadata",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",

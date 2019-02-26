@@ -1,1 +1,233 @@
-webpackJsonp([20],{680:function(n,l,t){"use strict";function e(n){return o._33(0,[(n()(),o._10(0,0,null,null,56,"ion-card",[],null,null,null,null,null)),o._9(1,16384,null,0,S.a,[E.a,o.n,o.J],null,null),(n()(),o._31(-1,null,["\n        "])),(n()(),o._10(3,0,null,null,1,"h2",[["card-title",""],["item-start",""],["text-wrap",""]],null,null,null,null,null)),(n()(),o._31(4,null,["",""])),(n()(),o._31(-1,null,["\n        "])),(n()(),o._31(-1,null,["\n        "])),(n()(),o._10(7,0,null,null,22,"div",[["images-gallery",""]],null,null,null,null,null)),(n()(),o._31(-1,null,["\n          "])),(n()(),o._10(9,0,null,null,3,"div",[["big-image",""]],null,null,null,null,null)),(n()(),o._31(-1,null,["\n            "])),(n()(),o._10(11,0,null,null,0,"img",[],[[8,"src",4],[8,"alt",0]],null,null,null,null)),(n()(),o._31(-1,null,["\n          "])),(n()(),o._31(-1,null,["\n          "])),(n()(),o._31(-1,null,["\n          "])),(n()(),o._10(15,0,null,null,13,"div",[["list-images",""]],null,[[null,"click"]],function(n,l,t){var e=!0;if("click"===l){e=!1!==n.component.onEvent("onItemClick",n.context.$implicit.title,t)&&e}return e},null,null)),(n()(),o._31(-1,null,["\n            "])),(n()(),o._10(17,0,null,null,2,"div",[["background-size",""],["images",""]],[[8,"title",0]],null,null,null,null)),o._9(18,278528,null,0,x.m,[o.x,o.n,o.K],{ngStyle:[0,"ngStyle"]},null),o._25(19,{"background-image":0}),(n()(),o._31(-1,null,["\n            "])),(n()(),o._10(21,0,null,null,2,"div",[["background-size",""],["images",""]],[[8,"title",0]],null,null,null,null)),o._9(22,278528,null,0,x.m,[o.x,o.n,o.K],{ngStyle:[0,"ngStyle"]},null),o._25(23,{"background-image":0}),(n()(),o._31(-1,null,["\n            "])),(n()(),o._10(25,0,null,null,2,"div",[["background-size",""],["images",""]],[[8,"title",0]],null,null,null,null)),o._9(26,278528,null,0,x.m,[o.x,o.n,o.K],{ngStyle:[0,"ngStyle"]},null),o._25(27,{"background-image":0}),(n()(),o._31(-1,null,["\n          "])),(n()(),o._31(-1,null,["\n        "])),(n()(),o._31(-1,null,["\n\n        "])),(n()(),o._31(-1,null,["\n        "])),(n()(),o._10(32,0,null,null,23,"ion-card-content",[],null,null,null,null,null)),o._9(33,16384,null,0,b.a,[E.a,o.n,o.J],null,null),(n()(),o._31(-1,null,["\n          "])),(n()(),o._10(35,0,null,null,19,"ion-item",[["class","item item-block"],["no-lines",""],["no-padding",""],["transparent",""]],null,null,null,v.b,v.a)),o._9(36,1097728,null,3,k.a,[w.a,E.a,o.n,o.J,[2,C.a]],null,null),o._29(335544320,5,{contentLabel:0}),o._29(603979776,6,{_buttons:1}),o._29(603979776,7,{_icons:1}),o._9(40,16384,null,0,T.a,[],null,null),(n()(),o._31(-1,2,["\n            "])),(n()(),o._10(42,0,null,2,1,"span",[["padding-left",""],["span-large",""]],null,null,null,null,null)),(n()(),o._31(43,null,["",""])),(n()(),o._31(-1,2,["\n            "])),(n()(),o._10(45,0,null,2,1,"span",[["new-category",""],["no-padding",""],["text-uppercase",""],["text-wrap",""],["transparent",""]],null,null,null,null,null)),(n()(),o._31(46,null,["",""])),(n()(),o._31(-1,2,["\n            "])),(n()(),o._10(48,0,null,3,5,"div",[["button-block",""],["item-content",""],["margin-right",""]],null,null,null,null,null)),(n()(),o._31(-1,null,["\n              "])),(n()(),o._10(50,0,null,null,2,"button",[["box-shadow",""],["default-button",""],["full",""],["ion-button",""]],null,[[null,"click"]],function(n,l,t){var e=!0;if("click"===l){e=!1!==n.component.onEvent("onBuy","Buy",t)&&e}return e},$.b,$.a)),o._9(51,1097728,[[6,4]],0,O.a,[[8,""],E.a,o.n,o.J],{full:[0,"full"]},null),(n()(),o._31(52,0,["",""])),(n()(),o._31(-1,null,["\n            "])),(n()(),o._31(-1,2,["\n          "])),(n()(),o._31(-1,null,["\n        "])),(n()(),o._31(-1,null,["\n      "]))],function(n,l){n(l,18,0,n(l,19,0,"url("+l.context.$implicit.image2+")"));n(l,22,0,n(l,23,0,"url("+l.context.$implicit.image3+")"));n(l,26,0,n(l,27,0,"url("+l.context.$implicit.image4+")"));n(l,51,0,"")},function(n,l){n(l,4,0,l.context.$implicit.title);n(l,11,0,l.context.$implicit.image1,l.context.$implicit.title);n(l,17,0,l.context.$implicit.title);n(l,21,0,l.context.$implicit.title);n(l,25,0,l.context.$implicit.title);n(l,43,0,l.context.$implicit.price);n(l,46,0,l.context.$implicit.subtitle);n(l,52,0,l.context.$implicit.buy)})}function i(n){return o._33(0,[(n()(),o._10(0,0,null,null,15,"ion-list",[],null,null,null,null,null)),o._9(1,16384,null,0,B.a,[E.a,o.n,o.J,J.a,F.l,R.a],null,null),(n()(),o._31(-1,null,["\n      "])),(n()(),o._31(-1,null,["\n      "])),(n()(),o._10(4,0,null,null,7,"ion-list-header",[["class","item"],["header-title",""],["ion-affix",""],["no-lines",""],["text-capitalize",""]],null,null,null,v.b,v.a)),o._9(5,1097728,null,3,k.a,[w.a,E.a,o.n,o.J,[2,C.a]],null,null),o._29(335544320,2,{contentLabel:0}),o._29(603979776,3,{_buttons:1}),o._29(603979776,4,{_icons:1}),o._9(9,16384,null,0,j.a,[E.a,o.J,o.n,[8,null]],null,null),o._9(10,4341760,null,0,D.a,[o.n,o.K],{content:[0,"content"]},null),(n()(),o._31(11,2,["\n        ","\n      "])),(n()(),o._31(-1,null,["\n      "])),(n()(),o._5(16777216,null,null,1,null,e)),o._9(14,802816,null,0,x.i,[o.T,o.P,o.w],{ngForOf:[0,"ngForOf"]},null),(n()(),o._31(-1,null,["\n    "]))],function(n,l){n(l,10,0,l.component.content);n(l,14,0,l.context.$implicit.items)},function(n,l){n(l,11,0,l.context.$implicit.groupName)})}function r(n){return o._33(0,[(n()(),o._10(0,0,null,null,4,"div",[],null,null,null,null,null)),(n()(),o._31(-1,null,["\n    "])),(n()(),o._5(16777216,null,null,1,null,i)),o._9(3,802816,null,0,x.i,[o.T,o.P,o.w],{ngForOf:[0,"ngForOf"]},null),(n()(),o._31(-1,null,["\n  "]))],function(n,l){n(l,3,0,l.component.data.items)},null)}function u(n){return o._33(0,[o._29(402653184,1,{content:0}),(n()(),o._31(-1,null,["\n"])),(n()(),o._10(2,0,null,null,5,"ion-content",[["no-padding",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,z.b,z.a)),o._9(3,4374528,[[1,4]],0,P.a,[E.a,J.a,R.a,o.n,o.J,I.a,H.a,o.C,[2,K.a],[2,L.a]],null,null),(n()(),o._31(-1,1,["\n  "])),(n()(),o._5(16777216,null,1,1,null,r)),o._9(6,16384,null,0,x.j,[o.T,o.P],{ngIf:[0,"ngIf"]},null),(n()(),o._31(-1,1,["\n"])),(n()(),o._31(-1,null,["\n"]))],function(n,l){n(l,6,0,null!=l.component.data)},function(n,l){n(l,2,0,o._22(l,3).statusbarPadding,o._22(l,3)._hasRefresher)})}Object.defineProperty(l,"__esModule",{value:!0});var o=t(2),s=(t(0),t(55),function(){function n(){this.slider={}}return n.prototype.ngOnChanges=function(n){this.data=n.data.currentValue},n.prototype.onEvent=function(n,l,t){t&&t.stopPropagation(),this.events[n]&&this.events[n](l)},n}()),a=(t(785),function(){return function(){}}()),c=t(190),h=t(191),d=t(192),p=t(193),_=t(194),m=t(195),f=t(196),g=t(197),y=t(198),S=t(206),E=t(3),x=t(15),b=t(211),v=t(129),k=t(24),w=t(21),C=t(50),T=t(60),$=t(38),O=t(27),B=t(56),J=t(6),F=t(10),R=t(13),j=t(133),D=t(759),z=t(199),P=t(30),I=t(12),H=t(32),K=t(7),L=t(29),N=o._8({encapsulation:2,styles:[],data:{}}),A=o._6("sticky-list-header-layout-2",s,function(n){return o._33(0,[(n()(),o._10(0,0,null,null,1,"sticky-list-header-layout-2",[],null,null,null,u,N)),o._9(1,573440,null,0,s,[],null,null)],null,null)},{data:"data",events:"events"},{},[]),M=t(20),V=t(128),W=t(768),Y=t(49);t.d(l,"StickyListHeaderLayout2ModuleNgFactory",function(){return q});var q=o._7(a,[],function(n){return o._18([o._19(512,o.k,o._3,[[8,[c.a,h.a,d.a,p.a,_.a,m.a,f.a,g.a,y.a,A]],[3,o.k],o.A]),o._19(4608,x.l,x.k,[o.y,[2,x.u]]),o._19(4608,M.r,M.r,[]),o._19(4608,M.d,M.d,[]),o._19(512,x.b,x.b,[]),o._19(512,M.p,M.p,[]),o._19(512,M.e,M.e,[]),o._19(512,M.n,M.n,[]),o._19(512,V.a,V.a,[]),o._19(512,V.b,V.b,[]),o._19(512,W.a,W.a,[]),o._19(512,a,a,[]),o._19(256,Y.a,s,[])])})},759:function(n,l,t){"use strict";var e=t(2),i=t(55),r=t(61),u=function(){function n(n){this.content=n}return n.prototype.onScroll=function(){return Object(r.merge)(this.content.ionScrollStart,this.content.ionScroll,this.content.ionScrollEnd)},n.prototype.getClientTop=function(){return this.content.getScrollElement().getBoundingClientRect().top},n.prototype.getScrollTop=function(){return this.content.getScrollElement().scrollTop},n.prototype.appendFixedHeader=function(n){this.content.getNativeElement().appendChild(n)},n.prototype.isScrollingDown=function(){return"down"===this.content.directionY},n}(),o=t(362),s=function(){function n(n){this.scroll=n,this.scrollingDown=!1}return n.prototype.onScroll=function(){var n=this;return Object(r.fromEvent)(this.scroll._scrollContent.nativeElement,"scroll").pipe(Object(o.map)(function(){return n.getScrollTop()}),Object(o.pairwise)(),Object(o.tap)(function(l){return n.scrollingDown=l[0]-l[1]<0}))},n.prototype.getClientTop=function(){return 0},n.prototype.getScrollTop=function(){return this.scroll._scrollContent.nativeElement.scrollTop},n.prototype.appendFixedHeader=function(n){this.scroll._scrollContent.nativeElement.parentElement.appendChild(n)},n.prototype.isScrollingDown=function(){return this.scrollingDown},n}();t.d(l,"a",function(){return a});var a=function(){function n(n,l){this.element=n,this.renderer=l,this.onSticky=new e.p}return n.prototype.ngAfterViewInit=function(){var n=this;this.scrollContainer=function(n){if(n instanceof i.a)return new u(n);if(n instanceof i.h)return new s(n);throw"Invalid container element (only ion-content and ion-scroll currently supported)"}(this.content),this.headerElement=this.element.nativeElement,this.containerElement=this.headerElement.parentElement;var l=this.headerElement.getBoundingClientRect().height,t=window.innerWidth-this.headerElement.getBoundingClientRect().width-this.headerElement.getBoundingClientRect().left,e=this.headerElement.getBoundingClientRect().left,r=this.scrollContainer.getClientTop(),o=this.containerElement.offsetTop,a=o+this.containerElement.getBoundingClientRect().height;this.updateSticky(this.scrollContainer.getScrollTop(),o,a,r,l,e,t,!0);this.scrollSubscription=this.scrollContainer.onScroll().subscribe(function(){var i=n.scrollContainer.getScrollTop();r=n.scrollContainer.getClientTop(),a=(o=n.containerElement.offsetTop)+n.containerElement.getBoundingClientRect().height,n.updateSticky(i,o,a,r,l,e,t,n.scrollContainer.isScrollingDown())})},n.prototype.updateSticky=function(n,l,t,e,i,r,u,o){var s=this;if(n>0&&n>=l&&n<=t)if(this.clone||(this.clone=this.headerElement.cloneNode(!0),this.containerElement.insertBefore(this.clone,this.headerElement),this.scrollContainer.appendFixedHeader(this.headerElement),this.onSticky.emit({sticky:!0,affix:this}),o?this.applyStyles(r,u):this.applyStyles(0,0),setTimeout(function(){s.renderer.setStyle(s.headerElement,"right","0px"),s.renderer.setStyle(s.headerElement,"left","0px")},0)),n<=t&&n>=t-i){var a=e-(n-(t-i));this.renderer.setStyle(this.headerElement,"transform","translate3d(0px, "+a+"px, 0px)"),this.renderer.setStyle(this.headerElement,"-webkit-transform","translate3d(0px, "+a+"px, 0px)")}else this.renderer.setStyle(this.headerElement,"transform","translate3d(0px, "+e+"px, 0px)"),this.renderer.setStyle(this.headerElement,"-webkit-transform","translate3d(0px, "+e+"px, 0px)");else this.reset()},n.prototype.reset=function(){this.clone&&(this.containerElement.insertBefore(this.headerElement,this.clone),this.clearStyles(),this.clone.remove(),this.clone=null,this.onSticky.emit({sticky:!1,affix:this}))},n.prototype.applyStyles=function(n,l){this.renderer.setStyle(this.headerElement,"right",l+"px"),this.renderer.setStyle(this.headerElement,"left",n+"px"),this.renderer.setStyle(this.headerElement,"transition","left 0.1s ease-out, right 0.1s ease-out"),this.renderer.setStyle(this.headerElement,"z-index","2"),this.renderer.setStyle(this.headerElement,"position","absolute"),this.renderer.setStyle(this.headerElement,"width","auto"),this.renderer.setStyle(this.headerElement,"top","0px")},n.prototype.clearStyles=function(){this.renderer.removeStyle(this.headerElement,"position"),this.renderer.removeStyle(this.headerElement,"z-index"),this.renderer.removeStyle(this.headerElement,"transition"),this.renderer.removeStyle(this.headerElement,"top"),this.renderer.removeStyle(this.headerElement,"transform"),this.renderer.removeStyle(this.headerElement,"-webkit-transform"),this.renderer.removeStyle(this.headerElement,"left"),this.renderer.removeStyle(this.headerElement,"right"),this.renderer.removeStyle(this.headerElement,"width")},n.prototype.ngOnDestroy=function(){this.reset(),this.scrollSubscription.unsubscribe()},n}()},768:function(n,l,t){"use strict";t.d(l,"a",function(){return e});t(759);var e=function(){return function(){}}()},785:function(n,l,t){"use strict";t(768),t(759)}});
+webpackJsonp([20],{
+
+/***/ 724:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ParallaxLayout1Module", function() { return ParallaxLayout1Module; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__parallax_layout_1__ = __webpack_require__(852);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__elastic_header_elastic_header_module__ = __webpack_require__(775);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var ParallaxLayout1Module = /** @class */ (function () {
+    function ParallaxLayout1Module() {
+    }
+    ParallaxLayout1Module = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__parallax_layout_1__["a" /* ParallaxLayout1 */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__parallax_layout_1__["a" /* ParallaxLayout1 */]),
+                __WEBPACK_IMPORTED_MODULE_3__elastic_header_elastic_header_module__["a" /* ElasticHeaderModule */]
+            ],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_2__parallax_layout_1__["a" /* ParallaxLayout1 */]
+            ],
+            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
+        })
+    ], ParallaxLayout1Module);
+    return ParallaxLayout1Module;
+}());
+
+//# sourceMappingURL=parallax-layout-1.module.js.map
+
+/***/ }),
+
+/***/ 775:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ElasticHeaderModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__elastic_header__ = __webpack_require__(776);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+var ElasticHeaderModule = /** @class */ (function () {
+    function ElasticHeaderModule() {
+    }
+    ElasticHeaderModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_1__elastic_header__["a" /* ElasticHeader */],
+            ],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_1__elastic_header__["a" /* ElasticHeader */]
+            ],
+            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
+        })
+    ], ElasticHeaderModule);
+    return ElasticHeaderModule;
+}());
+
+//# sourceMappingURL=elastic-header.module.js.map
+
+/***/ }),
+
+/***/ 776:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ElasticHeader; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ElasticHeader = /** @class */ (function () {
+    function ElasticHeader(element, renderer) {
+        this.element = element;
+        this.renderer = renderer;
+    }
+    ElasticHeader.prototype.ngOnInit = function () {
+        var _this = this;
+        this.scrollerHandle = this.element.nativeElement.getElementsByClassName('scroll-content')[0];
+        this.header = this.scrollerHandle.firstElementChild;
+        this.headerHeight = this.scrollerHandle.clientHeight;
+        this.ticking = false;
+        this.renderer.setElementStyle(this.header, 'webkitTransformOrigin', 'center bottom');
+        window.addEventListener('resize', function () {
+            _this.headerHeight = _this.scrollerHandle.clientHeight;
+        }, false);
+        this.scrollerHandle.addEventListener('scroll', function () {
+            if (!_this.ticking) {
+                window.requestAnimationFrame(function () {
+                    _this.updateElasticHeader();
+                });
+            }
+            _this.ticking = true;
+        });
+    };
+    ElasticHeader.prototype.updateElasticHeader = function () {
+        this.scrollTop = this.scrollerHandle.scrollTop;
+        if (this.scrollTop >= 0) {
+            this.translateAmt = this.scrollTop / 2;
+            this.scaleAmt = 1;
+        }
+        else {
+            this.translateAmt = 0;
+            this.scaleAmt = -this.scrollTop / this.headerHeight + 1;
+        }
+        this.renderer.setElementStyle(this.header, 'webkitTransform', 'translate3d(0,' + this.translateAmt + 'px,0) scale(' + this.scaleAmt + ',' + this.scaleAmt + ')');
+        this.ticking = false;
+    };
+    ElasticHeader = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* Directive */])({
+            selector: '[elastic-header]'
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["W" /* Renderer */]])
+    ], ElasticHeader);
+    return ElasticHeader;
+}());
+
+//# sourceMappingURL=elastic-header.js.map
+
+/***/ }),
+
+/***/ 852:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ParallaxLayout1; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var ParallaxLayout1 = /** @class */ (function () {
+    function ParallaxLayout1() {
+        this.headerImage = "";
+    }
+    ParallaxLayout1.prototype.onEvent = function (event, item, e) {
+        if (e) {
+            e.stopPropagation();
+        }
+        if (this.events[event]) {
+            this.events[event](item);
+        }
+    };
+    ParallaxLayout1.prototype.ngOnChanges = function (changes) {
+        if (changes.data && changes.data.currentValue) {
+            this.headerImage = changes.data.currentValue.headerImage;
+        }
+        this.subscribeToIonScroll();
+    };
+    ParallaxLayout1.prototype.ngAfterViewInit = function () {
+        this.subscribeToIonScroll();
+    };
+    ParallaxLayout1.prototype.ngAfterViewChecked = function () {
+        this.subscribeToIonScroll();
+    };
+    ParallaxLayout1.prototype.isClassActive = function () {
+        return this.active;
+    };
+    ParallaxLayout1.prototype.subscribeToIonScroll = function () {
+        var _this = this;
+        if (this.content != null && this.content.ionScroll != null) {
+            this.content.ionScroll.subscribe(function (d) {
+                if (d.scrollTop < 200) {
+                    _this.active = false;
+                    return;
+                }
+                _this.active = true;
+            });
+        }
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], ParallaxLayout1.prototype, "data", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], ParallaxLayout1.prototype, "events", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */])
+    ], ParallaxLayout1.prototype, "content", void 0);
+    ParallaxLayout1 = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'parallax-layout-1',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\parallax\layout-1\parallax.html"*/'<!--- Theme Parallax - New list -->\n\n<ion-header header-ios>\n\n  <ion-navbar [ngClass]="{\'active\':isClassActive()}" transparent>\n\n    <button ion-button menuToggle>\n\n      <ion-icon [name]="menu"></ion-icon>\n\n    </button>\n\n    <ion-title *ngIf="data != null">{{data.headerTitle}}</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content elastic-header>\n\n  <!-- Parallax Big Image -->\n\n  <div background-size id="elastic-header" [ngStyle]="{\'background-image\': \'url(\' + headerImage + \')\'}">\n\n    <!--Parallax Header Top-->\n\n    <div parallax-header *ngIf="data != null">\n\n      <!--Parallax Title -->\n\n      <h2 parallax-title no-margin>{{data.title}}</h2>\n\n      <!--Parallax Subtitle -->\n\n      <h2 parallax-subtitle no-margin>{{data.subtitle}}</h2>\n\n    </div>\n\n  </div>\n\n  <!--Content-->\n\n  <ion-grid no-padding>\n\n    <ion-row *ngIf="data != null">\n\n      <ion-col col-12>\n\n        <ion-list no-margin>\n\n          <ion-item default-item no-padding no-lines *ngFor="let item of data.items;let i = index" (click)="onEvent(\'onItemClick\', item)">\n\n              <!--Content Avatar-->\n\n              <ion-thumbnail item-start>\n\n                <img [src]="item.image" [alt]="item.imageAlt">\n\n              </ion-thumbnail>\n\n              <!--Content Title-->\n\n              <h2 item-title>{{item.title}}</h2>\n\n              <!--Content Subtitle-->\n\n              <h3 item-subtitle text-wrap>{{item.subtitle}}</h3>\n\n              <!--Content Badge-->\n\n              <ion-button box-shadow button-follow item-end>{{item.button}}</ion-button>\n\n          </ion-item>\n\n        </ion-list>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\parallax\layout-1\parallax.html"*/
+        }),
+        __metadata("design:paramtypes", [])
+    ], ParallaxLayout1);
+    return ParallaxLayout1;
+}());
+
+//# sourceMappingURL=parallax-layout-1.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=20.js.map

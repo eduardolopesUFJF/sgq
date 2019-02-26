@@ -1,1 +1,127 @@
-webpackJsonp([64],{703:function(l,n,u){"use strict";function a(l){return o._33(0,[(l()(),o._10(0,0,null,null,2,"ion-title",[],null,null,null,C.b,C.a)),o._9(1,49152,null,0,I.a,[T.a,o.n,o.J,[2,x.a],[2,y.a]],null,null),(l()(),o._31(2,0,["",""]))],null,function(l,n){l(n,2,0,n.component.data.headerTitle)})}function t(l){return o._33(0,[(l()(),o._10(0,0,null,null,1,"h1",[["search-bar-title",""]],null,null,null,null,null)),(l()(),o._31(1,null,["",""]))],null,function(l,n){l(n,1,0,n.component.data.titleSearch)})}function e(l){return o._33(0,[(l()(),o._10(0,0,null,null,38,"ion-col",[["class","col"],["col-12",""],["col-lg-6",""],["col-md-6",""],["col-xl-4",""]],null,null,null,null,null)),o._9(1,16384,null,0,J.a,[],null,null),(l()(),o._31(-1,null,["\n        "])),(l()(),o._31(-1,null,["\n        "])),(l()(),o._10(4,0,null,null,15,"ion-item",[["class","item item-block"],["no-lines",""],["padding-top",""],["transparent",""]],null,null,null,k.b,k.a)),o._9(5,1097728,null,3,w.a,[P.a,T.a,o.n,o.J,[2,$.a]],null,null),o._29(335544320,2,{contentLabel:0}),o._29(603979776,3,{_buttons:1}),o._29(603979776,4,{_icons:1}),o._9(9,16384,null,0,L.a,[],null,null),(l()(),o._31(-1,2,["\n          "])),(l()(),o._31(-1,2,["\n          "])),(l()(),o._10(12,0,null,2,1,"h2",[["card-title",""]],null,null,null,null,null)),(l()(),o._31(13,null,["",""])),(l()(),o._31(-1,2,["\n          "])),(l()(),o._31(-1,2,["\n          "])),(l()(),o._10(16,0,null,4,2,"ion-badge",[["badge-light",""],["box-shadow",""],["item-end",""]],null,null,null,null,null)),o._9(17,16384,null,0,M.a,[T.a,o.n,o.J],null,null),(l()(),o._31(18,null,["",""])),(l()(),o._31(-1,2,["\n        "])),(l()(),o._31(-1,null,["\n        "])),(l()(),o._31(-1,null,["\n        "])),(l()(),o._31(-1,null,["\n        "])),(l()(),o._10(23,0,null,null,14,"ion-card",[["box-shadow",""]],null,[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==l.component.onEvent("onItemClick",l.context.$implicit.subtitle,u)&&a}return a},null,null)),o._9(24,16384,null,0,j.a,[T.a,o.n,o.J],null,null),(l()(),o._31(-1,null,["\n          "])),(l()(),o._10(26,0,null,null,0,"img",[],[[8,"src",4]],null,null,null,null)),(l()(),o._31(-1,null,["\n          "])),(l()(),o._10(28,0,null,null,5,"div",[["text-center",""],["title-block",""]],null,null,null,null,null)),(l()(),o._31(-1,null,["\n            "])),(l()(),o._31(-1,null,["\n            "])),(l()(),o._10(31,0,null,null,1,"h3",[["card-subtitle",""]],null,null,null,null,null)),(l()(),o._31(32,null,["",""])),(l()(),o._31(-1,null,["\n          "])),(l()(),o._31(-1,null,["\n          "])),(l()(),o._10(35,0,null,null,1,"span",[["new-category",""],["padding-bottom",""],["text-uppercase",""]],null,null,null,null,null)),(l()(),o._31(36,null,["",""])),(l()(),o._31(-1,null,["\n        "])),(l()(),o._31(-1,null,["\n      "]))],null,function(l,n){l(n,13,0,n.context.$implicit.title);l(n,18,0,n.context.$implicit.button);l(n,26,0,n.context.$implicit.image);l(n,32,0,n.context.$implicit.subtitle);l(n,36,0,n.context.$implicit.category)})}function _(l){return o._33(0,[(l()(),o._10(0,0,null,null,13,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,F.b,F.a)),o._9(1,4374528,null,0,O.a,[T.a,A.a,E.a,o.n,o.J,B.a,S.a,o.C,[2,z.a],[2,D.a]],null,null),(l()(),o._31(-1,1,["\n  "])),(l()(),o._10(3,0,null,1,9,"ion-grid",[["class","grid"],["no-padding",""]],null,null,null,null,null)),o._9(4,16384,null,0,H.a,[],null,null),(l()(),o._31(-1,null,["\n    "])),(l()(),o._10(6,0,null,null,5,"ion-row",[["class","row"]],null,null,null,null,null)),o._9(7,16384,null,0,N.a,[],null,null),(l()(),o._31(-1,null,["\n      "])),(l()(),o._5(16777216,null,null,1,null,e)),o._9(10,802816,null,0,R.i,[o.T,o.P,o.w],{ngForOf:[0,"ngForOf"]},null),(l()(),o._31(-1,null,["\n    "])),(l()(),o._31(-1,null,["\n  "])),(l()(),o._31(-1,1,["\n"]))],function(l,n){l(n,10,0,n.component.data.items)},function(l,n){l(n,0,0,o._22(n,1).statusbarPadding,o._22(n,1)._hasRefresher)})}function i(l){return o._33(0,[(l()(),o._31(-1,null,["\n"])),(l()(),o._10(1,0,null,null,32,"ion-header",[],null,null,null,null,null)),o._9(2,16384,null,0,U.a,[T.a,o.n,o.J,[2,z.a]],null,null),(l()(),o._31(-1,null,["\n  "])),(l()(),o._10(4,0,null,null,15,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,V.b,V.a)),o._9(5,49152,null,0,y.a,[B.a,[2,z.a],[2,D.a],T.a,o.n,o.J],null,null),(l()(),o._31(-1,3,["\n    "])),(l()(),o._10(7,0,null,0,8,"button",[["ion-button",""],["menuToggle",""]],[[8,"hidden",0]],[[null,"click"]],function(l,n,u){var a=!0;if("click"===n){a=!1!==o._22(l,9).toggle()&&a}return a},q.b,q.a)),o._9(8,1097728,[[1,4]],0,G.a,[[8,""],T.a,o.n,o.J],null,null),o._9(9,1064960,null,0,K.a,[Q.a,[2,z.a],[2,G.a],[2,y.a]],{menuToggle:[0,"menuToggle"]},null),o._9(10,16384,null,1,W.a,[T.a,o.n,o.J,[2,x.a],[2,y.a]],null,null),o._29(603979776,1,{_buttons:1}),(l()(),o._31(-1,0,["\n        "])),(l()(),o._10(13,0,null,0,1,"ion-icon",[["role","img"]],[[2,"hide",null]],null,null,null,null)),o._9(14,147456,null,0,X.a,[T.a,o.n,o.J],{name:[0,"name"]},null),(l()(),o._31(-1,0,["\n      "])),(l()(),o._31(-1,3,["\n    "])),(l()(),o._5(16777216,null,3,1,null,a)),o._9(18,16384,null,0,R.j,[o.T,o.P],{ngIf:[0,"ngIf"]},null),(l()(),o._31(-1,3,["\n  "])),(l()(),o._31(-1,null,["\n  "])),(l()(),o._10(21,0,null,null,11,"ion-toolbar",[["class","toolbar"],["padding-bottom",""],["padding-horizontal",""]],[[2,"statusbar-padding",null]],null,null,Y.b,Y.a)),o._9(22,49152,null,0,x.a,[T.a,o.n,o.J],null,null),(l()(),o._31(-1,3,["\n    "])),(l()(),o._5(16777216,null,3,1,null,t)),o._9(25,16384,null,0,R.j,[o.T,o.P],{ngIf:[0,"ngIf"]},null),(l()(),o._31(-1,3,["\n    "])),(l()(),o._10(27,0,null,3,4,"ion-searchbar",[],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null],[2,"searchbar-animated",null],[2,"searchbar-has-value",null],[2,"searchbar-active",null],[2,"searchbar-show-cancel",null],[2,"searchbar-left-aligned",null],[2,"searchbar-has-focus",null]],[[null,"ngModelChange"],[null,"ionInput"]],function(l,n,u){var a=!0,t=l.component;if("ngModelChange"===n){a=!1!==(t.searchTerm=u)&&a}if("ionInput"===n){a=!1!==t.onEvent("onTextChange",u)&&a}return a},Z.b,Z.a)),o._9(28,671744,null,0,ll.l,[[8,null],[8,null],[8,null],[8,null]],{model:[0,"model"]},{update:"ngModelChange"}),o._27(2048,null,ll.h,null,[ll.l]),o._9(30,16384,null,0,ll.i,[ll.h],null,null),o._9(31,1294336,null,0,nl.a,[T.a,A.a,o.n,o.J,[2,ll.h]],null,{ionInput:"ionInput"}),(l()(),o._31(-1,3,["\n  "])),(l()(),o._31(-1,null,["\n"])),(l()(),o._31(-1,null,["\n"])),(l()(),o._31(-1,null,["\n"])),(l()(),o._5(16777216,null,null,1,null,_)),o._9(37,16384,null,0,R.j,[o.T,o.P],{ngIf:[0,"ngIf"]},null),(l()(),o._31(-1,null,["\n"]))],function(l,n){var u=n.component;l(n,9,0,"");l(n,14,0,u.menu);l(n,18,0,null!=u.data);l(n,25,0,null!=u.data);l(n,28,0,u.searchTerm),l(n,31,0);l(n,37,0,null!=u.data)},function(l,n){l(n,4,0,o._22(n,5)._hidden,o._22(n,5)._sbPadding);l(n,7,0,o._22(n,9).isHidden);l(n,13,0,o._22(n,14)._hidden);l(n,21,0,o._22(n,22)._sbPadding);l(n,27,1,[o._22(n,30).ngClassUntouched,o._22(n,30).ngClassTouched,o._22(n,30).ngClassPristine,o._22(n,30).ngClassDirty,o._22(n,30).ngClassValid,o._22(n,30).ngClassInvalid,o._22(n,30).ngClassPending,o._22(n,31)._animated,o._22(n,31)._value,o._22(n,31)._isActive,o._22(n,31)._showCancelButton,o._22(n,31)._shouldAlignLeft,o._22(n,31)._isFocus])})}Object.defineProperty(n,"__esModule",{value:!0});var o=u(2),r=(u(0),u(55),function(){function l(){this.searchTerm=""}return l.prototype.getItems=function(l){var n=this;this.allItems||(this.allItems=this.data.items),this.data.items=this.allItems.filter(function(l){return l.title.toLowerCase().indexOf(n.searchTerm.toLowerCase())>-1})},l.prototype.onEvent=function(l,n){this.events[l]&&("onTextChange"===l?(this.getItems(n),this.events[l](this.searchTerm)):this.events[l](n)),console.log(l)},l}()),s=function(){return function(){}}(),c=u(190),d=u(191),g=u(192),h=u(193),b=u(194),f=u(195),m=u(196),p=u(197),v=u(198),C=u(359),I=u(84),T=u(3),x=u(51),y=u(39),J=u(82),k=u(129),w=u(24),P=u(21),$=u(50),L=u(60),M=u(204),j=u(206),F=u(199),O=u(30),A=u(6),E=u(13),B=u(12),S=u(32),z=u(7),D=u(29),H=u(130),N=u(81),R=u(15),U=u(131),V=u(360),q=u(38),G=u(27),K=u(201),Q=u(33),W=u(132),X=u(36),Y=u(364),Z=u(361),ll=u(20),nl=u(87),ul=o._8({encapsulation:2,styles:[],data:{}}),al=o._6("search-bar-layout-1",r,function(l){return o._33(0,[(l()(),o._10(0,0,null,null,1,"search-bar-layout-1",[],null,null,null,i,ul)),o._9(1,49152,null,0,r,[],null,null)],null,null)},{data:"data",events:"events"},{},[]),tl=u(128),el=u(49);u.d(n,"SearchBarLayout1ModuleNgFactory",function(){return _l});var _l=o._7(s,[],function(l){return o._18([o._19(512,o.k,o._3,[[8,[c.a,d.a,g.a,h.a,b.a,f.a,m.a,p.a,v.a,al]],[3,o.k],o.A]),o._19(4608,R.l,R.k,[o.y,[2,R.u]]),o._19(4608,ll.r,ll.r,[]),o._19(4608,ll.d,ll.d,[]),o._19(512,R.b,R.b,[]),o._19(512,ll.p,ll.p,[]),o._19(512,ll.e,ll.e,[]),o._19(512,ll.n,ll.n,[]),o._19(512,tl.a,tl.a,[]),o._19(512,tl.b,tl.b,[]),o._19(512,s,s,[]),o._19(256,el.a,r,[])])})}});
+webpackJsonp([64],{
+
+/***/ 711:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GoogleCardLayout1Module", function() { return GoogleCardLayout1Module; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__google_card_layout_1__ = __webpack_require__(839);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var GoogleCardLayout1Module = /** @class */ (function () {
+    function GoogleCardLayout1Module() {
+    }
+    GoogleCardLayout1Module = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__google_card_layout_1__["a" /* GoogleCardLayout1 */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__google_card_layout_1__["a" /* GoogleCardLayout1 */]),
+            ],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_2__google_card_layout_1__["a" /* GoogleCardLayout1 */]
+            ],
+            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
+        })
+    ], GoogleCardLayout1Module);
+    return GoogleCardLayout1Module;
+}());
+
+//# sourceMappingURL=google-card-layout-1.module.js.map
+
+/***/ }),
+
+/***/ 839:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GoogleCardLayout1; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var GoogleCardLayout1 = /** @class */ (function () {
+    function GoogleCardLayout1() {
+        this.slider = {};
+    }
+    GoogleCardLayout1.prototype.slideHasChanged = function (slider, index) {
+        this.slider[index] = slider;
+        if (2 == slider._activeIndex) {
+            if (this.data.items) {
+                this.data.items.splice(index, 1);
+            }
+            else {
+                this.data.splice(index, 1);
+            }
+        }
+    };
+    GoogleCardLayout1.prototype.onStarClass = function (items, index, e) {
+        if (e) {
+            e.stopPropagation();
+        }
+        for (var i = 0; i < items.length; i++) {
+            items[i].isActive = i <= index;
+        }
+        this.onEvent("onRates", index, e);
+    };
+    ;
+    GoogleCardLayout1.prototype.onClickEvent = function (index) {
+        if (this.slider[index]) {
+            this.slider[index].slidePrev(300);
+        }
+    };
+    GoogleCardLayout1.prototype.onEvent = function (event, item, e) {
+        if (e) {
+            e.stopPropagation();
+        }
+        if (this.events[event]) {
+            this.events[event](item);
+        }
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], GoogleCardLayout1.prototype, "data", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], GoogleCardLayout1.prototype, "events", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */])
+    ], GoogleCardLayout1.prototype, "content", void 0);
+    GoogleCardLayout1 = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'google-card-layout-1',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\google-card\layout-1\google-card.html"*/'<!--Theme Google Card - Full Image Cards-->\n\n<ion-content padding-top>\n\n  <ion-grid no-padding>\n\n    <ion-row *ngIf="data != null">\n\n      <ion-col col-12 col-md-6 col-lg-4 *ngFor="let item of data.items;let i = index">\n\n        <ion-card text-left box-shadow margin-bottom>\n\n          <!--Card Image-->\n\n          <div card-image>\n\n            <img [src]="item.image" />\n\n            <div watch-now text-center (click)="onEvent(\'onItemClick\', item, $event)">\n\n              <button ion-button button-icon icon-center>\n\n                <ion-icon icon-large [name]="item.icon"></ion-icon>\n\n              </button >\n\n            </div>\n\n          </div>\n\n          <!--Card descriptiom-->\n\n          <ion-card-content>\n\n            <ion-card-title text-center>\n\n                <!--Card Subtitle-->\n\n                <h1 card-title>{{item.title}}</h1>\n\n                <!-- Icon Rating Star -->\n\n                <ion-icon *ngFor="let star of item.ratingStar.iconsStars; let i = index" (click)="onStarClass(item.ratingStar.iconsStars, i, $event)">\n\n                  <i icon-small *ngIf="star.isActive" class="icon {{star.iconActive}}"></i>\n\n                  <i icon-small *ngIf="!star.isActive" class="icon {{star.iconInactive}}"></i>\n\n                </ion-icon>\n\n                <!-- Reviews Star -->\n\n                <span span-medium>{{item.reviews}}</span>\n\n                <!--Card Body Text-->\n\n                <p margin-top card-body-text>{{item.description}}</p>\n\n            </ion-card-title>\n\n          </ion-card-content>\n\n        </ion-card>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\google-card\layout-1\google-card.html"*/
+        }),
+        __metadata("design:paramtypes", [])
+    ], GoogleCardLayout1);
+    return GoogleCardLayout1;
+}());
+
+//# sourceMappingURL=google-card-layout-1.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=64.js.map

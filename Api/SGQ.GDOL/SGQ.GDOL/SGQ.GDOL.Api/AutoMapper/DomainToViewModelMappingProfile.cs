@@ -13,11 +13,10 @@ namespace SGQ.GDOL.Api.AutoMapper
         {
             CreateMap<CentroCusto, CentroCustoVM>();
             CreateMap<Funcionario, FuncionarioVM>();
-            CreateMap<Ocorrencia, OcorrenciaVM>();
             CreateMap<ItemChecklistServico, ItemChecklistServicoVM>();
-
+            CreateMap<Ocorrencia, OcorrenciaVM>();
             CreateMap<InspecaoObraItem, InspecaoObraItemVM>();
-
+            
             CreateMap<Servico, ServicoVM>()
                 .ForMember(x => x.IdArea, opt => opt.MapFrom(x => x.IdObraAreaChecklist))
                 .ForMember(x => x.IdChecklist, opt => opt.MapFrom(x => x.IdChecklistServico))
@@ -40,6 +39,7 @@ namespace SGQ.GDOL.Api.AutoMapper
                 .ForMember(x => x.InspecaoObraItens, opt => opt.MapFrom(x => x.InspecaoObraItens.Where(y => !y.Delete)))
                 .ForMember(x => x.FuncionarioAprovado, opt => opt.MapFrom(x => x.FuncionarioAprovadoObj.Nome))
                 .ForMember(x => x.FuncionarioInspecionado, opt => opt.MapFrom(x => x.FuncionarioInspecionadoObj.Nome))
+                .ForMember(x => x.Ocorrencias, opt => opt.MapFrom(x => x.Ocorrencias.Where(y => !y.Delete.HasValue && !y.Delete.Value)))
                 .ForMember(x => x.QtdNA, opt => opt.MapFrom(x => x.InspecaoObraItens.Count(y => y.Inspecao1.Equals("N"))))
                 .ForMember(x => x.QtdA, opt => opt.MapFrom(x => x.InspecaoObraItens.Count(y => y.Inspecao1.Equals("A"))))
                 .ForMember(x => x.QtdR, opt => opt.MapFrom(x => x.InspecaoObraItens.Count(y => y.Inspecao1.Equals("R"))))

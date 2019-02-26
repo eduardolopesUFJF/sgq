@@ -5,7 +5,7 @@
 
 export const environment = {
     production: false,
-    // urlAPI: 'http://localhost:49754/api/',
-    urlAPI: 'http://solvercompany.com:7099/api/',
+    urlAPI: 'http://localhost:49754/api/',
+    // urlAPI: 'http://solvercompany.com:7099/api/',
     versao: '1.0.2'
 };

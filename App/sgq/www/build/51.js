@@ -1,1 +1,95 @@
-webpackJsonp([51],{675:function(l,n,u){"use strict";function t(l){return _._33(0,[(l()(),_._10(0,0,null,null,14,"ion-item",[["class","item item-block"],["default-item",""],["no-lines",""]],null,[[null,"tap"]],function(l,n,u){var t=!0;if("tap"===n){t=!1!==l.component.onEvent("onCheckBoxClick",l.context.$implicit,u)&&t}return t},v.b,v.a)),_._9(1,1097728,null,3,x.a,[w.a,y.a,_.n,_.J,[2,J.a]],null,null),_._29(335544320,8,{contentLabel:0}),_._29(603979776,9,{_buttons:1}),_._29(603979776,10,{_icons:1}),_._9(5,16384,null,0,$.a,[],null,null),(l()(),_._31(-1,2,["\n                  "])),(l()(),_._10(7,0,null,1,2,"ion-label",[["item-title",""]],null,null,null,null,null)),_._9(8,16384,[[8,4]],0,C.a,[y.a,_.n,_.J,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),_._31(9,null,["",""])),(l()(),_._31(-1,2,["\n                  "])),(l()(),_._10(11,0,null,0,2,"ion-checkbox",[],[[2,"checkbox-disabled",null]],[[null,"click"]],function(l,n,u){var t=!0;if("click"===n){t=!1!==_._22(l,13)._click(u)&&t}return t},I.b,I.a)),_._27(5120,null,P.g,function(l){return[l]},[F.a]),_._9(13,1228800,null,0,F.a,[y.a,w.a,[2,x.a],_.n,_.J],{checked:[0,"checked"]},null),(l()(),_._31(-1,2,["\n                "]))],function(l,n){l(n,13,0,n.context.$implicit.isChecked)},function(l,n){l(n,9,0,n.context.$implicit.title);l(n,11,0,_._22(n,13)._disabled)})}function a(l){return _._33(0,[(l()(),_._10(0,0,null,null,36,"li",[["no-margin",""]],null,null,null,null,null)),(l()(),_._31(-1,null,["\n              "])),(l()(),_._31(-1,null,["\n              "])),(l()(),_._10(3,0,null,null,21,"div",[["class","collapsible-header"],["no-margin",""],["no-padding",""]],null,[[null,"click"]],function(l,n,u){var t=!0;if("click"===n){t=!1!==l.component.toggleGroup(l.context.$implicit)&&t}return t},null,null)),(l()(),_._31(-1,null,["\n                "])),(l()(),_._10(5,0,null,null,18,"ion-item",[["class","item item-block"],["default-item",""],["no-lines",""]],null,null,null,v.b,v.a)),_._9(6,1097728,null,3,x.a,[w.a,y.a,_.n,_.J,[2,J.a]],null,null),_._29(335544320,5,{contentLabel:0}),_._29(603979776,6,{_buttons:1}),_._29(603979776,7,{_icons:1}),_._9(10,16384,null,0,$.a,[],null,null),(l()(),_._31(-1,2,["\n                  "])),(l()(),_._10(12,0,null,2,1,"h2",[["item-title",""],["text-capitalize",""]],null,null,null,null,null)),(l()(),_._31(13,null,["",""])),(l()(),_._31(-1,2,["\n                  "])),(l()(),_._10(15,0,null,3,7,"div",[["item-content",""]],null,null,null,null,null)),(l()(),_._31(-1,null,["\n                    "])),(l()(),_._10(17,0,null,null,4,"ion-icon",[["icon-medium",""],["role","img"]],[[2,"hide",null]],null,null,null,null)),_._9(18,147456,[[7,4]],0,G.a,[y.a,_.n,_.J],null,null),(l()(),_._31(-1,null,["\n                      "])),(l()(),_._10(20,0,null,null,0,"i",[],[[8,"className",0]],null,null,null,null)),(l()(),_._31(-1,null,["\n                    "])),(l()(),_._31(-1,null,["\n                  "])),(l()(),_._31(-1,2,["\n                "])),(l()(),_._31(-1,null,["\n              "])),(l()(),_._31(-1,null,["\n              "])),(l()(),_._31(-1,null,["\n              "])),(l()(),_._31(-1,null,["\n              "])),(l()(),_._10(28,0,null,null,6,"div",[["class","item-accordion"]],[[8,"hidden",0]],null,null,null,null)),_._9(29,278528,null,0,O.h,[_.w,_.x,_.n,_.K],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),_._25(30,{active:0}),(l()(),_._31(-1,null,["\n                "])),(l()(),_._5(16777216,null,null,1,null,t)),_._9(33,802816,null,0,O.i,[_.T,_.P,_.w],{ngForOf:[0,"ngForOf"]},null),(l()(),_._31(-1,null,["\n              "])),(l()(),_._31(-1,null,["\n              "])),(l()(),_._31(-1,null,["\n            "]))],function(l,n){l(n,29,0,"item-accordion",l(n,30,0,n.component.isGroupShown(n.context.$implicit)));l(n,33,0,n.context.$implicit.expandItems)},function(l,n){var u=n.component;l(n,13,0,n.context.$implicit.title);l(n,17,0,_._22(n,18)._hidden);l(n,20,0,_._13(1,"icon ",n.context.$implicit.icon,""));l(n,28,0,!u.isGroupShown(n.context.$implicit))})}function o(l){return _._33(0,[(l()(),_._10(0,0,null,null,33,"ion-grid",[["class","grid"],["no-padding",""]],null,null,null,null,null)),_._9(1,16384,null,0,E.a,[],null,null),(l()(),_._31(-1,null,["\n    "])),(l()(),_._10(3,0,null,null,29,"ion-row",[["class","row"]],null,null,null,null,null)),_._9(4,16384,null,0,L.a,[],null,null),(l()(),_._31(-1,null,["\n      "])),(l()(),_._10(6,0,null,null,25,"ion-col",[["class","col"],["col-12",""],["no-margin",""],["no-padding",""]],null,null,null,null,null)),_._9(7,16384,null,0,T.a,[],null,null),(l()(),_._31(-1,null,["\n        "])),(l()(),_._31(-1,null,["\n        "])),(l()(),_._10(10,0,null,null,20,"ion-list",[],null,null,null,null,null)),_._9(11,16384,null,0,j.a,[y.a,_.n,_.J,z.a,S.l,B.a],null,null),(l()(),_._31(-1,null,["\n          "])),(l()(),_._10(13,0,null,null,9,"ion-list-header",[["class","item"],["header-section",""],["no-lines",""],["padding-horizontal",""],["transparent",""]],null,null,null,v.b,v.a)),_._9(14,1097728,null,3,x.a,[w.a,y.a,_.n,_.J,[2,J.a]],null,null),_._29(335544320,2,{contentLabel:0}),_._29(603979776,3,{_buttons:1}),_._29(603979776,4,{_icons:1}),_._9(18,16384,null,0,M.a,[y.a,_.J,_.n,[8,null]],null,null),(l()(),_._31(-1,2,["\n            "])),(l()(),_._10(20,0,null,2,1,"h1",[["header-title",""],["text-capitalize",""]],null,null,null,null,null)),(l()(),_._31(21,null,["",""])),(l()(),_._31(-1,2,["\n          "])),(l()(),_._31(-1,null,["\n          "])),(l()(),_._31(-1,null,["\n          "])),(l()(),_._10(25,0,null,null,4,"ul",[["class","collapsible"],["no-margin",""],["no-padding",""]],null,null,null,null,null)),(l()(),_._31(-1,null,["\n            "])),(l()(),_._5(16777216,null,null,1,null,a)),_._9(28,802816,null,0,O.i,[_.T,_.P,_.w],{ngForOf:[0,"ngForOf"]},null),(l()(),_._31(-1,null,["\n          "])),(l()(),_._31(-1,null,["\n        "])),(l()(),_._31(-1,null,["\n      "])),(l()(),_._31(-1,null,["\n    "])),(l()(),_._31(-1,null,["\n  "]))],function(l,n){l(n,28,0,n.component.data.items)},function(l,n){l(n,21,0,n.component.data.header)})}function i(l){return _._33(0,[(l()(),_._10(0,0,null,null,2,"button",[["block",""],["box-shadow",""],["default-button",""],["ion-button",""]],null,[[null,"click"]],function(l,n,u){var t=!0;if("click"===n){t=!1!==l.component.onEvent("onButtonClick",null,u)&&t}return t},N.b,N.a)),_._9(1,1097728,null,0,A.a,[[8,""],y.a,_.n,_.J],{block:[0,"block"]},null),(l()(),_._31(2,0,["",""]))],function(l,n){l(n,1,0,"")},function(l,n){l(n,2,0,n.component.data.button)})}function e(l){return _._33(0,[_._29(402653184,1,{content:0}),(l()(),_._31(-1,null,["\n"])),(l()(),_._10(2,0,null,null,5,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,K.b,K.a)),_._9(3,4374528,[[1,4]],0,R.a,[y.a,z.a,B.a,_.n,_.J,q.a,D.a,_.C,[2,H.a],[2,Q.a]],null,null),(l()(),_._31(-1,1,["\n  "])),(l()(),_._5(16777216,null,1,1,null,o)),_._9(6,16384,null,0,O.j,[_.T,_.P],{ngIf:[0,"ngIf"]},null),(l()(),_._31(-1,1,["\n"])),(l()(),_._31(-1,null,["\n"])),(l()(),_._10(9,0,null,null,5,"ion-footer",[["padding",""]],null,null,null,null,null)),_._9(10,16384,null,0,U.a,[y.a,_.n,_.J,[2,H.a]],null,null),(l()(),_._31(-1,null,["\n  "])),(l()(),_._5(16777216,null,null,1,null,i)),_._9(13,16384,null,0,O.j,[_.T,_.P],{ngIf:[0,"ngIf"]},null),(l()(),_._31(-1,null,["\n"])),(l()(),_._31(-1,null,["\n"]))],function(l,n){var u=n.component;l(n,6,0,null!=u.data);l(n,13,0,null!=u.data)},function(l,n){l(n,2,0,_._22(n,3).statusbarPadding,_._22(n,3)._hasRefresher)})}Object.defineProperty(n,"__esModule",{value:!0});var _=u(2),c=(u(0),u(55),function(){function l(){}return l.prototype.onEvent=function(l,n,u){this.events[l]&&this.events[l](n)},l.prototype.toggleGroup=function(l){l.show=!l.show},l.prototype.isGroupShown=function(l){return l.show},l}()),r=function(){return function(){}}(),s=u(190),d=u(191),p=u(192),b=u(193),f=u(194),m=u(195),h=u(196),k=u(197),g=u(198),v=u(129),x=u(24),w=u(21),y=u(3),J=u(50),$=u(60),C=u(62),I=u(764),P=u(20),F=u(207),G=u(36),O=u(15),E=u(130),L=u(81),T=u(82),j=u(56),z=u(6),S=u(10),B=u(13),M=u(133),N=u(38),A=u(27),K=u(199),R=u(30),q=u(12),D=u(32),H=u(7),Q=u(29),U=u(144),V=_._8({encapsulation:2,styles:[],data:{}}),W=_._6("expandable-layout-3",c,function(l){return _._33(0,[(l()(),_._10(0,0,null,null,1,"expandable-layout-3",[],null,null,null,e,V)),_._9(1,49152,null,0,c,[],null,null)],null,null)},{data:"data",events:"events"},{},[]),X=u(128),Y=u(49);u.d(n,"ExpandableLayout3ModuleNgFactory",function(){return Z});var Z=_._7(r,[],function(l){return _._18([_._19(512,_.k,_._3,[[8,[s.a,d.a,p.a,b.a,f.a,m.a,h.a,k.a,g.a,W]],[3,_.k],_.A]),_._19(4608,O.l,O.k,[_.y,[2,O.u]]),_._19(4608,P.r,P.r,[]),_._19(4608,P.d,P.d,[]),_._19(512,O.b,O.b,[]),_._19(512,P.p,P.p,[]),_._19(512,P.e,P.e,[]),_._19(512,P.n,P.n,[]),_._19(512,X.a,X.a,[]),_._19(512,X.b,X.b,[]),_._19(512,r,r,[]),_._19(256,Y.a,c,[])])})},764:function(l,n,u){"use strict";function t(l){return a._33(0,[(l()(),a._10(0,0,null,null,1,"div",[["class","checkbox-icon"]],[[2,"checkbox-checked",null]],null,null,null,null)),(l()(),a._10(1,0,null,null,0,"div",[["class","checkbox-inner"]],null,null,null,null,null)),(l()(),a._10(2,0,null,null,2,"button",[["class","item-cover"],["ion-button","item-cover"],["role","checkbox"],["type","button"]],[[8,"id",0],[1,"aria-checked",0],[1,"aria-labelledby",0],[1,"aria-disabled",0]],null,null,o.b,o.a)),a._9(3,1097728,null,0,i.a,[[8,"item-cover"],e.a,a.n,a.J],null,null),(l()(),a._31(-1,0,[" "]))],null,function(l,n){var u=n.component;l(n,0,0,u._value);l(n,2,0,u.id,u._value,u._labelId,u._disabled)})}u.d(n,"a",function(){return _}),n.b=t;var a=u(2),o=u(38),i=u(27),e=u(3),_=(u(21),a._8({encapsulation:2,styles:[],data:{}}))}});
+webpackJsonp([51],{
+
+/***/ 734:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RangeLayout4Module", function() { return RangeLayout4Module; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__range_layout_4__ = __webpack_require__(862);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var RangeLayout4Module = /** @class */ (function () {
+    function RangeLayout4Module() {
+    }
+    RangeLayout4Module = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__range_layout_4__["a" /* RangeLayout4 */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__range_layout_4__["a" /* RangeLayout4 */]),
+            ],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_2__range_layout_4__["a" /* RangeLayout4 */]
+            ],
+            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
+        })
+    ], RangeLayout4Module);
+    return RangeLayout4Module;
+}());
+
+//# sourceMappingURL=range-layout-4.module.js.map
+
+/***/ }),
+
+/***/ 862:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RangeLayout4; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var RangeLayout4 = /** @class */ (function () {
+    function RangeLayout4() {
+        var _this = this;
+        this.onEvent = function (event, item) {
+            if (_this.events[event]) {
+                _this.events[event](item);
+            }
+        };
+    }
+    RangeLayout4.prototype.ngOnChanges = function (changes) {
+        this.data = changes['data'].currentValue;
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])('data'),
+        __metadata("design:type", Object)
+    ], RangeLayout4.prototype, "data", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])('events'),
+        __metadata("design:type", Object)
+    ], RangeLayout4.prototype, "events", void 0);
+    RangeLayout4 = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'range-button-layout-4',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\range\layout-4\range.html"*/'<!-- RANGE COMPONENTS - Two sliders -->\n\n<ion-list no-lines *ngIf="data != null">\n\n    <!--- Divider item-->\n\n    <ion-item-divider no-lines no-margin transparent>\n\n        <p ion-text color="primaryBase">{{data.title}}</p>\n\n    </ion-item-divider>\n\n    <ion-item transparent>\n\n        <ion-range dualKnobs="true" pin="true" [(ngModel)]="data.value" (ionChange)="onEvent(\'onChange\', data.value, $event)">\n\n            <ion-label range-left span-large color="primaryBase">{{data.textLeft}}</ion-label>\n\n            <ion-label range-right span-large color="primaryBase">{{data.textRight}}</ion-label>\n\n        </ion-range>\n\n    </ion-item>\n\n</ion-list>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\range\layout-4\range.html"*/
+        }),
+        __metadata("design:paramtypes", [])
+    ], RangeLayout4);
+    return RangeLayout4;
+}());
+
+//# sourceMappingURL=range-layout-4.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=51.js.map

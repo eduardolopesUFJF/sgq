@@ -37,10 +37,17 @@ export class VerificacaoPage {
         public navCtrl: NavController
     ) {
         this.servico = navParams.data.servico;
-        this.inspecoes = [...this.servico.inspecoesObra];
+        this.inspecoes = [...this.ordenar(this.servico.inspecoesObra)];
         this.inspecoesBackup = [...this.servico.inspecoesObra];
         this.obterItemChecklist();
         this.broadcomb = navParams.data.broadcomb + " >> " + this.servico.descricao;
+    }
+
+    ordenar(inspecoes: Inspecao[]) {
+        return inspecoes.sort((a,b) => {
+            if(a.dataInspecao > b.dataInspecao) return -1;
+            else return 1;
+        });
     }
 
     atualizarStatus() {

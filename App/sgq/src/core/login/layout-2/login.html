@@ -1,4 +1,4 @@
-<ion-content has-header *ngIf="data != null" background-size style="background-color: white;" >
+<ion-content has-header *ngIf="data != null" background-size style="background-color: white;">
   <ion-grid no-padding *ngIf="data != null">
     <ion-row padding-left padding-right align-items-center>
       <ion-col *ngIf="data.possuiLogo" text-center col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
@@ -26,9 +26,12 @@
           <!---Input field password-->
           <ion-item text-center transparent>
             <ion-label stacked>{{data.labelPassword}}</ion-label>
-            <ion-input text-center required type="password" [placeholder]="data.password" [(ngModel)]="senha" name="senha"></ion-input>
+            <ion-input required text-center [type]="passwordType" clearOnEdit="false" [placeholder]="data.password"
+              [(ngModel)]="senha" name="senha" style="margin: 0 !important;"></ion-input>
+            <ion-icon item-end name="eye" class="passwordIcon" (click)="hideShowPassword()"></ion-icon>
           </ion-item>
-          <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: black !important;" (click)="onEvent('onLogin', loginForm.valid)">{{data.login}}</button>
+          <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: black !important;"
+            (click)="onEvent('onLogin', loginForm.valid)">{{data.login}}</button>
           <button *ngIf="data.possuiRegistrar" ion-button default-button block text-capitalize margin-bottom (click)="onEvent('onRegister')">{{data.register}}</button>
           <button *ngIf="data.possuiEsqueciSenha" ion-button button-clear text-capitalize clear float-right no-padding
             no-margin>{{data.forgotPassword}}</button>
