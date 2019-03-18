@@ -7,6 +7,7 @@ import { Alteracao } from '../../../models/alteracao';
 import { ToastService } from '../../../utils/toast-service';
 import { UUID } from 'angular2-uuid';
 import { Servico } from '../../../models/servico';
+import { IonicSelectableComponent } from 'ionic-selectable';
 
 @IonicPage()
 @Component({
@@ -21,7 +22,9 @@ export class AreaCadastroPage {
   area: Area = new Area();
 
   opcoesItens: ItemChecklist[] = [];
+  opcoesEscolhidas: ItemChecklist[] = [];
   servicosEscolhidos: number[] = [];
+  servicosEscolhidosNovos: string[] = [];
 
   constructor(
     public storage: Storage,
@@ -38,17 +41,30 @@ export class AreaCadastroPage {
       this.storage.get('itensChecklist').then(
         itens => {
           this.opcoesItens = itens;
+          this.opcoesItens.forEach(item => {
+            item.descricao = item.codigo + " - " + item.descricao;
+            item.idGuid = item.idGuid ? item.idGuid : (item.id + "");
+          });
         }
       );
     });
   }
 
+  setaServicoEscolhido(event: { component: IonicSelectableComponent, value: any }) {
+    this.servicosEscolhidos = event.value.map(x => x.id);
+    this.servicosEscolhidosNovos = event.value.map(x => x.idGuid);
+
+    this.servicosEscolhidos = this.servicosEscolhidos.filter(x => x != 0);
+    this.servicosEscolhidosNovos = this.servicosEscolhidosNovos.filter(x => x.length > 10);
+  }
+
   salvar(formValido) {
     if (formValido) {
       this.area.idGuid = UUID.UUID();
+
       this.servicosEscolhidos.forEach(item => {
         let servico: Servico = new Servico();
-        
+
         servico.idGuidServico = UUID.UUID();
         servico.idChecklist = item;
         servico.idObra = this.obraId;
@@ -61,6 +77,23 @@ export class AreaCadastroPage {
 
         this.area.servicos.push(servico);
       });
+
+      this.servicosEscolhidosNovos.forEach(item => {
+        let servico: Servico = new Servico();
+
+        servico.idGuidServico = UUID.UUID();
+        servico.idChecklistGuid = item;
+        servico.idObra = this.obraId;
+        servico.idAreaGuid = this.area.idGuid;
+
+        let servicoEscolhido = this.opcoesItens.find(x => x.idGuid == item);
+        servico.itensChecklistServico = servicoEscolhido.itensChecklistServico;
+        servico.descricao = servicoEscolhido.descricao;
+        servico.tipo = servicoEscolhido.tipo;
+
+        this.area.servicos.push(servico);
+      });
+
       this.storage.ready().then(() => {
         let atualizacoesArray: Alteracao[] = [];
         this.storage.get('atualizacoes').then(

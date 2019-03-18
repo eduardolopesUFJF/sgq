@@ -44,8 +44,8 @@ export class VerificacaoPage {
     }
 
     ordenar(inspecoes: Inspecao[]) {
-        return inspecoes.sort((a,b) => {
-            if(a.dataInspecao > b.dataInspecao) return -1;
+        return inspecoes.sort((a, b) => {
+            if (a.dataInspecao > b.dataInspecao) return -1;
             else return 1;
         });
     }
@@ -102,6 +102,9 @@ export class VerificacaoPage {
             this.storage.get('itensChecklist').then(
                 itens => {
                     this.itemChecklist = itens.find(x => x.id == this.servico.idChecklist);
+                    if (!this.itemChecklist) {
+                        this.itemChecklist = itens.find(x => x.idGuid == this.servico.idChecklistGuid);
+                    }
                 }
             );
         });
@@ -114,26 +117,25 @@ export class VerificacaoPage {
         modal.onWillDismiss((inspecao: Inspecao) => {
             if (inspecao) {
                 inspecao.idGuidInspecao = UUID.UUID();
+
+                inspecao.idGuidServico = this.servico.idGuidServico;
                 inspecao.idServico = this.servico.id;
-                this.storage.ready().then(() => {
-                    this.storage.get('itensChecklist').then(
-                        servicos => {
-                            let servico = servicos.find(x => x.id == this.servico.idChecklist);
-                            servico.itensChecklistServico.forEach(item => {
-                                let novoItem = new ItemInspecao();
-                                novoItem.dataHoraInclusao = new Date();
-                                novoItem.descricao = item.descricao;
-                                novoItem.idItemServico = item.id;
-                                novoItem.idGuidInspecao = inspecao.idGuidInspecao;
-                                novoItem.ordem = item.ordem.toString();
-                                inspecao.inspecaoObraItens.push(novoItem);
-                            });
-                            this.inspecoes.unshift(inspecao);
-                            this.inspecoesBackup.unshift(inspecao);
-                            this.criarInspecao(inspecao);
-                        }
-                    );
+
+                this.itemChecklist.itensChecklistServico.forEach(item => {
+                    let novoItem = new ItemInspecao();
+                    novoItem.dataHoraInclusao = new Date();
+                    novoItem.descricao = item.descricao;
+                    novoItem.idGuidInspecao = inspecao.idGuidInspecao;
+                    novoItem.ordem = item.ordem.toString();
+
+                    novoItem.idGuidItemServico = item.idGuid;
+                    novoItem.idItemServico = item.id;
+                    
+                    inspecao.inspecaoObraItens.push(novoItem);
                 });
+                this.inspecoes.unshift(inspecao);
+                this.inspecoesBackup.unshift(inspecao);
+                this.criarInspecao(inspecao);
             }
         });
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SGQ.GDOL.Domain.ObraRoot.Entity
 {
@@ -20,6 +21,9 @@ namespace SGQ.GDOL.Domain.ObraRoot.Entity
         public string Tipo { get; set; }
         public bool? Ativo { get; set; }
         public bool? Delete { get; set; }
+
+        [NotMapped]
+        public string IdGuid { get; set; }
 
         public ICollection<ItemChecklistServico> ItensChecklistServico { get; set; }
         public ICollection<Servico> ObrasChecklistServico { get; set; }

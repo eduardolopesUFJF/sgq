@@ -18,18 +18,21 @@ namespace SGQ.GDOL.Api.Controllers
         private readonly IAreaService _areaService;
         private readonly IServicoService _servicoService;
         private readonly IInspecaoService _inspecaoService;
+        private readonly IChecklistServicoService _checklistServicoService;
         private readonly IInspecaoObraItemService _inspecaoObraItemService;
         private readonly IOcorrenciaService _ocorrenciaService;
 
         public AlteracaoController(
             IAreaService areaService,
             IServicoService servicoService,
+            IChecklistServicoService checklistServicoService,
             IInspecaoService inspecaoService,
             IInspecaoObraItemService inspecaoObraItemService,
             IOcorrenciaService ocorrenciaService)
         {
             _areaService = areaService;
             _servicoService = servicoService;
+            _checklistServicoService = checklistServicoService;
             _inspecaoService = inspecaoService;
             _inspecaoObraItemService = inspecaoObraItemService;
             _ocorrenciaService = ocorrenciaService;
@@ -56,9 +59,11 @@ namespace SGQ.GDOL.Api.Controllers
             List<ServicoVM> servicos = new List<ServicoVM>();
             List<InspecaoObraVM> inspecoes = new List<InspecaoObraVM>();
             List<OcorrenciaVM> ocorrencias = new List<OcorrenciaVM>();
+            List<ChecklistItem> checklists = new List<ChecklistItem>();
 
-            PrepararAreas(alteracoes, areas);
-            PrepararServicos(alteracoes, areas, servicos);
+            PrepararChecklists(alteracoes, checklists);
+            PrepararAreas(alteracoes, areas, checklists);
+            PrepararServicos(alteracoes, areas, servicos, checklists);
             PrepararInspecoes(alteracoes, areas, servicos, inspecoes);
             PrepararOcorrencias(alteracoes, areas, servicos, inspecoes, ocorrencias);
 
@@ -70,13 +75,34 @@ namespace SGQ.GDOL.Api.Controllers
             return status;
         }
 
-        private static void PrepararServicos(List<AlteracaoDTO> alteracoes, List<AreaVM> areas, List<ServicoVM> servicos)
+        private void PrepararChecklists(List<AlteracaoDTO> alteracoes, List<ChecklistItem> checklists)
+        {
+            var itensNovos = alteracoes.Where(x => x.Entidade == "Checklist" && x.Tipo == "Insert");
+
+            foreach (var alteracao in itensNovos)
+            {
+                var checklistVM = JsonConvert.DeserializeObject<ChecklistItemVM>(alteracao.Valor);
+                var checklistBD = Mapper.Map<ChecklistItem>(checklistVM);
+                var entity = _checklistServicoService.Adicionar(checklistBD);
+                checklists.Add(entity);
+            }
+
+        }
+
+        private static void PrepararServicos(List<AlteracaoDTO> alteracoes, List<AreaVM> areas, List<ServicoVM> servicos, List<ChecklistItem> checklists)
         {
             var servicosAlterados = alteracoes.Where(x => x.Entidade.ToUpper() == "SERVICO");
 
             foreach (var alteracao in servicosAlterados)
             {
                 var servicoVM = JsonConvert.DeserializeObject<ServicoVM>(alteracao.Valor);
+
+                if (servicoVM.IdChecklist == 0)
+                {
+                    var checklistNovo = checklists.FirstOrDefault(x => x.IdGuid == servicoVM.IdChecklistGuid);
+                    servicoVM.IdChecklist = checklistNovo.Id;
+                }
+
                 var areaCadastrada = areas.FirstOrDefault(x => x.IdGuidArea == alteracao.IdGuidArea && alteracao.IdGuidArea != null);
                 if (areaCadastrada != null)
                 {
@@ -101,7 +127,7 @@ namespace SGQ.GDOL.Api.Controllers
             }
         }
 
-        private static void PrepararAreas(List<AlteracaoDTO> alteracoes, List<AreaVM> areas)
+        private static void PrepararAreas(List<AlteracaoDTO> alteracoes, List<AreaVM> areas, List<ChecklistItem> checklists)
         {
             var areasCadastradas = alteracoes.Where(x => x.Entidade.ToUpper() == "AREA" && x.Tipo.ToUpper() == "INSERT");
             var areasAlteradas = alteracoes.Where(x => x.Entidade.ToUpper() == "AREA" && x.Tipo.ToUpper() == "UPDATE" && x.IdArea != 0);
@@ -111,6 +137,16 @@ namespace SGQ.GDOL.Api.Controllers
             {
                 var areaVM = JsonConvert.DeserializeObject<AreaVM>(alteracao.Valor);
                 areaVM.IdGuidArea = alteracao.IdGuidArea;
+
+                foreach (var item in areaVM.Servicos)
+                {
+                    if (item.IdChecklist == 0)
+                    {
+                        var checklistNovo = checklists.FirstOrDefault(x => x.IdGuid == item.IdChecklistGuid);
+                        item.IdChecklist = checklistNovo.Id;
+                    }
+                }
+
                 areas.Add(areaVM);
             }
 

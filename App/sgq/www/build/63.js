@@ -1,14 +1,14 @@
 webpackJsonp([63],{
 
-/***/ 712:
+/***/ 717:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GoogleCardLayout2Module", function() { return GoogleCardLayout2Module; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SwipeToDismissLayout2Module", function() { return SwipeToDismissLayout2Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__google_card_layout_2__ = __webpack_require__(840);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__swipe_to_dismiss_layout_2__ = __webpack_require__(848);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,35 +18,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var GoogleCardLayout2Module = /** @class */ (function () {
-    function GoogleCardLayout2Module() {
+var SwipeToDismissLayout2Module = /** @class */ (function () {
+    function SwipeToDismissLayout2Module() {
     }
-    GoogleCardLayout2Module = __decorate([
+    SwipeToDismissLayout2Module = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__google_card_layout_2__["a" /* GoogleCardLayout2 */],
+                __WEBPACK_IMPORTED_MODULE_2__swipe_to_dismiss_layout_2__["a" /* SwipeToDismissLayout2 */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__google_card_layout_2__["a" /* GoogleCardLayout2 */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__swipe_to_dismiss_layout_2__["a" /* SwipeToDismissLayout2 */]),
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_2__google_card_layout_2__["a" /* GoogleCardLayout2 */]
+                __WEBPACK_IMPORTED_MODULE_2__swipe_to_dismiss_layout_2__["a" /* SwipeToDismissLayout2 */]
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
         })
-    ], GoogleCardLayout2Module);
-    return GoogleCardLayout2Module;
+    ], SwipeToDismissLayout2Module);
+    return SwipeToDismissLayout2Module;
 }());
 
-//# sourceMappingURL=google-card-layout-2.module.js.map
+//# sourceMappingURL=swipe-to-dismiss-layout-2.module.js.map
 
 /***/ }),
 
-/***/ 840:
+/***/ 848:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GoogleCardLayout2; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SwipeToDismissLayout2; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -60,39 +60,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var GoogleCardLayout2 = /** @class */ (function () {
-    function GoogleCardLayout2() {
-        this.slider = {};
+var SwipeToDismissLayout2 = /** @class */ (function () {
+    function SwipeToDismissLayout2() {
+        var _this = this;
+        this.undo = function (slidingItem) {
+            slidingItem.close();
+        };
+        this.delete = function (item) {
+            var index = _this.data.items.indexOf(item);
+            if (index > -1) {
+                _this.data.items.splice(index, 1);
+            }
+        };
     }
-    GoogleCardLayout2.prototype.slideHasChanged = function (slider, index) {
-        this.slider[index] = slider;
-        if (2 == slider._activeIndex) {
-            if (this.data.items) {
-                this.data.items.splice(index, 1);
-            }
-            else {
-                this.data.splice(index, 1);
-            }
-        }
-    };
-    GoogleCardLayout2.prototype.onStarClass = function (items, index, e) {
-        if (e) {
-            e.stopPropagation();
-        }
-        for (var i = 0; i < items.length; i++) {
-            items[i].isActive = i <= index;
-        }
-        this.onEvent("onRates", index, e);
-    };
-    GoogleCardLayout2.prototype.onClickEvent = function (index) {
-        if (this.slider[index]) {
-            this.slider[index].slidePrev(300);
-        }
-    };
-    GoogleCardLayout2.prototype.onEvent = function (event, item, e) {
-        if (e) {
-            e.stopPropagation();
-        }
+    SwipeToDismissLayout2.prototype.onEvent = function (event, item, e) {
         if (this.events[event]) {
             this.events[event](item);
         }
@@ -100,25 +81,25 @@ var GoogleCardLayout2 = /** @class */ (function () {
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
-    ], GoogleCardLayout2.prototype, "data", void 0);
+    ], SwipeToDismissLayout2.prototype, "data", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
-    ], GoogleCardLayout2.prototype, "events", void 0);
+    ], SwipeToDismissLayout2.prototype, "events", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */])
-    ], GoogleCardLayout2.prototype, "content", void 0);
-    GoogleCardLayout2 = __decorate([
+    ], SwipeToDismissLayout2.prototype, "content", void 0);
+    SwipeToDismissLayout2 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'google-card-layout-2',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\google-card\layout-2\google-card.html"*/'<!--Theme Google Card - Styled cards 2-->\n\n<ion-content padding-top>\n\n  <ion-grid no-padding>\n\n    <ion-row *ngIf="data != null">\n\n      <ion-col col-12 col-md-6 col-lg-4 *ngFor="let item of data.items;let i = index">\n\n        <ion-card box-shadow text-left box-shadow margin-bottom>\n\n          <!--Card Image-->\n\n          <div card-image>\n\n            <img [src]="item.image" />\n\n            <div title-block>\n\n              <!--Card Title-->\n\n              <h2 card-title text-capitalize>{{item.title}}</h2>\n\n            </div>\n\n          </div>\n\n          <!--Card descriptiom-->\n\n          <ion-card-content (click)="onEvent(\'onItemClick\', item, $event)">\n\n            <ion-card-title margin-bottom no-padding>\n\n              <ion-item transparent no-padding>\n\n                <h1 card-subtitle item-start>{{item.subtitle}}</h1>\n\n                <button no-margin item-end ion-button button-action-shit (click)="onEvent(\'onShare\', item, $event)">\n\n                  <ion-icon [name]="item.shareIcon"></ion-icon>\n\n                </button>\n\n              </ion-item>\n\n              <!--Card Body Text-->\n\n              <p card-body-text>{{item.description}}</p>\n\n              <span span-medium>{{item.priceText}}</span>\n\n              <ion-badge badge-clear float-left no-padding>{{item.price}}</ion-badge>\n\n            </ion-card-title>\n\n            <button box-shadow block default-button ion-button (click)="onEvent(\'onItemClick\', item, $event)">{{item.button}}</button>\n\n          </ion-card-content>\n\n        </ion-card>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\google-card\layout-2\google-card.html"*/
+            selector: 'swipe-to-dismiss-layout-2',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\swipe-to-dismiss\layout-2\swipe-to-dismiss.html"*/'<!-- Themes Swipe To Dismiss - Products + CTA -->\n\n<ion-content>\n\n  <ion-grid no-padding *ngIf="data != null">\n\n    <ion-row>\n\n      <ion-col col-12>\n\n        <!-- Header top Swipe To Dismiss Products + CTA -->\n\n        <ion-list-header transparent no-lines header-section no-margin>\n\n          <!-- Big Title Swipe To Dismiss Products + CTA -->\n\n          <h1 header-title text-capitalize>{{data.header}}</h1>\n\n        </ion-list-header>\n\n        <!-- Content -->\n\n        <ion-list no-margin>\n\n          <ion-item-sliding default-item *ngFor="let item of data.items" #slidingItem>\n\n            <ion-item transparent no-padding no-lines (click)="onEvent(\'onItemClick\', item.title, $event)">\n\n              <!-- Images -->\n\n                <ion-thumbnail item-start>\n\n                  <img [src]="item.image">\n\n                </ion-thumbnail>\n\n                <!-- Title -->\n\n                <h2 item-title>{{item.title}}</h2>\n\n                <!-- Subtitle -->\n\n                <p item-subtitle text-wrap>{{item.subtitle}}</p>\n\n                <!-- Button -->\n\n                <button ion-button button-follow text-capitalize box-shadow item-end>{{item.ionButton}}</button>\n\n            </ion-item>\n\n            <!--Action Button-->\n\n            <ion-item-options no-lines>\n\n              <!-- Button -->\n\n              <button ion-button text-capitalize (click)="delete(item)">\n\n              {{item.delate}}\n\n            </button>\n\n            </ion-item-options>\n\n          </ion-item-sliding>\n\n        </ion-list>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\swipe-to-dismiss\layout-2\swipe-to-dismiss.html"*/
         }),
         __metadata("design:paramtypes", [])
-    ], GoogleCardLayout2);
-    return GoogleCardLayout2;
+    ], SwipeToDismissLayout2);
+    return SwipeToDismissLayout2;
 }());
 
-//# sourceMappingURL=google-card-layout-2.js.map
+//# sourceMappingURL=swipe-to-dismiss-layout-2.js.map
 
 /***/ })
 

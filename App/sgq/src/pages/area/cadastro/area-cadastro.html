@@ -42,10 +42,18 @@
                     </ion-item>
                     <ion-item text-center transparent>
                         <ion-label stacked>CHECKLIST</ion-label>
-                        <ion-select required [(ngModel)]="servicosEscolhidos" multiple="true" name="checklist" okText="Ok"
-                            cancelText="Cancelar">
-                            <ion-option *ngFor="let item of opcoesItens; let i= index" [value]="item.id">{{item.descricao}}</ion-option>
-                        </ion-select>
+                        <ionic-selectable 
+                            item-content
+                            [(ngModel)]="servicoEscolhido"
+                            [items]="opcoesItens"
+                            itemValueField="idGuid"
+                            itemTextField="descricao"
+                            [canSearch]="true"
+                            [isMultiple]="true"
+                            name="servicosEscolhidos"
+                            (onChange)="setaServicoEscolhido($event)"
+                            required>
+                        </ionic-selectable>
                     </ion-item>
                     <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: rgb(33,177,75) !important;"
                         (click)="salvar(cadastroForm.valid)">Salvar</button>

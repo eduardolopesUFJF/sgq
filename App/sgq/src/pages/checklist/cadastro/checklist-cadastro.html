@@ -1,0 +1,72 @@
+<ion-header>
+    <ion-navbar>
+        <ion-row>
+            <ion-col col-2>
+                <button class="button-nav" (click)="voltar()">
+                    <span ion-text style="font-size: 0.7em;">Voltar</span>
+                </button>
+            </ion-col>
+            <ion-col col-10 m-auto>
+                <ion-title>Cadastro de Checklist</ion-title>
+            </ion-col>
+        </ion-row>
+    </ion-navbar>
+</ion-header>
+
+<ion-content has-header>
+    <ion-grid no-padding>
+        <ion-row padding-left padding-right>
+            <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
+                <form #cadastroForm="ngForm" padding-top>
+                    <ion-list radio-group no-margin [(ngModel)]="checklist.tipo" name="tipo">
+                        <ion-grid>
+                            <ion-row>
+                                <ion-col col-6>
+                                    <ion-item radio>
+                                        <ion-label>Controlado</ion-label>
+                                        <ion-radio value="C"></ion-radio>
+                                    </ion-item>
+                                </ion-col>
+                                <ion-col col-6>
+                                    <ion-item radio>
+                                        <ion-label>Especializado</ion-label>
+                                        <ion-radio value="E"></ion-radio>
+                                    </ion-item>
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </ion-list>
+                    <ion-item text-center transparent>
+                        <ion-label stacked>CÓDIGO</ion-label>
+                        <ion-input text-center required type="text" [(ngModel)]="checklist.codigo" name="codigo"></ion-input>
+                    </ion-item>
+                    <ion-item text-center transparent>
+                        <ion-label stacked>DESCRIÇÃO</ion-label>
+                        <ion-textarea rows="3" text-center required type="text" [(ngModel)]="checklist.descricao" name="descricao"></ion-textarea>
+                    </ion-item>
+
+                    <h3 text-center class="locais">Critérios de localização do serviço</h3>
+                    <ion-item text-center transparent>
+                        <ion-label stacked>CAMPO 1</ion-label>
+                        <ion-input text-center type="text" [(ngModel)]="checklist.campo1" name="campo1"></ion-input>
+                    </ion-item>
+                    <ion-item text-center transparent>
+                        <ion-label stacked>CAMPO 2</ion-label>
+                        <ion-input text-center type="text" [(ngModel)]="checklist.campo2" name="campo2"></ion-input>
+                    </ion-item>
+                    <ion-item text-center transparent>
+                        <ion-label stacked>CAMPO 3</ion-label>
+                        <ion-input text-center type="text" [(ngModel)]="checklist.campo3" name="campo3"></ion-input>
+                    </ion-item>
+                    <ion-item text-center transparent>
+                        <ion-label stacked>CAMPO 4</ion-label>
+                        <ion-input text-center type="text" [(ngModel)]="checklist.campo4" name="campo4"></ion-input>
+                    </ion-item>
+
+                    <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: rgb(33,177,75) !important;"
+                        (click)="salvar(cadastroForm.valid)">Definir Itens</button>
+                </form>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

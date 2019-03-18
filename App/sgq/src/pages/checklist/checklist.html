@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-navbar>
+        <ion-row>
+            <ion-col col-2>
+                <button ion-button menuToggle>
+                    <ion-icon class="icon-menu" name="menu"></ion-icon>
+                </button>
+            </ion-col>
+            <ion-col col-8 m-auto>
+                <div buy>
+                    <ion-title>
+                        Checklists
+                    </ion-title>
+                </div>
+            </ion-col>
+            <ion-col col-2>
+                <div buy (click)="voltarHome()">
+                    <ion-icon class="icon-menu home-icon" name="home"></ion-icon>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-navbar>
+</ion-header>
+
+<appearance-animation-layout-5 *ngIf="reload && false" has-header [data]="checklists" [events]="events" [config]="config"></appearance-animation-layout-5>

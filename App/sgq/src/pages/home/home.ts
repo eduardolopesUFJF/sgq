@@ -21,7 +21,8 @@ export class HomePage {
       { "title": "Listar alterações", "icon": "list", "component": "AlteracoesPage" },
       { "title": "Publicar alterações", "icon": "cloud-upload", "component": "Subir" },
       { "title": "Descartar alterações", "icon": "trash", "component": "Descartar" },
-      { "title": "Acesso ás obras", "icon": "checkmark-circle-outline", "component": "ObraPage" },
+      { "title": "Cadastrar Checklist", "icon": "checkmark-circle-outline", "component": "ChecklistPage" },
+      { "title": "Acesso ás obras", "icon": "build", "component": "ObraPage" },
       { "title": "Sair", "icon": "exit", "component": "LoginPage" },
     ];
   }

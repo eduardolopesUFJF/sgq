@@ -6,5 +6,6 @@ namespace SGQ.GDOL.Domain.ObraRoot.Service.Interfaces
     public interface IChecklistServicoService
     {
         List<ChecklistItem> ObterTodosAtivos();
+        ChecklistItem Adicionar(ChecklistItem checklist);
     }
 }

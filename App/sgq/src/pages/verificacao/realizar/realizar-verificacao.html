@@ -19,13 +19,6 @@
 </ion-header>
 
 <ion-content has-header>
-    <!-- <form margin-bottom>
-        <ion-item>
-            <ion-label>Port</ion-label>
-            <ionic-selectable item-content [(ngModel)]="inspecao.idFuncionarioInspecionado" [ngModelOptions]="{standalone: true}" itemValueField="id" itemTextField="nome" [items]="funcionarios">
-            </ionic-selectable>
-        </ion-item>
-    </form> -->
     <ion-grid no-padding>
         <ion-row padding-left padding-right>
             <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
@@ -44,13 +37,8 @@
                             [canSearch]="true"
                             name="idFuncionarioInspecionado"
                             (onChange)="setaFuncionarioInspecionado($event)"
-                            (onOpen)="alterarPlaceholder()"
                             required>
                         </ionic-selectable>
-                        <!-- <ion-select required [(ngModel)]="inspecao.idFuncionarioInspecionado" multiple="false" name="idFuncionarioInspecionado"
-                            okText="Ok" cancelText="Cancelar">
-                            <ion-option *ngFor="let item of funcionarios; let i= index" [value]="item.id">{{item.nome}}</ion-option>
-                        </ion-select> -->
                     </ion-item>
                     <ion-item text-center transparent>
                         <ion-label stacked>APROVADOR POR</ion-label>
@@ -62,13 +50,8 @@
                             itemTextField="nome"
                             [canSearch]="true"
                             name="idFuncionarioAprovado"
-                            (onChange)="setaFuncionarioAprovado($event)"
-                            (onOpen)="alterarPlaceholder()">
+                            (onChange)="setaFuncionarioAprovado($event)">
                         </ionic-selectable>
-                        <!-- <ion-select [(ngModel)]="inspecao.idFuncionarioAprovado" multiple="false" name="idFuncionarioAprovado"
-                            okText="Ok" cancelText="Cancelar">
-                            <ion-option *ngFor="let item of funcionarios; let i= index" [value]="item.id">{{item.nome}}</ion-option>
-                        </ion-select> -->
                     </ion-item>
                     <ion-list radio-group no-margin [(ngModel)]="inspecao.status" name="status" (ngModelChange)="atualizarSituacao()"
                         [disabled]="servico.status == 1">

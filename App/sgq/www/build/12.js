@@ -1,14 +1,15 @@
 webpackJsonp([12],{
 
-/***/ 761:
+/***/ 770:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AreaCadastroPageModule", function() { return AreaCadastroPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RealizarVerificacaoPageModule", function() { return RealizarVerificacaoPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__area_cadastro__ = __webpack_require__(890);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__realizar_verificacao__ = __webpack_require__(905);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_selectable__ = __webpack_require__(352);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,89 +19,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AreaCadastroPageModule = /** @class */ (function () {
-    function AreaCadastroPageModule() {
+
+var RealizarVerificacaoPageModule = /** @class */ (function () {
+    function RealizarVerificacaoPageModule() {
     }
-    AreaCadastroPageModule = __decorate([
+    RealizarVerificacaoPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__area_cadastro__["a" /* AreaCadastroPage */]
+                __WEBPACK_IMPORTED_MODULE_2__realizar_verificacao__["a" /* RealizarVerificacaoPage */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__area_cadastro__["a" /* AreaCadastroPage */])
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__realizar_verificacao__["a" /* RealizarVerificacaoPage */]),
+                __WEBPACK_IMPORTED_MODULE_3_ionic_selectable__["a" /* IonicSelectableModule */]
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
         })
-    ], AreaCadastroPageModule);
-    return AreaCadastroPageModule;
+    ], RealizarVerificacaoPageModule);
+    return RealizarVerificacaoPageModule;
 }());
 
-//# sourceMappingURL=area-cadastro.module.js.map
+//# sourceMappingURL=realizar-verificacao.module.js.map
 
 /***/ }),
 
-/***/ 788:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Alteracao; });
-var Alteracao = /** @class */ (function () {
-    function Alteracao(values) {
-        if (values === void 0) { values = {}; }
-        Object.assign(this, values);
-    }
-    return Alteracao;
-}());
-
-//# sourceMappingURL=alteracao.js.map
-
-/***/ }),
-
-/***/ 789:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var UUID = (function () {
-    function UUID() {
-        // no-op
-    }
-    UUID.UUID = function () {
-        if (typeof (window) !== "undefined" && typeof (window.crypto) !== "undefined" && typeof (window.crypto.getRandomValues) !== "undefined") {
-            // If we have a cryptographically secure PRNG, use that
-            // http://stackoverflow.com/questions/6906916/collisions-when-generating-uuids-in-javascript
-            var buf = new Uint16Array(8);
-            window.crypto.getRandomValues(buf);
-            return (this.pad4(buf[0]) + this.pad4(buf[1]) + "-" + this.pad4(buf[2]) + "-" + this.pad4(buf[3]) + "-" + this.pad4(buf[4]) + "-" + this.pad4(buf[5]) + this.pad4(buf[6]) + this.pad4(buf[7]));
-        }
-        else {
-            // Otherwise, just use Math.random
-            // https://stackoverflow.com/questions/105034/create-guid-uuid-in-javascript
-            // https://stackoverflow.com/questions/11605068/why-does-jshint-argue-against-bitwise-operators-how-should-i-express-this-code
-            return this.random4() + this.random4() + "-" + this.random4() + "-" + this.random4() + "-" +
-                this.random4() + "-" + this.random4() + this.random4() + this.random4();
-        }
-    };
-    UUID.pad4 = function (num) {
-        var ret = num.toString(16);
-        while (ret.length < 4) {
-            ret = "0" + ret;
-        }
-        return ret;
-    };
-    UUID.random4 = function () {
-        return Math.floor((1 + Math.random()) * 0x10000)
-            .toString(16)
-            .substring(1);
-    };
-    return UUID;
-}());
-exports.UUID = UUID;
-//# sourceMappingURL=index.js.map
-
-/***/ }),
-
-/***/ 801:
+/***/ 805:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -114,6 +56,7 @@ var Servico = /** @class */ (function () {
         this.tipo = '';
         this.idObra = 0;
         this.idChecklist = 0;
+        this.idChecklistGuid = '';
         this.idArea = 0;
         this.idAreaGuid = "";
         this.metaAprovacao = 90;
@@ -133,44 +76,79 @@ var Servico = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 816:
+/***/ 806:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Area; });
-var Area = /** @class */ (function () {
-    function Area(values) {
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Inspecao; });
+var Inspecao = /** @class */ (function () {
+    function Inspecao(values) {
         if (values === void 0) { values = {}; }
         this.id = 0;
-        this.idGuid = '';
-        this.idObra = 0;
+        this.idGuidInspecao = '';
+        this.idGuidServico = '';
+        this.campo1 = "";
+        this.campo2 = "";
+        this.campo3 = "";
+        this.campo4 = "";
         this.status = 0;
         this.situacao = 'Em aberto';
         this.delete = false;
-        this.servicos = [];
+        this.dataHoraAlteracao = new Date();
+        this.qtdNA = 0;
+        this.qtdA = 0;
+        this.qtdR = 0;
+        this.qtdRA = 0;
+        this.qtdX = 0;
+        this.inspecaoObraItens = [];
+        this.ocorrencias = [];
         Object.assign(this, values);
     }
-    return Area;
+    return Inspecao;
 }());
 
-//# sourceMappingURL=area.js.map
+//# sourceMappingURL=inspecao.js.map
 
 /***/ }),
 
-/***/ 890:
+/***/ 822:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AreaCadastroPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ItemInspecao; });
+var ItemInspecao = /** @class */ (function () {
+    function ItemInspecao(values) {
+        if (values === void 0) { values = {}; }
+        this.id = 0;
+        this.idInspecaoObra = 0;
+        this.idGuidInspecao = '';
+        this.idGuidItemServico = '';
+        this.inspecao1 = '';
+        this.inspecao2 = '';
+        this.delete = false;
+        this.dataHoraAlteracao = new Date();
+        Object.assign(this, values);
+    }
+    return ItemInspecao;
+}());
+
+//# sourceMappingURL=item-inspecao.js.map
+
+/***/ }),
+
+/***/ 905:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RealizarVerificacaoPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_area__ = __webpack_require__(816);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(153);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_alteracao__ = __webpack_require__(788);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_inspecao__ = __webpack_require__(806);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_funcionario__ = __webpack_require__(906);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(153);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_toast_service__ = __webpack_require__(350);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__ = __webpack_require__(789);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_uuid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_angular2_uuid__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__models_servico__ = __webpack_require__(801);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__models_item_inspecao__ = __webpack_require__(822);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__models_servico__ = __webpack_require__(805);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -188,91 +166,108 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var AreaCadastroPage = /** @class */ (function () {
-    function AreaCadastroPage(storage, navParams, toastService, viewCtrl) {
-        this.storage = storage;
-        this.navParams = navParams;
-        this.toastService = toastService;
+var RealizarVerificacaoPage = /** @class */ (function () {
+    function RealizarVerificacaoPage(viewCtrl, storage, toastService, modalCtrl, navParams, navCtrl) {
         this.viewCtrl = viewCtrl;
-        this.itens = [];
-        this.area = new __WEBPACK_IMPORTED_MODULE_2__models_area__["a" /* Area */]();
-        this.opcoesItens = [];
-        this.servicosEscolhidos = [];
-        this.obraId = this.navParams.data.obraId;
-        this.obterItensChecklist();
+        this.storage = storage;
+        this.toastService = toastService;
+        this.modalCtrl = modalCtrl;
+        this.navParams = navParams;
+        this.navCtrl = navCtrl;
+        this.inspecao = new __WEBPACK_IMPORTED_MODULE_2__models_inspecao__["a" /* Inspecao */]();
+        this.servico = new __WEBPACK_IMPORTED_MODULE_7__models_servico__["a" /* Servico */]();
+        this.descServico = '';
+        this.funcionarios = [];
+        this.funcionarioInspecionado = new __WEBPACK_IMPORTED_MODULE_3__models_funcionario__["a" /* Funcionario */]();
+        this.funcionarioAprovado = new __WEBPACK_IMPORTED_MODULE_3__models_funcionario__["a" /* Funcionario */]();
+        this.limpaNA1 = false;
+        this.limpaA1 = false;
+        this.limpaR1 = false;
+        this.limpaX1 = false;
+        this.limpaRA2 = false;
+        this.limpaX2 = false;
+        this.ultimoItem = new __WEBPACK_IMPORTED_MODULE_6__models_item_inspecao__["a" /* ItemInspecao */]();
+        this.descServico = this.navParams.data.descServico;
+        this.servico = this.navParams.data.servico;
+        this.inspecao = this.navParams.data.inspecao;
+        this.obterFuncionarios();
     }
-    AreaCadastroPage.prototype.obterItensChecklist = function () {
+    RealizarVerificacaoPage.prototype.setaFuncionarioInspecionado = function (event) {
+        this.inspecao.idFuncionarioInspecionado = event.value.id;
+    };
+    RealizarVerificacaoPage.prototype.setaFuncionarioAprovado = function (event) {
+        this.inspecao.idFuncionarioAprovado = event.value.id;
+    };
+    RealizarVerificacaoPage.prototype.obterFuncionarios = function () {
         var _this = this;
         this.storage.ready().then(function () {
-            _this.storage.get('itensChecklist').then(function (itens) {
-                _this.opcoesItens = itens;
+            _this.storage.get('funcionarios').then(function (funcionarios) {
+                _this.funcionarios = funcionarios;
+                _this.funcionarioAprovado = _this.funcionarios.find(function (x) { return x.id == _this.inspecao.idFuncionarioAprovado; });
+                _this.funcionarioInspecionado = _this.funcionarios.find(function (x) { return x.id == _this.inspecao.idFuncionarioInspecionado; });
             });
         });
     };
-    AreaCadastroPage.prototype.salvar = function (formValido) {
-        var _this = this;
-        if (formValido) {
-            this.area.idGuid = __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__["UUID"].UUID();
-            this.servicosEscolhidos.forEach(function (item) {
-                var servico = new __WEBPACK_IMPORTED_MODULE_7__models_servico__["a" /* Servico */]();
-                servico.idGuidServico = __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__["UUID"].UUID();
-                servico.idChecklist = item;
-                servico.idObra = _this.obraId;
-                servico.idAreaGuid = _this.area.idGuid;
-                var servicoEscolhido = _this.opcoesItens.find(function (x) { return x.id == item; });
-                servico.itensChecklistServico = servicoEscolhido.itensChecklistServico;
-                servico.descricao = servicoEscolhido.descricao;
-                servico.tipo = servicoEscolhido.tipo;
-                _this.area.servicos.push(servico);
-            });
-            this.storage.ready().then(function () {
-                var atualizacoesArray = [];
-                _this.storage.get('atualizacoes').then(function (atualizacoes) {
-                    _this.area.idObra = _this.obraId;
-                    var alteracao = new __WEBPACK_IMPORTED_MODULE_4__models_alteracao__["a" /* Alteracao */]({ id: __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__["UUID"].UUID(), idArea: _this.area.id, idGuidArea: _this.area.idGuid, tipo: "Insert", entidade: "Area", valor: JSON.stringify(_this.area), data: new Date(), descricao: "Inserção da área: " + _this.area.descricao, obraId: _this.obraId });
-                    if (atualizacoes) {
-                        atualizacoesArray = atualizacoes;
-                        atualizacoesArray.push(alteracao);
-                    }
-                    else {
-                        atualizacoesArray.push(alteracao);
-                    }
-                    _this.storage.set('atualizacoes', atualizacoesArray);
-                    _this.atualizarObra();
-                });
-            });
+    RealizarVerificacaoPage.prototype.atualizarSituacao = function () {
+        this.inspecao.situacao = this.inspecao.status == 0 ? 'Em aberto' : 'Finalizado';
+    };
+    RealizarVerificacaoPage.prototype.salvar = function (valido) {
+        if (valido) {
+            if (this.inspecao.status == 0) {
+                this.viewCtrl.dismiss({ inspecao: this.inspecao, concluido: true });
+            }
+            else {
+                var naoFinalizado = this.inspecao.inspecaoObraItens.some(function (x) { return x.inspecao1 == "" || (x.inspecao1 == "R" && x.inspecao2 == ""); });
+                if (naoFinalizado) {
+                    this.toastService.presentToastWarning("Não é possível salvar com status de finalizado pois existem inspeções pendentes.");
+                }
+                else {
+                    this.viewCtrl.dismiss({ inspecao: this.inspecao, concluido: true });
+                }
+            }
         }
         else {
-            this.toastService.presentToastWarning("Preencha todos os campos.");
+            this.toastService.presentToastWarning("É obrigatório informar o funcionário da inspeção.");
         }
     };
-    AreaCadastroPage.prototype.atualizarObra = function () {
-        var _this = this;
-        this.storage.ready().then(function () {
-            _this.storage.get('obras').then(function (obras) {
-                _this.area.situacao = _this.area.status == 0 ? 'Em aberto' : 'Finalizado';
-                obras.find(function (x) { return x.id == _this.obraId; }).areas.unshift(_this.area);
-                _this.storage.set('obras', obras);
-                _this.viewCtrl.dismiss(_this.area);
-            });
-        });
+    RealizarVerificacaoPage.prototype.voltar = function () {
+        this.viewCtrl.dismiss({ inspecao: this.inspecao, concluido: false });
     };
-    AreaCadastroPage.prototype.voltar = function () {
-        this.viewCtrl.dismiss(null);
+    RealizarVerificacaoPage.prototype.abrirOcorrencias = function () {
+        this.navCtrl.push("OcorrenciaPage", { inspecao: this.inspecao, broadcomb: this.descServico, servico: this.servico });
     };
-    AreaCadastroPage = __decorate([
+    RealizarVerificacaoPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'page-area-cadastro',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\area\cadastro\area-cadastro.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <ion-row>\n\n            <ion-col col-2>\n\n                <button class="button-nav" (click)="voltar()">\n\n                    <span ion-text style="font-size: 0.7em;">Voltar</span>\n\n                </button>\n\n            </ion-col>\n\n            <ion-col col-10 m-auto>\n\n                <ion-title>Cadastro de Área</ion-title>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content has-header>\n\n    <ion-grid no-padding>\n\n        <ion-row padding-left padding-right>\n\n            <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n\n                <form #cadastroForm="ngForm" padding-top>\n\n                    <ion-list radio-group no-margin [(ngModel)]="area.status" name="status">\n\n                        <ion-grid>\n\n                            <ion-row>\n\n                                <ion-col col-6>\n\n                                    <ion-item radio>\n\n                                        <ion-label>Em aberto</ion-label>\n\n                                        <ion-radio [value]="0" checked></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                                <ion-col col-6>\n\n                                    <ion-item radio>\n\n                                        <ion-label>Finalizado</ion-label>\n\n                                        <ion-radio [value]="1"></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                            </ion-row>\n\n                        </ion-grid>\n\n                    </ion-list>\n\n                    <ion-item text-center transparent>\n\n                        <ion-label stacked>ÁREA</ion-label>\n\n                        <ion-input text-center required type="text" [(ngModel)]="area.descricao" name="area"></ion-input>\n\n                    </ion-item>\n\n                    <ion-item text-center transparent>\n\n                        <ion-label stacked>CHECKLIST</ion-label>\n\n                        <ion-select required [(ngModel)]="servicosEscolhidos" multiple="true" name="checklist" okText="Ok"\n\n                            cancelText="Cancelar">\n\n                            <ion-option *ngFor="let item of opcoesItens; let i= index" [value]="item.id">{{item.descricao}}</ion-option>\n\n                        </ion-select>\n\n                    </ion-item>\n\n                    <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: rgb(33,177,75) !important;"\n\n                        (click)="salvar(cadastroForm.valid)">Salvar</button>\n\n                </form>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-grid>\n\n</ion-content>'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\area\cadastro\area-cadastro.html"*/
+            selector: 'page-realizar-verificacao',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\verificacao\realizar\realizar-verificacao.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <ion-row>\n\n            <ion-col col-2>\n\n                <button class="button-nav" (click)="voltar()">\n\n                    <span ion-text style="font-size: 0.7em;">Voltar</span>\n\n                </button>\n\n            </ion-col>\n\n            <ion-col col-7 m-auto>\n\n                <ion-title>Inspeção do Serviço</ion-title>\n\n            </ion-col>\n\n            <ion-col col-3 (click)="abrirOcorrencias()">\n\n                    <button class="button-nav">\n\n                        <span ion-text style="font-size: 0.7em;">Ocorrências</span>\n\n                    </button>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content has-header>\n\n    <ion-grid no-padding>\n\n        <ion-row padding-left padding-right>\n\n            <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n\n                <form #cadastroForm="ngForm" padding-top>\n\n                    <ion-item text-center text-wrap transparent style="padding-bottom: 0 !important;">\n\n                        <ion-label style="font-size: 18px !important; font-weight: bold;" stacked>{{descServico.toUpperCase()}}</ion-label>\n\n                    </ion-item>\n\n                    <ion-item text-center transparent>\n\n                        <ion-label stacked>INSPECIONADO POR</ion-label>\n\n                        <ionic-selectable \n\n                            item-content\n\n                            [(ngModel)]="funcionarioInspecionado"\n\n                            [items]="funcionarios"\n\n                            itemValueField="id"\n\n                            itemTextField="nome"\n\n                            [canSearch]="true"\n\n                            name="idFuncionarioInspecionado"\n\n                            (onChange)="setaFuncionarioInspecionado($event)"\n\n                            required>\n\n                        </ionic-selectable>\n\n                    </ion-item>\n\n                    <ion-item text-center transparent>\n\n                        <ion-label stacked>APROVADOR POR</ion-label>\n\n                        <ionic-selectable \n\n                            item-content\n\n                            [(ngModel)]="funcionarioAprovado"\n\n                            [items]="funcionarios"\n\n                            itemValueField="id"\n\n                            itemTextField="nome"\n\n                            [canSearch]="true"\n\n                            name="idFuncionarioAprovado"\n\n                            (onChange)="setaFuncionarioAprovado($event)">\n\n                        </ionic-selectable>\n\n                    </ion-item>\n\n                    <ion-list radio-group no-margin [(ngModel)]="inspecao.status" name="status" (ngModelChange)="atualizarSituacao()"\n\n                        [disabled]="servico.status == 1">\n\n                        <ion-grid>\n\n                            <ion-row>\n\n                                <ion-col col-6>\n\n                                    <ion-item radio>\n\n                                        <ion-label>Em aberto</ion-label>\n\n                                        <ion-radio [value]="0"></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                                <ion-col col-6>\n\n                                    <ion-item radio>\n\n                                        <ion-label>Finalizado</ion-label>\n\n                                        <ion-radio [value]="1"></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                            </ion-row>\n\n                        </ion-grid>\n\n                    </ion-list>\n\n                    <hr style="margin: 2px 0 0 0;">\n\n                    <ion-list radio-group no-margin [(ngModel)]="item.inspecao1" name="itemInspecao1+{{i}}" *ngFor="let item of inspecao.inspecaoObraItens; let i=index;">\n\n                        <h2 text-wrap style="font-weight: bold;margin-top: 10px;">{{item.descricao}}</h2>\n\n                        <ion-grid>\n\n                            <ion-row>\n\n                                <ion-col col-3>\n\n                                    <ion-item radio style="background-color: blue;">\n\n                                        <ion-label>NA</ion-label>\n\n                                        <ion-radio [value]="\'N\'"></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                                <ion-col col-3>\n\n                                    <ion-item radio style="background-color: darkgreen;">\n\n                                        <ion-label>A</ion-label>\n\n                                        <ion-radio [value]="\'A\'"></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                                <ion-col col-3>\n\n                                    <ion-item radio style="background-color: yellow;">\n\n                                        <ion-label>R</ion-label>\n\n                                        <ion-radio [value]="\'R\'"></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                                <ion-col col-3>\n\n                                    <ion-item radio style="background-color: red;">\n\n                                        <ion-label>X</ion-label>\n\n                                        <ion-radio [value]="\'X\'"></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                            </ion-row>\n\n                            <ion-row *ngIf="item.inspecao1 == \'R\'">\n\n                                <ion-list radio-group no-margin [(ngModel)]="item.inspecao2" name="itemInspecao2+{{i}}"\n\n                                    style="width: 100%">\n\n                                    <ion-grid>\n\n                                        <ion-row>\n\n                                            <ion-col col-3></ion-col>\n\n                                            <ion-col col-3>\n\n                                                <ion-item radio style="background-color: orange;">\n\n                                                    <ion-label>RA</ion-label>\n\n                                                    <ion-radio [value]="\'A\'"></ion-radio>\n\n                                                </ion-item>\n\n                                            </ion-col>\n\n                                            <ion-col col-3>\n\n                                                <ion-item radio style="background-color: red;">\n\n                                                    <ion-label>X</ion-label>\n\n                                                    <ion-radio [value]="\'X\'"></ion-radio>\n\n                                                </ion-item>\n\n                                            </ion-col>\n\n                                            <ion-col col-3></ion-col>\n\n                                        </ion-row>\n\n                                    </ion-grid>\n\n                                </ion-list>\n\n                            </ion-row>\n\n                            <ion-row>\n\n                                <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: black !important;"\n\n                                    (click)="item.inspecao1=\'\';item.inspecao2=\'\'">Limpar</button>\n\n                            </ion-row>\n\n                        </ion-grid>\n\n                        <hr style="margin: 2px 0 0 0;">\n\n                    </ion-list>\n\n                </form>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-grid>\n\n</ion-content>\n\n\n\n<ion-footer>\n\n    <button ion-button default-button block text-capitalize box-shadow margin-bottom no-margin style="background-color: rgb(33,177,75) !important;"\n\n        (click)="salvar(cadastroForm.valid)">Salvar</button>\n\n</ion-footer>'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\verificacao\realizar\realizar-verificacao.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["u" /* ViewController */],
+            __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */],
             __WEBPACK_IMPORTED_MODULE_5__utils_toast_service__["a" /* ToastService */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["u" /* ViewController */]])
-    ], AreaCadastroPage);
-    return AreaCadastroPage;
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ModalController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */]])
+    ], RealizarVerificacaoPage);
+    return RealizarVerificacaoPage;
 }());
 
-//# sourceMappingURL=area-cadastro.js.map
+//# sourceMappingURL=realizar-verificacao.js.map
+
+/***/ }),
+
+/***/ 906:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Funcionario; });
+var Funcionario = /** @class */ (function () {
+    function Funcionario(values) {
+        if (values === void 0) { values = {}; }
+        Object.assign(this, values);
+    }
+    return Funcionario;
+}());
+
+//# sourceMappingURL=funcionario.js.map
 
 /***/ })
 

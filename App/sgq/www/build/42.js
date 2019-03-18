@@ -1,14 +1,14 @@
 webpackJsonp([42],{
 
-/***/ 741:
+/***/ 743:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SelectLayout4Module", function() { return SelectLayout4Module; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SpinnerModule", function() { return SpinnerModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__select_layout_4__ = __webpack_require__(869);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__spinner__ = __webpack_require__(874);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,35 +18,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SelectLayout4Module = /** @class */ (function () {
-    function SelectLayout4Module() {
+var SpinnerModule = /** @class */ (function () {
+    function SpinnerModule() {
     }
-    SelectLayout4Module = __decorate([
+    SpinnerModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__select_layout_4__["a" /* SelectLayout4 */],
+                __WEBPACK_IMPORTED_MODULE_2__spinner__["a" /* Spinner */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__select_layout_4__["a" /* SelectLayout4 */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__spinner__["a" /* Spinner */]),
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_2__select_layout_4__["a" /* SelectLayout4 */]
+                __WEBPACK_IMPORTED_MODULE_2__spinner__["a" /* Spinner */]
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
         })
-    ], SelectLayout4Module);
-    return SelectLayout4Module;
+    ], SpinnerModule);
+    return SpinnerModule;
 }());
 
-//# sourceMappingURL=select-layout-4.module.js.map
+//# sourceMappingURL=spinner.module.js.map
 
 /***/ }),
 
-/***/ 869:
+/***/ 874:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SelectLayout4; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Spinner; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -58,33 +58,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var SelectLayout4 = /** @class */ (function () {
-    function SelectLayout4() {
+var Spinner = /** @class */ (function () {
+    function Spinner() {
         var _this = this;
-        this.onEvent = function (event, item) {
-            if (_this.events[event]) {
-                _this.events[event](item);
-            }
+        this.getData = function () {
+            return _this.data;
         };
     }
+    Spinner.prototype.ngOnChanges = function (changes) {
+        this.path = "assets/svg/" + changes['data'].currentValue.icon + ".svg";
+    };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])('data'),
         __metadata("design:type", Object)
-    ], SelectLayout4.prototype, "data", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])('events'),
-        __metadata("design:type", Object)
-    ], SelectLayout4.prototype, "events", void 0);
-    SelectLayout4 = __decorate([
+    ], Spinner.prototype, "data", void 0);
+    Spinner = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-            selector: 'select-layout-4',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\select\layout-4\select.html"*/'<ion-item color="secondary" no-lines *ngIf="data != null">\n\n  <ion-label>{{data.title}}</ion-label>\n\n  <ion-select interface="popover" [(ngModel)]="data.selectedItemMonth" multiple="false">\n\n    <ion-option *ngFor="let item of data.itemsMonth; let i= index" [value]="item.id">{{item.title}}</ion-option>\n\n  </ion-select>\n\n\n\n  <ion-select interface="popover" [(ngModel)]="data.selectedItemYear" [multiple]="false">\n\n    <ion-option *ngFor="let item of data.itemsYears; let i= index" [value]="item.id">{{item.title}}</ion-option>\n\n  </ion-select>\n\n</ion-item>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\select\layout-4\select.html"*/
+            selector: 'spinner',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\spinner\spinner.html"*/'<img [src]="path" />'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\spinner\spinner.html"*/
         }),
         __metadata("design:paramtypes", [])
-    ], SelectLayout4);
-    return SelectLayout4;
+    ], Spinner);
+    return Spinner;
 }());
 
-//# sourceMappingURL=select-layout-4.js.map
+//# sourceMappingURL=spinner.js.map
 
 /***/ })
 

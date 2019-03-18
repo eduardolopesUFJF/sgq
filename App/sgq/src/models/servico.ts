@@ -9,6 +9,7 @@ export class Servico {
     tipo: string = '';
     idObra: number = 0;
     idChecklist: number = 0;
+    idChecklistGuid: string = '';
     idArea: number = 0;
     idAreaGuid: string = "";
     metaAprovacao: number = 90;

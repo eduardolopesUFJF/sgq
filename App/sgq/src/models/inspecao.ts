@@ -6,6 +6,7 @@ export class Inspecao {
     id: number = 0;
     idGuidInspecao: string = '';
     idServico: number;
+    idGuidServico: string = '';
     dataInspecao: Date;
     dataEncerramento: Date;
     campo1: string = "";

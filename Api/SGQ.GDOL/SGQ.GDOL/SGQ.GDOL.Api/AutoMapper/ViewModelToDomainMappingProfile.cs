@@ -11,9 +11,19 @@ namespace SGQ.GDOL.Api.AutoMapper
         public ViewModelToDomainMappingProfile()
         {
             CreateMap<CentroCustoVM, CentroCusto>();
-            CreateMap<ChecklistItemVM, ChecklistItem>();
             CreateMap<FuncionarioVM, Funcionario>();
             CreateMap<OcorrenciaVM, Ocorrencia>();
+
+            CreateMap<ChecklistItemVM, ChecklistItem>()
+                .ForMember(x => x.Ativo, opt => opt.MapFrom(x => true))
+                .ForMember(x => x.Delete, opt => opt.MapFrom(x => false))
+                .ForMember(x => x.Campo1, opt => opt.MapFrom(x => x.Campo1 ?? ""))
+                .ForMember(x => x.Campo2, opt => opt.MapFrom(x => x.Campo2 ?? ""))
+                .ForMember(x => x.Campo3, opt => opt.MapFrom(x => x.Campo3 ?? ""))
+                .ForMember(x => x.Campo4, opt => opt.MapFrom(x => x.Campo4 ?? ""));
+
+            CreateMap<ItemChecklistServicoVM, ItemChecklistServico>()
+                .ForMember(x => x.Delete, opt => opt.MapFrom(x => x.Delete.HasValue ? x.Delete : false));
 
             CreateMap<InspecaoObraItemVM, InspecaoObraItem>()
                 .ForMember(x => x.Inspecao2, opt => opt.MapFrom(x => x.Inspecao2 == "RA" ? "A" : x.Inspecao2));

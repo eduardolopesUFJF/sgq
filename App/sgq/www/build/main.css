@@ -31909,7 +31909,7 @@ appearance-animation-layout-5 ion-searchbar {
 
 appearance-animation-layout-5 .button-novo {
   background-color: black !important;
-  margin: 4px 8px 8px 8px !important;
+  margin: 10px 8px 8px 8px !important;
 }
 
 appearance-animation-layout-5 .color-black {
@@ -34358,6 +34358,15 @@ page-area .home-icon {
   color: #f1f1f1;
 }
 
+page-area-cadastro ionic-selectable {
+  background: rgba(33, 177, 75, 0.6) !important;
+  margin: 5px 0px 0px 0px !important;
+  padding: 10px !important;
+  border-radius: 4px;
+  z-index: 999;
+  color: white;
+}
+
 page-area-cadastro .button-nav {
   height: 30px !important;
   background: none !important;
@@ -34491,6 +34500,313 @@ page-area-cadastro .scroll-content ion-grid ion-row [padding-top] {
 }
 
 page-area-cadastro .scroll-content ion-grid ion-row [radio] {
+  padding: 0px !important;
+  border-radius: 10px;
+}
+
+page-checklist .header-novo {
+  height: 50px;
+}
+
+page-checklist .button-novo {
+  width: 100%;
+}
+
+page-checklist .home-icon {
+  background-color: transparent;
+  font-size: 25px;
+  margin-top: 1px;
+  color: #f1f1f1;
+}
+
+page-checklist-cadastro .locais {
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+page-checklist-cadastro .button-nav {
+  height: 30px !important;
+  background: none !important;
+  color: white !important;
+  font-size: 1.5em;
+  margin: 2px 0px 0px 2px !important;
+  padding: 0;
+}
+
+page-checklist-cadastro [background-size] {
+  background-position: right !important;
+}
+
+page-checklist-cadastro .scroll-content {
+  padding-bottom: 0 !important;
+  top: 0px !important;
+}
+
+page-checklist-cadastro .scroll-content ion-grid {
+  height: 100%;
+}
+
+page-checklist-cadastro .scroll-content ion-grid ion-row {
+  height: 100%;
+}
+
+page-checklist-cadastro .scroll-content ion-grid ion-row img {
+  height: 150px;
+  width: 275px;
+}
+
+page-checklist-cadastro .scroll-content ion-grid ion-row form ion-item {
+  padding-left: 0 !important;
+  padding-bottom: 15px !important;
+}
+
+page-checklist-cadastro .scroll-content ion-grid ion-row form ion-item.item-input-has-value ion-input {
+  background: rgba(33, 177, 75, 0.6) !important;
+}
+
+page-checklist-cadastro .scroll-content ion-grid ion-row form ion-item.item-input-has-value ion-select {
+  background: rgba(33, 177, 75, 0.6) !important;
+}
+
+page-checklist-cadastro .scroll-content ion-grid ion-row form ion-item.item-input-has-focus ion-input {
+  background: rgba(33, 177, 75, 0.6) !important;
+}
+
+page-checklist-cadastro .scroll-content ion-grid ion-row form ion-item.item-input-has-focus ion-select {
+  background: rgba(33, 177, 75, 0.6) !important;
+}
+
+page-checklist-cadastro .scroll-content ion-grid ion-row form ion-item [error-field] {
+  margin: 0 !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  right: 5px !important;
+  font-size: 12px;
+}
+
+page-checklist-cadastro .scroll-content ion-grid ion-row form ion-item .item-inner {
+  border-bottom: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  padding-right: 0 !important;
+}
+
+page-checklist-cadastro .scroll-content ion-grid ion-row form ion-item ion-label {
+  margin: 0 5px !important;
+  color: black;
+}
+
+page-checklist-cadastro .scroll-content ion-grid ion-row form ion-item ion-textarea {
+  background: rgba(33, 177, 75, 0.4) !important;
+  margin: 5px 10px 0px 0px !important;
+  padding: 5px 10px !important;
+  border-radius: 4px;
+  z-index: 999;
+}
+
+page-checklist-cadastro .scroll-content ion-grid ion-row form ion-item ion-textarea .input-cover {
+  display: none;
+}
+
+page-checklist-cadastro .scroll-content ion-grid ion-row form ion-item ion-input {
+  background: rgba(33, 177, 75, 0.4) !important;
+  margin: 5px 10px 0px 10px !important;
+  padding: 5px 10px !important;
+  border-radius: 4px;
+  z-index: 999;
+}
+
+page-checklist-cadastro .scroll-content ion-grid ion-row form ion-item ion-input .input-cover {
+  display: none;
+}
+
+page-checklist-cadastro .scroll-content ion-grid ion-row form [stacked] {
+  font-size: 14px !important;
+  color: black !important;
+}
+
+page-checklist-cadastro .scroll-content ion-grid ion-row form [bottom-form] {
+  position: relative;
+  display: inline-block;
+  padding-top: 50px;
+  width: 100%;
+}
+
+page-checklist-cadastro .scroll-content ion-grid ion-row form [bottom-form]::after {
+  content: "or try";
+  font-size: 12px;
+  color: #f1f1f1;
+  width: 140px;
+  border-bottom: 1px solid #21b14b;
+  position: absolute;
+  top: 30px;
+  left: calc(50% - 70px);
+}
+
+page-checklist-cadastro .scroll-content ion-grid ion-row form [button-icon-clear] {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-checklist-cadastro .scroll-content ion-grid ion-row [login-title] {
+  color: black;
+}
+
+page-checklist-cadastro .scroll-content ion-grid ion-row [padding-top] {
+  padding-top: 10px;
+}
+
+page-checklist-cadastro .scroll-content ion-grid ion-row [radio] {
+  padding: 0px !important;
+  border-radius: 10px;
+}
+
+page-cadastro-item .locais {
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+page-cadastro-item .list-item {
+  background-color: transparent;
+  padding-bottom: 0px !important;
+  border: 1px solid green;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+page-cadastro-item .button-nav {
+  height: 30px !important;
+  background: none !important;
+  color: white !important;
+  font-size: 1.5em;
+  margin: 2px 0px 0px 2px !important;
+  padding: 0;
+}
+
+page-cadastro-item [background-size] {
+  background-position: right !important;
+}
+
+page-cadastro-item .scroll-content {
+  padding-bottom: 0 !important;
+  top: 0px !important;
+}
+
+page-cadastro-item .scroll-content ion-grid {
+  height: 100%;
+}
+
+page-cadastro-item .scroll-content ion-grid ion-row {
+  height: 100%;
+}
+
+page-cadastro-item .scroll-content ion-grid ion-row img {
+  height: 150px;
+  width: 275px;
+}
+
+page-cadastro-item .scroll-content ion-grid ion-row form ion-item {
+  padding-left: 0 !important;
+  padding-bottom: 15px;
+}
+
+page-cadastro-item .scroll-content ion-grid ion-row form ion-item.item-input-has-value ion-input {
+  background: rgba(33, 177, 75, 0.6) !important;
+}
+
+page-cadastro-item .scroll-content ion-grid ion-row form ion-item.item-input-has-value ion-select {
+  background: rgba(33, 177, 75, 0.6) !important;
+}
+
+page-cadastro-item .scroll-content ion-grid ion-row form ion-item.item-input-has-focus ion-input {
+  background: rgba(33, 177, 75, 0.6) !important;
+}
+
+page-cadastro-item .scroll-content ion-grid ion-row form ion-item.item-input-has-focus ion-select {
+  background: rgba(33, 177, 75, 0.6) !important;
+}
+
+page-cadastro-item .scroll-content ion-grid ion-row form ion-item [error-field] {
+  margin: 0 !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  right: 5px !important;
+  font-size: 12px;
+}
+
+page-cadastro-item .scroll-content ion-grid ion-row form ion-item .item-inner {
+  border-bottom: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  padding-right: 0 !important;
+}
+
+page-cadastro-item .scroll-content ion-grid ion-row form ion-item ion-label {
+  margin: 0 5px !important;
+  color: black;
+}
+
+page-cadastro-item .scroll-content ion-grid ion-row form ion-item ion-textarea {
+  background: rgba(33, 177, 75, 0.4) !important;
+  margin: 5px 10px 0px 0px !important;
+  padding: 5px 10px !important;
+  border-radius: 4px;
+  z-index: 999;
+}
+
+page-cadastro-item .scroll-content ion-grid ion-row form ion-item ion-textarea .input-cover {
+  display: none;
+}
+
+page-cadastro-item .scroll-content ion-grid ion-row form ion-item ion-input {
+  background: rgba(33, 177, 75, 0.4) !important;
+  margin: 5px 10px 0px 10px !important;
+  padding: 5px 10px !important;
+  border-radius: 4px;
+  z-index: 999;
+}
+
+page-cadastro-item .scroll-content ion-grid ion-row form ion-item ion-input .input-cover {
+  display: none;
+}
+
+page-cadastro-item .scroll-content ion-grid ion-row form [stacked] {
+  font-size: 14px !important;
+  color: black !important;
+}
+
+page-cadastro-item .scroll-content ion-grid ion-row form [bottom-form] {
+  position: relative;
+  display: inline-block;
+  padding-top: 50px;
+  width: 100%;
+}
+
+page-cadastro-item .scroll-content ion-grid ion-row form [bottom-form]::after {
+  content: "or try";
+  font-size: 12px;
+  color: #f1f1f1;
+  width: 140px;
+  border-bottom: 1px solid #21b14b;
+  position: absolute;
+  top: 30px;
+  left: calc(50% - 70px);
+}
+
+page-cadastro-item .scroll-content ion-grid ion-row form [button-icon-clear] {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-cadastro-item .scroll-content ion-grid ion-row [login-title] {
+  color: black;
+}
+
+page-cadastro-item .scroll-content ion-grid ion-row [padding-top] {
+  padding-top: 10px;
+}
+
+page-cadastro-item .scroll-content ion-grid ion-row [radio] {
   padding: 0px !important;
   border-radius: 10px;
 }

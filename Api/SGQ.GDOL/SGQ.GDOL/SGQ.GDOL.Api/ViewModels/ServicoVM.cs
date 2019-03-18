@@ -11,6 +11,7 @@ namespace SGQ.GDOL.Api.ViewModels
         public string Tipo { get; set; }
         public int? IdObra { get; set; }
         public int? IdChecklist { get; set; }
+        public string IdChecklistGuid { get; set; }
         public int? IdArea { get; set; }
         public decimal? MetaAprovacao { get; set; }
         public int? Status { get; set; }

@@ -23,7 +23,7 @@ export class AlteracoesPage {
     };
 
     config = {
-        "exclusaoPossivel": true,
+        "exclusaoPossivel": false,
         "icon": "trash",
         "exibirDatas": false,
         "subTitulo": "Data",

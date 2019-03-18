@@ -1,4 +1,4 @@
-webpackJsonp([3,14,43,45],{
+webpackJsonp([3,17,46,48],{
 
 /***/ 689:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SelectLayout1Module", function() { return SelectLayout1Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__select_layout_1__ = __webpack_require__(808);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__select_layout_1__ = __webpack_require__(812);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -50,7 +50,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginLayout2Module", function() { return LoginLayout2Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_layout_2__ = __webpack_require__(814);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_layout_2__ = __webpack_require__(818);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__select_layout_1_select_layout_1_module__ = __webpack_require__(689);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -95,7 +95,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SelectLayout3Module", function() { return SelectLayout3Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__select_layout_3__ = __webpack_require__(815);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__select_layout_3__ = __webpack_require__(819);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -129,7 +129,7 @@ var SelectLayout3Module = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 764:
+/***/ 765:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -138,7 +138,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_login_layout_2_login_layout_2_module__ = __webpack_require__(690);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_component__ = __webpack_require__(893);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_component__ = __webpack_require__(898);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__core_select_layout_3_select_layout_3_module__ = __webpack_require__(691);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -174,7 +174,7 @@ var LoginPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 808:
+/***/ 812:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -220,7 +220,7 @@ var SelectLayout1 = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 814:
+/***/ 818:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -280,17 +280,16 @@ var LoginLayout2 = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'login-layout-2',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\login\layout-2\login.html"*/'<ion-content has-header *ngIf="data != null" background-size style="background-color: white;">\n\n  <ion-grid no-padding *ngIf="data != null">\n\n    <ion-row padding-left padding-right align-items-center>\n\n      <ion-col *ngIf="data.possuiLogo" text-center col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n\n        <img [src]="data.logo">\n\n      </ion-col>\n\n      <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n\n        <ion-item transparent text-center no-lines>\n\n          <h1 ion-text login-title no-margin text-wrap text-capitalize>{{data.title}}</h1>\n\n        </ion-item>\n\n        <form #loginForm="ngForm">\n\n          <!-- <ion-item text-center margin-top transparent>\n\n            <select-layout-3 [data]="data.selectData" [events]="data.selectEvents"></select-layout-3>\n\n          </ion-item> -->\n\n          <ion-item text-center transparent>\n\n            <ion-label stacked>EMPRESA</ion-label>\n\n            <ion-select required [(ngModel)]="empresa" multiple="false" name="empresa" okText="Ok" cancelText="Cancelar">\n\n              <ion-option *ngFor="let item of data.selectData.items; let i= index" [value]="item.title">{{item.title}}</ion-option>\n\n            </ion-select>\n\n          </ion-item>\n\n          <!---Input field username-->\n\n          <ion-item text-center transparent>\n\n            <ion-label stacked>{{data.labelUsername}}</ion-label>\n\n            <ion-input text-center required type="text" [placeholder]="data.username" [(ngModel)]="usuario" name="usuario"></ion-input>\n\n          </ion-item>\n\n          <!---Input field password-->\n\n          <ion-item text-center transparent>\n\n            <ion-label stacked>{{data.labelPassword}}</ion-label>\n\n            <ion-input required text-center [type]="passwordType" clearOnEdit="false" [placeholder]="data.password"\n\n              [(ngModel)]="senha" name="senha" style="margin: 0 !important;"></ion-input>\n\n            <ion-icon item-end name="eye" class="passwordIcon" (click)="hideShowPassword()"></ion-icon>\n\n          </ion-item>\n\n          <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: black !important;"\n\n            (click)="onEvent(\'onLogin\', loginForm.valid)">{{data.login}}</button>\n\n          <button *ngIf="data.possuiRegistrar" ion-button default-button block text-capitalize margin-bottom (click)="onEvent(\'onRegister\')">{{data.register}}</button>\n\n          <button *ngIf="data.possuiEsqueciSenha" ion-button button-clear text-capitalize clear float-right no-padding\n\n            no-margin>{{data.forgotPassword}}</button>\n\n        </form>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\login\layout-2\login.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__utils_toast_service__["a" /* ToastService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__utils_toast_service__["a" /* ToastService */]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__utils_toast_service__["a" /* ToastService */]])
     ], LoginLayout2);
     return LoginLayout2;
-    var _a;
 }());
 
 //# sourceMappingURL=login-layout-2.js.map
 
 /***/ }),
 
-/***/ 815:
+/***/ 819:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -336,7 +335,7 @@ var SelectLayout3 = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 893:
+/***/ 898:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -344,8 +343,8 @@ var SelectLayout3 = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_loading_service__ = __webpack_require__(155);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_usuarioLogin__ = __webpack_require__(894);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_usuario_service__ = __webpack_require__(895);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_usuarioLogin__ = __webpack_require__(899);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_usuario_service__ = __webpack_require__(900);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_toast_service__ = __webpack_require__(350);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_storage__ = __webpack_require__(153);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -543,7 +542,7 @@ var LoginPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 894:
+/***/ 899:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -563,7 +562,7 @@ var UsuarioLogin = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 895:
+/***/ 900:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

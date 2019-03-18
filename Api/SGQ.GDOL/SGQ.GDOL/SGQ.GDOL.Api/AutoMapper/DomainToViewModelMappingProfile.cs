@@ -36,7 +36,7 @@ namespace SGQ.GDOL.Api.AutoMapper
 
             CreateMap<InspecaoObra, InspecaoObraVM>()
                 .ForMember(x => x.Situacao, opt => opt.MapFrom(x => x.Status == 1 ? "Finalizado" : "Em aberto"))
-                .ForMember(x => x.InspecaoObraItens, opt => opt.MapFrom(x => x.InspecaoObraItens.Where(y => !y.Delete)))
+                .ForMember(x => x.InspecaoObraItens, opt => opt.MapFrom(x => x.InspecaoObraItens.Where(y => !y.Delete).OrderBy(y => y.Ordem)))
                 .ForMember(x => x.FuncionarioAprovado, opt => opt.MapFrom(x => x.FuncionarioAprovadoObj.Nome))
                 .ForMember(x => x.FuncionarioInspecionado, opt => opt.MapFrom(x => x.FuncionarioInspecionadoObj.Nome))
                 .ForMember(x => x.Ocorrencias, opt => opt.MapFrom(x => x.Ocorrencias.Where(y => !y.Delete.HasValue && !y.Delete.Value)))
@@ -47,8 +47,9 @@ namespace SGQ.GDOL.Api.AutoMapper
                 .ForMember(x => x.QtdX, opt => opt.MapFrom(x => x.InspecaoObraItens.Count(y => y.Inspecao1.Equals("X"))));
 
             CreateMap<ChecklistItem, ChecklistItemVM>()
-                .ForMember(x => x.Descricao, opt => opt.MapFrom(x => x.Codigo + " - " + x.Descricao))
-                .ForMember(x => x.Tipo, opt => opt.MapFrom(x => x.Tipo == "C" ? "Controlado" : "Especializado"));
+                .ForMember(x => x.Descricao, opt => opt.MapFrom(x => x.Descricao))
+                .ForMember(x => x.Tipo, opt => opt.MapFrom(x => x.Tipo == "C" ? "Controlado" : "Especializado"))
+                .ForMember(x => x.ItensChecklistServico, opt => opt.MapFrom(x => x.ItensChecklistServico.OrderBy(y => y.Ordem)));
             
         }
     }

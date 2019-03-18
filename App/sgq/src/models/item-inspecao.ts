@@ -4,6 +4,7 @@ export class ItemInspecao {
     idInspecaoObra: number = 0;
     idGuidInspecao: string = '';
     idItemServico: number;
+    idGuidItemServico: string = '';
     ordem: string;
     descricao: string;
     inspecao1: string = '';

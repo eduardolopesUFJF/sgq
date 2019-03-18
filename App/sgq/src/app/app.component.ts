@@ -59,7 +59,8 @@ export class MyApp {
       { "title": "Listar alterações", "icon": "list", "component": "AlteracoesPage" },
       { "title": "Publicar alterações", "icon": "cloud-upload", "component": "Subir" },
       { "title": "Descartar alterações", "icon": "trash", "component": "Descartar" },
-      { "title": "Acesso às obras", "icon": "checkmark-circle-outline", "component": "ObraPage" },
+      { "title": "Cadastrar Checklist", "icon": "checkmark-circle-outline", "component": "ChecklistPage" },
+      { "title": "Acesso às obras", "icon": "build", "component": "ObraPage" },
       { "title": "Sair", "icon": "exit", "component": "LoginPage" },
     ];
 
@@ -120,7 +121,7 @@ export class MyApp {
               if (atualizacoes) {
                 this.messageService.exibirMensagemConfirmacao("Existem atualizações que não foram publicadas, ao sair da sua conta elas serão perdidas. Deseja sair mesmo assim?", () => { this.deslogar() });
               } else {
-                this.deslogar();
+                this.messageService.exibirMensagemConfirmacao("Deseja realmente se deslogar?", () => { this.deslogar() });
               }
             }
           );
@@ -194,7 +195,12 @@ export class MyApp {
       this.storage.get('obrasBackup').then(
         obrasBackup => {
           this.storage.set('obras', obrasBackup);
-          this.nav.setRoot("HomePage");
+          this.storage.get('itensChecklistBackup').then(
+            checklistBackup => {
+              this.storage.set('itensChecklist', checklistBackup);
+              this.nav.setRoot("HomePage");
+            }
+          );
         }
       );
     });
@@ -323,6 +329,7 @@ export class MyApp {
     this.checklistService.obterTodas().subscribe(
       data => {
         this.storage.set('itensChecklist', data);
+        this.storage.set('itensChecklistBackup', data);
       },
       error => {
         this.messageService.exibirMensagem("Falha na comunicação com o servidor ao buscar serviços, contate o suporte.");
@@ -357,6 +364,7 @@ export class MyApp {
         this.atualizacao = true;
         this.statusAtualizacao = data;
         this.obterObras();
+        this.obterChecklistServico();
       },
       error => {
         this.loadingService.hide();
