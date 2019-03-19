@@ -1,6 +1,6 @@
 webpackJsonp([4],{
 
-/***/ 770:
+/***/ 773:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VerificacaoPageModule", function() { return VerificacaoPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__verificacao__ = __webpack_require__(902);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__verificacao__ = __webpack_require__(909);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -39,24 +39,7 @@ var VerificacaoPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 788:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Alteracao; });
-var Alteracao = /** @class */ (function () {
-    function Alteracao(values) {
-        if (values === void 0) { values = {}; }
-        Object.assign(this, values);
-    }
-    return Alteracao;
-}());
-
-//# sourceMappingURL=alteracao.js.map
-
-/***/ }),
-
-/***/ 789:
+/***/ 776:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -100,7 +83,47 @@ exports.UUID = UUID;
 
 /***/ }),
 
-/***/ 801:
+/***/ 792:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Alteracao; });
+var Alteracao = /** @class */ (function () {
+    function Alteracao(values) {
+        if (values === void 0) { values = {}; }
+        Object.assign(this, values);
+    }
+    return Alteracao;
+}());
+
+//# sourceMappingURL=alteracao.js.map
+
+/***/ }),
+
+/***/ 793:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ItemChecklist; });
+var ItemChecklist = /** @class */ (function () {
+    function ItemChecklist(values) {
+        if (values === void 0) { values = {}; }
+        this.id = 0;
+        this.campo1 = "";
+        this.campo2 = "";
+        this.campo3 = "";
+        this.campo4 = "";
+        this.itensChecklistServico = [];
+        Object.assign(this, values);
+    }
+    return ItemChecklist;
+}());
+
+//# sourceMappingURL=item-checklist.js.map
+
+/***/ }),
+
+/***/ 805:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -114,6 +137,7 @@ var Servico = /** @class */ (function () {
         this.tipo = '';
         this.idObra = 0;
         this.idChecklist = 0;
+        this.idChecklistGuid = '';
         this.idArea = 0;
         this.idAreaGuid = "";
         this.metaAprovacao = 90;
@@ -133,7 +157,7 @@ var Servico = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 802:
+/***/ 806:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -143,6 +167,7 @@ var Inspecao = /** @class */ (function () {
         if (values === void 0) { values = {}; }
         this.id = 0;
         this.idGuidInspecao = '';
+        this.idGuidServico = '';
         this.campo1 = "";
         this.campo2 = "";
         this.campo3 = "";
@@ -167,25 +192,7 @@ var Inspecao = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 818:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ItemChecklist; });
-var ItemChecklist = /** @class */ (function () {
-    function ItemChecklist(values) {
-        if (values === void 0) { values = {}; }
-        this.itensChecklistServico = [];
-        Object.assign(this, values);
-    }
-    return ItemChecklist;
-}());
-
-//# sourceMappingURL=item-checklist.js.map
-
-/***/ }),
-
-/***/ 819:
+/***/ 822:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -196,6 +203,7 @@ var ItemInspecao = /** @class */ (function () {
         this.id = 0;
         this.idInspecaoObra = 0;
         this.idGuidInspecao = '';
+        this.idGuidItemServico = '';
         this.inspecao1 = '';
         this.inspecao2 = '';
         this.delete = false;
@@ -209,22 +217,22 @@ var ItemInspecao = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 902:
+/***/ 909:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VerificacaoPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_servico__ = __webpack_require__(801);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_inspecao__ = __webpack_require__(802);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_servico__ = __webpack_require__(805);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_inspecao__ = __webpack_require__(806);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(153);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__models_alteracao__ = __webpack_require__(788);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__ = __webpack_require__(789);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__models_alteracao__ = __webpack_require__(792);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__ = __webpack_require__(776);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_uuid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_angular2_uuid__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__utils_message_service__ = __webpack_require__(154);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__models_item_inspecao__ = __webpack_require__(819);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__models_item_checklist__ = __webpack_require__(818);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__models_item_inspecao__ = __webpack_require__(822);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__models_item_checklist__ = __webpack_require__(793);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -259,11 +267,19 @@ var VerificacaoPage = /** @class */ (function () {
         this.itensBackup = [];
         this.inspecaoBackup = new __WEBPACK_IMPORTED_MODULE_3__models_inspecao__["a" /* Inspecao */]();
         this.servico = navParams.data.servico;
-        this.inspecoes = this.servico.inspecoesObra.slice();
+        this.inspecoes = this.ordenar(this.servico.inspecoesObra).slice();
         this.inspecoesBackup = this.servico.inspecoesObra.slice();
         this.obterItemChecklist();
         this.broadcomb = navParams.data.broadcomb + " >> " + this.servico.descricao;
     }
+    VerificacaoPage.prototype.ordenar = function (inspecoes) {
+        return inspecoes.sort(function (a, b) {
+            if (a.dataInspecao > b.dataInspecao)
+                return -1;
+            else
+                return 1;
+        });
+    };
     VerificacaoPage.prototype.atualizarStatus = function () {
         var _this = this;
         setTimeout(function () {
@@ -315,6 +331,9 @@ var VerificacaoPage = /** @class */ (function () {
         this.storage.ready().then(function () {
             _this.storage.get('itensChecklist').then(function (itens) {
                 _this.itemChecklist = itens.find(function (x) { return x.id == _this.servico.idChecklist; });
+                if (!_this.itemChecklist) {
+                    _this.itemChecklist = itens.find(function (x) { return x.idGuid == _this.servico.idChecklistGuid; });
+                }
             });
         });
     };
@@ -325,24 +344,21 @@ var VerificacaoPage = /** @class */ (function () {
         modal.onWillDismiss(function (inspecao) {
             if (inspecao) {
                 inspecao.idGuidInspecao = __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__["UUID"].UUID();
+                inspecao.idGuidServico = _this.servico.idGuidServico;
                 inspecao.idServico = _this.servico.id;
-                _this.storage.ready().then(function () {
-                    _this.storage.get('itensChecklist').then(function (servicos) {
-                        var servico = servicos.find(function (x) { return x.id == _this.servico.idChecklist; });
-                        servico.itensChecklistServico.forEach(function (item) {
-                            var novoItem = new __WEBPACK_IMPORTED_MODULE_8__models_item_inspecao__["a" /* ItemInspecao */]();
-                            novoItem.dataHoraInclusao = new Date();
-                            novoItem.descricao = item.descricao;
-                            novoItem.idItemServico = item.id;
-                            novoItem.idGuidInspecao = inspecao.idGuidInspecao;
-                            novoItem.ordem = item.ordem.toString();
-                            inspecao.inspecaoObraItens.push(novoItem);
-                        });
-                        _this.inspecoes.unshift(inspecao);
-                        _this.inspecoesBackup.unshift(inspecao);
-                        _this.criarInspecao(inspecao);
-                    });
+                _this.itemChecklist.itensChecklistServico.forEach(function (item) {
+                    var novoItem = new __WEBPACK_IMPORTED_MODULE_8__models_item_inspecao__["a" /* ItemInspecao */]();
+                    novoItem.dataHoraInclusao = new Date();
+                    novoItem.descricao = item.descricao;
+                    novoItem.idGuidInspecao = inspecao.idGuidInspecao;
+                    novoItem.ordem = item.ordem.toString();
+                    novoItem.idGuidItemServico = item.idGuid;
+                    novoItem.idItemServico = item.id;
+                    inspecao.inspecaoObraItens.push(novoItem);
                 });
+                _this.inspecoes.unshift(inspecao);
+                _this.inspecoesBackup.unshift(inspecao);
+                _this.criarInspecao(inspecao);
             }
         });
     };

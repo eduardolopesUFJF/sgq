@@ -1,0 +1,15 @@
+No console do code digite:
+ionic cordova run android: emular no android
+ionic cordova build android: gerar build versão debug
+ionic cordova build android--release --prod --aot --minifyjs --minifycss --optimizejs: gerar build versão release
+
+No cmd como adm navegue ate a pasta do angular e digite:
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore minha-chave.keystore platforms\android\app\build\outputs\apk\release\app-release-unsigned.apk alias_nome
+
+Ainda no cmd como adm e na msm pasta que antes digite:
+"..\..\..\..\..\Arquivos\sdk\build-tools\24.0.3\zipalign.exe" -v 4 platforms\android\app\build\outputs\apk\release\app-release-unsigned.apk SGQ.apk
+
+SENHA DA CHAVE: Dudu1234*
+
+tutorial completasso: https://www.youtube.com/watch?v=GjOt_GY-7AY
+

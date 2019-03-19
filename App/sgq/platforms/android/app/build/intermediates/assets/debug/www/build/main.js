@@ -1,4 +1,4 @@
-webpackJsonp([83],{
+webpackJsonp([86],{
 
 /***/ 154:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -122,95 +122,95 @@ webpackEmptyAsyncContext.id = 166;
 var map = {
 	"../core/action-sheet/layout-1/action-sheet-layout-1.module": [
 		692,
-		22
+		25
 	],
 	"../core/action-sheet/layout-2/action-sheet-layout-2.module": [
 		693,
-		21
+		24
 	],
 	"../core/action-sheet/layout-3/action-sheet-layout-3.module": [
 		694,
-		82
+		85
 	],
 	"../core/check-box/layout-1/check-box-layout-1.module": [
 		695,
-		81
+		84
 	],
 	"../core/check-box/layout-2/check-box-layout-2.module": [
 		696,
-		80
+		83
 	],
 	"../core/check-box/layout-3/check-box-layout-3.module": [
 		697,
-		79
+		82
 	],
 	"../core/full-screen-gallery/full-screen-gallery.module": [
 		698,
-		78
+		81
 	],
 	"../core/image-gallery/layout-1/image-gallery-layout-1.module": [
 		699,
-		77
+		80
 	],
 	"../core/image-gallery/layout-2/image-gallery-layout-2.module": [
 		700,
-		76
+		79
 	],
 	"../core/list-view/appearance-animation/layout-1/appearance-animation-layout-1.module": [
 		701,
-		75
+		78
 	],
 	"../core/list-view/appearance-animation/layout-2/appearance-animation-layout-2.module": [
 		702,
-		74
+		77
 	],
 	"../core/list-view/appearance-animation/layout-3/appearance-animation-layout-3.module": [
 		703,
-		73
+		76
 	],
 	"../core/list-view/appearance-animation/layout-4/appearance-animation-layout-4.module": [
 		704,
-		72
+		75
 	],
 	"../core/list-view/appearance-animation/layout-5/appearance-animation-layout-5.module": [
 		688,
-		71
+		74
 	],
 	"../core/list-view/drag-and-drop/layout-1/drag-and-drop-layout-1.module": [
 		705,
-		70
+		73
 	],
 	"../core/list-view/drag-and-drop/layout-2/drag-and-drop-layout-2.module": [
 		706,
-		69
+		72
 	],
 	"../core/list-view/drag-and-drop/layout-3/drag-and-drop-layout-3.module": [
 		707,
-		68
+		71
 	],
 	"../core/list-view/expandable/layout-1/expandable-layout-1.module": [
 		708,
-		67
+		70
 	],
 	"../core/list-view/expandable/layout-2/expandable-layout-2.module": [
 		709,
-		66
+		69
 	],
 	"../core/list-view/expandable/layout-3/expandable-layout-3.module": [
 		710,
-		65
+		68
 	],
 	"../core/list-view/google-card/layout-1/google-card-layout-1.module": [
 		711,
-		64
+		67
 	],
 	"../core/list-view/google-card/layout-2/google-card-layout-2.module": [
 		712,
-		63
+		66
 	],
 	"../core/list-view/google-card/layout-3/google-card-layout-3.module": [
 		713,
-		62
+		65
 	],
 	"../core/list-view/sticky-list-header/layout-1/sticky-list-header-layout-1.module": [
 		714,
@@ -226,23 +226,23 @@ var map = {
 	],
 	"../core/list-view/swipe-to-dismiss/layout-1/swipe-to-dismiss-layout-1.module": [
 		717,
-		61
+		64
 	],
 	"../core/list-view/swipe-to-dismiss/layout-2/swipe-to-dismiss-layout-2.module": [
 		718,
-		60
+		63
 	],
 	"../core/list-view/swipe-to-dismiss/layout-3/swipe-to-dismiss-layout-3.module": [
 		719,
-		59
+		62
 	],
 	"../core/login/layout-1/login-layout-1.module": [
 		720,
-		58
+		61
 	],
 	"../core/login/layout-2/login-layout-2.module": [
 		690,
-		14
+		17
 	],
 	"../core/maps/layout-1/maps-layout-1.module": [
 		721,
@@ -258,155 +258,155 @@ var map = {
 	],
 	"../core/parallax/layout-1/parallax-layout-1.module": [
 		724,
-		20
+		23
 	],
 	"../core/parallax/layout-2/parallax-layout-2.module": [
 		725,
-		19
+		22
 	],
 	"../core/parallax/layout-3/parallax-layout-3.module": [
 		726,
-		18
+		21
 	],
 	"../core/parallax/layout-4/parallax-layout-4.module": [
 		727,
-		17
+		20
 	],
 	"../core/radio-button/layout-1/radio-button-layout-1.module": [
 		728,
-		57
+		60
 	],
 	"../core/radio-button/layout-2/radio-button-layout-2.module": [
 		729,
-		56
+		59
 	],
 	"../core/radio-button/layout-3/radio-button-layout-3.module": [
 		730,
-		55
+		58
 	],
 	"../core/range/layout-1/range-layout-1.module": [
 		731,
-		54
+		57
 	],
 	"../core/range/layout-2/range-layout-2.module": [
 		732,
-		53
+		56
 	],
 	"../core/range/layout-3/range-layout-3.module": [
 		733,
-		52
+		55
 	],
 	"../core/range/layout-4/range-layout-4.module": [
 		734,
-		51
+		54
 	],
 	"../core/register/layout-1/register-layout-1.module": [
 		735,
-		50
+		53
 	],
 	"../core/register/layout-2/register-layout-2.module": [
 		736,
-		49
+		52
 	],
 	"../core/search-bar/layout-1/search-bar-layout-1.module": [
 		737,
-		48
+		51
 	],
 	"../core/search-bar/layout-2/search-bar-layout-2.module": [
 		738,
-		47
+		50
 	],
 	"../core/search-bar/layout-3/search-bar-layout-3.module": [
 		739,
-		46
+		49
 	],
 	"../core/select/layout-1/select-layout-1.module": [
 		689,
-		45
+		48
 	],
 	"../core/select/layout-2/select-layout-2.module": [
 		740,
-		44
+		47
 	],
 	"../core/select/layout-3/select-layout-3.module": [
 		691,
-		43
+		46
 	],
 	"../core/select/layout-4/select-layout-4.module": [
 		741,
-		42
+		45
 	],
 	"../core/select/layout-5/select-layout-5.module": [
 		742,
-		41
+		44
 	],
 	"../core/select/layout-6/select-layout-6.module": [
 		743,
-		40
+		43
 	],
 	"../core/spinner/spinner.module": [
 		744,
-		39
+		42
 	],
 	"../core/splash-screen/layout-1/splash-screen-layout-1.module": [
 		745,
-		38
+		41
 	],
 	"../core/splash-screen/layout-2/splash-screen-layout-2.module": [
 		746,
-		37
+		40
 	],
 	"../core/splash-screen/layout-3/splash-screen-layout-3.module": [
 		747,
-		36
+		39
 	],
 	"../core/sub-image-gallery/layout-1/sub-image-gallery-layout-1.module": [
 		748,
-		35
+		38
 	],
 	"../core/sub-image-gallery/layout-2/sub-image-gallery-layout-2.module": [
 		749,
-		34
+		37
 	],
 	"../core/tabs/layout-1/tabs-layout-1.module": [
 		750,
-		33
+		36
 	],
 	"../core/tabs/layout-2/tabs-layout-2.module": [
 		751,
-		32
+		35
 	],
 	"../core/tabs/layout-3/tabs-layout-3.module": [
 		752,
-		31
+		34
 	],
 	"../core/toggle/layout-1/toggle-layout-1.module": [
 		753,
-		30
+		33
 	],
 	"../core/toggle/layout-2/toggle-layout-2.module": [
 		754,
-		29
+		32
 	],
 	"../core/toggle/layout-3/toggle-layout-3.module": [
 		755,
-		28
+		31
 	],
 	"../core/wizard/layout-1/wizard-layout-1.module": [
 		756,
-		27
+		30
 	],
 	"../core/wizard/layout-2/wizard-layout-2.module": [
 		757,
-		26
+		29
 	],
 	"../core/wizard/layout-3/wizard-layout-3.module": [
 		758,
-		25
+		28
 	],
 	"../pages/alteracoes/alteracoes.module": [
 		759,
-		16
+		19
 	],
 	"../pages/area/area.module": [
 		760,
@@ -414,42 +414,54 @@ var map = {
 	],
 	"../pages/area/cadastro/area-cadastro.module": [
 		761,
-		12
+		13
 	],
-	"../pages/home/home.module": [
+	"../pages/checklist/cadastro-item/cadastro-item.module": [
 		762,
-		24
+		14
 	],
-	"../pages/item-area/item-area.module": [
+	"../pages/checklist/cadastro/checklist-cadastro.module": [
 		763,
+		15
+	],
+	"../pages/checklist/checklist.module": [
+		764,
 		10
 	],
+	"../pages/home/home.module": [
+		765,
+		27
+	],
+	"../pages/item-area/item-area.module": [
+		766,
+		11
+	],
 	"../pages/login/login.component.module": [
-		764,
+		767,
 		3
 	],
 	"../pages/obra/obra.module": [
-		765,
-		15
+		768,
+		18
 	],
 	"../pages/ocorrencia/manter/manter-ocorrencia.module": [
-		766,
-		23
+		769,
+		26
 	],
 	"../pages/ocorrencia/ocorrencia.module": [
-		767,
+		770,
 		8
 	],
 	"../pages/verificacao/manter/manter-verificacao.module": [
-		768,
-		13
+		771,
+		16
 	],
 	"../pages/verificacao/realizar/realizar-verificacao.module": [
-		769,
-		11
+		772,
+		12
 	],
 	"../pages/verificacao/verificacao.module": [
-		770,
+		773,
 		4
 	]
 };
@@ -555,7 +567,7 @@ var AppSettings = Object.freeze({
 
 /***/ }),
 
-/***/ 352:
+/***/ 353:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -567,7 +579,7 @@ var AppSettings = Object.freeze({
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_network__ = __webpack_require__(309);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_message_service__ = __webpack_require__(154);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__utils_loading_service__ = __webpack_require__(155);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_obra_service__ = __webpack_require__(353);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_obra_service__ = __webpack_require__(354);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_storage__ = __webpack_require__(153);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__services_checklist_service__ = __webpack_require__(666);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__services_alteracao_service__ = __webpack_require__(667);
@@ -623,7 +635,8 @@ var MyApp = /** @class */ (function () {
             { "title": "Listar alterações", "icon": "list", "component": "AlteracoesPage" },
             { "title": "Publicar alterações", "icon": "cloud-upload", "component": "Subir" },
             { "title": "Descartar alterações", "icon": "trash", "component": "Descartar" },
-            { "title": "Acesso às obras", "icon": "checkmark-circle-outline", "component": "ObraPage" },
+            { "title": "Cadastrar Checklist", "icon": "checkmark-circle-outline", "component": "ChecklistPage" },
+            { "title": "Acesso às obras", "icon": "build", "component": "ObraPage" },
             { "title": "Sair", "icon": "exit", "component": "LoginPage" },
         ];
         this.params = {
@@ -685,7 +698,7 @@ var MyApp = /** @class */ (function () {
                             _this.messageService.exibirMensagemConfirmacao("Existem atualizações que não foram publicadas, ao sair da sua conta elas serão perdidas. Deseja sair mesmo assim?", function () { _this.deslogar(); });
                         }
                         else {
-                            _this.deslogar();
+                            _this.messageService.exibirMensagemConfirmacao("Deseja realmente se deslogar?", function () { _this.deslogar(); });
                         }
                     });
                 });
@@ -754,7 +767,10 @@ var MyApp = /** @class */ (function () {
         this.storage.ready().then(function () {
             _this.storage.get('obrasBackup').then(function (obrasBackup) {
                 _this.storage.set('obras', obrasBackup);
-                _this.nav.setRoot("HomePage");
+                _this.storage.get('itensChecklistBackup').then(function (checklistBackup) {
+                    _this.storage.set('itensChecklist', checklistBackup);
+                    _this.nav.setRoot("HomePage");
+                });
             });
         });
     };
@@ -881,6 +897,7 @@ var MyApp = /** @class */ (function () {
         var _this = this;
         this.checklistService.obterTodas().subscribe(function (data) {
             _this.storage.set('itensChecklist', data);
+            _this.storage.set('itensChecklistBackup', data);
         }, function (error) {
             _this.messageService.exibirMensagem("Falha na comunicação com o servidor ao buscar serviços, contate o suporte.");
         });
@@ -909,6 +926,7 @@ var MyApp = /** @class */ (function () {
             _this.atualizacao = true;
             _this.statusAtualizacao = data;
             _this.obterObras();
+            _this.obterChecklistServico();
         }, function (error) {
             _this.loadingService.hide();
             _this.messageService.exibirMensagem("Falha na comunicação com o servidor, contate o suporte.");
@@ -969,7 +987,7 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 353:
+/***/ 354:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1053,7 +1071,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(308);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(306);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(352);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(353);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_network__ = __webpack_require__(309);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__utils_toast_service__ = __webpack_require__(350);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utils_loading_service__ = __webpack_require__(155);
@@ -1062,7 +1080,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__directives_mask_directive__ = __webpack_require__(686);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_date_picker__ = __webpack_require__(687);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__utils_message_service__ = __webpack_require__(154);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_ionic_selectable__ = __webpack_require__(354);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_ionic_selectable__ = __webpack_require__(352);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1172,6 +1190,9 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/alteracoes/alteracoes.module#AlteracoesPageModule', name: 'AlteracoesPage', segment: 'alteracoes', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/area/area.module#AreaPageModule', name: 'AreaPage', segment: 'area', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/area/cadastro/area-cadastro.module#AreaCadastroPageModule', name: 'AreaCadastroPage', segment: 'area-cadastro', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/checklist/cadastro-item/cadastro-item.module#ChecklistCadastroPageModule', name: 'CadastroItemPage', segment: 'cadastro-item', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/checklist/cadastro/checklist-cadastro.module#ChecklistCadastroPageModule', name: 'ChecklistCadastroPage', segment: 'checklist-cadastro', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/checklist/checklist.module#ChecklistPageModule', name: 'ChecklistPage', segment: 'checklist', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/item-area/item-area.module#ItemAreaPageModule', name: 'ItemAreaPage', segment: 'item-area', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.component.module#LoginPageModule', name: 'LoginPage', segment: 'login.component', priority: 'low', defaultHistory: [] },
