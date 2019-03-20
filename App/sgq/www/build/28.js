@@ -1,1 +1,119 @@
-webpackJsonp([28],{690:function(l,n,u){"use strict";function t(l){return r._33(0,[(l()(),r._10(0,0,null,null,2,"ion-title",[],null,null,null,T.b,T.a)),r._9(1,49152,null,0,k.a,[x.a,r.n,r.J,[2,I.a],[2,w.a]],null,null),(l()(),r._31(2,0,["",""]))],null,function(l,n){l(n,2,0,n.component.data.headerTitle)})}function e(l){return r._33(0,[(l()(),r._10(0,0,null,null,9,"div",[["parallax-header",""]],null,null,null,null,null)),(l()(),r._31(-1,null,["\n      "])),(l()(),r._31(-1,null,["\n      "])),(l()(),r._10(3,0,null,null,1,"h2",[["no-margin",""],["parallax-title",""]],null,null,null,null,null)),(l()(),r._31(4,null,["",""])),(l()(),r._31(-1,null,["\n      "])),(l()(),r._31(-1,null,["\n      "])),(l()(),r._10(7,0,null,null,1,"h2",[["no-margin",""],["parallax-subtitle",""]],null,null,null,null,null)),(l()(),r._31(8,null,["",""])),(l()(),r._31(-1,null,["\n    "]))],null,function(l,n){var u=n.component;l(n,4,0,u.data.title);l(n,8,0,u.data.subtitle)})}function a(l){return r._33(0,[(l()(),r._10(0,0,null,null,25,"ion-item",[["class","item item-block"],["default-item",""],["no-lines",""],["no-padding",""]],null,[[null,"click"]],function(l,n,u){var t=!0;if("click"===n){t=!1!==l.component.onEvent("onItemClick",l.context.$implicit)&&t}return t},A.b,A.a)),r._9(1,1097728,null,3,H.a,[E.a,x.a,r.n,r.J,[2,J.a]],null,null),r._29(335544320,3,{contentLabel:0}),r._29(603979776,4,{_buttons:1}),r._29(603979776,5,{_icons:1}),r._9(5,16384,null,0,C.a,[],null,null),(l()(),r._31(-1,2,["\n              "])),(l()(),r._31(-1,2,["\n              "])),(l()(),r._10(8,0,null,0,4,"ion-thumbnail",[["item-start",""]],null,null,null,null,null)),r._9(9,16384,null,0,S.a,[],null,null),(l()(),r._31(-1,null,["\n                "])),(l()(),r._10(11,0,null,null,0,"img",[],[[8,"src",4],[8,"alt",0]],null,null,null,null)),(l()(),r._31(-1,null,["\n              "])),(l()(),r._31(-1,2,["\n              "])),(l()(),r._31(-1,2,["\n              "])),(l()(),r._10(15,0,null,2,1,"h2",[["item-title",""]],null,null,null,null,null)),(l()(),r._31(16,null,["",""])),(l()(),r._31(-1,2,["\n              "])),(l()(),r._31(-1,2,["\n              "])),(l()(),r._10(19,0,null,2,1,"h3",[["item-subtitle",""],["text-wrap",""]],null,null,null,null,null)),(l()(),r._31(20,null,["",""])),(l()(),r._31(-1,2,["\n              "])),(l()(),r._31(-1,2,["\n              "])),(l()(),r._10(23,0,null,4,1,"ion-button",[["box-shadow",""],["button-follow",""],["item-end",""]],null,null,null,null,null)),(l()(),r._31(24,null,["",""])),(l()(),r._31(-1,2,["\n          "]))],null,function(l,n){l(n,11,0,n.context.$implicit.image,n.context.$implicit.imageAlt);l(n,16,0,n.context.$implicit.title);l(n,20,0,n.context.$implicit.subtitle);l(n,24,0,n.context.$implicit.button)})}function i(l){return r._33(0,[(l()(),r._10(0,0,null,null,13,"ion-row",[["class","row"]],null,null,null,null,null)),r._9(1,16384,null,0,P.a,[],null,null),(l()(),r._31(-1,null,["\n      "])),(l()(),r._10(3,0,null,null,9,"ion-col",[["class","col"],["col-12",""]],null,null,null,null,null)),r._9(4,16384,null,0,O.a,[],null,null),(l()(),r._31(-1,null,["\n        "])),(l()(),r._10(6,0,null,null,5,"ion-list",[["no-margin",""]],null,null,null,null,null)),r._9(7,16384,null,0,$.a,[x.a,r.n,r.J,j.a,F.l,L.a],null,null),(l()(),r._31(-1,null,["\n          "])),(l()(),r._5(16777216,null,null,1,null,a)),r._9(10,802816,null,0,V.i,[r.T,r.P,r.w],{ngForOf:[0,"ngForOf"]},null),(l()(),r._31(-1,null,["\n        "])),(l()(),r._31(-1,null,["\n      "])),(l()(),r._31(-1,null,["\n    "]))],function(l,n){l(n,10,0,n.component.data.items)},null)}function o(l){return r._33(0,[r._29(402653184,1,{content:0}),(l()(),r._31(-1,null,["\n"])),(l()(),r._10(2,0,null,null,21,"ion-header",[["header-ios",""]],null,null,null,null,null)),r._9(3,16384,null,0,z.a,[x.a,r.n,r.J,[2,K.a]],null,null),(l()(),r._31(-1,null,["\n  "])),(l()(),r._10(5,0,null,null,17,"ion-navbar",[["class","toolbar"],["transparent",""]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,M.b,M.a)),r._9(6,278528,null,0,V.h,[r.w,r.x,r.n,r.K],{ngClass:[0,"ngClass"]},null),r._25(7,{active:0}),r._9(8,49152,null,0,w.a,[N.a,[2,K.a],[2,q.a],x.a,r.n,r.J],null,null),(l()(),r._31(-1,3,["\n    "])),(l()(),r._10(10,0,null,0,8,"button",[["ion-button",""],["menuToggle",""]],[[8,"hidden",0]],[[null,"click"]],function(l,n,u){var t=!0;if("click"===n){t=!1!==r._22(l,12).toggle()&&t}return t},B.b,B.a)),r._9(11,1097728,[[2,4]],0,R.a,[[8,""],x.a,r.n,r.J],null,null),r._9(12,1064960,null,0,D.a,[G.a,[2,K.a],[2,R.a],[2,w.a]],{menuToggle:[0,"menuToggle"]},null),r._9(13,16384,null,1,Q.a,[x.a,r.n,r.J,[2,I.a],[2,w.a]],null,null),r._29(603979776,2,{_buttons:1}),(l()(),r._31(-1,0,["\n      "])),(l()(),r._10(16,0,null,0,1,"ion-icon",[["role","img"]],[[2,"hide",null]],null,null,null,null)),r._9(17,147456,null,0,U.a,[x.a,r.n,r.J],{name:[0,"name"]},null),(l()(),r._31(-1,0,["\n    "])),(l()(),r._31(-1,3,["\n    "])),(l()(),r._5(16777216,null,3,1,null,t)),r._9(21,16384,null,0,V.j,[r.T,r.P],{ngIf:[0,"ngIf"]},null),(l()(),r._31(-1,3,["\n  "])),(l()(),r._31(-1,null,["\n"])),(l()(),r._31(-1,null,["\n\n"])),(l()(),r._10(25,0,null,null,21,"ion-content",[["elastic-header",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,W.b,W.a)),r._9(26,4374528,[[1,4]],0,X.a,[x.a,j.a,L.a,r.n,r.J,N.a,Y.a,r.C,[2,K.a],[2,q.a]],null,null),r._9(27,81920,null,0,Z.a,[r.n,r.J],null,null),(l()(),r._31(-1,1,["\n  "])),(l()(),r._31(-1,1,["\n  "])),(l()(),r._10(30,0,null,1,7,"div",[["background-size",""],["id","elastic-header"]],null,null,null,null,null)),r._9(31,278528,null,0,V.m,[r.x,r.n,r.K],{ngStyle:[0,"ngStyle"]},null),r._25(32,{"background-image":0}),(l()(),r._31(-1,null,["\n    "])),(l()(),r._31(-1,null,["\n    "])),(l()(),r._5(16777216,null,null,1,null,e)),r._9(36,16384,null,0,V.j,[r.T,r.P],{ngIf:[0,"ngIf"]},null),(l()(),r._31(-1,null,["\n  "])),(l()(),r._31(-1,1,["\n  "])),(l()(),r._31(-1,1,["\n  "])),(l()(),r._10(40,0,null,1,5,"ion-grid",[["class","grid"],["no-padding",""]],null,null,null,null,null)),r._9(41,16384,null,0,ll.a,[],null,null),(l()(),r._31(-1,null,["\n    "])),(l()(),r._5(16777216,null,null,1,null,i)),r._9(44,16384,null,0,V.j,[r.T,r.P],{ngIf:[0,"ngIf"]},null),(l()(),r._31(-1,null,["\n  "])),(l()(),r._31(-1,1,["\n"])),(l()(),r._31(-1,null,["\n"]))],function(l,n){var u=n.component;l(n,6,0,l(n,7,0,u.isClassActive()));l(n,12,0,"");l(n,17,0,u.menu);l(n,21,0,null!=u.data),l(n,27,0);l(n,31,0,l(n,32,0,"url("+u.headerImage+")"));l(n,36,0,null!=u.data);l(n,44,0,null!=u.data)},function(l,n){l(n,5,0,r._22(n,8)._hidden,r._22(n,8)._sbPadding);l(n,10,0,r._22(n,12).isHidden);l(n,16,0,r._22(n,17)._hidden);l(n,25,0,r._22(n,26).statusbarPadding,r._22(n,26)._hasRefresher)})}Object.defineProperty(n,"__esModule",{value:!0});var r=u(2),s=(u(0),u(55),function(){function l(){this.headerImage=""}return l.prototype.onEvent=function(l,n,u){u&&u.stopPropagation(),this.events[l]&&this.events[l](n)},l.prototype.ngOnChanges=function(l){l.data&&l.data.currentValue&&(this.headerImage=l.data.currentValue.headerImage),this.subscribeToIonScroll()},l.prototype.ngAfterViewInit=function(){this.subscribeToIonScroll()},l.prototype.ngAfterViewChecked=function(){this.subscribeToIonScroll()},l.prototype.isClassActive=function(){return this.active},l.prototype.subscribeToIonScroll=function(){var l=this;null!=this.content&&null!=this.content.ionScroll&&this.content.ionScroll.subscribe(function(n){l.active=!(n.scrollTop<200)})},l}()),c=u(745),_=function(){return function(){}}(),d=u(190),h=u(191),f=u(192),m=u(193),g=u(194),p=u(195),b=u(196),v=u(197),y=u(198),T=u(359),k=u(84),x=u(3),I=u(51),w=u(39),A=u(129),H=u(24),E=u(21),J=u(50),C=u(60),S=u(203),P=u(81),O=u(82),$=u(56),j=u(6),F=u(10),L=u(13),V=u(15),z=u(131),K=u(7),M=u(360),N=u(12),q=u(29),B=u(38),R=u(27),D=u(200),G=u(33),Q=u(132),U=u(36),W=u(199),X=u(30),Y=u(32),Z=u(746),ll=u(130),nl=r._8({encapsulation:2,styles:[],data:{}}),ul=r._6("parallax-layout-1",s,function(l){return r._33(0,[(l()(),r._10(0,0,null,null,1,"parallax-layout-1",[],null,null,null,o,nl)),r._9(1,13156352,null,0,s,[],null,null)],null,null)},{data:"data",events:"events"},{},[]),tl=u(20),el=u(128),al=u(49);u.d(n,"ParallaxLayout1ModuleNgFactory",function(){return il});var il=r._7(_,[],function(l){return r._18([r._19(512,r.k,r._3,[[8,[d.a,h.a,f.a,m.a,g.a,p.a,b.a,v.a,y.a,ul]],[3,r.k],r.A]),r._19(4608,V.l,V.k,[r.y,[2,V.u]]),r._19(4608,tl.r,tl.r,[]),r._19(4608,tl.d,tl.d,[]),r._19(512,V.b,V.b,[]),r._19(512,tl.p,tl.p,[]),r._19(512,tl.e,tl.e,[]),r._19(512,tl.n,tl.n,[]),r._19(512,el.a,el.a,[]),r._19(512,el.b,el.b,[]),r._19(512,c.a,c.a,[]),r._19(512,_,_,[]),r._19(256,al.a,s,[])])})},745:function(l,n,u){"use strict";u.d(n,"a",function(){return t});u(0),u(746);var t=function(){return function(){}}()},746:function(l,n,u){"use strict";u.d(n,"a",function(){return t});u(0);var t=function(){function l(l,n){this.element=l,this.renderer=n}return l.prototype.ngOnInit=function(){var l=this;this.scrollerHandle=this.element.nativeElement.getElementsByClassName("scroll-content")[0],this.header=this.scrollerHandle.firstElementChild,this.headerHeight=this.scrollerHandle.clientHeight,this.ticking=!1,this.renderer.setElementStyle(this.header,"webkitTransformOrigin","center bottom"),window.addEventListener("resize",function(){l.headerHeight=l.scrollerHandle.clientHeight},!1),this.scrollerHandle.addEventListener("scroll",function(){l.ticking||window.requestAnimationFrame(function(){l.updateElasticHeader()}),l.ticking=!0})},l.prototype.updateElasticHeader=function(){this.scrollTop=this.scrollerHandle.scrollTop,this.scrollTop>=0?(this.translateAmt=this.scrollTop/2,this.scaleAmt=1):(this.translateAmt=0,this.scaleAmt=-this.scrollTop/this.headerHeight+1),this.renderer.setElementStyle(this.header,"webkitTransform","translate3d(0,"+this.translateAmt+"px,0) scale("+this.scaleAmt+","+this.scaleAmt+")"),this.ticking=!1},l}()}});
+webpackJsonp([28],{
+
+/***/ 758:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WizardLayout3Module", function() { return WizardLayout3Module; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wizard_layout_3__ = __webpack_require__(889);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var WizardLayout3Module = /** @class */ (function () {
+    function WizardLayout3Module() {
+    }
+    WizardLayout3Module = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__wizard_layout_3__["a" /* WizardLayout3 */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__wizard_layout_3__["a" /* WizardLayout3 */]),
+            ],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_2__wizard_layout_3__["a" /* WizardLayout3 */]
+            ],
+            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
+        })
+    ], WizardLayout3Module);
+    return WizardLayout3Module;
+}());
+
+//# sourceMappingURL=wizard-layout-3.module.js.map
+
+/***/ }),
+
+/***/ 889:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WizardLayout3; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var WizardLayout3 = /** @class */ (function () {
+    function WizardLayout3() {
+        this.next = true;
+        this.finish = true;
+        this.next = true;
+        this.finish = false;
+    }
+    WizardLayout3.prototype.changeSlide = function (index) {
+        if (index > 0) {
+            this.slider.slideNext(300);
+        }
+        else {
+            this.slider.slidePrev(300);
+        }
+    };
+    WizardLayout3.prototype.slideHasChanged = function (index) {
+        try {
+            this.next = this.slider.getActiveIndex() < (this.slider.length() - 1);
+            this.finish = this.slider.isEnd();
+        }
+        catch (e) { }
+    };
+    WizardLayout3.prototype.ngOnChanges = function (changes) {
+        this.data = changes['data'].currentValue;
+    };
+    WizardLayout3.prototype.onEvent = function (event) {
+        if (this.events[event]) {
+            this.events[event]();
+        }
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], WizardLayout3.prototype, "data", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], WizardLayout3.prototype, "events", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])('wizardSlider'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* Slides */])
+    ], WizardLayout3.prototype, "slider", void 0);
+    WizardLayout3 = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'wizard-layout-3',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\wizard\layout-3\wizard.html"*/'<!--Theme Wizard Big Image With Text -->\n\n<ion-slides #wizardSlider (ionSlideDidChange)="slideHasChanged()" pager="true" *ngIf="data != null">\n\n  <ion-slide background-size padding *ngFor="let item of data.items;" [ngStyle]="{\'background-image\': \'url(\' + item.backgroundImage + \')\'}">\n\n    <!--Wizard Content -->\n\n    <div wizard-content text-center>\n\n      <!--Wizard Subitem -->\n\n      <h3 wizard-subtitle margin-bottom>{{item.subtitle}}</h3>\n\n      <!--Wizard Title -->\n\n      <h1 wizard-title no-margin>{{item.title}}</h1>\n\n    </div>\n\n  </ion-slide>\n\n</ion-slides>\n\n<!--Button section-->\n\n<div *ngIf="data != null" text-center>\n\n  <button ion-button default-button wizard-button text-capitalize (click)="changeSlide(1)" *ngIf="next">\n\n        {{data.btnNext}}\n\n    </button>\n\n  <button ion-button default-button wizard-button text-capitalize (click)="onEvent(\'onFinish\')" *ngIf="finish">\n\n        {{data.btnFinish}}\n\n    </button>\n\n</div>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\wizard\layout-3\wizard.html"*/
+        }),
+        __metadata("design:paramtypes", [])
+    ], WizardLayout3);
+    return WizardLayout3;
+}());
+
+//# sourceMappingURL=wizard-layout-3.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=28.js.map

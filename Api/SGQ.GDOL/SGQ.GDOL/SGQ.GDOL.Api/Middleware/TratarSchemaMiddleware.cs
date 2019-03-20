@@ -17,6 +17,13 @@ namespace SGQ.GDOL.Api.Middleware
         public async Task InvokeAsync(HttpContext context)
         {
             CredenciaisBanco.Schema = "GDOLSGQ_" + context.Request.Headers.FirstOrDefault(x => x.Key == "BancoSchema").Value.ToString().ToUpper();
+
+            //Remover após correção no app
+            if (CredenciaisBanco.Schema.ToUpper().Equals("GDOLSGQ_ARCO"))
+            {
+                CredenciaisBanco.Schema = "GDOLSGQ_ARCOS";
+            }
+
             if (CredenciaisBanco.Schema.Equals("GDOLSGQ_GDOL"))
             {
                 CredenciaisBanco.Schema = "GDOLSGQ";

@@ -47,7 +47,7 @@ export class LoginPage {
                 },
                 {
                     "id": 3,
-                    "title": "ARCO"
+                    "title": "ARCOS"
                 },
                 {
                     "id": 4,

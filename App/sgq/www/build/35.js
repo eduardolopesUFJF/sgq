@@ -1,1 +1,90 @@
-webpackJsonp([35],{725:function(n,l,u){"use strict";function t(n){return c._33(0,[(n()(),c._10(0,0,null,null,20,"ion-slide",[["background-size",""],["padding",""]],null,null,null,x.b,x.a)),c._9(1,278528,null,0,y.m,[c.x,c.n,c.K],{ngStyle:[0,"ngStyle"]},null),c._25(2,{"background-image":0}),c._9(3,180224,null,0,z.a,[c.n,c.J,k.a],null,null),(n()(),c._31(-1,0,["\n    "])),(n()(),c._31(-1,0,["\n    "])),(n()(),c._10(6,0,null,0,13,"div",[["text-center",""],["wizard-content",""]],null,null,null,null,null)),(n()(),c._31(-1,null,["\n      "])),(n()(),c._31(-1,null,["\n      "])),(n()(),c._10(9,0,null,null,1,"h3",[["margin-bottom",""],["wizard-subtitle",""]],null,null,null,null,null)),(n()(),c._31(10,null,["",""])),(n()(),c._31(-1,null,["\n      "])),(n()(),c._31(-1,null,["\n      "])),(n()(),c._10(13,0,null,null,1,"h1",[["margin-bottom",""],["wizard-title",""]],null,null,null,null,null)),(n()(),c._31(14,null,["",""])),(n()(),c._31(-1,null,["\n      "])),(n()(),c._31(-1,null,["\n      "])),(n()(),c._10(17,0,null,null,1,"h3",[["wizard-description",""]],null,null,null,null,null)),(n()(),c._31(18,null,["",""])),(n()(),c._31(-1,null,["\n    "])),(n()(),c._31(-1,0,["\n  "]))],function(n,l){n(l,1,0,n(l,2,0,"url("+l.context.$implicit.backgroundSlider+")"))},function(n,l){n(l,10,0,l.context.$implicit.welcome);n(l,14,0,l.context.$implicit.title);n(l,18,0,l.context.$implicit.description)})}function i(n){return c._33(0,[(n()(),c._10(0,0,null,null,5,"ion-slides",[["pager","true"]],null,[[null,"ionSlideDidChange"]],function(n,l,u){var t=!0;if("ionSlideDidChange"===l){t=!1!==n.component.slideHasChanged()&&t}return t},S.b,S.a)),c._9(1,1228800,[[1,4],["wizardSlider",4]],0,k.a,[I.a,C.a,c.C,[2,P.a],c.n,c.J],{pager:[0,"pager"]},{ionSlideDidChange:"ionSlideDidChange"}),(n()(),c._31(-1,0,["\n  "])),(n()(),c._5(16777216,null,0,1,null,t)),c._9(4,802816,null,0,y.i,[c.T,c.P,c.w],{ngForOf:[0,"ngForOf"]},null),(n()(),c._31(-1,0,["\n"]))],function(n,l){var u=l.component;n(l,1,0,"true");n(l,4,0,u.data.items)},null)}function e(n){return c._33(0,[(n()(),c._10(0,0,null,null,2,"button",[["default-button",""],["ion-button",""],["text-capitalize",""],["wizard-button",""]],null,[[null,"click"]],function(n,l,u){var t=!0;if("click"===l){t=!1!==n.component.changeSlide(1)&&t}return t},j.b,j.a)),c._9(1,1097728,null,0,F.a,[[8,""],I.a,c.n,c.J],null,null),(n()(),c._31(2,0,["\n        ","\n    "]))],null,function(n,l){n(l,2,0,l.component.data.btnNext)})}function a(n){return c._33(0,[(n()(),c._10(0,0,null,null,2,"button",[["default-button",""],["ion-button",""],["text-capitalize",""],["wizard-button",""]],null,[[null,"click"]],function(n,l,u){var t=!0;if("click"===l){t=!1!==n.component.onEvent("onFinish")&&t}return t},j.b,j.a)),c._9(1,1097728,null,0,F.a,[[8,""],I.a,c.n,c.J],null,null),(n()(),c._31(2,0,["\n        ","\n    "]))],null,function(n,l){n(l,2,0,l.component.data.btnFinish)})}function o(n){return c._33(0,[(n()(),c._10(0,0,null,null,7,"div",[["text-center",""]],null,null,null,null,null)),(n()(),c._31(-1,null,["\n  "])),(n()(),c._5(16777216,null,null,1,null,e)),c._9(3,16384,null,0,y.j,[c.T,c.P],{ngIf:[0,"ngIf"]},null),(n()(),c._31(-1,null,["\n  "])),(n()(),c._5(16777216,null,null,1,null,a)),c._9(6,16384,null,0,y.j,[c.T,c.P],{ngIf:[0,"ngIf"]},null),(n()(),c._31(-1,null,["\n"]))],function(n,l){var u=l.component;n(l,3,0,u.next);n(l,6,0,u.finish)},null)}function r(n){return c._33(0,[c._29(671088640,1,{slider:0}),(n()(),c._5(16777216,null,null,1,null,i)),c._9(2,16384,null,0,y.j,[c.T,c.P],{ngIf:[0,"ngIf"]},null),(n()(),c._31(-1,null,["\n"])),(n()(),c._31(-1,null,["\n"])),(n()(),c._5(16777216,null,null,1,null,o)),c._9(6,16384,null,0,y.j,[c.T,c.P],{ngIf:[0,"ngIf"]},null),(n()(),c._31(-1,null,["\n"]))],function(n,l){var u=l.component;n(l,2,0,null!=u.data);n(l,6,0,null!=u.data)},null)}Object.defineProperty(l,"__esModule",{value:!0});var c=u(2),_=(u(0),u(55),function(){function n(){this.next=!0,this.finish=!0,this.next=!0,this.finish=!1}return n.prototype.changeSlide=function(n){n>0?this.slider.slideNext(300):this.slider.slidePrev(300)},n.prototype.slideHasChanged=function(n){try{this.next=this.slider.getActiveIndex()<this.slider.length()-1,this.finish=this.slider.isEnd()}catch(n){}},n.prototype.ngOnChanges=function(n){this.data=n.data.currentValue},n.prototype.onEvent=function(n){this.events[n]&&this.events[n](),console.log(n)},n}()),d=function(){return function(){}}(),s=u(190),f=u(191),p=u(192),g=u(193),h=u(194),b=u(195),v=u(196),m=u(197),w=u(198),x=u(781),y=u(15),z=u(210),k=u(134),S=u(782),I=u(3),C=u(6),P=u(7),j=u(38),F=u(27),J=c._8({encapsulation:2,styles:[],data:{}}),T=c._6("wizard-layout-2",_,function(n){return c._33(0,[(n()(),c._10(0,0,null,null,1,"wizard-layout-2",[],null,null,null,r,J)),c._9(1,573440,null,0,_,[],null,null)],null,null)},{data:"data",events:"events"},{},[]),D=u(20),O=u(128),$=u(49);u.d(l,"WizardLayout2ModuleNgFactory",function(){return E});var E=c._7(d,[],function(n){return c._18([c._19(512,c.k,c._3,[[8,[s.a,f.a,p.a,g.a,h.a,b.a,v.a,m.a,w.a,T]],[3,c.k],c.A]),c._19(4608,y.l,y.k,[c.y,[2,y.u]]),c._19(4608,D.r,D.r,[]),c._19(4608,D.d,D.d,[]),c._19(512,y.b,y.b,[]),c._19(512,D.p,D.p,[]),c._19(512,D.e,D.e,[]),c._19(512,D.n,D.n,[]),c._19(512,O.a,O.a,[]),c._19(512,O.b,O.b,[]),c._19(512,d,d,[]),c._19(256,$.a,_,[])])})},781:function(n,l,u){"use strict";function t(n){return i._33(2,[(n()(),i._10(0,0,null,null,1,"div",[["class","slide-zoom"]],null,null,null,null,null)),i._21(null,0)],null,null)}u.d(l,"a",function(){return e}),l.b=t;var i=u(2),e=i._8({encapsulation:2,styles:[],data:{}})},782:function(n,l,u){"use strict";function t(n){return i._33(2,[(n()(),i._10(0,0,null,null,3,"div",[["class","swiper-container"]],[[1,"dir",0]],null,null,null,null)),(n()(),i._10(1,0,null,null,1,"div",[["class","swiper-wrapper"]],null,null,null,null,null)),i._21(null,0),(n()(),i._10(3,0,null,null,0,"div",[["class","swiper-pagination"]],[[2,"hide",null]],null,null,null,null))],null,function(n,l){var u=l.component;n(l,0,0,u._rtl?"rtl":null);n(l,3,0,!u.pager)})}u.d(l,"a",function(){return e}),l.b=t;var i=u(2),e=(u(3),u(6),u(7),i._8({encapsulation:2,styles:[],data:{}}))}});
+webpackJsonp([35],{
+
+/***/ 751:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabsLayout2Module", function() { return TabsLayout2Module; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs_layout_2__ = __webpack_require__(882);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var TabsLayout2Module = /** @class */ (function () {
+    function TabsLayout2Module() {
+    }
+    TabsLayout2Module = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__tabs_layout_2__["a" /* TabsLayout2 */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__tabs_layout_2__["a" /* TabsLayout2 */]),
+            ],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_2__tabs_layout_2__["a" /* TabsLayout2 */]
+            ],
+            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
+        })
+    ], TabsLayout2Module);
+    return TabsLayout2Module;
+}());
+
+//# sourceMappingURL=tabs-layout-2.module.js.map
+
+/***/ }),
+
+/***/ 882:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsLayout2; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var TabsLayout2 = /** @class */ (function () {
+    function TabsLayout2() {
+    }
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])('data'),
+        __metadata("design:type", Object)
+    ], TabsLayout2.prototype, "data", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])('events'),
+        __metadata("design:type", Object)
+    ], TabsLayout2.prototype, "events", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])('tabs'),
+        __metadata("design:type", Object)
+    ], TabsLayout2.prototype, "tabRef", void 0);
+    TabsLayout2 = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'tabs-layout-2',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\tabs\layout-2\tabs.html"*/'<!-- Theme Tabs Footer tab - icons -->\n\n<ion-tabs #tabs tabsPlacement=\'bottom\'>\n\n    <ion-tab [tabIcon]="item.icon" [root]="item.page" *ngFor="let item of data;let i = index"></ion-tab>\n\n</ion-tabs>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\tabs\layout-2\tabs.html"*/
+        }),
+        __metadata("design:paramtypes", [])
+    ], TabsLayout2);
+    return TabsLayout2;
+}());
+
+//# sourceMappingURL=tabs-layout-2.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=35.js.map
