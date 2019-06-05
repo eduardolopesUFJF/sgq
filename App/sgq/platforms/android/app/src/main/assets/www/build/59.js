@@ -1,1 +1,92 @@
-webpackJsonp([59],{717:function(l,n,u){"use strict";function t(l){return e._33(0,[(l()(),e._10(0,0,null,null,8,"ion-col",[["class","col"],["col-4",""],["col-lg-4",""],["col-md-6",""],["col-sm-3",""],["col-xl-3",""],["no-padding",""]],null,null,null,null,null)),e._9(1,16384,null,0,b.a,[],null,null),(l()(),e._31(-1,null,["\n            "])),(l()(),e._10(3,0,null,null,4,"ion-card",[["background-size",""]],null,[[null,"click"]],function(l,n,u){var t=!0,a=l.component;if("click"===n){t=!1!==a.openImageSlider(a.data,l.context.index)&&t}return t},null,null)),e._9(4,16384,null,0,y.a,[k.a,e.n,e.J],null,null),(l()(),e._31(-1,null,["\n              "])),(l()(),e._10(6,0,null,null,0,"img",[],[[8,"src",4]],null,null,null,null)),(l()(),e._31(-1,null,["\n            "])),(l()(),e._31(-1,null,["\n        "]))],null,function(l,n){l(n,6,0,n.context.$implicit.image)})}function a(l){return e._33(0,[(l()(),e._10(0,0,null,null,9,"ion-grid",[["class","grid"]],null,null,null,null,null)),e._9(1,16384,null,0,h.a,[],null,null),(l()(),e._31(-1,null,["\n    "])),(l()(),e._10(3,0,null,null,5,"ion-row",[["class","row"]],null,null,null,null,null)),e._9(4,16384,null,0,x.a,[],null,null),(l()(),e._31(-1,null,["\n        "])),(l()(),e._5(16777216,null,null,1,null,t)),e._9(7,802816,null,0,I.i,[e.T,e.P,e.w],{ngForOf:[0,"ngForOf"]},null),(l()(),e._31(-1,null,["\n    "])),(l()(),e._31(-1,null,["\n"]))],function(l,n){l(n,7,0,n.component.data.items)},null)}function o(l){return e._33(0,[(l()(),e._31(-1,null,["\n"])),(l()(),e._5(16777216,null,null,1,null,a)),e._9(2,16384,null,0,I.j,[e.T,e.P],{ngIf:[0,"ngIf"]},null),(l()(),e._31(-1,null,["\n"]))],function(l,n){l(n,2,0,null!=n.component.data)},null)}Object.defineProperty(n,"__esModule",{value:!0});var e=u(2),i=(u(0),u(55),function(){return function(l,n){var u=this;this.navCtrl=l,this.onEvent=function(l,n,t){t&&t.stopPropagation(),u.events[l]&&u.events[l](n)},this.openImageSlider=function(l,n){u.navCtrl.push(l.fullscreen,{group:l.items,index:n})}}}()),_=function(){return function(){}}(),r=u(190),c=u(191),s=u(192),f=u(193),d=u(194),g=u(195),p=u(196),m=u(197),v=u(198),b=u(82),y=u(206),k=u(3),h=u(130),x=u(81),I=u(15),w=u(29),P=u(16),F=e._8({encapsulation:2,styles:[],data:{}}),O=e._6("sub-image-gallery-layout-2",i,function(l){return e._33(0,[(l()(),e._10(0,0,null,null,1,"sub-image-gallery-layout-2",[],null,null,null,o,F)),e._9(1,49152,null,0,i,[w.a,P.a],null,null)],null,null)},{data:"data",events:"events"},{},[]),S=u(20),j=u(128),C=u(49);u.d(n,"SubImageGalleryLayout2ModuleNgFactory",function(){return J});var J=e._7(_,[],function(l){return e._18([e._19(512,e.k,e._3,[[8,[r.a,c.a,s.a,f.a,d.a,g.a,p.a,m.a,v.a,O]],[3,e.k],e.A]),e._19(4608,I.l,I.k,[e.y,[2,I.u]]),e._19(4608,S.r,S.r,[]),e._19(4608,S.d,S.d,[]),e._19(512,I.b,I.b,[]),e._19(512,S.p,S.p,[]),e._19(512,S.e,S.e,[]),e._19(512,S.n,S.n,[]),e._19(512,j.a,j.a,[]),e._19(512,j.b,j.b,[]),e._19(512,_,_,[]),e._19(256,C.a,i,[])])})}});
+webpackJsonp([59],{
+
+/***/ 729:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RadioButtonLayout2Module", function() { return RadioButtonLayout2Module; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__radio_button_layout_2__ = __webpack_require__(860);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var RadioButtonLayout2Module = /** @class */ (function () {
+    function RadioButtonLayout2Module() {
+    }
+    RadioButtonLayout2Module = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__radio_button_layout_2__["a" /* RadioButtonLayout2 */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__radio_button_layout_2__["a" /* RadioButtonLayout2 */]),
+            ],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_2__radio_button_layout_2__["a" /* RadioButtonLayout2 */]
+            ],
+            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
+        })
+    ], RadioButtonLayout2Module);
+    return RadioButtonLayout2Module;
+}());
+
+//# sourceMappingURL=radio-button-layout-2.module.js.map
+
+/***/ }),
+
+/***/ 860:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RadioButtonLayout2; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var RadioButtonLayout2 = /** @class */ (function () {
+    function RadioButtonLayout2() {
+        var _this = this;
+        this.onEvent = function (event, item) {
+            if (_this.events[event]) {
+                _this.events[event](item);
+            }
+        };
+    }
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])('data'),
+        __metadata("design:type", Object)
+    ], RadioButtonLayout2.prototype, "data", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])('events'),
+        __metadata("design:type", Object)
+    ], RadioButtonLayout2.prototype, "events", void 0);
+    RadioButtonLayout2 = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'radio-button-layout-2',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\radio-button\layout-2\radio-button.html"*/'<!--Themes Radio Button - With Avatars -->\n\n<ion-content>\n\n  <ion-grid no-padding *ngIf="data != null">\n\n    <ion-list radio-group [(ngModel)]="data.selectedItem">\n\n      <!-- Header Title Top -->\n\n      <ion-list-header header-section no-lines>\n\n        <h1 header-title text-capitalize>{{data.title}}</h1>\n\n      </ion-list-header>\n\n      <!--Content -->\n\n      <ion-item default-item no-lines *ngFor="let item of data.items; let i= index">\n\n        <!-- Content Avatar -->\n\n        <ion-thumbnail item-start>\n\n          <img [src]="item.avatar" />\n\n        </ion-thumbnail >\n\n        <!-- Content Title -->\n\n        <ion-label item-title padding-top>{{item.title}}</ion-label>\n\n        <!-- Content Subtitle -->\n\n        <ion-label item-subtitle text-wrap>{{item.subtitle}}</ion-label>\n\n        <ion-radio item-end [value]="item.id" (ionSelect)="onEvent(\'onSelect\',item)" [checked]="item.isChecked"></ion-radio>\n\n      </ion-item>\n\n    </ion-list>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\radio-button\layout-2\radio-button.html"*/
+        }),
+        __metadata("design:paramtypes", [])
+    ], RadioButtonLayout2);
+    return RadioButtonLayout2;
+}());
+
+//# sourceMappingURL=radio-button-layout-2.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=59.js.map

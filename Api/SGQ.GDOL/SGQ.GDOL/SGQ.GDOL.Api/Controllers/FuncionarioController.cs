@@ -21,16 +21,9 @@ namespace SGQ.GDOL.Api.Controllers
         [HttpGet("ativos")]
         public IActionResult Get()
         {
-            try
-            {
-                var resultBD = _funcionarioService.ObterTodosAtivos();
-                var resultVM = Mapper.Map<List<FuncionarioVM>>(resultBD);
-                return Ok(resultVM);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+            var resultBD = _funcionarioService.ObterTodosAtivos();
+            var resultVM = Mapper.Map<List<FuncionarioVM>>(resultBD);
+            return Ok(resultVM);
         }
     }
 }

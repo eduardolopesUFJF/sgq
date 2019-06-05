@@ -90,7 +90,7 @@ export class VerificacaoPage {
         this.storage.ready().then(() => {
             this.storage.get('obras').then(
                 obras => {
-                    obras.find(x => x.id == this.servico.idObra).areas.find(x => this.servico.idAreaGuid ? (x.idGuid == this.servico.idAreaGuid) : (x.id == this.servico.idArea)).servicos.find(x => item.idGuidServico ? (x.idGuid == item.idGuidServico) : (x.id == item.id)).status = item.status;
+                    obras.find(x => x.id == this.servico.idObra).areas.find(x => this.servico.idAreaGuid ? (x.idGuid == this.servico.idAreaGuid) : (x.id == this.servico.idArea)).servicos.find(x => item.idGuidServico ? (x.idGuidServico == item.idGuidServico) : (x.id == item.id)).status = item.status;
                     this.storage.set('obras', obras);
                 }
             );

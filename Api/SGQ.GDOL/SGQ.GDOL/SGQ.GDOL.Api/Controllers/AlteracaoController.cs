@@ -41,15 +41,8 @@ namespace SGQ.GDOL.Api.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] List<AlteracaoDTO> alteracoes)
         {
-            try
-            {
-                var status = PrepararAlteracoes(alteracoes);
-                return Ok(status);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+            var status = PrepararAlteracoes(alteracoes);
+            return Ok(status);
         }
 
         private string PrepararAlteracoes(List<AlteracaoDTO> alteracoes)

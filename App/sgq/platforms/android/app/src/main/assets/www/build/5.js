@@ -1,1 +1,423 @@
-webpackJsonp([5],{741:function(n,l,i){"use strict";function u(n){return d._33(0,[(n()(),d._10(0,0,null,null,1,"h2",[["class","aviso"],["padding",""],["text-center",""]],null,null,null,null,null)),(n()(),d._31(-1,null,["Nenhum registro encontrado."]))],null,null)}function a(n){return d._33(0,[(n()(),d._10(0,0,null,null,5,"ion-col",[["class","col-search col"],["col-12",""]],null,null,null,null,null)),d._9(1,16384,null,0,z.a,[],null,null),(n()(),d._31(-1,null,["\n                "])),(n()(),d._10(3,0,null,null,1,"ion-searchbar",[],[[2,"searchbar-animated",null],[2,"searchbar-has-value",null],[2,"searchbar-active",null],[2,"searchbar-show-cancel",null],[2,"searchbar-left-aligned",null],[2,"searchbar-has-focus",null]],[[null,"ionInput"]],function(n,l,i){var u=!0;if("ionInput"===l){u=!1!==n.component.filtrar(i.target.value)&&u}return u},U.b,U.a)),d._9(4,1294336,null,0,D.a,[J.a,E.a,d.n,d.J,[2,F.h]],{placeholder:[0,"placeholder"]},{ionInput:"ionInput"}),(n()(),d._31(-1,null,["\n            "]))],function(n,l){n(l,4,0,"Filtrar pelo local")},function(n,l){n(l,3,0,d._22(l,4)._animated,d._22(l,4)._value,d._22(l,4)._isActive,d._22(l,4)._showCancelButton,d._22(l,4)._shouldAlignLeft,d._22(l,4)._isFocus)})}function e(n){return d._33(0,[(n()(),d._10(0,0,null,null,1,"h2",[["item-title",""],["text-wrap",""]],null,null,null,null,null)),(n()(),d._31(1,null,["",":\n                                    ",""]))],null,function(n,l){n(l,1,0,l.component.itemChecklist.campo1,l.parent.context.$implicit.campo1)})}function t(n){return d._33(0,[(n()(),d._10(0,0,null,null,1,"h2",[["item-title",""],["text-wrap",""]],null,null,null,null,null)),(n()(),d._31(1,null,["",":\n                                    ",""]))],null,function(n,l){n(l,1,0,l.component.itemChecklist.campo2,l.parent.context.$implicit.campo2)})}function o(n){return d._33(0,[(n()(),d._10(0,0,null,null,1,"h2",[["item-title",""],["text-wrap",""]],null,null,null,null,null)),(n()(),d._31(1,null,["",":\n                                    ",""]))],null,function(n,l){n(l,1,0,l.component.itemChecklist.campo3,l.parent.context.$implicit.campo3)})}function c(n){return d._33(0,[(n()(),d._10(0,0,null,null,1,"h2",[["item-title",""],["text-wrap",""]],null,null,null,null,null)),(n()(),d._31(1,null,["",":\n                                    ",""]))],null,function(n,l){n(l,1,0,l.component.itemChecklist.campo4,l.parent.context.$implicit.campo4)})}function r(n){return d._33(0,[(n()(),d._10(0,0,null,null,106,"ion-item",[["class","item item-block"],["default-item",""],["no-lines",""]],null,null,null,P.b,P.a)),d._9(1,278528,null,0,R.h,[d.w,d.x,d.n,d.K],{ngClass:[0,"ngClass"]},null),d._25(2,{"novo-item":0,"item-removido":1}),d._9(3,1097728,null,3,$.a,[M.a,J.a,d.n,d.J,[2,q.a]],null,null),d._29(335544320,9,{contentLabel:0}),d._29(603979776,10,{_buttons:1}),d._29(603979776,11,{_icons:1}),d._9(7,16384,null,0,N.a,[],null,null),(n()(),d._31(-1,2,["\n                        "])),(n()(),d._10(9,0,null,2,36,"ion-row",[["class","espacamento row"]],null,null,null,null,null)),d._9(10,16384,null,0,j.a,[],null,null),(n()(),d._31(-1,null,["\n                            "])),(n()(),d._10(12,0,null,null,25,"ion-col",[["class","col"],["col-10",""]],null,[[null,"click"]],function(n,l,i){var u=!0;if("click"===l){u=!1!==n.component.abrirItensInspecao(n.context.$implicit)&&u}return u},null,null)),d._9(13,16384,null,0,z.a,[],null,null),(n()(),d._31(-1,null,["\n                                "])),(n()(),d._5(16777216,null,null,1,null,e)),d._9(16,16384,null,0,R.j,[d.T,d.P],{ngIf:[0,"ngIf"]},null),(n()(),d._31(-1,null,["\n                                "])),(n()(),d._5(16777216,null,null,1,null,t)),d._9(19,16384,null,0,R.j,[d.T,d.P],{ngIf:[0,"ngIf"]},null),(n()(),d._31(-1,null,["\n                                "])),(n()(),d._5(16777216,null,null,1,null,o)),d._9(22,16384,null,0,R.j,[d.T,d.P],{ngIf:[0,"ngIf"]},null),(n()(),d._31(-1,null,["\n                                "])),(n()(),d._5(16777216,null,null,1,null,c)),d._9(25,16384,null,0,R.j,[d.T,d.P],{ngIf:[0,"ngIf"]},null),(n()(),d._31(-1,null,["\n                                "])),(n()(),d._10(27,0,null,null,1,"h3",[["item-situacao",""],["text-wrap",""]],null,null,null,null,null)),(n()(),d._31(28,null,["Situação: ",""])),(n()(),d._31(-1,null,["\n                                "])),(n()(),d._10(30,0,null,null,2,"h3",[["item-situacao",""],["text-wrap",""]],null,null,null,null,null)),(n()(),d._31(31,null,["Abertura: ",""])),d._26(32,2),(n()(),d._31(-1,null,["\n                                "])),(n()(),d._10(34,0,null,null,2,"h3",[["item-situacao",""],["text-wrap",""]],null,null,null,null,null)),(n()(),d._31(35,null,["Encerramento: ",""])),d._26(36,2),(n()(),d._31(-1,null,["\n                            "])),(n()(),d._31(-1,null,["\n                            "])),(n()(),d._10(39,0,null,null,5,"ion-col",[["class","col"],["col-2",""]],null,null,null,null,null)),d._9(40,16384,null,0,z.a,[],null,null),(n()(),d._31(-1,null,["\n                                "])),(n()(),d._10(42,0,null,null,1,"ion-icon",[["icon-small",""],["item-right",""],["name","more"],["role","img"],["style","font-size: 32px !important; margin: 0px"]],[[2,"hide",null]],[[null,"click"]],function(n,l,i){var u=!0;if("click"===l){u=!1!==n.component.exibirOpcoes(n.context.$implicit)&&u}return u},null,null)),d._9(43,147456,null,0,T.a,[J.a,d.n,d.J],{name:[0,"name"]},null),(n()(),d._31(-1,null,["\n                            "])),(n()(),d._31(-1,null,["\n                        "])),(n()(),d._31(-1,2,["\n                        "])),(n()(),d._10(47,0,null,2,58,"ion-row",[["class","espacamento row"],["style","padding: 0 0 10px 0 !important;"]],null,null,null,null,null)),d._9(48,16384,null,0,j.a,[],null,null),(n()(),d._31(-1,null,["\n                            "])),(n()(),d._10(50,0,null,null,1,"ion-col",[["class","col"],["col-1",""]],null,null,null,null,null)),d._9(51,16384,null,0,z.a,[],null,null),(n()(),d._31(-1,null,["\n                            "])),(n()(),d._10(53,0,null,null,8,"ion-col",[["class","col"],["col-2",""],["style","background-color: blue;"]],null,null,null,null,null)),d._9(54,16384,null,0,z.a,[],null,null),(n()(),d._31(-1,null,["\n                                "])),(n()(),d._10(56,0,null,null,1,"h2",[["item-title",""],["no-margin",""],["text-center",""],["text-wrap",""]],null,null,null,null,null)),(n()(),d._31(-1,null,["NA"])),(n()(),d._31(-1,null,["\n                                "])),(n()(),d._10(59,0,null,null,1,"h3",[["item-situacao",""],["no-margin",""],["text-center",""],["text-wrap",""]],null,null,null,null,null)),(n()(),d._31(60,null,["",""])),(n()(),d._31(-1,null,["\n                            "])),(n()(),d._31(-1,null,["\n                            "])),(n()(),d._10(63,0,null,null,8,"ion-col",[["class","col"],["col-2",""],["style","background-color: darkgreen;"]],null,null,null,null,null)),d._9(64,16384,null,0,z.a,[],null,null),(n()(),d._31(-1,null,["\n                                "])),(n()(),d._10(66,0,null,null,1,"h2",[["item-title",""],["no-margin",""],["text-center",""],["text-wrap",""]],null,null,null,null,null)),(n()(),d._31(-1,null,["A"])),(n()(),d._31(-1,null,["\n                                "])),(n()(),d._10(69,0,null,null,1,"h3",[["item-situacao",""],["no-margin",""],["text-center",""],["text-wrap",""]],null,null,null,null,null)),(n()(),d._31(70,null,["",""])),(n()(),d._31(-1,null,["\n                            "])),(n()(),d._31(-1,null,["\n                            "])),(n()(),d._10(73,0,null,null,8,"ion-col",[["class","col"],["col-2",""],["style","background-color: yellow;"]],null,null,null,null,null)),d._9(74,16384,null,0,z.a,[],null,null),(n()(),d._31(-1,null,["\n                                "])),(n()(),d._10(76,0,null,null,1,"h2",[["negrito",""],["no-margin",""],["text-center",""],["text-wrap",""]],null,null,null,null,null)),(n()(),d._31(-1,null,["R"])),(n()(),d._31(-1,null,["\n                                "])),(n()(),d._10(79,0,null,null,1,"h3",[["negrito",""],["no-margin",""],["text-center",""],["text-wrap",""]],null,null,null,null,null)),(n()(),d._31(80,null,["",""])),(n()(),d._31(-1,null,["\n                            "])),(n()(),d._31(-1,null,["\n                            "])),(n()(),d._10(83,0,null,null,8,"ion-col",[["class","col"],["col-2",""],["style","background-color: red;"]],null,null,null,null,null)),d._9(84,16384,null,0,z.a,[],null,null),(n()(),d._31(-1,null,["\n                                "])),(n()(),d._10(86,0,null,null,1,"h2",[["item-title",""],["no-margin",""],["text-center",""],["text-wrap",""]],null,null,null,null,null)),(n()(),d._31(-1,null,["X"])),(n()(),d._31(-1,null,["\n                                "])),(n()(),d._10(89,0,null,null,1,"h3",[["item-situacao",""],["no-margin",""],["text-center",""],["text-wrap",""]],null,null,null,null,null)),(n()(),d._31(90,null,["",""])),(n()(),d._31(-1,null,["\n                            "])),(n()(),d._31(-1,null,["\n                            "])),(n()(),d._10(93,0,null,null,8,"ion-col",[["class","col"],["col-2",""],["style","background-color: orange;"]],null,null,null,null,null)),d._9(94,16384,null,0,z.a,[],null,null),(n()(),d._31(-1,null,["\n                                "])),(n()(),d._10(96,0,null,null,1,"h2",[["item-title",""],["no-margin",""],["text-center",""],["text-wrap",""]],null,null,null,null,null)),(n()(),d._31(-1,null,["RA"])),(n()(),d._31(-1,null,["\n                                "])),(n()(),d._10(99,0,null,null,1,"h3",[["item-situacao",""],["no-margin",""],["text-center",""],["text-wrap",""]],null,null,null,null,null)),(n()(),d._31(100,null,["",""])),(n()(),d._31(-1,null,["\n                            "])),(n()(),d._31(-1,null,["\n                            "])),(n()(),d._10(103,0,null,null,1,"ion-col",[["class","col"],["col-1",""]],null,null,null,null,null)),d._9(104,16384,null,0,z.a,[],null,null),(n()(),d._31(-1,null,["\n                        "])),(n()(),d._31(-1,2,["\n                    "]))],function(n,l){var i=l.component;n(l,1,0,n(l,2,0,!l.context.$implicit.id,l.context.$implicit.delete));n(l,16,0,i.itemChecklist.campo1);n(l,19,0,i.itemChecklist.campo2);n(l,22,0,i.itemChecklist.campo3);n(l,25,0,i.itemChecklist.campo4);n(l,43,0,"more")},function(n,l){n(l,28,0,l.context.$implicit.situacao);n(l,31,0,l.context.$implicit.dataInspecao?d._32(l,31,0,n(l,32,0,d._22(l.parent,0),l.context.$implicit.dataInspecao,"dd/MM/yyyy")):"Não informada");n(l,35,0,l.context.$implicit.dataEncerramento?d._32(l,35,0,n(l,36,0,d._22(l.parent,0),l.context.$implicit.dataEncerramento,"dd/MM/yyyy")):"Não informada");n(l,42,0,d._22(l,43)._hidden);n(l,60,0,l.context.$implicit.qtdNA);n(l,70,0,l.context.$implicit.qtdA);n(l,80,0,l.context.$implicit.qtdR);n(l,90,0,l.context.$implicit.qtdX);n(l,100,0,l.context.$implicit.qtdRA)})}function s(n){return d._33(0,[d._24(0,R.d,[d.y]),(n()(),d._10(1,0,null,null,45,"ion-header",[],null,null,null,null,null)),d._9(2,16384,null,0,H.a,[J.a,d.n,d.J,[2,V.a]],null,null),(n()(),d._31(-1,null,["\n    "])),(n()(),d._10(4,0,null,null,41,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,L.b,L.a)),d._9(5,49152,null,0,X.a,[W.a,[2,V.a],[2,K.a],J.a,d.n,d.J],null,null),(n()(),d._31(-1,3,["\n        "])),(n()(),d._10(7,0,null,3,37,"ion-row",[["class","row"]],null,null,null,null,null)),d._9(8,16384,null,0,j.a,[],null,null),(n()(),d._31(-1,null,["\n            "])),(n()(),d._10(10,0,null,null,12,"ion-col",[["class","col"],["col-1",""]],null,null,null,null,null)),d._9(11,16384,null,0,z.a,[],null,null),(n()(),d._31(-1,null,["\n                "])),(n()(),d._10(13,0,null,null,8,"button",[["ion-button",""],["menuToggle",""]],[[8,"hidden",0]],[[null,"click"]],function(n,l,i){var u=!0;if("click"===l){u=!1!==d._22(n,15).toggle()&&u}return u},Q.b,Q.a)),d._9(14,1097728,[[1,4]],0,Y.a,[[8,""],J.a,d.n,d.J],null,null),d._9(15,1064960,null,0,Z.a,[nn.a,[2,V.a],[2,Y.a],[2,X.a]],{menuToggle:[0,"menuToggle"]},null),d._9(16,16384,null,1,ln.a,[J.a,d.n,d.J,[2,un.a],[2,X.a]],null,null),d._29(603979776,1,{_buttons:1}),(n()(),d._31(-1,0,["\n                    "])),(n()(),d._10(19,0,null,0,1,"ion-icon",[["class","icon-menu"],["name","menu"],["role","img"]],[[2,"hide",null]],null,null,null,null)),d._9(20,147456,null,0,T.a,[J.a,d.n,d.J],{name:[0,"name"]},null),(n()(),d._31(-1,0,["\n                "])),(n()(),d._31(-1,null,["\n            "])),(n()(),d._31(-1,null,["\n            "])),(n()(),d._10(24,0,null,null,9,"ion-col",[["class","col"],["col-8",""],["m-auto",""]],null,null,null,null,null)),d._9(25,16384,null,0,z.a,[],null,null),(n()(),d._31(-1,null,["\n                "])),(n()(),d._10(27,0,null,null,5,"div",[["buy",""],["no-padding",""]],null,null,null,null,null)),(n()(),d._31(-1,null,["\n                    "])),(n()(),d._10(29,0,null,null,2,"ion-title",[],null,null,null,an.b,an.a)),d._9(30,49152,null,0,en.a,[J.a,d.n,d.J,[2,un.a],[2,X.a]],null,null),(n()(),d._31(-1,0,["\n                        Localização do Serviço\n                    "])),(n()(),d._31(-1,null,["\n                "])),(n()(),d._31(-1,null,["\n            "])),(n()(),d._31(-1,null,["\n            "])),(n()(),d._10(35,0,null,null,8,"ion-col",[["class","col"],["col-2",""],["m-auto",""]],null,null,null,null,null)),d._9(36,16384,null,0,z.a,[],null,null),(n()(),d._31(-1,null,["\n                "])),(n()(),d._10(38,0,null,null,4,"div",[["buy",""]],null,[[null,"click"]],function(n,l,i){var u=!0;if("click"===l){u=!1!==n.component.voltarHome()&&u}return u},null,null)),(n()(),d._31(-1,null,["\n                    "])),(n()(),d._10(40,0,null,null,1,"ion-icon",[["class","icon-menu home-icon"],["name","home"],["role","img"]],[[2,"hide",null]],null,null,null,null)),d._9(41,147456,null,0,T.a,[J.a,d.n,d.J],{name:[0,"name"]},null),(n()(),d._31(-1,null,["\n                "])),(n()(),d._31(-1,null,["\n            "])),(n()(),d._31(-1,null,["\n        "])),(n()(),d._31(-1,3,["\n    "])),(n()(),d._31(-1,null,["\n"])),(n()(),d._31(-1,null,["\n\n"])),(n()(),d._10(48,0,null,null,98,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,tn.b,tn.a)),d._9(49,4374528,null,0,on.a,[J.a,E.a,cn.a,d.n,d.J,W.a,rn.a,d.C,[2,V.a],[2,K.a]],null,null),(n()(),d._31(-1,1,["\n    "])),(n()(),d._10(51,0,null,1,1,"h2",[["class","broadcomb"],["text-center",""],["text-wrap",""]],null,null,null,null,null)),(n()(),d._31(52,null,["",""])),(n()(),d._31(-1,1,["\n    "])),(n()(),d._5(16777216,null,1,1,null,u)),d._9(55,16384,null,0,R.j,[d.T,d.P],{ngIf:[0,"ngIf"]},null),(n()(),d._31(-1,1,["\n    "])),(n()(),d._10(57,0,null,1,88,"ion-grid",[["class","grid"],["no-padding",""]],null,null,null,null,null)),d._9(58,16384,null,0,sn.a,[],null,null),(n()(),d._31(-1,null,["\n        "])),(n()(),d._10(60,0,null,null,6,"ion-row",[["class","row"]],null,null,null,null,null)),d._9(61,16384,null,0,j.a,[],null,null),(n()(),d._31(-1,null,["\n            "])),(n()(),d._10(63,0,null,null,2,"button",[["block",""],["box-shadow",""],["class","button-novo"],["default-button",""],["ion-button",""],["margin-bottom",""],["text-capitalize",""]],null,[[null,"click"]],function(n,l,i){var u=!0;if("click"===l){u=!1!==n.component.novaInspecao()&&u}return u},Q.b,Q.a)),d._9(64,1097728,null,0,Y.a,[[8,""],J.a,d.n,d.J],{block:[0,"block"]},null),(n()(),d._31(-1,0,["Nova inspeção"])),(n()(),d._31(-1,null,["\n        "])),(n()(),d._31(-1,null,["\n        "])),(n()(),d._10(68,0,null,null,76,"ion-row",[["class","row"]],null,null,null,null,null)),d._9(69,16384,null,0,j.a,[],null,null),(n()(),d._31(-1,null,["\n            "])),(n()(),d._5(16777216,null,null,1,null,a)),d._9(72,16384,null,0,R.j,[d.T,d.P],{ngIf:[0,"ngIf"]},null),(n()(),d._31(-1,null,["\n            "])),(n()(),d._10(74,0,null,null,58,"ion-col",[["class","col"],["col-12",""]],null,null,null,null,null)),d._9(75,16384,null,0,z.a,[],null,null),(n()(),d._31(-1,null,["\n                "])),(n()(),d._10(77,0,null,null,54,"ion-list",[["name","status"],["no-margin",""],["radio-group",""],["role","radiogroup"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(n,l,i){var u=!0,a=n.component;if("ngModelChange"===l){u=!1!==(a.servico.status=i)&&u}if("ngModelChange"===l){u=!1!==a.atualizarStatus()&&u}return u},null,null)),d._9(78,1064960,null,1,dn.a,[d.J,d.n,d.h],null,null),d._29(335544320,2,{_header:0}),d._27(1024,null,F.g,function(n){return[n]},[dn.a]),d._9(81,671744,null,0,F.l,[[8,null],[8,null],[8,null],[2,F.g]],{name:[0,"name"],model:[1,"model"]},{update:"ngModelChange"}),d._27(2048,null,F.h,null,[F.l]),d._9(83,16384,null,0,F.i,[F.h],null,null),d._9(84,16384,null,0,pn.a,[J.a,d.n,d.J,E.a,_n.l,cn.a],null,null),(n()(),d._31(-1,null,["\n                    "])),(n()(),d._10(86,0,null,null,44,"ion-grid",[["class","grid"]],null,null,null,null,null)),d._9(87,16384,null,0,sn.a,[],null,null),(n()(),d._31(-1,null,["\n                        "])),(n()(),d._10(89,0,null,null,40,"ion-row",[["class","row"]],null,null,null,null,null)),d._9(90,16384,null,0,j.a,[],null,null),(n()(),d._31(-1,null,["\n                            "])),(n()(),d._10(92,0,null,null,17,"ion-col",[["class","col"],["col-6",""]],null,null,null,null,null)),d._9(93,16384,null,0,z.a,[],null,null),(n()(),d._31(-1,null,["\n                                "])),(n()(),d._10(95,0,null,null,13,"ion-item",[["class","item item-block"],["radio",""]],null,null,null,P.b,P.a)),d._9(96,1097728,null,3,$.a,[M.a,J.a,d.n,d.J,[2,q.a]],null,null),d._29(335544320,3,{contentLabel:0}),d._29(603979776,4,{_buttons:1}),d._29(603979776,5,{_icons:1}),d._9(100,16384,null,0,N.a,[],null,null),(n()(),d._31(-1,2,["\n                                    "])),(n()(),d._10(102,0,null,1,2,"ion-label",[["text-center",""]],null,null,null,null,null)),d._9(103,16384,[[3,4]],0,hn.a,[J.a,d.n,d.J,[8,null],[8,null],[8,null],[8,null]],null,null),(n()(),d._31(-1,null,["Em aberto"])),(n()(),d._31(-1,2,["\n                                    "])),(n()(),d._10(106,0,null,4,1,"ion-radio",[],[[2,"radio-disabled",null]],[[null,"click"]],function(n,l,i){var u=!0;if("click"===l){u=!1!==d._22(n,107)._click(i)&&u}return u},mn.b,mn.a)),d._9(107,245760,null,0,fn.a,[M.a,J.a,d.n,d.J,[2,$.a],[2,dn.a]],{value:[0,"value"]},null),(n()(),d._31(-1,2,["\n                                "])),(n()(),d._31(-1,null,["\n                            "])),(n()(),d._31(-1,null,["\n                            "])),(n()(),d._10(111,0,null,null,17,"ion-col",[["class","col"],["col-6",""]],null,null,null,null,null)),d._9(112,16384,null,0,z.a,[],null,null),(n()(),d._31(-1,null,["\n                                "])),(n()(),d._10(114,0,null,null,13,"ion-item",[["class","item item-block"],["radio",""]],null,null,null,P.b,P.a)),d._9(115,1097728,null,3,$.a,[M.a,J.a,d.n,d.J,[2,q.a]],null,null),d._29(335544320,6,{contentLabel:0}),d._29(603979776,7,{_buttons:1}),d._29(603979776,8,{_icons:1}),d._9(119,16384,null,0,N.a,[],null,null),(n()(),d._31(-1,2,["\n                                    "])),(n()(),d._10(121,0,null,1,2,"ion-label",[["text-center",""]],null,null,null,null,null)),d._9(122,16384,[[6,4]],0,hn.a,[J.a,d.n,d.J,[8,null],[8,null],[8,null],[8,null]],null,null),(n()(),d._31(-1,null,["Finalizado"])),(n()(),d._31(-1,2,["\n                                    "])),(n()(),d._10(125,0,null,4,1,"ion-radio",[],[[2,"radio-disabled",null]],[[null,"click"]],function(n,l,i){var u=!0;if("click"===l){u=!1!==d._22(n,126)._click(i)&&u}return u},mn.b,mn.a)),d._9(126,245760,null,0,fn.a,[M.a,J.a,d.n,d.J,[2,$.a],[2,dn.a]],{value:[0,"value"]},null),(n()(),d._31(-1,2,["\n                                "])),(n()(),d._31(-1,null,["\n                            "])),(n()(),d._31(-1,null,["\n                        "])),(n()(),d._31(-1,null,["\n                    "])),(n()(),d._31(-1,null,["\n                "])),(n()(),d._31(-1,null,["\n            "])),(n()(),d._31(-1,null,["\n            "])),(n()(),d._10(134,0,null,null,9,"ion-col",[["class","col"],["col-12",""]],null,null,null,null,null)),d._9(135,16384,null,0,z.a,[],null,null),(n()(),d._31(-1,null,["\n                "])),(n()(),d._10(137,0,null,null,5,"ion-list",[["no-margin",""]],null,null,null,null,null)),d._9(138,16384,null,0,pn.a,[J.a,d.n,d.J,E.a,_n.l,cn.a],null,null),(n()(),d._31(-1,null,["\n                    "])),(n()(),d._5(16777216,null,null,1,null,r)),d._9(141,802816,null,0,R.i,[d.T,d.P,d.w],{ngForOf:[0,"ngForOf"]},null),(n()(),d._31(-1,null,["\n                "])),(n()(),d._31(-1,null,["\n            "])),(n()(),d._31(-1,null,["\n        "])),(n()(),d._31(-1,null,["\n    "])),(n()(),d._31(-1,1,["\n"]))],function(n,l){var i=l.component;n(l,15,0,"");n(l,20,0,"menu");n(l,41,0,"home");n(l,55,0,i.inspecoes.length<1);n(l,64,0,"");n(l,72,0,i.inspecoesBackup.length>0);n(l,81,0,"status",i.servico.status);n(l,107,0,0);n(l,126,0,1);n(l,141,0,i.inspecoes)},function(n,l){var i=l.component;n(l,4,0,d._22(l,5)._hidden,d._22(l,5)._sbPadding);n(l,13,0,d._22(l,15).isHidden);n(l,19,0,d._22(l,20)._hidden);n(l,40,0,d._22(l,41)._hidden);n(l,48,0,d._22(l,49).statusbarPadding,d._22(l,49)._hasRefresher);n(l,52,0,i.broadcomb.toUpperCase());n(l,77,0,d._22(l,83).ngClassUntouched,d._22(l,83).ngClassTouched,d._22(l,83).ngClassPristine,d._22(l,83).ngClassDirty,d._22(l,83).ngClassValid,d._22(l,83).ngClassInvalid,d._22(l,83).ngClassPending);n(l,106,0,d._22(l,107)._disabled);n(l,125,0,d._22(l,126)._disabled)})}Object.defineProperty(l,"__esModule",{value:!0});var d=i(2),p=(i(0),i(55),i(786)),_=i(787),h=i(83),m=i(768),f=i(760),v=i(86),g=i(804),b=i(771),I=function(){function n(n,l,i,u,a,e){this.navParams=n,this.storage=l,this.actionSheetCtrl=i,this.modalCtrl=u,this.messageService=a,this.navCtrl=e,this.servico=new p.a,this.itemChecklist=new b.a,this.inspecoes=[],this.inspecoesBackup=[],this.itensBackup=[],this.inspecaoBackup=new _.a,this.servico=n.data.servico,this.inspecoes=this.ordenar(this.servico.inspecoesObra).slice(),this.inspecoesBackup=this.servico.inspecoesObra.slice(),this.obterItemChecklist(),this.broadcomb=n.data.broadcomb+" >> "+this.servico.descricao}return n.prototype.ordenar=function(n){return n.sort(function(n,l){return n.dataInspecao>l.dataInspecao?-1:1})},n.prototype.atualizarStatus=function(){var n=this;setTimeout(function(){0==n.servico.status?(n.servico.situacao="Em aberto",n.criarAtualizacaoStatus()):n.servico.inspecoesObra.some(function(n){return 0==n.status})?(n.servico.status=0,n.messageService.exibirMensagem("Não foi possível finalizar o Serviço, existem inspeções em aberto.")):(n.servico.situacao="Finalizado",n.criarAtualizacaoStatus())},100)},n.prototype.criarAtualizacaoStatus=function(){var n=this;this.storage.ready().then(function(){var l=[];n.storage.get("atualizacoes").then(function(i){var u=new m.a({id:f.UUID.UUID(),idServico:n.servico.id,idGuidServico:n.servico.idGuidServico,idArea:n.servico.idArea,idGuidArea:n.servico.idAreaGuid,tipo:"Update",entidade:"Servico",valor:JSON.stringify(n.servico),data:new Date,descricao:(0==n.servico.status?"Reabertura":"Finalização")+" do serviço '"+n.servico.descricao+"' em '"+n.broadcomb.toUpperCase()+"'.",obraId:n.servico.idObra});i?(l=i).push(u):l.push(u),n.storage.set("atualizacoes",l),n.atualizarObra(n.servico)})})},n.prototype.atualizarObra=function(n){var l=this;this.storage.ready().then(function(){l.storage.get("obras").then(function(i){i.find(function(n){return n.id==l.servico.idObra}).areas.find(function(n){return l.servico.idAreaGuid?n.idGuid==l.servico.idAreaGuid:n.id==l.servico.idArea}).servicos.find(function(l){return n.idGuidServico?l.idGuid==n.idGuidServico:l.id==n.id}).status=n.status,l.storage.set("obras",i)})})},n.prototype.obterItemChecklist=function(){var n=this;this.storage.ready().then(function(){n.storage.get("itensChecklist").then(function(l){n.itemChecklist=l.find(function(l){return l.id==n.servico.idChecklist}),n.itemChecklist||(n.itemChecklist=l.find(function(l){return l.idGuid==n.servico.idChecklistGuid}))})})},n.prototype.novaInspecao=function(){var n=this,l=this.modalCtrl.create("ManterVerificacaoPage",{inspecao:new _.a,itemChecklist:this.itemChecklist});l.present(),l.onWillDismiss(function(l){l&&(l.idGuidInspecao=f.UUID.UUID(),l.idGuidServico=n.servico.idGuidServico,l.idServico=n.servico.id,n.itemChecklist.itensChecklistServico.forEach(function(n){var i=new g.a;i.dataHoraInclusao=new Date,i.descricao=n.descricao,i.idGuidInspecao=l.idGuidInspecao,i.ordem=n.ordem.toString(),i.idGuidItemServico=n.idGuid,i.idItemServico=n.id,l.inspecaoObraItens.push(i)}),n.inspecoes.unshift(l),n.inspecoesBackup.unshift(l),n.criarInspecao(l))})},n.prototype.abrirItensInspecao=function(n){var l=this,i=this.modalCtrl.create("RealizarVerificacaoPage",{inspecao:n,descServico:this.broadcomb,servico:this.servico});this.itensBackup=[],this.statusBackup=n.status,this.idFuncionarioAprovadoBackup=n.idFuncionarioAprovado,this.idFuncionarioInspecionadoBackup=n.idFuncionarioInspecionado,n.inspecaoObraItens.forEach(function(n){l.itensBackup.push(new g.a(n))}),i.present(),i.onWillDismiss(function(n){if(n.concluido){n.inspecao.qtdA=n.inspecao.inspecaoObraItens.filter(function(n){return"A"==n.inspecao1}).length,n.inspecao.qtdNA=n.inspecao.inspecaoObraItens.filter(function(n){return"N"==n.inspecao1}).length,n.inspecao.qtdR=n.inspecao.inspecaoObraItens.filter(function(n){return"R"==n.inspecao1}).length,n.inspecao.qtdX=n.inspecao.inspecaoObraItens.filter(function(n){return"X"==n.inspecao1}).length,n.inspecao.qtdRA=n.inspecao.inspecaoObraItens.filter(function(n){return"A"==n.inspecao2}).length;var i=l.inspecoesBackup.findIndex(function(l){return 0!=n.inspecao.id?l.id==n.inspecao.id:l.idGuidInspecao==n.inspecao.idGuidInspecao});l.inspecoesBackup[i]=n.inspecao,l.inspecoes=l.inspecoesBackup.slice(),l.editarInspecao(n.inspecao,"Realização da verificação")}else{n.inspecao.inspecaoObraItens=l.itensBackup.slice(),n.inspecao.status=l.statusBackup,n.inspecao.idFuncionarioAprovado=l.idFuncionarioAprovadoBackup,n.inspecao.idFuncionarioInspecionado=l.idFuncionarioInspecionadoBackup;i=l.inspecoesBackup.findIndex(function(l){return 0!=n.inspecao.id?l.id==n.inspecao.id:l.idGuidInspecao==n.inspecao.idGuidInspecao});l.inspecoesBackup[i]=n.inspecao,l.inspecoes=l.inspecoesBackup.slice()}})},n.prototype.editar=function(n){var l=this,i=this.modalCtrl.create("ManterVerificacaoPage",{inspecao:n,itemChecklist:this.itemChecklist});this.inspecaoBackup=new _.a(n),i.present(),i.onWillDismiss(function(n){if(n){var i=l.inspecoesBackup.findIndex(function(l){return 0!=n.id?l.id==n.id:l.idGuidInspecao==n.idGuidInspecao});l.inspecoesBackup[i]=n,l.inspecoes=l.inspecoesBackup.slice(),l.editarInspecao(n,"Edição da verificação")}else{var u=l.inspecoes.find(function(n){return n.idGuidInspecao?n.idGuidInspecao==l.inspecaoBackup.idGuidInspecao:n.id==l.inspecaoBackup.id});u.dataInspecao=l.inspecaoBackup.dataInspecao,u.dataEncerramento=l.inspecaoBackup.dataEncerramento,u.campo1=l.inspecaoBackup.campo1,u.campo2=l.inspecaoBackup.campo2,u.campo3=l.inspecaoBackup.campo3,u.campo4=l.inspecaoBackup.campo4}})},n.prototype.editarInspecao=function(n,l){var i=this;this.storage.ready().then(function(){var u=[];i.storage.get("atualizacoes").then(function(a){var e=new m.a({id:f.UUID.UUID(),idInspecao:n.id,idGuidInspecao:n.idGuidInspecao,idArea:i.servico.idArea,idGuidArea:i.servico.idAreaGuid,idServico:i.servico.id,idGuidServico:i.servico.idGuidServico,tipo:"Update",entidade:"Inspecao",valor:JSON.stringify(n),data:new Date,descricao:l+" '"+n.campo1+"' no serviço '"+i.servico.descricao+"'.",obraId:i.servico.idObra});a?(u=a).push(e):u.push(e),i.storage.set("atualizacoes",u),i.atualizarObraEdicao(n)})})},n.prototype.criarInspecao=function(n){var l=this;this.storage.ready().then(function(){var i=[];l.storage.get("atualizacoes").then(function(u){var a=new m.a({id:f.UUID.UUID(),idInspecao:n.id,idGuidInspecao:n.idGuidInspecao,idArea:l.servico.idArea,idGuidArea:l.servico.idAreaGuid,idServico:l.servico.id,idGuidServico:l.servico.idGuidServico,tipo:"Insert",entidade:"Inspecao",valor:JSON.stringify(n),data:new Date,descricao:"Criação da verificação '"+n.campo1+"' no serviço '"+l.servico.descricao+"'.",obraId:l.servico.idObra});u?(i=u).push(a):i.push(a),l.storage.set("atualizacoes",i),l.atualizarObraCriacao(n)})})},n.prototype.filtrar=function(n){this.inspecoes=0==n.length?this.inspecoesBackup.slice():this.inspecoesBackup.filter(function(l){return l.campo1.toLowerCase().indexOf(n.toLowerCase())>-1})},n.prototype.confirmarExclusao=function(n){var l=this;this.messageService.exibirMensagemConfirmacao(n.delete?"Deseja realmente reativar a verificação '"+n.campo1+"'?":"Deseja realmente excluir a verificação '"+n.campo1+"'?",function(){l.alterarSituacaoVerificacao(n)})},n.prototype.alterarSituacaoVerificacao=function(n){var l=this;this.storage.ready().then(function(){var i=[];l.storage.get("atualizacoes").then(function(u){n.delete=!n.delete;var a=new m.a({id:f.UUID.UUID(),idInspecao:n.id,idGuidInspecao:n.idGuidInspecao,idArea:l.servico.idArea,idGuidArea:l.servico.idAreaGuid,idServico:l.servico.id,idGuidServico:l.servico.idGuidServico,tipo:"Update",entidade:"Inspecao",valor:JSON.stringify(n),data:new Date,descricao:(n.delete?"Inativação":"Ativação")+" da verificação '"+n.campo1+"' no serviço '"+l.servico.descricao+"'.",obraId:l.servico.idObra});u?(i=u).push(a):i.push(a),l.storage.set("atualizacoes",i),l.atualizarObraSituacao(n)})})},n.prototype.atualizarObraSituacao=function(n){var l=this;this.storage.ready().then(function(){l.storage.get("obras").then(function(i){i.find(function(n){return n.id==l.servico.idObra}).areas.find(function(n){return l.servico.idAreaGuid?n.idGuid==l.servico.idAreaGuid:n.id==l.servico.idArea}).servicos.find(function(n){return l.servico.idGuidServico?n.idGuidServico==l.servico.idGuidServico:n.id==l.servico.id}).inspecoesObra.find(function(l){return n.idGuidInspecao?l.idGuidInspecao==n.idGuidInspecao:l.id==n.id}).delete=n.delete,l.storage.set("obras",i)})})},n.prototype.atualizarObraEdicao=function(n){var l=this;this.storage.ready().then(function(){l.storage.get("obras").then(function(i){var u=i.find(function(n){return n.id==l.servico.idObra}).areas.find(function(n){return l.servico.idAreaGuid?n.idGuid==l.servico.idAreaGuid:n.id==l.servico.idArea}).servicos.find(function(n){return l.servico.idGuidServico?n.idGuidServico==l.servico.idGuidServico:n.id==l.servico.id}).inspecoesObra.find(function(l){return n.idGuidInspecao?l.idGuidInspecao==n.idGuidInspecao:l.id==n.id});u.campo1=n.campo1,u.campo2=n.campo2,u.campo3=n.campo3,u.campo4=n.campo4,u.dataInspecao=n.dataInspecao,u.dataEncerramento=n.dataEncerramento,u.idFuncionarioAprovado=n.idFuncionarioAprovado,u.idFuncionarioInspecionado=n.idFuncionarioInspecionado,u.status=n.status,u.situacao=n.situacao,u.inspecaoObraItens=n.inspecaoObraItens,l.storage.set("obras",i)})})},n.prototype.atualizarObraCriacao=function(n){var l=this;this.storage.ready().then(function(){l.storage.get("obras").then(function(i){i.find(function(n){return n.id==l.servico.idObra}).areas.find(function(n){return l.servico.idAreaGuid?n.idGuid==l.servico.idAreaGuid:n.id==l.servico.idArea}).servicos.find(function(n){return l.servico.idGuidServico?n.idGuidServico==l.servico.idGuidServico:n.id==l.servico.id}).inspecoesObra.unshift(n),l.storage.set("obras",i)})})},n.prototype.exibirOpcoes=function(n){var l=this;this.actionSheetCtrl.create({buttons:[{text:"Realizar inspeção",handler:function(){l.abrirItensInspecao(n)}},{text:"Editar",handler:function(){l.editar(n)}},{text:n.delete?"Reativar":"Excluir",handler:function(){l.confirmarExclusao(n)}},{text:"Cancelar",role:"cancel"}]}).present()},n.prototype.voltarHome=function(){this.navCtrl.setRoot("HomePage")},n}(),k=function(){return function(){}}(),G=i(190),x=i(191),w=i(192),A=i(193),y=i(194),S=i(195),C=i(196),O=i(197),B=i(198),z=i(82),U=i(361),D=i(88),J=i(3),E=i(6),F=i(20),P=i(129),R=i(15),$=i(24),M=i(21),q=i(50),N=i(60),j=i(81),T=i(36),H=i(131),V=i(7),L=i(360),X=i(39),W=i(12),K=i(29),Q=i(38),Y=i(27),Z=i(200),nn=i(33),ln=i(132),un=i(51),an=i(359),en=i(84),tn=i(199),on=i(30),cn=i(13),rn=i(32),sn=i(130),dn=i(63),pn=i(56),_n=i(10),hn=i(62),mn=i(363),fn=i(89),vn=i(16),gn=i(139),bn=i(90),In=d._8({encapsulation:2,styles:[],data:{}}),kn=d._6("page-verificacao",I,function(n){return d._33(0,[(n()(),d._10(0,0,null,null,1,"page-verificacao",[],null,null,null,s,In)),d._9(1,49152,null,0,I,[vn.a,h.b,gn.a,bn.a,v.a,K.a],null,null)],null,null)},{},{},[]),Gn=i(128),xn=i(49);i.d(l,"VerificacaoPageModuleNgFactory",function(){return wn});var wn=d._7(k,[],function(n){return d._18([d._19(512,d.k,d._3,[[8,[G.a,x.a,w.a,A.a,y.a,S.a,C.a,O.a,B.a,kn]],[3,d.k],d.A]),d._19(4608,R.l,R.k,[d.y,[2,R.u]]),d._19(4608,F.r,F.r,[]),d._19(4608,F.d,F.d,[]),d._19(512,R.b,R.b,[]),d._19(512,F.p,F.p,[]),d._19(512,F.e,F.e,[]),d._19(512,F.n,F.n,[]),d._19(512,Gn.a,Gn.a,[]),d._19(512,Gn.b,Gn.b,[]),d._19(512,k,k,[]),d._19(256,xn.a,I,[])])})},760:function(n,l,i){"use strict";l.UUID=function(){function n(){}return n.UUID=function(){if("undefined"!=typeof window&&void 0!==window.crypto&&void 0!==window.crypto.getRandomValues){var n=new Uint16Array(8);return window.crypto.getRandomValues(n),this.pad4(n[0])+this.pad4(n[1])+"-"+this.pad4(n[2])+"-"+this.pad4(n[3])+"-"+this.pad4(n[4])+"-"+this.pad4(n[5])+this.pad4(n[6])+this.pad4(n[7])}return this.random4()+this.random4()+"-"+this.random4()+"-"+this.random4()+"-"+this.random4()+"-"+this.random4()+this.random4()+this.random4()},n.pad4=function(n){for(var l=n.toString(16);l.length<4;)l="0"+l;return l},n.random4=function(){return Math.floor(65536*(1+Math.random())).toString(16).substring(1)},n}()},768:function(n,l,i){"use strict";i.d(l,"a",function(){return u});var u=function(){return function(n){void 0===n&&(n={}),Object.assign(this,n)}}()},771:function(n,l,i){"use strict";i.d(l,"a",function(){return u});var u=function(){return function(n){void 0===n&&(n={}),this.id=0,this.campo1="",this.campo2="",this.campo3="",this.campo4="",this.itensChecklistServico=[],Object.assign(this,n)}}()},786:function(n,l,i){"use strict";i.d(l,"a",function(){return u});var u=function(){return function(n){void 0===n&&(n={}),this.id=0,this.idGuidServico="",this.descricao="",this.tipo="",this.idObra=0,this.idChecklist=0,this.idChecklistGuid="",this.idArea=0,this.idAreaGuid="",this.metaAprovacao=90,this.status=0,this.situacao="Em aberto",this.delete=!1,this.dataHoraInclusao=new Date,this.dataHoraAlteracao=new Date,this.inspecoesObra=[],this.itensChecklistServico=[],Object.assign(this,n)}}()},787:function(n,l,i){"use strict";i.d(l,"a",function(){return u});var u=function(){return function(n){void 0===n&&(n={}),this.id=0,this.idGuidInspecao="",this.idGuidServico="",this.campo1="",this.campo2="",this.campo3="",this.campo4="",this.status=0,this.situacao="Em aberto",this.delete=!1,this.dataHoraAlteracao=new Date,this.qtdNA=0,this.qtdA=0,this.qtdR=0,this.qtdRA=0,this.qtdX=0,this.inspecaoObraItens=[],this.ocorrencias=[],Object.assign(this,n)}}()},804:function(n,l,i){"use strict";i.d(l,"a",function(){return u});var u=function(){return function(n){void 0===n&&(n={}),this.id=0,this.idInspecaoObra=0,this.idGuidInspecao="",this.idGuidItemServico="",this.inspecao1="",this.inspecao2="",this.delete=!1,this.dataHoraAlteracao=new Date,Object.assign(this,n)}}()}});
+webpackJsonp([5],{
+
+/***/ 716:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StickyListHeaderLayout3Module", function() { return StickyListHeaderLayout3Module; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sticky_list_header_layout_3__ = __webpack_require__(847);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ion_affix__ = __webpack_require__(807);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var StickyListHeaderLayout3Module = /** @class */ (function () {
+    function StickyListHeaderLayout3Module() {
+    }
+    StickyListHeaderLayout3Module = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__sticky_list_header_layout_3__["a" /* StickyListHeaderLayout3 */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__sticky_list_header_layout_3__["a" /* StickyListHeaderLayout3 */]),
+                __WEBPACK_IMPORTED_MODULE_3_ion_affix__["a" /* IonAffixModule */]
+            ],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_2__sticky_list_header_layout_3__["a" /* StickyListHeaderLayout3 */]
+            ],
+            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
+        })
+    ], StickyListHeaderLayout3Module);
+    return StickyListHeaderLayout3Module;
+}());
+
+//# sourceMappingURL=sticky-list-header-layout-3.module.js.map
+
+/***/ }),
+
+/***/ 794:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IonAffix; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__adapters_adapter_factory__ = __webpack_require__(809);
+
+
+/**
+ * Directive for creating affixed list headers. Apply it to ion-list-header and pass a reference to ion-content to it.
+ *
+ * @example
+ * <ion-content #content>
+ *     <ion-list>
+ *         <ion-list-header ion-affix [content]="content">Group 1</ion-list-header>
+ *         <ion-item *ngFor="let item of items">{{item}}</ion-item>
+ *     </ion-list>
+ * </ion-content>
+ *
+ * @author Jonas Zuberbuehler <jonas.zuberbuehler@gmail.com>
+ *
+ */
+var IonAffix = (function () {
+    function IonAffix(element, renderer) {
+        this.element = element;
+        this.renderer = renderer;
+        this.onSticky = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+    }
+    IonAffix.prototype.ngAfterViewInit = function () {
+        var _this = this;
+        // getting container
+        this.scrollContainer = Object(__WEBPACK_IMPORTED_MODULE_1__adapters_adapter_factory__["a" /* adapterFactory */])(this.content);
+        this.headerElement = this.element.nativeElement;
+        this.containerElement = this.headerElement.parentElement;
+        var headerHeight = this.headerElement.getBoundingClientRect().height;
+        var right = window.innerWidth - this.headerElement.getBoundingClientRect().width - this.headerElement.getBoundingClientRect().left;
+        var left = this.headerElement.getBoundingClientRect().left;
+        var scrollClientTop = this.scrollContainer.getClientTop();
+        var containerTop = this.containerElement.offsetTop;
+        var containerBottom = containerTop + this.containerElement.getBoundingClientRect().height;
+        // initially checking if affix needs to be shown
+        this.updateSticky(this.scrollContainer.getScrollTop(), containerTop, containerBottom, scrollClientTop, headerHeight, left, right, true);
+        var onScroll = function () {
+            var scrollTop = _this.scrollContainer.getScrollTop();
+            scrollClientTop = _this.scrollContainer.getClientTop();
+            containerTop = _this.containerElement.offsetTop;
+            containerBottom = containerTop + _this.containerElement.getBoundingClientRect().height;
+            _this.updateSticky(scrollTop, containerTop, containerBottom, scrollClientTop, headerHeight, left, right, _this.scrollContainer.isScrollingDown());
+        };
+        // subscribing to scroll events
+        this.scrollSubscription = this.scrollContainer.onScroll().subscribe(onScroll);
+    };
+    IonAffix.prototype.updateSticky = function (scrollTop, containerTop, containerBottom, scrollClientTop, headerHeight, left, right, downwards) {
+        var _this = this;
+        // check if scrollTop is within list boundaries
+        if (scrollTop > 0 && scrollTop >= containerTop && scrollTop <= containerBottom) {
+            if (!this.clone) {
+                this.clone = this.headerElement.cloneNode(true);
+                this.containerElement.insertBefore(this.clone, this.headerElement);
+                this.scrollContainer.appendFixedHeader(this.headerElement);
+                this.onSticky.emit({ sticky: true, affix: this });
+                // for fancy transition efx if scrolling down
+                if (downwards) {
+                    this.applyStyles(left, right);
+                }
+                else {
+                    this.applyStyles(0, 0);
+                }
+                setTimeout(function () {
+                    _this.renderer.setStyle(_this.headerElement, 'right', '0px');
+                    _this.renderer.setStyle(_this.headerElement, 'left', '0px');
+                }, 0);
+            }
+            // transform vertical position to push fixed header up/down
+            if (scrollTop <= containerBottom && scrollTop >= (containerBottom - headerHeight)) {
+                var delta = scrollClientTop - (scrollTop - (containerBottom - headerHeight));
+                this.renderer.setStyle(this.headerElement, 'transform', "translate3d(0px, " + delta + "px, 0px)");
+                this.renderer.setStyle(this.headerElement, '-webkit-transform', "translate3d(0px, " + delta + "px, 0px)");
+            }
+            else {
+                this.renderer.setStyle(this.headerElement, 'transform', "translate3d(0px, " + scrollClientTop + "px, 0px)");
+                this.renderer.setStyle(this.headerElement, '-webkit-transform', "translate3d(0px, " + scrollClientTop + "px, 0px)");
+            }
+        }
+        else {
+            this.reset();
+        }
+    };
+    IonAffix.prototype.reset = function () {
+        if (this.clone) {
+            this.containerElement.insertBefore(this.headerElement, this.clone);
+            this.clearStyles();
+            this.clone.remove();
+            this.clone = null;
+            this.onSticky.emit({ sticky: false, affix: this });
+        }
+    };
+    IonAffix.prototype.applyStyles = function (left, right) {
+        this.renderer.setStyle(this.headerElement, 'right', right + "px");
+        this.renderer.setStyle(this.headerElement, 'left', left + "px");
+        this.renderer.setStyle(this.headerElement, 'transition', 'left 0.1s ease-out, right 0.1s ease-out');
+        this.renderer.setStyle(this.headerElement, 'z-index', '2');
+        this.renderer.setStyle(this.headerElement, 'position', 'absolute');
+        this.renderer.setStyle(this.headerElement, 'width', 'auto');
+        this.renderer.setStyle(this.headerElement, 'top', '0px');
+    };
+    IonAffix.prototype.clearStyles = function () {
+        this.renderer.removeStyle(this.headerElement, 'position');
+        this.renderer.removeStyle(this.headerElement, 'z-index');
+        this.renderer.removeStyle(this.headerElement, 'transition');
+        this.renderer.removeStyle(this.headerElement, 'top');
+        this.renderer.removeStyle(this.headerElement, 'transform');
+        this.renderer.removeStyle(this.headerElement, '-webkit-transform');
+        this.renderer.removeStyle(this.headerElement, 'left');
+        this.renderer.removeStyle(this.headerElement, 'right');
+        this.renderer.removeStyle(this.headerElement, 'width');
+    };
+    IonAffix.prototype.ngOnDestroy = function () {
+        this.reset();
+        this.scrollSubscription.unsubscribe();
+    };
+    IonAffix.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* Directive */], args: [{
+                    selector: '[ion-affix]'
+                },] },
+    ];
+    /** @nocollapse */
+    IonAffix.ctorParameters = function () { return [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */], },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["X" /* Renderer2 */], },
+    ]; };
+    IonAffix.propDecorators = {
+        "content": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */], args: ['content',] },],
+        "onSticky": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
+    };
+    return IonAffix;
+}());
+
+//# sourceMappingURL=ion-affix.js.map
+
+/***/ }),
+
+/***/ 807:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ion_affix_module__ = __webpack_require__(808);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__ion_affix_module__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__directives_ion_affix__ = __webpack_require__(794);
+/* unused harmony namespace reexport */
+
+
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ 808:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IonAffixModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__directives_ion_affix__ = __webpack_require__(794);
+
+
+var IonAffixModule = (function () {
+    function IonAffixModule() {
+    }
+    IonAffixModule.decorators = [
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */], args: [{
+                    declarations: [
+                        __WEBPACK_IMPORTED_MODULE_1__directives_ion_affix__["a" /* IonAffix */]
+                    ],
+                    exports: [
+                        __WEBPACK_IMPORTED_MODULE_1__directives_ion_affix__["a" /* IonAffix */]
+                    ]
+                },] },
+    ];
+    /** @nocollapse */
+    IonAffixModule.ctorParameters = function () { return []; };
+    return IonAffixModule;
+}());
+
+//# sourceMappingURL=ion-affix.module.js.map
+
+/***/ }),
+
+/***/ 809:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = adapterFactory;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__content_adapter__ = __webpack_require__(810);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__scroll_adapter__ = __webpack_require__(811);
+
+
+
+function adapterFactory(container) {
+    if (container instanceof __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["c" /* Content */]) {
+        return new __WEBPACK_IMPORTED_MODULE_1__content_adapter__["a" /* ContentAdapter */](container);
+    }
+    else if (container instanceof __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["r" /* Scroll */]) {
+        return new __WEBPACK_IMPORTED_MODULE_2__scroll_adapter__["a" /* ScrollAdapter */](container);
+    }
+    throw 'Invalid container element (only ion-content and ion-scroll currently supported)';
+}
+//# sourceMappingURL=adapter-factory.js.map
+
+/***/ }),
+
+/***/ 810:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContentAdapter; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs__);
+
+/**
+ * Adapter for ion-content.
+ *
+ * @author Jonas Zuberbuehler <jonas.zuberbuehler@gmail.com>
+ */
+var /**
+ * Adapter for ion-content.
+ *
+ * @author Jonas Zuberbuehler <jonas.zuberbuehler@gmail.com>
+ */
+ContentAdapter = (function () {
+    function ContentAdapter(content) {
+        this.content = content;
+    }
+    ContentAdapter.prototype.onScroll = function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0_rxjs__["merge"])(this.content.ionScrollStart, this.content.ionScroll, this.content.ionScrollEnd);
+    };
+    ContentAdapter.prototype.getClientTop = function () {
+        return this.content.getScrollElement().getBoundingClientRect().top;
+    };
+    ContentAdapter.prototype.getScrollTop = function () {
+        return this.content.getScrollElement().scrollTop;
+    };
+    ContentAdapter.prototype.appendFixedHeader = function (headerElement) {
+        this.content.getNativeElement().appendChild(headerElement);
+    };
+    ContentAdapter.prototype.isScrollingDown = function () {
+        return this.content.directionY === 'down';
+    };
+    return ContentAdapter;
+}());
+/**
+ * Adapter for ion-content.
+ *
+ * @author Jonas Zuberbuehler <jonas.zuberbuehler@gmail.com>
+ */
+
+//# sourceMappingURL=content-adapter.js.map
+
+/***/ }),
+
+/***/ 811:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ScrollAdapter; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_operators__ = __webpack_require__(349);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_operators___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs_operators__);
+
+
+/**
+ * Adapter for ion-scroll.
+ *
+ * @author Jonas Zuberbuehler <jonas.zuberbuehler@gmail.com>
+ */
+var /**
+ * Adapter for ion-scroll.
+ *
+ * @author Jonas Zuberbuehler <jonas.zuberbuehler@gmail.com>
+ */
+ScrollAdapter = (function () {
+    function ScrollAdapter(scroll) {
+        this.scroll = scroll;
+        this.scrollingDown = false;
+    }
+    ScrollAdapter.prototype.onScroll = function () {
+        var _this = this;
+        return Object(__WEBPACK_IMPORTED_MODULE_0_rxjs__["fromEvent"])(this.scroll._scrollContent.nativeElement, 'scroll')
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_1_rxjs_operators__["map"])(function () { return _this.getScrollTop(); }), Object(__WEBPACK_IMPORTED_MODULE_1_rxjs_operators__["pairwise"])(), Object(__WEBPACK_IMPORTED_MODULE_1_rxjs_operators__["tap"])(function (scrollTops) { return _this.scrollingDown = scrollTops[0] - scrollTops[1] < 0; }));
+    };
+    ScrollAdapter.prototype.getClientTop = function () {
+        return 0;
+    };
+    ScrollAdapter.prototype.getScrollTop = function () {
+        return this.scroll._scrollContent.nativeElement.scrollTop;
+    };
+    ScrollAdapter.prototype.appendFixedHeader = function (headerElement) {
+        this.scroll._scrollContent.nativeElement.parentElement.appendChild(headerElement);
+    };
+    ScrollAdapter.prototype.isScrollingDown = function () {
+        return this.scrollingDown;
+    };
+    return ScrollAdapter;
+}());
+/**
+ * Adapter for ion-scroll.
+ *
+ * @author Jonas Zuberbuehler <jonas.zuberbuehler@gmail.com>
+ */
+
+//# sourceMappingURL=scroll-adapter.js.map
+
+/***/ }),
+
+/***/ 847:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StickyListHeaderLayout3; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var StickyListHeaderLayout3 = /** @class */ (function () {
+    function StickyListHeaderLayout3() {
+        this.slider = {};
+    }
+    StickyListHeaderLayout3.prototype.ngOnChanges = function (changes) {
+        this.data = changes['data'].currentValue;
+    };
+    StickyListHeaderLayout3.prototype.onEvent = function (event, item, e) {
+        if (e) {
+            e.stopPropagation();
+        }
+        if (this.events[event]) {
+            this.events[event](item);
+        }
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], StickyListHeaderLayout3.prototype, "data", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], StickyListHeaderLayout3.prototype, "events", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */])
+    ], StickyListHeaderLayout3.prototype, "content", void 0);
+    StickyListHeaderLayout3 = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'sticky-list-header-layout-3',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\sticky-list-header\layout-3\sticky-list-header.html"*/'<!-- Theme Sticky List Header - Post -->\n\n<ion-content no-padding>\n\n  <div *ngIf="data != null">\n\n    <ion-list *ngFor="let item of data.items">\n\n      <!--Text Header Top-->\n\n      <ion-list-header no-lines ion-affix [content]="content">\n\n        <ion-item transparent no-margin no-padding no-lines>\n\n          <h2 item-start no-margin header-title text-capitalize>{{item.groupName}}</h2>\n\n          <div item-content item-subtitle>\n\n            {{item.dateTime}}\n\n          </div>\n\n        </ion-item>\n\n      </ion-list-header>\n\n      <!--Text Content List -->\n\n      <ion-card no-margin *ngFor="let element of item.items" (click)="onEvent(\'onItemClick\', element.title, $event)">\n\n        <ion-item transparent no-lines>\n\n          <ion-thumbnail item-start>\n\n            <img [src]="element.image" [alt]="element.title" />\n\n          </ion-thumbnail>\n\n          <h2 item-title text-capitalize>{{element.name}}</h2>\n\n          <button item-end ion-button ion-text button-action-shit (click)="onEvent(\'onShare\', \'Share\', $event)">\n\n            <ion-icon [name]="element.shareIcon"></ion-icon>\n\n          </button>\n\n        </ion-item>\n\n        <ion-card-content>\n\n          <!--Content List Title -->\n\n          <h2 card-title margin-bottom>{{element.title}}</h2>\n\n          <!--Content List Subtitle -->\n\n          <p card-subtitle text-wrap>{{element.subtitle}}</p>\n\n        </ion-card-content>\n\n      </ion-card>\n\n    </ion-list>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\sticky-list-header\layout-3\sticky-list-header.html"*/
+        }),
+        __metadata("design:paramtypes", [])
+    ], StickyListHeaderLayout3);
+    return StickyListHeaderLayout3;
+}());
+
+//# sourceMappingURL=sticky-list-header-layout-3.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=5.js.map

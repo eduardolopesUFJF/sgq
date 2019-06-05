@@ -26,30 +26,16 @@ namespace SGQ.GDOL.Api.Controllers
         [HttpGet("ids/{usuario}")]
         public IActionResult GetIds(string usuario)
         {
-            try
-            {
-                var ids = _obraService.ObterTodasAtivasSemInclude(usuario).Select(x => x.Id).ToArray();
-                return Ok(ids);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+            var ids = _obraService.ObterTodasAtivasSemInclude(usuario).Select(x => x.Id).ToArray();
+            return Ok(ids);
         }
 
         [HttpGet("{idObra}")]
         public IActionResult GetById(int idObra)
         {
-            try
-            {
-                var obraBD = _obraService.ObterObraComInclude(new Obra{ Id = idObra});
-                var obraVM = Mapper.Map<ObraVM>(obraBD);
-                return Ok(obraVM);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+            var obraBD = _obraService.ObterObraComInclude(new Obra{ Id = idObra});
+            var obraVM = Mapper.Map<ObraVM>(obraBD);
+            return Ok(obraVM);
         }
     }
 }

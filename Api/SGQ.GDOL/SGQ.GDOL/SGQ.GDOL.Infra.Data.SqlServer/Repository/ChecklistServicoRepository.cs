@@ -22,7 +22,7 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Repository
                             .Include(x => x.ItensChecklistServico)
                             .OrderBy(x => x.Codigo)
                             .ToList();
-
+            
             return result;
         }
     }

@@ -1,1 +1,108 @@
-webpackJsonp([49],{684:function(l,n,u){"use strict";function t(l){return e._33(0,[(l()(),e._10(0,0,null,null,34,"ion-item-sliding",[["transparent",""]],null,null,null,v.b,v.a)),e._9(1,49152,[["slidingItem",4]],2,h.a,[[2,k.a],x.a,e.J,e.n,e.C],null,null),e._29(335544320,2,{item:0}),e._29(603979776,3,{_itemOptions:1}),(l()(),e._31(-1,null,["\n            "])),(l()(),e._10(5,0,null,0,19,"ion-item",[["background-size",""],["box-shadow",""],["class","item item-block"],["no-lines",""]],null,[[null,"click"]],function(l,n,u){var t=!0;if("click"===n){t=!1!==l.component.onEvent("onItemClick",l.context.$implicit.title,u)&&t}return t},y.b,y.a)),e._9(6,278528,null,0,w.m,[e.x,e.n,e.K],{ngStyle:[0,"ngStyle"]},null),e._25(7,{"background-image":0}),e._9(8,1097728,[[2,4]],3,J.a,[$.a,O.a,e.n,e.J,[2,I.a]],null,null),e._29(335544320,4,{contentLabel:0}),e._29(603979776,5,{_buttons:1}),e._29(603979776,6,{_icons:1}),e._9(12,16384,null,0,P.a,[],null,null),(l()(),e._31(-1,2,["\n              "])),(l()(),e._10(14,0,null,2,9,"div",[["title-block",""]],null,null,null,null,null)),(l()(),e._31(-1,null,["\n                "])),(l()(),e._31(-1,null,["\n                "])),(l()(),e._10(17,0,null,null,1,"p",[["card-subtitle",""]],null,null,null,null,null)),(l()(),e._31(18,null,["",""])),(l()(),e._31(-1,null,["\n                "])),(l()(),e._31(-1,null,["\n                "])),(l()(),e._10(21,0,null,null,1,"h1",[["card-title",""],["text-wrap",""]],null,null,null,null,null)),(l()(),e._31(22,null,["",""])),(l()(),e._31(-1,null,["\n              "])),(l()(),e._31(-1,2,["\n            "])),(l()(),e._31(-1,null,["\n            "])),(l()(),e._31(-1,null,["\n            "])),(l()(),e._10(27,0,null,1,6,"ion-item-options",[],null,null,null,null,null)),e._9(28,16384,[[3,4]],0,C.a,[e.n,x.a],null,null),(l()(),e._31(-1,null,["\n              "])),(l()(),e._10(30,0,null,null,2,"button",[["ion-button",""],["text-capitalize",""],["transparent",""]],null,[[null,"click"]],function(l,n,u){var t=!0;if("click"===n){t=!1!==l.component.delete(l.context.$implicit)&&t}return t},F.b,F.a)),e._9(31,1097728,null,0,S.a,[[8,""],O.a,e.n,e.J],null,null),(l()(),e._31(32,0,["\n              ","\n            "])),(l()(),e._31(-1,null,["\n            "])),(l()(),e._31(-1,null,["\n          "]))],function(l,n){l(n,6,0,l(n,7,0,"url("+n.context.$implicit.image+")"))},function(l,n){l(n,18,0,n.context.$implicit.subtitle);l(n,22,0,n.context.$implicit.title);l(n,32,0,n.context.$implicit.delate)})}function i(l){return e._33(0,[(l()(),e._10(0,0,null,null,17,"ion-grid",[["class","grid"],["no-padding",""]],null,null,null,null,null)),e._9(1,16384,null,0,T.a,[],null,null),(l()(),e._31(-1,null,["\n    "])),(l()(),e._10(3,0,null,null,13,"ion-row",[["class","row"]],null,null,null,null,null)),e._9(4,16384,null,0,j.a,[],null,null),(l()(),e._31(-1,null,["\n      "])),(l()(),e._10(6,0,null,null,9,"ion-col",[["align-self-end",""],["class","col"],["col-12",""]],null,null,null,null,null)),e._9(7,16384,null,0,z.a,[],null,null),(l()(),e._31(-1,null,["\n        "])),(l()(),e._10(9,0,null,null,5,"ion-list",[],null,null,null,null,null)),e._9(10,16384,null,0,k.a,[O.a,e.n,e.J,x.a,E.l,L.a],null,null),(l()(),e._31(-1,null,["\n          "])),(l()(),e._5(16777216,null,null,1,null,t)),e._9(13,802816,null,0,w.i,[e.T,e.P,e.w],{ngForOf:[0,"ngForOf"]},null),(l()(),e._31(-1,null,["\n        "])),(l()(),e._31(-1,null,["\n      "])),(l()(),e._31(-1,null,["\n    "])),(l()(),e._31(-1,null,["\n  "]))],function(l,n){l(n,13,0,n.component.data.items)},null)}function a(l){return e._33(0,[e._29(402653184,1,{content:0}),(l()(),e._31(-1,null,["\n"])),(l()(),e._10(2,0,null,null,5,"ion-content",[["has-header",""],["padding-top",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,M.b,M.a)),e._9(3,4374528,[[1,4]],0,A.a,[O.a,x.a,L.a,e.n,e.J,D.a,K.a,e.C,[2,N.a],[2,R.a]],null,null),(l()(),e._31(-1,1,["\n  "])),(l()(),e._5(16777216,null,1,1,null,i)),e._9(6,16384,null,0,w.j,[e.T,e.P],{ngIf:[0,"ngIf"]},null),(l()(),e._31(-1,1,["\n"])),(l()(),e._31(-1,null,["\n"]))],function(l,n){l(n,6,0,null!=n.component.data)},function(l,n){l(n,2,0,e._22(n,3).statusbarPadding,e._22(n,3)._hasRefresher)})}Object.defineProperty(n,"__esModule",{value:!0});var e=u(2),_=(u(0),u(55),function(){function l(){var l=this;this.undo=function(l){l.close()},this.delete=function(n){var u=l.data.items.indexOf(n);u>-1&&l.data.items.splice(u,1)}}return l.prototype.onEvent=function(l,n,u){this.events[l]&&this.events[l](n)},l}()),o=function(){return function(){}}(),c=u(190),s=u(191),r=u(192),d=u(193),f=u(194),p=u(195),m=u(196),b=u(197),g=u(198),v=u(790),h=u(213),k=u(56),x=u(6),y=u(129),w=u(15),J=u(24),$=u(21),O=u(3),I=u(50),P=u(60),C=u(141),F=u(38),S=u(27),T=u(130),j=u(81),z=u(82),E=u(10),L=u(13),M=u(199),A=u(30),D=u(12),K=u(32),N=u(7),R=u(29),q=e._8({encapsulation:2,styles:[],data:{}}),B=e._6("swipe-to-dismiss-layout-3",_,function(l){return e._33(0,[(l()(),e._10(0,0,null,null,1,"swipe-to-dismiss-layout-3",[],null,null,null,a,q)),e._9(1,49152,null,0,_,[],null,null)],null,null)},{data:"data",events:"events"},{},[]),G=u(20),H=u(128),Q=u(49);u.d(n,"SwipeToDismissLayout3ModuleNgFactory",function(){return U});var U=e._7(o,[],function(l){return e._18([e._19(512,e.k,e._3,[[8,[c.a,s.a,r.a,d.a,f.a,p.a,m.a,b.a,g.a,B]],[3,e.k],e.A]),e._19(4608,w.l,w.k,[e.y,[2,w.u]]),e._19(4608,G.r,G.r,[]),e._19(4608,G.d,G.d,[]),e._19(512,w.b,w.b,[]),e._19(512,G.p,G.p,[]),e._19(512,G.e,G.e,[]),e._19(512,G.n,G.n,[]),e._19(512,H.a,H.a,[]),e._19(512,H.b,H.b,[]),e._19(512,o,o,[]),e._19(256,Q.a,_,[])])})},790:function(l,n,u){"use strict";function t(l){return i._33(2,[(l()(),i._31(-1,null,["\n    "])),i._21(null,0),(l()(),i._31(-1,null,["\n    "])),i._21(null,1),(l()(),i._31(-1,null,["\n  "]))],null,null)}u.d(n,"a",function(){return a}),n.b=t;var i=u(2),a=(u(6),i._8({encapsulation:2,styles:[],data:{}}))}});
+webpackJsonp([49],{
+
+/***/ 739:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchBarLayout3Module", function() { return SearchBarLayout3Module; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__search_bar_layout_3__ = __webpack_require__(870);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var SearchBarLayout3Module = /** @class */ (function () {
+    function SearchBarLayout3Module() {
+    }
+    SearchBarLayout3Module = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__search_bar_layout_3__["a" /* SearchBarLayout3 */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__search_bar_layout_3__["a" /* SearchBarLayout3 */]),
+            ],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_2__search_bar_layout_3__["a" /* SearchBarLayout3 */]
+            ],
+            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
+        })
+    ], SearchBarLayout3Module);
+    return SearchBarLayout3Module;
+}());
+
+//# sourceMappingURL=search-bar-layout-3.module.js.map
+
+/***/ }),
+
+/***/ 870:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SearchBarLayout3; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var SearchBarLayout3 = /** @class */ (function () {
+    function SearchBarLayout3() {
+        this.searchTerm = "";
+    }
+    SearchBarLayout3.prototype.getItems = function (event) {
+        var _this = this;
+        if (!this.allItems) {
+            this.allItems = this.data.items;
+        }
+        this.data.items = this.allItems.filter(function (item) {
+            return item.title.toLowerCase().indexOf(_this.searchTerm.toLowerCase()) > -1;
+        });
+    };
+    SearchBarLayout3.prototype.onEvent = function (event, item) {
+        if (this.events[event]) {
+            if ('onTextChange' === event) {
+                this.getItems(item);
+                this.events[event](this.searchTerm);
+            }
+            else {
+                this.events[event](item);
+            }
+        }
+        console.log(event);
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], SearchBarLayout3.prototype, "data", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], SearchBarLayout3.prototype, "events", void 0);
+    SearchBarLayout3 = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'search-bar-layout-3',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\search-bar\layout-3\search-bar.html"*/'<!-- Theme Search Field + Header 2 -->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n        <ion-icon name="menu"></ion-icon>\n\n      </button>\n\n    <ion-title *ngIf="data != null">{{data.headerTitle}}</ion-title>\n\n  </ion-navbar>\n\n  <ion-toolbar no-padding transparent>\n\n    <div background-size *ngIf="data != null" [ngStyle]="{\'background-image\': \'url(\' + data.headerImage + \')\'}">\n\n      <div search-bar-bcg>\n\n        <!-- Header Title -->\n\n        <h1 ion-text no-margin search-bar-title>{{data.title}}</h1>\n\n        <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="onEvent(\'onTextChange\', $event)"></ion-searchbar>\n\n      </div>\n\n    </div>\n\n  </ion-toolbar>\n\n</ion-header>\n\n<!--Content -->\n\n<ion-content>\n\n  <ion-grid no-padding>\n\n    <ion-row>\n\n      <!-- List Search-->\n\n      <ion-col col-12 *ngIf="data != null">\n\n        <!-- Content List -->\n\n        <ion-list no-margin>\n\n          <ion-item default-item no-lines *ngFor="let item of data.items;" (click)="onEvent(\'onItemClick\', item)">\n\n            <ion-thumbnail item-start>\n\n              <img [src]="item.avatar">\n\n            </ion-thumbnail>\n\n            <!--Title -->\n\n            <h2 ion-text item-title>{{item.title}}</h2>\n\n            <!--Subtitle -->\n\n            <p ion-text item-subtitle>{{item.subtitle}}</p>\n\n            <span span-medium>\n\n              {{item.detail}}\n\n            </span>\n\n          </ion-item>\n\n        </ion-list>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\search-bar\layout-3\search-bar.html"*/
+        }),
+        __metadata("design:paramtypes", [])
+    ], SearchBarLayout3);
+    return SearchBarLayout3;
+}());
+
+//# sourceMappingURL=search-bar-layout-3.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=49.js.map

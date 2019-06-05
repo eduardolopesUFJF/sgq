@@ -21,16 +21,9 @@ namespace SGQ.GDOL.Api.Controllers
         [HttpPost("logar")]
         public IActionResult Post([FromBody] UsuarioLoginVM usuarioLoginVM)
         {
-            try
-            {
-                var usuarioLoginDTO = Mapper.Map<UsuarioLoginDTO>(usuarioLoginVM);
-                var result = _usuarioService.Logar(usuarioLoginDTO);
-                return Ok(result);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+            var usuarioLoginDTO = Mapper.Map<UsuarioLoginDTO>(usuarioLoginVM);
+            var result = _usuarioService.Logar(usuarioLoginDTO);
+            return Ok(result);
         }
     }
 }

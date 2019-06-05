@@ -21,16 +21,9 @@ namespace SGQ.GDOL.Api.Controllers
         [HttpGet("itens-ativos")]
         public IActionResult Get()
         {
-            try
-            {
-                var resultBD = _checklistServicoService.ObterTodosAtivos();
-                var resultVM = Mapper.Map<List<ChecklistItemVM>>(resultBD);
-                return Ok(resultVM);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
+            var resultBD = _checklistServicoService.ObterTodosAtivos();
+            var resultVM = Mapper.Map<List<ChecklistItemVM>>(resultBD);
+            return Ok(resultVM);
         }
     }
 }

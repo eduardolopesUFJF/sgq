@@ -404,7 +404,7 @@ var LoginPage = /** @class */ (function () {
                     },
                     {
                         "id": 3,
-                        "title": "ARCO"
+                        "title": "ARCOS"
                     },
                     {
                         "id": 4,

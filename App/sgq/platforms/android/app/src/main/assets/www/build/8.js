@@ -1,1 +1,416 @@
-webpackJsonp([8],{738:function(n,i,a){"use strict";function l(n){return o._33(0,[(n()(),o._10(0,0,null,null,1,"h2",[["class","aviso"],["padding",""],["text-center",""]],null,null,null,null,null)),(n()(),o._31(-1,null,["Nenhum registro encontrado."]))],null,null)}function e(n){return o._33(0,[(n()(),o._10(0,0,null,null,37,"ion-item",[["class","item item-block"],["default-item",""],["no-lines",""]],null,null,null,S.b,S.a)),o._9(1,278528,null,0,x.h,[o.w,o.x,o.n,o.K],{ngClass:[0,"ngClass"]},null),o._25(2,{"novo-item":0,"item-removido":1}),o._9(3,1097728,null,3,D.a,[A.a,k.a,o.n,o.J,[2,U.a]],null,null),o._29(335544320,2,{contentLabel:0}),o._29(603979776,3,{_buttons:1}),o._29(603979776,4,{_icons:1}),o._9(7,16384,null,0,C.a,[],null,null),(n()(),o._31(-1,2,["\n                        "])),(n()(),o._10(9,0,null,2,27,"ion-row",[["class","espacamento row"]],null,null,null,null,null)),o._9(10,16384,null,0,J.a,[],null,null),(n()(),o._31(-1,null,["\n                            "])),(n()(),o._10(12,0,null,null,16,"ion-col",[["class","col"],["col-10",""]],null,[[null,"click"]],function(n,i,a){var l=!0;if("click"===i){l=!1!==n.component.editar(n.context.$implicit)&&l}return l},null,null)),o._9(13,16384,null,0,z.a,[],null,null),(n()(),o._31(-1,null,["\n                                "])),(n()(),o._10(15,0,null,null,2,"h2",[["item-title",""],["text-wrap",""]],null,null,null,null,null)),(n()(),o._31(16,null,["Data da descrição: ",""])),o._26(17,2),(n()(),o._31(-1,null,["\n                                "])),(n()(),o._10(19,0,null,null,1,"h2",[["item-title",""],["text-wrap",""]],null,null,null,null,null)),(n()(),o._31(20,null,["Descrição: ",""])),(n()(),o._31(-1,null,["\n                                "])),(n()(),o._10(22,0,null,null,2,"h2",[["item-title",""],["text-wrap",""]],null,null,null,null,null)),(n()(),o._31(23,null,["Data da tratativa: ",""])),o._26(24,2),(n()(),o._31(-1,null,["\n                                "])),(n()(),o._10(26,0,null,null,1,"h2",[["item-title",""],["text-wrap",""]],null,null,null,null,null)),(n()(),o._31(27,null,["Tratativa: ",""])),(n()(),o._31(-1,null,["\n                            "])),(n()(),o._31(-1,null,["\n                            "])),(n()(),o._10(30,0,null,null,5,"ion-col",[["class","col"],["col-2",""]],null,null,null,null,null)),o._9(31,16384,null,0,z.a,[],null,null),(n()(),o._31(-1,null,["\n                                "])),(n()(),o._10(33,0,null,null,1,"ion-icon",[["icon-small",""],["item-right",""],["name","more"],["role","img"],["style","font-size: 32px !important; margin: 0px"]],[[2,"hide",null]],[[null,"click"]],function(n,i,a){var l=!0;if("click"===i){l=!1!==n.component.exibirOpcoes(n.context.$implicit)&&l}return l},null,null)),o._9(34,147456,null,0,T.a,[k.a,o.n,o.J],{name:[0,"name"]},null),(n()(),o._31(-1,null,["\n                            "])),(n()(),o._31(-1,null,["\n                        "])),(n()(),o._31(-1,2,["\n                    "]))],function(n,i){n(i,1,0,n(i,2,0,!i.context.$implicit.id,i.context.$implicit.delete));n(i,34,0,"more")},function(n,i){n(i,16,0,i.context.$implicit.dataDescricao?o._32(i,16,0,n(i,17,0,o._22(i.parent,0),i.context.$implicit.dataDescricao,"dd/MM/yyyy")):"--");n(i,20,0,i.context.$implicit.descricao);n(i,23,0,i.context.$implicit.dataTratativa?o._32(i,23,0,n(i,24,0,o._22(i.parent,0),i.context.$implicit.dataTratativa,"dd/MM/yyyy")):"--");n(i,27,0,i.context.$implicit.tratativa);n(i,33,0,o._22(i,34)._hidden)})}function t(n){return o._33(0,[o._24(0,x.d,[o.y]),(n()(),o._10(1,0,null,null,23,"ion-header",[],null,null,null,null,null)),o._9(2,16384,null,0,M.a,[k.a,o.n,o.J,[2,$.a]],null,null),(n()(),o._31(-1,null,["\n    "])),(n()(),o._10(4,0,null,null,19,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,B.b,B.a)),o._9(5,49152,null,0,E.a,[N.a,[2,$.a],[2,P.a],k.a,o.n,o.J],null,null),(n()(),o._31(-1,3,["\n        "])),(n()(),o._10(7,0,null,0,8,"button",[["ion-button",""],["menuToggle",""]],[[8,"hidden",0]],[[null,"click"]],function(n,i,a){var l=!0;if("click"===i){l=!1!==o._22(n,9).toggle()&&l}return l},j.b,j.a)),o._9(8,1097728,[[1,4]],0,R.a,[[8,""],k.a,o.n,o.J],null,null),o._9(9,1064960,null,0,q.a,[H.a,[2,$.a],[2,R.a],[2,E.a]],{menuToggle:[0,"menuToggle"]},null),o._9(10,16384,null,1,F.a,[k.a,o.n,o.J,[2,V.a],[2,E.a]],null,null),o._29(603979776,1,{_buttons:1}),(n()(),o._31(-1,0,["\n            "])),(n()(),o._10(13,0,null,0,1,"ion-icon",[["class","icon-menu"],["name","menu"],["role","img"]],[[2,"hide",null]],null,null,null,null)),o._9(14,147456,null,0,T.a,[k.a,o.n,o.J],{name:[0,"name"]},null),(n()(),o._31(-1,0,["\n        "])),(n()(),o._31(-1,3,["\n        "])),(n()(),o._10(17,0,null,3,5,"div",[["buy",""]],null,null,null,null,null)),(n()(),o._31(-1,null,["\n            "])),(n()(),o._10(19,0,null,null,2,"ion-title",[],null,null,null,W.b,W.a)),o._9(20,49152,null,0,K.a,[k.a,o.n,o.J,[2,V.a],[2,E.a]],null,null),(n()(),o._31(-1,0,["Ocorrências"])),(n()(),o._31(-1,null,["\n        "])),(n()(),o._31(-1,3,["\n    "])),(n()(),o._31(-1,null,["\n"])),(n()(),o._31(-1,null,["\n\n"])),(n()(),o._10(26,0,null,null,35,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,L.b,L.a)),o._9(27,4374528,null,0,X.a,[k.a,Q.a,Y.a,o.n,o.J,N.a,Z.a,o.C,[2,$.a],[2,P.a]],null,null),(n()(),o._31(-1,1,["\n    "])),(n()(),o._10(29,0,null,1,1,"h2",[["class","broadcomb"],["text-center",""],["text-wrap",""]],null,null,null,null,null)),(n()(),o._31(30,null,["",""])),(n()(),o._31(-1,1,["\n    "])),(n()(),o._5(16777216,null,1,1,null,l)),o._9(33,16384,null,0,x.j,[o.T,o.P],{ngIf:[0,"ngIf"]},null),(n()(),o._31(-1,1,["\n    "])),(n()(),o._10(35,0,null,1,25,"ion-grid",[["class","grid"],["no-padding",""]],null,null,null,null,null)),o._9(36,16384,null,0,nn.a,[],null,null),(n()(),o._31(-1,null,["\n        "])),(n()(),o._10(38,0,null,null,6,"ion-row",[["class","row"]],null,null,null,null,null)),o._9(39,16384,null,0,J.a,[],null,null),(n()(),o._31(-1,null,["\n            "])),(n()(),o._10(41,0,null,null,2,"button",[["block",""],["box-shadow",""],["class","button-novo"],["default-button",""],["ion-button",""],["margin-bottom",""],["text-capitalize",""]],null,[[null,"click"]],function(n,i,a){var l=!0;if("click"===i){l=!1!==n.component.novaOcorrencia()&&l}return l},j.b,j.a)),o._9(42,1097728,null,0,R.a,[[8,""],k.a,o.n,o.J],{block:[0,"block"]},null),(n()(),o._31(-1,0,["Nova ocorrência"])),(n()(),o._31(-1,null,["\n        "])),(n()(),o._31(-1,null,["\n        "])),(n()(),o._10(46,0,null,null,13,"ion-row",[["class","row"]],null,null,null,null,null)),o._9(47,16384,null,0,J.a,[],null,null),(n()(),o._31(-1,null,["\n            "])),(n()(),o._10(49,0,null,null,9,"ion-col",[["class","col"],["col-12",""]],null,null,null,null,null)),o._9(50,16384,null,0,z.a,[],null,null),(n()(),o._31(-1,null,["\n                "])),(n()(),o._10(52,0,null,null,5,"ion-list",[["no-margin",""]],null,null,null,null,null)),o._9(53,16384,null,0,an.a,[k.a,o.n,o.J,Q.a,ln.l,Y.a],null,null),(n()(),o._31(-1,null,["\n                    "])),(n()(),o._5(16777216,null,null,1,null,e)),o._9(56,802816,null,0,x.i,[o.T,o.P,o.w],{ngForOf:[0,"ngForOf"]},null),(n()(),o._31(-1,null,["\n                "])),(n()(),o._31(-1,null,["\n            "])),(n()(),o._31(-1,null,["\n        "])),(n()(),o._31(-1,null,["\n    "])),(n()(),o._31(-1,1,["\n"]))],function(n,i){var a=i.component;n(i,9,0,"");n(i,14,0,"menu");n(i,33,0,a.inspecao.ocorrencias.length<1);n(i,42,0,"");n(i,56,0,a.inspecao.ocorrencias)},function(n,i){var a=i.component;n(i,4,0,o._22(i,5)._hidden,o._22(i,5)._sbPadding);n(i,7,0,o._22(i,9).isHidden);n(i,13,0,o._22(i,14)._hidden);n(i,26,0,o._22(i,27).statusbarPadding,o._22(i,27)._hasRefresher);n(i,30,0,a.broadcomb.toUpperCase())})}Object.defineProperty(i,"__esModule",{value:!0});var o=a(2),r=(a(0),a(55),a(787)),c=a(83),u=a(86),s=a(803),d=a(768),p=a(760),h=a(786),_=function(){function n(n,i,a,l,e,t){this.navParams=n,this.storage=i,this.viewCtrl=a,this.actionSheetCtrl=l,this.modalCtrl=e,this.messageService=t,this.inspecao=new r.a,this.servico=new h.a,this.ocorrenciaBackup=new s.a,this.inspecao=n.data.inspecao,this.servico=n.data.servico,this.broadcomb=n.data.broadcomb}return n.prototype.exibirOpcoes=function(n){var i=this;this.actionSheetCtrl.create({buttons:[{text:"Editar",handler:function(){i.editar(n)}},{text:n.delete?"Reativar":"Excluir",handler:function(){i.confirmarExclusao(n)}},{text:"Cancelar",role:"cancel"}]}).present()},n.prototype.novaOcorrencia=function(){var n=this,i=this.modalCtrl.create("ManterOcorrenciaPage",{ocorrencia:new r.a});i.present(),i.onWillDismiss(function(i){i&&(i.idGuidOcorrencia=p.UUID.UUID(),i.idInspecaoObra=n.inspecao.id,i.idGuidInspecao=n.inspecao.idGuidInspecao,n.inspecao.ocorrencias.unshift(i),n.gerarNovaOcorrencia(i))})},n.prototype.gerarNovaOcorrencia=function(n){var i=this;this.storage.ready().then(function(){var a=[];i.storage.get("atualizacoes").then(function(l){var e=new d.a({id:p.UUID.UUID(),idOcorrencia:n.id,idGuidOcorrencia:n.idGuidOcorrencia,idInspecao:i.inspecao.id,idGuidInspecao:i.inspecao.idGuidInspecao,idArea:i.servico.idArea,idGuidArea:i.servico.idAreaGuid,idServico:i.servico.id,idGuidServico:i.servico.idGuidServico,tipo:"Insert",entidade:"Ocorrencia",valor:JSON.stringify(n),data:new Date,descricao:"Criação da ocorrência '"+n.descricao+"' em '"+i.broadcomb+"'.",obraId:i.servico.idObra});l?(a=l).push(e):a.push(e),i.storage.set("atualizacoes",a),i.atualizarOcorrenciaCriacao(n)})})},n.prototype.atualizarOcorrenciaCriacao=function(n){var i=this;this.storage.ready().then(function(){i.storage.get("obras").then(function(a){a.find(function(n){return n.id==i.servico.idObra}).areas.find(function(n){return i.servico.idAreaGuid?n.idGuid==i.servico.idAreaGuid:n.id==i.servico.idArea}).servicos.find(function(n){return i.servico.idGuidServico?n.idGuidServico==i.servico.idGuidServico:n.id==i.servico.id}).inspecoesObra.find(function(n){return i.inspecao.idGuidInspecao?n.idGuidInspecao==i.inspecao.idGuidInspecao:n.id==i.inspecao.id}).ocorrencias.unshift(n),i.storage.set("obras",a)})})},n.prototype.editar=function(n){var i=this,a=this.modalCtrl.create("ManterOcorrenciaPage",{ocorrencia:n});this.ocorrenciaBackup=new s.a(n),a.present(),a.onWillDismiss(function(n){if(n)i.editarOcorrencias(n);else{var a=i.inspecao.ocorrencias.find(function(n){return i.ocorrenciaBackup.idGuidOcorrencia?n.idGuidOcorrencia==i.ocorrenciaBackup.idGuidOcorrencia:n.id==i.ocorrenciaBackup.id});a.dataDescricao=i.ocorrenciaBackup.dataDescricao,a.descricao=i.ocorrenciaBackup.descricao,a.dataTratativa=i.ocorrenciaBackup.dataTratativa,a.tratativa=i.ocorrenciaBackup.tratativa}})},n.prototype.editarOcorrencias=function(n){var i=this;this.storage.ready().then(function(){var a=[];i.storage.get("atualizacoes").then(function(l){var e=new d.a({id:p.UUID.UUID(),idOcorrencia:n.id,idGuidOcorrencia:n.idGuidOcorrencia,idInspecao:i.inspecao.id,idGuidInspecao:i.inspecao.idGuidInspecao,idArea:i.servico.idArea,idGuidArea:i.servico.idAreaGuid,idServico:i.servico.id,idGuidServico:i.servico.idGuidServico,tipo:"Update",entidade:"Ocorrencia",valor:JSON.stringify(n),data:new Date,descricao:"Edição da ocorrência '"+n.descricao+"' em '"+i.broadcomb+"'.",obraId:i.servico.idObra});l?(a=l).push(e):a.push(e),i.storage.set("atualizacoes",a),i.atualizarOcorrenciaEdicao(n)})})},n.prototype.atualizarOcorrenciaEdicao=function(n){var i=this;this.storage.ready().then(function(){i.storage.get("obras").then(function(a){var l=a.find(function(n){return n.id==i.servico.idObra}).areas.find(function(n){return i.servico.idAreaGuid?n.idGuid==i.servico.idAreaGuid:n.id==i.servico.idArea}).servicos.find(function(n){return i.servico.idGuidServico?n.idGuidServico==i.servico.idGuidServico:n.id==i.servico.id}).inspecoesObra.find(function(n){return i.inspecao.idGuidInspecao?n.idGuidInspecao==i.inspecao.idGuidInspecao:n.id==i.inspecao.id}).ocorrencias.find(function(i){return i.idGuidOcorrencia?i.idGuidOcorrencia==n.idGuidOcorrencia:i.id==n.id});l.dataDescricao=n.dataDescricao,l.descricao=n.descricao,l.dataTratativa=n.dataTratativa,l.tratativa=n.tratativa,i.storage.set("obras",a)})})},n.prototype.confirmarExclusao=function(n){var i=this;this.messageService.exibirMensagemConfirmacao(n.delete?"Deseja realmente reativar a ocorrência selecionada?":"Deseja realmente excluir a ocorrência selecionada?",function(){i.alterarSituacaoOcorrencia(n)})},n.prototype.alterarSituacaoOcorrencia=function(n){var i=this;this.storage.ready().then(function(){var a=[];i.storage.get("atualizacoes").then(function(l){n.delete=!n.delete;var e=new d.a({id:p.UUID.UUID(),idOcorrencia:n.id,idGuidOcorrencia:n.idGuidOcorrencia,idInspecao:i.inspecao.id,idGuidInspecao:i.inspecao.idGuidInspecao,idServico:i.servico.id,idGuidServico:i.servico.idGuidServico,tipo:"Update",entidade:"Ocorrencia",valor:JSON.stringify(n),data:new Date,descricao:(n.delete?"Inativação":"Ativação")+" da ocorrência '"+n.descricao+"' em '"+i.broadcomb.toUpperCase()+"'."});l?(a=l).push(e):a.push(e),i.storage.set("atualizacoes",a),i.atualizarOcorrenciaSituacao(n)})})},n.prototype.atualizarOcorrenciaSituacao=function(n){var i=this;this.storage.ready().then(function(){i.storage.get("obras").then(function(a){a.find(function(n){return n.id==i.servico.idObra}).areas.find(function(n){return i.servico.idAreaGuid?n.idGuid==i.servico.idAreaGuid:n.id==i.servico.idArea}).servicos.find(function(n){return i.servico.idGuidServico?n.idGuidServico==i.servico.idGuidServico:n.id==i.servico.id}).inspecoesObra.find(function(n){return i.inspecao.idGuidInspecao?n.idGuidInspecao==i.inspecao.idGuidInspecao:n.id==i.inspecao.id}).ocorrencias.find(function(i){return n.idGuidOcorrencia?i.idGuidOcorrencia==n.idGuidOcorrencia:i.id==n.id}).delete=n.delete,i.storage.set("obras",a)})})},n}(),v=function(){return function(){}}(),f=a(190),m=a(191),b=a(192),g=a(193),G=a(194),O=a(195),I=a(196),w=a(197),y=a(198),S=a(129),x=a(15),D=a(24),A=a(21),k=a(3),U=a(50),C=a(60),J=a(81),z=a(82),T=a(36),M=a(131),$=a(7),B=a(360),E=a(39),N=a(12),P=a(29),j=a(38),R=a(27),q=a(200),H=a(33),F=a(132),V=a(51),W=a(359),K=a(84),L=a(199),X=a(30),Q=a(6),Y=a(13),Z=a(32),nn=a(130),an=a(56),ln=a(10),en=a(16),tn=a(139),on=a(90),rn=o._8({encapsulation:2,styles:[],data:{}}),cn=o._6("page-ocorrencia",_,function(n){return o._33(0,[(n()(),o._10(0,0,null,null,1,"page-ocorrencia",[],null,null,null,t,rn)),o._9(1,49152,null,0,_,[en.a,c.b,$.a,tn.a,on.a,u.a],null,null)],null,null)},{},{},[]),un=a(20),sn=a(128),dn=a(49);a.d(i,"OcorrenciaPageModuleNgFactory",function(){return pn});var pn=o._7(v,[],function(n){return o._18([o._19(512,o.k,o._3,[[8,[f.a,m.a,b.a,g.a,G.a,O.a,I.a,w.a,y.a,cn]],[3,o.k],o.A]),o._19(4608,x.l,x.k,[o.y,[2,x.u]]),o._19(4608,un.r,un.r,[]),o._19(4608,un.d,un.d,[]),o._19(512,x.b,x.b,[]),o._19(512,un.p,un.p,[]),o._19(512,un.e,un.e,[]),o._19(512,un.n,un.n,[]),o._19(512,sn.a,sn.a,[]),o._19(512,sn.b,sn.b,[]),o._19(512,v,v,[]),o._19(256,dn.a,_,[])])})},760:function(n,i,a){"use strict";i.UUID=function(){function n(){}return n.UUID=function(){if("undefined"!=typeof window&&void 0!==window.crypto&&void 0!==window.crypto.getRandomValues){var n=new Uint16Array(8);return window.crypto.getRandomValues(n),this.pad4(n[0])+this.pad4(n[1])+"-"+this.pad4(n[2])+"-"+this.pad4(n[3])+"-"+this.pad4(n[4])+"-"+this.pad4(n[5])+this.pad4(n[6])+this.pad4(n[7])}return this.random4()+this.random4()+"-"+this.random4()+"-"+this.random4()+"-"+this.random4()+"-"+this.random4()+this.random4()+this.random4()},n.pad4=function(n){for(var i=n.toString(16);i.length<4;)i="0"+i;return i},n.random4=function(){return Math.floor(65536*(1+Math.random())).toString(16).substring(1)},n}()},768:function(n,i,a){"use strict";a.d(i,"a",function(){return l});var l=function(){return function(n){void 0===n&&(n={}),Object.assign(this,n)}}()},786:function(n,i,a){"use strict";a.d(i,"a",function(){return l});var l=function(){return function(n){void 0===n&&(n={}),this.id=0,this.idGuidServico="",this.descricao="",this.tipo="",this.idObra=0,this.idChecklist=0,this.idChecklistGuid="",this.idArea=0,this.idAreaGuid="",this.metaAprovacao=90,this.status=0,this.situacao="Em aberto",this.delete=!1,this.dataHoraInclusao=new Date,this.dataHoraAlteracao=new Date,this.inspecoesObra=[],this.itensChecklistServico=[],Object.assign(this,n)}}()},787:function(n,i,a){"use strict";a.d(i,"a",function(){return l});var l=function(){return function(n){void 0===n&&(n={}),this.id=0,this.idGuidInspecao="",this.idGuidServico="",this.campo1="",this.campo2="",this.campo3="",this.campo4="",this.status=0,this.situacao="Em aberto",this.delete=!1,this.dataHoraAlteracao=new Date,this.qtdNA=0,this.qtdA=0,this.qtdR=0,this.qtdRA=0,this.qtdX=0,this.inspecaoObraItens=[],this.ocorrencias=[],Object.assign(this,n)}}()},803:function(n,i,a){"use strict";a.d(i,"a",function(){return l});var l=function(){return function(n){void 0===n&&(n={}),this.id=0,this.idGuidOcorrencia="",this.idInspecaoObra=0,this.idGuidInspecao="",this.descricao="",this.tratativa="",this.dataHoraAlteracao=new Date,Object.assign(this,n)}}()}});
+webpackJsonp([8],{
+
+/***/ 770:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OcorrenciaPageModule", function() { return OcorrenciaPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ocorrencia__ = __webpack_require__(905);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var OcorrenciaPageModule = /** @class */ (function () {
+    function OcorrenciaPageModule() {
+    }
+    OcorrenciaPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__ocorrencia__["a" /* OcorrenciaPage */]
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__ocorrencia__["a" /* OcorrenciaPage */])
+            ],
+            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
+        })
+    ], OcorrenciaPageModule);
+    return OcorrenciaPageModule;
+}());
+
+//# sourceMappingURL=ocorrencia.module.js.map
+
+/***/ }),
+
+/***/ 776:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var UUID = (function () {
+    function UUID() {
+        // no-op
+    }
+    UUID.UUID = function () {
+        if (typeof (window) !== "undefined" && typeof (window.crypto) !== "undefined" && typeof (window.crypto.getRandomValues) !== "undefined") {
+            // If we have a cryptographically secure PRNG, use that
+            // http://stackoverflow.com/questions/6906916/collisions-when-generating-uuids-in-javascript
+            var buf = new Uint16Array(8);
+            window.crypto.getRandomValues(buf);
+            return (this.pad4(buf[0]) + this.pad4(buf[1]) + "-" + this.pad4(buf[2]) + "-" + this.pad4(buf[3]) + "-" + this.pad4(buf[4]) + "-" + this.pad4(buf[5]) + this.pad4(buf[6]) + this.pad4(buf[7]));
+        }
+        else {
+            // Otherwise, just use Math.random
+            // https://stackoverflow.com/questions/105034/create-guid-uuid-in-javascript
+            // https://stackoverflow.com/questions/11605068/why-does-jshint-argue-against-bitwise-operators-how-should-i-express-this-code
+            return this.random4() + this.random4() + "-" + this.random4() + "-" + this.random4() + "-" +
+                this.random4() + "-" + this.random4() + this.random4() + this.random4();
+        }
+    };
+    UUID.pad4 = function (num) {
+        var ret = num.toString(16);
+        while (ret.length < 4) {
+            ret = "0" + ret;
+        }
+        return ret;
+    };
+    UUID.random4 = function () {
+        return Math.floor((1 + Math.random()) * 0x10000)
+            .toString(16)
+            .substring(1);
+    };
+    return UUID;
+}());
+exports.UUID = UUID;
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ 792:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Alteracao; });
+var Alteracao = /** @class */ (function () {
+    function Alteracao(values) {
+        if (values === void 0) { values = {}; }
+        Object.assign(this, values);
+    }
+    return Alteracao;
+}());
+
+//# sourceMappingURL=alteracao.js.map
+
+/***/ }),
+
+/***/ 805:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Servico; });
+var Servico = /** @class */ (function () {
+    function Servico(values) {
+        if (values === void 0) { values = {}; }
+        this.id = 0;
+        this.idGuidServico = '';
+        this.descricao = '';
+        this.tipo = '';
+        this.idObra = 0;
+        this.idChecklist = 0;
+        this.idChecklistGuid = '';
+        this.idArea = 0;
+        this.idAreaGuid = "";
+        this.metaAprovacao = 90;
+        this.status = 0;
+        this.situacao = 'Em aberto';
+        this.delete = false;
+        this.dataHoraInclusao = new Date();
+        this.dataHoraAlteracao = new Date();
+        this.inspecoesObra = [];
+        this.itensChecklistServico = [];
+        Object.assign(this, values);
+    }
+    return Servico;
+}());
+
+//# sourceMappingURL=servico.js.map
+
+/***/ }),
+
+/***/ 806:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Inspecao; });
+var Inspecao = /** @class */ (function () {
+    function Inspecao(values) {
+        if (values === void 0) { values = {}; }
+        this.id = 0;
+        this.idGuidInspecao = '';
+        this.idGuidServico = '';
+        this.campo1 = "";
+        this.campo2 = "";
+        this.campo3 = "";
+        this.campo4 = "";
+        this.status = 0;
+        this.situacao = 'Em aberto';
+        this.delete = false;
+        this.dataHoraAlteracao = new Date();
+        this.qtdNA = 0;
+        this.qtdA = 0;
+        this.qtdR = 0;
+        this.qtdRA = 0;
+        this.qtdX = 0;
+        this.inspecaoObraItens = [];
+        this.ocorrencias = [];
+        Object.assign(this, values);
+    }
+    return Inspecao;
+}());
+
+//# sourceMappingURL=inspecao.js.map
+
+/***/ }),
+
+/***/ 821:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Ocorrencia; });
+var Ocorrencia = /** @class */ (function () {
+    function Ocorrencia(values) {
+        if (values === void 0) { values = {}; }
+        this.id = 0;
+        this.idGuidOcorrencia = '';
+        this.idInspecaoObra = 0;
+        this.idGuidInspecao = '';
+        this.descricao = '';
+        this.tratativa = '';
+        this.dataHoraAlteracao = new Date();
+        Object.assign(this, values);
+    }
+    return Ocorrencia;
+}());
+
+//# sourceMappingURL=ocorrencia.js.map
+
+/***/ }),
+
+/***/ 905:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OcorrenciaPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_inspecao__ = __webpack_require__(806);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(153);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_message_service__ = __webpack_require__(154);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__models_ocorrencia__ = __webpack_require__(821);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__models_alteracao__ = __webpack_require__(792);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angular2_uuid__ = __webpack_require__(776);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angular2_uuid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_angular2_uuid__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__models_servico__ = __webpack_require__(805);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+
+var OcorrenciaPage = /** @class */ (function () {
+    function OcorrenciaPage(navParams, storage, viewCtrl, actionSheetCtrl, modalCtrl, messageService) {
+        this.navParams = navParams;
+        this.storage = storage;
+        this.viewCtrl = viewCtrl;
+        this.actionSheetCtrl = actionSheetCtrl;
+        this.modalCtrl = modalCtrl;
+        this.messageService = messageService;
+        this.inspecao = new __WEBPACK_IMPORTED_MODULE_2__models_inspecao__["a" /* Inspecao */]();
+        this.servico = new __WEBPACK_IMPORTED_MODULE_8__models_servico__["a" /* Servico */]();
+        this.ocorrenciaBackup = new __WEBPACK_IMPORTED_MODULE_5__models_ocorrencia__["a" /* Ocorrencia */]();
+        this.inspecao = navParams.data.inspecao;
+        this.servico = navParams.data.servico;
+        this.broadcomb = navParams.data.broadcomb;
+    }
+    OcorrenciaPage.prototype.exibirOpcoes = function (ocorrencia) {
+        var _this = this;
+        var actionSheet = this.actionSheetCtrl.create({
+            "buttons": [
+                {
+                    "text": "Editar",
+                    handler: function () {
+                        _this.editar(ocorrencia);
+                    }
+                },
+                {
+                    "text": !ocorrencia.delete ? "Excluir" : "Reativar",
+                    handler: function () {
+                        _this.confirmarExclusao(ocorrencia);
+                    }
+                },
+                {
+                    "text": "Cancelar",
+                    "role": "cancel"
+                }
+            ]
+        });
+        actionSheet.present();
+    };
+    OcorrenciaPage.prototype.novaOcorrencia = function () {
+        var _this = this;
+        var modal = this.modalCtrl.create("ManterOcorrenciaPage", { ocorrencia: new __WEBPACK_IMPORTED_MODULE_2__models_inspecao__["a" /* Inspecao */]() });
+        modal.present();
+        modal.onWillDismiss(function (ocorrencia) {
+            if (ocorrencia) {
+                ocorrencia.idGuidOcorrencia = __WEBPACK_IMPORTED_MODULE_7_angular2_uuid__["UUID"].UUID();
+                ocorrencia.idInspecaoObra = _this.inspecao.id;
+                ocorrencia.idGuidInspecao = _this.inspecao.idGuidInspecao;
+                _this.inspecao.ocorrencias.unshift(ocorrencia);
+                _this.gerarNovaOcorrencia(ocorrencia);
+            }
+        });
+    };
+    OcorrenciaPage.prototype.gerarNovaOcorrencia = function (ocorrencia) {
+        var _this = this;
+        this.storage.ready().then(function () {
+            var atualizacoesArray = [];
+            _this.storage.get('atualizacoes').then(function (atualizacoes) {
+                var alteracao = new __WEBPACK_IMPORTED_MODULE_6__models_alteracao__["a" /* Alteracao */]({ id: __WEBPACK_IMPORTED_MODULE_7_angular2_uuid__["UUID"].UUID(), idOcorrencia: ocorrencia.id, idGuidOcorrencia: ocorrencia.idGuidOcorrencia, idInspecao: _this.inspecao.id, idGuidInspecao: _this.inspecao.idGuidInspecao, idArea: _this.servico.idArea, idGuidArea: _this.servico.idAreaGuid, idServico: _this.servico.id, idGuidServico: _this.servico.idGuidServico, tipo: "Insert", entidade: "Ocorrencia", valor: JSON.stringify(ocorrencia), data: new Date(), descricao: "Criação da ocorrência '" + ocorrencia.descricao + "' em '" + _this.broadcomb + "'.", obraId: _this.servico.idObra });
+                if (atualizacoes) {
+                    atualizacoesArray = atualizacoes;
+                    atualizacoesArray.push(alteracao);
+                }
+                else {
+                    atualizacoesArray.push(alteracao);
+                }
+                _this.storage.set('atualizacoes', atualizacoesArray);
+                _this.atualizarOcorrenciaCriacao(ocorrencia);
+            });
+        });
+    };
+    OcorrenciaPage.prototype.atualizarOcorrenciaCriacao = function (item) {
+        var _this = this;
+        this.storage.ready().then(function () {
+            _this.storage.get('obras').then(function (obras) {
+                obras.find(function (x) { return x.id == _this.servico.idObra; }).areas.find(function (x) { return _this.servico.idAreaGuid ? (x.idGuid == _this.servico.idAreaGuid) : (x.id == _this.servico.idArea); }).servicos.find(function (x) { return _this.servico.idGuidServico ? (x.idGuidServico == _this.servico.idGuidServico) : (x.id == _this.servico.id); }).inspecoesObra.find(function (x) { return _this.inspecao.idGuidInspecao ? (x.idGuidInspecao == _this.inspecao.idGuidInspecao) : (x.id == _this.inspecao.id); }).ocorrencias.unshift(item);
+                _this.storage.set('obras', obras);
+            });
+        });
+    };
+    OcorrenciaPage.prototype.editar = function (ocorrencia) {
+        var _this = this;
+        var modal = this.modalCtrl.create("ManterOcorrenciaPage", { ocorrencia: ocorrencia });
+        this.ocorrenciaBackup = new __WEBPACK_IMPORTED_MODULE_5__models_ocorrencia__["a" /* Ocorrencia */](ocorrencia);
+        modal.present();
+        modal.onWillDismiss(function (data) {
+            if (data) {
+                _this.editarOcorrencias(data);
+            }
+            else {
+                var ocorrenciaArray = _this.inspecao.ocorrencias.find(function (x) { return _this.ocorrenciaBackup.idGuidOcorrencia ? (x.idGuidOcorrencia == _this.ocorrenciaBackup.idGuidOcorrencia) : (x.id == _this.ocorrenciaBackup.id); });
+                ocorrenciaArray.dataDescricao = _this.ocorrenciaBackup.dataDescricao;
+                ocorrenciaArray.descricao = _this.ocorrenciaBackup.descricao;
+                ocorrenciaArray.dataTratativa = _this.ocorrenciaBackup.dataTratativa;
+                ocorrenciaArray.tratativa = _this.ocorrenciaBackup.tratativa;
+            }
+        });
+    };
+    OcorrenciaPage.prototype.editarOcorrencias = function (ocorrencia) {
+        var _this = this;
+        this.storage.ready().then(function () {
+            var atualizacoesArray = [];
+            _this.storage.get('atualizacoes').then(function (atualizacoes) {
+                var alteracao = new __WEBPACK_IMPORTED_MODULE_6__models_alteracao__["a" /* Alteracao */]({ id: __WEBPACK_IMPORTED_MODULE_7_angular2_uuid__["UUID"].UUID(), idOcorrencia: ocorrencia.id, idGuidOcorrencia: ocorrencia.idGuidOcorrencia, idInspecao: _this.inspecao.id, idGuidInspecao: _this.inspecao.idGuidInspecao, idArea: _this.servico.idArea, idGuidArea: _this.servico.idAreaGuid, idServico: _this.servico.id, idGuidServico: _this.servico.idGuidServico, tipo: "Update", entidade: "Ocorrencia", valor: JSON.stringify(ocorrencia), data: new Date(), descricao: "Edição da ocorrência '" + ocorrencia.descricao + "' em '" + _this.broadcomb + "'.", obraId: _this.servico.idObra });
+                if (atualizacoes) {
+                    atualizacoesArray = atualizacoes;
+                    atualizacoesArray.push(alteracao);
+                }
+                else {
+                    atualizacoesArray.push(alteracao);
+                }
+                _this.storage.set('atualizacoes', atualizacoesArray);
+                _this.atualizarOcorrenciaEdicao(ocorrencia);
+            });
+        });
+    };
+    OcorrenciaPage.prototype.atualizarOcorrenciaEdicao = function (item) {
+        var _this = this;
+        this.storage.ready().then(function () {
+            _this.storage.get('obras').then(function (obras) {
+                var ocorrencia = obras.find(function (x) { return x.id == _this.servico.idObra; }).areas.find(function (x) { return _this.servico.idAreaGuid ? (x.idGuid == _this.servico.idAreaGuid) : (x.id == _this.servico.idArea); }).servicos.find(function (x) { return _this.servico.idGuidServico ? (x.idGuidServico == _this.servico.idGuidServico) : (x.id == _this.servico.id); }).inspecoesObra.find(function (x) { return _this.inspecao.idGuidInspecao ? (x.idGuidInspecao == _this.inspecao.idGuidInspecao) : (x.id == _this.inspecao.id); }).ocorrencias.find(function (x) { return x.idGuidOcorrencia ? (x.idGuidOcorrencia == item.idGuidOcorrencia) : (x.id == item.id); });
+                ocorrencia.dataDescricao = item.dataDescricao;
+                ocorrencia.descricao = item.descricao;
+                ocorrencia.dataTratativa = item.dataTratativa;
+                ocorrencia.tratativa = item.tratativa;
+                _this.storage.set('obras', obras);
+            });
+        });
+    };
+    OcorrenciaPage.prototype.confirmarExclusao = function (ocorrencia) {
+        var _this = this;
+        var mensagem;
+        if (!ocorrencia.delete) {
+            mensagem = "Deseja realmente excluir a ocorrência selecionada?";
+        }
+        else {
+            mensagem = "Deseja realmente reativar a ocorrência selecionada?";
+        }
+        this.messageService.exibirMensagemConfirmacao(mensagem, function () { _this.alterarSituacaoOcorrencia(ocorrencia); });
+    };
+    OcorrenciaPage.prototype.alterarSituacaoOcorrencia = function (ocorrencia) {
+        var _this = this;
+        this.storage.ready().then(function () {
+            var atualizacoesArray = [];
+            _this.storage.get('atualizacoes').then(function (atualizacoes) {
+                ocorrencia.delete = !ocorrencia.delete;
+                var alteracao = new __WEBPACK_IMPORTED_MODULE_6__models_alteracao__["a" /* Alteracao */]({ id: __WEBPACK_IMPORTED_MODULE_7_angular2_uuid__["UUID"].UUID(), idOcorrencia: ocorrencia.id, idGuidOcorrencia: ocorrencia.idGuidOcorrencia, idInspecao: _this.inspecao.id, idGuidInspecao: _this.inspecao.idGuidInspecao, idServico: _this.servico.id, idGuidServico: _this.servico.idGuidServico, tipo: "Update", entidade: "Ocorrencia", valor: JSON.stringify(ocorrencia), data: new Date(), descricao: (ocorrencia.delete ? "Inativação" : "Ativação") + " da ocorrência '" + ocorrencia.descricao + "' em '" + _this.broadcomb.toUpperCase() + "'." });
+                if (atualizacoes) {
+                    atualizacoesArray = atualizacoes;
+                    atualizacoesArray.push(alteracao);
+                }
+                else {
+                    atualizacoesArray.push(alteracao);
+                }
+                _this.storage.set('atualizacoes', atualizacoesArray);
+                _this.atualizarOcorrenciaSituacao(ocorrencia);
+            });
+        });
+    };
+    OcorrenciaPage.prototype.atualizarOcorrenciaSituacao = function (ocorrencia) {
+        var _this = this;
+        this.storage.ready().then(function () {
+            _this.storage.get('obras').then(function (obras) {
+                obras.find(function (x) { return x.id == _this.servico.idObra; }).areas.find(function (x) { return _this.servico.idAreaGuid ? (x.idGuid == _this.servico.idAreaGuid) : (x.id == _this.servico.idArea); }).servicos.find(function (x) { return _this.servico.idGuidServico ? (x.idGuidServico == _this.servico.idGuidServico) : (x.id == _this.servico.id); }).inspecoesObra.find(function (x) { return _this.inspecao.idGuidInspecao ? (x.idGuidInspecao == _this.inspecao.idGuidInspecao) : (x.id == _this.inspecao.id); }).ocorrencias.find(function (x) { return ocorrencia.idGuidOcorrencia ? (x.idGuidOcorrencia == ocorrencia.idGuidOcorrencia) : (x.id == ocorrencia.id); }).delete = ocorrencia.delete;
+                _this.storage.set('obras', obras);
+            });
+        });
+    };
+    OcorrenciaPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'page-ocorrencia',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\ocorrencia\ocorrencia.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <button ion-button menuToggle>\n\n            <ion-icon class="icon-menu" name="menu"></ion-icon>\n\n        </button>\n\n        <div buy>\n\n            <ion-title>Ocorrências</ion-title>\n\n        </div>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n    <h2 text-center text-wrap class="broadcomb">{{broadcomb.toUpperCase()}}</h2>\n\n    <h2 padding text-center class="aviso" *ngIf="inspecao.ocorrencias.length < 1">Nenhum registro encontrado.</h2>\n\n    <ion-grid no-padding>\n\n        <ion-row>\n\n            <button ion-button default-button block text-capitalize box-shadow margin-bottom class="button-novo"\n\n                (click)="novaOcorrencia()">Nova ocorrência</button>\n\n        </ion-row>\n\n        <ion-row>\n\n            <ion-col col-12>\n\n                <ion-list no-margin>\n\n                    <ion-item default-item no-lines [ngClass]="{\'novo-item\': !item.id, \'item-removido\': item.delete}" *ngFor="let item of inspecao.ocorrencias; let i = index;">\n\n                        <ion-row class="espacamento">\n\n                            <ion-col col-10 (click)="editar(item)">\n\n                                <h2 item-title text-wrap>Data da descrição: {{item.dataDescricao ? (item.dataDescricao\n\n                                    | date:\n\n                                    \'dd/MM/yyyy\') : \'--\'}}</h2>\n\n                                <h2 item-title text-wrap>Descrição: {{item.descricao}}</h2>\n\n                                <h2 item-title text-wrap>Data da tratativa: {{item.dataTratativa ? (item.dataTratativa\n\n                                    | date:\n\n                                    \'dd/MM/yyyy\') : \'--\'}}</h2>\n\n                                <h2 item-title text-wrap>Tratativa: {{item.tratativa}}</h2>\n\n                            </ion-col>\n\n                            <ion-col col-2>\n\n                                <ion-icon name="more" icon-small item-right style="font-size: 32px !important; margin: 0px"\n\n                                    (click)="exibirOpcoes(item)"></ion-icon>\n\n                            </ion-col>\n\n                        </ion-row>\n\n                    </ion-item>\n\n                </ion-list>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-grid>\n\n</ion-content>'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\ocorrencia\ocorrencia.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["u" /* ViewController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ModalController */],
+            __WEBPACK_IMPORTED_MODULE_4__utils_message_service__["a" /* MessageService */]])
+    ], OcorrenciaPage);
+    return OcorrenciaPage;
+}());
+
+//# sourceMappingURL=ocorrencia.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=8.js.map

@@ -9,6 +9,9 @@ using Newtonsoft.Json;
 using SGQ.GDOL.Api.Jobs;
 using FluentScheduler;
 using SGQ.GDOL.Api.Middleware;
+using SGQ.GDOL.Api.Handler;
+using Microsoft.AspNetCore.ResponseCompression;
+using System.IO.Compression;
 
 namespace SGQ.GDOL.Api
 {
@@ -30,6 +33,14 @@ namespace SGQ.GDOL.Api
                 options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
             });
 
+            services.Configure<GzipCompressionProviderOptions>(options => options.Level = CompressionLevel.Optimal);
+
+            services.AddResponseCompression(options =>
+            {
+                options.EnableForHttps = true;
+                options.Providers.Add<GzipCompressionProvider>();
+            });
+
             services.AddAutoMapper();
             services.AddDIConfiguration();
             services.AddCors(options =>
@@ -49,13 +60,21 @@ namespace SGQ.GDOL.Api
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.UseResponseCompression();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
             app.UseCors("AllowAll");
             app.UseMiddleware<TratarSchemaMiddleware>();
+            app.UseExceptionHandler(new ExceptionHandlerOptions
+            {
+                ExceptionHandler = new CustomExceptionHandler().Invoke
+            });
+
+            
             app.UseMvc();
+
             JobManager.Initialize(new JobRegistry());
         }
     }
