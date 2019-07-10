@@ -24,7 +24,7 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Repository
         {
             using (var ServiceContext = new ServiceContext())
             {
-                var result = ServiceContext.Obra
+                var obraDB = ServiceContext.Obra
                         .AsNoTracking()
                         .Include(x => x.CentroCusto)
                         .Include(x => x.Areas).ThenInclude(x => x.Servicos).ThenInclude(x => x.ChecklistItem)
@@ -32,10 +32,10 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Repository
                         .Include(x => x.Areas).ThenInclude(x => x.Servicos).ThenInclude(x => x.InspecoesObra).ThenInclude(x => x.Ocorrencias)
                         .Include(x => x.Areas).ThenInclude(x => x.Servicos).ThenInclude(x => x.InspecoesObra).ThenInclude(x => x.FuncionarioAprovadoObj)
                         .Include(x => x.Areas).ThenInclude(x => x.Servicos).ThenInclude(x => x.InspecoesObra).ThenInclude(x => x.FuncionarioInspecionadoObj)
-                        .Where(x => x.Delete.HasValue && !x.Delete.Value)
-                        .FirstOrDefault(x => x.Id == obra.Id);
+                        .Where(x => x.Delete.HasValue && !x.Delete.Value && x.Id == obra.Id)
+                        .FirstOrDefault();
 
-                return result;
+                return obraDB;
             }
             
         }

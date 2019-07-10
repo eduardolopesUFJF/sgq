@@ -22,6 +22,11 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Repository
                             .Include(x => x.ItensChecklistServico)
                             .OrderBy(x => x.Codigo)
                             .ToList();
+
+            foreach (var item in result)
+            {
+                item.ItensChecklistServico = item.ItensChecklistServico.Where(x => x.Delete.HasValue && !x.Delete.Value).ToList();
+            }
             
             return result;
         }
