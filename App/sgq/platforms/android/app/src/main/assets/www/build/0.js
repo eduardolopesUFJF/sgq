@@ -1,17 +1,17 @@
 webpackJsonp([0],{
 
-/***/ 721:
+/***/ 724:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MapsLayout1Module", function() { return MapsLayout1Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__maps_layout_1__ = __webpack_require__(852);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__elastic_header_elastic_header_module__ = __webpack_require__(779);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__agm_core__ = __webpack_require__(813);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__config_app_settings__ = __webpack_require__(351);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__maps_layout_1__ = __webpack_require__(855);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__elastic_header_elastic_header_module__ = __webpack_require__(782);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__agm_core__ = __webpack_require__(816);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__config_app_settings__ = __webpack_require__(352);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -28,7 +28,7 @@ var MapsLayout1Module = /** @class */ (function () {
     function MapsLayout1Module() {
     }
     MapsLayout1Module = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_2__maps_layout_1__["a" /* MapsLayout1 */],
             ],
@@ -40,7 +40,7 @@ var MapsLayout1Module = /** @class */ (function () {
             exports: [
                 __WEBPACK_IMPORTED_MODULE_2__maps_layout_1__["a" /* MapsLayout1 */]
             ],
-            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
+            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"]]
         })
     ], MapsLayout1Module);
     return MapsLayout1Module;
@@ -50,7 +50,7 @@ var MapsLayout1Module = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 774:
+/***/ 777:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -58,7 +58,7 @@ var MapsLayout1Module = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__maps_api_loader_maps_api_loader__ = __webpack_require__(775);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__maps_api_loader_maps_api_loader__ = __webpack_require__(778);
 
 
 
@@ -245,12 +245,12 @@ var GoogleMapsAPIWrapper = /** @class */ (function () {
         return this._map.then(function (m) { return google.maps.event.trigger(m, eventName); });
     };
     GoogleMapsAPIWrapper.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
     ];
     /** @nocollapse */
     GoogleMapsAPIWrapper.ctorParameters = function () { return [
         { type: __WEBPACK_IMPORTED_MODULE_2__maps_api_loader_maps_api_loader__["a" /* MapsAPILoader */], },
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* NgZone */], },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"], },
     ]; };
     return GoogleMapsAPIWrapper;
 }());
@@ -259,7 +259,7 @@ var GoogleMapsAPIWrapper = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 775:
+/***/ 778:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -270,7 +270,7 @@ var MapsAPILoader = /** @class */ (function () {
     function MapsAPILoader() {
     }
     MapsAPILoader.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
     ];
     return MapsAPILoader;
 }());
@@ -279,7 +279,7 @@ var MapsAPILoader = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 777:
+/***/ 780:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -287,7 +287,7 @@ var MapsAPILoader = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__ = __webpack_require__(774);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__ = __webpack_require__(777);
 
 
 
@@ -375,12 +375,12 @@ var MarkerManager = /** @class */ (function () {
         });
     };
     MarkerManager.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
     ];
     /** @nocollapse */
     MarkerManager.ctorParameters = function () { return [
         { type: __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__["a" /* GoogleMapsAPIWrapper */], },
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* NgZone */], },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"], },
     ]; };
     return MarkerManager;
 }());
@@ -389,7 +389,7 @@ var MarkerManager = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 778:
+/***/ 781:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -398,9 +398,9 @@ var MarkerManager = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_operators__ = __webpack_require__(349);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_operators__ = __webpack_require__(350);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_operators___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__maps_api_loader_maps_api_loader__ = __webpack_require__(775);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__maps_api_loader_maps_api_loader__ = __webpack_require__(778);
 
 
 
@@ -462,7 +462,7 @@ var FitBoundsService = /** @class */ (function () {
         return latLng.lat + "+" + latLng.lng;
     };
     FitBoundsService.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
     ];
     /** @nocollapse */
     FitBoundsService.ctorParameters = function () { return [
@@ -475,13 +475,13 @@ var FitBoundsService = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 779:
+/***/ 782:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ElasticHeaderModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__elastic_header__ = __webpack_require__(780);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__elastic_header__ = __webpack_require__(783);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -494,14 +494,14 @@ var ElasticHeaderModule = /** @class */ (function () {
     function ElasticHeaderModule() {
     }
     ElasticHeaderModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_1__elastic_header__["a" /* ElasticHeader */],
             ],
             exports: [
                 __WEBPACK_IMPORTED_MODULE_1__elastic_header__["a" /* ElasticHeader */]
             ],
-            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
+            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"]]
         })
     ], ElasticHeaderModule);
     return ElasticHeaderModule;
@@ -511,7 +511,7 @@ var ElasticHeaderModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 780:
+/***/ 783:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -565,10 +565,10 @@ var ElasticHeader = /** @class */ (function () {
         this.ticking = false;
     };
     ElasticHeader = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* Directive */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"])({
             selector: '[elastic-header]'
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["W" /* Renderer */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"], __WEBPACK_IMPORTED_MODULE_0__angular_core__["Renderer"]])
     ], ElasticHeader);
     return ElasticHeader;
 }());
@@ -577,7 +577,7 @@ var ElasticHeader = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 782:
+/***/ 785:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -585,7 +585,7 @@ var ElasticHeader = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__ = __webpack_require__(774);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__ = __webpack_require__(777);
 
 
 
@@ -670,12 +670,12 @@ var CircleManager = /** @class */ (function () {
         });
     };
     CircleManager.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
     ];
     /** @nocollapse */
     CircleManager.ctorParameters = function () { return [
         { type: __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__["a" /* GoogleMapsAPIWrapper */], },
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* NgZone */], },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"], },
     ]; };
     return CircleManager;
 }());
@@ -684,7 +684,7 @@ var CircleManager = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 783:
+/***/ 786:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -692,7 +692,7 @@ var CircleManager = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__ = __webpack_require__(774);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__ = __webpack_require__(777);
 
 
 
@@ -785,12 +785,12 @@ var RectangleManager = /** @class */ (function () {
         });
     };
     RectangleManager.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
     ];
     /** @nocollapse */
     RectangleManager.ctorParameters = function () { return [
         { type: __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__["a" /* GoogleMapsAPIWrapper */], },
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* NgZone */], },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"], },
     ]; };
     return RectangleManager;
 }());
@@ -799,7 +799,7 @@ var RectangleManager = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 784:
+/***/ 787:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -807,8 +807,8 @@ var RectangleManager = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__ = __webpack_require__(774);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__marker_manager__ = __webpack_require__(777);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__ = __webpack_require__(777);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__marker_manager__ = __webpack_require__(780);
 
 
 
@@ -894,12 +894,12 @@ var InfoWindowManager = /** @class */ (function () {
         });
     };
     InfoWindowManager.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["B" /* Injectable */] },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["Injectable"] },
     ];
     /** @nocollapse */
     InfoWindowManager.ctorParameters = function () { return [
         { type: __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__["a" /* GoogleMapsAPIWrapper */], },
-        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["N" /* NgZone */], },
+        { type: __WEBPACK_IMPORTED_MODULE_1__angular_core__["NgZone"], },
         { type: __WEBPACK_IMPORTED_MODULE_3__marker_manager__["a" /* MarkerManager */], },
     ]; };
     return InfoWindowManager;
@@ -909,7 +909,7 @@ var InfoWindowManager = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 785:
+/***/ 788:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -917,7 +917,7 @@ var InfoWindowManager = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__ = __webpack_require__(774);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__ = __webpack_require__(777);
 
 
 
@@ -977,12 +977,12 @@ var PolygonManager = /** @class */ (function () {
         });
     };
     PolygonManager.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
     ];
     /** @nocollapse */
     PolygonManager.ctorParameters = function () { return [
         { type: __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__["a" /* GoogleMapsAPIWrapper */], },
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* NgZone */], },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"], },
     ]; };
     return PolygonManager;
 }());
@@ -991,7 +991,7 @@ var PolygonManager = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 786:
+/***/ 789:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -999,7 +999,7 @@ var PolygonManager = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__ = __webpack_require__(774);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__ = __webpack_require__(777);
 
 
 
@@ -1065,12 +1065,12 @@ var PolylineManager = /** @class */ (function () {
         });
     };
     PolylineManager.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
     ];
     /** @nocollapse */
     PolylineManager.ctorParameters = function () { return [
         { type: __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__["a" /* GoogleMapsAPIWrapper */], },
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* NgZone */], },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"], },
     ]; };
     return PolylineManager;
 }());
@@ -1079,7 +1079,7 @@ var PolylineManager = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 787:
+/***/ 790:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1087,7 +1087,7 @@ var PolylineManager = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__ = __webpack_require__(774);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__ = __webpack_require__(777);
 
 
 
@@ -1151,12 +1151,12 @@ var KmlLayerManager = /** @class */ (function () {
         });
     };
     KmlLayerManager.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
     ];
     /** @nocollapse */
     KmlLayerManager.ctorParameters = function () { return [
         { type: __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__["a" /* GoogleMapsAPIWrapper */], },
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* NgZone */], },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"], },
     ]; };
     return KmlLayerManager;
 }());
@@ -1165,7 +1165,7 @@ var KmlLayerManager = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 788:
+/***/ 791:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1173,7 +1173,7 @@ var KmlLayerManager = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__ = __webpack_require__(774);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__ = __webpack_require__(777);
 
 
 
@@ -1288,12 +1288,12 @@ var DataLayerManager = /** @class */ (function () {
         });
     };
     DataLayerManager.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
     ];
     /** @nocollapse */
     DataLayerManager.ctorParameters = function () { return [
         { type: __WEBPACK_IMPORTED_MODULE_2__google_maps_api_wrapper__["a" /* GoogleMapsAPIWrapper */], },
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* NgZone */], },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgZone"], },
     ]; };
     return DataLayerManager;
 }());
@@ -1302,13 +1302,13 @@ var DataLayerManager = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 789:
+/***/ 792:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AgmInfoWindow; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_info_window_manager__ = __webpack_require__(784);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_info_window_manager__ = __webpack_require__(787);
 
 
 var infoWindowId = 0;
@@ -1349,7 +1349,7 @@ var AgmInfoWindow = /** @class */ (function () {
         /**
            * Emits an event when the info window is closed.
            */
-        this.infoWindowClose = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.infoWindowClose = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this._infoWindowAddedToManager = false;
         this._id = (infoWindowId++).toString();
     }
@@ -1432,7 +1432,7 @@ var AgmInfoWindow = /** @class */ (function () {
     function () { this._infoWindowManager.deleteInfoWindow(this); };
     AgmInfoWindow._infoWindowOptionsInputs = ['disableAutoPan', 'maxWidth'];
     AgmInfoWindow.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */], args: [{
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"], args: [{
                     selector: 'agm-info-window',
                     template: "<div class='agm-info-window-content'>\n      <ng-content></ng-content>\n    </div>\n  "
                 },] },
@@ -1440,16 +1440,16 @@ var AgmInfoWindow = /** @class */ (function () {
     /** @nocollapse */
     AgmInfoWindow.ctorParameters = function () { return [
         { type: __WEBPACK_IMPORTED_MODULE_1__services_managers_info_window_manager__["a" /* InfoWindowManager */], },
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */], },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"], },
     ]; };
     AgmInfoWindow.propDecorators = {
-        "latitude": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "longitude": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "disableAutoPan": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "zIndex": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "maxWidth": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "isOpen": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "infoWindowClose": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
+        "latitude": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "longitude": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "disableAutoPan": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "zIndex": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "maxWidth": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "isOpen": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "infoWindowClose": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
     };
     return AgmInfoWindow;
 }());
@@ -1458,7 +1458,7 @@ var AgmInfoWindow = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 790:
+/***/ 793:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1474,7 +1474,7 @@ var AgmPolylinePoint = /** @class */ (function () {
         /**
            * This event emitter gets emitted when the position of the point changed.
            */
-        this.positionChanged = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.positionChanged = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
     }
     AgmPolylinePoint.prototype.ngOnChanges = function (changes) {
         if (changes['latitude'] || changes['longitude']) {
@@ -1486,14 +1486,14 @@ var AgmPolylinePoint = /** @class */ (function () {
         }
     };
     AgmPolylinePoint.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* Directive */], args: [{ selector: 'agm-polyline-point' },] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"], args: [{ selector: 'agm-polyline-point' },] },
     ];
     /** @nocollapse */
     AgmPolylinePoint.ctorParameters = function () { return []; };
     AgmPolylinePoint.propDecorators = {
-        "latitude": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "longitude": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "positionChanged": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
+        "latitude": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "longitude": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "positionChanged": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
     };
     return AgmPolylinePoint;
 }());
@@ -1502,7 +1502,7 @@ var AgmPolylinePoint = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 791:
+/***/ 794:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1510,8 +1510,8 @@ var AgmPolylinePoint = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LAZY_MAPS_API_CONFIG; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return LazyMapsAPILoader; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_browser_globals__ = __webpack_require__(804);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__maps_api_loader__ = __webpack_require__(775);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_browser_globals__ = __webpack_require__(807);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__maps_api_loader__ = __webpack_require__(778);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -1535,7 +1535,7 @@ var GoogleMapsScriptProtocol;
  * Token for the config of the LazyMapsAPILoader. Please provide an object of type {@link
  * LazyMapsAPILoaderConfig}.
  */
-var LAZY_MAPS_API_CONFIG = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* InjectionToken */]('angular-google-maps LAZY_MAPS_API_CONFIG');
+var LAZY_MAPS_API_CONFIG = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["InjectionToken"]('angular-google-maps LAZY_MAPS_API_CONFIG');
 var LazyMapsAPILoader = /** @class */ (function (_super) {
     __extends(LazyMapsAPILoader, _super);
     function LazyMapsAPILoader(config, w, d) {
@@ -1631,11 +1631,11 @@ var LazyMapsAPILoader = /** @class */ (function (_super) {
         return protocol + "//" + hostAndPath + "?" + params;
     };
     LazyMapsAPILoader.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"] },
     ];
     /** @nocollapse */
     LazyMapsAPILoader.ctorParameters = function () { return [
-        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["O" /* Optional */] }, { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Inject */], args: [LAZY_MAPS_API_CONFIG,] },] },
+        { type: undefined, decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Optional"] }, { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Inject"], args: [LAZY_MAPS_API_CONFIG,] },] },
         { type: __WEBPACK_IMPORTED_MODULE_1__utils_browser_globals__["c" /* WindowRef */], },
         { type: __WEBPACK_IMPORTED_MODULE_1__utils_browser_globals__["b" /* DocumentRef */], },
     ]; };
@@ -1646,22 +1646,22 @@ var LazyMapsAPILoader = /** @class */ (function (_super) {
 
 /***/ }),
 
-/***/ 795:
+/***/ 798:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AgmMap; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_google_maps_api_wrapper__ = __webpack_require__(774);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_managers_circle_manager__ = __webpack_require__(782);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_managers_rectangle_manager__ = __webpack_require__(783);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_managers_info_window_manager__ = __webpack_require__(784);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_managers_marker_manager__ = __webpack_require__(777);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_managers_polygon_manager__ = __webpack_require__(785);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_managers_polyline_manager__ = __webpack_require__(786);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_managers_kml_layer_manager__ = __webpack_require__(787);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__services_managers_data_layer_manager__ = __webpack_require__(788);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__services_fit_bounds__ = __webpack_require__(778);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_google_maps_api_wrapper__ = __webpack_require__(777);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_managers_circle_manager__ = __webpack_require__(785);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_managers_rectangle_manager__ = __webpack_require__(786);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_managers_info_window_manager__ = __webpack_require__(787);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_managers_marker_manager__ = __webpack_require__(780);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_managers_polygon_manager__ = __webpack_require__(788);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_managers_polyline_manager__ = __webpack_require__(789);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_managers_kml_layer_manager__ = __webpack_require__(790);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__services_managers_data_layer_manager__ = __webpack_require__(791);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__services_fit_bounds__ = __webpack_require__(781);
 
 
 
@@ -1805,42 +1805,42 @@ var AgmMap = /** @class */ (function () {
            * This event emitter gets emitted when the user clicks on the map (but not when they click on a
            * marker or infoWindow).
            */
-        this.mapClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.mapClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event emitter gets emitted when the user right-clicks on the map (but not when they click
            * on a marker or infoWindow).
            */
-        this.mapRightClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.mapRightClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event emitter gets emitted when the user double-clicks on the map (but not when they click
            * on a marker or infoWindow).
            */
-        this.mapDblClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.mapDblClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event emitter is fired when the map center changes.
            */
-        this.centerChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.centerChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired when the viewport bounds have changed.
            */
-        this.boundsChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.boundsChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired when the mapTypeId property changes.
            */
-        this.mapTypeIdChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.mapTypeIdChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired when the map becomes idle after panning or zooming.
            */
-        this.idle = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.idle = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired when the zoom level has changed.
            */
-        this.zoomChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.zoomChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired when the google map is fully initialized.
            * You get the google.maps.Map instance as a result of this EventEmitter.
            */
-        this.mapReady = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.mapReady = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
     }
     /** @internal */
     /** @internal */
@@ -2079,7 +2079,7 @@ var AgmMap = /** @class */ (function () {
         'mapTypeId', 'clickableIcons', 'gestureHandling'
     ];
     AgmMap.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */], args: [{
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"], args: [{
                     selector: 'agm-map',
                     providers: [
                         __WEBPACK_IMPORTED_MODULE_1__services_google_maps_api_wrapper__["a" /* GoogleMapsAPIWrapper */], __WEBPACK_IMPORTED_MODULE_5__services_managers_marker_manager__["a" /* MarkerManager */], __WEBPACK_IMPORTED_MODULE_4__services_managers_info_window_manager__["a" /* InfoWindowManager */], __WEBPACK_IMPORTED_MODULE_2__services_managers_circle_manager__["a" /* CircleManager */], __WEBPACK_IMPORTED_MODULE_3__services_managers_rectangle_manager__["a" /* RectangleManager */],
@@ -2096,53 +2096,53 @@ var AgmMap = /** @class */ (function () {
     ];
     /** @nocollapse */
     AgmMap.ctorParameters = function () { return [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */], },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"], },
         { type: __WEBPACK_IMPORTED_MODULE_1__services_google_maps_api_wrapper__["a" /* GoogleMapsAPIWrapper */], },
         { type: __WEBPACK_IMPORTED_MODULE_10__services_fit_bounds__["b" /* FitBoundsService */], },
     ]; };
     AgmMap.propDecorators = {
-        "longitude": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "latitude": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "zoom": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "minZoom": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "maxZoom": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "draggable": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */], args: ['mapDraggable',] },],
-        "disableDoubleClickZoom": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "disableDefaultUI": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "scrollwheel": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "backgroundColor": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "draggableCursor": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "draggingCursor": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "keyboardShortcuts": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "zoomControl": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "zoomControlOptions": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "styles": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "usePanning": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "streetViewControl": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "streetViewControlOptions": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "fitBounds": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "scaleControl": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "scaleControlOptions": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "mapTypeControl": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "mapTypeControlOptions": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "panControl": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "panControlOptions": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "rotateControl": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "rotateControlOptions": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "fullscreenControl": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "fullscreenControlOptions": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "mapTypeId": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "clickableIcons": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "gestureHandling": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "mapClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "mapRightClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "mapDblClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "centerChange": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "boundsChange": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "mapTypeIdChange": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "idle": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "zoomChange": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "mapReady": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
+        "longitude": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "latitude": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "zoom": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "minZoom": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "maxZoom": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "draggable": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"], args: ['mapDraggable',] },],
+        "disableDoubleClickZoom": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "disableDefaultUI": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "scrollwheel": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "backgroundColor": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "draggableCursor": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "draggingCursor": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "keyboardShortcuts": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "zoomControl": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "zoomControlOptions": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "styles": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "usePanning": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "streetViewControl": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "streetViewControlOptions": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "fitBounds": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "scaleControl": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "scaleControlOptions": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "mapTypeControl": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "mapTypeControlOptions": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "panControl": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "panControlOptions": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "rotateControl": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "rotateControlOptions": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "fullscreenControl": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "fullscreenControlOptions": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "mapTypeId": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "clickableIcons": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "gestureHandling": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "mapClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "mapRightClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "mapDblClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "centerChange": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "boundsChange": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "mapTypeIdChange": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "idle": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "zoomChange": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "mapReady": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
     };
     return AgmMap;
 }());
@@ -2151,13 +2151,13 @@ var AgmMap = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 796:
+/***/ 799:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AgmCircle; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_circle_manager__ = __webpack_require__(782);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_circle_manager__ = __webpack_require__(785);
 
 
 var AgmCircle = /** @class */ (function () {
@@ -2197,55 +2197,55 @@ var AgmCircle = /** @class */ (function () {
         /**
            * This event is fired when the circle's center is changed.
            */
-        this.centerChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.centerChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event emitter gets emitted when the user clicks on the circle.
            */
-        this.circleClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.circleClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event emitter gets emitted when the user clicks on the circle.
            */
-        this.circleDblClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.circleDblClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is repeatedly fired while the user drags the circle.
            */
-        this.drag = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.drag = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired when the user stops dragging the circle.
            */
-        this.dragEnd = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.dragEnd = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired when the user starts dragging the circle.
            */
-        this.dragStart = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.dragStart = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired when the DOM mousedown event is fired on the circle.
            */
-        this.mouseDown = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.mouseDown = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired when the DOM mousemove event is fired on the circle.
            */
-        this.mouseMove = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.mouseMove = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired on circle mouseout.
            */
-        this.mouseOut = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.mouseOut = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired on circle mouseover.
            */
-        this.mouseOver = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.mouseOver = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired when the DOM mouseup event is fired on the circle.
            */
-        this.mouseUp = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.mouseUp = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired when the circle's radius is changed.
            */
-        this.radiusChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.radiusChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired when the circle is right-clicked on.
            */
-        this.rightClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.rightClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this._circleAddedToManager = false;
         this._eventSubscriptions = [];
     }
@@ -2346,7 +2346,7 @@ var AgmCircle = /** @class */ (function () {
         'visible', 'zIndex', 'clickable'
     ];
     AgmCircle.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* Directive */], args: [{
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"], args: [{
                     selector: 'agm-circle'
                 },] },
     ];
@@ -2355,33 +2355,33 @@ var AgmCircle = /** @class */ (function () {
         { type: __WEBPACK_IMPORTED_MODULE_1__services_managers_circle_manager__["a" /* CircleManager */], },
     ]; };
     AgmCircle.propDecorators = {
-        "latitude": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "longitude": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "clickable": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "draggable": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */], args: ['circleDraggable',] },],
-        "editable": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "fillColor": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "fillOpacity": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "radius": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "strokeColor": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "strokeOpacity": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "strokePosition": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "strokeWeight": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "visible": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "zIndex": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "centerChange": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "circleClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "circleDblClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "drag": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "dragEnd": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "dragStart": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "mouseDown": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "mouseMove": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "mouseOut": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "mouseOver": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "mouseUp": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "radiusChange": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "rightClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
+        "latitude": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "longitude": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "clickable": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "draggable": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"], args: ['circleDraggable',] },],
+        "editable": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "fillColor": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "fillOpacity": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "radius": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "strokeColor": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "strokeOpacity": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "strokePosition": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "strokeWeight": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "visible": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "zIndex": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "centerChange": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "circleClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "circleDblClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "drag": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "dragEnd": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "dragStart": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "mouseDown": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "mouseMove": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "mouseOut": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "mouseOver": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "mouseUp": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "radiusChange": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "rightClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
     };
     return AgmCircle;
 }());
@@ -2390,13 +2390,13 @@ var AgmCircle = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 797:
+/***/ 800:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AgmRectangle; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_rectangle_manager__ = __webpack_require__(783);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_rectangle_manager__ = __webpack_require__(786);
 
 
 var AgmRectangle = /** @class */ (function () {
@@ -2432,51 +2432,51 @@ var AgmRectangle = /** @class */ (function () {
         /**
            * This event is fired when the rectangle's is changed.
            */
-        this.boundsChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.boundsChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event emitter gets emitted when the user clicks on the rectangle.
            */
-        this.rectangleClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.rectangleClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event emitter gets emitted when the user clicks on the rectangle.
            */
-        this.rectangleDblClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.rectangleDblClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is repeatedly fired while the user drags the rectangle.
            */
-        this.drag = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.drag = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired when the user stops dragging the rectangle.
            */
-        this.dragEnd = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.dragEnd = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired when the user starts dragging the rectangle.
            */
-        this.dragStart = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.dragStart = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired when the DOM mousedown event is fired on the rectangle.
            */
-        this.mouseDown = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.mouseDown = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired when the DOM mousemove event is fired on the rectangle.
            */
-        this.mouseMove = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.mouseMove = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired on rectangle mouseout.
            */
-        this.mouseOut = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.mouseOut = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired on rectangle mouseover.
            */
-        this.mouseOver = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.mouseOver = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired when the DOM mouseup event is fired on the rectangle.
            */
-        this.mouseUp = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.mouseUp = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired when the rectangle is right-clicked on.
            */
-        this.rightClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.rightClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this._rectangleAddedToManager = false;
         this._eventSubscriptions = [];
     }
@@ -2594,7 +2594,7 @@ var AgmRectangle = /** @class */ (function () {
         'clickable'
     ];
     AgmRectangle.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* Directive */], args: [{
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"], args: [{
                     selector: 'agm-rectangle'
                 },] },
     ];
@@ -2603,33 +2603,33 @@ var AgmRectangle = /** @class */ (function () {
         { type: __WEBPACK_IMPORTED_MODULE_1__services_managers_rectangle_manager__["a" /* RectangleManager */], },
     ]; };
     AgmRectangle.propDecorators = {
-        "north": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "east": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "south": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "west": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "clickable": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "draggable": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */], args: ['rectangleDraggable',] },],
-        "editable": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "fillColor": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "fillOpacity": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "strokeColor": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "strokeOpacity": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "strokePosition": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "strokeWeight": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "visible": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "zIndex": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "boundsChange": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "rectangleClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "rectangleDblClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "drag": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "dragEnd": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "dragStart": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "mouseDown": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "mouseMove": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "mouseOut": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "mouseOver": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "mouseUp": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "rightClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
+        "north": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "east": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "south": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "west": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "clickable": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "draggable": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"], args: ['rectangleDraggable',] },],
+        "editable": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "fillColor": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "fillOpacity": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "strokeColor": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "strokeOpacity": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "strokePosition": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "strokeWeight": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "visible": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "zIndex": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "boundsChange": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "rectangleClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "rectangleDblClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "drag": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "dragEnd": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "dragStart": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "mouseDown": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "mouseMove": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "mouseOut": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "mouseOver": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "mouseUp": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "rightClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
     };
     return AgmRectangle;
 }());
@@ -2638,13 +2638,13 @@ var AgmRectangle = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 798:
+/***/ 801:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AgmKmlLayer; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_kml_layer_manager__ = __webpack_require__(787);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_kml_layer_manager__ = __webpack_require__(790);
 
 
 var layerId = 0;
@@ -2684,17 +2684,17 @@ var AgmKmlLayer = /** @class */ (function () {
         /**
            * This event is fired when a feature in the layer is clicked.
            */
-        this.layerClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.layerClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired when the KML layers default viewport has changed.
            */
-        this.defaultViewportChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.defaultViewportChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired when the KML layer has finished loading.
            * At this point it is safe to read the status property to determine if the layer loaded
            * successfully.
            */
-        this.statusChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.statusChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
     }
     AgmKmlLayer.prototype.ngOnInit = function () {
         if (this._addedToManager) {
@@ -2751,7 +2751,7 @@ var AgmKmlLayer = /** @class */ (function () {
     };
     AgmKmlLayer._kmlLayerOptions = ['clickable', 'preserveViewport', 'screenOverlays', 'suppressInfoWindows', 'url', 'zIndex'];
     AgmKmlLayer.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* Directive */], args: [{
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"], args: [{
                     selector: 'agm-kml-layer'
                 },] },
     ];
@@ -2760,15 +2760,15 @@ var AgmKmlLayer = /** @class */ (function () {
         { type: __WEBPACK_IMPORTED_MODULE_1__services_managers_kml_layer_manager__["a" /* KmlLayerManager */], },
     ]; };
     AgmKmlLayer.propDecorators = {
-        "clickable": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "preserveViewport": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "screenOverlays": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "suppressInfoWindows": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "url": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "zIndex": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "layerClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "defaultViewportChange": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "statusChange": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
+        "clickable": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "preserveViewport": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "screenOverlays": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "suppressInfoWindows": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "url": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "zIndex": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "layerClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "defaultViewportChange": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "statusChange": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
     };
     return AgmKmlLayer;
 }());
@@ -2777,13 +2777,13 @@ var AgmKmlLayer = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 799:
+/***/ 802:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AgmDataLayer; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_data_layer_manager__ = __webpack_require__(788);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_data_layer_manager__ = __webpack_require__(791);
 
 
 var layerId = 0;
@@ -2986,7 +2986,7 @@ var AgmDataLayer = /** @class */ (function () {
         /**
            * This event is fired when a feature in the layer is clicked.
            */
-        this.layerClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.layerClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * The geoJson to be displayed
            */
@@ -3044,7 +3044,7 @@ var AgmDataLayer = /** @class */ (function () {
     };
     AgmDataLayer._dataOptionsAttributes = ['style'];
     AgmDataLayer.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* Directive */], args: [{
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"], args: [{
                     selector: 'agm-data-layer'
                 },] },
     ];
@@ -3053,9 +3053,9 @@ var AgmDataLayer = /** @class */ (function () {
         { type: __WEBPACK_IMPORTED_MODULE_1__services_managers_data_layer_manager__["a" /* DataLayerManager */], },
     ]; };
     AgmDataLayer.propDecorators = {
-        "layerClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "geoJson": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "style": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
+        "layerClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "geoJson": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "style": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
     };
     return AgmDataLayer;
 }());
@@ -3064,7 +3064,7 @@ var AgmDataLayer = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 800:
+/***/ 803:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3072,9 +3072,9 @@ var AgmDataLayer = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_fit_bounds__ = __webpack_require__(778);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_managers_marker_manager__ = __webpack_require__(777);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__info_window__ = __webpack_require__(789);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_fit_bounds__ = __webpack_require__(781);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_managers_marker_manager__ = __webpack_require__(780);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__info_window__ = __webpack_require__(792);
 
 
 
@@ -3139,27 +3139,27 @@ var AgmMarker = /** @class */ (function () {
         /**
            * This event emitter gets emitted when the user clicks on the marker.
            */
-        this.markerClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.markerClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired when the user rightclicks on the marker.
            */
-        this.markerRightClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.markerRightClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired when the user stops dragging the marker.
            */
-        this.dragEnd = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.dragEnd = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired when the user mouses over the marker.
            */
-        this.mouseOver = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.mouseOver = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired when the user mouses outside the marker.
            */
-        this.mouseOut = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.mouseOut = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * @internal
            */
-        this.infoWindow = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* QueryList */]();
+        this.infoWindow = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["QueryList"]();
         this._markerAddedToManger = false;
         this._observableSubscriptions = [];
         this._fitBoundsDetails$ = new __WEBPACK_IMPORTED_MODULE_1_rxjs__["ReplaySubject"](1);
@@ -3295,10 +3295,10 @@ var AgmMarker = /** @class */ (function () {
         this._observableSubscriptions.forEach(function (s) { return s.unsubscribe(); });
     };
     AgmMarker.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* Directive */], args: [{
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"], args: [{
                     selector: 'agm-marker',
                     providers: [
-                        { provide: __WEBPACK_IMPORTED_MODULE_2__services_fit_bounds__["a" /* FitBoundsAccessor */], useExisting: Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_15" /* forwardRef */])(function () { return AgmMarker; }) }
+                        { provide: __WEBPACK_IMPORTED_MODULE_2__services_fit_bounds__["a" /* FitBoundsAccessor */], useExisting: Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["forwardRef"])(function () { return AgmMarker; }) }
                     ],
                     inputs: [
                         'latitude', 'longitude', 'title', 'label', 'draggable: markerDraggable', 'iconUrl',
@@ -3312,23 +3312,23 @@ var AgmMarker = /** @class */ (function () {
         { type: __WEBPACK_IMPORTED_MODULE_3__services_managers_marker_manager__["a" /* MarkerManager */], },
     ]; };
     AgmMarker.propDecorators = {
-        "latitude": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "longitude": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "title": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "label": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "draggable": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */], args: ['markerDraggable',] },],
-        "iconUrl": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "visible": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "openInfoWindow": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "opacity": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "zIndex": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "clickable": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */], args: ['markerClickable',] },],
-        "markerClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "markerRightClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "dragEnd": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "mouseOver": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "mouseOut": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "infoWindow": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["s" /* ContentChildren */], args: [__WEBPACK_IMPORTED_MODULE_4__info_window__["a" /* AgmInfoWindow */],] },],
+        "latitude": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "longitude": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "title": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "label": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "draggable": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"], args: ['markerDraggable',] },],
+        "iconUrl": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "visible": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "openInfoWindow": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "opacity": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "zIndex": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "clickable": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"], args: ['markerClickable',] },],
+        "markerClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "markerRightClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "dragEnd": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "mouseOver": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "mouseOut": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "infoWindow": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ContentChildren"], args: [__WEBPACK_IMPORTED_MODULE_4__info_window__["a" /* AgmInfoWindow */],] },],
     };
     return AgmMarker;
 }());
@@ -3337,13 +3337,13 @@ var AgmMarker = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 801:
+/***/ 804:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AgmPolygon; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_polygon_manager__ = __webpack_require__(785);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_polygon_manager__ = __webpack_require__(788);
 
 
 /**
@@ -3436,47 +3436,47 @@ var AgmPolygon = /** @class */ (function () {
         /**
            * This event is fired when the DOM click event is fired on the Polygon.
            */
-        this.polyClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.polyClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired when the DOM dblclick event is fired on the Polygon.
            */
-        this.polyDblClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.polyDblClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is repeatedly fired while the user drags the polygon.
            */
-        this.polyDrag = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.polyDrag = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired when the user stops dragging the polygon.
            */
-        this.polyDragEnd = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.polyDragEnd = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired when the user starts dragging the polygon.
            */
-        this.polyDragStart = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.polyDragStart = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired when the DOM mousedown event is fired on the Polygon.
            */
-        this.polyMouseDown = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.polyMouseDown = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired when the DOM mousemove event is fired on the Polygon.
            */
-        this.polyMouseMove = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.polyMouseMove = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired on Polygon mouseout.
            */
-        this.polyMouseOut = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.polyMouseOut = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired on Polygon mouseover.
            */
-        this.polyMouseOver = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.polyMouseOver = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired whe the DOM mouseup event is fired on the Polygon
            */
-        this.polyMouseUp = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.polyMouseUp = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This even is fired when the Polygon is right-clicked on.
            */
-        this.polyRightClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.polyRightClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this._polygonAddedToManager = false;
         this._subscriptions = [];
     }
@@ -3546,7 +3546,7 @@ var AgmPolygon = /** @class */ (function () {
         'editable', 'visible'
     ];
     AgmPolygon.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* Directive */], args: [{
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"], args: [{
                     selector: 'agm-polygon'
                 },] },
     ];
@@ -3555,29 +3555,29 @@ var AgmPolygon = /** @class */ (function () {
         { type: __WEBPACK_IMPORTED_MODULE_1__services_managers_polygon_manager__["a" /* PolygonManager */], },
     ]; };
     AgmPolygon.propDecorators = {
-        "clickable": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "draggable": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */], args: ['polyDraggable',] },],
-        "editable": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "fillColor": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "fillOpacity": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "geodesic": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "paths": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "strokeColor": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "strokeOpacity": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "strokeWeight": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "visible": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "zIndex": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "polyClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "polyDblClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "polyDrag": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "polyDragEnd": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "polyDragStart": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "polyMouseDown": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "polyMouseMove": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "polyMouseOut": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "polyMouseOver": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "polyMouseUp": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "polyRightClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
+        "clickable": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "draggable": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"], args: ['polyDraggable',] },],
+        "editable": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "fillColor": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "fillOpacity": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "geodesic": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "paths": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "strokeColor": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "strokeOpacity": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "strokeWeight": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "visible": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "zIndex": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "polyClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "polyDblClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "polyDrag": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "polyDragEnd": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "polyDragStart": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "polyMouseDown": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "polyMouseMove": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "polyMouseOut": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "polyMouseOver": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "polyMouseUp": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "polyRightClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
     };
     return AgmPolygon;
 }());
@@ -3586,14 +3586,14 @@ var AgmPolygon = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 802:
+/***/ 805:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AgmPolyline; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_polyline_manager__ = __webpack_require__(786);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__polyline_point__ = __webpack_require__(790);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_polyline_manager__ = __webpack_require__(789);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__polyline_point__ = __webpack_require__(793);
 
 
 
@@ -3657,47 +3657,47 @@ var AgmPolyline = /** @class */ (function () {
         /**
            * This event is fired when the DOM click event is fired on the Polyline.
            */
-        this.lineClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.lineClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired when the DOM dblclick event is fired on the Polyline.
            */
-        this.lineDblClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.lineDblClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is repeatedly fired while the user drags the polyline.
            */
-        this.lineDrag = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.lineDrag = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired when the user stops dragging the polyline.
            */
-        this.lineDragEnd = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.lineDragEnd = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired when the user starts dragging the polyline.
            */
-        this.lineDragStart = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.lineDragStart = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired when the DOM mousedown event is fired on the Polyline.
            */
-        this.lineMouseDown = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.lineMouseDown = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired when the DOM mousemove event is fired on the Polyline.
            */
-        this.lineMouseMove = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.lineMouseMove = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired on Polyline mouseout.
            */
-        this.lineMouseOut = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.lineMouseOut = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired on Polyline mouseover.
            */
-        this.lineMouseOver = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.lineMouseOver = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This event is fired whe the DOM mouseup event is fired on the Polyline
            */
-        this.lineMouseUp = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.lineMouseUp = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         /**
            * This even is fired when the Polyline is right-clicked on.
            */
-        this.lineRightClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.lineRightClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
         this._polylineAddedToManager = false;
         this._subscriptions = [];
         this._id = (polylineId++).toString();
@@ -3781,7 +3781,7 @@ var AgmPolyline = /** @class */ (function () {
         'zIndex'
     ];
     AgmPolyline.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* Directive */], args: [{
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"], args: [{
                     selector: 'agm-polyline'
                 },] },
     ];
@@ -3790,27 +3790,27 @@ var AgmPolyline = /** @class */ (function () {
         { type: __WEBPACK_IMPORTED_MODULE_1__services_managers_polyline_manager__["a" /* PolylineManager */], },
     ]; };
     AgmPolyline.propDecorators = {
-        "clickable": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "draggable": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */], args: ['polylineDraggable',] },],
-        "editable": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "geodesic": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "strokeColor": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "strokeOpacity": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "strokeWeight": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "visible": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "zIndex": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
-        "lineClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "lineDblClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "lineDrag": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "lineDragEnd": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "lineDragStart": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "lineMouseDown": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "lineMouseMove": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "lineMouseOut": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "lineMouseOver": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "lineMouseUp": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "lineRightClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */] },],
-        "points": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["s" /* ContentChildren */], args: [__WEBPACK_IMPORTED_MODULE_2__polyline_point__["a" /* AgmPolylinePoint */],] },],
+        "clickable": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "draggable": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"], args: ['polylineDraggable',] },],
+        "editable": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "geodesic": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "strokeColor": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "strokeOpacity": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "strokeWeight": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "visible": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "zIndex": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
+        "lineClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "lineDblClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "lineDrag": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "lineDragEnd": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "lineDragStart": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "lineMouseDown": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "lineMouseMove": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "lineMouseOut": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "lineMouseOver": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "lineMouseUp": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "lineRightClick": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"] },],
+        "points": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ContentChildren"], args: [__WEBPACK_IMPORTED_MODULE_2__polyline_point__["a" /* AgmPolylinePoint */],] },],
     };
     return AgmPolyline;
 }());
@@ -3819,16 +3819,16 @@ var AgmPolyline = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 803:
+/***/ 806:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AgmFitBounds; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_fit_bounds__ = __webpack_require__(778);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_fit_bounds__ = __webpack_require__(781);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operators__ = __webpack_require__(349);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operators__ = __webpack_require__(350);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operators___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_operators__);
 
 
@@ -3913,17 +3913,17 @@ var AgmFitBounds = /** @class */ (function () {
         }
     };
     AgmFitBounds.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* Directive */], args: [{
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"], args: [{
                     selector: '[agmFitBounds]'
                 },] },
     ];
     /** @nocollapse */
     AgmFitBounds.ctorParameters = function () { return [
-        { type: __WEBPACK_IMPORTED_MODULE_1__services_fit_bounds__["a" /* FitBoundsAccessor */], decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["_2" /* Self */] },] },
+        { type: __WEBPACK_IMPORTED_MODULE_1__services_fit_bounds__["a" /* FitBoundsAccessor */], decorators: [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Self"] },] },
         { type: __WEBPACK_IMPORTED_MODULE_1__services_fit_bounds__["b" /* FitBoundsService */], },
     ]; };
     AgmFitBounds.propDecorators = {
-        "agmFitBounds": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */] },],
+        "agmFitBounds": [{ type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"] },],
     };
     return AgmFitBounds;
 }());
@@ -3932,7 +3932,7 @@ var AgmFitBounds = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 804:
+/***/ 807:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3958,15 +3958,15 @@ var BROWSER_GLOBALS_PROVIDERS = [WindowRef, DocumentRef];
 
 /***/ }),
 
-/***/ 813:
+/***/ 816:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__directives__ = __webpack_require__(814);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__directives__ = __webpack_require__(817);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services__ = __webpack_require__(815);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services__ = __webpack_require__(818);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_module__ = __webpack_require__(817);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_module__ = __webpack_require__(820);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_2__core_module__["a"]; });
 
 
@@ -3975,31 +3975,31 @@ var BROWSER_GLOBALS_PROVIDERS = [WindowRef, DocumentRef];
 
 /***/ }),
 
-/***/ 814:
+/***/ 817:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__directives_map__ = __webpack_require__(795);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__directives_map__ = __webpack_require__(798);
 /* unused harmony reexport AgmMap */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__directives_circle__ = __webpack_require__(796);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__directives_circle__ = __webpack_require__(799);
 /* unused harmony reexport AgmCircle */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__directives_rectangle__ = __webpack_require__(797);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__directives_rectangle__ = __webpack_require__(800);
 /* unused harmony reexport AgmRectangle */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_info_window__ = __webpack_require__(789);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_info_window__ = __webpack_require__(792);
 /* unused harmony reexport AgmInfoWindow */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_kml_layer__ = __webpack_require__(798);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_kml_layer__ = __webpack_require__(801);
 /* unused harmony reexport AgmKmlLayer */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_data_layer__ = __webpack_require__(799);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_data_layer__ = __webpack_require__(802);
 /* unused harmony reexport AgmDataLayer */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__directives_marker__ = __webpack_require__(800);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__directives_marker__ = __webpack_require__(803);
 /* unused harmony reexport AgmMarker */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__directives_polygon__ = __webpack_require__(801);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__directives_polygon__ = __webpack_require__(804);
 /* unused harmony reexport AgmPolygon */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__directives_polyline__ = __webpack_require__(802);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__directives_polyline__ = __webpack_require__(805);
 /* unused harmony reexport AgmPolyline */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__directives_polyline_point__ = __webpack_require__(790);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__directives_polyline_point__ = __webpack_require__(793);
 /* unused harmony reexport AgmPolylinePoint */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__directives_fit_bounds__ = __webpack_require__(803);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__directives_fit_bounds__ = __webpack_require__(806);
 /* unused harmony reexport AgmFitBounds */
 
 
@@ -4016,37 +4016,37 @@ var BROWSER_GLOBALS_PROVIDERS = [WindowRef, DocumentRef];
 
 /***/ }),
 
-/***/ 815:
+/***/ 818:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__services_google_maps_api_wrapper__ = __webpack_require__(774);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__services_google_maps_api_wrapper__ = __webpack_require__(777);
 /* unused harmony reexport GoogleMapsAPIWrapper */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_circle_manager__ = __webpack_require__(782);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_circle_manager__ = __webpack_require__(785);
 /* unused harmony reexport CircleManager */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_managers_rectangle_manager__ = __webpack_require__(783);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_managers_rectangle_manager__ = __webpack_require__(786);
 /* unused harmony reexport RectangleManager */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_managers_info_window_manager__ = __webpack_require__(784);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_managers_info_window_manager__ = __webpack_require__(787);
 /* unused harmony reexport InfoWindowManager */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_managers_marker_manager__ = __webpack_require__(777);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_managers_marker_manager__ = __webpack_require__(780);
 /* unused harmony reexport MarkerManager */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_managers_polygon_manager__ = __webpack_require__(785);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_managers_polygon_manager__ = __webpack_require__(788);
 /* unused harmony reexport PolygonManager */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_managers_polyline_manager__ = __webpack_require__(786);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_managers_polyline_manager__ = __webpack_require__(789);
 /* unused harmony reexport PolylineManager */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_managers_kml_layer_manager__ = __webpack_require__(787);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_managers_kml_layer_manager__ = __webpack_require__(790);
 /* unused harmony reexport KmlLayerManager */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_managers_data_layer_manager__ = __webpack_require__(788);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_managers_data_layer_manager__ = __webpack_require__(791);
 /* unused harmony reexport DataLayerManager */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__services_maps_api_loader_lazy_maps_api_loader__ = __webpack_require__(791);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__services_maps_api_loader_lazy_maps_api_loader__ = __webpack_require__(794);
 /* unused harmony reexport GoogleMapsScriptProtocol */
 /* unused harmony reexport LAZY_MAPS_API_CONFIG */
 /* unused harmony reexport LazyMapsAPILoader */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__services_maps_api_loader_maps_api_loader__ = __webpack_require__(775);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__services_maps_api_loader_maps_api_loader__ = __webpack_require__(778);
 /* unused harmony reexport MapsAPILoader */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_maps_api_loader_noop_maps_api_loader__ = __webpack_require__(816);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_maps_api_loader_noop_maps_api_loader__ = __webpack_require__(819);
 /* unused harmony reexport NoOpMapsAPILoader */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__services_fit_bounds__ = __webpack_require__(778);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__services_fit_bounds__ = __webpack_require__(781);
 /* unused harmony reexport FitBoundsAccessor */
 
 
@@ -4065,7 +4065,7 @@ var BROWSER_GLOBALS_PROVIDERS = [WindowRef, DocumentRef];
 
 /***/ }),
 
-/***/ 816:
+/***/ 819:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4101,27 +4101,27 @@ NoOpMapsAPILoader = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 817:
+/***/ 820:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export coreDirectives */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AgmCoreModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__directives_map__ = __webpack_require__(795);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__directives_circle__ = __webpack_require__(796);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_rectangle__ = __webpack_require__(797);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_info_window__ = __webpack_require__(789);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_marker__ = __webpack_require__(800);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__directives_polygon__ = __webpack_require__(801);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__directives_polyline__ = __webpack_require__(802);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__directives_polyline_point__ = __webpack_require__(790);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__directives_kml_layer__ = __webpack_require__(798);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__directives_data_layer__ = __webpack_require__(799);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_maps_api_loader_lazy_maps_api_loader__ = __webpack_require__(791);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__services_maps_api_loader_maps_api_loader__ = __webpack_require__(775);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__utils_browser_globals__ = __webpack_require__(804);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__agm_core_directives_fit_bounds__ = __webpack_require__(803);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__directives_map__ = __webpack_require__(798);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__directives_circle__ = __webpack_require__(799);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_rectangle__ = __webpack_require__(800);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_info_window__ = __webpack_require__(792);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_marker__ = __webpack_require__(803);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__directives_polygon__ = __webpack_require__(804);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__directives_polyline__ = __webpack_require__(805);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__directives_polyline_point__ = __webpack_require__(793);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__directives_kml_layer__ = __webpack_require__(801);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__directives_data_layer__ = __webpack_require__(802);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_maps_api_loader_lazy_maps_api_loader__ = __webpack_require__(794);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__services_maps_api_loader_maps_api_loader__ = __webpack_require__(778);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__utils_browser_globals__ = __webpack_require__(807);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__agm_core_directives_fit_bounds__ = __webpack_require__(806);
 
 
 
@@ -4174,7 +4174,7 @@ var AgmCoreModule = /** @class */ (function () {
         };
     };
     AgmCoreModule.decorators = [
-        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */], args: [{ declarations: coreDirectives(), exports: coreDirectives() },] },
+        { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"], args: [{ declarations: coreDirectives(), exports: coreDirectives() },] },
     ];
     return AgmCoreModule;
 }());
@@ -4183,13 +4183,13 @@ var AgmCoreModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 852:
+/***/ 855:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MapsLayout1; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4242,19 +4242,19 @@ var MapsLayout1 = /** @class */ (function () {
         }
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", Object)
     ], MapsLayout1.prototype, "data", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", Object)
     ], MapsLayout1.prototype, "events", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */])
     ], MapsLayout1.prototype, "content", void 0);
     MapsLayout1 = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'maps-layout-1',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\maps\layout-1\maps.html"*/'<!-- Theme Google Maps - Gmaps + Location  Details -->\n\n<ion-header>\n\n    <ion-navbar>\n\n        <button ion-button menuToggle>\n\n      <ion-icon [name]="menu"></ion-icon>\n\n    </button>\n\n        <ion-title *ngIf="data != null">{{data.headerTitle}}</ion-title>\n\n    </ion-navbar>\n\n</ion-header>\n\n<!--Content -->\n\n<ion-content elastic-header>\n\n    <div id="elastic-header">\n\n        <agm-map *ngIf="data != null" [latitude]="data.map.lat" [longitude]="data.map.lng"\n\n        [zoom]="data.map.zoom" [mapTypeControl]="data.map.mapTypeControl"\n\n        [streetViewControl]="data.map.streetViewControl" [styles]= "data.map.styles">\n\n            <agm-marker [latitude]="data.map.lat" [longitude]="data.map.lng"></agm-marker>\n\n        </agm-map>\n\n    </div>\n\n    <ion-grid no-padding *ngIf="data != null">\n\n        <ion-row>\n\n            <ion-col col-12 map-header>\n\n                <ion-item no-lines padding-left>\n\n                    <!--Maps Title-->\n\n                    <h1 maps-title margin-top margin-bottom text-wrap>{{data.title}}</h1>\n\n                    <!--Parallax Rateing-->\n\n                    <div  margin-right float-left>\n\n                        <ion-icon float-left *ngFor="let item of data.iconsStars;let i = index" (click)="onStarClass(data.iconsStars, i, $event)">\n\n                            <i icon-medium *ngIf="item.isActive" class="icon {{item.iconActive}}"></i>\n\n                            <i icon-medium *ngIf="!item.isActive" class="icon {{item.iconInactive}}"></i>\n\n                        </ion-icon>\n\n                    </div>\n\n                    <span span-medium>{{data.reviews}}</span>\n\n                </ion-item>\n\n            </ion-col>\n\n            <!---Content-->\n\n            <ion-col col-12 map-content>\n\n                <ion-item-group>\n\n                    <ion-item-divider no-lines>\n\n                        <h2 maps-description-title text-wrap margin-bottom>{{data.contentTitle}}</h2>\n\n                        <p maps-description text-wrap>{{data.contentDescription}}</p>\n\n                    </ion-item-divider>\n\n                    <!--Info Location-->\n\n                    <ion-item no-lines>\n\n                        <ion-icon icon-medium [name]="data.icon" item-start></ion-icon>\n\n                        <h2 maps-info-description no-paddnig>{{data.location}}</h2>\n\n                    </ion-item>\n\n                    <!--Info Time-->\n\n                    <ion-item no-lines>\n\n                        <ion-icon icon-medium [name]="data.icon" item-start></ion-icon>\n\n                        <h2 maps-info-description no-paddnig>{{data.time}}</h2>\n\n                    </ion-item>\n\n                    <!--Info Phone-->\n\n                    <ion-item no-lines>\n\n                        <ion-icon icon-medium [name]="data.icon" item-start></ion-icon>\n\n                        <h2 maps-info-description no-paddnig>{{data.phone}}</h2>\n\n                    </ion-item>\n\n                    <!--Info WebSite-->\n\n                    <ion-item no-lines>\n\n                        <ion-icon icon-medium [name]="data.icon" item-start></ion-icon>\n\n                        <h2 maps-info-description no-paddnig>{{data.webSite}}</h2>\n\n                    </ion-item>\n\n                    <!--Info Email-->\n\n                    <ion-item no-lines>\n\n                        <ion-icon icon-medium [name]="data.icon" item-start></ion-icon>\n\n                        <h2 maps-info-description no-paddnig>{{data.email}}</h2>\n\n                    </ion-item>\n\n                </ion-item-group>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\maps\layout-1\maps.html"*/
         }),
         __metadata("design:paramtypes", [])

@@ -12,6 +12,7 @@ import { AlteracaoService } from '../services/alteracao.service';
 import { Alteracao } from '../models/alteracao';
 import { Obra } from '../models/obra';
 import { FuncionarioService } from '../services/funcionario.service';
+import { StorageServiceUtils } from '../utils/storage-service-utils';
 
 @Component({
   templateUrl: 'app.html',
@@ -35,6 +36,7 @@ export class MyApp {
     statusBar: StatusBar,
     public menu: MenuController,
     public loadingService: LoadingService,
+    public storageServiceUtils: StorageServiceUtils,
     public messageService: MessageService,
     public storage: Storage,
     public obraService: ObraService,
@@ -191,19 +193,10 @@ export class MyApp {
 
   executarDescartarDados() {
     this.storage.remove('atualizacoes');
-    this.storage.ready().then(() => {
-      this.storage.get('obrasBackup').then(
-        obrasBackup => {
-          this.storage.set('obras', obrasBackup);
-          this.storage.get('itensChecklistBackup').then(
-            checklistBackup => {
-              this.storage.set('itensChecklist', checklistBackup);
-              this.nav.setRoot("HomePage");
-            }
-          );
-        }
-      );
-    });
+    this.loadingService.show();
+    this.storageServiceUtils.montarObraBackup();
+    this.nav.setRoot("HomePage");
+    this.loadingService.hide();
   }
 
   obterObras() {
@@ -229,14 +222,14 @@ export class MyApp {
 
   controlarSegundos() {
     let segundos = setInterval(() => {
-      if(MyApp.progressbarAtivo) {
+      if (MyApp.progressbarAtivo) {
         MyApp.segundos += 1;
       } else {
         clearInterval(segundos);
       }
     }, 1100);
   }
-  
+
   subirProgressAutomatico() {
     let obterIds = setInterval(() => {
       if (MyApp.progress < 50) {
@@ -280,7 +273,7 @@ export class MyApp {
   }
 
   subirProgressObraCompleta() {
-    if(MyApp.progress == 15) {
+    if (MyApp.progress == 15) {
       let obterIds = setInterval(() => {
         if (MyApp.progress < 40) {
           MyApp.progress += 1;
@@ -293,14 +286,13 @@ export class MyApp {
 
   setarValoresObras(obras: Obra[], idsObra: number[], qtdErros: number) {
     if ((obras.length + qtdErros) >= idsObra.length) {
-      this.storage.set('obras', obras);
-      this.storage.set('obrasBackup', obras);
+      this.loadingService.hide();
+      this.storageServiceUtils.armazenarObraNoStorage(obras);
       this.storage.set('ultimoDownload', new Date());
       this.nav.setRoot("HomePage");
       MyApp.progressbarAtivo = false;
       MyApp.progress = 0;
-      this.loadingService.hide();
-      if(this.statusAtualizacao == "") {
+      if (this.statusAtualizacao == "") {
         if (qtdErros > 0) {
           if (this.atualizacao) {
             this.messageService.exibirMensagem("Atualizações publicadas com sucesso, porém houve um erro ao buscar as obras, tente novamente com uma internet melhor.");
@@ -315,12 +307,12 @@ export class MyApp {
           }
         }
       } else {
-        this.messageService.exibirMensagem("Algumas atualizações não foram realizadas: "+this.statusAtualizacao);
+        this.messageService.exibirMensagem("Algumas atualizações não foram realizadas: " + this.statusAtualizacao);
       }
       this.statusAtualizacao = "";
     } else {
-      if(MyApp.progress + (60/idsObra.length) < 75) {
-        MyApp.progress += (60/idsObra.length);
+      if (MyApp.progress + (60 / idsObra.length) < 75) {
+        MyApp.progress += (60 / idsObra.length);
       }
     }
   }
@@ -363,8 +355,9 @@ export class MyApp {
         this.loadingService.hide();
         this.atualizacao = true;
         this.statusAtualizacao = data;
-        this.obterObras();
-        this.obterChecklistServico();
+        this.messageService.exibirMensagem("Atualizações realizadas com sucesso. Realize um novo download dos dados para atualizar o banco de dados do aparelho.");
+        // this.obterObras();
+        // this.obterChecklistServico();
       },
       error => {
         this.loadingService.hide();

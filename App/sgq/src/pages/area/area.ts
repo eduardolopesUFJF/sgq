@@ -7,6 +7,7 @@ import { MessageService } from '../../utils/message-service';
 import { LoadingService } from '../../utils/loading-service';
 import { UUID } from 'angular2-uuid';
 import { Obra } from '../../models/obra';
+import { StorageServiceUtils } from '../../utils/storage-service-utils';
 
 @IonicPage()
 @Component({
@@ -48,6 +49,7 @@ export class AreaPage {
         public storage: Storage,
         public alertCtrl: AlertController,
         public messageService: MessageService,
+        public storageServiceUtils: StorageServiceUtils,
         public navParams: NavParams,
         public modalCtrl: ModalController,
         public loadingService: LoadingService
@@ -93,15 +95,10 @@ export class AreaPage {
         });
     }
 
-    atualizarObra(area: Area) {
-        this.storage.ready().then(() => {
-            this.storage.get('obras').then(
-                obras => {
-                    obras.find(x => x.id == this.obraId).areas.find(x => area.idGuid ? (x.idGuid == area.idGuid) : (x.id == area.id)).delete = area.delete;
-                    this.storage.set('obras', obras);
-                }
-            );
-        });
+    async atualizarObra(area: Area) {
+        let obras = await this.storageServiceUtils.montarObra();
+        obras.find(x => x.id == this.obraId).areas.find(x => area.idGuid ? (x.idGuid == area.idGuid) : (x.id == area.id)).delete = area.delete;
+        this.storageServiceUtils.armazenarObraNoStorage(obras);
     }
 
     addArea() {

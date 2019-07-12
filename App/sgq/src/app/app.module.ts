@@ -14,6 +14,8 @@ import { MaskDirective } from '../directives/mask.directive';
 import { DatePicker } from '@ionic-native/date-picker';
 import { MessageService } from '../utils/message-service';
 import { IonicSelectableModule } from 'ionic-selectable';
+import { LZStringModule, LZStringService } from 'ng-lz-string';
+import { StorageServiceUtils } from '../utils/storage-service-utils';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { IonicSelectableModule } from 'ionic-selectable';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot(),
-    IonicSelectableModule
+    IonicSelectableModule,
+    LZStringModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -36,6 +39,8 @@ import { IonicSelectableModule } from 'ionic-selectable';
     StatusBar,
     SplashScreen,
     ToastService,
+    StorageServiceUtils,
+    LZStringService,
     LoadingService,
     MessageService,
     Network,

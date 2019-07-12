@@ -1,14 +1,14 @@
 webpackJsonp([42],{
 
-/***/ 744:
+/***/ 747:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SpinnerModule", function() { return SpinnerModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__spinner__ = __webpack_require__(875);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__spinner__ = __webpack_require__(878);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -22,7 +22,7 @@ var SpinnerModule = /** @class */ (function () {
     function SpinnerModule() {
     }
     SpinnerModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["J" /* NgModule */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_2__spinner__["a" /* Spinner */],
             ],
@@ -32,7 +32,7 @@ var SpinnerModule = /** @class */ (function () {
             exports: [
                 __WEBPACK_IMPORTED_MODULE_2__spinner__["a" /* Spinner */]
             ],
-            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["i" /* CUSTOM_ELEMENTS_SCHEMA */]]
+            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"]]
         })
     ], SpinnerModule);
     return SpinnerModule;
@@ -42,7 +42,7 @@ var SpinnerModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 875:
+/***/ 878:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -69,11 +69,11 @@ var Spinner = /** @class */ (function () {
         this.path = "assets/svg/" + changes['data'].currentValue.icon + ".svg";
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])('data'),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('data'),
         __metadata("design:type", Object)
     ], Spinner.prototype, "data", void 0);
     Spinner = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'spinner',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\spinner\spinner.html"*/'<img [src]="path" />'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\spinner\spinner.html"*/
         }),
         __metadata("design:paramtypes", [])

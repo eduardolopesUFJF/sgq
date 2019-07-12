@@ -7,6 +7,7 @@ import { Ocorrencia } from '../../models/ocorrencia';
 import { Alteracao } from '../../models/alteracao';
 import { UUID } from 'angular2-uuid';
 import { Servico } from '../../models/servico';
+import { StorageServiceUtils } from '../../utils/storage-service-utils';
 
 @IonicPage()
 @Component({
@@ -26,6 +27,7 @@ export class OcorrenciaPage {
         public storage: Storage,
         public viewCtrl: ViewController,
         public actionSheetCtrl: ActionSheetController,
+        public storageServiceUtils: StorageServiceUtils,
         public modalCtrl: ModalController,
         public messageService: MessageService
     ) {
@@ -94,15 +96,10 @@ export class OcorrenciaPage {
         });
     }
 
-    atualizarOcorrenciaCriacao(item: Ocorrencia) {
-        this.storage.ready().then(() => {
-            this.storage.get('obras').then(
-                obras => {
-                    obras.find(x => x.id == this.servico.idObra).areas.find(x => this.servico.idAreaGuid ? (x.idGuid == this.servico.idAreaGuid) : (x.id == this.servico.idArea)).servicos.find(x => this.servico.idGuidServico ? (x.idGuidServico == this.servico.idGuidServico) : (x.id == this.servico.id)).inspecoesObra.find(x => this.inspecao.idGuidInspecao ? (x.idGuidInspecao == this.inspecao.idGuidInspecao) :(x.id == this.inspecao.id)).ocorrencias.unshift(item);
-                    this.storage.set('obras', obras);
-                }
-            );
-        });
+    async atualizarOcorrenciaCriacao(item: Ocorrencia) {
+        let obras = await this.storageServiceUtils.montarObra();
+        obras.find(x => x.id == this.servico.idObra).areas.find(x => this.servico.idAreaGuid ? (x.idGuid == this.servico.idAreaGuid) : (x.id == this.servico.idArea)).servicos.find(x => this.servico.idGuidServico ? (x.idGuidServico == this.servico.idGuidServico) : (x.id == this.servico.id)).inspecoesObra.find(x => this.inspecao.idGuidInspecao ? (x.idGuidInspecao == this.inspecao.idGuidInspecao) :(x.id == this.inspecao.id)).ocorrencias.unshift(item);
+        this.storageServiceUtils.armazenarObraNoStorage(obras);
     }
 
     editar(ocorrencia: Ocorrencia) {
@@ -142,19 +139,14 @@ export class OcorrenciaPage {
         });
     }
 
-    atualizarOcorrenciaEdicao(item: Ocorrencia) {
-        this.storage.ready().then(() => {
-            this.storage.get('obras').then(
-                obras => {
-                    const ocorrencia = obras.find(x => x.id == this.servico.idObra).areas.find(x => this.servico.idAreaGuid ? (x.idGuid == this.servico.idAreaGuid) : (x.id == this.servico.idArea)).servicos.find(x => this.servico.idGuidServico ? (x.idGuidServico == this.servico.idGuidServico) : (x.id == this.servico.id)).inspecoesObra.find(x => this.inspecao.idGuidInspecao ? (x.idGuidInspecao == this.inspecao.idGuidInspecao) :(x.id == this.inspecao.id)).ocorrencias.find(x => x.idGuidOcorrencia ? (x.idGuidOcorrencia == item.idGuidOcorrencia) : (x.id == item.id));
-                    ocorrencia.dataDescricao = item.dataDescricao;
-                    ocorrencia.descricao = item.descricao;
-                    ocorrencia.dataTratativa = item.dataTratativa;
-                    ocorrencia.tratativa = item.tratativa;
-                    this.storage.set('obras', obras);
-                }
-            );
-        });
+    async atualizarOcorrenciaEdicao(item: Ocorrencia) {
+        let obras = await this.storageServiceUtils.montarObra();
+        const ocorrencia = obras.find(x => x.id == this.servico.idObra).areas.find(x => this.servico.idAreaGuid ? (x.idGuid == this.servico.idAreaGuid) : (x.id == this.servico.idArea)).servicos.find(x => this.servico.idGuidServico ? (x.idGuidServico == this.servico.idGuidServico) : (x.id == this.servico.id)).inspecoesObra.find(x => this.inspecao.idGuidInspecao ? (x.idGuidInspecao == this.inspecao.idGuidInspecao) :(x.id == this.inspecao.id)).ocorrencias.find(x => x.idGuidOcorrencia ? (x.idGuidOcorrencia == item.idGuidOcorrencia) : (x.id == item.id));
+        ocorrencia.dataDescricao = item.dataDescricao;
+        ocorrencia.descricao = item.descricao;
+        ocorrencia.dataTratativa = item.dataTratativa;
+        ocorrencia.tratativa = item.tratativa;
+        this.storageServiceUtils.armazenarObraNoStorage(obras);
     }
 
     confirmarExclusao(ocorrencia: Ocorrencia) {
@@ -187,15 +179,10 @@ export class OcorrenciaPage {
         });
     }
 
-    atualizarOcorrenciaSituacao(ocorrencia: Ocorrencia) {
-        this.storage.ready().then(() => {
-            this.storage.get('obras').then(
-                obras => {
-                    obras.find(x => x.id == this.servico.idObra).areas.find(x => this.servico.idAreaGuid ? (x.idGuid == this.servico.idAreaGuid) : (x.id == this.servico.idArea)).servicos.find(x => this.servico.idGuidServico ? (x.idGuidServico == this.servico.idGuidServico) : (x.id == this.servico.id)).inspecoesObra.find(x => this.inspecao.idGuidInspecao ? (x.idGuidInspecao == this.inspecao.idGuidInspecao) : (x.id == this.inspecao.id)).ocorrencias.find(x => ocorrencia.idGuidOcorrencia ? (x.idGuidOcorrencia == ocorrencia.idGuidOcorrencia) : (x.id == ocorrencia.id)).delete = ocorrencia.delete;
-                    this.storage.set('obras', obras);
-                }
-            );
-        });
+    async atualizarOcorrenciaSituacao(ocorrencia: Ocorrencia) {
+        let obras = await this.storageServiceUtils.montarObra();
+        obras.find(x => x.id == this.servico.idObra).areas.find(x => this.servico.idAreaGuid ? (x.idGuid == this.servico.idAreaGuid) : (x.id == this.servico.idArea)).servicos.find(x => this.servico.idGuidServico ? (x.idGuidServico == this.servico.idGuidServico) : (x.id == this.servico.id)).inspecoesObra.find(x => this.inspecao.idGuidInspecao ? (x.idGuidInspecao == this.inspecao.idGuidInspecao) : (x.id == this.inspecao.id)).ocorrencias.find(x => ocorrencia.idGuidOcorrencia ? (x.idGuidOcorrencia == ocorrencia.idGuidOcorrencia) : (x.id == ocorrencia.id)).delete = ocorrencia.delete;
+        this.storageServiceUtils.armazenarObraNoStorage(obras);
     }
 
 }

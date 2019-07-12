@@ -8,6 +8,7 @@ import { ToastService } from '../../../utils/toast-service';
 import { UUID } from 'angular2-uuid';
 import { Servico } from '../../../models/servico';
 import { IonicSelectableComponent } from 'ionic-selectable';
+import { StorageServiceUtils } from '../../../utils/storage-service-utils';
 
 @IonicPage()
 @Component({
@@ -29,6 +30,7 @@ export class AreaCadastroPage {
   constructor(
     public storage: Storage,
     public navParams: NavParams,
+    public storageServiceUtils: StorageServiceUtils,
     public toastService: ToastService,
     public viewCtrl: ViewController
   ) {
@@ -116,17 +118,12 @@ export class AreaCadastroPage {
     }
   }
 
-  atualizarObra() {
-    this.storage.ready().then(() => {
-      this.storage.get('obras').then(
-        obras => {
-          this.area.situacao = this.area.status == 0 ? 'Em aberto' : 'Finalizado';
-          obras.find(x => x.id == this.obraId).areas.unshift(this.area);
-          this.storage.set('obras', obras);
-          this.viewCtrl.dismiss(this.area);
-        }
-      );
-    });
+  async atualizarObra() {
+    let obras = await this.storageServiceUtils.montarObra();
+    this.area.situacao = this.area.status == 0 ? 'Em aberto' : 'Finalizado';
+    obras.find(x => x.id == this.obraId).areas.unshift(this.area);
+    this.storageServiceUtils.armazenarObraNoStorage(obras);
+    this.viewCtrl.dismiss(this.area);
   }
 
   voltar() {

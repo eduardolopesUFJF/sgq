@@ -4,6 +4,7 @@ import { Storage } from '@ionic/storage';
 import { Alteracao } from '../../models/alteracao';
 import { MessageService } from '../../utils/message-service';
 import { LoadingService } from '../../utils/loading-service';
+import { StorageServiceUtils } from '../../utils/storage-service-utils';
 
 @IonicPage()
 @Component({
@@ -35,6 +36,7 @@ export class AlteracoesPage {
         public storage: Storage,
         public messageService: MessageService,
         public loadingService: LoadingService,
+        public storageServiceUtils: StorageServiceUtils,
         public navCtrl: NavController) {
         this.obterAlteracoes();
     }
@@ -84,25 +86,20 @@ export class AlteracoesPage {
         }, 700);
     }
 
-    atualizarObra(alteracao: Alteracao) {
-        this.storage.ready().then(() => {
-            this.storage.get('obras').then(
-                obras => {
-                    switch (alteracao.entidade.toLowerCase()) {
-                        case "area":
-                        if(alteracao.tipo.toLowerCase() == "insert") {
-                            let index = obras.find(x => x.id == alteracao.obraId).areas.findIndex(x => x.id == JSON.parse(alteracao.valor).id);
-                            obras.find(x => x.id == alteracao.obraId).areas.splice(index,1);
-                            break;
-                        } else {
-                            obras.find(x => x.id == alteracao.obraId).areas.find(x => x.id == JSON.parse(alteracao.valor).id).delete = !JSON.parse(alteracao.valor).delete;
-                            break;
-                        }
-                    }
-                    this.storage.set('obras', obras);
-                }
-            );
-        });
+    async atualizarObra(alteracao: Alteracao) {
+        let obras = await this.storageServiceUtils.montarObra();
+        switch (alteracao.entidade.toLowerCase()) {
+            case "area":
+            if(alteracao.tipo.toLowerCase() == "insert") {
+                let index = obras.find(x => x.id == alteracao.obraId).areas.findIndex(x => x.id == JSON.parse(alteracao.valor).id);
+                obras.find(x => x.id == alteracao.obraId).areas.splice(index,1);
+                break;
+            } else {
+                obras.find(x => x.id == alteracao.obraId).areas.find(x => x.id == JSON.parse(alteracao.valor).id).delete = !JSON.parse(alteracao.valor).delete;
+                break;
+            }
+        }
+        this.storageServiceUtils.armazenarObraNoStorage(obras);
     }
 
 }

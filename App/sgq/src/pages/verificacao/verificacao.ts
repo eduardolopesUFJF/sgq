@@ -8,6 +8,7 @@ import { UUID } from 'angular2-uuid';
 import { MessageService } from '../../utils/message-service';
 import { ItemInspecao } from '../../models/item-inspecao';
 import { ItemChecklist } from '../../models/item-checklist';
+import { StorageServiceUtils } from '../../utils/storage-service-utils';
 
 @IonicPage()
 @Component({
@@ -31,6 +32,7 @@ export class VerificacaoPage {
     constructor(
         public navParams: NavParams,
         public storage: Storage,
+        public storageServiceUtils: StorageServiceUtils,
         public actionSheetCtrl: ActionSheetController,
         public modalCtrl: ModalController,
         public messageService: MessageService,
@@ -86,15 +88,10 @@ export class VerificacaoPage {
         });
     }
 
-    atualizarObra(item: Servico) {
-        this.storage.ready().then(() => {
-            this.storage.get('obras').then(
-                obras => {
-                    obras.find(x => x.id == this.servico.idObra).areas.find(x => this.servico.idAreaGuid ? (x.idGuid == this.servico.idAreaGuid) : (x.id == this.servico.idArea)).servicos.find(x => item.idGuidServico ? (x.idGuidServico == item.idGuidServico) : (x.id == item.id)).status = item.status;
-                    this.storage.set('obras', obras);
-                }
-            );
-        });
+    async atualizarObra(item: Servico) {
+        let obras = await this.storageServiceUtils.montarObra();
+        obras.find(x => x.id == this.servico.idObra).areas.find(x => this.servico.idAreaGuid ? (x.idGuid == this.servico.idAreaGuid) : (x.id == this.servico.idArea)).servicos.find(x => item.idGuidServico ? (x.idGuidServico == item.idGuidServico) : (x.id == item.id)).status = item.status;
+        this.storageServiceUtils.armazenarObraNoStorage(obras);
     }
 
     obterItemChecklist() {
@@ -275,48 +272,33 @@ export class VerificacaoPage {
         });
     }
 
-    atualizarObraSituacao(item: Inspecao) {
-        this.storage.ready().then(() => {
-            this.storage.get('obras').then(
-                obras => {
-                    obras.find(x => x.id == this.servico.idObra).areas.find(x => this.servico.idAreaGuid ? (x.idGuid == this.servico.idAreaGuid) : (x.id == this.servico.idArea)).servicos.find(x => this.servico.idGuidServico ? (x.idGuidServico == this.servico.idGuidServico) : (x.id == this.servico.id)).inspecoesObra.find(x => item.idGuidInspecao ? (x.idGuidInspecao == item.idGuidInspecao) : (x.id == item.id)).delete = item.delete;
-                    this.storage.set('obras', obras);
-                }
-            );
-        });
+    async atualizarObraSituacao(item: Inspecao) {
+        let obras = await this.storageServiceUtils.montarObra();
+        obras.find(x => x.id == this.servico.idObra).areas.find(x => this.servico.idAreaGuid ? (x.idGuid == this.servico.idAreaGuid) : (x.id == this.servico.idArea)).servicos.find(x => this.servico.idGuidServico ? (x.idGuidServico == this.servico.idGuidServico) : (x.id == this.servico.id)).inspecoesObra.find(x => item.idGuidInspecao ? (x.idGuidInspecao == item.idGuidInspecao) : (x.id == item.id)).delete = item.delete;
+        this.storageServiceUtils.armazenarObraNoStorage(obras);
     }
 
-    atualizarObraEdicao(item: Inspecao) {
-        this.storage.ready().then(() => {
-            this.storage.get('obras').then(
-                obras => {
-                    let inspecao = obras.find(x => x.id == this.servico.idObra).areas.find(x => this.servico.idAreaGuid ? (x.idGuid == this.servico.idAreaGuid) : (x.id == this.servico.idArea)).servicos.find(x => this.servico.idGuidServico ? (x.idGuidServico == this.servico.idGuidServico) : (x.id == this.servico.id)).inspecoesObra.find(x => item.idGuidInspecao ? (x.idGuidInspecao == item.idGuidInspecao) : (x.id == item.id));
-                    inspecao.campo1 = item.campo1;
-                    inspecao.campo2 = item.campo2;
-                    inspecao.campo3 = item.campo3;
-                    inspecao.campo4 = item.campo4;
-                    inspecao.dataInspecao = item.dataInspecao;
-                    inspecao.dataEncerramento = item.dataEncerramento;
-                    inspecao.idFuncionarioAprovado = item.idFuncionarioAprovado;
-                    inspecao.idFuncionarioInspecionado = item.idFuncionarioInspecionado;
-                    inspecao.status = item.status;
-                    inspecao.situacao = item.situacao;
-                    inspecao.inspecaoObraItens = item.inspecaoObraItens;
-                    this.storage.set('obras', obras);
-                }
-            );
-        });
+    async atualizarObraEdicao(item: Inspecao) {
+        let obras = await this.storageServiceUtils.montarObra();
+        let inspecao = obras.find(x => x.id == this.servico.idObra).areas.find(x => this.servico.idAreaGuid ? (x.idGuid == this.servico.idAreaGuid) : (x.id == this.servico.idArea)).servicos.find(x => this.servico.idGuidServico ? (x.idGuidServico == this.servico.idGuidServico) : (x.id == this.servico.id)).inspecoesObra.find(x => item.idGuidInspecao ? (x.idGuidInspecao == item.idGuidInspecao) : (x.id == item.id));
+        inspecao.campo1 = item.campo1;
+        inspecao.campo2 = item.campo2;
+        inspecao.campo3 = item.campo3;
+        inspecao.campo4 = item.campo4;
+        inspecao.dataInspecao = item.dataInspecao;
+        inspecao.dataEncerramento = item.dataEncerramento;
+        inspecao.idFuncionarioAprovado = item.idFuncionarioAprovado;
+        inspecao.idFuncionarioInspecionado = item.idFuncionarioInspecionado;
+        inspecao.status = item.status;
+        inspecao.situacao = item.situacao;
+        inspecao.inspecaoObraItens = item.inspecaoObraItens;
+        this.storageServiceUtils.armazenarObraNoStorage(obras);
     }
 
-    atualizarObraCriacao(item: Inspecao) {
-        this.storage.ready().then(() => {
-            this.storage.get('obras').then(
-                obras => {
-                    obras.find(x => x.id == this.servico.idObra).areas.find(x => this.servico.idAreaGuid ? (x.idGuid == this.servico.idAreaGuid) : (x.id == this.servico.idArea)).servicos.find(x => this.servico.idGuidServico ? (x.idGuidServico == this.servico.idGuidServico) : (x.id == this.servico.id)).inspecoesObra.unshift(item);
-                    this.storage.set('obras', obras);
-                }
-            );
-        });
+    async atualizarObraCriacao(item: Inspecao) {
+        let obras = await this.storageServiceUtils.montarObra();
+        obras.find(x => x.id == this.servico.idObra).areas.find(x => this.servico.idAreaGuid ? (x.idGuid == this.servico.idAreaGuid) : (x.id == this.servico.idArea)).servicos.find(x => this.servico.idGuidServico ? (x.idGuidServico == this.servico.idGuidServico) : (x.id == this.servico.id)).inspecoesObra.unshift(item);
+        this.storageServiceUtils.armazenarObraNoStorage(obras);
     }
 
     exibirOpcoes(inspecao: Inspecao) {

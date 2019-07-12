@@ -6,6 +6,7 @@ import { Storage } from '@ionic/storage';
 import { Alteracao } from '../../models/alteracao';
 import { UUID } from 'angular2-uuid';
 import { Area } from '../../models/area';
+import { StorageServiceUtils } from '../../utils/storage-service-utils';
 
 @IonicPage()
 @Component({
@@ -39,6 +40,7 @@ export class ItemAreaPage {
     constructor(
         public navParams: NavParams,
         public messageService: MessageService,
+        public storageServiceUtils: StorageServiceUtils,
         public navCtrl: NavController,
         public storage: Storage
     ) { 
@@ -80,15 +82,10 @@ export class ItemAreaPage {
         });
     }
 
-    atualizarObra(item: Servico) {
-        this.storage.ready().then(() => {
-            this.storage.get('obras').then(
-                obras => {
-                    obras.find(x => x.id == this.area.idObra).areas.find(x => this.area.idGuid ? (x.idGuid == this.area.idGuid) : (x.id == this.area.id)).servicos.find(x => item.idGuidServico ? (x.idGuid == item.idGuidServico) : (x.id == item.id)).delete = item.delete;
-                    this.storage.set('obras', obras);
-                }
-            );
-        });
+    async atualizarObra(item: Servico) {
+        let obras = await this.storageServiceUtils.montarObra();
+        obras.find(x => x.id == this.area.idObra).areas.find(x => this.area.idGuid ? (x.idGuid == this.area.idGuid) : (x.id == this.area.id)).servicos.find(x => item.idGuidServico ? (x.idGuid == item.idGuidServico) : (x.id == item.id)).delete = item.delete;
+        this.storageServiceUtils.armazenarObraNoStorage(obras);
     }
 
     voltarHome() {

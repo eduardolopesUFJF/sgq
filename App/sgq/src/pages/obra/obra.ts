@@ -6,6 +6,7 @@ import { ToastService } from '../../utils/toast-service';
 import { Obra } from '../../models/obra';
 import { Storage } from '@ionic/storage';
 import { MessageService } from '../../utils/message-service';
+import { StorageServiceUtils } from '../../utils/storage-service-utils';
 
 @IonicPage()
 @Component({
@@ -35,6 +36,7 @@ export class ObraPage {
     constructor(
         public obraService: ObraService,
         public loadingService: LoadingService,
+        public storageServiceUtils: StorageServiceUtils,
         public toastService: ToastService,
         public messageService: MessageService,
         public storage: Storage,
@@ -45,20 +47,12 @@ export class ObraPage {
         this.navCtrl.push("AreaPage", { obra: obra });
     }
 
-    ionViewDidLoad() {
-        this.loadingService.show();
-        this.storage.ready().then(() => {
-            this.storage.get('obras').then((obras) => {
-                this.loadingService.hide();
-                if (!obras) {
-                    this.obras = [];
-                    this.messageService.exibirMensagem("Nenhuma obra encontrada. Acesse a funcionalidade 'Baixar dados' para trazer as informações do servidor.");
-                    this.navCtrl.setRoot("HomePage");
-                } else {
-                    this.obras = obras;
-                }
-            });
-        });
+    async ionViewDidLoad() {
+        this.obras = await this.storageServiceUtils.montarObra();
+        if (!this.obras) {
+            this.messageService.exibirMensagem("Nenhuma obra encontrada. Acesse a funcionalidade 'Baixar dados' para trazer as informações do servidor.");
+            this.navCtrl.setRoot("HomePage");
+        }
     }
 
 }

@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Mar 18 21:44:52 BRT 2019
+#Fri Jul 12 20:53:26 BRT 2019
 210.set=ASSET
 14.set=ASSET
 180.file=C\:\\Arquivos\\Freelancer\\SGQ\\App\\sgq\\platforms\\android\\app\\build\\intermediates\\assets\\debug\\www\\cordova-js-src\\exec.js
@@ -336,7 +336,7 @@
 89.set=ASSET
 248.file=C\:\\Arquivos\\Freelancer\\SGQ\\App\\sgq\\platforms\\android\\app\\build\\intermediates\\res\\debug\\resources-debug.ap_\\res\\mipmap-xxxhdpi-v4\\icon.png
 202.base=C\:\\Arquivos\\Freelancer\\SGQ\\App\\sgq\\platforms\\android\\app\\build\\intermediates\\assets\\debug
-71.file=C\:\\Arquivos\\Freelancer\\SGQ\\App\\sgq\\platforms\\android\\app\\build\\intermediates\\res\\debug\\resources-debug.ap_\\res\\drawable-land-hdpi-v4\\screen.png
+71.file=C\:\\Arquivos\\Freelancer\\SGQ\\App\\sgq\\platforms\\android\\app\\build\\intermediates\\res\\debug\\resources-debug.ap_\\res\\drawable-port-xxxhdpi-v4\\screen.png
 125.base=C\:\\Arquivos\\Freelancer\\SGQ\\App\\sgq\\platforms\\android\\app\\build\\intermediates\\assets\\debug
 223.file=C\:\\Arquivos\\Freelancer\\SGQ\\App\\sgq\\platforms\\android\\app\\build\\intermediates\\assets\\debug\\www\\build\\19.js
 146.file=C\:\\Arquivos\\Freelancer\\SGQ\\App\\sgq\\platforms\\android\\app\\build\\intermediates\\assets\\debug\\www\\build\\37.js.map
@@ -409,7 +409,7 @@
 20.file=C\:\\Arquivos\\Freelancer\\SGQ\\App\\sgq\\platforms\\android\\app\\build\\intermediates\\assets\\debug\\www\\build\\75.js.map
 249.file=C\:\\Arquivos\\Freelancer\\SGQ\\App\\sgq\\platforms\\android\\app\\build\\intermediates\\assets\\debug\\www\\cordova_plugins.js
 203.base=C\:\\Arquivos\\Freelancer\\SGQ\\App\\sgq\\platforms\\android\\app\\build\\intermediates\\assets\\debug
-72.file=C\:\\Arquivos\\Freelancer\\SGQ\\App\\sgq\\platforms\\android\\app\\build\\intermediates\\res\\debug\\resources-debug.ap_\\res\\drawable-port-xxxhdpi-v4\\screen.png
+72.file=C\:\\Arquivos\\Freelancer\\SGQ\\App\\sgq\\platforms\\android\\app\\build\\intermediates\\res\\debug\\resources-debug.ap_\\res\\drawable-land-hdpi-v4\\screen.png
 126.base=C\:\\Arquivos\\Freelancer\\SGQ\\App\\sgq\\platforms\\android\\app\\build\\intermediates\\assets\\debug
 224.file=C\:\\Arquivos\\Freelancer\\SGQ\\App\\sgq\\platforms\\android\\app\\build\\intermediates\\res\\debug\\resources-debug.ap_\\res\\drawable-port-hdpi-v4\\screen.png
 255.base=C\:\\Arquivos\\Freelancer\\SGQ\\App\\sgq\\platforms\\android\\app\\build\\intermediates\\assets\\debug
