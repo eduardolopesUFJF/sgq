@@ -406,7 +406,9 @@ var AreaPage = /** @class */ (function () {
                     case 1:
                         obras = _a.sent();
                         obras.find(function (x) { return x.id == _this.obraId; }).areas.find(function (x) { return area.idGuid ? (x.idGuid == area.idGuid) : (x.id == area.id); }).delete = area.delete;
-                        this.storageServiceUtils.armazenarObraNoStorage(obras);
+                        return [4 /*yield*/, this.storageServiceUtils.armazenarObraNoStorage(obras)];
+                    case 2:
+                        _a.sent();
                         return [2 /*return*/];
                 }
             });

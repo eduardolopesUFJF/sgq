@@ -281,16 +281,25 @@ var AlteracoesPage = /** @class */ (function () {
         this.obterAlteracoes();
     }
     AlteracoesPage.prototype.obterAlteracoes = function () {
-        var _this = this;
-        this.storage.ready().then(function () {
-            _this.storage.get('atualizacoes').then(function (atualizacoes) {
-                if (atualizacoes && atualizacoes.length > 0) {
-                    _this.alteracoes = atualizacoes;
-                }
-                else {
-                    _this.alteracoes = [];
-                    _this.messageService.exibirMensagem("Não há nenhuma alteração pendente.");
-                    _this.navCtrl.setRoot("HomePage");
+        return __awaiter(this, void 0, void 0, function () {
+            var atualizacoes;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.storage.ready()];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, this.storage.get('atualizacoes')];
+                    case 2:
+                        atualizacoes = _a.sent();
+                        if (atualizacoes && atualizacoes.length > 0) {
+                            this.alteracoes = atualizacoes;
+                        }
+                        else {
+                            this.alteracoes = [];
+                            this.messageService.exibirMensagem("Não há nenhuma alteração pendente.");
+                            this.navCtrl.setRoot("HomePage");
+                        }
+                        return [2 /*return*/];
                 }
             });
         });

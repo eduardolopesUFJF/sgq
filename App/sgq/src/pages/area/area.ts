@@ -98,7 +98,7 @@ export class AreaPage {
     async atualizarObra(area: Area) {
         let obras = await this.storageServiceUtils.montarObra();
         obras.find(x => x.id == this.obraId).areas.find(x => area.idGuid ? (x.idGuid == area.idGuid) : (x.id == area.id)).delete = area.delete;
-        this.storageServiceUtils.armazenarObraNoStorage(obras);
+        await this.storageServiceUtils.armazenarObraNoStorage(obras);
     }
 
     addArea() {

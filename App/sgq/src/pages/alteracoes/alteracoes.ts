@@ -41,20 +41,17 @@ export class AlteracoesPage {
         this.obterAlteracoes();
     }
 
-    obterAlteracoes() {
-        this.storage.ready().then(() => {
-            this.storage.get('atualizacoes').then(
-                atualizacoes => {
-                    if (atualizacoes && atualizacoes.length > 0) {
-                        this.alteracoes = atualizacoes;
-                    }
-                    else {
-                        this.alteracoes = [];
-                        this.messageService.exibirMensagem("Não há nenhuma alteração pendente.");
-                        this.navCtrl.setRoot("HomePage");
-                    }
-                });
-        });
+    async obterAlteracoes() {
+        await this.storage.ready();
+        let atualizacoes = await this.storage.get('atualizacoes');
+        if (atualizacoes && atualizacoes.length > 0) {
+            this.alteracoes = atualizacoes;
+        }
+        else {
+            this.alteracoes = [];
+            this.messageService.exibirMensagem("Não há nenhuma alteração pendente.");
+            this.navCtrl.setRoot("HomePage");
+        }
     }
 
     confirmarExclusao(alteracao: Alteracao) {

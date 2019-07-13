@@ -142,7 +142,6 @@ var StorageServiceUtils = /** @class */ (function () {
                     case 5: return [4 /*yield*/, this.storage.get('obras')];
                     case 6:
                         obras = _a.sent();
-                        obras = JSON.parse(obras);
                         this.loadingService.hide();
                         return [2 /*return*/, obras];
                 }
@@ -150,43 +149,59 @@ var StorageServiceUtils = /** @class */ (function () {
         });
     };
     StorageServiceUtils.prototype.montarObraBackup = function () {
-        var _this = this;
-        this.storage.ready().then(function () {
-            _this.storage.get('tamanhoObra').then(function (tamanhoObra) {
-                if (tamanhoObra > 1) {
-                    _this.storage.get('obrasBackup1').then(function (obra1) {
-                        _this.storage.get('obrasBackup2').then(function (obra2) {
-                            var obrasBackup = JSON.parse(obra1 + obra2);
-                            _this.storage.set('obras', obrasBackup);
-                        });
-                    });
-                }
-                else {
-                    _this.storage.get('obrasBackup').then(function (obrasBackup) {
-                        obrasBackup = JSON.parse(obrasBackup);
-                        _this.storage.set('obras', obrasBackup);
-                        _this.storage.get('itensChecklistBackup').then(function (checklistBackup) {
-                            _this.storage.set('itensChecklist', checklistBackup);
-                        });
-                    });
+        return __awaiter(this, void 0, void 0, function () {
+            var tamanhoObra, obras1, obras2, obras, itens;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.storage.ready()];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, this.storage.get('tamanhoObra')];
+                    case 2:
+                        tamanhoObra = _a.sent();
+                        if (!(tamanhoObra > 1)) return [3 /*break*/, 5];
+                        return [4 /*yield*/, this.storage.get('obrasBackup1')];
+                    case 3:
+                        obras1 = _a.sent();
+                        return [4 /*yield*/, this.storage.get('obrasBackup2')];
+                    case 4:
+                        obras2 = _a.sent();
+                        this.storage.set('obras1', obras1);
+                        this.storage.set('obras2', obras2);
+                        return [3 /*break*/, 7];
+                    case 5: return [4 /*yield*/, this.storage.get('obrasBackup')];
+                    case 6:
+                        obras = _a.sent();
+                        this.storage.set('obras', obras);
+                        _a.label = 7;
+                    case 7: return [4 /*yield*/, this.storage.get('itensChecklistBackup')];
+                    case 8:
+                        itens = _a.sent();
+                        this.storage.set('itensChecklist', itens);
+                        return [2 /*return*/];
                 }
             });
         });
     };
-    StorageServiceUtils.prototype.armazenarObraNoStorage = function (obras) {
+    StorageServiceUtils.prototype.armazenarObraNoStorage = function (obras, realizarBackup) {
         var obrasString = JSON.stringify(obras);
         var valorMaximoJson = 83378796;
         if (obrasString.length > valorMaximoJson) {
+            var meio = Math.floor(obrasString.length / 2);
             this.storage.set('tamanhoObra', 2);
-            this.storage.set('obras1', obrasString.slice(0, obrasString.length / 2));
-            this.storage.set('obras2', obrasString.slice(obrasString.length / 2, obrasString.length));
-            this.storage.set('obrasBackup1', obrasString.slice(0, obrasString.length / 2));
-            this.storage.set('obrasBackup2', obrasString.slice(obrasString.length / 2, obrasString.length));
+            this.storage.set('obras1', obrasString.slice(0, meio));
+            this.storage.set('obras2', obrasString.slice(meio, obrasString.length));
+            if (realizarBackup) {
+                this.storage.set('obrasBackup1', obrasString.slice(0, meio));
+                this.storage.set('obrasBackup2', obrasString.slice(meio, obrasString.length));
+            }
         }
         else {
             this.storage.set('tamanhoObra', 1);
             this.storage.set('obras', obras);
-            this.storage.set('obrasBackup', obras);
+            if (realizarBackup) {
+                this.storage.set('obrasBackup', obras);
+            }
         }
     };
     StorageServiceUtils = __decorate([
@@ -494,11 +509,11 @@ var map = {
 		31
 	],
 	"../core/wizard/layout-1/wizard-layout-1.module": [
-		760,
+		759,
 		30
 	],
 	"../core/wizard/layout-2/wizard-layout-2.module": [
-		759,
+		760,
 		29
 	],
 	"../core/wizard/layout-3/wizard-layout-3.module": [
@@ -530,11 +545,11 @@ var map = {
 		10
 	],
 	"../pages/home/home.module": [
-		769,
+		768,
 		27
 	],
 	"../pages/item-area/item-area.module": [
-		768,
+		769,
 		11
 	],
 	"../pages/login/login.component.module": [
@@ -695,6 +710,41 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
 
 
 
@@ -726,6 +776,7 @@ var MyApp = /** @class */ (function () {
         this.rootPage = "LoginPage";
         this.atualizacao = false;
         this.statusAtualizacao = "";
+        this.idsObraComProblea = [];
         platform.ready().then(function () {
             statusBar.styleDefault();
             splashScreen.hide();
@@ -835,14 +886,23 @@ var MyApp = /** @class */ (function () {
         });
     };
     MyApp.prototype.subirDados = function () {
-        var _this = this;
-        this.storage.ready().then(function () {
-            _this.storage.get('atualizacoes').then(function (atualizacoes) {
-                if (atualizacoes) {
-                    _this.confirmarAtualizarRepositorio(atualizacoes);
-                }
-                else {
-                    _this.messageService.exibirMensagem("Não há nada para publicar.");
+        return __awaiter(this, void 0, void 0, function () {
+            var atualizacoes;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.storage.ready()];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, this.storage.get('atualizacoes')];
+                    case 2:
+                        atualizacoes = _a.sent();
+                        if (atualizacoes) {
+                            this.confirmarAtualizarRepositorio(atualizacoes);
+                        }
+                        else {
+                            this.messageService.exibirMensagem("Não há nada para publicar.");
+                        }
+                        return [2 /*return*/];
                 }
             });
         });
@@ -875,6 +935,7 @@ var MyApp = /** @class */ (function () {
     MyApp.prototype.obterObras = function () {
         var _this = this;
         this.loadingService.show();
+        this.idsObraComProblea = [];
         MyApp_1.progressbarAtivo = true;
         MyApp_1.progress = 0;
         MyApp_1.segundos = 0;
@@ -937,6 +998,7 @@ var MyApp = /** @class */ (function () {
                 _this.setarValoresObras(obras, idsObra, qtdErros);
             }, function (error) {
                 qtdErros++;
+                _this.idsObraComProblea.push(idObra);
                 _this.setarValoresObras(obras, idsObra, qtdErros);
             });
         });
@@ -956,7 +1018,7 @@ var MyApp = /** @class */ (function () {
     MyApp.prototype.setarValoresObras = function (obras, idsObra, qtdErros) {
         if ((obras.length + qtdErros) >= idsObra.length) {
             this.loadingService.hide();
-            this.storageServiceUtils.armazenarObraNoStorage(obras);
+            this.storageServiceUtils.armazenarObraNoStorage(obras, true);
             this.storage.set('ultimoDownload', new Date());
             this.nav.setRoot("HomePage");
             MyApp_1.progressbarAtivo = false;
@@ -967,7 +1029,7 @@ var MyApp = /** @class */ (function () {
                         this.messageService.exibirMensagem("Atualizações publicadas com sucesso, porém houve um erro ao buscar as obras, tente novamente com uma internet melhor.");
                     }
                     else {
-                        this.messageService.exibirMensagem("Ocorreu erro durante a busca de algumas obras, tente novamente com usando uma internet melhor.");
+                        this.messageService.exibirMensagem("Ocorreu erro durante a busca de algumas obras, tente novamente com usando uma internet melhor. Id das obras: " + this.idsObraComProblea.join(", "));
                     }
                 }
                 else {
@@ -1013,21 +1075,27 @@ var MyApp = /** @class */ (function () {
         this.messageService.exibirMensagemConfirmacao(mensagem, function () { _this.atualizarRepositorio(atualizacoes); });
     };
     MyApp.prototype.atualizarRepositorio = function (atualizacoes) {
-        var _this = this;
-        this.loadingService.show();
-        this.alteracaoService.publicar(atualizacoes).subscribe(function (data) {
-            _this.storage.set('ultimoUpload', new Date());
-            _this.storage.remove('atualizacoes');
-            _this.nav.setRoot("HomePage");
-            _this.loadingService.hide();
-            _this.atualizacao = true;
-            _this.statusAtualizacao = data;
-            _this.messageService.exibirMensagem("Atualizações realizadas com sucesso. Realize um novo download dos dados para atualizar o banco de dados do aparelho.");
-            // this.obterObras();
-            // this.obterChecklistServico();
-        }, function (error) {
-            _this.loadingService.hide();
-            _this.messageService.exibirMensagem("Falha na comunicação com o servidor, contate o suporte.");
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                this.loadingService.show();
+                this.alteracaoService.publicar(atualizacoes).subscribe(function (data) {
+                    _this.storage.set('ultimoUpload', new Date());
+                    _this.storage.remove('atualizacoes');
+                    _this.nav.setRoot("HomePage");
+                    _this.loadingService.hide();
+                    _this.atualizacao = true;
+                    _this.statusAtualizacao = data;
+                    _this.messageService.exibirMensagem("Atualizações realizadas com sucesso. Realize um novo download dos dados para atualizar o banco de dados do aparelho.");
+                    // this.obterObras();
+                    // this.obterChecklistServico();
+                    _this.storageServiceUtils.montarObraBackup();
+                }, function (error) {
+                    _this.loadingService.hide();
+                    _this.messageService.exibirMensagem("Falha na comunicação com o servidor, contate o suporte.");
+                });
+                return [2 /*return*/];
+            });
         });
     };
     Object.defineProperty(MyApp.prototype, "isLogged", {
@@ -1288,8 +1356,8 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../core/toggle/layout-1/toggle-layout-1.module#ToggleLayout1Module', name: 'ToggleLayout1', segment: 'toggle-layout-1', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/toggle/layout-2/toggle-layout-2.module#ToggleLayout2Module', name: 'ToggleLayout2', segment: 'toggle-layout-2', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/toggle/layout-3/toggle-layout-3.module#ToggleLayout3Module', name: 'ToggleLayout3', segment: 'toggle-layout-3', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../core/wizard/layout-2/wizard-layout-2.module#WizardLayout2Module', name: 'WizardLayout2', segment: 'wizard-layout-2', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/wizard/layout-1/wizard-layout-1.module#WizardLayout1Module', name: 'WizardLayout1', segment: 'wizard-layout-1', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/wizard/layout-2/wizard-layout-2.module#WizardLayout2Module', name: 'WizardLayout2', segment: 'wizard-layout-2', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/wizard/layout-3/wizard-layout-3.module#WizardLayout3Module', name: 'WizardLayout3', segment: 'wizard-layout-3', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/alteracoes/alteracoes.module#AlteracoesPageModule', name: 'AlteracoesPage', segment: 'alteracoes', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/area/area.module#AreaPageModule', name: 'AreaPage', segment: 'area', priority: 'low', defaultHistory: [] },
@@ -1297,8 +1365,8 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/checklist/cadastro-item/cadastro-item.module#ChecklistCadastroPageModule', name: 'CadastroItemPage', segment: 'cadastro-item', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/checklist/cadastro/checklist-cadastro.module#ChecklistCadastroPageModule', name: 'ChecklistCadastroPage', segment: 'checklist-cadastro', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/checklist/checklist.module#ChecklistPageModule', name: 'ChecklistPage', segment: 'checklist', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/item-area/item-area.module#ItemAreaPageModule', name: 'ItemAreaPage', segment: 'item-area', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/item-area/item-area.module#ItemAreaPageModule', name: 'ItemAreaPage', segment: 'item-area', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.component.module#LoginPageModule', name: 'LoginPage', segment: 'login.component', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/obra/obra.module#ObraPageModule', name: 'ObraPage', segment: 'obra', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/ocorrencia/manter/manter-ocorrencia.module#ManterOcorrenciaPageModule', name: 'ManterOcorrenciaPage', segment: 'manter-ocorrencia', priority: 'low', defaultHistory: [] },
@@ -1309,6 +1377,7 @@ var AppModule = /** @class */ (function () {
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_10__ionic_storage__["a" /* IonicStorageModule */].forRoot(),
+                // IonicStorageModule.forRoot({ name: '__mydb', driverOrder: ['sqlite', 'websql', 'indexeddb'] }),
                 __WEBPACK_IMPORTED_MODULE_14_ionic_selectable__["a" /* IonicSelectableModule */],
                 __WEBPACK_IMPORTED_MODULE_15_ng_lz_string__["LZStringModule"]
             ],

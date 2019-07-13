@@ -26,6 +26,7 @@ export class MyApp {
   params: any;
   atualizacao: boolean = false;
   statusAtualizacao: string = "";
+  idsObraComProblea: number[] = [];
 
   static progress: number = 0;
   static progressbarAtivo: boolean = false;
@@ -158,18 +159,14 @@ export class MyApp {
     });
   }
 
-  subirDados() {
-    this.storage.ready().then(() => {
-      this.storage.get('atualizacoes').then(
-        atualizacoes => {
-          if (atualizacoes) {
-            this.confirmarAtualizarRepositorio(atualizacoes);
-          } else {
-            this.messageService.exibirMensagem("Não há nada para publicar.");
-          }
-        }
-      );
-    });
+  async subirDados() {
+    await this.storage.ready();
+    let atualizacoes = await this.storage.get('atualizacoes');
+    if (atualizacoes) {
+      this.confirmarAtualizarRepositorio(atualizacoes);
+    } else {
+      this.messageService.exibirMensagem("Não há nada para publicar.");
+    }
   }
 
   descartarDados() {
@@ -201,6 +198,7 @@ export class MyApp {
 
   obterObras() {
     this.loadingService.show();
+    this.idsObraComProblea = [];
     MyApp.progressbarAtivo = true;
     MyApp.progress = 0;
     MyApp.segundos = 0;
@@ -266,6 +264,7 @@ export class MyApp {
         },
         error => {
           qtdErros++;
+          this.idsObraComProblea.push(idObra);
           this.setarValoresObras(obras, idsObra, qtdErros);
         }
       );
@@ -287,7 +286,7 @@ export class MyApp {
   setarValoresObras(obras: Obra[], idsObra: number[], qtdErros: number) {
     if ((obras.length + qtdErros) >= idsObra.length) {
       this.loadingService.hide();
-      this.storageServiceUtils.armazenarObraNoStorage(obras);
+      this.storageServiceUtils.armazenarObraNoStorage(obras, true);
       this.storage.set('ultimoDownload', new Date());
       this.nav.setRoot("HomePage");
       MyApp.progressbarAtivo = false;
@@ -297,7 +296,7 @@ export class MyApp {
           if (this.atualizacao) {
             this.messageService.exibirMensagem("Atualizações publicadas com sucesso, porém houve um erro ao buscar as obras, tente novamente com uma internet melhor.");
           } else {
-            this.messageService.exibirMensagem("Ocorreu erro durante a busca de algumas obras, tente novamente com usando uma internet melhor.");
+            this.messageService.exibirMensagem("Ocorreu erro durante a busca de algumas obras, tente novamente com usando uma internet melhor. Id das obras: "+this.idsObraComProblea.join(", "));
           }
         } else {
           if (this.atualizacao) {
@@ -345,7 +344,7 @@ export class MyApp {
     this.messageService.exibirMensagemConfirmacao(mensagem, () => { this.atualizarRepositorio(atualizacoes) });
   }
 
-  atualizarRepositorio(atualizacoes: Alteracao[]) {
+  async atualizarRepositorio(atualizacoes: Alteracao[]) {
     this.loadingService.show();
     this.alteracaoService.publicar(atualizacoes).subscribe(
       data => {
@@ -358,6 +357,7 @@ export class MyApp {
         this.messageService.exibirMensagem("Atualizações realizadas com sucesso. Realize um novo download dos dados para atualizar o banco de dados do aparelho.");
         // this.obterObras();
         // this.obterChecklistServico();
+        this.storageServiceUtils.montarObraBackup();
       },
       error => {
         this.loadingService.hide();

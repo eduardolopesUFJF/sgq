@@ -23,50 +23,45 @@ export class StorageServiceUtils {
     }
     else {
       let obras = await this.storage.get('obras');
-      obras = JSON.parse(obras);
       this.loadingService.hide();
       return obras;
     }
   }
 
-  montarObraBackup() {
-    this.storage.ready().then(() => {
-      this.storage.get('tamanhoObra').then((tamanhoObra) => {
-        if (tamanhoObra > 1) {
-          this.storage.get('obrasBackup1').then((obra1) => {
-            this.storage.get('obrasBackup2').then((obra2) => {
-              let obrasBackup = JSON.parse(obra1 + obra2);
-              this.storage.set('obras', obrasBackup);
-            });
-          });
-        } else {
-          this.storage.get('obrasBackup').then((obrasBackup) => {
-            obrasBackup = JSON.parse(obrasBackup);
-            this.storage.set('obras', obrasBackup);
-            this.storage.get('itensChecklistBackup').then(
-              checklistBackup => {
-                this.storage.set('itensChecklist', checklistBackup);
-              }
-            );
-          });
-        }
-      });
-    });
+  async montarObraBackup() {
+    await this.storage.ready();
+    const tamanhoObra = await this.storage.get('tamanhoObra');
+    if (tamanhoObra > 1) {
+      const obras1 = await this.storage.get('obrasBackup1');
+      const obras2 = await this.storage.get('obrasBackup2');
+      this.storage.set('obras1', obras1);
+      this.storage.set('obras2', obras2);
+    } else {
+      const obras = await this.storage.get('obrasBackup');
+      this.storage.set('obras', obras);
+    }
+    const itens = await this.storage.get('itensChecklistBackup');
+    this.storage.set('itensChecklist', itens);
   }
 
-  public armazenarObraNoStorage(obras: Obra[]) {
+  public armazenarObraNoStorage(obras: Obra[], realizarBackup?: boolean) {
     const obrasString = JSON.stringify(obras);
     const valorMaximoJson = 83378796;
     if (obrasString.length > valorMaximoJson) {
+      const meio = Math.floor(obrasString.length / 2);
       this.storage.set('tamanhoObra', 2);
-      this.storage.set('obras1', obrasString.slice(0, obrasString.length / 2));
-      this.storage.set('obras2', obrasString.slice(obrasString.length / 2, obrasString.length));
-      this.storage.set('obrasBackup1', obrasString.slice(0, obrasString.length / 2));
-      this.storage.set('obrasBackup2', obrasString.slice(obrasString.length / 2, obrasString.length));
+      this.storage.set('obras1', obrasString.slice(0, meio));
+      this.storage.set('obras2', obrasString.slice(meio, obrasString.length));
+      if (realizarBackup) {
+        this.storage.set('obrasBackup1', obrasString.slice(0, meio));
+        this.storage.set('obrasBackup2', obrasString.slice(meio, obrasString.length));
+      }
     } else {
       this.storage.set('tamanhoObra', 1);
       this.storage.set('obras', obras);
-      this.storage.set('obrasBackup', obras);
+      if (realizarBackup) {
+        this.storage.set('obrasBackup', obras);
+      }
     }
   }
 }

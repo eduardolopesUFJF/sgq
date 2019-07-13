@@ -11,4 +11,4 @@
     </ion-navbar>
 </ion-header>
 
-<appearance-animation-layout-5 has-header [data]="obras" [events]="events" [config]="config"></appearance-animation-layout-5>
+<appearance-animation-layout-5 *ngIf="obras" has-header [data]="obras" [events]="events" [config]="config"></appearance-animation-layout-5>
