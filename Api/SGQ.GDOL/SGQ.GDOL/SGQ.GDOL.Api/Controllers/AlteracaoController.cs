@@ -325,7 +325,10 @@ namespace SGQ.GDOL.Api.Controllers
                     {
                         if (alteracao.Tipo.ToUpper() == "INSERT")
                         {
-                            inspecaoCadastrada.Ocorrencias.Add(ocorrenciaVM);
+                            if (!inspecaoCadastrada.Ocorrencias.Any(x => x.IdGuidOcorrencia == ocorrenciaVM.IdGuidOcorrencia))
+                            {
+                                inspecaoCadastrada.Ocorrencias.Add(ocorrenciaVM);
+                            }
                         }
                         else
                         {

@@ -67,34 +67,38 @@ export class LoginPage {
                 },
                 {
                     "id": 8,
-                    "title": "FAZ"
+                    "title": "CRISTO REI"
                 },
                 {
                     "id": 9,
-                    "title": "FORUM"
+                    "title": "FAZ"
                 },
                 {
                     "id": 10,
-                    "title": "GESTAO"
+                    "title": "FORUM"
                 },
                 {
                     "id": 11,
-                    "title": "GS"
+                    "title": "GESTAO"
                 },
                 {
                     "id": 12,
-                    "title": "MELHORLAR"
+                    "title": "GS"
                 },
                 {
                     "id": 13,
-                    "title": "PAINEIRA"
+                    "title": "MELHORLAR"
                 },
                 {
                     "id": 14,
-                    "title": "REALIZA"
+                    "title": "PAINEIRA"
                 },
                 {
                     "id": 15,
+                    "title": "REALIZA"
+                },
+                {
+                    "id": 16,
                     "title": "RMG"
                 },
                 {

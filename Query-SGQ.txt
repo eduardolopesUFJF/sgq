@@ -1,0 +1,73 @@
+BEGIN TRAN
+declare @contem int;
+declare @idDelete int;
+declare @qtd INT;
+declare @id INT;
+declare @descricao VARCHAR(MAX);
+declare @tratativa VARCHAR(MAX); 
+declare @data_tratativa DATETIME; 
+declare @data_descricao DATETIME;
+declare @delt BIT;
+declare @data_hora_inclusao DATETIME;
+declare @data_hora_alteracao DATETIME;
+
+DEcLARE DUPLICADOS CURSOR FOR
+SELECT count(id_inspecao_obra) qtd,
+      [ID_INSPECAO_OBRA] id,
+	  descricao, 
+	  tratativa, 
+	  data_tratativa, 
+	  data_descricao,
+	  [delete] delt,
+	  data_hora_inclusao,
+	  data_hora_alteracao
+  FROM [dbo].[INFORMACOES_INSPECAO_OBRA]
+  group by [delete],id_inspecao_obra, descricao, tratativa, data_tratativa, data_descricao, data_hora_inclusao,data_hora_alteracao
+  having count(id_inspecao_obra) > 1;
+
+OPEN DUPLICADOS;
+
+FETCH NEXT FROM DUPLICADOS INTO @qtd,@id,@descricao,@tratativa,@data_tratativa,@data_descricao,@delt,@data_hora_inclusao,@data_hora_alteracao;
+
+while @@fetch_status = 0
+begin
+  
+SELECT  @contem  = COUNT(1),@idDelete = MAX(id_informacoes_inspecao_obra)
+  FROM [dbo].[INFORMACOES_INSPECAO_OBRA]
+ WHERE ISNULL([delete],'') = ISNULL(@delt,'')
+   AND ISNULL(id_inspecao_obra,'') = ISNULL(@id,'')
+   AND ISNULL(descricao,'') = ISNULL(@descricao,'')
+   AND ISNULL(tratativa,'') = ISNULL(@tratativa,'')
+   AND ISNULL(data_tratativa,'') = ISNULL(@data_tratativa,'')
+   AND ISNULL(data_descricao,'') = ISNULL(@data_descricao,'')
+   AND ISNULL(data_hora_inclusao,'') = ISNULL(@data_hora_inclusao,'')
+   AND ISNULL(data_hora_alteracao,'') = ISNULL(@data_hora_alteracao,'');
+   
+   IF @contem > 1 
+   BEGIN
+     DELETE FROM [dbo].[INFORMACOES_INSPECAO_OBRA] WHERE id_informacoes_inspecao_obra = @idDelete;
+    END
+
+  fetch next from duplicados  INTO @qtd,@id,@descricao,@tratativa,@data_tratativa,@data_descricao,@delt,@data_hora_inclusao,@data_hora_alteracao;
+end
+
+close duplicados;
+deallocate duplicados;  
+  /*
+  */
+  SELECT count(id_inspecao_obra) qtd,
+      [ID_INSPECAO_OBRA] id
+	  , descricao, 
+	  tratativa, 
+	  data_tratativa, 
+	  data_descricao,
+	  [delete] delt,
+	  data_hora_inclusao,
+	  data_hora_alteracao
+  FROM [dbo].[INFORMACOES_INSPECAO_OBRA]
+  group by [delete],id_inspecao_obra, descricao, tratativa, data_tratativa, data_descricao, data_hora_inclusao,data_hora_alteracao
+  having count(id_inspecao_obra) > 1;
+  /*
+  */
+  commit
+  ROLLBACK
