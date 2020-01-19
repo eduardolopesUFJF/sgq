@@ -21,6 +21,7 @@ export class AppearanceAnimationLayout5 implements OnChanges {
     descricao: string = "";
     ultimoDownload: any;
     ultimoUpload: any;
+    situacao: number = 0;
 
     constructor(public storage: Storage) {
         this.animateClass = { 'zoom-in': true };
@@ -76,5 +77,10 @@ export class AppearanceAnimationLayout5 implements OnChanges {
 
     verificaNovoItem(item) {
         return item.id == 0;
+    }
+
+    filtrarSituacao(valor) {
+        this.animacaoAtiva = false;
+        this.data = this.dataBackup.filter(item => item.status == valor);
     }
 }

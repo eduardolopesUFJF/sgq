@@ -41,7 +41,8 @@ export class AreaPage {
         "exibirDatas": true,
         "btnNovoLabel": "Adicionar área",
         "subTitulo": "Situação",
-        "broadcomb": ""
+        "broadcomb": "",
+        "filtrarSituacao": true
     }
 
     constructor(

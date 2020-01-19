@@ -34,7 +34,8 @@ export class ItemAreaPage {
         "tipo": true,
         "subTitulo": "Situação",
         "alteracoes": false,
-        "broadcomb": ""
+        "broadcomb": "",
+        "filtrarSituacao": true
     }
 
     constructor(
