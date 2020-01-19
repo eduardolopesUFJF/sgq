@@ -35,6 +35,7 @@
                             itemValueField="id"
                             itemTextField="nome"
                             [canSearch]="true"
+                            [disabled]="servico.status == 1"
                             name="idFuncionarioInspecionado"
                             (onChange)="setaFuncionarioInspecionado($event)"
                             required>
@@ -49,6 +50,7 @@
                             itemValueField="id"
                             itemTextField="nome"
                             [canSearch]="true"
+                            [disabled]="servico.status == 1"
                             name="idFuncionarioAprovado"
                             (onChange)="setaFuncionarioAprovado($event)">
                         </ionic-selectable>
@@ -73,7 +75,7 @@
                         </ion-grid>
                     </ion-list>
                     <hr style="margin: 2px 0 0 0;">
-                    <ion-list radio-group no-margin [(ngModel)]="item.inspecao1" name="itemInspecao1+{{i}}" *ngFor="let item of inspecao.inspecaoObraItens; let i=index;">
+                    <ion-list radio-group no-margin [(ngModel)]="item.inspecao1" name="itemInspecao1+{{i}}" *ngFor="let item of inspecao.inspecaoObraItens; let i=index;" [disabled]="servico.status == 1">
                         <h2 text-wrap style="font-weight: bold;margin-top: 10px;">{{item.descricao}}</h2>
                         <ion-grid>
                             <ion-row>
@@ -104,7 +106,7 @@
                             </ion-row>
                             <ion-row *ngIf="item.inspecao1 == 'R'">
                                 <ion-list radio-group no-margin [(ngModel)]="item.inspecao2" name="itemInspecao2+{{i}}"
-                                    style="width: 100%">
+                                    style="width: 100%" [disabled]="servico.status == 1">
                                     <ion-grid>
                                         <ion-row>
                                             <ion-col col-3></ion-col>
@@ -127,7 +129,7 @@
                             </ion-row>
                             <ion-row>
                                 <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: black !important;"
-                                    (click)="item.inspecao1='';item.inspecao2=''">Limpar</button>
+                                    (click)="item.inspecao1='';item.inspecao2=''" [disabled]="servico.status == 1">Limpar</button>
                             </ion-row>
                         </ion-grid>
                         <hr style="margin: 2px 0 0 0;">
@@ -140,5 +142,5 @@
 
 <ion-footer>
     <button ion-button default-button block text-capitalize box-shadow margin-bottom no-margin style="background-color: rgb(33,177,75) !important;"
-        (click)="salvar(cadastroForm.valid)">Salvar</button>
+        (click)="salvar(cadastroForm.valid)" [disabled]="servico.status == 1">Salvar</button>
 </ion-footer>

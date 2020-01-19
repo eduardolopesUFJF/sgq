@@ -302,6 +302,14 @@ export class VerificacaoPage {
     }
 
     exibirOpcoes(inspecao: Inspecao) {
+        if (inspecao.status == 0) {
+            this.exibirTodasOpcoes(inspecao);
+        } else {
+            this.exibirOpcoesRestritas(inspecao);
+        }
+    }
+
+    exibirTodasOpcoes(inspecao: Inspecao) {
         const actionSheet = this.actionSheetCtrl.create(
             {
                 "buttons": [
@@ -321,6 +329,26 @@ export class VerificacaoPage {
                         "text": !inspecao.delete ? "Excluir" : "Reativar",
                         handler: () => {
                             this.confirmarExclusao(inspecao);
+                        }
+                    },
+                    {
+                        "text": "Cancelar",
+                        "role": "cancel"
+                    }
+                ]
+            }
+        );
+        actionSheet.present();
+    }
+
+    exibirOpcoesRestritas(inspecao: Inspecao) {
+        const actionSheet = this.actionSheetCtrl.create(
+            {
+                "buttons": [
+                    {
+                        "text": "Realizar inspeção",
+                        handler: () => {
+                            this.abrirItensInspecao(inspecao);
                         }
                     },
                     {

@@ -98,26 +98,28 @@ export class OcorrenciaPage {
 
     async atualizarOcorrenciaCriacao(item: Ocorrencia) {
         let obras = await this.storageServiceUtils.montarObra();
-        obras.find(x => x.id == this.servico.idObra).areas.find(x => this.servico.idAreaGuid ? (x.idGuid == this.servico.idAreaGuid) : (x.id == this.servico.idArea)).servicos.find(x => this.servico.idGuidServico ? (x.idGuidServico == this.servico.idGuidServico) : (x.id == this.servico.id)).inspecoesObra.find(x => this.inspecao.idGuidInspecao ? (x.idGuidInspecao == this.inspecao.idGuidInspecao) :(x.id == this.inspecao.id)).ocorrencias.unshift(item);
+        obras.find(x => x.id == this.servico.idObra).areas.find(x => this.servico.idAreaGuid ? (x.idGuid == this.servico.idAreaGuid) : (x.id == this.servico.idArea)).servicos.find(x => this.servico.idGuidServico ? (x.idGuidServico == this.servico.idGuidServico) : (x.id == this.servico.id)).inspecoesObra.find(x => this.inspecao.idGuidInspecao ? (x.idGuidInspecao == this.inspecao.idGuidInspecao) : (x.id == this.inspecao.id)).ocorrencias.unshift(item);
         this.storageServiceUtils.armazenarObraNoStorage(obras);
     }
 
     editar(ocorrencia: Ocorrencia) {
-        let modal = this.modalCtrl.create("ManterOcorrenciaPage", { ocorrencia: ocorrencia });
-        this.ocorrenciaBackup = new Ocorrencia(ocorrencia);
-        modal.present();
+        if (this.servico.status != 1) {
+            let modal = this.modalCtrl.create("ManterOcorrenciaPage", { ocorrencia: ocorrencia });
+            this.ocorrenciaBackup = new Ocorrencia(ocorrencia);
+            modal.present();
 
-        modal.onWillDismiss((data: any) => {
-            if (data) {
-                this.editarOcorrencias(data);
-            } else {
-                const ocorrenciaArray = this.inspecao.ocorrencias.find(x => this.ocorrenciaBackup.idGuidOcorrencia ? (x.idGuidOcorrencia == this.ocorrenciaBackup.idGuidOcorrencia) : (x.id == this.ocorrenciaBackup.id));
-                ocorrenciaArray.dataDescricao = this.ocorrenciaBackup.dataDescricao;
-                ocorrenciaArray.descricao = this.ocorrenciaBackup.descricao;
-                ocorrenciaArray.dataTratativa = this.ocorrenciaBackup.dataTratativa;
-                ocorrenciaArray.tratativa = this.ocorrenciaBackup.tratativa;
-            }
-        });
+            modal.onWillDismiss((data: any) => {
+                if (data) {
+                    this.editarOcorrencias(data);
+                } else {
+                    const ocorrenciaArray = this.inspecao.ocorrencias.find(x => this.ocorrenciaBackup.idGuidOcorrencia ? (x.idGuidOcorrencia == this.ocorrenciaBackup.idGuidOcorrencia) : (x.id == this.ocorrenciaBackup.id));
+                    ocorrenciaArray.dataDescricao = this.ocorrenciaBackup.dataDescricao;
+                    ocorrenciaArray.descricao = this.ocorrenciaBackup.descricao;
+                    ocorrenciaArray.dataTratativa = this.ocorrenciaBackup.dataTratativa;
+                    ocorrenciaArray.tratativa = this.ocorrenciaBackup.tratativa;
+                }
+            });
+        }
     }
 
     editarOcorrencias(ocorrencia: Ocorrencia) {
@@ -141,7 +143,7 @@ export class OcorrenciaPage {
 
     async atualizarOcorrenciaEdicao(item: Ocorrencia) {
         let obras = await this.storageServiceUtils.montarObra();
-        const ocorrencia = obras.find(x => x.id == this.servico.idObra).areas.find(x => this.servico.idAreaGuid ? (x.idGuid == this.servico.idAreaGuid) : (x.id == this.servico.idArea)).servicos.find(x => this.servico.idGuidServico ? (x.idGuidServico == this.servico.idGuidServico) : (x.id == this.servico.id)).inspecoesObra.find(x => this.inspecao.idGuidInspecao ? (x.idGuidInspecao == this.inspecao.idGuidInspecao) :(x.id == this.inspecao.id)).ocorrencias.find(x => x.idGuidOcorrencia ? (x.idGuidOcorrencia == item.idGuidOcorrencia) : (x.id == item.id));
+        const ocorrencia = obras.find(x => x.id == this.servico.idObra).areas.find(x => this.servico.idAreaGuid ? (x.idGuid == this.servico.idAreaGuid) : (x.id == this.servico.idArea)).servicos.find(x => this.servico.idGuidServico ? (x.idGuidServico == this.servico.idGuidServico) : (x.id == this.servico.id)).inspecoesObra.find(x => this.inspecao.idGuidInspecao ? (x.idGuidInspecao == this.inspecao.idGuidInspecao) : (x.id == this.inspecao.id)).ocorrencias.find(x => x.idGuidOcorrencia ? (x.idGuidOcorrencia == item.idGuidOcorrencia) : (x.id == item.id));
         ocorrencia.dataDescricao = item.dataDescricao;
         ocorrencia.descricao = item.descricao;
         ocorrencia.dataTratativa = item.dataTratativa;
