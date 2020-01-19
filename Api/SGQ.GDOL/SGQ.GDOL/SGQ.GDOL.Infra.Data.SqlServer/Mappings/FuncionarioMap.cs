@@ -14,6 +14,8 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Mappings
 
             entity.Property(e => e.Id).HasColumnName("ID_FUNCIONARIO");
 
+            entity.Property(e => e.IdCentroCusto).HasColumnName("ID_CENTRO_CUSTO");
+
             entity.Property(e => e.Nome)
                     .IsRequired()
                     .HasColumnName("NOME")

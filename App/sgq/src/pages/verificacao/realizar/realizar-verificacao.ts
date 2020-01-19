@@ -54,16 +54,16 @@ export class RealizarVerificacaoPage {
         this.inspecao.idFuncionarioAprovado = event.value.id;
     }
 
-    obterFuncionarios() {
-        this.storage.ready().then(() => {
-            this.storage.get('funcionarios').then(
-                funcionarios => {
-                    this.funcionarios = funcionarios;
-                    this.funcionarioAprovado = this.funcionarios.find(x => x.id == this.inspecao.idFuncionarioAprovado);
-                    this.funcionarioInspecionado = this.funcionarios.find(x => x.id == this.inspecao.idFuncionarioInspecionado);
-                }
-            );
-        });
+    async obterFuncionarios() {
+        await this.storage.ready();
+        this.funcionarios = await this.storage.get('funcionarios');
+        
+        const obras = await this.storage.get('obras');
+        const obra = obras.find(x => x.id == this.servico.idObra);
+        
+        this.funcionarios = [...this.funcionarios.filter(x => x.idCentroCusto == null || x.idCentroCusto == obra.idCentroCusto)];
+        this.funcionarioAprovado = this.funcionarios.find(x => x.id == this.inspecao.idFuncionarioAprovado);
+        this.funcionarioInspecionado = this.funcionarios.find(x => x.id == this.inspecao.idFuncionarioInspecionado);
     }
 
     atualizarSituacao() {

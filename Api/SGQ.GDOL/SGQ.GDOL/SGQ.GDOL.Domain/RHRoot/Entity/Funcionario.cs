@@ -7,6 +7,7 @@ namespace SGQ.GDOL.Domain.RHRoot.Entity
     {
         public string Nome { get; set; }
         public bool? Delete { get; set; }
+        public int? IdCentroCusto { get; set; }
 
         public ICollection<InspecaoObra> FuncionariosAprovado { get; set; }
         public ICollection<InspecaoObra> FuncionariosInspecionado { get; set; }

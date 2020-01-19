@@ -3,6 +3,7 @@ import { Area } from "./area";
 export class Obra {
     
     id: number;
+    idCentroCusto: number;
     descricaoCentroCusto: string;
     descricao: string;
     status: number;
