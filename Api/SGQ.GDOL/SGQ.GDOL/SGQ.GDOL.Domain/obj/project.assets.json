@@ -484,10 +484,11 @@
   },
   "libraries": {
     "FireSharp/1.1.0": {
-      "sha512": "octceDSo4puaMjOOHSfOxzhfz+DwPhwkmmpbj/+G5qbf22kbosMsZWBoeyoMV3WhoLO9sGIp8/vdYHZwZ6HaXw==",
+      "sha512": "FRkskFsuZeaWm/qNHpydFlaUAU+g6PzIgeFZYixkyARXaSzsooDLFmOYKmkNPjQiXWflCI2cVgYCILZYrqa8Uw==",
       "type": "package",
       "path": "firesharp/1.1.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "firesharp.1.1.0.nupkg.sha512",
         "firesharp.nuspec",
@@ -495,10 +496,11 @@
       ]
     },
     "FireSharp.Serialization.JsonNet/1.1.0": {
-      "sha512": "nAgFNSUNOOpEgOKPPPRxQhk9pijuCawGwai2Mf1l4vQDwgAZQBDoxRqfoV5PH5Ms8AOeYko0mZzMcM5YVCKMdg==",
+      "sha512": "Cm2ZuswLT4iPLLpUzKa6oiCKaDv+d1Dc6WxC/xVb19prnQR5zK0jnOfpdVXIabM00SaqzP7kA9l7381FxPSVPA==",
       "type": "package",
       "path": "firesharp.serialization.jsonnet/1.1.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "firesharp.serialization.jsonnet.1.1.0.nupkg.sha512",
         "firesharp.serialization.jsonnet.nuspec",
@@ -506,10 +508,11 @@
       ]
     },
     "FluentValidation/7.6.0": {
-      "sha512": "+B3gG6E0SWpsU1S69EN48LCmV84c69zMC2gVynInYcKK86zk6Rj8s5Od/G3E12/kS5IdKw1uLI1KATqmpR/+ow==",
+      "sha512": "OSdjofTbA11BPRMPpSKoREH2THCuKq/fCiOUoEaAbj/iCz2Hm89zczYIiQFZpQDYKhuqeHpdEVrFmkmcpNryUQ==",
       "type": "package",
       "path": "fluentvalidation/7.6.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "fluentvalidation.7.6.0.nupkg.sha512",
         "fluentvalidation.nuspec",
@@ -1006,10 +1009,12 @@
       ]
     },
     "Newtonsoft.Json/6.0.4": {
-      "sha512": "POcHreXEQ0vqCFkYLlQ7+WYiVFvi5z/mhZSMIxLorb1Mm8VUWwSpyFXNEC4Um4APWSaRTkzaYXP/dWrFrub/BA==",
+      "sha512": "FyQLmEpjsCrEP+znauLDGAi+h6i9YnaMkITlfIoiM4RYyX3nki306bTHsr/0okiIvIc7BJhQTbOAIZVocccFUw==",
       "type": "package",
       "path": "newtonsoft.json/6.0.4",
+      "hasTools": true,
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "lib/net20/Newtonsoft.Json.dll",
         "lib/net20/Newtonsoft.Json.xml",
@@ -1031,10 +1036,11 @@
       ]
     },
     "RestSharp/104.4.0": {
-      "sha512": "gcd5+IiTCl32GdZm906SUMzF0TBtz/8br9RP8a2Y8ZSxZHub3qLuhZDd3kHhifEzTeoS8LiX94dk/vpo7ObPbw==",
+      "sha512": "noACbS/gvceWlZO4kaV6AepG1cTLtHRhHZftdve+lytX6AIFDk5bdzsq4FfJ2/byAH3Y04I92wlH/z95lb7UwQ==",
       "type": "package",
       "path": "restsharp/104.4.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "lib/net35-client/RestSharp.dll",
         "lib/net35-client/RestSharp.xml",
@@ -1243,10 +1249,11 @@
       ]
     },
     "System.ComponentModel.Annotations/4.4.1": {
-      "sha512": "/8XSRz3cgSSPEdiV6UFhlfk6/FX9P10MAja4XPCyMCz7/0YTqjtCh4e0jjLYOCJL8jK7O/vhtUjYo1TOSuPngQ==",
+      "sha512": "ToiYqSCioqhtspq2O/jYKtyTC/T0uwWHBTYlzCi6PRbSSHArN1IaRWeHffDamvms5sye5FDUWCfNZgubQpNRsA==",
       "type": "package",
       "path": "system.componentmodel.annotations/4.4.1",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -2244,9 +2251,6 @@
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
       "projectUniqueName": "C:\\Arquivos\\Freelancer\\SGQ\\Api\\SGQ.GDOL\\SGQ.GDOL\\SGQ.GDOL.Domain\\SGQ.GDOL.Domain.csproj",
       "projectName": "SGQ.GDOL.Domain",
@@ -2302,10 +2306,16 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -2314,7 +2324,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'FireSharp 1.1.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
+      "message": "Package 'FireSharp 1.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
       "libraryId": "FireSharp",
       "targetGraphs": [
         ".NETCoreApp,Version=v2.0"
@@ -2324,7 +2334,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'FireSharp.Serialization.JsonNet 1.1.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
+      "message": "Package 'FireSharp.Serialization.JsonNet 1.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
       "libraryId": "FireSharp.Serialization.JsonNet",
       "targetGraphs": [
         ".NETCoreApp,Version=v2.0"
@@ -2334,7 +2344,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Newtonsoft.Json 6.0.4' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
+      "message": "Package 'Newtonsoft.Json 6.0.4' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
       "libraryId": "Newtonsoft.Json",
       "targetGraphs": [
         ".NETCoreApp,Version=v2.0"
@@ -2344,7 +2354,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'RestSharp 104.4.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
+      "message": "Package 'RestSharp 104.4.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
       "libraryId": "RestSharp",
       "targetGraphs": [
         ".NETCoreApp,Version=v2.0"

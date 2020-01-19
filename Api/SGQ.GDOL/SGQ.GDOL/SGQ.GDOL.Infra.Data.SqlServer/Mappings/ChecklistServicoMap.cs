@@ -38,6 +38,7 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Mappings
                 .IsUnicode(false);
 
             entity.Property(e => e.Delete).HasColumnName("DELETE");
+            entity.Property(e => e.Ativo).HasColumnName("ATIVO");
 
             entity.Property(e => e.Descricao)
                 .HasColumnName("DESCRICAO")

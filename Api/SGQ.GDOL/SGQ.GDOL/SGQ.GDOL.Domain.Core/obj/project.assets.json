@@ -681,9 +681,6 @@
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
       "projectUniqueName": "C:\\Arquivos\\Freelancer\\SGQ\\Api\\SGQ.GDOL\\SGQ.GDOL\\SGQ.GDOL.Domain.Core\\SGQ.GDOL.Domain.Core.csproj",
       "projectName": "SGQ.GDOL.Domain.Core",
@@ -727,10 +724,16 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

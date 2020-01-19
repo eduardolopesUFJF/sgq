@@ -91,34 +91,42 @@ export class LoginPage {
                 },
                 {
                     "id": 14,
-                    "title": "PAINEIRA"
+                    "title": "NPA"
                 },
                 {
                     "id": 15,
-                    "title": "REALIZA"
+                    "title": "PAINEIRA"
                 },
                 {
                     "id": 16,
-                    "title": "RMG"
+                    "title": "PRIMAZ"
                 },
                 {
                     "id": 17,
-                    "title": "SOLTRON"
+                    "title": "REALIZA"
                 },
                 {
                     "id": 18,
-                    "title": "TALENT"
+                    "title": "RMG"
                 },
                 {
                     "id": 19,
-                    "title": "UPTEC"
+                    "title": "SOLTRON"
                 },
                 {
                     "id": 20,
-                    "title": "VERNAC"
+                    "title": "TALENT"
                 },
                 {
                     "id": 21,
+                    "title": "UPTEC"
+                },
+                {
+                    "id": 22,
+                    "title": "VERNAC"
+                },
+                {
+                    "id": 23,
                     "title": "VILLARD"
                 }
             ]
@@ -170,7 +178,7 @@ export class LoginPage {
             },
             error => {
                 this.loading.hide();
-                this.toastService.presentToastError("Falha na comunicação com o servidor.");
+                this.toastService.presentToastError("Falha na comunicação com o servidor."+JSON.stringify(error));
             }
         );
     }

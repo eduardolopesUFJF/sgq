@@ -456,26 +456,30 @@ var LoginPage = /** @class */ (function () {
                     },
                     {
                         "id": 16,
-                        "title": "RMG"
+                        "title": "PRIMAZ"
                     },
                     {
                         "id": 17,
-                        "title": "SOLTRON"
+                        "title": "RMG"
                     },
                     {
                         "id": 18,
-                        "title": "TALENT"
+                        "title": "SOLTRON"
                     },
                     {
                         "id": 19,
-                        "title": "UPTEC"
+                        "title": "TALENT"
                     },
                     {
                         "id": 20,
-                        "title": "VERNAC"
+                        "title": "UPTEC"
                     },
                     {
                         "id": 21,
+                        "title": "VERNAC"
+                    },
+                    {
+                        "id": 22,
                         "title": "VILLARD"
                     }
                 ]
@@ -516,7 +520,7 @@ var LoginPage = /** @class */ (function () {
             }
         }, function (error) {
             _this.loading.hide();
-            _this.toastService.presentToastError("Falha na comunicação com o servidor.");
+            _this.toastService.presentToastError("Falha na comunicação com o servidor." + JSON.stringify(error));
         });
     };
     LoginPage.prototype.gravarDadosLogin = function () {

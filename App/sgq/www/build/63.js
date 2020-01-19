@@ -1,1 +1,107 @@
-webpackJsonp([63],{716:function(n,t,l){"use strict";function e(n){return u["ɵvid"](0,[(n()(),u["ɵted"](-1,null,["\n"])),(n()(),u["ɵeld"](1,0,null,null,5,"div",[["id","splash-background-image"]],null,null,null,null,null)),(n()(),u["ɵted"](-1,null,["\n  "])),(n()(),u["ɵeld"](3,0,null,null,0,"img",[["class","splash-screen"]],[[8,"src",4]],null,null,null,null)),(n()(),u["ɵted"](-1,null,["\n  "])),(n()(),u["ɵeld"](5,0,null,null,0,"img",[["animation",""],["logo",""]],[[8,"src",4]],null,null,null,null)),(n()(),u["ɵted"](-1,null,["\n"])),(n()(),u["ɵted"](-1,null,["\n"]))],null,function(n,t){var l=t.component;n(t,3,0,l.data.backgroundImage);n(t,5,0,l.data.logo)})}Object.defineProperty(t,"__esModule",{value:!0});var u=l(1),o=(l(0),l(55),function(){function n(){}return n.prototype.ngOnChanges=function(n){clearInterval(this.timer),this.executeEvents()},n.prototype.getData=function(){return this.data},n.prototype.getEvents=function(){return this.events},n.prototype.executeEvents=function(){var n=this.getData()&&this.getData().duration?this.getData().duration:1e4,t=null;this.getEvents()&&(t=this.getEvents().onRedirect),this.timer=setTimeout(function(){t&&t()},n)},n.prototype.ngOnDestroy=function(){clearInterval(this.timer)},n}()),a=function(){return function(){}}(),r=l(191),i=l(192),d=l(193),s=l(194),c=l(195),p=l(196),m=l(197),g=l(198),v=l(199),f=u["ɵcrt"]({encapsulation:2,styles:[],data:{}}),h=u["ɵccf"]("splash-screen-layout-1",o,function(n){return u["ɵvid"](0,[(n()(),u["ɵeld"](0,0,null,null,1,"splash-screen-layout-1",[],null,null,null,e,f)),u["ɵdid"](1,704512,null,0,o,[],null,null)],null,null)},{data:"data",events:"events"},{},[]),y=l(15),C=l(20),b=l(129),D=l(49);l.d(t,"SplashScreenLayout1ModuleNgFactory",function(){return E});var E=u["ɵcmf"](a,[],function(n){return u["ɵmod"]([u["ɵmpd"](512,u.ComponentFactoryResolver,u["ɵCodegenComponentFactoryResolver"],[[8,[r.a,i.a,d.a,s.a,c.a,p.a,m.a,g.a,v.a,h]],[3,u.ComponentFactoryResolver],u.NgModuleRef]),u["ɵmpd"](4608,y.NgLocalization,y.NgLocaleLocalization,[u.LOCALE_ID,[2,y["ɵa"]]]),u["ɵmpd"](4608,C.r,C.r,[]),u["ɵmpd"](4608,C.d,C.d,[]),u["ɵmpd"](512,y.CommonModule,y.CommonModule,[]),u["ɵmpd"](512,C.p,C.p,[]),u["ɵmpd"](512,C.e,C.e,[]),u["ɵmpd"](512,C.n,C.n,[]),u["ɵmpd"](512,b.a,b.a,[]),u["ɵmpd"](512,b.b,b.b,[]),u["ɵmpd"](512,a,a,[]),u["ɵmpd"](256,D.a,o,[])])})}});
+webpackJsonp([63],{
+
+/***/ 720:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SwipeToDismissLayout2Module", function() { return SwipeToDismissLayout2Module; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__swipe_to_dismiss_layout_2__ = __webpack_require__(851);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var SwipeToDismissLayout2Module = /** @class */ (function () {
+    function SwipeToDismissLayout2Module() {
+    }
+    SwipeToDismissLayout2Module = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__swipe_to_dismiss_layout_2__["a" /* SwipeToDismissLayout2 */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__swipe_to_dismiss_layout_2__["a" /* SwipeToDismissLayout2 */]),
+            ],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_2__swipe_to_dismiss_layout_2__["a" /* SwipeToDismissLayout2 */]
+            ],
+            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"]]
+        })
+    ], SwipeToDismissLayout2Module);
+    return SwipeToDismissLayout2Module;
+}());
+
+//# sourceMappingURL=swipe-to-dismiss-layout-2.module.js.map
+
+/***/ }),
+
+/***/ 851:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SwipeToDismissLayout2; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var SwipeToDismissLayout2 = /** @class */ (function () {
+    function SwipeToDismissLayout2() {
+        var _this = this;
+        this.undo = function (slidingItem) {
+            slidingItem.close();
+        };
+        this.delete = function (item) {
+            var index = _this.data.items.indexOf(item);
+            if (index > -1) {
+                _this.data.items.splice(index, 1);
+            }
+        };
+    }
+    SwipeToDismissLayout2.prototype.onEvent = function (event, item, e) {
+        if (this.events[event]) {
+            this.events[event](item);
+        }
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
+    ], SwipeToDismissLayout2.prototype, "data", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
+    ], SwipeToDismissLayout2.prototype, "events", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */])
+    ], SwipeToDismissLayout2.prototype, "content", void 0);
+    SwipeToDismissLayout2 = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'swipe-to-dismiss-layout-2',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\swipe-to-dismiss\layout-2\swipe-to-dismiss.html"*/'<!-- Themes Swipe To Dismiss - Products + CTA -->\n\n<ion-content>\n\n  <ion-grid no-padding *ngIf="data != null">\n\n    <ion-row>\n\n      <ion-col col-12>\n\n        <!-- Header top Swipe To Dismiss Products + CTA -->\n\n        <ion-list-header transparent no-lines header-section no-margin>\n\n          <!-- Big Title Swipe To Dismiss Products + CTA -->\n\n          <h1 header-title text-capitalize>{{data.header}}</h1>\n\n        </ion-list-header>\n\n        <!-- Content -->\n\n        <ion-list no-margin>\n\n          <ion-item-sliding default-item *ngFor="let item of data.items" #slidingItem>\n\n            <ion-item transparent no-padding no-lines (click)="onEvent(\'onItemClick\', item.title, $event)">\n\n              <!-- Images -->\n\n                <ion-thumbnail item-start>\n\n                  <img [src]="item.image">\n\n                </ion-thumbnail>\n\n                <!-- Title -->\n\n                <h2 item-title>{{item.title}}</h2>\n\n                <!-- Subtitle -->\n\n                <p item-subtitle text-wrap>{{item.subtitle}}</p>\n\n                <!-- Button -->\n\n                <button ion-button button-follow text-capitalize box-shadow item-end>{{item.ionButton}}</button>\n\n            </ion-item>\n\n            <!--Action Button-->\n\n            <ion-item-options no-lines>\n\n              <!-- Button -->\n\n              <button ion-button text-capitalize (click)="delete(item)">\n\n              {{item.delate}}\n\n            </button>\n\n            </ion-item-options>\n\n          </ion-item-sliding>\n\n        </ion-list>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\swipe-to-dismiss\layout-2\swipe-to-dismiss.html"*/
+        }),
+        __metadata("design:paramtypes", [])
+    ], SwipeToDismissLayout2);
+    return SwipeToDismissLayout2;
+}());
+
+//# sourceMappingURL=swipe-to-dismiss-layout-2.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=63.js.map

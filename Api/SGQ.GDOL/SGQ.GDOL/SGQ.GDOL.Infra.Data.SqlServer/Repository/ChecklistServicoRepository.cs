@@ -18,7 +18,7 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Repository
 
         public List<ChecklistItem> BuscarComInclude()
         {
-            var result = DbSet.Where(x => x.Ativo.HasValue && x.Ativo.Value)
+            var result = DbSet.Where(x => x.Ativo.HasValue && x.Ativo.Value && x.Delete.HasValue && !x.Delete.Value)
                             .Include(x => x.ItensChecklistServico)
                             .OrderBy(x => x.Codigo)
                             .ToList();
