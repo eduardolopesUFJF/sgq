@@ -79,6 +79,7 @@ export class RealizarVerificacaoPage {
                 if (naoFinalizado) {
                     this.toastService.presentToastWarning("Não é possível salvar com status de finalizado pois existem inspeções pendentes.");
                 } else {
+                    this.inspecao.dataEncerramento = new Date();
                     this.viewCtrl.dismiss({ inspecao: this.inspecao, concluido: true });
                 }
             }

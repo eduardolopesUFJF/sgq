@@ -26,7 +26,7 @@
     <h2 text-center text-wrap class="broadcomb">{{broadcomb.toUpperCase()}}</h2>
     <h2 padding text-center class="aviso" *ngIf="inspecoes.length < 1">Nenhum registro encontrado.</h2>
     <ion-grid no-padding>
-        <ion-row>
+        <ion-row *ngIf="servico.status == 0">
             <button ion-button default-button block text-capitalize box-shadow margin-bottom class="button-novo"
                 (click)="novaInspecao()">Nova inspeção</button>
         </ion-row>
