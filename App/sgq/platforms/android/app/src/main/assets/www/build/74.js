@@ -1,1 +1,161 @@
-webpackJsonp([74],{677:function(l,n,e){"use strict";function u(l){return c["ɵvid"](0,[(l()(),c["ɵeld"](0,0,null,null,0,"i",[["icon-small",""]],[[8,"className",0]],null,null,null,null))],null,function(l,n){l(n,0,0,c["ɵinlineInterpolate"](1,"icon ",n.parent.context.$implicit.iconActive,""))})}function t(l){return c["ɵvid"](0,[(l()(),c["ɵeld"](0,0,null,null,0,"i",[["icon-small",""]],[[8,"className",0]],null,null,null,null))],null,function(l,n){l(n,0,0,c["ɵinlineInterpolate"](1,"icon ",n.parent.context.$implicit.iconInactive,""))})}function i(l){return c["ɵvid"](0,[(l()(),c["ɵeld"](0,0,null,null,8,"ion-icon",[["padding-top",""],["role","img"]],[[2,"hide",null]],[[null,"click"]],function(l,n,e){var u=!0;if("click"===n){u=!1!==l.component.onStarClass(l.parent.context.$implicit.expandItems.iconsStars,l.context.index,e)&&u}return u},null,null)),c["ɵdid"](1,147456,[[7,4]],0,h.a,[y.a,c.ElementRef,c.Renderer],null,null),(l()(),c["ɵted"](-1,null,["\n                    "])),(l()(),c["ɵand"](16777216,null,null,1,null,u)),c["ɵdid"](4,16384,null,0,k.NgIf,[c.ViewContainerRef,c.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),c["ɵted"](-1,null,["\n                    "])),(l()(),c["ɵand"](16777216,null,null,1,null,t)),c["ɵdid"](7,16384,null,0,k.NgIf,[c.ViewContainerRef,c.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),c["ɵted"](-1,null,["\n                  "]))],function(l,n){l(n,4,0,n.context.$implicit.isActive);l(n,7,0,!n.context.$implicit.isActive)},function(l,n){l(n,0,0,c["ɵnov"](n,1)._hidden)})}function d(l){return c["ɵvid"](0,[(l()(),c["ɵeld"](0,0,null,null,61,"li",[["margin",""]],null,null,null,null,null)),(l()(),c["ɵted"](-1,null,["\n              "])),(l()(),c["ɵted"](-1,null,["\n              "])),(l()(),c["ɵeld"](3,0,null,null,22,"div",[["class","collapsible-header"]],null,[[null,"click"]],function(l,n,e){var u=!0;if("click"===n){u=!1!==l.component.toggleGroup(l.context.$implicit)&&u}return u},null,null)),(l()(),c["ɵted"](-1,null,["\n                "])),(l()(),c["ɵeld"](5,0,null,null,19,"ion-item",[["background-size",""],["class","item item-block"],["no-lines",""],["no-margin",""],["no-padding",""],["text-center",""]],null,null,null,w.b,w.a)),c["ɵdid"](6,278528,null,0,k.NgStyle,[c.KeyValueDiffers,c.ElementRef,c.Renderer2],{ngStyle:[0,"ngStyle"]},null),c["ɵpod"](7,{"background-image":0}),c["ɵdid"](8,1097728,null,3,C.a,[E.a,y.a,c.ElementRef,c.Renderer,[2,N.a]],null,null),c["ɵqud"](335544320,2,{contentLabel:0}),c["ɵqud"](603979776,3,{_buttons:1}),c["ɵqud"](603979776,4,{_icons:1}),c["ɵdid"](12,16384,null,0,$.a,[],null,null),(l()(),c["ɵted"](-1,2,["\n                  "])),(l()(),c["ɵeld"](14,0,null,2,9,"div",[["text-center",""],["watch-now",""]],null,null,null,null,null)),(l()(),c["ɵted"](-1,null,["\n                    "])),(l()(),c["ɵted"](-1,null,["\n                    "])),(l()(),c["ɵeld"](17,0,null,null,5,"button",[["button-icon",""],["icon-center",""],["ion-button",""]],null,null,null,S.b,S.a)),c["ɵdid"](18,1097728,[[3,4]],0,F.a,[[8,""],y.a,c.ElementRef,c.Renderer],null,null),(l()(),c["ɵted"](-1,0,["\n                    "])),(l()(),c["ɵeld"](20,0,null,0,1,"ion-icon",[["icon-large",""],["role","img"]],[[2,"hide",null]],null,null,null,null)),c["ɵdid"](21,147456,null,0,h.a,[y.a,c.ElementRef,c.Renderer],{name:[0,"name"]},null),(l()(),c["ɵted"](-1,0,["\n                  "])),(l()(),c["ɵted"](-1,null,["\n                    "])),(l()(),c["ɵted"](-1,2,["\n                "])),(l()(),c["ɵted"](-1,null,["\n              "])),(l()(),c["ɵted"](-1,null,["\n              "])),(l()(),c["ɵted"](-1,null,["\n              "])),(l()(),c["ɵeld"](28,0,null,null,32,"div",[["background-size",""],["class","item-accordion"]],[[8,"hidden",0]],null,null,null,null)),c["ɵdid"](29,278528,null,0,k.NgClass,[c.IterableDiffers,c.KeyValueDiffers,c.ElementRef,c.Renderer2],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),c["ɵpod"](30,{active:0}),c["ɵdid"](31,278528,null,0,k.NgStyle,[c.KeyValueDiffers,c.ElementRef,c.Renderer2],{ngStyle:[0,"ngStyle"]},null),c["ɵpod"](32,{"background-image":0}),(l()(),c["ɵted"](-1,null,["\n                "])),(l()(),c["ɵeld"](34,0,null,null,25,"ion-item",[["class","item item-block"],["no-lines",""],["padding",""],["text-center",""],["text-wrap",""],["transparent",""]],null,null,null,w.b,w.a)),c["ɵdid"](35,1097728,null,3,C.a,[E.a,y.a,c.ElementRef,c.Renderer,[2,N.a]],null,null),c["ɵqud"](335544320,5,{contentLabel:0}),c["ɵqud"](603979776,6,{_buttons:1}),c["ɵqud"](603979776,7,{_icons:1}),c["ɵdid"](39,16384,null,0,$.a,[],null,null),(l()(),c["ɵted"](-1,2,["\n                  "])),(l()(),c["ɵted"](-1,2,["\n                  "])),(l()(),c["ɵeld"](42,0,null,2,1,"h2",[["subitem-title",""]],null,null,null,null,null)),(l()(),c["ɵted"](43,null,["",""])),(l()(),c["ɵted"](-1,2,["\n                  "])),(l()(),c["ɵted"](-1,2,["\n                  "])),(l()(),c["ɵand"](16777216,null,2,1,null,i)),c["ɵdid"](47,802816,null,0,k.NgForOf,[c.ViewContainerRef,c.TemplateRef,c.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),c["ɵted"](-1,2,["\n                  "])),(l()(),c["ɵted"](-1,2,["\n                  "])),(l()(),c["ɵeld"](50,0,null,2,1,"span",[["span-medium",""]],null,null,null,null,null)),(l()(),c["ɵted"](51,null,["",""])),(l()(),c["ɵted"](-1,2,["\n                  "])),(l()(),c["ɵeld"](53,0,null,2,5,"div",[["padding-top",""]],null,[[null,"click"]],function(l,n,e){var u=!0;if("click"===n){u=!1!==l.component.onEvent("onItemClick",l.context.$implicit,e)&&u}return u},null,null)),(l()(),c["ɵted"](-1,null,["\n                    "])),(l()(),c["ɵted"](-1,null,["\n                    "])),(l()(),c["ɵeld"](56,0,null,null,1,"p",[["subitem-subtitle",""]],null,null,null,null,null)),(l()(),c["ɵted"](57,null,["",""])),(l()(),c["ɵted"](-1,null,["\n                  "])),(l()(),c["ɵted"](-1,2,["\n                "])),(l()(),c["ɵted"](-1,null,["\n              "])),(l()(),c["ɵted"](-1,null,["\n            "]))],function(l,n){var e=n.component;l(n,6,0,l(n,7,0,"url("+n.context.$implicit.backgroundImage+")"));l(n,21,0,n.context.$implicit.icon);l(n,29,0,"item-accordion",l(n,30,0,e.isGroupShown(n.context.$implicit)));l(n,31,0,l(n,32,0,"url("+e.data.listBackgroundImage+")"));l(n,47,0,n.context.$implicit.expandItems.iconsStars)},function(l,n){var e=n.component;l(n,20,0,c["ɵnov"](n,21)._hidden);l(n,28,0,!e.isGroupShown(n.context.$implicit));l(n,43,0,n.context.$implicit.expandItems.title);l(n,51,0,n.context.$implicit.expandItems.reviews);l(n,57,0,n.context.$implicit.expandItems.description)})}function o(l){return c["ɵvid"](0,[(l()(),c["ɵeld"](0,0,null,null,20,"ion-grid",[["class","grid"],["no-padding",""]],null,null,null,null,null)),c["ɵdid"](1,16384,null,0,_.a,[],null,null),(l()(),c["ɵted"](-1,null,["\n    "])),(l()(),c["ɵeld"](3,0,null,null,16,"ion-row",[["class","row"]],null,null,null,null,null)),c["ɵdid"](4,16384,null,0,L.a,[],null,null),(l()(),c["ɵted"](-1,null,["\n      "])),(l()(),c["ɵeld"](6,0,null,null,12,"ion-col",[["class","col"],["col-12",""],["no-margin",""],["no-padding",""]],null,null,null,null,null)),c["ɵdid"](7,16384,null,0,O.a,[],null,null),(l()(),c["ɵted"](-1,null,["\n        "])),(l()(),c["ɵeld"](9,0,null,null,8,"ion-list",[],null,null,null,null,null)),c["ɵdid"](10,16384,null,0,V.a,[y.a,c.ElementRef,c.Renderer,q.a,D.l,A.a],null,null),(l()(),c["ɵted"](-1,null,["\n          "])),(l()(),c["ɵeld"](12,0,null,null,4,"ul",[["class","collapsible"],["no-margin",""],["no-padding",""]],null,null,null,null,null)),(l()(),c["ɵted"](-1,null,["\n            "])),(l()(),c["ɵand"](16777216,null,null,1,null,d)),c["ɵdid"](15,802816,null,0,k.NgForOf,[c.ViewContainerRef,c.TemplateRef,c.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),c["ɵted"](-1,null,["\n          "])),(l()(),c["ɵted"](-1,null,["\n        "])),(l()(),c["ɵted"](-1,null,["\n      "])),(l()(),c["ɵted"](-1,null,["\n    "])),(l()(),c["ɵted"](-1,null,["\n  "]))],function(l,n){l(n,15,0,n.component.data.items)},null)}function a(l){return c["ɵvid"](0,[c["ɵqud"](402653184,1,{content:0}),(l()(),c["ɵted"](-1,null,["\n"])),(l()(),c["ɵeld"](2,0,null,null,5,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,G.b,G.a)),c["ɵdid"](3,4374528,[[1,4]],0,M.a,[y.a,q.a,A.a,c.ElementRef,c.Renderer,T.a,z.a,c.NgZone,[2,K.a],[2,P.a]],null,null),(l()(),c["ɵted"](-1,1,["\n  "])),(l()(),c["ɵand"](16777216,null,1,1,null,o)),c["ɵdid"](6,16384,null,0,k.NgIf,[c.ViewContainerRef,c.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),c["ɵted"](-1,1,["\n"])),(l()(),c["ɵted"](-1,null,["\n"]))],function(l,n){l(n,6,0,null!=n.component.data)},function(l,n){l(n,2,0,c["ɵnov"](n,3).statusbarPadding,c["ɵnov"](n,3)._hasRefresher)})}Object.defineProperty(n,"__esModule",{value:!0});var c=e(1),r=(e(0),e(55),function(){function l(){}return l.prototype.onEvent=function(l,n,e){this.events[l]&&this.events[l](n)},l.prototype.onStarClass=function(l,n,e){for(var u=0;u<l.length;u++)l[u].isActive=u<=n;this.onEvent("onRates",n,e)},l.prototype.toggleGroup=function(l){l.show=!l.show},l.prototype.isGroupShown=function(l){return l.show},l}()),s=function(){return function(){}}(),p=e(191),m=e(192),f=e(193),g=e(194),v=e(195),R=e(196),b=e(197),x=e(198),I=e(199),h=e(36),y=e(3),k=e(15),w=e(130),C=e(24),E=e(21),N=e(50),$=e(60),S=e(38),F=e(27),_=e(131),L=e(83),O=e(84),V=e(56),q=e(6),D=e(10),A=e(13),G=e(200),M=e(30),T=e(12),z=e(32),K=e(7),P=e(29),j=c["ɵcrt"]({encapsulation:2,styles:[],data:{}}),B=c["ɵccf"]("expandable-layout-2",r,function(l){return c["ɵvid"](0,[(l()(),c["ɵeld"](0,0,null,null,1,"expandable-layout-2",[],null,null,null,a,j)),c["ɵdid"](1,49152,null,0,r,[],null,null)],null,null)},{data:"data",events:"events"},{},[]),J=e(20),Z=e(129),H=e(49);e.d(n,"ExpandableLayout2ModuleNgFactory",function(){return Q});var Q=c["ɵcmf"](s,[],function(l){return c["ɵmod"]([c["ɵmpd"](512,c.ComponentFactoryResolver,c["ɵCodegenComponentFactoryResolver"],[[8,[p.a,m.a,f.a,g.a,v.a,R.a,b.a,x.a,I.a,B]],[3,c.ComponentFactoryResolver],c.NgModuleRef]),c["ɵmpd"](4608,k.NgLocalization,k.NgLocaleLocalization,[c.LOCALE_ID,[2,k["ɵa"]]]),c["ɵmpd"](4608,J.r,J.r,[]),c["ɵmpd"](4608,J.d,J.d,[]),c["ɵmpd"](512,k.CommonModule,k.CommonModule,[]),c["ɵmpd"](512,J.p,J.p,[]),c["ɵmpd"](512,J.e,J.e,[]),c["ɵmpd"](512,J.n,J.n,[]),c["ɵmpd"](512,Z.a,Z.a,[]),c["ɵmpd"](512,Z.b,Z.b,[]),c["ɵmpd"](512,s,s,[]),c["ɵmpd"](256,H.a,r,[])])})}});
+webpackJsonp([74],{
+
+/***/ 691:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppearanceAnimationLayout5Module", function() { return AppearanceAnimationLayout5Module; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_5__ = __webpack_require__(784);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(89);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var AppearanceAnimationLayout5Module = /** @class */ (function () {
+    function AppearanceAnimationLayout5Module() {
+    }
+    AppearanceAnimationLayout5Module = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_5__["a" /* AppearanceAnimationLayout5 */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_5__["a" /* AppearanceAnimationLayout5 */]),
+                __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["a" /* IonicStorageModule */].forRoot()
+            ],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_5__["a" /* AppearanceAnimationLayout5 */]
+            ],
+            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"]]
+        })
+    ], AppearanceAnimationLayout5Module);
+    return AppearanceAnimationLayout5Module;
+}());
+
+//# sourceMappingURL=appearance-animation-layout-5.module.js.map
+
+/***/ }),
+
+/***/ 784:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppearanceAnimationLayout5; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(89);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var AppearanceAnimationLayout5 = /** @class */ (function () {
+    function AppearanceAnimationLayout5(storage) {
+        var _this = this;
+        this.storage = storage;
+        this.dataBackup = [];
+        this.animateItems = [];
+        this.animacaoAtiva = true;
+        this.descricao = "";
+        this.situacao = 0;
+        this.animateClass = { 'zoom-in': true };
+        this.storage.ready().then(function () {
+            _this.storage.get('ultimoDownload').then(function (data) {
+                _this.ultimoDownload = data ? data : "Nunca";
+            });
+            _this.storage.get('ultimoUpload').then(function (data) {
+                _this.ultimoUpload = data ? data : "Nunca";
+            });
+        });
+    }
+    AppearanceAnimationLayout5.prototype.onEvent = function (event, item, e) {
+        if (e) {
+            e.stopPropagation();
+        }
+        if (this.events[event]) {
+            this.events[event](item);
+        }
+    };
+    AppearanceAnimationLayout5.prototype.ngOnChanges = function (changes) {
+        var that = this;
+        that.data = changes['data'].currentValue;
+        if (that.data && that.data) {
+            that.animateItems = [];
+            var _loop_1 = function (i) {
+                setTimeout(function () {
+                    that.animateItems.push(that.data[i]);
+                }, 200 * i);
+            };
+            for (var i = 0; i < that.data.length; i++) {
+                _loop_1(i);
+            }
+        }
+        if (this.dataBackup.length == 0) {
+            this.dataBackup = this.data.slice();
+        }
+    };
+    AppearanceAnimationLayout5.prototype.filtrar = function (valor) {
+        this.animacaoAtiva = false;
+        if (valor.length == 0) {
+            this.data = this.dataBackup.slice();
+        }
+        else {
+            this.data = this.dataBackup.filter(function (item) {
+                return item.descricao.toLowerCase().indexOf(valor.toLowerCase()) > -1;
+            });
+        }
+    };
+    AppearanceAnimationLayout5.prototype.verificaNovoItem = function (item) {
+        return item.id == 0;
+    };
+    AppearanceAnimationLayout5.prototype.filtrarSituacao = function (valor) {
+        this.animacaoAtiva = false;
+        this.data = this.dataBackup.filter(function (item) { return item.status == valor; });
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
+    ], AppearanceAnimationLayout5.prototype, "data", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
+    ], AppearanceAnimationLayout5.prototype, "events", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
+    ], AppearanceAnimationLayout5.prototype, "config", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */])
+    ], AppearanceAnimationLayout5.prototype, "content", void 0);
+    AppearanceAnimationLayout5 = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'appearance-animation-layout-5',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\appearance-animation\layout-5\appearance-animation.html"*/'<!--Theme Appearance animation (Zoom In)-->\n\n<ion-content>\n\n    <h2 text-center text-wrap class="broadcomb" *ngIf="config.broadcomb">{{config.broadcomb.toUpperCase()}}</h2>\n\n    <h2 padding text-center class="aviso" *ngIf="!config.naoExibirMensagemListaVazia && (animateItems.length < 1 || data.length < 1)">Nenhum\n\n        registro encontrado.</h2>\n\n    <ion-grid no-padding *ngIf="data != null">\n\n        <ion-row *ngIf="config.exibirDatas && animateItems.length > 0">\n\n            <ion-col col-12>\n\n                <h3 item-data text-wrap text-center *ngIf="ultimoDownload != \'Nunca\'">Último download: {{ultimoDownload\n\n                    | date: \'dd/MM/yyyy HH:mm\'}}</h3>\n\n                <h3 item-data text-wrap text-center *ngIf="ultimoUpload != \'Nunca\'">Última publicação: {{ultimoUpload |\n\n                    date: \'dd/MM/yyyy HH:mm\'}}</h3>\n\n                <h3 item-data text-wrap text-center *ngIf="ultimoDownload == \'Nunca\'">Último download:\n\n                    {{ultimoDownload}}</h3>\n\n                <h3 item-data text-wrap text-center *ngIf="ultimoUpload == \'Nunca\'">Última publicação: {{ultimoUpload}}</h3>\n\n            </ion-col>\n\n        </ion-row>\n\n        <ion-row *ngIf="config.btnNovoLabel">\n\n            <button ion-button default-button block text-capitalize box-shadow margin-bottom class="button-novo"\n\n                (click)="onEvent(\'onAddClick\')">{{config.btnNovoLabel}}</button>\n\n        </ion-row>\n\n        <ion-list radio-group no-margin [(ngModel)]="situacao" name="situacao" id="situacao" *ngIf="config.filtrarSituacao" (ionChange)="filtrarSituacao($event)">\n\n            <ion-grid>\n\n                <ion-row>\n\n                    <ion-col col-6>\n\n                        <ion-item radio>\n\n                            <ion-label>Em aberto</ion-label>\n\n                            <ion-radio [value]="0" checked></ion-radio>\n\n                        </ion-item>\n\n                    </ion-col>\n\n                    <ion-col col-6>\n\n                        <ion-item radio>\n\n                            <ion-label>Finalizado</ion-label>\n\n                            <ion-radio [value]="1"></ion-radio>\n\n                        </ion-item>\n\n                    </ion-col>\n\n                </ion-row>\n\n            </ion-grid>\n\n        </ion-list>\n\n        <ion-row>\n\n            <ion-col class="col-search" col-12 *ngIf="data.length > 0 || !animacaoAtiva" [ngClass]="{\'margin-top-10\': !config.exibirDatas}">\n\n                <ion-searchbar [placeholder]="\'Filtrar pela descrição\'" (ionInput)="filtrar($event.target.value)"></ion-searchbar>\n\n            </ion-col>\n\n            <ion-col col-12>\n\n                <ion-list no-margin *ngIf="animacaoAtiva">\n\n                    <ion-item default-item no-lines [ngClass]="{\'novo-item\': verificaNovoItem(item) && !config.alteracoes, \'zoom-in\': true}"\n\n                        *ngFor="let item of animateItems; let i = index;" (click)="onEvent(\'onItemClick\', item, $event)">\n\n                        <ion-row class="espacamento">\n\n                            <ion-col col-10>\n\n                                <h2 *ngIf="!config.concatena" item-title text-wrap>{{item.descricao}}</h2>\n\n                                <h2 *ngIf="config.concatena" item-title text-wrap>{{item.codigo}} - {{item.descricao}}</h2>\n\n                                <h3 item-situacao text-wrap *ngIf="config.subTitulo">{{config.subTitulo}}:\n\n                                    {{config.alteracoes ? (item.data | date: \'dd/MM/yyyy hh:mm\') : item.situacao }}</h3>\n\n                            </ion-col>\n\n                            <ion-col col-2 *ngIf="config.exclusaoPossivel" (click)="onEvent(\'onIconClick\', item, $event)">\n\n                                <ion-icon icon-small name="{{config.icon}}" item-right style="font-size: 25px !important; margin: 0px"\n\n                                    [ngClass]="{\'color-black\': !item.delete , \'color-red\' : item.delete}"></ion-icon>\n\n                            </ion-col>\n\n                        </ion-row>\n\n                        <ion-row class="espacamento" *ngIf="config.tipo">\n\n                            <ion-col col-12 class="tipo">\n\n                                <h3 no-margin item-tipo text-wrap>{{item.tipo.length > 1 ? item.tipo.toUpperCase() :\n\n                                    (item.tipo == \'C\' ? \'CONTROLADO\' : \'ESPECIALIZADO\') }}</h3>\n\n                            </ion-col>\n\n                        </ion-row>\n\n                    </ion-item>\n\n                </ion-list>\n\n\n\n                <ion-list no-margin *ngIf="!animacaoAtiva">\n\n                    <ion-item default-item no-lines [ngClass]="{\'novo-item\': verificaNovoItem(item) && !config.alteracoes}"\n\n                        *ngFor="let item of data; let i = index;" (click)="onEvent(\'onItemClick\', item, $event)">\n\n                        <ion-row class="espacamento">\n\n                            <ion-col col-10>\n\n                                <h2 *ngIf="!config.concatena" item-title text-wrap>{{item.descricao}}</h2>\n\n                                <h2 *ngIf="config.concatena" item-title text-wrap>{{item.codigo}} - {{item.descricao}}</h2>\n\n                                <h3 item-situacao text-wrap *ngIf="config.subTitulo">{{config.subTitulo}}:\n\n                                    {{config.alteracoes ? (item.data | date: \'dd/MM/yyyy hh:mm\') : item.situacao}}</h3>\n\n                            </ion-col>\n\n                            <ion-col col-2 *ngIf="config.exclusaoPossivel">\n\n                                <ion-icon icon-small name="{{config.icon}}" item-right (click)="onEvent(\'onIconClick\', item, $event)"\n\n                                    style="font-size: 25px !important; margin: 0px" [ngClass]="{\'color-black\': !item.delete , \'color-red\' : item.delete}"></ion-icon>\n\n                            </ion-col>\n\n                        </ion-row>\n\n                        <ion-row class="espacamento" *ngIf="config.tipo">\n\n                            <ion-col col-12 class="tipo">\n\n                                <h3 no-margin item-tipo text-wrap>{{item.tipo.length > 1 ? item.tipo.toUpperCase() :\n\n                                    (item.tipo == \'C\' ? \'CONTROLADO\' : \'ESPECIALIZADO\') }}</h3>\n\n                            </ion-col>\n\n                        </ion-row>\n\n                    </ion-item>\n\n                </ion-list>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-grid>\n\n</ion-content>'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\appearance-animation\layout-5\appearance-animation.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]])
+    ], AppearanceAnimationLayout5);
+    return AppearanceAnimationLayout5;
+}());
+
+//# sourceMappingURL=appearance-animation-layout-5.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=74.js.map

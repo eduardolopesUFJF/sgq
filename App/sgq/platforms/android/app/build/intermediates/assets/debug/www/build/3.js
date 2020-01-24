@@ -448,11 +448,11 @@ var LoginPage = /** @class */ (function () {
                     },
                     {
                         "id": 14,
-                        "title": "PAINEIRA"
+                        "title": "NPA"
                     },
                     {
                         "id": 15,
-                        "title": "REALIZA"
+                        "title": "PAINEIRA"
                     },
                     {
                         "id": 16,
@@ -460,26 +460,30 @@ var LoginPage = /** @class */ (function () {
                     },
                     {
                         "id": 17,
-                        "title": "RMG"
+                        "title": "REALIZA"
                     },
                     {
                         "id": 18,
-                        "title": "SOLTRON"
+                        "title": "RMG"
                     },
                     {
                         "id": 19,
-                        "title": "TALENT"
+                        "title": "SOLTRON"
                     },
                     {
                         "id": 20,
-                        "title": "UPTEC"
+                        "title": "TALENT"
                     },
                     {
                         "id": 21,
-                        "title": "VERNAC"
+                        "title": "UPTEC"
                     },
                     {
                         "id": 22,
+                        "title": "VERNAC"
+                    },
+                    {
+                        "id": 23,
                         "title": "VILLARD"
                     }
                 ]

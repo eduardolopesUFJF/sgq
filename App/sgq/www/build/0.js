@@ -577,7 +577,7 @@ var ElasticHeader = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 785:
+/***/ 784:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -684,7 +684,7 @@ var CircleManager = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 786:
+/***/ 785:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -799,7 +799,7 @@ var RectangleManager = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 787:
+/***/ 786:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -909,7 +909,7 @@ var InfoWindowManager = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 788:
+/***/ 787:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -991,7 +991,7 @@ var PolygonManager = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 789:
+/***/ 788:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1079,7 +1079,7 @@ var PolylineManager = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 790:
+/***/ 789:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1165,7 +1165,7 @@ var KmlLayerManager = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 791:
+/***/ 790:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1302,13 +1302,13 @@ var DataLayerManager = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 792:
+/***/ 791:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AgmInfoWindow; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_info_window_manager__ = __webpack_require__(787);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_info_window_manager__ = __webpack_require__(786);
 
 
 var infoWindowId = 0;
@@ -1458,7 +1458,7 @@ var AgmInfoWindow = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 793:
+/***/ 792:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1502,7 +1502,7 @@ var AgmPolylinePoint = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 794:
+/***/ 793:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1653,14 +1653,14 @@ var LazyMapsAPILoader = /** @class */ (function (_super) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AgmMap; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_google_maps_api_wrapper__ = __webpack_require__(777);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_managers_circle_manager__ = __webpack_require__(785);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_managers_rectangle_manager__ = __webpack_require__(786);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_managers_info_window_manager__ = __webpack_require__(787);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_managers_circle_manager__ = __webpack_require__(784);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_managers_rectangle_manager__ = __webpack_require__(785);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_managers_info_window_manager__ = __webpack_require__(786);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_managers_marker_manager__ = __webpack_require__(780);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_managers_polygon_manager__ = __webpack_require__(788);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_managers_polyline_manager__ = __webpack_require__(789);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_managers_kml_layer_manager__ = __webpack_require__(790);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__services_managers_data_layer_manager__ = __webpack_require__(791);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_managers_polygon_manager__ = __webpack_require__(787);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_managers_polyline_manager__ = __webpack_require__(788);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_managers_kml_layer_manager__ = __webpack_require__(789);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__services_managers_data_layer_manager__ = __webpack_require__(790);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__services_fit_bounds__ = __webpack_require__(781);
 
 
@@ -2157,7 +2157,7 @@ var AgmMap = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AgmCircle; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_circle_manager__ = __webpack_require__(785);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_circle_manager__ = __webpack_require__(784);
 
 
 var AgmCircle = /** @class */ (function () {
@@ -2396,7 +2396,7 @@ var AgmCircle = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AgmRectangle; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_rectangle_manager__ = __webpack_require__(786);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_rectangle_manager__ = __webpack_require__(785);
 
 
 var AgmRectangle = /** @class */ (function () {
@@ -2644,7 +2644,7 @@ var AgmRectangle = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AgmKmlLayer; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_kml_layer_manager__ = __webpack_require__(790);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_kml_layer_manager__ = __webpack_require__(789);
 
 
 var layerId = 0;
@@ -2783,7 +2783,7 @@ var AgmKmlLayer = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AgmDataLayer; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_data_layer_manager__ = __webpack_require__(791);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_data_layer_manager__ = __webpack_require__(790);
 
 
 var layerId = 0;
@@ -3074,7 +3074,7 @@ var AgmDataLayer = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_rxjs__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_fit_bounds__ = __webpack_require__(781);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_managers_marker_manager__ = __webpack_require__(780);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__info_window__ = __webpack_require__(792);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__info_window__ = __webpack_require__(791);
 
 
 
@@ -3343,7 +3343,7 @@ var AgmMarker = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AgmPolygon; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_polygon_manager__ = __webpack_require__(788);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_polygon_manager__ = __webpack_require__(787);
 
 
 /**
@@ -3592,8 +3592,8 @@ var AgmPolygon = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AgmPolyline; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_polyline_manager__ = __webpack_require__(789);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__polyline_point__ = __webpack_require__(793);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_polyline_manager__ = __webpack_require__(788);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__polyline_point__ = __webpack_require__(792);
 
 
 
@@ -3985,7 +3985,7 @@ var BROWSER_GLOBALS_PROVIDERS = [WindowRef, DocumentRef];
 /* unused harmony reexport AgmCircle */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__directives_rectangle__ = __webpack_require__(800);
 /* unused harmony reexport AgmRectangle */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_info_window__ = __webpack_require__(792);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_info_window__ = __webpack_require__(791);
 /* unused harmony reexport AgmInfoWindow */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_kml_layer__ = __webpack_require__(801);
 /* unused harmony reexport AgmKmlLayer */
@@ -3997,7 +3997,7 @@ var BROWSER_GLOBALS_PROVIDERS = [WindowRef, DocumentRef];
 /* unused harmony reexport AgmPolygon */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__directives_polyline__ = __webpack_require__(805);
 /* unused harmony reexport AgmPolyline */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__directives_polyline_point__ = __webpack_require__(793);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__directives_polyline_point__ = __webpack_require__(792);
 /* unused harmony reexport AgmPolylinePoint */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__directives_fit_bounds__ = __webpack_require__(806);
 /* unused harmony reexport AgmFitBounds */
@@ -4022,23 +4022,23 @@ var BROWSER_GLOBALS_PROVIDERS = [WindowRef, DocumentRef];
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__services_google_maps_api_wrapper__ = __webpack_require__(777);
 /* unused harmony reexport GoogleMapsAPIWrapper */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_circle_manager__ = __webpack_require__(785);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_managers_circle_manager__ = __webpack_require__(784);
 /* unused harmony reexport CircleManager */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_managers_rectangle_manager__ = __webpack_require__(786);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_managers_rectangle_manager__ = __webpack_require__(785);
 /* unused harmony reexport RectangleManager */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_managers_info_window_manager__ = __webpack_require__(787);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_managers_info_window_manager__ = __webpack_require__(786);
 /* unused harmony reexport InfoWindowManager */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_managers_marker_manager__ = __webpack_require__(780);
 /* unused harmony reexport MarkerManager */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_managers_polygon_manager__ = __webpack_require__(788);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_managers_polygon_manager__ = __webpack_require__(787);
 /* unused harmony reexport PolygonManager */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_managers_polyline_manager__ = __webpack_require__(789);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_managers_polyline_manager__ = __webpack_require__(788);
 /* unused harmony reexport PolylineManager */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_managers_kml_layer_manager__ = __webpack_require__(790);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_managers_kml_layer_manager__ = __webpack_require__(789);
 /* unused harmony reexport KmlLayerManager */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_managers_data_layer_manager__ = __webpack_require__(791);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__services_managers_data_layer_manager__ = __webpack_require__(790);
 /* unused harmony reexport DataLayerManager */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__services_maps_api_loader_lazy_maps_api_loader__ = __webpack_require__(794);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__services_maps_api_loader_lazy_maps_api_loader__ = __webpack_require__(793);
 /* unused harmony reexport GoogleMapsScriptProtocol */
 /* unused harmony reexport LAZY_MAPS_API_CONFIG */
 /* unused harmony reexport LazyMapsAPILoader */
@@ -4111,14 +4111,14 @@ NoOpMapsAPILoader = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__directives_map__ = __webpack_require__(798);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__directives_circle__ = __webpack_require__(799);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_rectangle__ = __webpack_require__(800);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_info_window__ = __webpack_require__(792);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_info_window__ = __webpack_require__(791);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_marker__ = __webpack_require__(803);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__directives_polygon__ = __webpack_require__(804);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__directives_polyline__ = __webpack_require__(805);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__directives_polyline_point__ = __webpack_require__(793);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__directives_polyline_point__ = __webpack_require__(792);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__directives_kml_layer__ = __webpack_require__(801);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__directives_data_layer__ = __webpack_require__(802);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_maps_api_loader_lazy_maps_api_loader__ = __webpack_require__(794);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_maps_api_loader_lazy_maps_api_loader__ = __webpack_require__(793);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__services_maps_api_loader_maps_api_loader__ = __webpack_require__(778);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__utils_browser_globals__ = __webpack_require__(807);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__agm_core_directives_fit_bounds__ = __webpack_require__(806);

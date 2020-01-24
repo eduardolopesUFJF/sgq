@@ -12,7 +12,8 @@ export class AppearanceAnimationLayout5 implements OnChanges {
     @Input() events: any;
     @Input() config: any;
     dataBackup: any[] = [];
-    
+    searchbarDefault = "";
+
     @ViewChild(Content)
     content: Content;
     animateItems = [];
@@ -73,6 +74,9 @@ export class AppearanceAnimationLayout5 implements OnChanges {
                 return item.descricao.toLowerCase().indexOf(valor.toLowerCase()) > -1;
             });
         }
+        if (this.config.filtrarSituacao) {
+            this.data = [...this.data.filter(x => x.status == this.situacao)];
+        }
     }
 
     verificaNovoItem(item) {
@@ -82,5 +86,10 @@ export class AppearanceAnimationLayout5 implements OnChanges {
     filtrarSituacao(valor) {
         this.animacaoAtiva = false;
         this.data = this.dataBackup.filter(item => item.status == valor);
+        if (this.searchbarDefault) {
+            this.data = this.data.filter((item) => {
+                return item.descricao.toLowerCase().indexOf(this.searchbarDefault.toLowerCase()) > -1;
+            });
+        }
     }
 }

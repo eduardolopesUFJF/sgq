@@ -353,21 +353,23 @@ var OcorrenciaPage = /** @class */ (function () {
     };
     OcorrenciaPage.prototype.editar = function (ocorrencia) {
         var _this = this;
-        var modal = this.modalCtrl.create("ManterOcorrenciaPage", { ocorrencia: ocorrencia });
-        this.ocorrenciaBackup = new __WEBPACK_IMPORTED_MODULE_5__models_ocorrencia__["a" /* Ocorrencia */](ocorrencia);
-        modal.present();
-        modal.onWillDismiss(function (data) {
-            if (data) {
-                _this.editarOcorrencias(data);
-            }
-            else {
-                var ocorrenciaArray = _this.inspecao.ocorrencias.find(function (x) { return _this.ocorrenciaBackup.idGuidOcorrencia ? (x.idGuidOcorrencia == _this.ocorrenciaBackup.idGuidOcorrencia) : (x.id == _this.ocorrenciaBackup.id); });
-                ocorrenciaArray.dataDescricao = _this.ocorrenciaBackup.dataDescricao;
-                ocorrenciaArray.descricao = _this.ocorrenciaBackup.descricao;
-                ocorrenciaArray.dataTratativa = _this.ocorrenciaBackup.dataTratativa;
-                ocorrenciaArray.tratativa = _this.ocorrenciaBackup.tratativa;
-            }
-        });
+        if (this.servico.status != 1) {
+            var modal = this.modalCtrl.create("ManterOcorrenciaPage", { ocorrencia: ocorrencia });
+            this.ocorrenciaBackup = new __WEBPACK_IMPORTED_MODULE_5__models_ocorrencia__["a" /* Ocorrencia */](ocorrencia);
+            modal.present();
+            modal.onWillDismiss(function (data) {
+                if (data) {
+                    _this.editarOcorrencias(data);
+                }
+                else {
+                    var ocorrenciaArray = _this.inspecao.ocorrencias.find(function (x) { return _this.ocorrenciaBackup.idGuidOcorrencia ? (x.idGuidOcorrencia == _this.ocorrenciaBackup.idGuidOcorrencia) : (x.id == _this.ocorrenciaBackup.id); });
+                    ocorrenciaArray.dataDescricao = _this.ocorrenciaBackup.dataDescricao;
+                    ocorrenciaArray.descricao = _this.ocorrenciaBackup.descricao;
+                    ocorrenciaArray.dataTratativa = _this.ocorrenciaBackup.dataTratativa;
+                    ocorrenciaArray.tratativa = _this.ocorrenciaBackup.tratativa;
+                }
+            });
+        }
     };
     OcorrenciaPage.prototype.editarOcorrencias = function (ocorrencia) {
         var _this = this;
@@ -455,7 +457,7 @@ var OcorrenciaPage = /** @class */ (function () {
     };
     OcorrenciaPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-ocorrencia',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\ocorrencia\ocorrencia.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <button ion-button menuToggle>\n\n            <ion-icon class="icon-menu" name="menu"></ion-icon>\n\n        </button>\n\n        <div buy>\n\n            <ion-title>Ocorrências</ion-title>\n\n        </div>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n    <h2 text-center text-wrap class="broadcomb">{{broadcomb.toUpperCase()}}</h2>\n\n    <h2 padding text-center class="aviso" *ngIf="inspecao.ocorrencias.length < 1">Nenhum registro encontrado.</h2>\n\n    <ion-grid no-padding>\n\n        <ion-row>\n\n            <button ion-button default-button block text-capitalize box-shadow margin-bottom class="button-novo"\n\n                (click)="novaOcorrencia()">Nova ocorrência</button>\n\n        </ion-row>\n\n        <ion-row>\n\n            <ion-col col-12>\n\n                <ion-list no-margin>\n\n                    <ion-item default-item no-lines [ngClass]="{\'novo-item\': !item.id, \'item-removido\': item.delete}" *ngFor="let item of inspecao.ocorrencias; let i = index;">\n\n                        <ion-row class="espacamento">\n\n                            <ion-col col-10 (click)="editar(item)">\n\n                                <h2 item-title text-wrap>Data da descrição: {{item.dataDescricao ? (item.dataDescricao\n\n                                    | date:\n\n                                    \'dd/MM/yyyy\') : \'--\'}}</h2>\n\n                                <h2 item-title text-wrap>Descrição: {{item.descricao}}</h2>\n\n                                <h2 item-title text-wrap>Data da tratativa: {{item.dataTratativa ? (item.dataTratativa\n\n                                    | date:\n\n                                    \'dd/MM/yyyy\') : \'--\'}}</h2>\n\n                                <h2 item-title text-wrap>Tratativa: {{item.tratativa}}</h2>\n\n                            </ion-col>\n\n                            <ion-col col-2>\n\n                                <ion-icon name="more" icon-small item-right style="font-size: 32px !important; margin: 0px"\n\n                                    (click)="exibirOpcoes(item)"></ion-icon>\n\n                            </ion-col>\n\n                        </ion-row>\n\n                    </ion-item>\n\n                </ion-list>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-grid>\n\n</ion-content>'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\ocorrencia\ocorrencia.html"*/
+            selector: 'page-ocorrencia',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\ocorrencia\ocorrencia.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <button ion-button menuToggle>\n\n            <ion-icon class="icon-menu" name="menu"></ion-icon>\n\n        </button>\n\n        <div buy>\n\n            <ion-title>Ocorrências</ion-title>\n\n        </div>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n    <h2 text-center text-wrap class="broadcomb">{{broadcomb.toUpperCase()}}</h2>\n\n    <h2 padding text-center class="aviso" *ngIf="inspecao.ocorrencias.length < 1">Nenhum registro encontrado.</h2>\n\n    <ion-grid no-padding>\n\n        <ion-row>\n\n            <button ion-button default-button block text-capitalize box-shadow margin-bottom class="button-novo"\n\n                (click)="novaOcorrencia()" [disabled]="servico.status == 1">Nova ocorrência</button>\n\n        </ion-row>\n\n        <ion-row>\n\n            <ion-col col-12>\n\n                <ion-list no-margin>\n\n                    <ion-item default-item no-lines [ngClass]="{\'novo-item\': !item.id, \'item-removido\': item.delete}" *ngFor="let item of inspecao.ocorrencias; let i = index;">\n\n                        <ion-row class="espacamento">\n\n                            <ion-col col-10 (click)="editar(item)">\n\n                                <h2 item-title text-wrap>Data da descrição: {{item.dataDescricao ? (item.dataDescricao\n\n                                    | date:\n\n                                    \'dd/MM/yyyy\') : \'--\'}}</h2>\n\n                                <h2 item-title text-wrap>Descrição: {{item.descricao}}</h2>\n\n                                <h2 item-title text-wrap>Data da tratativa: {{item.dataTratativa ? (item.dataTratativa\n\n                                    | date:\n\n                                    \'dd/MM/yyyy\') : \'--\'}}</h2>\n\n                                <h2 item-title text-wrap>Tratativa: {{item.tratativa}}</h2>\n\n                            </ion-col>\n\n                            <ion-col col-2 *ngIf="servico.status != 1">\n\n                                <ion-icon name="more" icon-small item-right style="font-size: 32px !important; margin: 0px"\n\n                                    (click)="exibirOpcoes(item)"></ion-icon>\n\n                            </ion-col>\n\n                        </ion-row>\n\n                    </ion-item>\n\n                </ion-list>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-grid>\n\n</ion-content>'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\ocorrencia\ocorrencia.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */],

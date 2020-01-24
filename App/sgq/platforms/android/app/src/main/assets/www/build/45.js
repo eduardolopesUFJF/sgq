@@ -1,1 +1,92 @@
-webpackJsonp([45],{703:function(n,l,e){"use strict";function a(n){return o["ɵvid"](0,[(n()(),o["ɵeld"](0,0,null,null,39,"ion-list",[["no-lines",""]],null,null,null,null,null)),o["ɵdid"](1,16384,null,0,b.a,[_.a,o.ElementRef,o.Renderer,y.a,C.l,R.a],null,null),(n()(),o["ɵted"](-1,null,["\n    "])),(n()(),o["ɵted"](-1,null,["\n    "])),(n()(),o["ɵeld"](4,0,null,null,10,"ion-item-divider",[["class","item item-divider"],["no-lines",""],["no-margin",""],["transparent",""]],null,null,null,I.b,I.a)),o["ɵdid"](5,1097728,null,3,h.a,[k.a,_.a,o.ElementRef,o.Renderer,[2,x.a]],null,null),o["ɵqud"](335544320,1,{contentLabel:0}),o["ɵqud"](603979776,2,{_buttons:1}),o["ɵqud"](603979776,3,{_icons:1}),o["ɵdid"](9,16384,null,0,D.a,[_.a,o.ElementRef,o.Renderer],null,null),(n()(),o["ɵted"](-1,2,["\n        "])),(n()(),o["ɵeld"](11,0,null,2,2,"p",[["color","primaryBase"],["ion-text",""]],null,null,null,null,null)),o["ɵdid"](12,16384,null,0,w.a,[_.a,o.ElementRef,o.Renderer],{color:[0,"color"]},null),(n()(),o["ɵted"](13,null,["",""])),(n()(),o["ɵted"](-1,2,["\n    "])),(n()(),o["ɵted"](-1,null,["\n    "])),(n()(),o["ɵeld"](16,0,null,null,22,"ion-item",[["class","item item-block"],["transparent",""]],null,null,null,I.b,I.a)),o["ɵdid"](17,1097728,null,3,h.a,[k.a,_.a,o.ElementRef,o.Renderer,[2,x.a]],null,null),o["ɵqud"](335544320,4,{contentLabel:0}),o["ɵqud"](603979776,5,{_buttons:1}),o["ɵqud"](603979776,6,{_icons:1}),o["ɵdid"](21,16384,null,0,E.a,[],null,null),(n()(),o["ɵted"](-1,2,["\n        "])),(n()(),o["ɵeld"](23,0,null,3,14,"ion-range",[["dualKnobs","true"],["pin","true"]],[[2,"range-disabled",null],[2,"range-pressed",null],[2,"range-has-pin",null],[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"],[null,"ionChange"]],function(n,l,e){var a=!0,u=n.component;if("ngModelChange"===l){a=!1!==(u.data.value=e)&&a}if("ionChange"===l){a=!1!==u.onEvent("onChange",u.data.value,e)&&a}return a},L.b,L.a)),o["ɵdid"](24,1228800,null,0,B.a,[k.a,M.a,[2,h.a],_.a,y.a,o.ElementRef,o.Renderer,R.a,o.ChangeDetectorRef],{pin:[0,"pin"],dualKnobs:[1,"dualKnobs"]},{ionChange:"ionChange"}),o["ɵprd"](1024,null,N.g,function(n){return[n]},[B.a]),o["ɵdid"](26,671744,null,0,N.l,[[8,null],[8,null],[8,null],[2,N.g]],{model:[0,"model"]},{update:"ngModelChange"}),o["ɵprd"](2048,null,N.h,null,[N.l]),o["ɵdid"](28,16384,null,0,N.i,[N.h],null,null),(n()(),o["ɵted"](-1,null,["\n            "])),(n()(),o["ɵeld"](30,0,null,0,2,"ion-label",[["color","primaryBase"],["range-left",""],["span-large",""]],null,null,null,null,null)),o["ɵdid"](31,16384,[[4,4]],0,q.a,[_.a,o.ElementRef,o.Renderer,[8,null],[8,null],[8,null],[8,null]],{color:[0,"color"]},null),(n()(),o["ɵted"](32,null,["",""])),(n()(),o["ɵted"](-1,null,["\n            "])),(n()(),o["ɵeld"](34,0,null,1,2,"ion-label",[["color","primaryBase"],["range-right",""],["span-large",""]],null,null,null,null,null)),o["ɵdid"](35,16384,[[4,4]],0,q.a,[_.a,o.ElementRef,o.Renderer,[8,null],[8,null],[8,null],[8,null]],{color:[0,"color"]},null),(n()(),o["ɵted"](36,null,["",""])),(n()(),o["ɵted"](-1,null,["\n        "])),(n()(),o["ɵted"](-1,2,["\n    "])),(n()(),o["ɵted"](-1,null,["\n"]))],function(n,l){var e=l.component;n(l,12,0,"primaryBase");n(l,24,0,"true","true");n(l,26,0,e.data.value);n(l,31,0,"primaryBase");n(l,35,0,"primaryBase")},function(n,l){var e=l.component;n(l,13,0,e.data.title);n(l,23,0,o["ɵnov"](l,24)._disabled,o["ɵnov"](l,24)._pressed,o["ɵnov"](l,24)._pin,o["ɵnov"](l,28).ngClassUntouched,o["ɵnov"](l,28).ngClassTouched,o["ɵnov"](l,28).ngClassPristine,o["ɵnov"](l,28).ngClassDirty,o["ɵnov"](l,28).ngClassValid,o["ɵnov"](l,28).ngClassInvalid,o["ɵnov"](l,28).ngClassPending);n(l,32,0,e.data.textLeft);n(l,36,0,e.data.textRight)})}function u(n){return o["ɵvid"](0,[(n()(),o["ɵted"](-1,null,["\n"])),(n()(),o["ɵand"](16777216,null,null,1,null,a)),o["ɵdid"](2,16384,null,0,F.NgIf,[o.ViewContainerRef,o.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),o["ɵted"](-1,null,["\n"]))],function(n,l){n(l,2,0,null!=l.component.data)},null)}Object.defineProperty(l,"__esModule",{value:!0});var o=e(1),i=(e(0),e(55),function(){function n(){var n=this;this.onEvent=function(l,e){n.events[l]&&n.events[l](e)}}return n.prototype.ngOnChanges=function(n){this.data=n.data.currentValue},n}()),d=function(){return function(){}}(),t=e(191),r=e(192),s=e(193),c=e(194),v=e(195),p=e(196),m=e(197),g=e(198),f=e(199),b=e(56),_=e(3),y=e(6),C=e(10),R=e(13),I=e(130),h=e(24),k=e(21),x=e(50),D=e(137),w=e(86),E=e(60),L=e(788),B=e(209),M=e(40),N=e(20),q=e(63),F=e(15),O=o["ɵcrt"]({encapsulation:2,styles:[],data:{}}),V=o["ɵccf"]("range-button-layout-4",i,function(n){return o["ɵvid"](0,[(n()(),o["ɵeld"](0,0,null,null,1,"range-button-layout-4",[],null,null,null,u,O)),o["ɵdid"](1,573440,null,0,i,[],null,null)],null,null)},{data:"data",events:"events"},{},[]),T=e(129),A=e(49);e.d(l,"RangeLayout4ModuleNgFactory",function(){return K});var K=o["ɵcmf"](d,[],function(n){return o["ɵmod"]([o["ɵmpd"](512,o.ComponentFactoryResolver,o["ɵCodegenComponentFactoryResolver"],[[8,[t.a,r.a,s.a,c.a,v.a,p.a,m.a,g.a,f.a,V]],[3,o.ComponentFactoryResolver],o.NgModuleRef]),o["ɵmpd"](4608,F.NgLocalization,F.NgLocaleLocalization,[o.LOCALE_ID,[2,F["ɵa"]]]),o["ɵmpd"](4608,N.r,N.r,[]),o["ɵmpd"](4608,N.d,N.d,[]),o["ɵmpd"](512,F.CommonModule,F.CommonModule,[]),o["ɵmpd"](512,N.p,N.p,[]),o["ɵmpd"](512,N.e,N.e,[]),o["ɵmpd"](512,N.n,N.n,[]),o["ɵmpd"](512,T.a,T.a,[]),o["ɵmpd"](512,T.b,T.b,[]),o["ɵmpd"](512,d,d,[]),o["ɵmpd"](256,A.a,i,[])])})},788:function(n,l,e){"use strict";function a(n){return t["ɵvid"](0,[(n()(),t["ɵeld"](0,0,null,null,1,"div",[["class","range-pin"],["role","presentation"]],null,null,null,null,null)),(n()(),t["ɵted"](1,null,["",""]))],null,function(n,l){n(l,1,0,l.component.val)})}function u(n){return t["ɵvid"](0,[(n()(),t["ɵand"](16777216,null,null,1,null,a)),t["ɵdid"](1,16384,null,0,r.NgIf,[t.ViewContainerRef,t.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),t["ɵeld"](2,0,null,null,0,"div",[["class","range-knob"],["role","presentation"]],null,null,null,null,null))],function(n,l){n(l,1,0,l.component.pin)},null)}function o(n){return t["ɵvid"](0,[(n()(),t["ɵeld"](0,0,null,null,0,"div",[["class","range-tick"],["role","presentation"]],[[4,"left",null],[2,"range-tick-active",null]],null,null,null,null))],null,function(n,l){n(l,0,0,l.context.$implicit.left,l.context.$implicit.active)})}function i(n){return t["ɵvid"](0,[(n()(),t["ɵeld"](0,0,null,null,1,"div",[["class","range-knob-handle"],["role","slider"]],[[2,"range-knob-pressed",null],[2,"range-knob-min",null],[2,"range-knob-max",null],[4,"left",null],[1,"aria-valuenow",0],[1,"aria-valuemin",0],[1,"aria-valuemax",0],[1,"aria-disabled",0],[1,"aria-labelledby",0],[8,"tabIndex",0]],[[null,"ionIncrease"],[null,"ionDecrease"],[null,"keydown"]],function(n,l,e){var a=!0,u=n.component;if("keydown"===l){a=!1!==t["ɵnov"](n,1)._keyup(e)&&a}if("ionIncrease"===l){a=!1!==u._keyChg(!0,!0)&&a}if("ionDecrease"===l){a=!1!==u._keyChg(!1,!0)&&a}return a},u,c)),t["ɵdid"](1,49152,null,0,s.a,[],{ratio:[0,"ratio"],pressed:[1,"pressed"],pin:[2,"pin"],min:[3,"min"],max:[4,"max"],val:[5,"val"],disabled:[6,"disabled"],labelId:[7,"labelId"]},{ionIncrease:"ionIncrease",ionDecrease:"ionDecrease"})],function(n,l){var e=l.component;n(l,1,0,e._ratioB,e._pressedB,e._pin,e._min,e._max,e._valB,e._disabled,e._labelId)},function(n,l){n(l,0,0,t["ɵnov"](l,1).pressed,t["ɵnov"](l,1).val===t["ɵnov"](l,1).min||void 0===t["ɵnov"](l,1).val,t["ɵnov"](l,1).val===t["ɵnov"](l,1).max,t["ɵnov"](l,1)._x,t["ɵnov"](l,1).val,t["ɵnov"](l,1).min,t["ɵnov"](l,1).max,t["ɵnov"](l,1).disabled,t["ɵnov"](l,1).labelId,t["ɵnov"](l,1).disabled?-1:0)})}function d(n){return t["ɵvid"](0,[t["ɵqud"](402653184,1,{_slider:0}),t["ɵncd"](null,0),(n()(),t["ɵeld"](2,0,[[1,0],["slider",1]],null,8,"div",[["class","range-slider"]],null,null,null,null,null)),(n()(),t["ɵand"](16777216,null,null,1,null,o)),t["ɵdid"](4,802816,null,0,r.NgForOf,[t.ViewContainerRef,t.TemplateRef,t.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(n()(),t["ɵeld"](5,0,null,null,0,"div",[["class","range-bar"],["role","presentation"]],null,null,null,null,null)),(n()(),t["ɵeld"](6,0,[["bar",1]],null,0,"div",[["class","range-bar range-bar-active"],["role","presentation"]],[[4,"left",null],[4,"right",null]],null,null,null,null)),(n()(),t["ɵeld"](7,0,null,null,1,"div",[["class","range-knob-handle"],["role","slider"]],[[2,"range-knob-pressed",null],[2,"range-knob-min",null],[2,"range-knob-max",null],[4,"left",null],[1,"aria-valuenow",0],[1,"aria-valuemin",0],[1,"aria-valuemax",0],[1,"aria-disabled",0],[1,"aria-labelledby",0],[8,"tabIndex",0]],[[null,"ionIncrease"],[null,"ionDecrease"],[null,"keydown"]],function(n,l,e){var a=!0,u=n.component;if("keydown"===l){a=!1!==t["ɵnov"](n,8)._keyup(e)&&a}if("ionIncrease"===l){a=!1!==u._keyChg(!0,!1)&&a}if("ionDecrease"===l){a=!1!==u._keyChg(!1,!1)&&a}return a},u,c)),t["ɵdid"](8,49152,null,0,s.a,[],{ratio:[0,"ratio"],pressed:[1,"pressed"],pin:[2,"pin"],min:[3,"min"],max:[4,"max"],val:[5,"val"],disabled:[6,"disabled"],labelId:[7,"labelId"]},{ionIncrease:"ionIncrease",ionDecrease:"ionDecrease"}),(n()(),t["ɵand"](16777216,null,null,1,null,i)),t["ɵdid"](10,16384,null,0,r.NgIf,[t.ViewContainerRef,t.TemplateRef],{ngIf:[0,"ngIf"]},null),t["ɵncd"](null,1)],function(n,l){var e=l.component;n(l,4,0,e._ticks);n(l,8,0,e._ratioA,e._pressedA,e._pin,e._min,e._max,e._valA,e._disabled,e._labelId);n(l,10,0,e._dual)},function(n,l){var e=l.component;n(l,6,0,e._barL,e._barR);n(l,7,0,t["ɵnov"](l,8).pressed,t["ɵnov"](l,8).val===t["ɵnov"](l,8).min||void 0===t["ɵnov"](l,8).val,t["ɵnov"](l,8).val===t["ɵnov"](l,8).max,t["ɵnov"](l,8)._x,t["ɵnov"](l,8).val,t["ɵnov"](l,8).min,t["ɵnov"](l,8).max,t["ɵnov"](l,8).disabled,t["ɵnov"](l,8).labelId,t["ɵnov"](l,8).disabled?-1:0)})}var t=e(1),r=e(15),s=e(210),c=t["ɵcrt"]({encapsulation:2,styles:[],data:{}});e(20),e(209),e(21),e(40),e(24),e(3),e(6),e(13);e.d(l,"a",function(){return v}),l.b=d;var v=t["ɵcrt"]({encapsulation:2,styles:[],data:{}})}});
+webpackJsonp([45],{
+
+/***/ 744:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SelectLayout4Module", function() { return SelectLayout4Module; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__select_layout_4__ = __webpack_require__(875);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var SelectLayout4Module = /** @class */ (function () {
+    function SelectLayout4Module() {
+    }
+    SelectLayout4Module = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__select_layout_4__["a" /* SelectLayout4 */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__select_layout_4__["a" /* SelectLayout4 */]),
+            ],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_2__select_layout_4__["a" /* SelectLayout4 */]
+            ],
+            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"]]
+        })
+    ], SelectLayout4Module);
+    return SelectLayout4Module;
+}());
+
+//# sourceMappingURL=select-layout-4.module.js.map
+
+/***/ }),
+
+/***/ 875:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SelectLayout4; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var SelectLayout4 = /** @class */ (function () {
+    function SelectLayout4() {
+        var _this = this;
+        this.onEvent = function (event, item) {
+            if (_this.events[event]) {
+                _this.events[event](item);
+            }
+        };
+    }
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('data'),
+        __metadata("design:type", Object)
+    ], SelectLayout4.prototype, "data", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('events'),
+        __metadata("design:type", Object)
+    ], SelectLayout4.prototype, "events", void 0);
+    SelectLayout4 = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'select-layout-4',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\select\layout-4\select.html"*/'<ion-item color="secondary" no-lines *ngIf="data != null">\n\n  <ion-label>{{data.title}}</ion-label>\n\n  <ion-select interface="popover" [(ngModel)]="data.selectedItemMonth" multiple="false">\n\n    <ion-option *ngFor="let item of data.itemsMonth; let i= index" [value]="item.id">{{item.title}}</ion-option>\n\n  </ion-select>\n\n\n\n  <ion-select interface="popover" [(ngModel)]="data.selectedItemYear" [multiple]="false">\n\n    <ion-option *ngFor="let item of data.itemsYears; let i= index" [value]="item.id">{{item.title}}</ion-option>\n\n  </ion-select>\n\n</ion-item>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\select\layout-4\select.html"*/
+        }),
+        __metadata("design:paramtypes", [])
+    ], SelectLayout4);
+    return SelectLayout4;
+}());
+
+//# sourceMappingURL=select-layout-4.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=45.js.map
