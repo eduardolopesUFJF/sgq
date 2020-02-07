@@ -1,4 +1,0 @@
-#Sun Jan 19 19:08:47 BRST 2020
-base.0=C\:\\Arquivos\\Freelancer\\SGQ\\App\\sgq\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
-renamed.0=classes.dex
-file.0=C\:\\Arquivos\\Freelancer\\SGQ\\App\\sgq\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex

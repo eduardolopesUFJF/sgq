@@ -18,7 +18,7 @@ export class AppearanceAnimationLayout5 implements OnChanges {
     content: Content;
     animateItems = [];
     animateClass: any;
-    animacaoAtiva: boolean = true;
+    animacaoAtiva: boolean = false;
     descricao: string = "";
     ultimoDownload: any;
     ultimoUpload: any;
@@ -39,7 +39,7 @@ export class AppearanceAnimationLayout5 implements OnChanges {
             );
         });
     }
-
+    
     onEvent(event: string, item: any, e: any) {
         if (e) {
             e.stopPropagation();
@@ -48,7 +48,7 @@ export class AppearanceAnimationLayout5 implements OnChanges {
             this.events[event](item);
         }
     }
-
+    
     ngOnChanges(changes: { [propKey: string]: any }) {
         let that = this;
         that.data = changes['data'].currentValue;
@@ -75,7 +75,7 @@ export class AppearanceAnimationLayout5 implements OnChanges {
             });
         }
         if (this.config.filtrarSituacao) {
-            this.data = [...this.data.filter(x => x.status == this.situacao)];
+            this.data = [...this.data.filter(x => x.situacao == (this.situacao == 0 ? "Em aberto" : "Finalizado"))];
         }
     }
 
@@ -85,7 +85,7 @@ export class AppearanceAnimationLayout5 implements OnChanges {
 
     filtrarSituacao(valor) {
         this.animacaoAtiva = false;
-        this.data = this.dataBackup.filter(item => item.status == valor);
+        this.data = this.dataBackup.filter(item => item.situacao == (valor == 0 ? "Em aberto" : "Finalizado"));
         if (this.searchbarDefault) {
             this.data = this.data.filter((item) => {
                 return item.descricao.toLowerCase().indexOf(this.searchbarDefault.toLowerCase()) > -1;

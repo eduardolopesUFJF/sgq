@@ -1,0 +1,10 @@
+SENHA: Gdol@1234
+
+pergunta 1: qual foi o primeiro filme que você viu no cinema?
+Titanic
+
+pergunta 2: Qual é o seu livro infantil favorito?
+Sitio
+
+pergunta 3: Qual é o nome da primeira praia que você visitou?
+Buzios

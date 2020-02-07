@@ -178,7 +178,7 @@ export class LoginPage {
             },
             error => {
                 this.loading.hide();
-                this.toastService.presentToastError("Falha na comunicação com o servidor."+JSON.stringify(error));
+                this.toastService.presentToastError("Falha na comunicação com o servidor.");
             }
         );
     }

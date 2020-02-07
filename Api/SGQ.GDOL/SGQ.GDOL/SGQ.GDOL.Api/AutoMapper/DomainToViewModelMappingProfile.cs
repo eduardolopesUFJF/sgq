@@ -28,7 +28,7 @@ namespace SGQ.GDOL.Api.AutoMapper
             CreateMap<Obra, ObraVM>()
                 .ForMember(x => x.Descricao, opt => opt.MapFrom(x => x.CentroCusto.Codigo + " - " + x.CentroCusto.Descricao))
                 .ForMember(x => x.Situacao, opt => opt.MapFrom(x => x.Status.HasValue && x.Status.Value == 1 ? "Finalizado" : "Em aberto"))
-                .ForMember(x => x.Areas, opt => opt.MapFrom(x => x.Areas.Where(y => y.Delete.HasValue && !y.Delete.Value)));
+                .ForMember(x => x.Areas, opt => opt.MapFrom(x => x.Areas.Where(y => y.Delete.HasValue && !y.Delete.Value).OrderBy(y => y.Descricao)));
             
             CreateMap<Area, AreaVM>()
                 .ForMember(x => x.Situacao, opt => opt.MapFrom(x => x.Status.HasValue && x.Status.Value == 1 ? "Finalizado" : "Em aberto"))
