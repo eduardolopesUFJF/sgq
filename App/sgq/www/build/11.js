@@ -1,1 +1,241 @@
-webpackJsonp([11],{711:function(l,n,e){"use strict";Object.defineProperty(n,"__esModule",{value:!0}),e.d(n,"SelectLayout3ModuleNgFactory",function(){return y});var u=e(1),t=e(803),a=e(191),o=e(192),i=e(193),d=e(194),c=e(195),r=e(196),s=e(197),f=e(198),p=e(199),m=e(804),v=e(15),g=e(20),b=e(129),C=e(49),R=e(791),y=u["ɵcmf"](t.a,[],function(l){return u["ɵmod"]([u["ɵmpd"](512,u.ComponentFactoryResolver,u["ɵCodegenComponentFactoryResolver"],[[8,[a.a,o.a,i.a,d.a,c.a,r.a,s.a,f.a,p.a,m.a]],[3,u.ComponentFactoryResolver],u.NgModuleRef]),u["ɵmpd"](4608,v.NgLocalization,v.NgLocaleLocalization,[u.LOCALE_ID,[2,v["ɵa"]]]),u["ɵmpd"](4608,g.r,g.r,[]),u["ɵmpd"](4608,g.d,g.d,[]),u["ɵmpd"](512,v.CommonModule,v.CommonModule,[]),u["ɵmpd"](512,g.p,g.p,[]),u["ɵmpd"](512,g.e,g.e,[]),u["ɵmpd"](512,g.n,g.n,[]),u["ɵmpd"](512,b.a,b.a,[]),u["ɵmpd"](512,b.b,b.b,[]),u["ɵmpd"](512,t.a,t.a,[]),u["ɵmpd"](256,C.a,R.a,[])])})},753:function(l,n,e){"use strict";function u(l){return o["ɵvid"](0,[(l()(),o["ɵeld"](0,0,null,null,1,"div",[["class","select-placeholder select-text"]],null,null,null,null,null)),(l()(),o["ɵted"](1,null,["",""]))],null,function(l,n){l(n,1,0,n.component.placeholder)})}function t(l){return o["ɵvid"](0,[(l()(),o["ɵeld"](0,0,null,null,1,"div",[["class","select-text"]],null,null,null,null,null)),(l()(),o["ɵted"](1,null,["",""]))],null,function(l,n){var e=n.component;l(n,1,0,e.selectedText||e._text)})}function a(l){return o["ɵvid"](0,[(l()(),o["ɵand"](16777216,null,null,1,null,u)),o["ɵdid"](1,16384,null,0,i.NgIf,[o.ViewContainerRef,o.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),o["ɵand"](16777216,null,null,1,null,t)),o["ɵdid"](3,16384,null,0,i.NgIf,[o.ViewContainerRef,o.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),o["ɵeld"](4,0,null,null,1,"div",[["class","select-icon"]],null,null,null,null,null)),(l()(),o["ɵeld"](5,0,null,null,0,"div",[["class","select-icon-inner"]],null,null,null,null,null)),(l()(),o["ɵeld"](6,0,null,null,1,"button",[["aria-haspopup","true"],["class","item-cover"],["ion-button","item-cover"],["type","button"]],[[8,"id",0],[1,"aria-labelledby",0],[1,"aria-disabled",0]],null,null,d.b,d.a)),o["ɵdid"](7,1097728,null,0,c.a,[[8,"item-cover"],r.a,o.ElementRef,o.Renderer],null,null)],function(l,n){var e=n.component;l(n,1,0,!e._text);l(n,3,0,e._text)},function(l,n){var e=n.component;l(n,6,0,e.id,e._labelId,e._disabled)})}e.d(n,"a",function(){return s}),n.b=a;var o=e(1),i=e(15),d=e(38),c=e(27),r=e(3),s=(e(21),e(25),o["ɵcrt"]({encapsulation:2,styles:[],data:{}}))},791:function(l,n,e){"use strict";e.d(n,"a",function(){return u});e(0);var u=function(){return function(){var l=this;this.onEvent=function(n,e){l.events[n]&&l.events[n](e)}}}()},803:function(l,n,e){"use strict";e.d(n,"a",function(){return u});e(0),e(55);var u=function(){return function(){}}()},804:function(l,n,e){"use strict";function u(l){return o["ɵvid"](0,[(l()(),o["ɵeld"](0,0,null,null,2,"ion-option",[],null,null,null,null,null)),o["ɵdid"](1,16384,[[4,4]],0,i.a,[o.ElementRef],{value:[0,"value"]},null),(l()(),o["ɵted"](2,null,["",""]))],function(l,n){l(n,1,0,n.context.$implicit.id)},function(l,n){l(n,2,0,n.context.$implicit.title)})}function t(l){return o["ɵvid"](0,[(l()(),o["ɵeld"](0,0,null,null,22,"ion-item",[["class","item item-block"],["color","secondary"],["no-lines",""]],null,null,null,d.b,d.a)),o["ɵdid"](1,1097728,null,3,c.a,[r.a,s.a,o.ElementRef,o.Renderer,[2,f.a]],{color:[0,"color"]},null),o["ɵqud"](335544320,1,{contentLabel:0}),o["ɵqud"](603979776,2,{_buttons:1}),o["ɵqud"](603979776,3,{_icons:1}),o["ɵdid"](5,16384,null,0,p.a,[],null,null),(l()(),o["ɵted"](-1,2,["\n    "])),(l()(),o["ɵeld"](7,0,null,1,2,"ion-label",[],null,null,null,null,null)),o["ɵdid"](8,16384,[[1,4]],0,m.a,[s.a,o.ElementRef,o.Renderer,[8,null],[8,null],[8,null],[8,null]],null,null),(l()(),o["ɵted"](9,null,["",""])),(l()(),o["ɵted"](-1,2,["\n    "])),(l()(),o["ɵeld"](11,0,null,3,10,"ion-select",[["interface","action-sheet"],["multiple","false"]],[[2,"select-disabled",null],[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"],[null,"click"],[null,"keyup.space"]],function(l,n,e){var u=!0,t=l.component;if("click"===n){u=!1!==o["ɵnov"](l,12)._click(e)&&u}if("keyup.space"===n){u=!1!==o["ɵnov"](l,12)._keyup()&&u}if("ngModelChange"===n){u=!1!==(t.data.selectedItem=e)&&u}return u},v.b,v.a)),o["ɵdid"](12,1228800,null,1,g.a,[b.a,r.a,s.a,o.ElementRef,o.Renderer,[2,c.a],C.a],{interface:[0,"interface"],multiple:[1,"multiple"]},null),o["ɵqud"](603979776,4,{options:1}),o["ɵprd"](1024,null,R.g,function(l){return[l]},[g.a]),o["ɵdid"](15,671744,null,0,R.l,[[8,null],[8,null],[8,null],[2,R.g]],{model:[0,"model"]},{update:"ngModelChange"}),o["ɵprd"](2048,null,R.h,null,[R.l]),o["ɵdid"](17,16384,null,0,R.i,[R.h],null,null),(l()(),o["ɵted"](-1,null,["\n        "])),(l()(),o["ɵand"](16777216,null,null,1,null,u)),o["ɵdid"](20,802816,null,0,y.NgForOf,[o.ViewContainerRef,o.TemplateRef,o.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),o["ɵted"](-1,null,["\n    "])),(l()(),o["ɵted"](-1,2,["\n"]))],function(l,n){var e=n.component;l(n,1,0,"secondary");l(n,12,0,"action-sheet","false");l(n,15,0,e.data.selectedItem);l(n,20,0,e.data.items)},function(l,n){l(n,9,0,n.component.data.title);l(n,11,0,o["ɵnov"](n,12)._disabled,o["ɵnov"](n,17).ngClassUntouched,o["ɵnov"](n,17).ngClassTouched,o["ɵnov"](n,17).ngClassPristine,o["ɵnov"](n,17).ngClassDirty,o["ɵnov"](n,17).ngClassValid,o["ɵnov"](n,17).ngClassInvalid,o["ɵnov"](n,17).ngClassPending)})}function a(l){return o["ɵvid"](0,[(l()(),o["ɵand"](16777216,null,null,1,null,t)),o["ɵdid"](1,16384,null,0,y.NgIf,[o.ViewContainerRef,o.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),o["ɵted"](-1,null,["\n"]))],function(l,n){l(n,1,0,null!=n.component.data)},null)}e.d(n,"a",function(){return _});var o=e(1),i=e(136),d=e(130),c=e(24),r=e(21),s=e(3),f=e(50),p=e(60),m=e(63),v=e(753),g=e(203),b=e(12),C=e(25),R=e(20),y=e(15),h=e(791),I=o["ɵcrt"]({encapsulation:2,styles:[],data:{}}),_=o["ɵccf"]("select-layout-3",h.a,function(l){return o["ɵvid"](0,[(l()(),o["ɵeld"](0,0,null,null,1,"select-layout-3",[],null,null,null,a,I)),o["ɵdid"](1,49152,null,0,h.a,[],null,null)],null,null)},{data:"data",events:"events"},{},[])}});
+webpackJsonp([11],{
+
+/***/ 765:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChecklistCadastroPageModule", function() { return ChecklistCadastroPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cadastro_item__ = __webpack_require__(869);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var ChecklistCadastroPageModule = /** @class */ (function () {
+    function ChecklistCadastroPageModule() {
+    }
+    ChecklistCadastroPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__cadastro_item__["a" /* CadastroItemPage */]
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__cadastro_item__["a" /* CadastroItemPage */])
+            ],
+            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"]]
+        })
+    ], ChecklistCadastroPageModule);
+    return ChecklistCadastroPageModule;
+}());
+
+//# sourceMappingURL=cadastro-item.module.js.map
+
+/***/ }),
+
+/***/ 777:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var UUID = (function () {
+    function UUID() {
+        // no-op
+    }
+    UUID.UUID = function () {
+        if (typeof (window) !== "undefined" && typeof (window.crypto) !== "undefined" && typeof (window.crypto.getRandomValues) !== "undefined") {
+            // If we have a cryptographically secure PRNG, use that
+            // http://stackoverflow.com/questions/6906916/collisions-when-generating-uuids-in-javascript
+            var buf = new Uint16Array(8);
+            window.crypto.getRandomValues(buf);
+            return (this.pad4(buf[0]) + this.pad4(buf[1]) + "-" + this.pad4(buf[2]) + "-" + this.pad4(buf[3]) + "-" + this.pad4(buf[4]) + "-" + this.pad4(buf[5]) + this.pad4(buf[6]) + this.pad4(buf[7]));
+        }
+        else {
+            // Otherwise, just use Math.random
+            // https://stackoverflow.com/questions/105034/create-guid-uuid-in-javascript
+            // https://stackoverflow.com/questions/11605068/why-does-jshint-argue-against-bitwise-operators-how-should-i-express-this-code
+            return this.random4() + this.random4() + "-" + this.random4() + "-" + this.random4() + "-" +
+                this.random4() + "-" + this.random4() + this.random4() + this.random4();
+        }
+    };
+    UUID.pad4 = function (num) {
+        var ret = num.toString(16);
+        while (ret.length < 4) {
+            ret = "0" + ret;
+        }
+        return ret;
+    };
+    UUID.random4 = function () {
+        return Math.floor((1 + Math.random()) * 0x10000)
+            .toString(16)
+            .substring(1);
+    };
+    return UUID;
+}());
+exports.UUID = UUID;
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ 782:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ItemChecklist; });
+var ItemChecklist = /** @class */ (function () {
+    function ItemChecklist(values) {
+        if (values === void 0) { values = {}; }
+        this.id = 0;
+        this.campo1 = "";
+        this.campo2 = "";
+        this.campo3 = "";
+        this.campo4 = "";
+        this.itensChecklistServico = [];
+        Object.assign(this, values);
+    }
+    return ItemChecklist;
+}());
+
+//# sourceMappingURL=item-checklist.js.map
+
+/***/ }),
+
+/***/ 869:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CadastroItemPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_toast_service__ = __webpack_require__(350);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_item_checklist__ = __webpack_require__(782);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_uuid__ = __webpack_require__(777);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_uuid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_angular2_uuid__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__models_item_checklist_servico__ = __webpack_require__(870);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__utils_loading_service__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utils_message_service__ = __webpack_require__(155);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+
+var CadastroItemPage = /** @class */ (function () {
+    function CadastroItemPage(storage, navCtrl, navParams, toastService, viewCtrl, loadingService, messageService) {
+        this.storage = storage;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.toastService = toastService;
+        this.viewCtrl = viewCtrl;
+        this.loadingService = loadingService;
+        this.messageService = messageService;
+        this.checklist = new __WEBPACK_IMPORTED_MODULE_4__models_item_checklist__["a" /* ItemChecklist */]();
+        this.itemChecklist = new __WEBPACK_IMPORTED_MODULE_6__models_item_checklist_servico__["a" /* ItemChecklistServico */]();
+        this.itens = [];
+        this.isEdicao = false;
+        this.checklist = this.navParams.data.checklist;
+        this.itens = this.checklist.itensChecklistServico.slice();
+    }
+    CadastroItemPage.prototype.voltar = function () {
+        this.navCtrl.setRoot("HomePage");
+    };
+    CadastroItemPage.prototype.limpar = function () {
+        this.itemChecklist = new __WEBPACK_IMPORTED_MODULE_6__models_item_checklist_servico__["a" /* ItemChecklistServico */]();
+    };
+    CadastroItemPage.prototype.editarItem = function (item) {
+        this.isEdicao = true;
+        this.itemChecklist = new __WEBPACK_IMPORTED_MODULE_6__models_item_checklist_servico__["a" /* ItemChecklistServico */](item);
+    };
+    CadastroItemPage.prototype.adicionar = function (formValido) {
+        var _this = this;
+        if (formValido) {
+            if (this.isEdicao) {
+                var indice = this.itens.findIndex(function (x) { return x.idGuid == _this.itemChecklist.idGuid; });
+                if (indice == -1) {
+                    indice = this.itens.findIndex(function (x) { return x.id == _this.itemChecklist.id; });
+                }
+                this.itens[indice] = this.itemChecklist;
+            }
+            else {
+                this.itemChecklist.idGuid = __WEBPACK_IMPORTED_MODULE_5_angular2_uuid__["UUID"].UUID();
+                this.itens.unshift(this.itemChecklist);
+            }
+            this.itemChecklist = new __WEBPACK_IMPORTED_MODULE_6__models_item_checklist_servico__["a" /* ItemChecklistServico */]();
+            this.isEdicao = false;
+        }
+        else {
+            this.toastService.presentToastWarning("Preencha todos os campos.");
+        }
+    };
+    CadastroItemPage.prototype.concluir = function () {
+        var _this = this;
+        if (this.itens.length == 0) {
+            this.messageService.exibirMensagemConfirmacao("Nenhum item foi adicionado a esse checklist e não é possível adicionar via aplicativo posteriormente. Deseja salvar mesmo assim?", function () { _this.realizarConclusao(); });
+        }
+        else {
+            this.realizarConclusao();
+        }
+    };
+    CadastroItemPage.prototype.realizarConclusao = function () {
+        this.checklist.itensChecklistServico = this.itens.slice();
+        this.viewCtrl.dismiss(this.checklist);
+    };
+    CadastroItemPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-cadastro-item',template:/*ion-inline-start:"/Users/duduulopes/Desktop/sgq/App/sgq/src/pages/checklist/cadastro-item/cadastro-item.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-row>\n            <ion-col col-2>\n                <button class="button-nav" (click)="voltar()">\n                    <span ion-text style="font-size: 0.7em;">Voltar</span>\n                </button>\n            </ion-col>\n            <ion-col col-10 m-auto>\n                <ion-title>Itens do Checklist</ion-title>\n            </ion-col>\n        </ion-row>\n    </ion-navbar>\n</ion-header>\n\n<ion-content has-header>\n    <ion-grid no-padding>\n        <ion-row padding-left padding-right>\n            <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n                <form #cadastroForm="ngForm" padding-top>\n                    <ion-item text-center transparent>\n                        <ion-label stacked>ORDEM</ion-label>\n                        <ion-input text-center required type="number" [(ngModel)]="itemChecklist.ordem" name="ordem"></ion-input>\n                    </ion-item>\n                    <ion-item text-center transparent>\n                        <ion-label stacked>DESCRIÇÃO</ion-label>\n                        <ion-textarea rows="3" text-center required type="text" [(ngModel)]="itemChecklist.descricao"\n                            name="descricao"></ion-textarea>\n                    </ion-item>\n\n                    <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: rgb(33,177,75) !important;"\n                        (click)="adicionar(cadastroForm.valid)">{{isEdicao ? \'Atualizar\' : \'Adicionar\'}}</button>\n                    <button *ngIf="isEdicao" ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: rgb(33,177,75) !important;"\n                        (click)="limpar()">Limpar</button>\n                    <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: rgb(33,177,75) !important;"\n                        (click)="concluir()">Concluir</button>\n                    \n                    <h3 text-center *ngIf="itens.length > 0" class="locais" style="margin-bottom: 0px;">Itens de checklist adicionados</h3>\n                    \n                    <h3 text-center *ngIf="itens.length == 0" class="locais">Nenhum item de checklist adicionado</h3>\n                    <ion-list *ngIf="itens.length > 0">\n                        <ion-item text-wrap class="list-item" *ngFor="let item of itens" (click)="editarItem(item)">\n                            {{item.ordem}} - {{item.descricao.toUpperCase()}}\n                        </ion-item>\n                    </ion-list>\n                    \n                </form>\n            </ion-col>\n        </ion-row>\n    </ion-grid>\n</ion-content>'/*ion-inline-end:"/Users/duduulopes/Desktop/sgq/App/sgq/src/pages/checklist/cadastro-item/cadastro-item.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_3__utils_toast_service__["a" /* ToastService */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["u" /* ViewController */],
+            __WEBPACK_IMPORTED_MODULE_7__utils_loading_service__["a" /* LoadingService */],
+            __WEBPACK_IMPORTED_MODULE_8__utils_message_service__["a" /* MessageService */]])
+    ], CadastroItemPage);
+    return CadastroItemPage;
+}());
+
+//# sourceMappingURL=cadastro-item.js.map
+
+/***/ }),
+
+/***/ 870:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ItemChecklistServico; });
+var ItemChecklistServico = /** @class */ (function () {
+    function ItemChecklistServico(values) {
+        if (values === void 0) { values = {}; }
+        this.descricao = "";
+        this.ordem = null;
+        Object.assign(this, values);
+    }
+    return ItemChecklistServico;
+}());
+
+//# sourceMappingURL=item-checklist-servico.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=11.js.map

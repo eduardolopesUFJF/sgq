@@ -1,1 +1,117 @@
-webpackJsonp([76],{675:function(l,n,e){"use strict";function u(l){return o["ɵvid"](0,[(l()(),o["ɵeld"](0,0,null,null,21,"ion-item",[["class","item item-block"],["default-item",""],["no-lines",""]],null,[[null,"click"]],function(l,n,e){var u=!0;if("click"===n){u=!1!==l.component.onEvent("onItemClick",l.context.$implicit.title,e)&&u}return u},h.b,h.a)),o["ɵdid"](1,1097728,null,3,I.a,[_.a,y.a,o.ElementRef,o.Renderer,[2,C.a]],null,null),o["ɵqud"](335544320,5,{contentLabel:0}),o["ɵqud"](603979776,6,{_buttons:1}),o["ɵqud"](603979776,7,{_icons:1}),o["ɵdid"](5,16384,null,0,E.a,[],null,null),(l()(),o["ɵted"](-1,2,["\n            "])),(l()(),o["ɵted"](-1,2,["\n            "])),(l()(),o["ɵeld"](8,0,null,0,4,"ion-thumbnail",[["item-left",""]],null,null,null,null,null)),o["ɵdid"](9,16384,null,0,L.a,[],null,null),(l()(),o["ɵted"](-1,null,["\n              "])),(l()(),o["ɵeld"](11,0,null,null,0,"img",[],[[8,"src",4]],null,null,null,null)),(l()(),o["ɵted"](-1,null,["\n            "])),(l()(),o["ɵted"](-1,2,["\n            "])),(l()(),o["ɵted"](-1,2,["\n            "])),(l()(),o["ɵeld"](15,0,null,2,1,"h2",[["item-title",""]],null,null,null,null,null)),(l()(),o["ɵted"](16,null,["",""])),(l()(),o["ɵted"](-1,2,["\n            "])),(l()(),o["ɵted"](-1,2,["\n            "])),(l()(),o["ɵeld"](19,0,null,2,1,"h3",[["item-subtitle",""]],null,null,null,null,null)),(l()(),o["ɵted"](20,null,["",""])),(l()(),o["ɵted"](-1,2,["\n          "]))],null,function(l,n){l(n,11,0,n.context.$implicit.image);l(n,16,0,n.context.$implicit.title);l(n,20,0,n.context.$implicit.subtitle)})}function t(l){return o["ɵvid"](0,[(l()(),o["ɵeld"](0,0,null,null,31,"ion-grid",[["class","grid"],["no-padding",""]],null,null,null,null,null)),o["ɵdid"](1,16384,null,0,N.a,[],null,null),(l()(),o["ɵted"](-1,null,["\n    "])),(l()(),o["ɵeld"](3,0,null,null,27,"ion-row",[["class","row"]],null,null,null,null,null)),o["ɵdid"](4,16384,null,0,q.a,[],null,null),(l()(),o["ɵted"](-1,null,["\n      "])),(l()(),o["ɵeld"](6,0,null,null,23,"ion-col",[["class","col"],["col-12",""]],null,null,null,null,null)),o["ɵdid"](7,16384,null,0,F.a,[],null,null),(l()(),o["ɵted"](-1,null,["\n        "])),(l()(),o["ɵted"](-1,null,["\n        "])),(l()(),o["ɵeld"](10,0,null,null,9,"ion-list-header",[["class","item"],["header-section",""],["no-lines",""],["padding-horizontal",""],["transparent",""]],null,null,null,h.b,h.a)),o["ɵdid"](11,1097728,null,3,I.a,[_.a,y.a,o.ElementRef,o.Renderer,[2,C.a]],null,null),o["ɵqud"](335544320,2,{contentLabel:0}),o["ɵqud"](603979776,3,{_buttons:1}),o["ɵqud"](603979776,4,{_icons:1}),o["ɵdid"](15,16384,null,0,O.a,[y.a,o.Renderer,o.ElementRef,[8,null]],null,null),(l()(),o["ɵted"](-1,2,["\n          "])),(l()(),o["ɵeld"](17,0,null,2,1,"h1",[["header-title",""],["text-capitalize",""]],null,null,null,null,null)),(l()(),o["ɵted"](18,null,["",""])),(l()(),o["ɵted"](-1,2,["\n        "])),(l()(),o["ɵted"](-1,null,["\n        "])),(l()(),o["ɵted"](-1,null,["\n        "])),(l()(),o["ɵeld"](22,0,null,null,6,"ion-list",[["no-margin",""],["reorder","true"]],[[2,"reorder-enabled",null],[2,"reorder-visible",null],[2,"reorder-side-start",null]],[[null,"ionItemReorder"]],function(l,n,e){var u=!0;if("ionItemReorder"===n){u=!1!==l.component.reorderItems(e)&&u}return u},null,null)),o["ɵdid"](23,147456,null,0,C.a,[k.a,w.a,o.ElementRef,o.Renderer,o.NgZone,[2,x.a]],{reorder:[0,"reorder"]},{ionItemReorder:"ionItemReorder"}),o["ɵdid"](24,16384,null,0,M.a,[y.a,o.ElementRef,o.Renderer,k.a,z.l,w.a],null,null),(l()(),o["ɵted"](-1,null,["\n          "])),(l()(),o["ɵand"](16777216,null,null,1,null,u)),o["ɵdid"](27,802816,null,0,D.NgForOf,[o.ViewContainerRef,o.TemplateRef,o.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),o["ɵted"](-1,null,["\n        "])),(l()(),o["ɵted"](-1,null,["\n      "])),(l()(),o["ɵted"](-1,null,["\n    "])),(l()(),o["ɵted"](-1,null,["\n  "]))],function(l,n){var e=n.component;l(n,23,0,"true");l(n,27,0,e.data.items)},function(l,n){l(n,18,0,n.component.data.header);l(n,22,0,o["ɵnov"](n,23)._enableReorder,o["ɵnov"](n,23)._visibleReorder,o["ɵnov"](n,23)._isStart)})}function d(l){return o["ɵvid"](0,[o["ɵqud"](402653184,1,{content:0}),(l()(),o["ɵted"](-1,null,["\n"])),(l()(),o["ɵeld"](2,0,null,null,5,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,$.b,$.a)),o["ɵdid"](3,4374528,[[1,4]],0,x.a,[y.a,k.a,w.a,o.ElementRef,o.Renderer,j.a,A.a,o.NgZone,[2,P.a],[2,T.a]],null,null),(l()(),o["ɵted"](-1,1,["\n  "])),(l()(),o["ɵand"](16777216,null,1,1,null,t)),o["ɵdid"](6,16384,null,0,D.NgIf,[o.ViewContainerRef,o.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),o["ɵted"](-1,1,["\n"])),(l()(),o["ɵted"](-1,null,["\n"]))],function(l,n){l(n,6,0,null!=n.component.data)},function(l,n){l(n,2,0,o["ɵnov"](n,3).statusbarPadding,o["ɵnov"](n,3)._hasRefresher)})}Object.defineProperty(n,"__esModule",{value:!0});var o=e(1),a=(e(0),e(55)),i=function(){function l(){var l=this;this.reorderItems=function(n){l.data.items=Object(a.i)(l.data.items,n)}}return l.prototype.onEvent=function(l,n,e){this.events[l]&&this.events[l](n)},l}(),r=function(){return function(){}}(),c=e(191),m=e(192),s=e(193),f=e(194),p=e(195),v=e(196),R=e(197),g=e(198),b=e(199),h=e(130),I=e(24),_=e(21),y=e(3),C=e(50),E=e(60),L=e(204),N=e(131),q=e(83),F=e(84),O=e(134),k=e(6),w=e(13),x=e(30),M=e(56),z=e(10),D=e(15),$=e(200),j=e(12),A=e(32),P=e(7),T=e(29),V=o["ɵcrt"]({encapsulation:2,styles:[],data:{}}),Z=o["ɵccf"]("drag-and-drop-layout-3",i,function(l){return o["ɵvid"](0,[(l()(),o["ɵeld"](0,0,null,null,1,"drag-and-drop-layout-3",[],null,null,null,d,V)),o["ɵdid"](1,49152,null,0,i,[],null,null)],null,null)},{data:"data",events:"events"},{},[]),J=e(20),S=e(129),B=e(49);e.d(n,"DragAndDropLayout3ModuleNgFactory",function(){return G});var G=o["ɵcmf"](r,[],function(l){return o["ɵmod"]([o["ɵmpd"](512,o.ComponentFactoryResolver,o["ɵCodegenComponentFactoryResolver"],[[8,[c.a,m.a,s.a,f.a,p.a,v.a,R.a,g.a,b.a,Z]],[3,o.ComponentFactoryResolver],o.NgModuleRef]),o["ɵmpd"](4608,D.NgLocalization,D.NgLocaleLocalization,[o.LOCALE_ID,[2,D["ɵa"]]]),o["ɵmpd"](4608,J.r,J.r,[]),o["ɵmpd"](4608,J.d,J.d,[]),o["ɵmpd"](512,D.CommonModule,D.CommonModule,[]),o["ɵmpd"](512,J.p,J.p,[]),o["ɵmpd"](512,J.e,J.e,[]),o["ɵmpd"](512,J.n,J.n,[]),o["ɵmpd"](512,S.a,S.a,[]),o["ɵmpd"](512,S.b,S.b,[]),o["ɵmpd"](512,r,r,[]),o["ɵmpd"](256,B.a,i,[])])})}});
+webpackJsonp([76],{
+
+/***/ 704:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppearanceAnimationLayout3Module", function() { return AppearanceAnimationLayout3Module; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_3__ = __webpack_require__(807);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var AppearanceAnimationLayout3Module = /** @class */ (function () {
+    function AppearanceAnimationLayout3Module() {
+    }
+    AppearanceAnimationLayout3Module = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_3__["a" /* AppearanceAnimationLayout3 */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_3__["a" /* AppearanceAnimationLayout3 */]),
+            ],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_3__["a" /* AppearanceAnimationLayout3 */]
+            ],
+            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"]]
+        })
+    ], AppearanceAnimationLayout3Module);
+    return AppearanceAnimationLayout3Module;
+}());
+
+//# sourceMappingURL=appearance-animation-layout-3.module.js.map
+
+/***/ }),
+
+/***/ 807:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppearanceAnimationLayout3; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var AppearanceAnimationLayout3 = /** @class */ (function () {
+    function AppearanceAnimationLayout3() {
+        this.animateItems = [];
+        this.animateClass = { 'fade-in-down-item': true };
+    }
+    AppearanceAnimationLayout3.prototype.onEvent = function (event, item, e) {
+        if (e) {
+            e.stopPropagation();
+        }
+        if (this.events[event]) {
+            this.events[event](item);
+        }
+    };
+    AppearanceAnimationLayout3.prototype.ngOnChanges = function (changes) {
+        var that = this;
+        that.data = changes['data'].currentValue;
+        if (that.data && that.data.items) {
+            that.animateItems = [];
+            var _loop_1 = function (i) {
+                setTimeout(function () {
+                    that.animateItems.push(that.data.items[i]);
+                }, 200 * i);
+            };
+            for (var i = 0; i < that.data.items.length; i++) {
+                _loop_1(i);
+            }
+        }
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
+    ], AppearanceAnimationLayout3.prototype, "data", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
+    ], AppearanceAnimationLayout3.prototype, "events", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */])
+    ], AppearanceAnimationLayout3.prototype, "content", void 0);
+    AppearanceAnimationLayout3 = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'appearance-animation-layout-3',template:/*ion-inline-start:"/Users/duduulopes/Desktop/sgq/App/sgq/src/core/list-view/appearance-animation/layout-3/appearance-animation.html"*/'<!--Theme Appearance animation (Fade In Down)-->\n<ion-content>\n    <ion-grid no-padding *ngIf="data != null">\n        <ion-row>\n            <ion-col col-12>\n                <ion-list no-margin>\n                    <ion-item default-item no-lines [ngClass]="animateClass" *ngFor="let item of animateItems; let i = index;" (click)="onEvent(\'onItemClick\', item, $event)">\n                        <ion-thumbnail item-left>\n                            <img [src]="item.image" [alt]="item.title" />\n                        </ion-thumbnail>\n                        <h2 item-title>{{item.title}}</h2>\n                        <ion-icon icon-small item-right (click)="onEvent(\'onFavorite\', item, $event)">\n                            <i class="icon" [ngClass]="{\'icon-heart\': item.favorite, \'icon-heart-outline\': !item.favorite}"></i>\n                        </ion-icon>\n                    </ion-item>\n                </ion-list>\n            </ion-col>\n        </ion-row>\n    </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/Users/duduulopes/Desktop/sgq/App/sgq/src/core/list-view/appearance-animation/layout-3/appearance-animation.html"*/
+        }),
+        __metadata("design:paramtypes", [])
+    ], AppearanceAnimationLayout3);
+    return AppearanceAnimationLayout3;
+}());
+
+//# sourceMappingURL=appearance-animation-layout-3.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=76.js.map

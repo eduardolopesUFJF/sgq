@@ -1,1 +1,101 @@
-webpackJsonp([73],{679:function(l,n,e){"use strict";function u(l){return c["ɵvid"](0,[(l()(),c["ɵeld"](0,0,null,null,0,"i",[["icon-small",""]],[[8,"className",0]],null,null,null,null))],null,function(l,n){l(n,0,0,c["ɵinlineInterpolate"](1,"icon ",n.parent.context.$implicit.iconActive,""))})}function t(l){return c["ɵvid"](0,[(l()(),c["ɵeld"](0,0,null,null,0,"i",[["icon-small",""]],[[8,"className",0]],null,null,null,null))],null,function(l,n){l(n,0,0,c["ɵinlineInterpolate"](1,"icon ",n.parent.context.$implicit.iconInactive,""))})}function i(l){return c["ɵvid"](0,[(l()(),c["ɵeld"](0,0,null,null,8,"ion-icon",[["role","img"]],[[2,"hide",null]],[[null,"click"]],function(l,n,e){var u=!0;if("click"===n){u=!1!==l.component.onStarClass(l.parent.context.$implicit.ratingStar.iconsStars,l.context.index,e)&&u}return u},null,null)),c["ɵdid"](1,147456,null,0,I.a,[b.a,c.ElementRef,c.Renderer],null,null),(l()(),c["ɵted"](-1,null,["\n                  "])),(l()(),c["ɵand"](16777216,null,null,1,null,u)),c["ɵdid"](4,16384,null,0,y.NgIf,[c.ViewContainerRef,c.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),c["ɵted"](-1,null,["\n                  "])),(l()(),c["ɵand"](16777216,null,null,1,null,t)),c["ɵdid"](7,16384,null,0,y.NgIf,[c.ViewContainerRef,c.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),c["ɵted"](-1,null,["\n                "]))],function(l,n){l(n,4,0,n.context.$implicit.isActive);l(n,7,0,!n.context.$implicit.isActive)},function(l,n){l(n,0,0,c["ɵnov"](n,1)._hidden)})}function d(l){return c["ɵvid"](0,[(l()(),c["ɵeld"](0,0,null,null,47,"ion-col",[["class","col"],["col-12",""],["col-lg-4",""],["col-md-6",""]],null,null,null,null,null)),c["ɵdid"](1,16384,null,0,w.a,[],null,null),(l()(),c["ɵted"](-1,null,["\n        "])),(l()(),c["ɵeld"](3,0,null,null,43,"ion-card",[["box-shadow",""],["margin-bottom",""],["text-left",""]],null,null,null,null,null)),c["ɵdid"](4,16384,null,0,E.a,[b.a,c.ElementRef,c.Renderer],null,null),(l()(),c["ɵted"](-1,null,["\n          "])),(l()(),c["ɵted"](-1,null,["\n          "])),(l()(),c["ɵeld"](7,0,null,null,13,"div",[["card-image",""]],null,null,null,null,null)),(l()(),c["ɵted"](-1,null,["\n            "])),(l()(),c["ɵeld"](9,0,null,null,0,"img",[],[[8,"src",4]],null,null,null,null)),(l()(),c["ɵted"](-1,null,["\n            "])),(l()(),c["ɵeld"](11,0,null,null,8,"div",[["text-center",""],["watch-now",""]],null,[[null,"click"]],function(l,n,e){var u=!0;if("click"===n){u=!1!==l.component.onEvent("onItemClick",l.context.$implicit,e)&&u}return u},null,null)),(l()(),c["ɵted"](-1,null,["\n              "])),(l()(),c["ɵeld"](13,0,null,null,5,"button",[["button-icon",""],["icon-center",""],["ion-button",""]],null,null,null,N.b,N.a)),c["ɵdid"](14,1097728,null,0,$.a,[[8,""],b.a,c.ElementRef,c.Renderer],null,null),(l()(),c["ɵted"](-1,0,["\n                "])),(l()(),c["ɵeld"](16,0,null,0,1,"ion-icon",[["icon-large",""],["role","img"]],[[2,"hide",null]],null,null,null,null)),c["ɵdid"](17,147456,null,0,I.a,[b.a,c.ElementRef,c.Renderer],{name:[0,"name"]},null),(l()(),c["ɵted"](-1,0,["\n              "])),(l()(),c["ɵted"](-1,null,["\n            "])),(l()(),c["ɵted"](-1,null,["\n          "])),(l()(),c["ɵted"](-1,null,["\n          "])),(l()(),c["ɵted"](-1,null,["\n          "])),(l()(),c["ɵeld"](23,0,null,null,22,"ion-card-content",[],null,null,null,null,null)),c["ɵdid"](24,16384,null,0,F.a,[b.a,c.ElementRef,c.Renderer],null,null),(l()(),c["ɵted"](-1,null,["\n            "])),(l()(),c["ɵeld"](26,0,null,null,18,"ion-card-title",[["text-center",""]],null,null,null,null,null)),c["ɵdid"](27,16384,null,0,O.a,[b.a,c.ElementRef,c.Renderer],null,null),(l()(),c["ɵted"](-1,null,["\n                "])),(l()(),c["ɵted"](-1,null,["\n                "])),(l()(),c["ɵeld"](30,0,null,null,1,"h1",[["card-title",""]],null,null,null,null,null)),(l()(),c["ɵted"](31,null,["",""])),(l()(),c["ɵted"](-1,null,["\n                "])),(l()(),c["ɵted"](-1,null,["\n                "])),(l()(),c["ɵand"](16777216,null,null,1,null,i)),c["ɵdid"](35,802816,null,0,y.NgForOf,[c.ViewContainerRef,c.TemplateRef,c.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),c["ɵted"](-1,null,["\n                "])),(l()(),c["ɵted"](-1,null,["\n                "])),(l()(),c["ɵeld"](38,0,null,null,1,"span",[["span-medium",""]],null,null,null,null,null)),(l()(),c["ɵted"](39,null,["",""])),(l()(),c["ɵted"](-1,null,["\n                "])),(l()(),c["ɵted"](-1,null,["\n                "])),(l()(),c["ɵeld"](42,0,null,null,1,"p",[["card-body-text",""],["margin-top",""]],null,null,null,null,null)),(l()(),c["ɵted"](43,null,["",""])),(l()(),c["ɵted"](-1,null,["\n            "])),(l()(),c["ɵted"](-1,null,["\n          "])),(l()(),c["ɵted"](-1,null,["\n        "])),(l()(),c["ɵted"](-1,null,["\n      "]))],function(l,n){l(n,17,0,n.context.$implicit.icon);l(n,35,0,n.context.$implicit.ratingStar.iconsStars)},function(l,n){l(n,9,0,n.context.$implicit.image);l(n,16,0,c["ɵnov"](n,17)._hidden);l(n,31,0,n.context.$implicit.title);l(n,39,0,n.context.$implicit.reviews);l(n,43,0,n.context.$implicit.description)})}function o(l){return c["ɵvid"](0,[(l()(),c["ɵeld"](0,0,null,null,5,"ion-row",[["class","row"]],null,null,null,null,null)),c["ɵdid"](1,16384,null,0,k.a,[],null,null),(l()(),c["ɵted"](-1,null,["\n      "])),(l()(),c["ɵand"](16777216,null,null,1,null,d)),c["ɵdid"](4,802816,null,0,y.NgForOf,[c.ViewContainerRef,c.TemplateRef,c.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),c["ɵted"](-1,null,["\n    "]))],function(l,n){l(n,4,0,n.component.data.items)},null)}function a(l){return c["ɵvid"](0,[c["ɵqud"](402653184,1,{content:0}),(l()(),c["ɵted"](-1,null,["\n"])),(l()(),c["ɵeld"](2,0,null,null,9,"ion-content",[["padding-top",""]],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,_.b,_.a)),c["ɵdid"](3,4374528,[[1,4]],0,L.a,[b.a,S.a,A.a,c.ElementRef,c.Renderer,M.a,P.a,c.NgZone,[2,T.a],[2,V.a]],null,null),(l()(),c["ɵted"](-1,1,["\n  "])),(l()(),c["ɵeld"](5,0,null,1,5,"ion-grid",[["class","grid"],["no-padding",""]],null,null,null,null,null)),c["ɵdid"](6,16384,null,0,D.a,[],null,null),(l()(),c["ɵted"](-1,null,["\n    "])),(l()(),c["ɵand"](16777216,null,null,1,null,o)),c["ɵdid"](9,16384,null,0,y.NgIf,[c.ViewContainerRef,c.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),c["ɵted"](-1,null,["\n  "])),(l()(),c["ɵted"](-1,1,["\n"])),(l()(),c["ɵted"](-1,null,["\n"]))],function(l,n){l(n,9,0,null!=n.component.data)},function(l,n){l(n,2,0,c["ɵnov"](n,3).statusbarPadding,c["ɵnov"](n,3)._hasRefresher)})}Object.defineProperty(n,"__esModule",{value:!0});var c=e(1),r=(e(0),e(55),function(){function l(){this.slider={}}return l.prototype.slideHasChanged=function(l,n){this.slider[n]=l,2==l._activeIndex&&(this.data.items?this.data.items.splice(n,1):this.data.splice(n,1))},l.prototype.onStarClass=function(l,n,e){e&&e.stopPropagation();for(var u=0;u<l.length;u++)l[u].isActive=u<=n;this.onEvent("onRates",n,e)},l.prototype.onClickEvent=function(l){this.slider[l]&&this.slider[l].slidePrev(300)},l.prototype.onEvent=function(l,n,e){e&&e.stopPropagation(),this.events[l]&&this.events[l](n)},l}()),s=function(){return function(){}}(),f=e(191),m=e(192),p=e(193),g=e(194),v=e(195),R=e(196),h=e(197),x=e(198),C=e(199),I=e(36),b=e(3),y=e(15),w=e(84),E=e(207),N=e(38),$=e(27),F=e(212),O=e(218),k=e(83),_=e(200),L=e(30),S=e(6),A=e(13),M=e(12),P=e(32),T=e(7),V=e(29),D=e(131),z=c["ɵcrt"]({encapsulation:2,styles:[],data:{}}),j=c["ɵccf"]("google-card-layout-1",r,function(l){return c["ɵvid"](0,[(l()(),c["ɵeld"](0,0,null,null,1,"google-card-layout-1",[],null,null,null,a,z)),c["ɵdid"](1,49152,null,0,r,[],null,null)],null,null)},{data:"data",events:"events"},{},[]),q=e(20),G=e(129),H=e(49);e.d(n,"GoogleCardLayout1ModuleNgFactory",function(){return J});var J=c["ɵcmf"](s,[],function(l){return c["ɵmod"]([c["ɵmpd"](512,c.ComponentFactoryResolver,c["ɵCodegenComponentFactoryResolver"],[[8,[f.a,m.a,p.a,g.a,v.a,R.a,h.a,x.a,C.a,j]],[3,c.ComponentFactoryResolver],c.NgModuleRef]),c["ɵmpd"](4608,y.NgLocalization,y.NgLocaleLocalization,[c.LOCALE_ID,[2,y["ɵa"]]]),c["ɵmpd"](4608,q.r,q.r,[]),c["ɵmpd"](4608,q.d,q.d,[]),c["ɵmpd"](512,y.CommonModule,y.CommonModule,[]),c["ɵmpd"](512,q.p,q.p,[]),c["ɵmpd"](512,q.e,q.e,[]),c["ɵmpd"](512,q.n,q.n,[]),c["ɵmpd"](512,G.a,G.a,[]),c["ɵmpd"](512,G.b,G.b,[]),c["ɵmpd"](512,s,s,[]),c["ɵmpd"](256,H.a,r,[])])})}});
+webpackJsonp([73],{
+
+/***/ 707:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DragAndDropLayout1Module", function() { return DragAndDropLayout1Module; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__drag_and_drop_layout_1__ = __webpack_require__(810);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var DragAndDropLayout1Module = /** @class */ (function () {
+    function DragAndDropLayout1Module() {
+    }
+    DragAndDropLayout1Module = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__drag_and_drop_layout_1__["a" /* DragAndDropLayout1 */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__drag_and_drop_layout_1__["a" /* DragAndDropLayout1 */]),
+            ],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_2__drag_and_drop_layout_1__["a" /* DragAndDropLayout1 */]
+            ],
+            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"]]
+        })
+    ], DragAndDropLayout1Module);
+    return DragAndDropLayout1Module;
+}());
+
+//# sourceMappingURL=drag-and-drop-layout-1.module.js.map
+
+/***/ }),
+
+/***/ 810:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DragAndDropLayout1; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var DragAndDropLayout1 = /** @class */ (function () {
+    function DragAndDropLayout1() {
+        var _this = this;
+        this.reorderItems = function (indexes) {
+            _this.data.items = Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["v" /* reorderArray */])(_this.data.items, indexes);
+        };
+    }
+    DragAndDropLayout1.prototype.onEvent = function (event, item, e) {
+        if (this.events[event]) {
+            this.events[event](item);
+        }
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
+    ], DragAndDropLayout1.prototype, "data", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
+    ], DragAndDropLayout1.prototype, "events", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */])
+    ], DragAndDropLayout1.prototype, "content", void 0);
+    DragAndDropLayout1 = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'drag-and-drop-layout-1',template:/*ion-inline-start:"/Users/duduulopes/Desktop/sgq/App/sgq/src/core/list-view/drag-and-drop/layout-1/drag-and-drop.html"*/'<!-- Themes Drag and drop - Small item + header -->\n<ion-content>\n    <ion-grid no-padding *ngIf="data != null">\n        <!--Header-->\n        <ion-row>\n            <!--Content-->\n            <ion-col col-12>\n                <ion-list-header transparent header-section no-lines padding-horizontal no-margin>\n                    <h1 header-title text-capitalize>{{data.header}}</h1>\n                </ion-list-header>\n                <!-- Item List Section -->\n                <ion-list no-margin reorder="true" (ionItemReorder)="reorderItems($event)">\n                    <ion-item default-item no-lines padding-left *ngFor="let item of data.items; let i = index;"\n                    (click)="onEvent(\'onItemClick\', item.title, $event)">\n                        <h2 item-title>{{item.title}}</h2>\n                        <h3 item-subtitle>{{item.subtitle}}</h3>\n                        <span span-medium>{{item.textIcon}}</span>\n                    </ion-item>\n                </ion-list>\n            </ion-col>\n        </ion-row>\n    </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/Users/duduulopes/Desktop/sgq/App/sgq/src/core/list-view/drag-and-drop/layout-1/drag-and-drop.html"*/
+        }),
+        __metadata("design:paramtypes", [])
+    ], DragAndDropLayout1);
+    return DragAndDropLayout1;
+}());
+
+//# sourceMappingURL=drag-and-drop-layout-1.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=73.js.map

@@ -1,1 +1,478 @@
-webpackJsonp([5],{744:function(n,l,e){"use strict";function i(n){return p["ɵvid"](0,[(n()(),p["ɵeld"](0,0,null,null,1,"h2",[["class","aviso"],["padding",""],["text-center",""]],null,null,null,null,null)),(n()(),p["ɵted"](-1,null,["Nenhum registro encontrado."]))],null,null)}function t(n){return p["ɵvid"](0,[(n()(),p["ɵeld"](0,0,null,null,6,"ion-row",[["class","row"]],null,null,null,null,null)),p["ɵdid"](1,16384,null,0,N.a,[],null,null),(n()(),p["ɵted"](-1,null,["\n            "])),(n()(),p["ɵeld"](3,0,null,null,2,"button",[["block",""],["box-shadow",""],["class","button-novo"],["default-button",""],["ion-button",""],["margin-bottom",""],["text-capitalize",""]],null,[[null,"click"]],function(n,l,e){var i=!0;if("click"===l){i=!1!==n.component.novaInspecao()&&i}return i},_.b,_.a)),p["ɵdid"](4,1097728,null,0,q.a,[[8,""],F.a,p.ElementRef,p.Renderer],{block:[0,"block"]},null),(n()(),p["ɵted"](-1,0,["Nova inspeção"])),(n()(),p["ɵted"](-1,null,["\n        "]))],function(n,l){n(l,4,0,"")},null)}function u(n){return p["ɵvid"](0,[(n()(),p["ɵeld"](0,0,null,null,5,"ion-col",[["class","col-search col"],["col-12",""]],null,null,null,null,null)),p["ɵdid"](1,16384,null,0,M.a,[],null,null),(n()(),p["ɵted"](-1,null,["\n                "])),(n()(),p["ɵeld"](3,0,null,null,1,"ion-searchbar",[],[[2,"searchbar-animated",null],[2,"searchbar-has-value",null],[2,"searchbar-active",null],[2,"searchbar-show-cancel",null],[2,"searchbar-left-aligned",null],[2,"searchbar-has-focus",null]],[[null,"ionInput"]],function(n,l,e){var i=!0;if("ionInput"===l){i=!1!==n.component.filtrar(e.target.value)&&i}return i},V.b,V.a)),p["ɵdid"](4,1294336,null,0,$.a,[F.a,T.a,p.ElementRef,p.Renderer,[2,L.h]],{placeholder:[0,"placeholder"]},{ionInput:"ionInput"}),(n()(),p["ɵted"](-1,null,["\n            "]))],function(n,l){n(l,4,0,"Filtrar pelo local")},function(n,l){n(l,3,0,p["ɵnov"](l,4)._animated,p["ɵnov"](l,4)._value,p["ɵnov"](l,4)._isActive,p["ɵnov"](l,4)._showCancelButton,p["ɵnov"](l,4)._shouldAlignLeft,p["ɵnov"](l,4)._isFocus)})}function a(n){return p["ɵvid"](0,[(n()(),p["ɵeld"](0,0,null,null,1,"h2",[["item-title",""],["text-wrap",""]],null,null,null,null,null)),(n()(),p["ɵted"](1,null,["",":\n                                    ",""]))],null,function(n,l){n(l,1,0,l.component.itemChecklist.campo1,l.parent.context.$implicit.campo1)})}function o(n){return p["ɵvid"](0,[(n()(),p["ɵeld"](0,0,null,null,1,"h2",[["item-title",""],["text-wrap",""]],null,null,null,null,null)),(n()(),p["ɵted"](1,null,["",":\n                                    ",""]))],null,function(n,l){n(l,1,0,l.component.itemChecklist.campo2,l.parent.context.$implicit.campo2)})}function r(n){return p["ɵvid"](0,[(n()(),p["ɵeld"](0,0,null,null,1,"h2",[["item-title",""],["text-wrap",""]],null,null,null,null,null)),(n()(),p["ɵted"](1,null,["",":\n                                    ",""]))],null,function(n,l){n(l,1,0,l.component.itemChecklist.campo3,l.parent.context.$implicit.campo3)})}function c(n){return p["ɵvid"](0,[(n()(),p["ɵeld"](0,0,null,null,1,"h2",[["item-title",""],["text-wrap",""]],null,null,null,null,null)),(n()(),p["ɵted"](1,null,["",":\n                                    ",""]))],null,function(n,l){n(l,1,0,l.component.itemChecklist.campo4,l.parent.context.$implicit.campo4)})}function d(n){return p["ɵvid"](0,[(n()(),p["ɵeld"](0,0,null,null,106,"ion-item",[["class","item item-block"],["default-item",""],["no-lines",""]],null,null,null,P.b,P.a)),p["ɵdid"](1,278528,null,0,H.NgClass,[p.IterableDiffers,p.KeyValueDiffers,p.ElementRef,p.Renderer2],{ngClass:[0,"ngClass"]},null),p["ɵpod"](2,{"novo-item":0,"item-removido":1}),p["ɵdid"](3,1097728,null,3,j.a,[J.a,F.a,p.ElementRef,p.Renderer,[2,X.a]],null,null),p["ɵqud"](335544320,9,{contentLabel:0}),p["ɵqud"](603979776,10,{_buttons:1}),p["ɵqud"](603979776,11,{_icons:1}),p["ɵdid"](7,16384,null,0,W.a,[],null,null),(n()(),p["ɵted"](-1,2,["\n                        "])),(n()(),p["ɵeld"](9,0,null,2,36,"ion-row",[["class","espacamento row"]],null,null,null,null,null)),p["ɵdid"](10,16384,null,0,N.a,[],null,null),(n()(),p["ɵted"](-1,null,["\n                            "])),(n()(),p["ɵeld"](12,0,null,null,25,"ion-col",[["class","col"],["col-10",""]],null,[[null,"click"]],function(n,l,e){var i=!0;if("click"===l){i=!1!==n.component.abrirItensInspecao(n.context.$implicit)&&i}return i},null,null)),p["ɵdid"](13,16384,null,0,M.a,[],null,null),(n()(),p["ɵted"](-1,null,["\n                                "])),(n()(),p["ɵand"](16777216,null,null,1,null,a)),p["ɵdid"](16,16384,null,0,H.NgIf,[p.ViewContainerRef,p.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),p["ɵted"](-1,null,["\n                                "])),(n()(),p["ɵand"](16777216,null,null,1,null,o)),p["ɵdid"](19,16384,null,0,H.NgIf,[p.ViewContainerRef,p.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),p["ɵted"](-1,null,["\n                                "])),(n()(),p["ɵand"](16777216,null,null,1,null,r)),p["ɵdid"](22,16384,null,0,H.NgIf,[p.ViewContainerRef,p.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),p["ɵted"](-1,null,["\n                                "])),(n()(),p["ɵand"](16777216,null,null,1,null,c)),p["ɵdid"](25,16384,null,0,H.NgIf,[p.ViewContainerRef,p.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),p["ɵted"](-1,null,["\n                                "])),(n()(),p["ɵeld"](27,0,null,null,1,"h3",[["item-situacao",""],["text-wrap",""]],null,null,null,null,null)),(n()(),p["ɵted"](28,null,["Situação: ",""])),(n()(),p["ɵted"](-1,null,["\n                                "])),(n()(),p["ɵeld"](30,0,null,null,2,"h3",[["item-situacao",""],["text-wrap",""]],null,null,null,null,null)),(n()(),p["ɵted"](31,null,["Abertura: ",""])),p["ɵppd"](32,2),(n()(),p["ɵted"](-1,null,["\n                                "])),(n()(),p["ɵeld"](34,0,null,null,2,"h3",[["item-situacao",""],["text-wrap",""]],null,null,null,null,null)),(n()(),p["ɵted"](35,null,["Encerramento: ",""])),p["ɵppd"](36,2),(n()(),p["ɵted"](-1,null,["\n                            "])),(n()(),p["ɵted"](-1,null,["\n                            "])),(n()(),p["ɵeld"](39,0,null,null,5,"ion-col",[["class","col"],["col-2",""]],null,null,null,null,null)),p["ɵdid"](40,16384,null,0,M.a,[],null,null),(n()(),p["ɵted"](-1,null,["\n                                "])),(n()(),p["ɵeld"](42,0,null,null,1,"ion-icon",[["icon-small",""],["item-right",""],["name","more"],["role","img"],["style","font-size: 32px !important; margin: 0px"]],[[2,"hide",null]],[[null,"click"]],function(n,l,e){var i=!0;if("click"===l){i=!1!==n.component.exibirOpcoes(n.context.$implicit)&&i}return i},null,null)),p["ɵdid"](43,147456,null,0,K.a,[F.a,p.ElementRef,p.Renderer],{name:[0,"name"]},null),(n()(),p["ɵted"](-1,null,["\n                            "])),(n()(),p["ɵted"](-1,null,["\n                        "])),(n()(),p["ɵted"](-1,2,["\n                        "])),(n()(),p["ɵeld"](47,0,null,2,58,"ion-row",[["class","espacamento row"],["style","padding: 0 0 10px 0 !important;"]],null,null,null,null,null)),p["ɵdid"](48,16384,null,0,N.a,[],null,null),(n()(),p["ɵted"](-1,null,["\n                            "])),(n()(),p["ɵeld"](50,0,null,null,1,"ion-col",[["class","col"],["col-1",""]],null,null,null,null,null)),p["ɵdid"](51,16384,null,0,M.a,[],null,null),(n()(),p["ɵted"](-1,null,["\n                            "])),(n()(),p["ɵeld"](53,0,null,null,8,"ion-col",[["class","col"],["col-2",""],["style","background-color: blue;"]],null,null,null,null,null)),p["ɵdid"](54,16384,null,0,M.a,[],null,null),(n()(),p["ɵted"](-1,null,["\n                                "])),(n()(),p["ɵeld"](56,0,null,null,1,"h2",[["item-title",""],["no-margin",""],["text-center",""],["text-wrap",""]],null,null,null,null,null)),(n()(),p["ɵted"](-1,null,["NA"])),(n()(),p["ɵted"](-1,null,["\n                                "])),(n()(),p["ɵeld"](59,0,null,null,1,"h3",[["item-situacao",""],["no-margin",""],["text-center",""],["text-wrap",""]],null,null,null,null,null)),(n()(),p["ɵted"](60,null,["",""])),(n()(),p["ɵted"](-1,null,["\n                            "])),(n()(),p["ɵted"](-1,null,["\n                            "])),(n()(),p["ɵeld"](63,0,null,null,8,"ion-col",[["class","col"],["col-2",""],["style","background-color: darkgreen;"]],null,null,null,null,null)),p["ɵdid"](64,16384,null,0,M.a,[],null,null),(n()(),p["ɵted"](-1,null,["\n                                "])),(n()(),p["ɵeld"](66,0,null,null,1,"h2",[["item-title",""],["no-margin",""],["text-center",""],["text-wrap",""]],null,null,null,null,null)),(n()(),p["ɵted"](-1,null,["A"])),(n()(),p["ɵted"](-1,null,["\n                                "])),(n()(),p["ɵeld"](69,0,null,null,1,"h3",[["item-situacao",""],["no-margin",""],["text-center",""],["text-wrap",""]],null,null,null,null,null)),(n()(),p["ɵted"](70,null,["",""])),(n()(),p["ɵted"](-1,null,["\n                            "])),(n()(),p["ɵted"](-1,null,["\n                            "])),(n()(),p["ɵeld"](73,0,null,null,8,"ion-col",[["class","col"],["col-2",""],["style","background-color: yellow;"]],null,null,null,null,null)),p["ɵdid"](74,16384,null,0,M.a,[],null,null),(n()(),p["ɵted"](-1,null,["\n                                "])),(n()(),p["ɵeld"](76,0,null,null,1,"h2",[["negrito",""],["no-margin",""],["text-center",""],["text-wrap",""]],null,null,null,null,null)),(n()(),p["ɵted"](-1,null,["R"])),(n()(),p["ɵted"](-1,null,["\n                                "])),(n()(),p["ɵeld"](79,0,null,null,1,"h3",[["negrito",""],["no-margin",""],["text-center",""],["text-wrap",""]],null,null,null,null,null)),(n()(),p["ɵted"](80,null,["",""])),(n()(),p["ɵted"](-1,null,["\n                            "])),(n()(),p["ɵted"](-1,null,["\n                            "])),(n()(),p["ɵeld"](83,0,null,null,8,"ion-col",[["class","col"],["col-2",""],["style","background-color: red;"]],null,null,null,null,null)),p["ɵdid"](84,16384,null,0,M.a,[],null,null),(n()(),p["ɵted"](-1,null,["\n                                "])),(n()(),p["ɵeld"](86,0,null,null,1,"h2",[["item-title",""],["no-margin",""],["text-center",""],["text-wrap",""]],null,null,null,null,null)),(n()(),p["ɵted"](-1,null,["X"])),(n()(),p["ɵted"](-1,null,["\n                                "])),(n()(),p["ɵeld"](89,0,null,null,1,"h3",[["item-situacao",""],["no-margin",""],["text-center",""],["text-wrap",""]],null,null,null,null,null)),(n()(),p["ɵted"](90,null,["",""])),(n()(),p["ɵted"](-1,null,["\n                            "])),(n()(),p["ɵted"](-1,null,["\n                            "])),(n()(),p["ɵeld"](93,0,null,null,8,"ion-col",[["class","col"],["col-2",""],["style","background-color: orange;"]],null,null,null,null,null)),p["ɵdid"](94,16384,null,0,M.a,[],null,null),(n()(),p["ɵted"](-1,null,["\n                                "])),(n()(),p["ɵeld"](96,0,null,null,1,"h2",[["item-title",""],["no-margin",""],["text-center",""],["text-wrap",""]],null,null,null,null,null)),(n()(),p["ɵted"](-1,null,["RA"])),(n()(),p["ɵted"](-1,null,["\n                                "])),(n()(),p["ɵeld"](99,0,null,null,1,"h3",[["item-situacao",""],["no-margin",""],["text-center",""],["text-wrap",""]],null,null,null,null,null)),(n()(),p["ɵted"](100,null,["",""])),(n()(),p["ɵted"](-1,null,["\n                            "])),(n()(),p["ɵted"](-1,null,["\n                            "])),(n()(),p["ɵeld"](103,0,null,null,1,"ion-col",[["class","col"],["col-1",""]],null,null,null,null,null)),p["ɵdid"](104,16384,null,0,M.a,[],null,null),(n()(),p["ɵted"](-1,null,["\n                        "])),(n()(),p["ɵted"](-1,2,["\n                    "]))],function(n,l){var e=l.component;n(l,1,0,n(l,2,0,!l.context.$implicit.id,l.context.$implicit.delete));n(l,16,0,e.itemChecklist.campo1);n(l,19,0,e.itemChecklist.campo2);n(l,22,0,e.itemChecklist.campo3);n(l,25,0,e.itemChecklist.campo4);n(l,43,0,"more")},function(n,l){n(l,28,0,l.context.$implicit.situacao);n(l,31,0,l.context.$implicit.dataInspecao?p["ɵunv"](l,31,0,n(l,32,0,p["ɵnov"](l.parent,0),l.context.$implicit.dataInspecao,"dd/MM/yyyy")):"Não informada");n(l,35,0,l.context.$implicit.dataEncerramento?p["ɵunv"](l,35,0,n(l,36,0,p["ɵnov"](l.parent,0),l.context.$implicit.dataEncerramento,"dd/MM/yyyy")):"Não informada");n(l,42,0,p["ɵnov"](l,43)._hidden);n(l,60,0,l.context.$implicit.qtdNA);n(l,70,0,l.context.$implicit.qtdA);n(l,80,0,l.context.$implicit.qtdR);n(l,90,0,l.context.$implicit.qtdX);n(l,100,0,l.context.$implicit.qtdRA)})}function s(n){return p["ɵvid"](0,[p["ɵpid"](0,H.DatePipe,[p.LOCALE_ID]),(n()(),p["ɵeld"](1,0,null,null,45,"ion-header",[],null,null,null,null,null)),p["ɵdid"](2,16384,null,0,Z.a,[F.a,p.ElementRef,p.Renderer,[2,Q.a]],null,null),(n()(),p["ɵted"](-1,null,["\n    "])),(n()(),p["ɵeld"](4,0,null,null,41,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,Y.b,Y.a)),p["ɵdid"](5,49152,null,0,nn.a,[ln.a,[2,Q.a],[2,en.a],F.a,p.ElementRef,p.Renderer],null,null),(n()(),p["ɵted"](-1,3,["\n        "])),(n()(),p["ɵeld"](7,0,null,3,37,"ion-row",[["class","row"]],null,null,null,null,null)),p["ɵdid"](8,16384,null,0,N.a,[],null,null),(n()(),p["ɵted"](-1,null,["\n            "])),(n()(),p["ɵeld"](10,0,null,null,12,"ion-col",[["class","col"],["col-1",""]],null,null,null,null,null)),p["ɵdid"](11,16384,null,0,M.a,[],null,null),(n()(),p["ɵted"](-1,null,["\n                "])),(n()(),p["ɵeld"](13,0,null,null,8,"button",[["ion-button",""],["menuToggle",""]],[[8,"hidden",0]],[[null,"click"]],function(n,l,e){var i=!0;if("click"===l){i=!1!==p["ɵnov"](n,15).toggle()&&i}return i},_.b,_.a)),p["ɵdid"](14,1097728,[[1,4]],0,q.a,[[8,""],F.a,p.ElementRef,p.Renderer],null,null),p["ɵdid"](15,1064960,null,0,tn.a,[un.a,[2,Q.a],[2,q.a],[2,nn.a]],{menuToggle:[0,"menuToggle"]},null),p["ɵdid"](16,16384,null,1,an.a,[F.a,p.ElementRef,p.Renderer,[2,on.a],[2,nn.a]],null,null),p["ɵqud"](603979776,1,{_buttons:1}),(n()(),p["ɵted"](-1,0,["\n                    "])),(n()(),p["ɵeld"](19,0,null,0,1,"ion-icon",[["class","icon-menu"],["name","menu"],["role","img"]],[[2,"hide",null]],null,null,null,null)),p["ɵdid"](20,147456,null,0,K.a,[F.a,p.ElementRef,p.Renderer],{name:[0,"name"]},null),(n()(),p["ɵted"](-1,0,["\n                "])),(n()(),p["ɵted"](-1,null,["\n            "])),(n()(),p["ɵted"](-1,null,["\n            "])),(n()(),p["ɵeld"](24,0,null,null,9,"ion-col",[["class","col"],["col-8",""],["m-auto",""]],null,null,null,null,null)),p["ɵdid"](25,16384,null,0,M.a,[],null,null),(n()(),p["ɵted"](-1,null,["\n                "])),(n()(),p["ɵeld"](27,0,null,null,5,"div",[["buy",""],["no-padding",""]],null,null,null,null,null)),(n()(),p["ɵted"](-1,null,["\n                    "])),(n()(),p["ɵeld"](29,0,null,null,2,"ion-title",[],null,null,null,rn.b,rn.a)),p["ɵdid"](30,49152,null,0,cn.a,[F.a,p.ElementRef,p.Renderer,[2,on.a],[2,nn.a]],null,null),(n()(),p["ɵted"](-1,0,["\n                        Localização do Serviço\n                    "])),(n()(),p["ɵted"](-1,null,["\n                "])),(n()(),p["ɵted"](-1,null,["\n            "])),(n()(),p["ɵted"](-1,null,["\n            "])),(n()(),p["ɵeld"](35,0,null,null,8,"ion-col",[["class","col"],["col-2",""],["m-auto",""]],null,null,null,null,null)),p["ɵdid"](36,16384,null,0,M.a,[],null,null),(n()(),p["ɵted"](-1,null,["\n                "])),(n()(),p["ɵeld"](38,0,null,null,4,"div",[["buy",""]],null,[[null,"click"]],function(n,l,e){var i=!0;if("click"===l){i=!1!==n.component.voltarHome()&&i}return i},null,null)),(n()(),p["ɵted"](-1,null,["\n                    "])),(n()(),p["ɵeld"](40,0,null,null,1,"ion-icon",[["class","icon-menu home-icon"],["name","home"],["role","img"]],[[2,"hide",null]],null,null,null,null)),p["ɵdid"](41,147456,null,0,K.a,[F.a,p.ElementRef,p.Renderer],{name:[0,"name"]},null),(n()(),p["ɵted"](-1,null,["\n                "])),(n()(),p["ɵted"](-1,null,["\n            "])),(n()(),p["ɵted"](-1,null,["\n        "])),(n()(),p["ɵted"](-1,3,["\n    "])),(n()(),p["ɵted"](-1,null,["\n"])),(n()(),p["ɵted"](-1,null,["\n\n"])),(n()(),p["ɵeld"](48,0,null,null,93,"ion-content",[],[[2,"statusbar-padding",null],[2,"has-refresher",null]],null,null,dn.b,dn.a)),p["ɵdid"](49,4374528,null,0,sn.a,[F.a,T.a,pn.a,p.ElementRef,p.Renderer,ln.a,fn.a,p.NgZone,[2,Q.a],[2,en.a]],null,null),(n()(),p["ɵted"](-1,1,["\n    "])),(n()(),p["ɵeld"](51,0,null,1,1,"h2",[["class","broadcomb"],["text-center",""],["text-wrap",""]],null,null,null,null,null)),(n()(),p["ɵted"](52,null,["",""])),(n()(),p["ɵted"](-1,1,["\n    "])),(n()(),p["ɵand"](16777216,null,1,1,null,i)),p["ɵdid"](55,16384,null,0,H.NgIf,[p.ViewContainerRef,p.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),p["ɵted"](-1,1,["\n    "])),(n()(),p["ɵeld"](57,0,null,1,83,"ion-grid",[["class","grid"],["no-padding",""]],null,null,null,null,null)),p["ɵdid"](58,16384,null,0,hn.a,[],null,null),(n()(),p["ɵted"](-1,null,["\n        "])),(n()(),p["ɵand"](16777216,null,null,1,null,t)),p["ɵdid"](61,16384,null,0,H.NgIf,[p.ViewContainerRef,p.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),p["ɵted"](-1,null,["\n        "])),(n()(),p["ɵeld"](63,0,null,null,76,"ion-row",[["class","row"]],null,null,null,null,null)),p["ɵdid"](64,16384,null,0,N.a,[],null,null),(n()(),p["ɵted"](-1,null,["\n            "])),(n()(),p["ɵand"](16777216,null,null,1,null,u)),p["ɵdid"](67,16384,null,0,H.NgIf,[p.ViewContainerRef,p.TemplateRef],{ngIf:[0,"ngIf"]},null),(n()(),p["ɵted"](-1,null,["\n            "])),(n()(),p["ɵeld"](69,0,null,null,58,"ion-col",[["class","col"],["col-12",""]],null,null,null,null,null)),p["ɵdid"](70,16384,null,0,M.a,[],null,null),(n()(),p["ɵted"](-1,null,["\n                "])),(n()(),p["ɵeld"](72,0,null,null,54,"ion-list",[["name","status"],["no-margin",""],["radio-group",""],["role","radiogroup"]],[[2,"ng-untouched",null],[2,"ng-touched",null],[2,"ng-pristine",null],[2,"ng-dirty",null],[2,"ng-valid",null],[2,"ng-invalid",null],[2,"ng-pending",null]],[[null,"ngModelChange"]],function(n,l,e){var i=!0,t=n.component;if("ngModelChange"===l){i=!1!==(t.servico.status=e)&&i}if("ngModelChange"===l){i=!1!==t.atualizarStatus()&&i}return i},null,null)),p["ɵdid"](73,1064960,null,1,mn.a,[p.Renderer,p.ElementRef,p.ChangeDetectorRef],null,null),p["ɵqud"](335544320,2,{_header:0}),p["ɵprd"](1024,null,L.g,function(n){return[n]},[mn.a]),p["ɵdid"](76,671744,null,0,L.l,[[8,null],[8,null],[8,null],[2,L.g]],{name:[0,"name"],model:[1,"model"]},{update:"ngModelChange"}),p["ɵprd"](2048,null,L.h,null,[L.l]),p["ɵdid"](78,16384,null,0,L.i,[L.h],null,null),p["ɵdid"](79,16384,null,0,vn.a,[F.a,p.ElementRef,p.Renderer,T.a,gn.l,pn.a],null,null),(n()(),p["ɵted"](-1,null,["\n                    "])),(n()(),p["ɵeld"](81,0,null,null,44,"ion-grid",[["class","grid"]],null,null,null,null,null)),p["ɵdid"](82,16384,null,0,hn.a,[],null,null),(n()(),p["ɵted"](-1,null,["\n                        "])),(n()(),p["ɵeld"](84,0,null,null,40,"ion-row",[["class","row"]],null,null,null,null,null)),p["ɵdid"](85,16384,null,0,N.a,[],null,null),(n()(),p["ɵted"](-1,null,["\n                            "])),(n()(),p["ɵeld"](87,0,null,null,17,"ion-col",[["class","col"],["col-6",""]],null,null,null,null,null)),p["ɵdid"](88,16384,null,0,M.a,[],null,null),(n()(),p["ɵted"](-1,null,["\n                                "])),(n()(),p["ɵeld"](90,0,null,null,13,"ion-item",[["class","item item-block"],["radio",""]],null,null,null,P.b,P.a)),p["ɵdid"](91,1097728,null,3,j.a,[J.a,F.a,p.ElementRef,p.Renderer,[2,X.a]],null,null),p["ɵqud"](335544320,3,{contentLabel:0}),p["ɵqud"](603979776,4,{_buttons:1}),p["ɵqud"](603979776,5,{_icons:1}),p["ɵdid"](95,16384,null,0,W.a,[],null,null),(n()(),p["ɵted"](-1,2,["\n                                    "])),(n()(),p["ɵeld"](97,0,null,1,2,"ion-label",[["text-center",""]],null,null,null,null,null)),p["ɵdid"](98,16384,[[3,4]],0,bn.a,[F.a,p.ElementRef,p.Renderer,[8,null],[8,null],[8,null],[8,null]],null,null),(n()(),p["ɵted"](-1,null,["Em aberto"])),(n()(),p["ɵted"](-1,2,["\n                                    "])),(n()(),p["ɵeld"](101,0,null,4,1,"ion-radio",[],[[2,"radio-disabled",null]],[[null,"click"]],function(n,l,e){var i=!0;if("click"===l){i=!1!==p["ɵnov"](n,102)._click(e)&&i}return i},In.b,In.a)),p["ɵdid"](102,245760,null,0,kn.a,[J.a,F.a,p.ElementRef,p.Renderer,[2,j.a],[2,mn.a]],{value:[0,"value"]},null),(n()(),p["ɵted"](-1,2,["\n                                "])),(n()(),p["ɵted"](-1,null,["\n                            "])),(n()(),p["ɵted"](-1,null,["\n                            "])),(n()(),p["ɵeld"](106,0,null,null,17,"ion-col",[["class","col"],["col-6",""]],null,null,null,null,null)),p["ɵdid"](107,16384,null,0,M.a,[],null,null),(n()(),p["ɵted"](-1,null,["\n                                "])),(n()(),p["ɵeld"](109,0,null,null,13,"ion-item",[["class","item item-block"],["radio",""]],null,null,null,P.b,P.a)),p["ɵdid"](110,1097728,null,3,j.a,[J.a,F.a,p.ElementRef,p.Renderer,[2,X.a]],null,null),p["ɵqud"](335544320,6,{contentLabel:0}),p["ɵqud"](603979776,7,{_buttons:1}),p["ɵqud"](603979776,8,{_icons:1}),p["ɵdid"](114,16384,null,0,W.a,[],null,null),(n()(),p["ɵted"](-1,2,["\n                                    "])),(n()(),p["ɵeld"](116,0,null,1,2,"ion-label",[["text-center",""]],null,null,null,null,null)),p["ɵdid"](117,16384,[[6,4]],0,bn.a,[F.a,p.ElementRef,p.Renderer,[8,null],[8,null],[8,null],[8,null]],null,null),(n()(),p["ɵted"](-1,null,["Finalizado"])),(n()(),p["ɵted"](-1,2,["\n                                    "])),(n()(),p["ɵeld"](120,0,null,4,1,"ion-radio",[],[[2,"radio-disabled",null]],[[null,"click"]],function(n,l,e){var i=!0;if("click"===l){i=!1!==p["ɵnov"](n,121)._click(e)&&i}return i},In.b,In.a)),p["ɵdid"](121,245760,null,0,kn.a,[J.a,F.a,p.ElementRef,p.Renderer,[2,j.a],[2,mn.a]],{value:[0,"value"]},null),(n()(),p["ɵted"](-1,2,["\n                                "])),(n()(),p["ɵted"](-1,null,["\n                            "])),(n()(),p["ɵted"](-1,null,["\n                        "])),(n()(),p["ɵted"](-1,null,["\n                    "])),(n()(),p["ɵted"](-1,null,["\n                "])),(n()(),p["ɵted"](-1,null,["\n            "])),(n()(),p["ɵted"](-1,null,["\n            "])),(n()(),p["ɵeld"](129,0,null,null,9,"ion-col",[["class","col"],["col-12",""]],null,null,null,null,null)),p["ɵdid"](130,16384,null,0,M.a,[],null,null),(n()(),p["ɵted"](-1,null,["\n                "])),(n()(),p["ɵeld"](132,0,null,null,5,"ion-list",[["no-margin",""]],null,null,null,null,null)),p["ɵdid"](133,16384,null,0,vn.a,[F.a,p.ElementRef,p.Renderer,T.a,gn.l,pn.a],null,null),(n()(),p["ɵted"](-1,null,["\n                    "])),(n()(),p["ɵand"](16777216,null,null,1,null,d)),p["ɵdid"](136,802816,null,0,H.NgForOf,[p.ViewContainerRef,p.TemplateRef,p.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(n()(),p["ɵted"](-1,null,["\n                "])),(n()(),p["ɵted"](-1,null,["\n            "])),(n()(),p["ɵted"](-1,null,["\n        "])),(n()(),p["ɵted"](-1,null,["\n    "])),(n()(),p["ɵted"](-1,1,["\n"]))],function(n,l){var e=l.component;n(l,15,0,"");n(l,20,0,"menu");n(l,41,0,"home");n(l,55,0,e.inspecoes.length<1);n(l,61,0,0==e.servico.status);n(l,67,0,e.inspecoesBackup.length>0);n(l,76,0,"status",e.servico.status);n(l,102,0,0);n(l,121,0,1);n(l,136,0,e.inspecoes)},function(n,l){var e=l.component;n(l,4,0,p["ɵnov"](l,5)._hidden,p["ɵnov"](l,5)._sbPadding);n(l,13,0,p["ɵnov"](l,15).isHidden);n(l,19,0,p["ɵnov"](l,20)._hidden);n(l,40,0,p["ɵnov"](l,41)._hidden);n(l,48,0,p["ɵnov"](l,49).statusbarPadding,p["ɵnov"](l,49)._hasRefresher);n(l,52,0,e.broadcomb.toUpperCase());n(l,72,0,p["ɵnov"](l,78).ngClassUntouched,p["ɵnov"](l,78).ngClassTouched,p["ɵnov"](l,78).ngClassPristine,p["ɵnov"](l,78).ngClassDirty,p["ɵnov"](l,78).ngClassValid,p["ɵnov"](l,78).ngClassInvalid,p["ɵnov"](l,78).ngClassPending);n(l,101,0,p["ɵnov"](l,102)._disabled);n(l,120,0,p["ɵnov"](l,121)._disabled)})}Object.defineProperty(l,"__esModule",{value:!0});var p=e(1),f=(e(0),e(55),e(789)),h=e(790),m=e(61),v=e(771),g=e(763),b=e(87),I=e(807),k=e(774),w=e(88),R=this&&this.__awaiter||function(n,l,e,i){return new(e||(e=Promise))(function(t,u){function a(n){try{r(i.next(n))}catch(n){u(n)}}function o(n){try{r(i.throw(n))}catch(n){u(n)}}function r(n){n.done?t(n.value):new e(function(l){l(n.value)}).then(a,o)}r((i=i.apply(n,l||[])).next())})},x=this&&this.__generator||function(n,l){function e(e){return function(a){return function(e){if(i)throw new TypeError("Generator is already executing.");for(;o;)try{if(i=1,t&&(u=t[2&e[0]?"return":e[0]?"throw":"next"])&&!(u=u.call(t,e[1])).done)return u;switch(t=0,u&&(e=[0,u.value]),e[0]){case 0:case 1:u=e;break;case 4:return o.label++,{value:e[1],done:!1};case 5:o.label++,t=e[1],e=[0];continue;case 7:e=o.ops.pop(),o.trys.pop();continue;default:if(u=o.trys,!(u=u.length>0&&u[u.length-1])&&(6===e[0]||2===e[0])){o=0;continue}if(3===e[0]&&(!u||e[1]>u[0]&&e[1]<u[3])){o.label=e[1];break}if(6===e[0]&&o.label<u[1]){o.label=u[1],u=e;break}if(u&&o.label<u[2]){o.label=u[2],o.ops.push(e);break}u[2]&&o.ops.pop(),o.trys.pop();continue}e=l.call(n,o)}catch(n){e=[6,n],t=0}finally{i=u=0}if(5&e[0])throw e[1];return{value:e[0]?e[1]:void 0,done:!0}}([e,a])}}var i,t,u,a,o={label:0,sent:function(){if(1&u[0])throw u[1];return u[1]},trys:[],ops:[]};return a={next:e(0),throw:e(1),return:e(2)},"function"==typeof Symbol&&(a[Symbol.iterator]=function(){return this}),a},C=function(){function n(n,l,e,i,t,u,a){this.navParams=n,this.storage=l,this.storageServiceUtils=e,this.actionSheetCtrl=i,this.modalCtrl=t,this.messageService=u,this.navCtrl=a,this.servico=new f.a,this.itemChecklist=new k.a,this.inspecoes=[],this.inspecoesBackup=[],this.itensBackup=[],this.inspecaoBackup=new h.a,this.servico=n.data.servico,this.inspecoes=this.ordenar(this.servico.inspecoesObra).slice(),this.inspecoesBackup=this.servico.inspecoesObra.slice(),this.obterItemChecklist(),this.broadcomb=n.data.broadcomb+" >> "+this.servico.descricao}return n.prototype.ordenar=function(n){return n.sort(function(n,l){return n.dataInspecao>l.dataInspecao?-1:1})},n.prototype.atualizarStatus=function(){var n=this;setTimeout(function(){0==n.servico.status?(n.servico.situacao="Em aberto",n.criarAtualizacaoStatus()):n.servico.inspecoesObra.some(function(n){return 0==n.status})?(n.servico.status=0,n.messageService.exibirMensagem("Não foi possível finalizar o Serviço, existem inspeções em aberto.")):(n.servico.situacao="Finalizado",n.criarAtualizacaoStatus())},100)},n.prototype.criarAtualizacaoStatus=function(){var n=this;this.storage.ready().then(function(){var l=[];n.storage.get("atualizacoes").then(function(e){var i=new v.a({id:g.UUID.UUID(),idServico:n.servico.id,idGuidServico:n.servico.idGuidServico,idArea:n.servico.idArea,idGuidArea:n.servico.idAreaGuid,tipo:"Update",entidade:"Servico",valor:JSON.stringify(n.servico),data:new Date,descricao:(0==n.servico.status?"Reabertura":"Finalização")+" do serviço '"+n.servico.descricao+"' em '"+n.broadcomb.toUpperCase()+"'.",obraId:n.servico.idObra});e?(l=e).push(i):l.push(i),n.storage.set("atualizacoes",l),n.atualizarObra(n.servico)})})},n.prototype.atualizarObra=function(n){return R(this,void 0,void 0,function(){var l,e=this;return x(this,function(i){switch(i.label){case 0:return[4,this.storageServiceUtils.montarObra()];case 1:return l=i.sent(),l.find(function(n){return n.id==e.servico.idObra}).areas.find(function(n){return e.servico.idAreaGuid?n.idGuid==e.servico.idAreaGuid:n.id==e.servico.idArea}).servicos.find(function(l){return n.idGuidServico?l.idGuidServico==n.idGuidServico:l.id==n.id}).status=n.status,this.storageServiceUtils.armazenarObraNoStorage(l),[2]}})})},n.prototype.obterItemChecklist=function(){var n=this;this.storage.ready().then(function(){n.storage.get("itensChecklist").then(function(l){n.itemChecklist=l.find(function(l){return l.id==n.servico.idChecklist}),n.itemChecklist||(n.itemChecklist=l.find(function(l){return l.idGuid==n.servico.idChecklistGuid}))})})},n.prototype.novaInspecao=function(){var n=this,l=this.modalCtrl.create("ManterVerificacaoPage",{inspecao:new h.a,itemChecklist:this.itemChecklist});l.present(),l.onWillDismiss(function(l){l&&(l.idGuidInspecao=g.UUID.UUID(),l.idGuidServico=n.servico.idGuidServico,l.idServico=n.servico.id,n.itemChecklist.itensChecklistServico.forEach(function(n){var e=new I.a;e.dataHoraInclusao=new Date,e.descricao=n.descricao,e.idGuidInspecao=l.idGuidInspecao,e.ordem=n.ordem.toString(),e.idGuidItemServico=n.idGuid,e.idItemServico=n.id,l.inspecaoObraItens.push(e)}),n.inspecoes.unshift(l),n.inspecoesBackup.unshift(l),n.criarInspecao(l))})},n.prototype.abrirItensInspecao=function(n){var l=this,e=this.modalCtrl.create("RealizarVerificacaoPage",{inspecao:n,descServico:this.broadcomb,servico:this.servico});this.itensBackup=[],this.statusBackup=n.status,this.idFuncionarioAprovadoBackup=n.idFuncionarioAprovado,this.idFuncionarioInspecionadoBackup=n.idFuncionarioInspecionado,n.inspecaoObraItens.forEach(function(n){l.itensBackup.push(new I.a(n))}),e.present(),e.onWillDismiss(function(n){if(n.concluido){n.inspecao.qtdA=n.inspecao.inspecaoObraItens.filter(function(n){return"A"==n.inspecao1}).length,n.inspecao.qtdNA=n.inspecao.inspecaoObraItens.filter(function(n){return"N"==n.inspecao1}).length,n.inspecao.qtdR=n.inspecao.inspecaoObraItens.filter(function(n){return"R"==n.inspecao1}).length,n.inspecao.qtdX=n.inspecao.inspecaoObraItens.filter(function(n){return"X"==n.inspecao1}).length,n.inspecao.qtdRA=n.inspecao.inspecaoObraItens.filter(function(n){return"A"==n.inspecao2}).length;var e=l.inspecoesBackup.findIndex(function(l){return 0!=n.inspecao.id?l.id==n.inspecao.id:l.idGuidInspecao==n.inspecao.idGuidInspecao});l.inspecoesBackup[e]=n.inspecao,l.inspecoes=l.inspecoesBackup.slice(),l.editarInspecao(n.inspecao,"Realização da verificação")}else{n.inspecao.inspecaoObraItens=l.itensBackup.slice(),n.inspecao.status=l.statusBackup,n.inspecao.idFuncionarioAprovado=l.idFuncionarioAprovadoBackup,n.inspecao.idFuncionarioInspecionado=l.idFuncionarioInspecionadoBackup;e=l.inspecoesBackup.findIndex(function(l){return 0!=n.inspecao.id?l.id==n.inspecao.id:l.idGuidInspecao==n.inspecao.idGuidInspecao});l.inspecoesBackup[e]=n.inspecao,l.inspecoes=l.inspecoesBackup.slice()}})},n.prototype.editar=function(n){var l=this,e=this.modalCtrl.create("ManterVerificacaoPage",{inspecao:n,itemChecklist:this.itemChecklist});this.inspecaoBackup=new h.a(n),e.present(),e.onWillDismiss(function(n){if(n){var e=l.inspecoesBackup.findIndex(function(l){return 0!=n.id?l.id==n.id:l.idGuidInspecao==n.idGuidInspecao});l.inspecoesBackup[e]=n,l.inspecoes=l.inspecoesBackup.slice(),l.editarInspecao(n,"Edição da verificação")}else{var i=l.inspecoes.find(function(n){return n.idGuidInspecao?n.idGuidInspecao==l.inspecaoBackup.idGuidInspecao:n.id==l.inspecaoBackup.id});i.dataInspecao=l.inspecaoBackup.dataInspecao,i.dataEncerramento=l.inspecaoBackup.dataEncerramento,i.campo1=l.inspecaoBackup.campo1,i.campo2=l.inspecaoBackup.campo2,i.campo3=l.inspecaoBackup.campo3,i.campo4=l.inspecaoBackup.campo4}})},n.prototype.editarInspecao=function(n,l){var e=this;this.storage.ready().then(function(){var i=[];e.storage.get("atualizacoes").then(function(t){var u=new v.a({id:g.UUID.UUID(),idInspecao:n.id,idGuidInspecao:n.idGuidInspecao,idArea:e.servico.idArea,idGuidArea:e.servico.idAreaGuid,idServico:e.servico.id,idGuidServico:e.servico.idGuidServico,tipo:"Update",entidade:"Inspecao",valor:JSON.stringify(n),data:new Date,descricao:l+" '"+n.campo1+"' no serviço '"+e.servico.descricao+"'.",obraId:e.servico.idObra});t?(i=t).push(u):i.push(u),e.storage.set("atualizacoes",i),e.atualizarObraEdicao(n)})})},n.prototype.criarInspecao=function(n){var l=this;this.storage.ready().then(function(){var e=[];l.storage.get("atualizacoes").then(function(i){var t=new v.a({id:g.UUID.UUID(),idInspecao:n.id,idGuidInspecao:n.idGuidInspecao,idArea:l.servico.idArea,idGuidArea:l.servico.idAreaGuid,idServico:l.servico.id,idGuidServico:l.servico.idGuidServico,tipo:"Insert",entidade:"Inspecao",valor:JSON.stringify(n),data:new Date,descricao:"Criação da verificação '"+n.campo1+"' no serviço '"+l.servico.descricao+"'.",obraId:l.servico.idObra});i?(e=i).push(t):e.push(t),l.storage.set("atualizacoes",e),l.atualizarObraCriacao(n)})})},n.prototype.filtrar=function(n){this.inspecoes=0==n.length?this.inspecoesBackup.slice():this.inspecoesBackup.filter(function(l){return l.campo1.toLowerCase().indexOf(n.toLowerCase())>-1})},n.prototype.confirmarExclusao=function(n){var l=this;this.messageService.exibirMensagemConfirmacao(n.delete?"Deseja realmente reativar a verificação '"+n.campo1+"'?":"Deseja realmente excluir a verificação '"+n.campo1+"'?",function(){l.alterarSituacaoVerificacao(n)})},n.prototype.alterarSituacaoVerificacao=function(n){var l=this;this.storage.ready().then(function(){var e=[];l.storage.get("atualizacoes").then(function(i){n.delete=!n.delete;var t=new v.a({id:g.UUID.UUID(),idInspecao:n.id,idGuidInspecao:n.idGuidInspecao,idArea:l.servico.idArea,idGuidArea:l.servico.idAreaGuid,idServico:l.servico.id,idGuidServico:l.servico.idGuidServico,tipo:"Update",entidade:"Inspecao",valor:JSON.stringify(n),data:new Date,descricao:(n.delete?"Inativação":"Ativação")+" da verificação '"+n.campo1+"' no serviço '"+l.servico.descricao+"'.",obraId:l.servico.idObra});i?(e=i).push(t):e.push(t),l.storage.set("atualizacoes",e),l.atualizarObraSituacao(n)})})},n.prototype.atualizarObraSituacao=function(n){return R(this,void 0,void 0,function(){var l,e=this;return x(this,function(i){switch(i.label){case 0:return[4,this.storageServiceUtils.montarObra()];case 1:return l=i.sent(),l.find(function(n){return n.id==e.servico.idObra}).areas.find(function(n){return e.servico.idAreaGuid?n.idGuid==e.servico.idAreaGuid:n.id==e.servico.idArea}).servicos.find(function(n){return e.servico.idGuidServico?n.idGuidServico==e.servico.idGuidServico:n.id==e.servico.id}).inspecoesObra.find(function(l){return n.idGuidInspecao?l.idGuidInspecao==n.idGuidInspecao:l.id==n.id}).delete=n.delete,this.storageServiceUtils.armazenarObraNoStorage(l),[2]}})})},n.prototype.atualizarObraEdicao=function(n){return R(this,void 0,void 0,function(){var l,e,i=this;return x(this,function(t){switch(t.label){case 0:return[4,this.storageServiceUtils.montarObra()];case 1:return l=t.sent(),e=l.find(function(n){return n.id==i.servico.idObra}).areas.find(function(n){return i.servico.idAreaGuid?n.idGuid==i.servico.idAreaGuid:n.id==i.servico.idArea}).servicos.find(function(n){return i.servico.idGuidServico?n.idGuidServico==i.servico.idGuidServico:n.id==i.servico.id}).inspecoesObra.find(function(l){return n.idGuidInspecao?l.idGuidInspecao==n.idGuidInspecao:l.id==n.id}),e.campo1=n.campo1,e.campo2=n.campo2,e.campo3=n.campo3,e.campo4=n.campo4,e.dataInspecao=n.dataInspecao,e.dataEncerramento=n.dataEncerramento,e.idFuncionarioAprovado=n.idFuncionarioAprovado,e.idFuncionarioInspecionado=n.idFuncionarioInspecionado,e.status=n.status,e.situacao=n.situacao,e.inspecaoObraItens=n.inspecaoObraItens,this.storageServiceUtils.armazenarObraNoStorage(l),[2]}})})},n.prototype.atualizarObraCriacao=function(n){return R(this,void 0,void 0,function(){var l,e=this;return x(this,function(i){switch(i.label){case 0:return[4,this.storageServiceUtils.montarObra()];case 1:return(l=i.sent()).find(function(n){return n.id==e.servico.idObra}).areas.find(function(n){return e.servico.idAreaGuid?n.idGuid==e.servico.idAreaGuid:n.id==e.servico.idArea}).servicos.find(function(n){return e.servico.idGuidServico?n.idGuidServico==e.servico.idGuidServico:n.id==e.servico.id}).inspecoesObra.unshift(n),this.storageServiceUtils.armazenarObraNoStorage(l),[2]}})})},n.prototype.exibirOpcoes=function(n){0==n.status?this.exibirTodasOpcoes(n):this.exibirOpcoesRestritas(n)},n.prototype.exibirTodasOpcoes=function(n){var l=this;this.actionSheetCtrl.create({buttons:[{text:"Realizar inspeção",handler:function(){l.abrirItensInspecao(n)}},{text:"Editar",handler:function(){l.editar(n)}},{text:n.delete?"Reativar":"Excluir",handler:function(){l.confirmarExclusao(n)}},{text:"Cancelar",role:"cancel"}]}).present()},n.prototype.exibirOpcoesRestritas=function(n){var l=this;this.actionSheetCtrl.create({buttons:[{text:"Realizar inspeção",handler:function(){l.abrirItensInspecao(n)}},{text:"Cancelar",role:"cancel"}]}).present()},n.prototype.voltarHome=function(){this.navCtrl.setRoot("HomePage")},n}(),G=function(){return function(){}}(),S=e(191),y=e(192),O=e(193),A=e(194),E=e(195),U=e(196),z=e(197),B=e(198),D=e(199),N=e(83),_=e(38),q=e(27),F=e(3),M=e(84),V=e(364),$=e(90),T=e(6),L=e(20),P=e(130),H=e(15),j=e(24),J=e(21),X=e(50),W=e(60),K=e(36),Z=e(132),Q=e(7),Y=e(362),nn=e(39),ln=e(12),en=e(29),tn=e(201),un=e(33),an=e(133),on=e(51),rn=e(361),cn=e(85),dn=e(200),sn=e(30),pn=e(13),fn=e(32),hn=e(131),mn=e(64),vn=e(56),gn=e(10),bn=e(63),In=e(363),kn=e(89),wn=e(16),Rn=e(140),xn=e(91),Cn=p["ɵcrt"]({encapsulation:2,styles:[],data:{}}),Gn=p["ɵccf"]("page-verificacao",C,function(n){return p["ɵvid"](0,[(n()(),p["ɵeld"](0,0,null,null,1,"page-verificacao",[],null,null,null,s,Cn)),p["ɵdid"](1,49152,null,0,C,[wn.a,m.b,w.a,Rn.a,xn.a,b.a,en.a],null,null)],null,null)},{},{},[]),Sn=e(129),yn=e(49);e.d(l,"VerificacaoPageModuleNgFactory",function(){return On});var On=p["ɵcmf"](G,[],function(n){return p["ɵmod"]([p["ɵmpd"](512,p.ComponentFactoryResolver,p["ɵCodegenComponentFactoryResolver"],[[8,[S.a,y.a,O.a,A.a,E.a,U.a,z.a,B.a,D.a,Gn]],[3,p.ComponentFactoryResolver],p.NgModuleRef]),p["ɵmpd"](4608,H.NgLocalization,H.NgLocaleLocalization,[p.LOCALE_ID,[2,H["ɵa"]]]),p["ɵmpd"](4608,L.r,L.r,[]),p["ɵmpd"](4608,L.d,L.d,[]),p["ɵmpd"](512,H.CommonModule,H.CommonModule,[]),p["ɵmpd"](512,L.p,L.p,[]),p["ɵmpd"](512,L.e,L.e,[]),p["ɵmpd"](512,L.n,L.n,[]),p["ɵmpd"](512,Sn.a,Sn.a,[]),p["ɵmpd"](512,Sn.b,Sn.b,[]),p["ɵmpd"](512,G,G,[]),p["ɵmpd"](256,yn.a,C,[])])})},763:function(n,l,e){"use strict";l.UUID=function(){function n(){}return n.UUID=function(){if("undefined"!=typeof window&&void 0!==window.crypto&&void 0!==window.crypto.getRandomValues){var n=new Uint16Array(8);return window.crypto.getRandomValues(n),this.pad4(n[0])+this.pad4(n[1])+"-"+this.pad4(n[2])+"-"+this.pad4(n[3])+"-"+this.pad4(n[4])+"-"+this.pad4(n[5])+this.pad4(n[6])+this.pad4(n[7])}return this.random4()+this.random4()+"-"+this.random4()+"-"+this.random4()+"-"+this.random4()+"-"+this.random4()+this.random4()+this.random4()},n.pad4=function(n){for(var l=n.toString(16);l.length<4;)l="0"+l;return l},n.random4=function(){return Math.floor(65536*(1+Math.random())).toString(16).substring(1)},n}()},771:function(n,l,e){"use strict";e.d(l,"a",function(){return i});var i=function(){return function(n){void 0===n&&(n={}),Object.assign(this,n)}}()},774:function(n,l,e){"use strict";e.d(l,"a",function(){return i});var i=function(){return function(n){void 0===n&&(n={}),this.id=0,this.campo1="",this.campo2="",this.campo3="",this.campo4="",this.itensChecklistServico=[],Object.assign(this,n)}}()},789:function(n,l,e){"use strict";e.d(l,"a",function(){return i});var i=function(){return function(n){void 0===n&&(n={}),this.id=0,this.idGuidServico="",this.descricao="",this.tipo="",this.idObra=0,this.idChecklist=0,this.idChecklistGuid="",this.idArea=0,this.idAreaGuid="",this.metaAprovacao=90,this.status=0,this.situacao="Em aberto",this.delete=!1,this.dataHoraInclusao=new Date,this.dataHoraAlteracao=new Date,this.inspecoesObra=[],this.itensChecklistServico=[],Object.assign(this,n)}}()},790:function(n,l,e){"use strict";e.d(l,"a",function(){return i});var i=function(){return function(n){void 0===n&&(n={}),this.id=0,this.idGuidInspecao="",this.idGuidServico="",this.campo1="",this.campo2="",this.campo3="",this.campo4="",this.status=0,this.situacao="Em aberto",this.delete=!1,this.dataHoraAlteracao=new Date,this.qtdNA=0,this.qtdA=0,this.qtdR=0,this.qtdRA=0,this.qtdX=0,this.inspecaoObraItens=[],this.ocorrencias=[],Object.assign(this,n)}}()},807:function(n,l,e){"use strict";e.d(l,"a",function(){return i});var i=function(){return function(n){void 0===n&&(n={}),this.id=0,this.idInspecaoObra=0,this.idGuidInspecao="",this.idGuidItemServico="",this.inspecao1="",this.inspecao2="",this.delete=!1,this.dataHoraAlteracao=new Date,Object.assign(this,n)}}()}});
+webpackJsonp([5],{
+
+/***/ 772:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OcorrenciaPageModule", function() { return OcorrenciaPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ocorrencia__ = __webpack_require__(879);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var OcorrenciaPageModule = /** @class */ (function () {
+    function OcorrenciaPageModule() {
+    }
+    OcorrenciaPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__ocorrencia__["a" /* OcorrenciaPage */]
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__ocorrencia__["a" /* OcorrenciaPage */])
+            ],
+            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"]]
+        })
+    ], OcorrenciaPageModule);
+    return OcorrenciaPageModule;
+}());
+
+//# sourceMappingURL=ocorrencia.module.js.map
+
+/***/ }),
+
+/***/ 777:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var UUID = (function () {
+    function UUID() {
+        // no-op
+    }
+    UUID.UUID = function () {
+        if (typeof (window) !== "undefined" && typeof (window.crypto) !== "undefined" && typeof (window.crypto.getRandomValues) !== "undefined") {
+            // If we have a cryptographically secure PRNG, use that
+            // http://stackoverflow.com/questions/6906916/collisions-when-generating-uuids-in-javascript
+            var buf = new Uint16Array(8);
+            window.crypto.getRandomValues(buf);
+            return (this.pad4(buf[0]) + this.pad4(buf[1]) + "-" + this.pad4(buf[2]) + "-" + this.pad4(buf[3]) + "-" + this.pad4(buf[4]) + "-" + this.pad4(buf[5]) + this.pad4(buf[6]) + this.pad4(buf[7]));
+        }
+        else {
+            // Otherwise, just use Math.random
+            // https://stackoverflow.com/questions/105034/create-guid-uuid-in-javascript
+            // https://stackoverflow.com/questions/11605068/why-does-jshint-argue-against-bitwise-operators-how-should-i-express-this-code
+            return this.random4() + this.random4() + "-" + this.random4() + "-" + this.random4() + "-" +
+                this.random4() + "-" + this.random4() + this.random4() + this.random4();
+        }
+    };
+    UUID.pad4 = function (num) {
+        var ret = num.toString(16);
+        while (ret.length < 4) {
+            ret = "0" + ret;
+        }
+        return ret;
+    };
+    UUID.random4 = function () {
+        return Math.floor((1 + Math.random()) * 0x10000)
+            .toString(16)
+            .substring(1);
+    };
+    return UUID;
+}());
+exports.UUID = UUID;
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+
+/***/ 781:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Alteracao; });
+var Alteracao = /** @class */ (function () {
+    function Alteracao(values) {
+        if (values === void 0) { values = {}; }
+        Object.assign(this, values);
+    }
+    return Alteracao;
+}());
+
+//# sourceMappingURL=alteracao.js.map
+
+/***/ }),
+
+/***/ 784:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Servico; });
+var Servico = /** @class */ (function () {
+    function Servico(values) {
+        if (values === void 0) { values = {}; }
+        this.id = 0;
+        this.idGuidServico = '';
+        this.descricao = '';
+        this.tipo = '';
+        this.idObra = 0;
+        this.idChecklist = 0;
+        this.idChecklistGuid = '';
+        this.idArea = 0;
+        this.idAreaGuid = "";
+        this.metaAprovacao = 90;
+        this.status = 0;
+        this.situacao = 'Em aberto';
+        this.delete = false;
+        this.dataHoraInclusao = new Date();
+        this.dataHoraAlteracao = new Date();
+        this.inspecoesObra = [];
+        this.itensChecklistServico = [];
+        Object.assign(this, values);
+    }
+    return Servico;
+}());
+
+//# sourceMappingURL=servico.js.map
+
+/***/ }),
+
+/***/ 785:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Inspecao; });
+var Inspecao = /** @class */ (function () {
+    function Inspecao(values) {
+        if (values === void 0) { values = {}; }
+        this.id = 0;
+        this.idGuidInspecao = '';
+        this.idGuidServico = '';
+        this.campo1 = "";
+        this.campo2 = "";
+        this.campo3 = "";
+        this.campo4 = "";
+        this.status = 0;
+        this.situacao = 'Em aberto';
+        this.delete = false;
+        this.dataHoraAlteracao = new Date();
+        this.qtdNA = 0;
+        this.qtdA = 0;
+        this.qtdR = 0;
+        this.qtdRA = 0;
+        this.qtdX = 0;
+        this.inspecaoObraItens = [];
+        this.ocorrencias = [];
+        Object.assign(this, values);
+    }
+    return Inspecao;
+}());
+
+//# sourceMappingURL=inspecao.js.map
+
+/***/ }),
+
+/***/ 796:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Ocorrencia; });
+var Ocorrencia = /** @class */ (function () {
+    function Ocorrencia(values) {
+        if (values === void 0) { values = {}; }
+        this.id = 0;
+        this.idGuidOcorrencia = '';
+        this.idInspecaoObra = 0;
+        this.idGuidInspecao = '';
+        this.descricao = '';
+        this.tratativa = '';
+        this.dataHoraAlteracao = new Date();
+        Object.assign(this, values);
+    }
+    return Ocorrencia;
+}());
+
+//# sourceMappingURL=ocorrencia.js.map
+
+/***/ }),
+
+/***/ 879:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OcorrenciaPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_inspecao__ = __webpack_require__(785);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_message_service__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__models_ocorrencia__ = __webpack_require__(796);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__models_alteracao__ = __webpack_require__(781);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angular2_uuid__ = __webpack_require__(777);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angular2_uuid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_angular2_uuid__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__models_servico__ = __webpack_require__(784);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__utils_storage_service_utils__ = __webpack_require__(156);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
+
+
+
+
+
+
+
+
+
+
+var OcorrenciaPage = /** @class */ (function () {
+    function OcorrenciaPage(navParams, storage, viewCtrl, actionSheetCtrl, storageServiceUtils, modalCtrl, messageService) {
+        this.navParams = navParams;
+        this.storage = storage;
+        this.viewCtrl = viewCtrl;
+        this.actionSheetCtrl = actionSheetCtrl;
+        this.storageServiceUtils = storageServiceUtils;
+        this.modalCtrl = modalCtrl;
+        this.messageService = messageService;
+        this.inspecao = new __WEBPACK_IMPORTED_MODULE_2__models_inspecao__["a" /* Inspecao */]();
+        this.servico = new __WEBPACK_IMPORTED_MODULE_8__models_servico__["a" /* Servico */]();
+        this.ocorrenciaBackup = new __WEBPACK_IMPORTED_MODULE_5__models_ocorrencia__["a" /* Ocorrencia */]();
+        this.inspecao = navParams.data.inspecao;
+        this.servico = navParams.data.servico;
+        this.broadcomb = navParams.data.broadcomb;
+    }
+    OcorrenciaPage.prototype.exibirOpcoes = function (ocorrencia) {
+        var _this = this;
+        var actionSheet = this.actionSheetCtrl.create({
+            "buttons": [
+                {
+                    "text": "Editar",
+                    handler: function () {
+                        _this.editar(ocorrencia);
+                    }
+                },
+                {
+                    "text": !ocorrencia.delete ? "Excluir" : "Reativar",
+                    handler: function () {
+                        _this.confirmarExclusao(ocorrencia);
+                    }
+                },
+                {
+                    "text": "Cancelar",
+                    "role": "cancel"
+                }
+            ]
+        });
+        actionSheet.present();
+    };
+    OcorrenciaPage.prototype.novaOcorrencia = function () {
+        var _this = this;
+        var modal = this.modalCtrl.create("ManterOcorrenciaPage", { ocorrencia: new __WEBPACK_IMPORTED_MODULE_2__models_inspecao__["a" /* Inspecao */]() });
+        modal.present();
+        modal.onWillDismiss(function (ocorrencia) {
+            if (ocorrencia) {
+                ocorrencia.idGuidOcorrencia = __WEBPACK_IMPORTED_MODULE_7_angular2_uuid__["UUID"].UUID();
+                ocorrencia.idInspecaoObra = _this.inspecao.id;
+                ocorrencia.idGuidInspecao = _this.inspecao.idGuidInspecao;
+                _this.inspecao.ocorrencias.unshift(ocorrencia);
+                _this.gerarNovaOcorrencia(ocorrencia);
+            }
+        });
+    };
+    OcorrenciaPage.prototype.gerarNovaOcorrencia = function (ocorrencia) {
+        var _this = this;
+        this.storage.ready().then(function () {
+            var atualizacoesArray = [];
+            _this.storage.get('atualizacoes').then(function (atualizacoes) {
+                var alteracao = new __WEBPACK_IMPORTED_MODULE_6__models_alteracao__["a" /* Alteracao */]({ id: __WEBPACK_IMPORTED_MODULE_7_angular2_uuid__["UUID"].UUID(), idOcorrencia: ocorrencia.id, idGuidOcorrencia: ocorrencia.idGuidOcorrencia, idInspecao: _this.inspecao.id, idGuidInspecao: _this.inspecao.idGuidInspecao, idArea: _this.servico.idArea, idGuidArea: _this.servico.idAreaGuid, idServico: _this.servico.id, idGuidServico: _this.servico.idGuidServico, tipo: "Insert", entidade: "Ocorrencia", valor: JSON.stringify(ocorrencia), data: new Date(), descricao: "Criação da ocorrência '" + ocorrencia.descricao + "' em '" + _this.broadcomb + "'.", obraId: _this.servico.idObra });
+                if (atualizacoes) {
+                    atualizacoesArray = atualizacoes;
+                    atualizacoesArray.push(alteracao);
+                }
+                else {
+                    atualizacoesArray.push(alteracao);
+                }
+                _this.storage.set('atualizacoes', atualizacoesArray);
+                _this.atualizarOcorrenciaCriacao(ocorrencia);
+            });
+        });
+    };
+    OcorrenciaPage.prototype.atualizarOcorrenciaCriacao = function (item) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            var obras;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.storageServiceUtils.montarObra()];
+                    case 1:
+                        obras = _a.sent();
+                        obras.find(function (x) { return x.id == _this.servico.idObra; }).areas.find(function (x) { return _this.servico.idAreaGuid ? (x.idGuid == _this.servico.idAreaGuid) : (x.id == _this.servico.idArea); }).servicos.find(function (x) { return _this.servico.idGuidServico ? (x.idGuidServico == _this.servico.idGuidServico) : (x.id == _this.servico.id); }).inspecoesObra.find(function (x) { return _this.inspecao.idGuidInspecao ? (x.idGuidInspecao == _this.inspecao.idGuidInspecao) : (x.id == _this.inspecao.id); }).ocorrencias.unshift(item);
+                        this.storageServiceUtils.armazenarObraNoStorage(obras);
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    OcorrenciaPage.prototype.editar = function (ocorrencia) {
+        var _this = this;
+        if (this.servico.status != 1) {
+            var modal = this.modalCtrl.create("ManterOcorrenciaPage", { ocorrencia: ocorrencia });
+            this.ocorrenciaBackup = new __WEBPACK_IMPORTED_MODULE_5__models_ocorrencia__["a" /* Ocorrencia */](ocorrencia);
+            modal.present();
+            modal.onWillDismiss(function (data) {
+                if (data) {
+                    _this.editarOcorrencias(data);
+                }
+                else {
+                    var ocorrenciaArray = _this.inspecao.ocorrencias.find(function (x) { return _this.ocorrenciaBackup.idGuidOcorrencia ? (x.idGuidOcorrencia == _this.ocorrenciaBackup.idGuidOcorrencia) : (x.id == _this.ocorrenciaBackup.id); });
+                    ocorrenciaArray.dataDescricao = _this.ocorrenciaBackup.dataDescricao;
+                    ocorrenciaArray.descricao = _this.ocorrenciaBackup.descricao;
+                    ocorrenciaArray.dataTratativa = _this.ocorrenciaBackup.dataTratativa;
+                    ocorrenciaArray.tratativa = _this.ocorrenciaBackup.tratativa;
+                }
+            });
+        }
+    };
+    OcorrenciaPage.prototype.editarOcorrencias = function (ocorrencia) {
+        var _this = this;
+        this.storage.ready().then(function () {
+            var atualizacoesArray = [];
+            _this.storage.get('atualizacoes').then(function (atualizacoes) {
+                var alteracao = new __WEBPACK_IMPORTED_MODULE_6__models_alteracao__["a" /* Alteracao */]({ id: __WEBPACK_IMPORTED_MODULE_7_angular2_uuid__["UUID"].UUID(), idOcorrencia: ocorrencia.id, idGuidOcorrencia: ocorrencia.idGuidOcorrencia, idInspecao: _this.inspecao.id, idGuidInspecao: _this.inspecao.idGuidInspecao, idArea: _this.servico.idArea, idGuidArea: _this.servico.idAreaGuid, idServico: _this.servico.id, idGuidServico: _this.servico.idGuidServico, tipo: "Update", entidade: "Ocorrencia", valor: JSON.stringify(ocorrencia), data: new Date(), descricao: "Edição da ocorrência '" + ocorrencia.descricao + "' em '" + _this.broadcomb + "'.", obraId: _this.servico.idObra });
+                if (atualizacoes) {
+                    atualizacoesArray = atualizacoes;
+                    atualizacoesArray.push(alteracao);
+                }
+                else {
+                    atualizacoesArray.push(alteracao);
+                }
+                _this.storage.set('atualizacoes', atualizacoesArray);
+                _this.atualizarOcorrenciaEdicao(ocorrencia);
+            });
+        });
+    };
+    OcorrenciaPage.prototype.atualizarOcorrenciaEdicao = function (item) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            var obras, ocorrencia;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.storageServiceUtils.montarObra()];
+                    case 1:
+                        obras = _a.sent();
+                        ocorrencia = obras.find(function (x) { return x.id == _this.servico.idObra; }).areas.find(function (x) { return _this.servico.idAreaGuid ? (x.idGuid == _this.servico.idAreaGuid) : (x.id == _this.servico.idArea); }).servicos.find(function (x) { return _this.servico.idGuidServico ? (x.idGuidServico == _this.servico.idGuidServico) : (x.id == _this.servico.id); }).inspecoesObra.find(function (x) { return _this.inspecao.idGuidInspecao ? (x.idGuidInspecao == _this.inspecao.idGuidInspecao) : (x.id == _this.inspecao.id); }).ocorrencias.find(function (x) { return x.idGuidOcorrencia ? (x.idGuidOcorrencia == item.idGuidOcorrencia) : (x.id == item.id); });
+                        ocorrencia.dataDescricao = item.dataDescricao;
+                        ocorrencia.descricao = item.descricao;
+                        ocorrencia.dataTratativa = item.dataTratativa;
+                        ocorrencia.tratativa = item.tratativa;
+                        this.storageServiceUtils.armazenarObraNoStorage(obras);
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    OcorrenciaPage.prototype.confirmarExclusao = function (ocorrencia) {
+        var _this = this;
+        var mensagem;
+        if (!ocorrencia.delete) {
+            mensagem = "Deseja realmente excluir a ocorrência selecionada?";
+        }
+        else {
+            mensagem = "Deseja realmente reativar a ocorrência selecionada?";
+        }
+        this.messageService.exibirMensagemConfirmacao(mensagem, function () { _this.alterarSituacaoOcorrencia(ocorrencia); });
+    };
+    OcorrenciaPage.prototype.alterarSituacaoOcorrencia = function (ocorrencia) {
+        var _this = this;
+        this.storage.ready().then(function () {
+            var atualizacoesArray = [];
+            _this.storage.get('atualizacoes').then(function (atualizacoes) {
+                ocorrencia.delete = !ocorrencia.delete;
+                var alteracao = new __WEBPACK_IMPORTED_MODULE_6__models_alteracao__["a" /* Alteracao */]({ id: __WEBPACK_IMPORTED_MODULE_7_angular2_uuid__["UUID"].UUID(), idOcorrencia: ocorrencia.id, idGuidOcorrencia: ocorrencia.idGuidOcorrencia, idInspecao: _this.inspecao.id, idGuidInspecao: _this.inspecao.idGuidInspecao, idServico: _this.servico.id, idGuidServico: _this.servico.idGuidServico, tipo: "Update", entidade: "Ocorrencia", valor: JSON.stringify(ocorrencia), data: new Date(), descricao: (ocorrencia.delete ? "Inativação" : "Ativação") + " da ocorrência '" + ocorrencia.descricao + "' em '" + _this.broadcomb.toUpperCase() + "'." });
+                if (atualizacoes) {
+                    atualizacoesArray = atualizacoes;
+                    atualizacoesArray.push(alteracao);
+                }
+                else {
+                    atualizacoesArray.push(alteracao);
+                }
+                _this.storage.set('atualizacoes', atualizacoesArray);
+                _this.atualizarOcorrenciaSituacao(ocorrencia);
+            });
+        });
+    };
+    OcorrenciaPage.prototype.atualizarOcorrenciaSituacao = function (ocorrencia) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            var obras;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.storageServiceUtils.montarObra()];
+                    case 1:
+                        obras = _a.sent();
+                        obras.find(function (x) { return x.id == _this.servico.idObra; }).areas.find(function (x) { return _this.servico.idAreaGuid ? (x.idGuid == _this.servico.idAreaGuid) : (x.id == _this.servico.idArea); }).servicos.find(function (x) { return _this.servico.idGuidServico ? (x.idGuidServico == _this.servico.idGuidServico) : (x.id == _this.servico.id); }).inspecoesObra.find(function (x) { return _this.inspecao.idGuidInspecao ? (x.idGuidInspecao == _this.inspecao.idGuidInspecao) : (x.id == _this.inspecao.id); }).ocorrencias.find(function (x) { return ocorrencia.idGuidOcorrencia ? (x.idGuidOcorrencia == ocorrencia.idGuidOcorrencia) : (x.id == ocorrencia.id); }).delete = ocorrencia.delete;
+                        this.storageServiceUtils.armazenarObraNoStorage(obras);
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    OcorrenciaPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-ocorrencia',template:/*ion-inline-start:"/Users/duduulopes/Desktop/sgq/App/sgq/src/pages/ocorrencia/ocorrencia.html"*/'<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n            <ion-icon class="icon-menu" name="menu"></ion-icon>\n        </button>\n        <div buy>\n            <ion-title>Ocorrências</ion-title>\n        </div>\n    </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <h2 text-center text-wrap class="broadcomb">{{broadcomb.toUpperCase()}}</h2>\n    <h2 padding text-center class="aviso" *ngIf="inspecao.ocorrencias.length < 1">Nenhum registro encontrado.</h2>\n    <ion-grid no-padding>\n        <ion-row>\n            <button ion-button default-button block text-capitalize box-shadow margin-bottom class="button-novo"\n                (click)="novaOcorrencia()" [disabled]="servico.status == 1">Nova ocorrência</button>\n        </ion-row>\n        <ion-row>\n            <ion-col col-12>\n                <ion-list no-margin>\n                    <ion-item default-item no-lines [ngClass]="{\'novo-item\': !item.id, \'item-removido\': item.delete}" *ngFor="let item of inspecao.ocorrencias; let i = index;">\n                        <ion-row class="espacamento">\n                            <ion-col col-10 (click)="editar(item)">\n                                <h2 item-title text-wrap>Data da descrição: {{item.dataDescricao ? (item.dataDescricao\n                                    | date:\n                                    \'dd/MM/yyyy\') : \'--\'}}</h2>\n                                <h2 item-title text-wrap>Descrição: {{item.descricao}}</h2>\n                                <h2 item-title text-wrap>Data da tratativa: {{item.dataTratativa ? (item.dataTratativa\n                                    | date:\n                                    \'dd/MM/yyyy\') : \'--\'}}</h2>\n                                <h2 item-title text-wrap>Tratativa: {{item.tratativa}}</h2>\n                            </ion-col>\n                            <ion-col col-2 *ngIf="servico.status != 1">\n                                <ion-icon name="more" icon-small item-right style="font-size: 32px !important; margin: 0px"\n                                    (click)="exibirOpcoes(item)"></ion-icon>\n                            </ion-col>\n                        </ion-row>\n                    </ion-item>\n                </ion-list>\n            </ion-col>\n        </ion-row>\n    </ion-grid>\n</ion-content>'/*ion-inline-end:"/Users/duduulopes/Desktop/sgq/App/sgq/src/pages/ocorrencia/ocorrencia.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["u" /* ViewController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */],
+            __WEBPACK_IMPORTED_MODULE_9__utils_storage_service_utils__["a" /* StorageServiceUtils */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ModalController */],
+            __WEBPACK_IMPORTED_MODULE_4__utils_message_service__["a" /* MessageService */]])
+    ], OcorrenciaPage);
+    return OcorrenciaPage;
+}());
+
+//# sourceMappingURL=ocorrencia.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=5.js.map

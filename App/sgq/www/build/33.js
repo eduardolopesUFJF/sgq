@@ -1,1 +1,95 @@
-webpackJsonp([33],{721:function(l,n,t){"use strict";function e(l){return a["ɵvid"](0,[(l()(),a["ɵeld"](0,0,null,null,1,"ion-tab",[["role","tabpanel"]],[[1,"id",0],[1,"aria-labelledby",0]],null,null,g.b,g.a)),a["ɵdid"](1,245760,null,0,R.a,[h.a,I.a,y.a,C.a,a.ElementRef,a.NgZone,a.Renderer,a.ComponentFactoryResolver,a.ChangeDetectorRef,T.l,_.a,[2,F.a],N.a,a.ErrorHandler],{root:[0,"root"],tabTitle:[1,"tabTitle"],tabIcon:[2,"tabIcon"]},null)],function(l,n){l(n,1,0,n.context.$implicit.page,n.context.$implicit.title,n.context.$implicit.icon)},function(l,n){l(n,0,0,a["ɵnov"](n,1)._tabId,a["ɵnov"](n,1)._btnId)})}function u(l){return a["ɵvid"](0,[a["ɵqud"](402653184,1,{tabRef:0}),(l()(),a["ɵted"](-1,null,["\n"])),(l()(),a["ɵeld"](2,0,null,null,6,"ion-tabs",[["tabsPlacement","bottom"]],null,null,null,O.b,O.a)),a["ɵprd"](6144,null,w.a,null,[h.a]),a["ɵdid"](4,4374528,[[1,4],["tabs",4]],0,h.a,[[2,E.a],[2,S.a],I.a,y.a,a.ElementRef,C.a,a.Renderer,F.a,x.a],{tabsPlacement:[0,"tabsPlacement"]},null),(l()(),a["ɵted"](-1,0,["\n    "])),(l()(),a["ɵand"](16777216,null,0,1,null,e)),a["ɵdid"](7,802816,null,0,L.NgForOf,[a.ViewContainerRef,a.TemplateRef,a.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),a["ɵted"](-1,0,["\n"])),(l()(),a["ɵted"](-1,null,["\n"]))],function(l,n){var t=n.component;l(n,4,0,"bottom");l(n,7,0,t.data)},null)}Object.defineProperty(n,"__esModule",{value:!0});var a=t(1),o=(t(0),t(55),function(){return function(){}}()),i=function(){return function(){}}(),d=t(191),c=t(192),r=t(193),b=t(194),f=t(195),s=t(196),m=t(197),v=t(198),p=t(199),g=t(798),R=t(215),h=t(138),I=t(12),y=t(3),C=t(6),T=t(10),_=t(41),F=t(25),N=t(13),O=t(799),w=t(42),E=t(29),S=t(7),x=t(32),L=t(15),q=a["ɵcrt"]({encapsulation:2,styles:[],data:{}}),M=a["ɵccf"]("tabs-layout-1",o,function(l){return a["ɵvid"](0,[(l()(),a["ɵeld"](0,0,null,null,1,"tabs-layout-1",[],null,null,null,u,q)),a["ɵdid"](1,49152,null,0,o,[],null,null)],null,null)},{data:"data",events:"events"},{},[]),V=t(20),$=t(129),k=t(49);t.d(n,"TabsLayout1ModuleNgFactory",function(){return B});var B=a["ɵcmf"](i,[],function(l){return a["ɵmod"]([a["ɵmpd"](512,a.ComponentFactoryResolver,a["ɵCodegenComponentFactoryResolver"],[[8,[d.a,c.a,r.a,b.a,f.a,s.a,m.a,v.a,p.a,M]],[3,a.ComponentFactoryResolver],a.NgModuleRef]),a["ɵmpd"](4608,L.NgLocalization,L.NgLocaleLocalization,[a.LOCALE_ID,[2,L["ɵa"]]]),a["ɵmpd"](4608,V.r,V.r,[]),a["ɵmpd"](4608,V.d,V.d,[]),a["ɵmpd"](512,L.CommonModule,L.CommonModule,[]),a["ɵmpd"](512,V.p,V.p,[]),a["ɵmpd"](512,V.e,V.e,[]),a["ɵmpd"](512,V.n,V.n,[]),a["ɵmpd"](512,$.a,$.a,[]),a["ɵmpd"](512,$.b,$.b,[]),a["ɵmpd"](512,i,i,[]),a["ɵmpd"](256,k.a,o,[])])})},798:function(l,n,t){"use strict";function e(l){return u["ɵvid"](0,[u["ɵqud"](402653184,1,{_vp:0}),(l()(),u["ɵeld"](1,16777216,[[1,3],["viewport",1]],null,0,"div",[],null,null,null,null,null)),(l()(),u["ɵeld"](2,0,null,null,0,"div",[["class","nav-decor"]],null,null,null,null,null))],null,null)}t.d(n,"a",function(){return a}),n.b=e;var u=t(1),a=(t(3),t(6),t(10),t(41),t(25),t(13),u["ɵcrt"]({encapsulation:2,styles:[],data:{}}))},799:function(l,n,t){"use strict";function e(l){return c["ɵvid"](0,[(l()(),c["ɵeld"](0,0,null,null,1,"ion-icon",[["class","tab-button-icon"],["role","img"]],[[2,"hide",null]],null,null,null,null)),c["ɵdid"](1,147456,null,0,r.a,[b.a,c.ElementRef,c.Renderer],{name:[0,"name"],isActive:[1,"isActive"]},null)],function(l,n){var t=n.component;l(n,1,0,t.tab.tabIcon,t.tab.isSelected)},function(l,n){l(n,0,0,c["ɵnov"](n,1)._hidden)})}function u(l){return c["ɵvid"](0,[(l()(),c["ɵeld"](0,0,null,null,1,"span",[["class","tab-button-text"]],null,null,null,null,null)),(l()(),c["ɵted"](1,null,["",""]))],null,function(l,n){l(n,1,0,n.component.tab.tabTitle)})}function a(l){return c["ɵvid"](0,[(l()(),c["ɵeld"](0,0,null,null,2,"ion-badge",[["class","tab-badge"]],null,null,null,null,null)),c["ɵdid"](1,16384,null,0,f.a,[b.a,c.ElementRef,c.Renderer],{color:[0,"color"]},null),(l()(),c["ɵted"](2,null,["",""]))],function(l,n){l(n,1,0,n.component.tab.tabBadgeStyle)},function(l,n){l(n,2,0,n.component.tab.tabBadge)})}function o(l){return c["ɵvid"](0,[(l()(),c["ɵand"](16777216,null,null,1,null,e)),c["ɵdid"](1,16384,null,0,s.NgIf,[c.ViewContainerRef,c.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),c["ɵand"](16777216,null,null,1,null,u)),c["ɵdid"](3,16384,null,0,s.NgIf,[c.ViewContainerRef,c.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),c["ɵand"](16777216,null,null,1,null,a)),c["ɵdid"](5,16384,null,0,s.NgIf,[c.ViewContainerRef,c.TemplateRef],{ngIf:[0,"ngIf"]},null),(l()(),c["ɵeld"](6,0,null,null,0,"div",[["class","button-effect"]],null,null,null,null,null))],function(l,n){var t=n.component;l(n,1,0,t.tab.tabIcon);l(n,3,0,t.tab.tabTitle);l(n,5,0,t.tab.tabBadge)},null)}function i(l){return c["ɵvid"](0,[(l()(),c["ɵeld"](0,0,null,null,1,"a",[["class","tab-button"],["href","#"],["role","tab"]],[[1,"id",0],[1,"aria-controls",0],[1,"aria-selected",0],[2,"has-title",null],[2,"has-icon",null],[2,"has-title-only",null],[2,"icon-only",null],[2,"has-badge",null],[2,"disable-hover",null],[2,"tab-disabled",null],[2,"tab-hidden",null]],[[null,"ionSelect"],[null,"click"]],function(l,n,t){var e=!0,u=l.component;if("click"===n){e=!1!==c["ɵnov"](l,1).onClick()&&e}if("ionSelect"===n){e=!1!==u.select(l.context.$implicit)&&e}return e},o,v)),c["ɵdid"](1,114688,null,0,m.a,[b.a,c.ElementRef,c.Renderer],{tab:[0,"tab"]},{ionSelect:"ionSelect"})],function(l,n){l(n,1,0,n.context.$implicit)},function(l,n){l(n,0,1,[c["ɵnov"](n,1).tab._btnId,c["ɵnov"](n,1).tab._tabId,c["ɵnov"](n,1).tab.isSelected,c["ɵnov"](n,1).hasTitle,c["ɵnov"](n,1).hasIcon,c["ɵnov"](n,1).hasTitleOnly,c["ɵnov"](n,1).hasIconOnly,c["ɵnov"](n,1).hasBadge,c["ɵnov"](n,1).disHover,!c["ɵnov"](n,1).tab.enabled,!c["ɵnov"](n,1).tab.show])})}function d(l){return c["ɵvid"](0,[c["ɵqud"](402653184,1,{_highlight:0}),c["ɵqud"](402653184,2,{_tabbar:0}),c["ɵqud"](402653184,3,{portal:0}),(l()(),c["ɵeld"](3,0,[[2,0],["tabbar",1]],null,4,"div",[["class","tabbar"],["role","tablist"]],null,null,null,null,null)),(l()(),c["ɵand"](16777216,null,null,1,null,i)),c["ɵdid"](5,802816,null,0,s.NgForOf,[c.ViewContainerRef,c.TemplateRef,c.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(l()(),c["ɵeld"](6,0,null,null,1,"div",[["class","tab-highlight"]],null,null,null,null,null)),c["ɵdid"](7,16384,[[1,4]],0,p.a,[c.ElementRef,g.a],null,null),c["ɵncd"](null,0),(l()(),c["ɵeld"](9,16777216,[[3,3],["portal",1]],null,0,"div",[["tab-portal",""]],null,null,null,null,null))],function(l,n){l(n,5,0,n.component._tabs)},null)}var c=t(1),r=t(36),b=t(3),f=t(206),s=t(15),m=t(216),v=c["ɵcrt"]({encapsulation:2,styles:[],data:{}}),p=t(143),g=t(13);t(42),t(138),t(29),t(7),t(12),t(6),t(25),t(32);t.d(n,"a",function(){return R}),n.b=d;var R=c["ɵcrt"]({encapsulation:2,styles:[],data:{}})}});
+webpackJsonp([33],{
+
+/***/ 756:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ToggleLayout1Module", function() { return ToggleLayout1Module; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__toggle_layout_1__ = __webpack_require__(859);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var ToggleLayout1Module = /** @class */ (function () {
+    function ToggleLayout1Module() {
+    }
+    ToggleLayout1Module = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__toggle_layout_1__["a" /* ToggleLayout1 */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__toggle_layout_1__["a" /* ToggleLayout1 */]),
+            ],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_2__toggle_layout_1__["a" /* ToggleLayout1 */]
+            ],
+            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"]]
+        })
+    ], ToggleLayout1Module);
+    return ToggleLayout1Module;
+}());
+
+//# sourceMappingURL=toggle-layout-1.module.js.map
+
+/***/ }),
+
+/***/ 859:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ToggleLayout1; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ToggleLayout1 = /** @class */ (function () {
+    function ToggleLayout1() {
+        var _this = this;
+        this.onEvent = function (event, item) {
+            if (_this.events[event]) {
+                _this.events[event](item);
+            }
+        };
+    }
+    ToggleLayout1.prototype.ngOnChanges = function (changes) {
+        this.data = changes['data'].currentValue;
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('data'),
+        __metadata("design:type", Object)
+    ], ToggleLayout1.prototype, "data", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('events'),
+        __metadata("design:type", Object)
+    ], ToggleLayout1.prototype, "events", void 0);
+    ToggleLayout1 = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'toggle-layout-1',template:/*ion-inline-start:"/Users/duduulopes/Desktop/sgq/App/sgq/src/core/toggle/layout-1/toggle.html"*/'<!--Themes Toggle - With avatars -->\n<ion-content>\n  <ion-grid no-padding>\n    <!-- List Section -->\n    <ion-list no-lines *ngIf="data != null">\n      <ion-list-header header-section no-lines>\n        <!-- Header-title -->\n        <h1 header-title text-capitalize>{{data.title}}</h1>\n      </ion-list-header>\n      <ion-item default-item *ngFor="let item of data.items; let i= index">\n        <!-- Avatar-->\n        <ion-thumbnail item-start>\n          <img [src]="item.avatar" />\n        </ion-thumbnail>\n        <!-- Item-title -->\n        <ion-label item-title padding-top>{{item.title}}</ion-label>\n        <!-- Item-subtitle -->\n        <ion-label item-subtitle text-wrap>{{item.subtitle}}</ion-label>\n        <!-- Toggle -->\n        <ion-toggle item-end [value]="item.id" (ionChange)="onEvent(\'onSelect\',item)" [checked]="item.isChecked"></ion-toggle>\n      </ion-item>\n    </ion-list>\n  </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/Users/duduulopes/Desktop/sgq/App/sgq/src/core/toggle/layout-1/toggle.html"*/
+        }),
+        __metadata("design:paramtypes", [])
+    ], ToggleLayout1);
+    return ToggleLayout1;
+}());
+
+//# sourceMappingURL=toggle-layout-1.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=33.js.map
