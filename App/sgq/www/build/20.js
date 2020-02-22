@@ -1,15 +1,27 @@
 webpackJsonp([20],{
 
+<<<<<<< HEAD
 /***/ 729:
+=======
+/***/ 727:
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+<<<<<<< HEAD
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ParallaxLayout4Module", function() { return ParallaxLayout4Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__parallax_layout_4__ = __webpack_require__(860);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__elastic_header_elastic_header_module__ = __webpack_require__(782);
+=======
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ParallaxLayout2Module", function() { return ParallaxLayout2Module; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__parallax_layout_2__ = __webpack_require__(830);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__elastic_header_elastic_header_module__ = __webpack_require__(778);
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -20,6 +32,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+<<<<<<< HEAD
 var ParallaxLayout4Module = /** @class */ (function () {
     function ParallaxLayout4Module() {
     }
@@ -46,12 +59,44 @@ var ParallaxLayout4Module = /** @class */ (function () {
 /***/ }),
 
 /***/ 782:
+=======
+var ParallaxLayout2Module = /** @class */ (function () {
+    function ParallaxLayout2Module() {
+    }
+    ParallaxLayout2Module = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__parallax_layout_2__["a" /* ParallaxLayout2 */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__parallax_layout_2__["a" /* ParallaxLayout2 */]),
+                __WEBPACK_IMPORTED_MODULE_3__elastic_header_elastic_header_module__["a" /* ElasticHeaderModule */]
+            ],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_2__parallax_layout_2__["a" /* ParallaxLayout2 */]
+            ],
+            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"]]
+        })
+    ], ParallaxLayout2Module);
+    return ParallaxLayout2Module;
+}());
+
+//# sourceMappingURL=parallax-layout-2.module.js.map
+
+/***/ }),
+
+/***/ 778:
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ElasticHeaderModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+<<<<<<< HEAD
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__elastic_header__ = __webpack_require__(783);
+=======
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__elastic_header__ = __webpack_require__(779);
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -81,7 +126,11 @@ var ElasticHeaderModule = /** @class */ (function () {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 783:
+=======
+/***/ 779:
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -147,11 +196,19 @@ var ElasticHeader = /** @class */ (function () {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 860:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ParallaxLayout4; });
+=======
+/***/ 830:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ParallaxLayout2; });
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -165,11 +222,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+<<<<<<< HEAD
 var ParallaxLayout4 = /** @class */ (function () {
     function ParallaxLayout4() {
         this.headerImage = "";
     }
     ParallaxLayout4.prototype.onEvent = function (event, item, e) {
+=======
+var ParallaxLayout2 = /** @class */ (function () {
+    function ParallaxLayout2() {
+        this.headerImage = "";
+    }
+    ParallaxLayout2.prototype.onEvent = function (event, item, e) {
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
         if (e) {
             e.stopPropagation();
         }
@@ -177,6 +242,7 @@ var ParallaxLayout4 = /** @class */ (function () {
             this.events[event](item);
         }
     };
+<<<<<<< HEAD
     ParallaxLayout4.prototype.onStarClass = function (items, index, e) {
         for (var i = 0; i < items.length; i++) {
             items[i].isActive = i <= index;
@@ -184,11 +250,15 @@ var ParallaxLayout4 = /** @class */ (function () {
         this.onEvent("onRates", index, e);
     };
     ParallaxLayout4.prototype.ngOnChanges = function (changes) {
+=======
+    ParallaxLayout2.prototype.ngOnChanges = function (changes) {
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
         if (changes.data && changes.data.currentValue) {
             this.headerImage = changes.data.currentValue.headerImage;
         }
         this.subscribeToIonScroll();
     };
+<<<<<<< HEAD
     ParallaxLayout4.prototype.ngAfterViewInit = function () {
         this.subscribeToIonScroll();
     };
@@ -203,6 +273,22 @@ var ParallaxLayout4 = /** @class */ (function () {
         if (this.content != null && this.content.ionScroll != null) {
             this.content.ionScroll.subscribe(function (d) {
                 if (d.scrollTop < 200) {
+=======
+    ParallaxLayout2.prototype.ngAfterViewInit = function () {
+        this.subscribeToIonScroll();
+    };
+    ParallaxLayout2.prototype.ngAfterViewChecked = function () {
+        this.subscribeToIonScroll();
+    };
+    ParallaxLayout2.prototype.isClassActive = function () {
+        return this.active;
+    };
+    ParallaxLayout2.prototype.subscribeToIonScroll = function () {
+        var _this = this;
+        if (this.content != null && this.content.ionScroll != null) {
+            this.content.ionScroll.subscribe(function (d) {
+                if (d.scrollTop < 240) {
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
                     _this.active = false;
                     return;
                 }
@@ -213,6 +299,7 @@ var ParallaxLayout4 = /** @class */ (function () {
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", Object)
+<<<<<<< HEAD
     ], ParallaxLayout4.prototype, "data", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
@@ -232,6 +319,27 @@ var ParallaxLayout4 = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=parallax-layout-4.js.map
+=======
+    ], ParallaxLayout2.prototype, "data", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
+    ], ParallaxLayout2.prototype, "events", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */])
+    ], ParallaxLayout2.prototype, "content", void 0);
+    ParallaxLayout2 = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'parallax-layout-2',template:/*ion-inline-start:"/Users/duduulopes/Desktop/sgq/App/sgq/src/core/parallax/layout-2/parallax.html"*/'<!--- Theme Parallax - Profile -->\n<ion-header header-ios>\n  <ion-navbar transparent [ngClass]="{\'active\':isClassActive()}">\n    <button ion-button menuToggle>\n            <ion-icon [name]="menu"></ion-icon>\n        </button>\n    <ion-title *ngIf="data != null">{{data.headerTitle}}</ion-title>\n  </ion-navbar>\n</ion-header>\n<!-- Content -->\n<ion-content elastic-header>\n  <div padding background-size id="elastic-header" [ngStyle]="{\'background-image\': \'url(\' + headerImage + \')\'}">\n    <!--- Info Block -->\n    <ion-item info-block transparent no-lines text-center>\n      <!-- Avatar -->\n      <ion-thumbnail *ngIf="data != null">\n        <img [src]="data.avatar" />\n      </ion-thumbnail>\n      <!-- Parallx Title -->\n      <h2 parallax-title no-margin *ngIf="data != null">{{data.title}}</h2>\n      <!-- Parallx Subtitle -->\n      <h3 parallax-subtitle *ngIf="data != null">{{data.subtitle}}</h3>\n    </ion-item>\n  </div>\n  <ion-list *ngIf="data != null">\n    <ion-item default-item no-lines *ngFor="let item of data.items;let i = index" (click)="onEvent(\'onItemClick\', item)">\n      <ion-thumbnail item-start>\n        <img [src]="item.avatar" />\n      </ion-thumbnail>\n      <h2 item-title>{{item.title}}</h2>\n      <h3 item-subtitle text-wrap>{{item.subtitle}}</h3>\n      <button box-shadow text-capitalize button-follow ion-button item-end>{{item.button}}</button>\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/duduulopes/Desktop/sgq/App/sgq/src/core/parallax/layout-2/parallax.html"*/
+        }),
+        __metadata("design:paramtypes", [])
+    ], ParallaxLayout2);
+    return ParallaxLayout2;
+}());
+
+//# sourceMappingURL=parallax-layout-2.js.map
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
 
 /***/ })
 

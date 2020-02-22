@@ -1,6 +1,10 @@
 webpackJsonp([59],{
 
+<<<<<<< HEAD
 /***/ 731:
+=======
+/***/ 732:
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +12,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RadioButtonLayout2Module", function() { return RadioButtonLayout2Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
+<<<<<<< HEAD
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__radio_button_layout_2__ = __webpack_require__(862);
+=======
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__radio_button_layout_2__ = __webpack_require__(835);
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -42,7 +50,11 @@ var RadioButtonLayout2Module = /** @class */ (function () {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 862:
+=======
+/***/ 835:
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -77,7 +89,11 @@ var RadioButtonLayout2 = /** @class */ (function () {
     ], RadioButtonLayout2.prototype, "events", void 0);
     RadioButtonLayout2 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+<<<<<<< HEAD
             selector: 'radio-button-layout-2',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\radio-button\layout-2\radio-button.html"*/'<!--Themes Radio Button - With Avatars -->\n\n<ion-content>\n\n  <ion-grid no-padding *ngIf="data != null">\n\n    <ion-list radio-group [(ngModel)]="data.selectedItem">\n\n      <!-- Header Title Top -->\n\n      <ion-list-header header-section no-lines>\n\n        <h1 header-title text-capitalize>{{data.title}}</h1>\n\n      </ion-list-header>\n\n      <!--Content -->\n\n      <ion-item default-item no-lines *ngFor="let item of data.items; let i= index">\n\n        <!-- Content Avatar -->\n\n        <ion-thumbnail item-start>\n\n          <img [src]="item.avatar" />\n\n        </ion-thumbnail >\n\n        <!-- Content Title -->\n\n        <ion-label item-title padding-top>{{item.title}}</ion-label>\n\n        <!-- Content Subtitle -->\n\n        <ion-label item-subtitle text-wrap>{{item.subtitle}}</ion-label>\n\n        <ion-radio item-end [value]="item.id" (ionSelect)="onEvent(\'onSelect\',item)" [checked]="item.isChecked"></ion-radio>\n\n      </ion-item>\n\n    </ion-list>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\radio-button\layout-2\radio-button.html"*/
+=======
+            selector: 'radio-button-layout-2',template:/*ion-inline-start:"/Users/duduulopes/Desktop/sgq/App/sgq/src/core/radio-button/layout-2/radio-button.html"*/'<!--Themes Radio Button - With Avatars -->\n<ion-content>\n  <ion-grid no-padding *ngIf="data != null">\n    <ion-list radio-group [(ngModel)]="data.selectedItem">\n      <!-- Header Title Top -->\n      <ion-list-header header-section no-lines>\n        <h1 header-title text-capitalize>{{data.title}}</h1>\n      </ion-list-header>\n      <!--Content -->\n      <ion-item default-item no-lines *ngFor="let item of data.items; let i= index">\n        <!-- Content Avatar -->\n        <ion-thumbnail item-start>\n          <img [src]="item.avatar" />\n        </ion-thumbnail >\n        <!-- Content Title -->\n        <ion-label item-title padding-top>{{item.title}}</ion-label>\n        <!-- Content Subtitle -->\n        <ion-label item-subtitle text-wrap>{{item.subtitle}}</ion-label>\n        <ion-radio item-end [value]="item.id" (ionSelect)="onEvent(\'onSelect\',item)" [checked]="item.isChecked"></ion-radio>\n      </ion-item>\n    </ion-list>\n  </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/Users/duduulopes/Desktop/sgq/App/sgq/src/core/radio-button/layout-2/radio-button.html"*/
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
         }),
         __metadata("design:paramtypes", [])
     ], RadioButtonLayout2);

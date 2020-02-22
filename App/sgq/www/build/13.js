@@ -1,15 +1,26 @@
 webpackJsonp([13],{
 
+<<<<<<< HEAD
 /***/ 765:
+=======
+/***/ 766:
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+<<<<<<< HEAD
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AreaCadastroPageModule", function() { return AreaCadastroPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__area_cadastro__ = __webpack_require__(898);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_selectable__ = __webpack_require__(353);
+=======
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChecklistCadastroPageModule", function() { return ChecklistCadastroPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__checklist_cadastro__ = __webpack_require__(871);
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -19,6 +30,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+<<<<<<< HEAD
 
 var AreaCadastroPageModule = /** @class */ (function () {
     function AreaCadastroPageModule() {
@@ -43,6 +55,30 @@ var AreaCadastroPageModule = /** @class */ (function () {
 /***/ }),
 
 /***/ 779:
+=======
+var ChecklistCadastroPageModule = /** @class */ (function () {
+    function ChecklistCadastroPageModule() {
+    }
+    ChecklistCadastroPageModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__checklist_cadastro__["a" /* ChecklistCadastroPage */]
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__checklist_cadastro__["a" /* ChecklistCadastroPage */])
+            ],
+            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"]]
+        })
+    ], ChecklistCadastroPageModule);
+    return ChecklistCadastroPageModule;
+}());
+
+//# sourceMappingURL=checklist-cadastro.module.js.map
+
+/***/ }),
+
+/***/ 777:
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -86,6 +122,7 @@ exports.UUID = UUID;
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 795:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -176,6 +213,43 @@ var Area = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_uuid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_angular2_uuid__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__models_servico__ = __webpack_require__(808);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utils_storage_service_utils__ = __webpack_require__(156);
+=======
+/***/ 782:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ItemChecklist; });
+var ItemChecklist = /** @class */ (function () {
+    function ItemChecklist(values) {
+        if (values === void 0) { values = {}; }
+        this.id = 0;
+        this.campo1 = "";
+        this.campo2 = "";
+        this.campo3 = "";
+        this.campo4 = "";
+        this.itensChecklistServico = [];
+        Object.assign(this, values);
+    }
+    return ItemChecklist;
+}());
+
+//# sourceMappingURL=item-checklist.js.map
+
+/***/ }),
+
+/***/ 871:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChecklistCadastroPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_toast_service__ = __webpack_require__(350);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_item_checklist__ = __webpack_require__(782);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_uuid__ = __webpack_require__(777);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_uuid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_angular2_uuid__);
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -185,6 +259,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+<<<<<<< HEAD
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
@@ -222,12 +297,15 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 
 
+=======
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
 
 
 
 
 
 
+<<<<<<< HEAD
 
 var AreaCadastroPage = /** @class */ (function () {
     function AreaCadastroPage(storage, navParams, storageServiceUtils, toastService, viewCtrl) {
@@ -307,11 +385,32 @@ var AreaCadastroPage = /** @class */ (function () {
                     _this.atualizarObra();
                 });
             });
+=======
+var ChecklistCadastroPage = /** @class */ (function () {
+    function ChecklistCadastroPage(storage, navParams, modalCtrl, toastService, viewCtrl) {
+        this.storage = storage;
+        this.navParams = navParams;
+        this.modalCtrl = modalCtrl;
+        this.toastService = toastService;
+        this.viewCtrl = viewCtrl;
+        this.checklist = new __WEBPACK_IMPORTED_MODULE_4__models_item_checklist__["a" /* ItemChecklist */]();
+        this.checklist = this.navParams.data.checklist ? new __WEBPACK_IMPORTED_MODULE_4__models_item_checklist__["a" /* ItemChecklist */](this.navParams.data.checklist) : new __WEBPACK_IMPORTED_MODULE_4__models_item_checklist__["a" /* ItemChecklist */]();
+        this.checklist.tipo = this.checklist.tipo ? this.checklist.tipo.slice(0, 1) : null;
+    }
+    ChecklistCadastroPage.prototype.voltar = function () {
+        this.viewCtrl.dismiss(null);
+    };
+    ChecklistCadastroPage.prototype.salvar = function (formValido) {
+        if (formValido && this.checklist.tipo) {
+            this.checklist.idGuid = __WEBPACK_IMPORTED_MODULE_5_angular2_uuid__["UUID"].UUID();
+            this.adicionarItens();
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
         }
         else {
             this.toastService.presentToastWarning("Preencha todos os campos.");
         }
     };
+<<<<<<< HEAD
     AreaCadastroPage.prototype.atualizarObra = function () {
         return __awaiter(this, void 0, void 0, function () {
             var _this = this;
@@ -347,6 +446,32 @@ var AreaCadastroPage = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=area-cadastro.js.map
+=======
+    ChecklistCadastroPage.prototype.adicionarItens = function () {
+        var _this = this;
+        var modal = this.modalCtrl.create("CadastroItemPage", { checklist: this.checklist });
+        modal.present();
+        modal.onWillDismiss(function (checklist) {
+            if (checklist) {
+                _this.viewCtrl.dismiss(checklist);
+            }
+        });
+    };
+    ChecklistCadastroPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-checklist-cadastro',template:/*ion-inline-start:"/Users/duduulopes/Desktop/sgq/App/sgq/src/pages/checklist/cadastro/checklist-cadastro.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-row>\n            <ion-col col-2>\n                <button class="button-nav" (click)="voltar()">\n                    <span ion-text style="font-size: 0.7em;">Voltar</span>\n                </button>\n            </ion-col>\n            <ion-col col-10 m-auto>\n                <ion-title>Cadastro de Checklist</ion-title>\n            </ion-col>\n        </ion-row>\n    </ion-navbar>\n</ion-header>\n\n<ion-content has-header>\n    <ion-grid no-padding>\n        <ion-row padding-left padding-right>\n            <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n                <form #cadastroForm="ngForm" padding-top>\n                    <ion-list radio-group no-margin [(ngModel)]="checklist.tipo" name="tipo">\n                        <ion-grid>\n                            <ion-row>\n                                <ion-col col-6>\n                                    <ion-item radio>\n                                        <ion-label>Controlado</ion-label>\n                                        <ion-radio value="C"></ion-radio>\n                                    </ion-item>\n                                </ion-col>\n                                <ion-col col-6>\n                                    <ion-item radio>\n                                        <ion-label>Especializado</ion-label>\n                                        <ion-radio value="E"></ion-radio>\n                                    </ion-item>\n                                </ion-col>\n                            </ion-row>\n                        </ion-grid>\n                    </ion-list>\n                    <ion-item text-center transparent>\n                        <ion-label stacked>CÓDIGO</ion-label>\n                        <ion-input text-center required type="text" [(ngModel)]="checklist.codigo" name="codigo"></ion-input>\n                    </ion-item>\n                    <ion-item text-center transparent>\n                        <ion-label stacked>DESCRIÇÃO</ion-label>\n                        <ion-textarea rows="3" text-center required type="text" [(ngModel)]="checklist.descricao" name="descricao"></ion-textarea>\n                    </ion-item>\n\n                    <h3 text-center class="locais">Critérios de localização do serviço</h3>\n                    <ion-item text-center transparent>\n                        <ion-label stacked>CAMPO 1</ion-label>\n                        <ion-input text-center type="text" [(ngModel)]="checklist.campo1" name="campo1"></ion-input>\n                    </ion-item>\n                    <ion-item text-center transparent>\n                        <ion-label stacked>CAMPO 2</ion-label>\n                        <ion-input text-center type="text" [(ngModel)]="checklist.campo2" name="campo2"></ion-input>\n                    </ion-item>\n                    <ion-item text-center transparent>\n                        <ion-label stacked>CAMPO 3</ion-label>\n                        <ion-input text-center type="text" [(ngModel)]="checklist.campo3" name="campo3"></ion-input>\n                    </ion-item>\n                    <ion-item text-center transparent>\n                        <ion-label stacked>CAMPO 4</ion-label>\n                        <ion-input text-center type="text" [(ngModel)]="checklist.campo4" name="campo4"></ion-input>\n                    </ion-item>\n\n                    <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: rgb(33,177,75) !important;"\n                        (click)="salvar(cadastroForm.valid)">Definir Itens</button>\n                </form>\n            </ion-col>\n        </ion-row>\n    </ion-grid>\n</ion-content>'/*ion-inline-end:"/Users/duduulopes/Desktop/sgq/App/sgq/src/pages/checklist/cadastro/checklist-cadastro.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ModalController */],
+            __WEBPACK_IMPORTED_MODULE_3__utils_toast_service__["a" /* ToastService */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["u" /* ViewController */]])
+    ], ChecklistCadastroPage);
+    return ChecklistCadastroPage;
+}());
+
+//# sourceMappingURL=checklist-cadastro.js.map
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
 
 /***/ })
 

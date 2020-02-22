@@ -1,15 +1,27 @@
 webpackJsonp([23],{
 
+<<<<<<< HEAD
 /***/ 739:
+=======
+/***/ 696:
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+<<<<<<< HEAD
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ParallaxLayout1Module", function() { return ParallaxLayout1Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__parallax_layout_1__ = __webpack_require__(870);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__elastic_header_elastic_header_module__ = __webpack_require__(782);
+=======
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ActionSheetLayout1Module", function() { return ActionSheetLayout1Module; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__action_sheet_layout_1__ = __webpack_require__(799);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__elastic_header_elastic_header_module__ = __webpack_require__(778);
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -20,6 +32,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+<<<<<<< HEAD
 var ParallaxLayout1Module = /** @class */ (function () {
     function ParallaxLayout1Module() {
     }
@@ -46,12 +59,44 @@ var ParallaxLayout1Module = /** @class */ (function () {
 /***/ }),
 
 /***/ 782:
+=======
+var ActionSheetLayout1Module = /** @class */ (function () {
+    function ActionSheetLayout1Module() {
+    }
+    ActionSheetLayout1Module = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__action_sheet_layout_1__["a" /* ActionSheetLayout1 */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__action_sheet_layout_1__["a" /* ActionSheetLayout1 */]),
+                __WEBPACK_IMPORTED_MODULE_3__elastic_header_elastic_header_module__["a" /* ElasticHeaderModule */]
+            ],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_2__action_sheet_layout_1__["a" /* ActionSheetLayout1 */]
+            ],
+            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"]]
+        })
+    ], ActionSheetLayout1Module);
+    return ActionSheetLayout1Module;
+}());
+
+//# sourceMappingURL=action-sheet-layout-1.module.js.map
+
+/***/ }),
+
+/***/ 778:
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ElasticHeaderModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+<<<<<<< HEAD
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__elastic_header__ = __webpack_require__(783);
+=======
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__elastic_header__ = __webpack_require__(779);
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -81,7 +126,11 @@ var ElasticHeaderModule = /** @class */ (function () {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 783:
+=======
+/***/ 779:
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -147,11 +196,19 @@ var ElasticHeader = /** @class */ (function () {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 870:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ParallaxLayout1; });
+=======
+/***/ 799:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ActionSheetLayout1; });
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -165,11 +222,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+<<<<<<< HEAD
 var ParallaxLayout1 = /** @class */ (function () {
     function ParallaxLayout1() {
         this.headerImage = "";
     }
     ParallaxLayout1.prototype.onEvent = function (event, item, e) {
+=======
+var ActionSheetLayout1 = /** @class */ (function () {
+    function ActionSheetLayout1(actionSheetCtrl) {
+        this.actionSheetCtrl = actionSheetCtrl;
+        this.headerImage = "";
+    }
+    ActionSheetLayout1.prototype.onEvent = function (event, item, e) {
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
         if (e) {
             e.stopPropagation();
         }
@@ -177,12 +243,17 @@ var ParallaxLayout1 = /** @class */ (function () {
             this.events[event](item);
         }
     };
+<<<<<<< HEAD
     ParallaxLayout1.prototype.ngOnChanges = function (changes) {
+=======
+    ActionSheetLayout1.prototype.ngOnChanges = function (changes) {
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
         if (changes.data && changes.data.currentValue) {
             this.headerImage = changes.data.currentValue.headerImage;
         }
         this.subscribeToIonScroll();
     };
+<<<<<<< HEAD
     ParallaxLayout1.prototype.ngAfterViewInit = function () {
         this.subscribeToIonScroll();
     };
@@ -193,6 +264,15 @@ var ParallaxLayout1 = /** @class */ (function () {
         return this.active;
     };
     ParallaxLayout1.prototype.subscribeToIonScroll = function () {
+=======
+    ActionSheetLayout1.prototype.ngAfterViewInit = function () {
+        this.subscribeToIonScroll();
+    };
+    ActionSheetLayout1.prototype.isClassActive = function () {
+        return this.active;
+    };
+    ActionSheetLayout1.prototype.subscribeToIonScroll = function () {
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
         var _this = this;
         if (this.content != null && this.content.ionScroll != null) {
             this.content.ionScroll.subscribe(function (d) {
@@ -204,6 +284,7 @@ var ParallaxLayout1 = /** @class */ (function () {
             });
         }
     };
+<<<<<<< HEAD
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", Object)
@@ -226,6 +307,40 @@ var ParallaxLayout1 = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=parallax-layout-1.js.map
+=======
+    ActionSheetLayout1.prototype.presentActionSheet = function (item, index) {
+        var that = this;
+        this.data.actionSheet.buttons.forEach(function (element) {
+            element["handler"] = function () {
+                that.onEvent("onItemClickActionSheet", { "button": element, "item": item }, null);
+            };
+        });
+        var actionSheet = this.actionSheetCtrl.create(this.data.actionSheet);
+        actionSheet.present();
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
+    ], ActionSheetLayout1.prototype, "data", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
+    ], ActionSheetLayout1.prototype, "events", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */])
+    ], ActionSheetLayout1.prototype, "content", void 0);
+    ActionSheetLayout1 = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'action-sheet-layout-1',template:/*ion-inline-start:"/Users/duduulopes/Desktop/sgq/App/sgq/src/core/action-sheet/layout-1/action-sheet.html"*/'<!--- Theme Parallax - Product -->\n<ion-header>\n  <ion-navbar transparent [ngClass]="{\'active\':isClassActive()}">\n    <button ion-button menuToggle>\n      <ion-icon [name]="menu"></ion-icon>\n    </button>\n    <ion-title *ngIf="data != null">{{data.headerTitle}}</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content elastic-header *ngIf="data != null">\n  <!-- Parallax Big Image -->\n  <div id="elastic-header">\n    <div background-size [ngStyle]="{\'background-image\': \'url(\' + headerImage + \')\'}" *ngFor="let item of data.items;let i = index">\n      <div title-block>\n        <ion-item transparent no-lines (click)="onEvent(\'onItemClick\', data)">\n          <!-- Parallax Title -->\n          <h2 text-wrap parallax-title>{{item.title}}</h2>\n          <!-- Parallax Subtitle -->\n          <h3 text-wrap parallax-subtitle>{{item.subtitle}}</h3>\n          <div item-content>\n            <button item-end ion-button ion-text button-action-shit (click)="presentActionSheet(data)">\n                  <ion-icon  [name]="data.shareIcon"></ion-icon>\n                </button>\n          </div>\n        </ion-item>\n      </div>\n    </div>\n    <!-- Description Products -->\n    <ion-item no-lines no-padding small-description *ngFor="let item of data.items;let i = index">\n      <!-- Name Category-->\n      <span new-category text-uppercase>{{item.category}}</span>\n      <ion-badge float-right text-uppercase badge-clear no-padding (click)="onEvent(\'onProceed\', item, $event)">{{item.button}}</ion-badge>\n      <p padding-left margin-top margin-bottom parallax-description text-wrap>{{item.description}}</p>\n    </ion-item>\n  </div>\n  <!--Content-->\n  <ion-grid no-padding *ngIf="data != null">\n    <ion-row>\n      <ion-col col-12 *ngFor="let item of data.items;let i = index" (click)="onEvent(\'onItemClick\', item)">\n        <!--Content With Text-->\n        <ion-item no-lines *ngFor="let productDescription of item.productDescriptions">\n          <p parallax-description text-wrap>{{productDescription.description}}</p>\n        </ion-item>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/Users/duduulopes/Desktop/sgq/App/sgq/src/core/action-sheet/layout-1/action-sheet.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */]])
+    ], ActionSheetLayout1);
+    return ActionSheetLayout1;
+}());
+
+//# sourceMappingURL=action-sheet-layout-1.js.map
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
 
 /***/ })
 

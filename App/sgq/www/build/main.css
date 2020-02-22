@@ -497,8 +497,13 @@ Copyright (c) 2015 Daniel Eden
     transform: skewX(-0.78125deg) skewY(-0.78125deg);
   }
   77.7% {
+<<<<<<< HEAD
     -webkit-transform: skewX(0.39063deg) skewY(0.39063deg);
     transform: skewX(0.39063deg) skewY(0.39063deg);
+=======
+    -webkit-transform: skewX(0.39062deg) skewY(0.39062deg);
+    transform: skewX(0.39062deg) skewY(0.39062deg);
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
   }
   88.8% {
     -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg);
@@ -534,8 +539,13 @@ Copyright (c) 2015 Daniel Eden
     transform: skewX(-0.78125deg) skewY(-0.78125deg);
   }
   77.7% {
+<<<<<<< HEAD
     -webkit-transform: skewX(0.39063deg) skewY(0.39063deg);
     transform: skewX(0.39063deg) skewY(0.39063deg);
+=======
+    -webkit-transform: skewX(0.39062deg) skewY(0.39062deg);
+    transform: skewX(0.39062deg) skewY(0.39062deg);
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
   }
   88.8% {
     -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg);
@@ -3794,6 +3804,7 @@ ion-reorder .ion-ios-reorder {
   background-color: yellowgreen !important;
 }
 
+<<<<<<< HEAD
 .platform-ios .margem-modal-ios {
   margin-top: 15px;
 }
@@ -3802,6 +3813,8 @@ ion-reorder .ion-ios-reorder {
   margin-top: 12px !important;
 }
 
+=======
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
 @font-face {
   font-family: 'fontello';
   src: url("../assets/fontello/fontello.eot?89574879");
@@ -14082,6 +14095,13 @@ textarea::-webkit-input-placeholder {
   padding-left: 2px;
 }
 
+<<<<<<< HEAD
+=======
+textarea::-moz-placeholder {
+  padding-left: 2px;
+}
+
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
 textarea::-ms-input-placeholder {
   padding-left: 2px;
 }
@@ -31202,6 +31222,14 @@ ion-navbar.toolbar {
   width: 25px;
 }
 
+<<<<<<< HEAD
+=======
+.ionic-selectable-item-icon-template[item-left] {
+  /*Correct item icon template position.*/
+  margin: 0 0 0 1px;
+}
+
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
 .ionic-selectable-ios.ionic-selectable-has-placeholder .ionic-selectable-value-item {
   color: #999;
 }
@@ -31256,6 +31284,7 @@ ion-navbar.toolbar {
   background-color: #ffffff;
 }
 
+<<<<<<< HEAD
 .ionic-selectable-page-ios .ionic-selectable-message {
   padding: 8px;
 }
@@ -31281,6 +31310,33 @@ ion-navbar.toolbar {
 }
 
 .ionic-selectable-page ion-footer ion-toolbar {
+=======
+.ionic-selectable-modal-ios .ionic-selectable-message {
+  padding: 8px;
+}
+
+.ionic-selectable-modal-md .ionic-selectable-message {
+  padding: 8px 12px;
+}
+
+.ionic-selectable-modal.ionic-selectable-modal-can-clear.ionic-selectable-modal-is-multiple .footer .col:first-child {
+  padding-right: 8px;
+}
+
+.ionic-selectable-modal.ionic-selectable-modal-can-clear.ionic-selectable-modal-is-multiple .footer .col:last-child {
+  padding-left: 8px;
+}
+
+.ionic-selectable-modal.ionic-selectable-modal-is-searching .scroll-content {
+  overflow-y: hidden;
+}
+
+.ionic-selectable-modal.ionic-selectable-modal-is-add-item-template-visible > .content > .scroll-content {
+  overflow-y: hidden;
+}
+
+.ionic-selectable-modal ion-footer ion-toolbar {
+>>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
   padding: 5px 16px;
 }
 
