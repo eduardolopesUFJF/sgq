@@ -25,7 +25,7 @@ import { StorageServiceUtils } from '../utils/storage-service-utils';
   imports: [
     HttpClientModule,
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp, {backButtonText: 'Voltar'}),
     IonicStorageModule.forRoot(),
     // IonicStorageModule.forRoot({ name: '__mydb', driverOrder: ['sqlite', 'websql', 'indexeddb'] }),
     IonicSelectableModule,
