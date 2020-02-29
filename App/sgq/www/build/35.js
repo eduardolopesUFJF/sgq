@@ -1,10 +1,6 @@
 webpackJsonp([35],{
 
-<<<<<<< HEAD
-/***/ 761:
-=======
-/***/ 754:
->>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
+/***/ 752:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12,11 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabsLayout2Module", function() { return TabsLayout2Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs_layout_2__ = __webpack_require__(892);
-=======
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs_layout_2__ = __webpack_require__(857);
->>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs_layout_2__ = __webpack_require__(883);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -50,11 +42,7 @@ var TabsLayout2Module = /** @class */ (function () {
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 892:
-=======
-/***/ 857:
->>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
+/***/ 883:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -87,11 +75,7 @@ var TabsLayout2 = /** @class */ (function () {
     ], TabsLayout2.prototype, "tabRef", void 0);
     TabsLayout2 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-<<<<<<< HEAD
             selector: 'tabs-layout-2',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\tabs\layout-2\tabs.html"*/'<!-- Theme Tabs Footer tab - icons -->\n\n<ion-tabs #tabs tabsPlacement=\'bottom\'>\n\n    <ion-tab [tabIcon]="item.icon" [root]="item.page" *ngFor="let item of data;let i = index"></ion-tab>\n\n</ion-tabs>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\tabs\layout-2\tabs.html"*/
-=======
-            selector: 'tabs-layout-2',template:/*ion-inline-start:"/Users/duduulopes/Desktop/sgq/App/sgq/src/core/tabs/layout-2/tabs.html"*/'<!-- Theme Tabs Footer tab - icons -->\n<ion-tabs #tabs tabsPlacement=\'bottom\'>\n    <ion-tab [tabIcon]="item.icon" [root]="item.page" *ngFor="let item of data;let i = index"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/Users/duduulopes/Desktop/sgq/App/sgq/src/core/tabs/layout-2/tabs.html"*/
->>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
         }),
         __metadata("design:paramtypes", [])
     ], TabsLayout2);

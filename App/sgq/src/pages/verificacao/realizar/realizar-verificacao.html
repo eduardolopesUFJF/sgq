@@ -1,24 +1,23 @@
 <ion-header>
-    <ion-navbar>
+    <ion-navbar class="pad-nav-page-nt">
         <ion-row>
-            <ion-col col-2>
-                <button class="button-nav" (click)="voltar()">
+            <ion-col col-3 class="ptb-0">
+                <button class="button-nav" style="padding-left: 10px;" (click)="voltar()">
                     <span ion-text style="font-size: 0.7em;">Voltar</span>
                 </button>
             </ion-col>
-            <ion-col col-7 m-auto>
-                <ion-title>Inspeção do Serviço</ion-title>
+            <ion-col col-6 class="ptb-0" m-auto>
             </ion-col>
-            <ion-col col-3 (click)="abrirOcorrencias()">
-                    <button class="button-nav">
-                        <span ion-text style="font-size: 0.7em;">Ocorrências</span>
-                    </button>
+            <ion-col col-3 class="ptb-0" (click)="abrirOcorrencias()">
+                <button class="button-nav">
+                    <span ion-text style="font-size: 0.7em;">Ocorrências</span>
+                </button>
             </ion-col>
         </ion-row>
     </ion-navbar>
 </ion-header>
 
-<ion-content has-header>
+<ion-content>
     <ion-grid no-padding>
         <ion-row padding-left padding-right>
             <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
@@ -28,31 +27,16 @@
                     </ion-item>
                     <ion-item text-center transparent>
                         <ion-label stacked>INSPECIONADO POR</ion-label>
-                        <ionic-selectable 
-                            item-content
-                            [(ngModel)]="funcionarioInspecionado"
-                            [items]="funcionarios"
-                            itemValueField="id"
-                            itemTextField="nome"
-                            [canSearch]="true"
-                            [disabled]="servico.status == 1"
-                            name="idFuncionarioInspecionado"
-                            (onChange)="setaFuncionarioInspecionado($event)"
-                            required>
+                        <ionic-selectable item-content [(ngModel)]="funcionarioInspecionado" [items]="funcionarios"
+                            itemValueField="id" itemTextField="nome" [canSearch]="true" [disabled]="servico.status == 1"
+                            name="idFuncionarioInspecionado" (onChange)="setaFuncionarioInspecionado($event)" required>
                         </ionic-selectable>
                     </ion-item>
                     <ion-item text-center transparent>
                         <ion-label stacked>APROVADOR POR</ion-label>
-                        <ionic-selectable 
-                            item-content
-                            [(ngModel)]="funcionarioAprovado"
-                            [items]="funcionarios"
-                            itemValueField="id"
-                            itemTextField="nome"
-                            [canSearch]="true"
-                            [disabled]="servico.status == 1"
-                            name="idFuncionarioAprovado"
-                            (onChange)="setaFuncionarioAprovado($event)">
+                        <ionic-selectable item-content [(ngModel)]="funcionarioAprovado" [items]="funcionarios"
+                            itemValueField="id" itemTextField="nome" [canSearch]="true" [disabled]="servico.status == 1"
+                            name="idFuncionarioAprovado" (onChange)="setaFuncionarioAprovado($event)">
                         </ionic-selectable>
                     </ion-item>
                     <ion-list radio-group no-margin [(ngModel)]="inspecao.status" name="status" (ngModelChange)="atualizarSituacao()"
@@ -75,7 +59,8 @@
                         </ion-grid>
                     </ion-list>
                     <hr style="margin: 2px 0 0 0;">
-                    <ion-list radio-group no-margin [(ngModel)]="item.inspecao1" name="itemInspecao1+{{i}}" *ngFor="let item of inspecao.inspecaoObraItens; let i=index;" [disabled]="servico.status == 1">
+                    <ion-list radio-group no-margin [(ngModel)]="item.inspecao1" name="itemInspecao1+{{i}}" *ngFor="let item of inspecao.inspecaoObraItens; let i=index;"
+                        [disabled]="servico.status == 1">
                         <h2 text-wrap style="font-weight: bold;margin-top: 10px;">{{item.descricao}}</h2>
                         <ion-grid>
                             <ion-row>

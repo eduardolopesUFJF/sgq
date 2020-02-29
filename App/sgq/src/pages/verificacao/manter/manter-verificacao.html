@@ -1,30 +1,27 @@
 <ion-header>
     <ion-navbar>
-        <ion-row>
-            <ion-col col-2>
-                <button class="button-nav" (click)="voltar()">
-                    <span ion-text style="font-size: 0.7em;">Voltar</span>
-                </button>
-            </ion-col>
-            <ion-col col-10 m-auto>
-                <ion-title>Localização do Serviço</ion-title>
-            </ion-col>
+        <ion-row class="pad-nav-page">
+            <button class="button-nav" (click)="voltar()">
+                <span ion-text>Voltar</span>
+            </button>
         </ion-row>
     </ion-navbar>
 </ion-header>
 
-<ion-content has-header>
+<ion-content>
     <ion-grid no-padding>
         <ion-row padding-left padding-right>
             <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
                 <form #cadastroForm="ngForm" padding-top>
                     <ion-item text-center transparent>
                         <ion-label stacked>DATA DE ABERTURA</ion-label>
-                        <ion-datetime displayFormat="DD/MM/YYYY" name="inspecao.dataInspecao" [(ngModel)]="inspecao.dataInspecao" cancelText="Cancelar" doneText="Ok"></ion-datetime>
+                        <ion-datetime displayFormat="DD/MM/YYYY" name="inspecao.dataInspecao" [(ngModel)]="inspecao.dataInspecao"
+                            cancelText="Cancelar" doneText="Ok"></ion-datetime>
                     </ion-item>
                     <ion-item text-center transparent>
                         <ion-label stacked>DATA DE ENCERRAMENTO</ion-label>
-                        <ion-datetime displayFormat="DD/MM/YYYY" name="inspecao.dataEncerramento" [(ngModel)]="inspecao.dataEncerramento" cancelText="Cancelar" doneText="Ok"></ion-datetime>
+                        <ion-datetime displayFormat="DD/MM/YYYY" name="inspecao.dataEncerramento" [(ngModel)]="inspecao.dataEncerramento"
+                            cancelText="Cancelar" doneText="Ok"></ion-datetime>
                     </ion-item>
                     <ion-item text-center transparent>
                         <ion-label stacked>{{itemChecklist.campo1}}</ion-label>

@@ -1,10 +1,6 @@
 webpackJsonp([33],{
 
-<<<<<<< HEAD
-/***/ 755:
-=======
-/***/ 756:
->>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
+/***/ 754:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12,11 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ToggleLayout1Module", function() { return ToggleLayout1Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__toggle_layout_1__ = __webpack_require__(886);
-=======
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__toggle_layout_1__ = __webpack_require__(859);
->>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__toggle_layout_1__ = __webpack_require__(885);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -50,11 +42,7 @@ var ToggleLayout1Module = /** @class */ (function () {
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 886:
-=======
-/***/ 859:
->>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
+/***/ 885:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -92,11 +80,7 @@ var ToggleLayout1 = /** @class */ (function () {
     ], ToggleLayout1.prototype, "events", void 0);
     ToggleLayout1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-<<<<<<< HEAD
             selector: 'toggle-layout-1',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\toggle\layout-1\toggle.html"*/'<!--Themes Toggle - With avatars -->\n\n<ion-content>\n\n  <ion-grid no-padding>\n\n    <!-- List Section -->\n\n    <ion-list no-lines *ngIf="data != null">\n\n      <ion-list-header header-section no-lines>\n\n        <!-- Header-title -->\n\n        <h1 header-title text-capitalize>{{data.title}}</h1>\n\n      </ion-list-header>\n\n      <ion-item default-item *ngFor="let item of data.items; let i= index">\n\n        <!-- Avatar-->\n\n        <ion-thumbnail item-start>\n\n          <img [src]="item.avatar" />\n\n        </ion-thumbnail>\n\n        <!-- Item-title -->\n\n        <ion-label item-title padding-top>{{item.title}}</ion-label>\n\n        <!-- Item-subtitle -->\n\n        <ion-label item-subtitle text-wrap>{{item.subtitle}}</ion-label>\n\n        <!-- Toggle -->\n\n        <ion-toggle item-end [value]="item.id" (ionChange)="onEvent(\'onSelect\',item)" [checked]="item.isChecked"></ion-toggle>\n\n      </ion-item>\n\n    </ion-list>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\toggle\layout-1\toggle.html"*/
-=======
-            selector: 'toggle-layout-1',template:/*ion-inline-start:"/Users/duduulopes/Desktop/sgq/App/sgq/src/core/toggle/layout-1/toggle.html"*/'<!--Themes Toggle - With avatars -->\n<ion-content>\n  <ion-grid no-padding>\n    <!-- List Section -->\n    <ion-list no-lines *ngIf="data != null">\n      <ion-list-header header-section no-lines>\n        <!-- Header-title -->\n        <h1 header-title text-capitalize>{{data.title}}</h1>\n      </ion-list-header>\n      <ion-item default-item *ngFor="let item of data.items; let i= index">\n        <!-- Avatar-->\n        <ion-thumbnail item-start>\n          <img [src]="item.avatar" />\n        </ion-thumbnail>\n        <!-- Item-title -->\n        <ion-label item-title padding-top>{{item.title}}</ion-label>\n        <!-- Item-subtitle -->\n        <ion-label item-subtitle text-wrap>{{item.subtitle}}</ion-label>\n        <!-- Toggle -->\n        <ion-toggle item-end [value]="item.id" (ionChange)="onEvent(\'onSelect\',item)" [checked]="item.isChecked"></ion-toggle>\n      </ion-item>\n    </ion-list>\n  </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/Users/duduulopes/Desktop/sgq/App/sgq/src/core/toggle/layout-1/toggle.html"*/
->>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
         }),
         __metadata("design:paramtypes", [])
     ], ToggleLayout1);

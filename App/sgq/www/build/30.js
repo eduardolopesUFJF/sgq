@@ -1,10 +1,6 @@
 webpackJsonp([30],{
 
-<<<<<<< HEAD
-/***/ 758:
-=======
 /***/ 759:
->>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12,11 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WizardLayout1Module", function() { return WizardLayout1Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wizard_layout_1__ = __webpack_require__(889);
-=======
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wizard_layout_1__ = __webpack_require__(862);
->>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wizard_layout_1__ = __webpack_require__(890);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -50,11 +42,7 @@ var WizardLayout1Module = /** @class */ (function () {
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 889:
-=======
-/***/ 862:
->>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
+/***/ 890:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -122,11 +110,7 @@ var WizardLayout1 = /** @class */ (function () {
     ], WizardLayout1.prototype, "slider", void 0);
     WizardLayout1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-<<<<<<< HEAD
             selector: 'wizard-layout-1',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\wizard\layout-1\wizard.html"*/'<!--Theme Wizard Simple + image-->\n\n<!--Content -->\n\n<ion-slides #wizardSlider effect="fade" (ionSlideDidChange)="slideHasChanged()" pager="true" *ngIf="data != null">\n\n  <ion-slide background-size padding *ngFor="let item of data.items;" [ngStyle]="{\'background-image\': \'url(\' + item.backgroundImage + \')\'}">\n\n    <img logo [src]="item.logo" />\n\n    <h2 wizard-title padding-horizontal>{{item.title}}</h2>\n\n    <p wizard-description padding>{{item.description}}</p>\n\n  </ion-slide>\n\n\n\n</ion-slides>\n\n<!-- Button section-->\n\n<div *ngIf="data != null">\n\n  <button ion-button clear text-capitalize float-left (click)="changeSlide(-1)" *ngIf="prev">\n\n      {{data.btnPrev}}\n\n  </button>\n\n  <button ion-button clear text-capitalize float-right (click)="changeSlide(1)" *ngIf="next">\n\n      {{data.btnNext}}\n\n  </button>\n\n  <button ion-button clear text-capitalize float-right (click)="onEvent(\'onFinish\')" *ngIf="finish">\n\n      {{data.btnFinish}}\n\n  </button>\n\n</div>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\wizard\layout-1\wizard.html"*/
-=======
-            selector: 'wizard-layout-1',template:/*ion-inline-start:"/Users/duduulopes/Desktop/sgq/App/sgq/src/core/wizard/layout-1/wizard.html"*/'<!--Theme Wizard Simple + image-->\n<!--Content -->\n<ion-slides #wizardSlider effect="fade" (ionSlideDidChange)="slideHasChanged()" pager="true" *ngIf="data != null">\n  <ion-slide background-size padding *ngFor="let item of data.items;" [ngStyle]="{\'background-image\': \'url(\' + item.backgroundImage + \')\'}">\n    <img logo [src]="item.logo" />\n    <h2 wizard-title padding-horizontal>{{item.title}}</h2>\n    <p wizard-description padding>{{item.description}}</p>\n  </ion-slide>\n\n</ion-slides>\n<!-- Button section-->\n<div *ngIf="data != null">\n  <button ion-button clear text-capitalize float-left (click)="changeSlide(-1)" *ngIf="prev">\n      {{data.btnPrev}}\n  </button>\n  <button ion-button clear text-capitalize float-right (click)="changeSlide(1)" *ngIf="next">\n      {{data.btnNext}}\n  </button>\n  <button ion-button clear text-capitalize float-right (click)="onEvent(\'onFinish\')" *ngIf="finish">\n      {{data.btnFinish}}\n  </button>\n</div>\n'/*ion-inline-end:"/Users/duduulopes/Desktop/sgq/App/sgq/src/core/wizard/layout-1/wizard.html"*/
->>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
         }),
         __metadata("design:paramtypes", [])
     ], WizardLayout1);

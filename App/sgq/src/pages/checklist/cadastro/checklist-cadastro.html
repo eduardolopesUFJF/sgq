@@ -1,19 +1,14 @@
 <ion-header>
     <ion-navbar>
-        <ion-row>
-            <ion-col col-2>
-                <button class="button-nav" (click)="voltar()">
-                    <span ion-text style="font-size: 0.7em;">Voltar</span>
-                </button>
-            </ion-col>
-            <ion-col col-10 m-auto>
-                <ion-title>Cadastro de Checklist</ion-title>
-            </ion-col>
+        <ion-row class="pad-nav-page">
+            <button class="button-nav" (click)="voltar()">
+                <span ion-text>Voltar</span>
+            </button>
         </ion-row>
     </ion-navbar>
 </ion-header>
 
-<ion-content has-header>
+<ion-content>
     <ion-grid no-padding>
         <ion-row padding-left padding-right>
             <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>

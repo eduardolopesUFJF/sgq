@@ -1,19 +1,9 @@
 <ion-header>
-    <ion-navbar>
+    <ion-navbar class="pad-nav-page-nt">
         <ion-row>
-            <ion-col col-2>
-                <button ion-button menuToggle>
-                    <ion-icon class="icon-menu" name="menu"></ion-icon>
-                </button>
+            <ion-col col-10 class="ptb-0">
             </ion-col>
-            <ion-col col-8 m-auto>
-                <div buy>
-                    <ion-title>
-                        Áreas
-                    </ion-title>
-                </div>
-            </ion-col>
-            <ion-col col-2>
+            <ion-col col-2 class="ptb-0">
                 <div buy (click)="voltarHome()">
                     <ion-icon class="icon-menu home-icon" name="home"></ion-icon>
                 </div>
@@ -22,4 +12,5 @@
     </ion-navbar>
 </ion-header>
 
-<appearance-animation-layout-5 class="margem-modal-ios" *ngIf="reload" has-header [data]="areas" [events]="events" [config]="config"></appearance-animation-layout-5>
+<appearance-animation-layout-5 class="margem-modal-ios" *ngIf="reload" has-header [data]="areas" [events]="events"
+    [config]="config"></appearance-animation-layout-5>

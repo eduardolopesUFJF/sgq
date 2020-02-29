@@ -1,14 +1,9 @@
 <ion-header>
-    <ion-navbar>
+    <ion-navbar class="pad-nav-page">
         <button ion-button menuToggle>
             <ion-icon class="icon-menu" name="menu"></ion-icon>
         </button>
-        <div buy>
-            <ion-title>
-                Obras
-            </ion-title>
-        </div>
     </ion-navbar>
 </ion-header>
 
-<appearance-animation-layout-5 *ngIf="obras" has-header [data]="obras" [events]="events" [config]="config"></appearance-animation-layout-5>
+<appearance-animation-layout-5 has-header *ngIf="obras" [data]="obras" [events]="events" [config]="config"></appearance-animation-layout-5>

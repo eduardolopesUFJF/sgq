@@ -1,10 +1,6 @@
 webpackJsonp([62],{
 
-<<<<<<< HEAD
-/***/ 725:
-=======
-/***/ 723:
->>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
+/***/ 720:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12,11 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SwipeToDismissLayout3Module", function() { return SwipeToDismissLayout3Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__swipe_to_dismiss_layout_3__ = __webpack_require__(856);
-=======
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__swipe_to_dismiss_layout_3__ = __webpack_require__(826);
->>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__swipe_to_dismiss_layout_3__ = __webpack_require__(851);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -50,11 +42,7 @@ var SwipeToDismissLayout3Module = /** @class */ (function () {
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 856:
-=======
-/***/ 826:
->>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
+/***/ 851:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -104,11 +92,7 @@ var SwipeToDismissLayout3 = /** @class */ (function () {
     ], SwipeToDismissLayout3.prototype, "content", void 0);
     SwipeToDismissLayout3 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-<<<<<<< HEAD
             selector: 'swipe-to-dismiss-layout-3',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\swipe-to-dismiss\layout-3\swipe-to-dismiss.html"*/'<!-- Themes Swipe To Dismiss - Full width image -->\n\n<ion-content has-header padding-top>\n\n  <ion-grid no-padding *ngIf="data != null">\n\n    <ion-row>\n\n      <ion-col col-12 align-self-end>\n\n        <ion-list>\n\n          <ion-item-sliding transparent *ngFor="let item of data.items" #slidingItem>\n\n            <ion-item no-lines box-shadow background-size (click)="onEvent(\'onItemClick\', item.title, $event)" [ngStyle]="{\'background-image\': \'url(\' + item.image + \')\'}">\n\n              <div title-block>\n\n                <!-- Subtitle -->\n\n                <p card-subtitle>{{item.subtitle}}</p>\n\n                <!-- Title -->\n\n                <h1 card-title text-wrap>{{item.title}}</h1>\n\n              </div>\n\n            </ion-item>\n\n            <!---Action Button-->\n\n            <ion-item-options>\n\n              <button ion-button text-capitalize transparent (click)="delete(item)">\n\n              {{item.delate}}\n\n            </button>\n\n            </ion-item-options>\n\n          </ion-item-sliding>\n\n        </ion-list>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\swipe-to-dismiss\layout-3\swipe-to-dismiss.html"*/
-=======
-            selector: 'swipe-to-dismiss-layout-3',template:/*ion-inline-start:"/Users/duduulopes/Desktop/sgq/App/sgq/src/core/list-view/swipe-to-dismiss/layout-3/swipe-to-dismiss.html"*/'<!-- Themes Swipe To Dismiss - Full width image -->\n<ion-content has-header padding-top>\n  <ion-grid no-padding *ngIf="data != null">\n    <ion-row>\n      <ion-col col-12 align-self-end>\n        <ion-list>\n          <ion-item-sliding transparent *ngFor="let item of data.items" #slidingItem>\n            <ion-item no-lines box-shadow background-size (click)="onEvent(\'onItemClick\', item.title, $event)" [ngStyle]="{\'background-image\': \'url(\' + item.image + \')\'}">\n              <div title-block>\n                <!-- Subtitle -->\n                <p card-subtitle>{{item.subtitle}}</p>\n                <!-- Title -->\n                <h1 card-title text-wrap>{{item.title}}</h1>\n              </div>\n            </ion-item>\n            <!---Action Button-->\n            <ion-item-options>\n              <button ion-button text-capitalize transparent (click)="delete(item)">\n              {{item.delate}}\n            </button>\n            </ion-item-options>\n          </ion-item-sliding>\n        </ion-list>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/Users/duduulopes/Desktop/sgq/App/sgq/src/core/list-view/swipe-to-dismiss/layout-3/swipe-to-dismiss.html"*/
->>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
         }),
         __metadata("design:paramtypes", [])
     ], SwipeToDismissLayout3);

@@ -1,25 +1,14 @@
 webpackJsonp([14],{
 
-<<<<<<< HEAD
 /***/ 764:
-=======
-/***/ 774:
->>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-<<<<<<< HEAD
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChecklistCadastroPageModule", function() { return ChecklistCadastroPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cadastro_item__ = __webpack_require__(896);
-=======
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ManterVerificacaoPageModule", function() { return ManterVerificacaoPageModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__manter_verificacao__ = __webpack_require__(881);
->>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -29,7 +18,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-<<<<<<< HEAD
 var ChecklistCadastroPageModule = /** @class */ (function () {
     function ChecklistCadastroPageModule() {
     }
@@ -104,68 +92,10 @@ var ItemChecklist = /** @class */ (function () {
     function ItemChecklist(values) {
         if (values === void 0) { values = {}; }
         this.id = 0;
-=======
-var ManterVerificacaoPageModule = /** @class */ (function () {
-    function ManterVerificacaoPageModule() {
-    }
-    ManterVerificacaoPageModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__manter_verificacao__["a" /* ManterVerificacaoPage */]
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__manter_verificacao__["a" /* ManterVerificacaoPage */])
-            ],
-            schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"]]
-        })
-    ], ManterVerificacaoPageModule);
-    return ManterVerificacaoPageModule;
-}());
-
-//# sourceMappingURL=manter-verificacao.module.js.map
-
-/***/ }),
-
-/***/ 782:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ItemChecklist; });
-var ItemChecklist = /** @class */ (function () {
-    function ItemChecklist(values) {
-        if (values === void 0) { values = {}; }
-        this.id = 0;
         this.campo1 = "";
         this.campo2 = "";
         this.campo3 = "";
         this.campo4 = "";
-        this.itensChecklistServico = [];
-        Object.assign(this, values);
-    }
-    return ItemChecklist;
-}());
-
-//# sourceMappingURL=item-checklist.js.map
-
-/***/ }),
-
-/***/ 785:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Inspecao; });
-var Inspecao = /** @class */ (function () {
-    function Inspecao(values) {
-        if (values === void 0) { values = {}; }
-        this.id = 0;
-        this.idGuidInspecao = '';
-        this.idGuidServico = '';
->>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
-        this.campo1 = "";
-        this.campo2 = "";
-        this.campo3 = "";
-        this.campo4 = "";
-<<<<<<< HEAD
         this.itensChecklistServico = [];
         Object.assign(this, values);
     }
@@ -191,37 +121,6 @@ var Inspecao = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__models_item_checklist_servico__ = __webpack_require__(897);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__utils_loading_service__ = __webpack_require__(90);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utils_message_service__ = __webpack_require__(155);
-=======
-        this.status = 0;
-        this.situacao = 'Em aberto';
-        this.delete = false;
-        this.dataHoraAlteracao = new Date();
-        this.qtdNA = 0;
-        this.qtdA = 0;
-        this.qtdR = 0;
-        this.qtdRA = 0;
-        this.qtdX = 0;
-        this.inspecaoObraItens = [];
-        this.ocorrencias = [];
-        Object.assign(this, values);
-    }
-    return Inspecao;
-}());
-
-//# sourceMappingURL=inspecao.js.map
-
-/***/ }),
-
-/***/ 881:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ManterVerificacaoPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_inspecao__ = __webpack_require__(785);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_item_checklist__ = __webpack_require__(782);
->>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -235,7 +134,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-<<<<<<< HEAD
 
 
 
@@ -303,7 +201,7 @@ var CadastroItemPage = /** @class */ (function () {
     };
     CadastroItemPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-cadastro-item',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\checklist\cadastro-item\cadastro-item.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <ion-row>\n\n            <ion-col col-2>\n\n                <button class="button-nav" (click)="voltar()">\n\n                    <span ion-text style="font-size: 0.7em;">Voltar</span>\n\n                </button>\n\n            </ion-col>\n\n            <ion-col col-10 m-auto>\n\n                <ion-title>Itens do Checklist</ion-title>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content has-header>\n\n    <ion-grid no-padding>\n\n        <ion-row padding-left padding-right>\n\n            <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n\n                <form #cadastroForm="ngForm" padding-top>\n\n                    <ion-item text-center transparent>\n\n                        <ion-label stacked>ORDEM</ion-label>\n\n                        <ion-input text-center required type="number" [(ngModel)]="itemChecklist.ordem" name="ordem"></ion-input>\n\n                    </ion-item>\n\n                    <ion-item text-center transparent>\n\n                        <ion-label stacked>DESCRIÇÃO</ion-label>\n\n                        <ion-textarea rows="3" text-center required type="text" [(ngModel)]="itemChecklist.descricao"\n\n                            name="descricao"></ion-textarea>\n\n                    </ion-item>\n\n\n\n                    <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: rgb(33,177,75) !important;"\n\n                        (click)="adicionar(cadastroForm.valid)">{{isEdicao ? \'Atualizar\' : \'Adicionar\'}}</button>\n\n                    <button *ngIf="isEdicao" ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: rgb(33,177,75) !important;"\n\n                        (click)="limpar()">Limpar</button>\n\n                    <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: rgb(33,177,75) !important;"\n\n                        (click)="concluir()">Concluir</button>\n\n                    \n\n                    <h3 text-center *ngIf="itens.length > 0" class="locais" style="margin-bottom: 0px;">Itens de checklist adicionados</h3>\n\n                    \n\n                    <h3 text-center *ngIf="itens.length == 0" class="locais">Nenhum item de checklist adicionado</h3>\n\n                    <ion-list *ngIf="itens.length > 0">\n\n                        <ion-item text-wrap class="list-item" *ngFor="let item of itens" (click)="editarItem(item)">\n\n                            {{item.ordem}} - {{item.descricao.toUpperCase()}}\n\n                        </ion-item>\n\n                    </ion-list>\n\n                    \n\n                </form>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-grid>\n\n</ion-content>'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\checklist\cadastro-item\cadastro-item.html"*/
+            selector: 'page-cadastro-item',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\checklist\cadastro-item\cadastro-item.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <ion-row class="pad-nav-page">\n\n            <button class="button-nav" (click)="voltar()">\n\n                <span ion-text>Voltar</span>\n\n            </button>\n\n        </ion-row>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n    <ion-grid no-padding>\n\n        <ion-row padding-left padding-right>\n\n            <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n\n                <form #cadastroForm="ngForm" padding-top>\n\n                    <ion-item text-center transparent>\n\n                        <ion-label stacked>ORDEM</ion-label>\n\n                        <ion-input text-center required type="number" [(ngModel)]="itemChecklist.ordem" name="ordem"></ion-input>\n\n                    </ion-item>\n\n                    <ion-item text-center transparent>\n\n                        <ion-label stacked>DESCRIÇÃO</ion-label>\n\n                        <ion-textarea rows="3" text-center required type="text" [(ngModel)]="itemChecklist.descricao"\n\n                            name="descricao"></ion-textarea>\n\n                    </ion-item>\n\n\n\n                    <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: rgb(33,177,75) !important;"\n\n                        (click)="adicionar(cadastroForm.valid)">{{isEdicao ? \'Atualizar\' : \'Adicionar\'}}</button>\n\n                    <button *ngIf="isEdicao" ion-button default-button block text-capitalize box-shadow margin-bottom\n\n                        style="background-color: rgb(33,177,75) !important;" (click)="limpar()">Limpar</button>\n\n                    <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: rgb(33,177,75) !important;"\n\n                        (click)="concluir()">Concluir</button>\n\n\n\n                    <h3 text-center *ngIf="itens.length > 0" class="locais" style="margin-bottom: 0px;">Itens de\n\n                        checklist adicionados</h3>\n\n\n\n                    <h3 text-center *ngIf="itens.length == 0" class="locais">Nenhum item de checklist adicionado</h3>\n\n                    <ion-list *ngIf="itens.length > 0">\n\n                        <ion-item text-wrap class="list-item" *ngFor="let item of itens" (click)="editarItem(item)">\n\n                            {{item.ordem}} - {{item.descricao.toUpperCase()}}\n\n                        </ion-item>\n\n                    </ion-list>\n\n\n\n                </form>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-grid>\n\n</ion-content>'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\checklist\cadastro-item\cadastro-item.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */],
@@ -336,36 +234,6 @@ var ItemChecklistServico = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=item-checklist-servico.js.map
-=======
-var ManterVerificacaoPage = /** @class */ (function () {
-    function ManterVerificacaoPage(viewCtrl, navParams) {
-        this.viewCtrl = viewCtrl;
-        this.navParams = navParams;
-        this.inspecao = new __WEBPACK_IMPORTED_MODULE_2__models_inspecao__["a" /* Inspecao */]();
-        this.itemChecklist = new __WEBPACK_IMPORTED_MODULE_3__models_item_checklist__["a" /* ItemChecklist */]();
-        this.inspecao = this.navParams.data.inspecao;
-        this.itemChecklist = this.navParams.data.itemChecklist;
-    }
-    ManterVerificacaoPage.prototype.salvar = function (valido) {
-        if (valido) {
-            this.viewCtrl.dismiss(this.inspecao);
-        }
-    };
-    ManterVerificacaoPage.prototype.voltar = function () {
-        this.viewCtrl.dismiss(null);
-    };
-    ManterVerificacaoPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-manter-verificacao',template:/*ion-inline-start:"/Users/duduulopes/Desktop/sgq/App/sgq/src/pages/verificacao/manter/manter-verificacao.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-row>\n            <ion-col col-2>\n                <button class="button-nav" (click)="voltar()">\n                    <span ion-text style="font-size: 0.7em;">Voltar</span>\n                </button>\n            </ion-col>\n            <ion-col col-10 m-auto>\n                <ion-title>Localização do Serviço</ion-title>\n            </ion-col>\n        </ion-row>\n    </ion-navbar>\n</ion-header>\n\n<ion-content has-header>\n    <ion-grid no-padding>\n        <ion-row padding-left padding-right>\n            <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n                <form #cadastroForm="ngForm" padding-top>\n                    <ion-item text-center transparent>\n                        <ion-label stacked>DATA DE ABERTURA</ion-label>\n                        <ion-datetime displayFormat="DD/MM/YYYY" name="inspecao.dataInspecao" [(ngModel)]="inspecao.dataInspecao" cancelText="Cancelar" doneText="Ok"></ion-datetime>\n                    </ion-item>\n                    <ion-item text-center transparent>\n                        <ion-label stacked>DATA DE ENCERRAMENTO</ion-label>\n                        <ion-datetime displayFormat="DD/MM/YYYY" name="inspecao.dataEncerramento" [(ngModel)]="inspecao.dataEncerramento" cancelText="Cancelar" doneText="Ok"></ion-datetime>\n                    </ion-item>\n                    <ion-item text-center transparent>\n                        <ion-label stacked>{{itemChecklist.campo1}}</ion-label>\n                        <ion-input text-center type="text" [(ngModel)]="inspecao.campo1" name="local1"></ion-input>\n                    </ion-item>\n                    <ion-item text-center transparent *ngIf="itemChecklist.campo2">\n                        <ion-label stacked>{{itemChecklist.campo2}}</ion-label>\n                        <ion-input text-center type="text" [(ngModel)]="inspecao.campo2" name="local2"></ion-input>\n                    </ion-item>\n                    <ion-item text-center transparent *ngIf="itemChecklist.campo3">\n                        <ion-label stacked>{{itemChecklist.campo3}}</ion-label>\n                        <ion-input text-center type="text" [(ngModel)]="inspecao.campo3" name="local3"></ion-input>\n                    </ion-item>\n                    <ion-item text-center transparent *ngIf="itemChecklist.campo4">\n                        <ion-label stacked>{{itemChecklist.campo4}}</ion-label>\n                        <ion-input text-center type="text" [(ngModel)]="inspecao.campo4" name="local4"></ion-input>\n                    </ion-item>\n                    <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: rgb(33,177,75) !important;"\n                        (click)="salvar(cadastroForm.valid)">Salvar</button>\n                </form>\n            </ion-col>\n        </ion-row>\n    </ion-grid>\n</ion-content>'/*ion-inline-end:"/Users/duduulopes/Desktop/sgq/App/sgq/src/pages/verificacao/manter/manter-verificacao.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["u" /* ViewController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */]])
-    ], ManterVerificacaoPage);
-    return ManterVerificacaoPage;
-}());
-
-//# sourceMappingURL=manter-verificacao.js.map
->>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
 
 /***/ })
 

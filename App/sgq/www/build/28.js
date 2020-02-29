@@ -1,6 +1,6 @@
 webpackJsonp([28],{
 
-/***/ 760:
+/***/ 761:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,11 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WizardLayout3Module", function() { return WizardLayout3Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wizard_layout_3__ = __webpack_require__(891);
-=======
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wizard_layout_3__ = __webpack_require__(863);
->>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wizard_layout_3__ = __webpack_require__(892);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -46,11 +42,7 @@ var WizardLayout3Module = /** @class */ (function () {
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 891:
-=======
-/***/ 863:
->>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
+/***/ 892:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -112,11 +104,7 @@ var WizardLayout3 = /** @class */ (function () {
     ], WizardLayout3.prototype, "slider", void 0);
     WizardLayout3 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-<<<<<<< HEAD
             selector: 'wizard-layout-3',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\wizard\layout-3\wizard.html"*/'<!--Theme Wizard Big Image With Text -->\n\n<ion-slides #wizardSlider (ionSlideDidChange)="slideHasChanged()" pager="true" *ngIf="data != null">\n\n  <ion-slide background-size padding *ngFor="let item of data.items;" [ngStyle]="{\'background-image\': \'url(\' + item.backgroundImage + \')\'}">\n\n    <!--Wizard Content -->\n\n    <div wizard-content text-center>\n\n      <!--Wizard Subitem -->\n\n      <h3 wizard-subtitle margin-bottom>{{item.subtitle}}</h3>\n\n      <!--Wizard Title -->\n\n      <h1 wizard-title no-margin>{{item.title}}</h1>\n\n    </div>\n\n  </ion-slide>\n\n</ion-slides>\n\n<!--Button section-->\n\n<div *ngIf="data != null" text-center>\n\n  <button ion-button default-button wizard-button text-capitalize (click)="changeSlide(1)" *ngIf="next">\n\n        {{data.btnNext}}\n\n    </button>\n\n  <button ion-button default-button wizard-button text-capitalize (click)="onEvent(\'onFinish\')" *ngIf="finish">\n\n        {{data.btnFinish}}\n\n    </button>\n\n</div>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\wizard\layout-3\wizard.html"*/
-=======
-            selector: 'wizard-layout-3',template:/*ion-inline-start:"/Users/duduulopes/Desktop/sgq/App/sgq/src/core/wizard/layout-3/wizard.html"*/'<!--Theme Wizard Big Image With Text -->\n<ion-slides #wizardSlider (ionSlideDidChange)="slideHasChanged()" pager="true" *ngIf="data != null">\n  <ion-slide background-size padding *ngFor="let item of data.items;" [ngStyle]="{\'background-image\': \'url(\' + item.backgroundImage + \')\'}">\n    <!--Wizard Content -->\n    <div wizard-content text-center>\n      <!--Wizard Subitem -->\n      <h3 wizard-subtitle margin-bottom>{{item.subtitle}}</h3>\n      <!--Wizard Title -->\n      <h1 wizard-title no-margin>{{item.title}}</h1>\n    </div>\n  </ion-slide>\n</ion-slides>\n<!--Button section-->\n<div *ngIf="data != null" text-center>\n  <button ion-button default-button wizard-button text-capitalize (click)="changeSlide(1)" *ngIf="next">\n        {{data.btnNext}}\n    </button>\n  <button ion-button default-button wizard-button text-capitalize (click)="onEvent(\'onFinish\')" *ngIf="finish">\n        {{data.btnFinish}}\n    </button>\n</div>\n'/*ion-inline-end:"/Users/duduulopes/Desktop/sgq/App/sgq/src/core/wizard/layout-3/wizard.html"*/
->>>>>>> de8d8dcd1da236f3cd43d8a9e2e5ad6e84e68c99
         }),
         __metadata("design:paramtypes", [])
     ], WizardLayout3);
