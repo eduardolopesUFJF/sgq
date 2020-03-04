@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SelectLayout1Module", function() { return SelectLayout1Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__select_layout_1__ = __webpack_require__(815);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__select_layout_1__ = __webpack_require__(820);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -129,7 +129,7 @@ var SelectLayout3Module = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 771:
+/***/ 775:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -138,7 +138,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__core_login_layout_2_login_layout_2_module__ = __webpack_require__(693);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_component__ = __webpack_require__(904);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_component__ = __webpack_require__(909);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__core_select_layout_3_select_layout_3_module__ = __webpack_require__(694);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -174,7 +174,7 @@ var LoginPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 815:
+/***/ 820:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -335,7 +335,7 @@ var SelectLayout3 = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 904:
+/***/ 909:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -343,10 +343,11 @@ var SelectLayout3 = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_loading_service__ = __webpack_require__(90);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_usuarioLogin__ = __webpack_require__(905);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_usuario_service__ = __webpack_require__(906);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_usuarioLogin__ = __webpack_require__(910);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_usuario_service__ = __webpack_require__(911);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_toast_service__ = __webpack_require__(351);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_storage__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_cliente_service__ = __webpack_require__(912);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -363,14 +364,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var LoginPage = /** @class */ (function () {
-    function LoginPage(navCtrl, navParams, storage, loading, usuarioService, toastService) {
+    function LoginPage(navCtrl, navParams, storage, loading, usuarioService, clienteService, toastService) {
         var _this = this;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.storage = storage;
         this.loading = loading;
         this.usuarioService = usuarioService;
+        this.clienteService = clienteService;
         this.toastService = toastService;
         this.usuarioLogin = new __WEBPACK_IMPORTED_MODULE_3__models_usuarioLogin__["a" /* UsuarioLogin */]();
         this.data = {
@@ -393,100 +396,7 @@ var LoginPage = /** @class */ (function () {
                 "title": "CONDOMÍNIO",
                 "selectedItem": 0,
                 "header": "Basic dialog",
-                "items": [
-                    {
-                        "id": 1,
-                        "title": "GDOL"
-                    },
-                    {
-                        "id": 2,
-                        "title": "ADDY"
-                    },
-                    {
-                        "id": 3,
-                        "title": "ARCOS"
-                    },
-                    {
-                        "id": 4,
-                        "title": "ARRUELAS"
-                    },
-                    {
-                        "id": 5,
-                        "title": "ATRIUM"
-                    },
-                    {
-                        "id": 6,
-                        "title": "BAUEN"
-                    },
-                    {
-                        "id": 7,
-                        "title": "CGD"
-                    },
-                    {
-                        "id": 8,
-                        "title": "CRISTO REI"
-                    },
-                    {
-                        "id": 9,
-                        "title": "FAZ"
-                    },
-                    {
-                        "id": 10,
-                        "title": "FORUM"
-                    },
-                    {
-                        "id": 11,
-                        "title": "GESTAO"
-                    },
-                    {
-                        "id": 12,
-                        "title": "GS"
-                    },
-                    {
-                        "id": 13,
-                        "title": "MELHORLAR"
-                    },
-                    {
-                        "id": 14,
-                        "title": "NPA"
-                    },
-                    {
-                        "id": 15,
-                        "title": "PAINEIRA"
-                    },
-                    {
-                        "id": 16,
-                        "title": "PRIMAZ"
-                    },
-                    {
-                        "id": 17,
-                        "title": "REALIZA"
-                    },
-                    {
-                        "id": 18,
-                        "title": "RMG"
-                    },
-                    {
-                        "id": 19,
-                        "title": "SOLTRON"
-                    },
-                    {
-                        "id": 20,
-                        "title": "TALENT"
-                    },
-                    {
-                        "id": 21,
-                        "title": "UPTEC"
-                    },
-                    {
-                        "id": 22,
-                        "title": "VERNAC"
-                    },
-                    {
-                        "id": 23,
-                        "title": "VILLARD"
-                    }
-                ]
+                "items": []
             }
         };
         this.events = {
@@ -495,6 +405,39 @@ var LoginPage = /** @class */ (function () {
             }
         };
     }
+    LoginPage.prototype.ngAfterViewInit = function () {
+        var _this = this;
+        this.loading.show();
+        this.clienteService.obterTodas().subscribe(function (result) {
+            _this.data = {
+                "background": "assets/images/background/login.png",
+                "forgotPassword": "Esqueceu sua senha?",
+                "labelUsername": "USUÁRIO",
+                "labelPassword": "SENHA",
+                "title": "Acessar área restrita",
+                "username": "",
+                "password": "",
+                "register": "Registrar",
+                "possuiRegistrar": false,
+                "possuiEsqueciSenha": false,
+                "possuiLogo": true,
+                "login": "Logar",
+                "logo": "assets/images/logo/logo.png",
+                "errorUser": "O campo usuário deve ser preenchido",
+                "errorPassword": "O campo senha deve ser preenchido",
+                "selectData": {
+                    "title": "CONDOMÍNIO",
+                    "selectedItem": 0,
+                    "header": "Basic dialog",
+                    "items": result
+                }
+            };
+            _this.loading.hide();
+        }, function (error) {
+            _this.loading.hide();
+            _this.toastService.presentToastError("Não foi possível obter os clientes.");
+        });
+    };
     LoginPage.prototype.logar = function (usuario, senha, empresa) {
         var _this = this;
         this.loading.show();
@@ -538,23 +481,19 @@ var LoginPage = /** @class */ (function () {
     };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\login\login.component.html"*/'<login-layout-2 [data]="data" [events]="events"></login-layout-2>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\login\login.component.html"*/,
-            providers: [__WEBPACK_IMPORTED_MODULE_4__services_usuario_service__["a" /* UsuarioService */]]
+            providers: [__WEBPACK_IMPORTED_MODULE_4__services_usuario_service__["a" /* UsuarioService */], __WEBPACK_IMPORTED_MODULE_7__services_cliente_service__["a" /* ClienteService */]]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_6__ionic_storage__["b" /* Storage */],
-            __WEBPACK_IMPORTED_MODULE_2__utils_loading_service__["a" /* LoadingService */],
-            __WEBPACK_IMPORTED_MODULE_4__services_usuario_service__["a" /* UsuarioService */],
-            __WEBPACK_IMPORTED_MODULE_5__utils_toast_service__["a" /* ToastService */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_6__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__ionic_storage__["b" /* Storage */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__utils_loading_service__["a" /* LoadingService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__utils_loading_service__["a" /* LoadingService */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_4__services_usuario_service__["a" /* UsuarioService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__services_usuario_service__["a" /* UsuarioService */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_7__services_cliente_service__["a" /* ClienteService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7__services_cliente_service__["a" /* ClienteService */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_5__utils_toast_service__["a" /* ToastService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__utils_toast_service__["a" /* ToastService */]) === "function" && _g || Object])
     ], LoginPage);
     return LoginPage;
+    var _a, _b, _c, _d, _e, _f, _g;
 }());
 
 //# sourceMappingURL=login.component.js.map
 
 /***/ }),
 
-/***/ 905:
+/***/ 910:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -574,7 +513,7 @@ var UsuarioLogin = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 906:
+/***/ 911:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -625,6 +564,60 @@ var UsuarioService = /** @class */ (function (_super) {
 }(__WEBPACK_IMPORTED_MODULE_1__base_service__["a" /* BaseService */]));
 
 //# sourceMappingURL=usuario.service.js.map
+
+/***/ }),
+
+/***/ 912:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ClienteService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__base_service__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rxjs_Rx__);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var ClienteService = /** @class */ (function (_super) {
+    __extends(ClienteService, _super);
+    function ClienteService(http) {
+        return _super.call(this, http, 'cliente/') || this;
+    }
+    ClienteService.prototype.obterTodas = function () {
+        return this.http.get(this.apiUrl, { headers: this.headers })
+            .catch(this.handleError);
+    };
+    ClienteService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object])
+    ], ClienteService);
+    return ClienteService;
+    var _a;
+}(__WEBPACK_IMPORTED_MODULE_1__base_service__["a" /* BaseService */]));
+
+//# sourceMappingURL=cliente.service.js.map
 
 /***/ })
 

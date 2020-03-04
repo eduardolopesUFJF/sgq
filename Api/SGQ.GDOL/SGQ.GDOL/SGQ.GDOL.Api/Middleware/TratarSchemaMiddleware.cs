@@ -26,6 +26,10 @@ namespace SGQ.GDOL.Api.Middleware
             {
                 CredenciaisBanco.Schema = "GDOLSGQ_CR";
             }
+            if (CredenciaisBanco.Schema.Equals("GDOLSGQ_MELO BORGES"))
+            {
+                CredenciaisBanco.Schema = "GDOLSGQ_MELOBORGES";
+            }
             if (CredenciaisBanco.Schema.Equals("GDOLSGQ_GDOL"))
             {
                 CredenciaisBanco.Schema = "GDOLSGQ";

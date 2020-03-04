@@ -14,6 +14,8 @@ using SGQ.GDOL.Domain.ObraRoot.Service;
 using SGQ.GDOL.Domain.RHRoot.Repository;
 using SGQ.GDOL.Domain.RHRoot.Service;
 using SGQ.GDOL.Domain.RHRoot.Service.Interface;
+using SGQ.GDOL.Domain.ComercialRoot.Service.Interfaces;
+using SGQ.GDOL.Domain.ComercialRoot.Service;
 
 namespace SGQ.GDOL.Infra.CrossCutting.IoC
 {
@@ -35,6 +37,7 @@ namespace SGQ.GDOL.Infra.CrossCutting.IoC
             services.AddScoped<IFuncionarioService, FuncionarioService>();
             services.AddScoped<IInspecaoObraItemService, InspecaoObraItemService>();
             services.AddScoped<IOcorrenciaService, OcorrenciaService>();
+            services.AddScoped<IClienteService, ClienteService>();
 
             //Infra Data
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
