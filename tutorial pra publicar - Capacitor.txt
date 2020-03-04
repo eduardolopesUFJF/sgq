@@ -1,0 +1,14 @@
+No code digite:
+	- ionic build
+	* Se não existir a plataforma android
+		- npx cap add android
+	* Senão
+		- npm cap copy android
+	npx cap open android
+
+No android studio:
+	Incrementar a versionCode e atualizar a versionName em android/app/build.gradle 
+	build => Generated Signed...
+	Escolher opção APK
+	Colocar o minha-chave.keystore Dudu1234* alias_nome
+	Marcar as duas opções de tipo de assinatura
