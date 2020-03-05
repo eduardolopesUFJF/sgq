@@ -207,7 +207,13 @@ export class MyApp {
     this.subirProgressObterIds();
     this.obraService.obterIdsTodasAtivas().subscribe(
       idsObra => {
-        this.obterObraCompleta(idsObra);
+        if (idsObra.length > 0) {
+          this.obterObraCompleta(idsObra);
+        } else {
+          MyApp.progressbarAtivo = false;
+          MyApp.progress = 0;
+          this.loadingService.hide();
+        }
       },
       error => {
         MyApp.progressbarAtivo = false;

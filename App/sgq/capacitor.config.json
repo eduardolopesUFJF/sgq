@@ -13,8 +13,13 @@
       "SplashMaintainAspectRatio": "true",
       "FadeSplashScreenDuration": "300",
       "SplashShowOnlyFirstTime": "false",
-      "SplashScreen": "screen",
-      "SplashScreenDelay": "3000"
+      "SplashScreen": "screen"
+    }
+  },
+  "plugins": {
+    "SplashScreen": {
+      "showSpinner": true,
+      "launchShowDuration": 20000
     }
   }
 }
