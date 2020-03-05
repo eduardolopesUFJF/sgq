@@ -1,6 +1,6 @@
 webpackJsonp([21],{
 
-/***/ 728:
+/***/ 729:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ParallaxLayout3Module", function() { return ParallaxLayout3Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__parallax_layout_3__ = __webpack_require__(859);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__parallax_layout_3__ = __webpack_require__(860);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__elastic_header_elastic_header_module__ = __webpack_require__(782);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -147,7 +147,7 @@ var ElasticHeader = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 859:
+/***/ 860:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -218,7 +218,7 @@ var ParallaxLayout3 = /** @class */ (function () {
     ], ParallaxLayout3.prototype, "content", void 0);
     ParallaxLayout3 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'parallax-layout-3',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\parallax\layout-3\parallax.html"*/'<!--- Theme Parallax - Product -->\n\n<ion-header header-ios>\n\n  <ion-navbar transparent [ngClass]="{\'active\':isClassActive()}">\n\n    <button ion-button menuToggle>\n\n      <ion-icon [name]="menu"></ion-icon>\n\n    </button>\n\n    <ion-title *ngIf="data != null">{{data.headerTitle}}</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content elastic-header *ngIf="data != null">\n\n  <!-- Parallax Big Image -->\n\n  <div id="elastic-header">\n\n    <div background-size [ngStyle]="{\'background-image\': \'url(\' + headerImage + \')\'}">\n\n      <div title-block>\n\n        <ion-item transparent no-lines (click)="onEvent(\'onItemClick\', data)">\n\n          <!-- Parallax Title -->\n\n          <h2 text-wrap parallax-title>{{data.title}}</h2>\n\n          <!-- Parallax Subtitle -->\n\n          <h3 text-wrap parallax-subtitle>{{data.subtitle}}</h3>\n\n          <div item-content>\n\n            <button float-right ion-button button-action-shit *ngIf="data != null" (click)="onEvent(\'onShare\', data)">\n\n                  <ion-icon  [name]="data.shareIcon"></ion-icon>\n\n                </button>\n\n          </div>\n\n        </ion-item>\n\n      </div>\n\n    </div>\n\n    <!-- Description Products -->\n\n    <ion-item no-lines no-padding small-description>\n\n      <!-- Name Category-->\n\n      <span new-category text-uppercase>{{data.category}}</span>\n\n      <ion-badge float-right text-uppercase badge-clear no-padding (click)="onEvent(\'onProceed\', item, $event)">{{data.button}}</ion-badge>\n\n      <p padding-left margin-top parallax-description margin-bottom text-wrap>{{data.titleDescription}}</p>\n\n    </ion-item>\n\n  </div>\n\n  <!--Content-->\n\n  <ion-grid no-padding *ngIf="data != null">\n\n    <ion-row padding-top>\n\n      <ion-col col-12 *ngFor="let item of data.items;let i = index" (click)="onEvent(\'onItemClick\', item)">\n\n        <!--Content With Text-->\n\n        <ion-item no-lines *ngFor="let item of data.items;let i = index">\n\n          <p parallax-description text-wrap>{{item.description}}</p>\n\n        </ion-item>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\parallax\layout-3\parallax.html"*/
+            selector: 'parallax-layout-3',template:/*ion-inline-start:"/Users/user916661/Desktop/sgq/App/sgq/src/core/parallax/layout-3/parallax.html"*/'<!--- Theme Parallax - Product -->\n<ion-header header-ios>\n  <ion-navbar transparent [ngClass]="{\'active\':isClassActive()}">\n    <button ion-button menuToggle>\n      <ion-icon [name]="menu"></ion-icon>\n    </button>\n    <ion-title *ngIf="data != null">{{data.headerTitle}}</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content elastic-header *ngIf="data != null">\n  <!-- Parallax Big Image -->\n  <div id="elastic-header">\n    <div background-size [ngStyle]="{\'background-image\': \'url(\' + headerImage + \')\'}">\n      <div title-block>\n        <ion-item transparent no-lines (click)="onEvent(\'onItemClick\', data)">\n          <!-- Parallax Title -->\n          <h2 text-wrap parallax-title>{{data.title}}</h2>\n          <!-- Parallax Subtitle -->\n          <h3 text-wrap parallax-subtitle>{{data.subtitle}}</h3>\n          <div item-content>\n            <button float-right ion-button button-action-shit *ngIf="data != null" (click)="onEvent(\'onShare\', data)">\n                  <ion-icon  [name]="data.shareIcon"></ion-icon>\n                </button>\n          </div>\n        </ion-item>\n      </div>\n    </div>\n    <!-- Description Products -->\n    <ion-item no-lines no-padding small-description>\n      <!-- Name Category-->\n      <span new-category text-uppercase>{{data.category}}</span>\n      <ion-badge float-right text-uppercase badge-clear no-padding (click)="onEvent(\'onProceed\', item, $event)">{{data.button}}</ion-badge>\n      <p padding-left margin-top parallax-description margin-bottom text-wrap>{{data.titleDescription}}</p>\n    </ion-item>\n  </div>\n  <!--Content-->\n  <ion-grid no-padding *ngIf="data != null">\n    <ion-row padding-top>\n      <ion-col col-12 *ngFor="let item of data.items;let i = index" (click)="onEvent(\'onItemClick\', item)">\n        <!--Content With Text-->\n        <ion-item no-lines *ngFor="let item of data.items;let i = index">\n          <p parallax-description text-wrap>{{item.description}}</p>\n        </ion-item>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/Users/user916661/Desktop/sgq/App/sgq/src/core/parallax/layout-3/parallax.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], ParallaxLayout3);

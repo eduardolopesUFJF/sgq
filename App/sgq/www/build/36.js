@@ -1,6 +1,6 @@
 webpackJsonp([36],{
 
-/***/ 752:
+/***/ 753:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabsLayout1Module", function() { return TabsLayout1Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs_layout_1__ = __webpack_require__(883);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs_layout_1__ = __webpack_require__(884);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -42,7 +42,7 @@ var TabsLayout1Module = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 883:
+/***/ 884:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -75,7 +75,7 @@ var TabsLayout1 = /** @class */ (function () {
     ], TabsLayout1.prototype, "tabRef", void 0);
     TabsLayout1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'tabs-layout-1',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\tabs\layout-1\tabs.html"*/'<!-- Theme Tabs Footer tab - text -->\n\n<ion-tabs #tabs tabsPlacement="bottom">\n\n    <ion-tab [tabTitle]="item.title" [tabIcon]="item.icon" [root]="item.page" *ngFor="let item of data;let i = index"></ion-tab>\n\n</ion-tabs>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\tabs\layout-1\tabs.html"*/
+            selector: 'tabs-layout-1',template:/*ion-inline-start:"/Users/user916661/Desktop/sgq/App/sgq/src/core/tabs/layout-1/tabs.html"*/'<!-- Theme Tabs Footer tab - text -->\n<ion-tabs #tabs tabsPlacement="bottom">\n    <ion-tab [tabTitle]="item.title" [tabIcon]="item.icon" [root]="item.page" *ngFor="let item of data;let i = index"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/Users/user916661/Desktop/sgq/App/sgq/src/core/tabs/layout-1/tabs.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], TabsLayout1);
