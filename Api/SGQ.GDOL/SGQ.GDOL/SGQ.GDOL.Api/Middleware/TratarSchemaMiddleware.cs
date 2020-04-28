@@ -18,10 +18,6 @@ namespace SGQ.GDOL.Api.Middleware
         {
             CredenciaisBanco.Schema = "GDOLSGQ_" + context.Request.Headers.FirstOrDefault(x => x.Key == "BancoSchema").Value.ToString().ToUpper();
 
-            if (CredenciaisBanco.Schema.ToUpper().Equals("GDOLSGQ_ARCO"))
-            {
-                CredenciaisBanco.Schema = "GDOLSGQ_ARCOS";
-            }
             if (CredenciaisBanco.Schema.Equals("GDOLSGQ_CRISTO REI"))
             {
                 CredenciaisBanco.Schema = "GDOLSGQ_CR";

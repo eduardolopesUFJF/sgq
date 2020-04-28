@@ -48,7 +48,7 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Context
                 .AddJsonFile("appsettings.json")
                 .Build();
 
-            if(CredenciaisBanco.Schema.Equals("GDOLSGQ_ARCOS") || CredenciaisBanco.Schema.Equals("BPOSSAS_ARCOS")
+            if(CredenciaisBanco.Schema.Equals("GDOLSGQ_ARCO") || CredenciaisBanco.Schema.Equals("BPOSSAS_ARCO")
                 || CredenciaisBanco.Schema.Equals("GDOLSGQ") || CredenciaisBanco.Schema.Equals("BPOSSAS_GDOL"))
             {
                 CredenciaisBanco.Usuario = "BPOSSAS_aplicativo";
@@ -57,9 +57,9 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Context
                 {
                     CredenciaisBanco.Schema = "BPOSSAS_GDOL";
                 }
-                if (CredenciaisBanco.Schema.Equals("GDOLSGQ_ARCOS"))
+                if (CredenciaisBanco.Schema.Equals("GDOLSGQ_ARCO"))
                 {
-                    CredenciaisBanco.Schema = "BPOSSAS_ARCOS";
+                    CredenciaisBanco.Schema = "BPOSSAS_ARCO";
                 }
                 optionsBuilder.UseSqlServer(config.GetConnectionString("NewDefaultConnection").Replace("schema", CredenciaisBanco.Schema).Replace("usuario", CredenciaisBanco.Usuario).Replace("senha", CredenciaisBanco.Senha));
             }
