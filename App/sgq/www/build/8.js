@@ -1,6 +1,6 @@
 webpackJsonp([8],{
 
-/***/ 775:
+/***/ 773:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OcorrenciaPageModule", function() { return OcorrenciaPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ocorrencia__ = __webpack_require__(912);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ocorrencia__ = __webpack_require__(909);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -193,7 +193,7 @@ var Ocorrencia = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 912:
+/***/ 909:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -457,7 +457,7 @@ var OcorrenciaPage = /** @class */ (function () {
     };
     OcorrenciaPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-ocorrencia',template:/*ion-inline-start:"/Users/user916661/Desktop/sgq/App/sgq/src/pages/ocorrencia/ocorrencia.html"*/'<ion-header>\n    <ion-navbar class="pad-nav-page-nt">\n        <ion-title>Ocorrências</ion-title>\n    </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <h2 text-center text-wrap class="broadcomb">{{broadcomb.toUpperCase()}}</h2>\n    <h2 padding text-center class="aviso" *ngIf="inspecao.ocorrencias.length < 1">Nenhum registro encontrado.</h2>\n    <ion-grid no-padding>\n        <ion-row>\n            <button ion-button default-button block text-capitalize box-shadow margin-bottom class="button-novo"\n                (click)="novaOcorrencia()" [disabled]="servico.status == 1">Nova ocorrência</button>\n        </ion-row>\n        <ion-row>\n            <ion-col col-12>\n                <ion-list no-margin>\n                    <ion-item default-item no-lines [ngClass]="{\'novo-item\': !item.id, \'item-removido\': item.delete}" *ngFor="let item of inspecao.ocorrencias; let i = index;">\n                        <ion-row class="espacamento">\n                            <ion-col col-10 (click)="editar(item)">\n                                <h2 item-title text-wrap>Data da descrição: {{item.dataDescricao ? (item.dataDescricao\n                                    | date:\n                                    \'dd/MM/yyyy\') : \'--\'}}</h2>\n                                <h2 item-title text-wrap>Descrição: {{item.descricao}}</h2>\n                                <h2 item-title text-wrap>Data da tratativa: {{item.dataTratativa ? (item.dataTratativa\n                                    | date:\n                                    \'dd/MM/yyyy\') : \'--\'}}</h2>\n                                <h2 item-title text-wrap>Tratativa: {{item.tratativa}}</h2>\n                            </ion-col>\n                            <ion-col col-2 *ngIf="servico.status != 1">\n                                <ion-icon name="more" icon-small item-right style="font-size: 32px !important; margin: 0px"\n                                    (click)="exibirOpcoes(item)"></ion-icon>\n                            </ion-col>\n                        </ion-row>\n                    </ion-item>\n                </ion-list>\n            </ion-col>\n        </ion-row>\n    </ion-grid>\n</ion-content>'/*ion-inline-end:"/Users/user916661/Desktop/sgq/App/sgq/src/pages/ocorrencia/ocorrencia.html"*/
+            selector: 'page-ocorrencia',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\ocorrencia\ocorrencia.html"*/'<ion-header>\n\n    <ion-navbar class="pad-nav-page-nt">\n\n        <ion-title>Ocorrências</ion-title>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n    <h2 text-center text-wrap class="broadcomb">{{broadcomb.toUpperCase()}}</h2>\n\n    <h2 padding text-center class="aviso" *ngIf="inspecao.ocorrencias.length < 1">Nenhum registro encontrado.</h2>\n\n    <ion-grid no-padding>\n\n        <ion-row>\n\n            <button ion-button default-button block text-capitalize box-shadow margin-bottom class="button-novo"\n\n                (click)="novaOcorrencia()" [disabled]="servico.status == 1">Nova ocorrência</button>\n\n        </ion-row>\n\n        <ion-row>\n\n            <ion-col col-12>\n\n                <ion-list no-margin>\n\n                    <ion-item default-item no-lines [ngClass]="{\'novo-item\': !item.id, \'item-removido\': item.delete}" *ngFor="let item of inspecao.ocorrencias; let i = index;">\n\n                        <ion-row class="espacamento">\n\n                            <ion-col col-10 (click)="editar(item)">\n\n                                <h2 item-title text-wrap>Data da descrição: {{item.dataDescricao ? (item.dataDescricao\n\n                                    | date:\n\n                                    \'dd/MM/yyyy\') : \'--\'}}</h2>\n\n                                <h2 item-title text-wrap>Descrição: {{item.descricao}}</h2>\n\n                                <h2 item-title text-wrap>Data da tratativa: {{item.dataTratativa ? (item.dataTratativa\n\n                                    | date:\n\n                                    \'dd/MM/yyyy\') : \'--\'}}</h2>\n\n                                <h2 item-title text-wrap>Tratativa: {{item.tratativa}}</h2>\n\n                            </ion-col>\n\n                            <ion-col col-2 *ngIf="servico.status != 1">\n\n                                <ion-icon name="more" icon-small item-right style="font-size: 32px !important; margin: 0px"\n\n                                    (click)="exibirOpcoes(item)"></ion-icon>\n\n                            </ion-col>\n\n                        </ion-row>\n\n                    </ion-item>\n\n                </ion-list>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-grid>\n\n</ion-content>'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\ocorrencia\ocorrencia.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */],
