@@ -49,13 +49,13 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Context
                 .Build();
 
             if(CredenciaisBanco.Schema.Equals("GDOLSGQ_ARCO") || CredenciaisBanco.Schema.Equals("BPOSSAS_ARCO")
-                || CredenciaisBanco.Schema.Equals("GDOLSGQ") || CredenciaisBanco.Schema.Equals("BPOSSAS_GDOL"))
+                || CredenciaisBanco.Schema.Equals("GDOLSGQ") || CredenciaisBanco.Schema.Equals("BPOSSAS_GDOLSISTEMAS"))
             {
                 CredenciaisBanco.Usuario = "BPOSSAS_aplicativo";
 
                 if (CredenciaisBanco.Schema.Equals("GDOLSGQ"))
                 {
-                    CredenciaisBanco.Schema = "BPOSSAS_GDOL";
+                    CredenciaisBanco.Schema = "BPOSSAS_GDOLSISTEMAS";
                 }
                 if (CredenciaisBanco.Schema.Equals("GDOLSGQ_ARCO"))
                 {
