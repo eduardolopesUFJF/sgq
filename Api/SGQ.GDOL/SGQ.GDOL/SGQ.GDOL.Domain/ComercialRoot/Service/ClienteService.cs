@@ -31,6 +31,7 @@ namespace SGQ.GDOL.Domain.ComercialRoot.Service
             nomeClientes.Add("BAUEN");
             nomeClientes.Add("CGD");
             nomeClientes.Add("CRISTO REI");
+            nomeClientes.Add("EGREGORA");
             nomeClientes.Add("FAZ");
             nomeClientes.Add("FORUM");
             nomeClientes.Add("GESTAO");
@@ -43,6 +44,7 @@ namespace SGQ.GDOL.Domain.ComercialRoot.Service
             nomeClientes.Add("REALIZA");
             nomeClientes.Add("RMG");
             nomeClientes.Add("SOLTRON");
+            nomeClientes.Add("SUDOESTE");
             nomeClientes.Add("TALENT");
             nomeClientes.Add("UPTEC");
             nomeClientes.Add("VERNAC");
