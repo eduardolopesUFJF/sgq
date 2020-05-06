@@ -29,6 +29,7 @@ namespace SGQ.GDOL.Domain.ComercialRoot.Service
             nomeClientes.Add("ARRUELAS");
             nomeClientes.Add("ATRIUM");
             nomeClientes.Add("BAUEN");
+            nomeClientes.Add("BNR");
             nomeClientes.Add("CGD");
             nomeClientes.Add("CRISTO REI");
             nomeClientes.Add("EGREGORA");
