@@ -23,6 +23,9 @@ namespace SGQ.GDOL.Domain.ObraRoot.DTO
         public int IdOcorrencia { get; set; }
         public string IdGuidOcorrencia { get; set; }
 
+        public int IdEntregaObraCliente { get; set; }
+        public string IdGuidEntregaObraCliente { get; set; }
+
         public string Valor { get; set; }
     }
 }

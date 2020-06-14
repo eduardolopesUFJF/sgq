@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using SGQ.GDOL.Api.ViewModels;
+using SGQ.GDOL.Domain.EntregaObraRoot.Entity;
+using SGQ.GDOL.Domain.EntregaObraRoot.Service.Interfaces;
 using SGQ.GDOL.Domain.ObraRoot.DTO;
 using SGQ.GDOL.Domain.ObraRoot.Entity;
 using SGQ.GDOL.Domain.ObraRoot.Service.Interfaces;
@@ -21,6 +23,9 @@ namespace SGQ.GDOL.Api.Controllers
         private readonly IChecklistServicoService _checklistServicoService;
         private readonly IInspecaoObraItemService _inspecaoObraItemService;
         private readonly IOcorrenciaService _ocorrenciaService;
+        private readonly IEntregaObraService _entregaObraService;
+        private readonly IEntregaObraClienteService _entregaObraClienteService;
+        private readonly IEntregaObraClienteChecklistService _entregaObraClienteChecklistService;
 
         public AlteracaoController(
             IAreaService areaService,
@@ -28,7 +33,10 @@ namespace SGQ.GDOL.Api.Controllers
             IChecklistServicoService checklistServicoService,
             IInspecaoService inspecaoService,
             IInspecaoObraItemService inspecaoObraItemService,
-            IOcorrenciaService ocorrenciaService)
+            IOcorrenciaService ocorrenciaService,
+            IEntregaObraService entregaObraService,
+            IEntregaObraClienteService entregaObraClienteService,
+            IEntregaObraClienteChecklistService entregaObraClienteChecklistService)
         {
             _areaService = areaService;
             _servicoService = servicoService;
@@ -36,8 +44,151 @@ namespace SGQ.GDOL.Api.Controllers
             _inspecaoService = inspecaoService;
             _inspecaoObraItemService = inspecaoObraItemService;
             _ocorrenciaService = ocorrenciaService;
+            _entregaObraService = entregaObraService;
+            _entregaObraClienteService = entregaObraClienteService;
+            _entregaObraClienteChecklistService = entregaObraClienteChecklistService;
         }
 
+        #region ENTREGA OBRA
+
+        [HttpPost("entrega-obra")]
+        public IActionResult PostEntregaObra([FromBody] List<AlteracaoDTO> alteracoes)
+        {
+            var status = PrepararAlteracoesEntregaObra(alteracoes);
+            return Ok(status);
+        }
+
+        private string PrepararAlteracoesEntregaObra(List<AlteracaoDTO> alteracoes)
+        {
+            string status = "";
+            List<EntregaObraVM> entregasObras = new List<EntregaObraVM>();
+            List<EntregaObraClienteVM> entregasObrasClientes = new List<EntregaObraClienteVM>();
+
+            PrepararEntregaObra(alteracoes, entregasObras);
+            PrepararEntregaObraCliente(alteracoes, entregasObrasClientes);
+
+            status = PersistirEntregaObra(entregasObras, status);
+            status = PersistirEntregaObraCliente(entregasObrasClientes, status);
+
+            return status;
+        }
+
+        private static void PrepararEntregaObra(List<AlteracaoDTO> alteracoes, List<EntregaObraVM> entregasObras)
+        {
+            var entregasObrasEditadas = alteracoes.Where(x => x.Entidade.ToUpper() == "ENTREGAOBRA");
+
+            foreach (var alteracao in entregasObrasEditadas)
+            {
+                var entregaObraVM = JsonConvert.DeserializeObject<EntregaObraVM>(alteracao.Valor);
+
+                entregasObras.Add(entregaObraVM);
+            }
+        }
+
+        private static void PrepararEntregaObraCliente(List<AlteracaoDTO> alteracoes, List<EntregaObraClienteVM> entregasObrasClientes)
+        {
+            var entregasObrasClientesCadastradas = alteracoes.Where(x => x.Entidade.ToUpper() == "ENTREGAOBRACLIENTE" && x.Tipo.ToUpper() == "INSERT");
+            var entregasObrasClientesNovasAlteradas = alteracoes.Where(x => x.Entidade.ToUpper() == "ENTREGAOBRACLIENTE" && x.Tipo.ToUpper() == "UPDATE" && x.IdEntregaObraCliente == 0);
+            var entregasObrasClientesAlteradas = alteracoes.Where(x => x.Entidade.ToUpper() == "ENTREGAOBRACLIENTE" && x.Tipo.ToUpper() == "UPDATE" && x.IdEntregaObraCliente != 0);
+
+            foreach (var alteracao in entregasObrasClientesCadastradas)
+            {
+                var entregaObraClienteVM = JsonConvert.DeserializeObject<EntregaObraClienteVM>(alteracao.Valor);
+                entregaObraClienteVM.IdGuidEntregaObraCliente = alteracao.IdGuidEntregaObraCliente;
+
+                entregasObrasClientes.Add(entregaObraClienteVM);
+            }
+
+            foreach (var alteracao in entregasObrasClientesNovasAlteradas)
+            {
+                var entregaObraClienteVM = JsonConvert.DeserializeObject<EntregaObraClienteVM>(alteracao.Valor);
+                var indice = entregasObrasClientes.FindIndex(x => x.IdGuidEntregaObraCliente == alteracao.IdGuidEntregaObraCliente);
+                if (indice > -1)
+                {
+                    entregasObrasClientes.RemoveAt(indice);
+                    entregasObrasClientes.Add(entregaObraClienteVM);
+                }
+            }
+
+            foreach (var alteracao in entregasObrasClientesAlteradas)
+            {
+                var entregaObraClienteVM = JsonConvert.DeserializeObject<EntregaObraClienteVM>(alteracao.Valor);
+                entregasObrasClientes.Add(entregaObraClienteVM);
+            }
+        }
+
+        private string PersistirEntregaObra(List<EntregaObraVM> entregasObras, string status)
+        {
+            foreach (var entregaObraVM in entregasObras)
+            {
+                try
+                {
+                    var entregaObraBD = Mapper.Map<EntregaObra>(entregaObraVM);
+                    entregaObraBD.CentroCusto = null;
+                    entregaObraBD.EntregasObrasClientes = null;
+                    _entregaObraService.Atualizar(entregaObraBD);
+                }
+                catch (Exception ex)
+                {
+                    status += "Falha ao alterar situação da obra " + entregaObraVM.Descricao + " com id " + entregaObraVM.Id + "; ";
+                    continue;
+                }
+            }
+            return status;
+        }
+
+        private string PersistirEntregaObraCliente(List<EntregaObraClienteVM> entregasObrasClientes, string status)
+        {
+            foreach (var entregaObraClienteVM in entregasObrasClientes)
+            {
+                try
+                {
+                    var entregaObraClienteBD = Mapper.Map<EntregaObraCliente>(entregaObraClienteVM);
+                    if (entregaObraClienteBD.Id == 0)
+                    {
+                        _entregaObraClienteService.Inserir(entregaObraClienteBD);
+                    }
+                    else
+                    {
+                        for (int i = 0; i < entregaObraClienteBD.EntregasObrasClientesChecklists.Count; i++)
+                        {
+                            var entregaObraClienteChecklist = entregaObraClienteBD.EntregasObrasClientesChecklists.ElementAt(i);
+                            if (entregaObraClienteChecklist.Id == 0)
+                            {
+                                if (i == 0)
+                                {
+                                    _entregaObraClienteChecklistService.RemoverAtuais(entregaObraClienteBD.Id);
+                                }
+                                _entregaObraClienteChecklistService.Adicionar(entregaObraClienteChecklist);
+                            }
+                            else
+                            {
+                                _entregaObraClienteChecklistService.Atualizar(entregaObraClienteChecklist);
+                            }
+                        }
+
+                        entregaObraClienteBD.ChecklistObra = null;
+                        entregaObraClienteBD.ClienteConstrutora = null;
+                        entregaObraClienteBD.EntregaObra = null;
+                        entregaObraClienteBD.FuncionarioInspecao = null;
+                        entregaObraClienteBD.FuncionarioReinspecao = null;
+                        entregaObraClienteBD.EntregasObrasClientesChecklists = null;
+                        
+                        _entregaObraClienteService.Atualizar(entregaObraClienteBD);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    status += "Falha ao alterar persistir " + entregaObraClienteVM.LocalVistoria + " com id " + entregaObraClienteVM.Id + "; ";
+                    continue;
+                }
+            }
+            return status;
+        }
+
+        #endregion
+
+        #region CHECKLIST 
         [HttpPost]
         public IActionResult Post([FromBody] List<AlteracaoDTO> alteracoes)
         {
@@ -484,5 +635,7 @@ namespace SGQ.GDOL.Api.Controllers
             }
             return status;
         }
+
+        #endregion 
     }
 }

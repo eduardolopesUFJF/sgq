@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using SGQ.GDOL.Domain;
 using SGQ.GDOL.Domain.ComercialRoot.Entity;
+using SGQ.GDOL.Domain.EntregaObraRoot.Entity;
 using SGQ.GDOL.Domain.ObraRoot.Entity;
 using SGQ.GDOL.Domain.RHRoot.Entity;
 using SGQ.GDOL.Domain.UsuarioRoot.Entity;
@@ -24,6 +25,13 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Context
         public DbSet<InspecaoObraItem> InspecaoObraItem { get; set; }
         public DbSet<UsuarioCentroCusto> UsuarioCentroCusto { get; set; }
         public DbSet<Ocorrencia> Ocorrencia { get; set; }
+        public DbSet<ChecklistObra> ChecklistEntrega { get; set; }
+        public DbSet<ItemChecklistObra> ItemChecklistEntrega { get; set; }
+        public DbSet<ClienteConstrutora> ClienteConstrutora { get; set; }
+        public DbSet<EntregaObra> EntregaObra { get; set; }
+        public DbSet<EntregaObraCliente> EntregaObraCliente { get; set; }
+        public DbSet<EntregaObraClienteChecklist> EntregaObraClienteChecklist { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -39,6 +47,12 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Context
             modelBuilder.ApplyConfiguration(new InspecaoObraItemMap());
             modelBuilder.ApplyConfiguration(new UsuarioCentroCustoMap());
             modelBuilder.ApplyConfiguration(new OcorrenciaMap());
+            modelBuilder.ApplyConfiguration(new ChecklistEntregaMap());
+            modelBuilder.ApplyConfiguration(new ItemChecklistEntregaMap());
+            modelBuilder.ApplyConfiguration(new ClienteConstrutoraMap());
+            modelBuilder.ApplyConfiguration(new EntregaObraMap());
+            modelBuilder.ApplyConfiguration(new EntregaObraClienteMap());
+            modelBuilder.ApplyConfiguration(new EntregaObraClienteChecklistMap());
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

@@ -1,4 +1,5 @@
-﻿using SGQ.GDOL.Domain.ObraRoot.Entity;
+﻿using SGQ.GDOL.Domain.EntregaObraRoot.Entity;
+using SGQ.GDOL.Domain.ObraRoot.Entity;
 using SGQ.GDOL.Domain.UsuarioRoot.Entity;
 using System.Collections.Generic;
 
@@ -13,5 +14,6 @@ namespace SGQ.GDOL.Domain.ComercialRoot.Entity
 
         public virtual ICollection<Obra> Obras { get; set; }
         public virtual ICollection<UsuarioCentroCusto> Usuarios { get; set; }
+        public virtual ICollection<EntregaObra> EntregasObras { get; set; }
     }
 }

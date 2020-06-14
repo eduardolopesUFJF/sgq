@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using SGQ.GDOL.Api.ViewModels;
 using SGQ.GDOL.Domain.ComercialRoot.Entity;
+using SGQ.GDOL.Domain.EntregaObraRoot.Entity;
 using SGQ.GDOL.Domain.ObraRoot.Entity;
 using SGQ.GDOL.Domain.RHRoot.Entity;
 
@@ -13,6 +14,9 @@ namespace SGQ.GDOL.Api.AutoMapper
             CreateMap<CentroCustoVM, CentroCusto>();
             CreateMap<FuncionarioVM, Funcionario>();
             CreateMap<OcorrenciaVM, Ocorrencia>();
+            CreateMap<EntregaObraVM, EntregaObra>();
+            CreateMap<EntregaObraClienteVM, EntregaObraCliente>();
+            CreateMap<EntregaObraClienteChecklistVM, EntregaObraClienteChecklist>();
 
             CreateMap<ChecklistItemVM, ChecklistItem>()
                 .ForMember(x => x.Ativo, opt => opt.MapFrom(x => true))

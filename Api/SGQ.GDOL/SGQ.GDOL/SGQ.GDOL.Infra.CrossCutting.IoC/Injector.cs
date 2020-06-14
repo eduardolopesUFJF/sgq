@@ -16,6 +16,9 @@ using SGQ.GDOL.Domain.RHRoot.Service;
 using SGQ.GDOL.Domain.RHRoot.Service.Interface;
 using SGQ.GDOL.Domain.ComercialRoot.Service.Interfaces;
 using SGQ.GDOL.Domain.ComercialRoot.Service;
+using SGQ.GDOL.Domain.EntregaObraRoot.Service;
+using SGQ.GDOL.Domain.EntregaObraRoot.Service.Interfaces;
+using SGQ.GDOL.Domain.EntregaObraRoot.Repository;
 
 namespace SGQ.GDOL.Infra.CrossCutting.IoC
 {
@@ -38,6 +41,11 @@ namespace SGQ.GDOL.Infra.CrossCutting.IoC
             services.AddScoped<IInspecaoObraItemService, InspecaoObraItemService>();
             services.AddScoped<IOcorrenciaService, OcorrenciaService>();
             services.AddScoped<IClienteService, ClienteService>();
+            services.AddScoped<IChecklistObraService, ChecklistObraService>();
+            services.AddScoped<IClienteConstrutoraService, ClienteConstrutoraService>();
+            services.AddScoped<IEntregaObraService, EntregaObraService>();
+            services.AddScoped<IEntregaObraClienteService, EntregaObraClienteService>();
+            services.AddScoped<IEntregaObraClienteChecklistService, EntregaObraClienteChecklistService>();
 
             //Infra Data
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
@@ -50,6 +58,11 @@ namespace SGQ.GDOL.Infra.CrossCutting.IoC
             services.AddScoped<IFuncionarioRepository, FuncionarioRepository>();
             services.AddScoped<IUsuarioCentroCustoRepository, UsuarioCentroCustoRepository>();
             services.AddScoped<IOcorrenciaRepository, OcorrenciaRepository>();
+            services.AddScoped<IChecklistObraRepository, ChecklistObraRepository>();
+            services.AddScoped<IClienteConstrutoraRepository, ClienteConstrutoraRepository>();
+            services.AddScoped<IEntregaObraRepository, EntregaObraRepository>();
+            services.AddScoped<IEntregaObraClienteRepository, EntregaObraClienteRepository>();
+            services.AddScoped<IEntregaObraClienteChecklistRepository, EntregaObraClienteChecklistRepository>();
 
             services.AddScoped<ServiceContext>();
             services.AddScoped<NotificationHandler>();
