@@ -42,6 +42,7 @@ namespace SGQ.GDOL.Domain.ComercialRoot.Service
             nomeClientes.Add("NPA");
             nomeClientes.Add("PAINEIRA");
             nomeClientes.Add("PRIMAZ");
+            nomeClientes.Add("R.A");
             nomeClientes.Add("REALIZA");
             nomeClientes.Add("RMG");
             nomeClientes.Add("SOLTRON");

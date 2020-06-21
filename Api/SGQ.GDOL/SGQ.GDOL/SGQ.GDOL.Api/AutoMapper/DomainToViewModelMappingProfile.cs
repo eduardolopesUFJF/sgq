@@ -4,6 +4,7 @@ using SGQ.GDOL.Domain.ComercialRoot.Entity;
 using SGQ.GDOL.Domain.EntregaObraRoot.Entity;
 using SGQ.GDOL.Domain.ObraRoot.Entity;
 using SGQ.GDOL.Domain.RHRoot.Entity;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace SGQ.GDOL.Api.AutoMapper
@@ -16,7 +17,6 @@ namespace SGQ.GDOL.Api.AutoMapper
             CreateMap<Funcionario, FuncionarioVM>();
             CreateMap<ItemChecklistServico, ItemChecklistServicoVM>();
             CreateMap<ItemChecklistObra, ItemChecklistObraVM>();
-            CreateMap<Ocorrencia, OcorrenciaVM>();
             CreateMap<InspecaoObraItem, InspecaoObraItemVM>();
             CreateMap<ClienteConstrutora, ClienteConstrutoraVM>();
 
@@ -63,7 +63,7 @@ namespace SGQ.GDOL.Api.AutoMapper
                 .ForMember(x => x.DescricaoTipoVistoria, opt => opt.MapFrom(x => x.TipoVistoria == 1 ? "Construtora" : "Cliente"))
                 .ForMember(x => x.DescricaoChecklistObra, opt => opt.MapFrom(x => x.ChecklistObra.Codigo + " - " + x.ChecklistObra.Descricao))
                 .ForMember(x => x.ClienteCadastrado, opt => opt.MapFrom(x => x.IdClienteConstrutora.HasValue || string.IsNullOrEmpty(x.NomeCliente)))
-                .ForMember(x => x.NomeCliente, opt => opt.MapFrom(x => x.ClienteCadastrado ? x.ClienteConstrutora.Nome : x.NomeCliente)) 
+                .ForMember(x => x.NomeCliente, opt => opt.MapFrom(x => x.ClienteCadastrado ? x.ClienteConstrutora.Nome : x.NomeCliente))
                 .ForMember(x => x.FuncionarioInspecaoCadastrado, opt => opt.MapFrom(x => x.IdFuncionarioInspecao.HasValue || string.IsNullOrEmpty(x.NomeFuncionarioInspecao)))
                 .ForMember(x => x.NomeFuncionarioInspecao, opt => opt.MapFrom(x => x.FuncionarioInspecaoCadastrado ? x.FuncionarioInspecao.Nome : x.NomeFuncionarioInspecao))
                 .ForMember(x => x.FuncionarioReinspecaoCadastrado, opt => opt.MapFrom(x => x.IdFuncionarioReinspecao.HasValue || string.IsNullOrEmpty(x.NomeFuncionarioReinspecao)))
@@ -72,8 +72,8 @@ namespace SGQ.GDOL.Api.AutoMapper
                 .ForMember(x => x.QtdA, opt => opt.MapFrom(x => x.EntregasObrasClientesChecklists.Count(y => y.Inspecao1 == "A")))
                 .ForMember(x => x.QtdR, opt => opt.MapFrom(x => x.EntregasObrasClientesChecklists.Count(y => y.Inspecao1 == "R")))
                 .ForMember(x => x.QtdRA, opt => opt.MapFrom(x => x.EntregasObrasClientesChecklists.Count(y => y.Inspecao2 == "A")))
-                .ForMember(x => x.QtdX, opt => opt.MapFrom(x => x.EntregasObrasClientesChecklists.Count(y => y.Inspecao1 == "X")));
-                //.ForMember(x => x.Ocorrencias, opt => opt.MapFrom(x => x.Ocorrencias.Where(y => y.Delete.HasValue && !y.Delete.Value)))
+                .ForMember(x => x.QtdX, opt => opt.MapFrom(x => x.EntregasObrasClientesChecklists.Count(y => y.Inspecao1 == "X")))
+                .ForMember(x => x.Ocorrencias, opt => opt.MapFrom(x => new List<OcorrenciaVM>() /*x.Ocorrencias.Where(y => y.Delete.HasValue && !y.Delete.Value)*/));
 
             CreateMap<ChecklistItem, ChecklistItemVM>()
                 .ForMember(x => x.Descricao, opt => opt.MapFrom(x => x.Descricao))
@@ -81,8 +81,11 @@ namespace SGQ.GDOL.Api.AutoMapper
                 .ForMember(x => x.ItensChecklistServico, opt => opt.MapFrom(x => x.ItensChecklistServico.OrderBy(y => y.Ordem)));
 
             CreateMap<ChecklistObra, ChecklistObraVM>()
-                .ForMember(x => x.Descricao, opt => opt.MapFrom(x => x.Descricao))
+                .ForMember(x => x.Descricao, opt => opt.MapFrom(x => x.Codigo + " - " + x.Descricao))
                 .ForMember(x => x.ItensChecklistEntrega, opt => opt.MapFrom(x => x.ItensChecklistEntrega.OrderBy(y => y.Ordem)));
+
+            CreateMap<Ocorrencia, OcorrenciaVM>()
+                .ForMember(x => x.Fotos, opt => opt.MapFrom(x => new List<FotoVM>() /*x.Ocorrencias.Where(y => y.Delete.HasValue && !y.Delete.Value)*/));
 
         }
     }

@@ -79,7 +79,8 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Context
                 || CredenciaisBanco.Schema.Equals("GDOLSGQ_BNR") || CredenciaisBanco.Schema.Equals("BPOSSAS_BNR")
                 || CredenciaisBanco.Schema.Equals("GDOLSGQ_CGD") || CredenciaisBanco.Schema.Equals("BPOSSAS_CGD")
                 || CredenciaisBanco.Schema.Equals("GDOLSGQ_ATRIUM") || CredenciaisBanco.Schema.Equals("BPOSSAS_ATRIUM")
-                || CredenciaisBanco.Schema.Equals("GDOLSGQ_MELHORLAR") || CredenciaisBanco.Schema.Equals("BPOSSAS_MELHORLAR"))
+                || CredenciaisBanco.Schema.Equals("GDOLSGQ_MELHORLAR") || CredenciaisBanco.Schema.Equals("BPOSSAS_MELHORLAR")
+                || CredenciaisBanco.Schema.Equals("GDOLSGQ_RA") || CredenciaisBanco.Schema.Equals("BPOSSAS_RA"))
             {
                 CredenciaisBanco.Usuario = "BPOSSAS_aplicativo";
 
@@ -154,6 +155,10 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Context
                 if (CredenciaisBanco.Schema.Equals("GDOLSGQ_MELHORLAR"))
                 {
                     CredenciaisBanco.Schema = "BPOSSAS_MELHORLAR";
+                }
+                if (CredenciaisBanco.Schema.Equals("GDOLSGQ_RA"))
+                {
+                    CredenciaisBanco.Schema = "BPOSSAS_RA";
                 }
                 optionsBuilder.UseSqlServer(config.GetConnectionString("NewDefaultConnection").Replace("schema", CredenciaisBanco.Schema).Replace("usuario", CredenciaisBanco.Usuario).Replace("senha", CredenciaisBanco.Senha));
             }

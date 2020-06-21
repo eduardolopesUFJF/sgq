@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using SGQ.GDOL.Api.ViewModels;
 using SGQ.GDOL.Domain.EntregaObraRoot.Service.Interfaces;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace SGQ.GDOL.Api.Controllers
 {
@@ -21,7 +22,7 @@ namespace SGQ.GDOL.Api.Controllers
         public IActionResult Get()
         {
             var resultBD = _checklistObraService.ObterTodosAtivos();
-            var resultVM = Mapper.Map<List<ChecklistObraVM>>(resultBD);
+            var resultVM = Mapper.Map<List<ChecklistObraVM>>(resultBD).OrderBy(x => x.Descricao);
             return Ok(resultVM);
         }
     }
