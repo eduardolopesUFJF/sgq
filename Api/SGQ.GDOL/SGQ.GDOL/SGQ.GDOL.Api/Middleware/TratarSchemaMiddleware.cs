@@ -30,10 +30,6 @@ namespace SGQ.GDOL.Api.Middleware
             {
                 CredenciaisBanco.Schema = "GDOLSGQ";
             }
-            if (CredenciaisBanco.Schema.Equals("GDOLSGQ_R.A"))
-            {
-                CredenciaisBanco.Schema = "GDOL_RA";
-            }
 
             CredenciaisBanco.Usuario = "gdol_aplicativo";
             CredenciaisBanco.Senha = "2019Gd@L@pp";
