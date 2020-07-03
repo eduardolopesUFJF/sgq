@@ -80,7 +80,14 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Context
                 || CredenciaisBanco.Schema.Equals("GDOLSGQ_CGD") || CredenciaisBanco.Schema.Equals("BPOSSAS_CGD")
                 || CredenciaisBanco.Schema.Equals("GDOLSGQ_ATRIUM") || CredenciaisBanco.Schema.Equals("BPOSSAS_ATRIUM")
                 || CredenciaisBanco.Schema.Equals("GDOLSGQ_MELHORLAR") || CredenciaisBanco.Schema.Equals("BPOSSAS_MELHORLAR")
-                || CredenciaisBanco.Schema.Equals("GDOLSGQ_RA") || CredenciaisBanco.Schema.Equals("BPOSSAS_RA"))
+                || CredenciaisBanco.Schema.Equals("GDOLSGQ_RA") || CredenciaisBanco.Schema.Equals("BPOSSAS_RA")
+                || CredenciaisBanco.Schema.Equals("GDOLSGQ_ADDY") || CredenciaisBanco.Schema.Equals("BPOSSAS_ADDY")
+                || CredenciaisBanco.Schema.Equals("GDOLSGQ_ALMIRANTE") || CredenciaisBanco.Schema.Equals("BPOSSAS_ALMIRANTE")
+                || CredenciaisBanco.Schema.Equals("GDOLSGQ_BAUEN") || CredenciaisBanco.Schema.Equals("BPOSSAS_BAUEN")
+                || CredenciaisBanco.Schema.Equals("GDOLSGQ_GESTAO") || CredenciaisBanco.Schema.Equals("BPOSSAS_GESTAO")
+                || CredenciaisBanco.Schema.Equals("GDOLSGQ_MELOBORGES") || CredenciaisBanco.Schema.Equals("BPOSSAS_MELOBORGES")
+                || CredenciaisBanco.Schema.Equals("GDOLSGQ_MML") || CredenciaisBanco.Schema.Equals("BPOSSAS_MML")
+                || CredenciaisBanco.Schema.Equals("GDOLSGQ_NPA") || CredenciaisBanco.Schema.Equals("BPOSSAS_NPA"))
             {
                 CredenciaisBanco.Usuario = "BPOSSAS_aplicativo";
 
@@ -159,6 +166,34 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Context
                 if (CredenciaisBanco.Schema.Equals("GDOLSGQ_RA"))
                 {
                     CredenciaisBanco.Schema = "BPOSSAS_RA";
+                }
+                if (CredenciaisBanco.Schema.Equals("GDOLSGQ_ADDY"))
+                {
+                    CredenciaisBanco.Schema = "BPOSSAS_ADDY";
+                }
+                if (CredenciaisBanco.Schema.Equals("GDOLSGQ_ALMIRANTE"))
+                {
+                    CredenciaisBanco.Schema = "BPOSSAS_ALMIRANTE";
+                }
+                if (CredenciaisBanco.Schema.Equals("GDOLSGQ_BAUEN"))
+                {
+                    CredenciaisBanco.Schema = "BPOSSAS_BAUEN";
+                }
+                if (CredenciaisBanco.Schema.Equals("GDOLSGQ_GESTAO"))
+                {
+                    CredenciaisBanco.Schema = "BPOSSAS_GESTAO";
+                }
+                if (CredenciaisBanco.Schema.Equals("GDOLSGQ_MELOBORGES"))
+                {
+                    CredenciaisBanco.Schema = "BPOSSAS_MELOBORGES";
+                }
+                if (CredenciaisBanco.Schema.Equals("GDOLSGQ_MML"))
+                {
+                    CredenciaisBanco.Schema = "BPOSSAS_MML";
+                }
+                if (CredenciaisBanco.Schema.Equals("GDOLSGQ_NPA"))
+                {
+                    CredenciaisBanco.Schema = "BPOSSAS_NPA";
                 }
                 optionsBuilder.UseSqlServer(config.GetConnectionString("NewDefaultConnection").Replace("schema", CredenciaisBanco.Schema).Replace("usuario", CredenciaisBanco.Usuario).Replace("senha", CredenciaisBanco.Senha));
             }
