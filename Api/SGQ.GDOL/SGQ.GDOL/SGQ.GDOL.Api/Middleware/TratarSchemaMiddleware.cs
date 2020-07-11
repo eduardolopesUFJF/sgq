@@ -16,22 +16,22 @@ namespace SGQ.GDOL.Api.Middleware
 
         public async Task InvokeAsync(HttpContext context)
         {
-            CredenciaisBanco.Schema = "GDOLSGQ_" + context.Request.Headers.FirstOrDefault(x => x.Key == "BancoSchema").Value.ToString().ToUpper();
+            CredenciaisBanco.Schema = "BPOSSAS_" + context.Request.Headers.FirstOrDefault(x => x.Key == "BancoSchema").Value.ToString().ToUpper();
 
-            if (CredenciaisBanco.Schema.Equals("GDOLSGQ_CRISTO REI"))
+            if (CredenciaisBanco.Schema.Equals("BPOSSAS_CRISTO REI"))
             {
-                CredenciaisBanco.Schema = "GDOLSGQ_CR";
+                CredenciaisBanco.Schema = "BPOSSAS_CR";
             }
-            if (CredenciaisBanco.Schema.Equals("GDOLSGQ_MELO BORGES"))
+            if (CredenciaisBanco.Schema.Equals("BPOSSAS_MELO BORGES"))
             {
-                CredenciaisBanco.Schema = "GDOLSGQ_MELOBORGES";
+                CredenciaisBanco.Schema = "BPOSSAS_MELOBORGES";
             }
-            if (CredenciaisBanco.Schema.Equals("GDOLSGQ_GDOL"))
+            if (CredenciaisBanco.Schema.Equals("BPOSSAS_GDOL"))
             {
-                CredenciaisBanco.Schema = "GDOLSGQ";
+                CredenciaisBanco.Schema = "BPOSSAS_GDOLSISTEMAS";
             }
 
-            CredenciaisBanco.Usuario = "gdol_aplicativo";
+            CredenciaisBanco.Usuario = "BPOSSAS_aplicativo";
             CredenciaisBanco.Senha = "2019Gd@L@pp";
             await _next(context);
         }

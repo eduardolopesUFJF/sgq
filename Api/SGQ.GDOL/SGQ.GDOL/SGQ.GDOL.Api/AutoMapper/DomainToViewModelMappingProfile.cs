@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using SGQ.GDOL.Api.ViewModels;
+using SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Entity;
 using SGQ.GDOL.Domain.ComercialRoot.Entity;
 using SGQ.GDOL.Domain.EntregaObraRoot.Entity;
 using SGQ.GDOL.Domain.ObraRoot.Entity;
@@ -13,12 +14,15 @@ namespace SGQ.GDOL.Api.AutoMapper
     {
         public DomainToViewModelMappingProfile()
         {
-            CreateMap<CentroCusto, CentroCustoVM>();
             CreateMap<Funcionario, FuncionarioVM>();
             CreateMap<ItemChecklistServico, ItemChecklistServicoVM>();
             CreateMap<ItemChecklistObra, ItemChecklistObraVM>();
             CreateMap<InspecaoObraItem, InspecaoObraItemVM>();
             CreateMap<ClienteConstrutora, ClienteConstrutoraVM>();
+            CreateMap<CategoriaAssistencia, CategoriaAssistenciaVM>();
+
+            CreateMap<CentroCusto, CentroCustoVM>()
+                .ForMember(x => x.Descricao, opt => opt.MapFrom(x => x.Codigo + " - " + x.Descricao));
 
             CreateMap<EntregaObraClienteChecklist, EntregaObraClienteChecklistVM>()
                 .ForMember(x => x.OrdemItemChecklistEntrega, opt => opt.MapFrom(x => x.ItemChecklistObra.Ordem))
@@ -86,6 +90,18 @@ namespace SGQ.GDOL.Api.AutoMapper
 
             CreateMap<Ocorrencia, OcorrenciaVM>()
                 .ForMember(x => x.Fotos, opt => opt.MapFrom(x => new List<FotoVM>() /*x.Ocorrencias.Where(y => y.Delete.HasValue && !y.Delete.Value)*/));
+
+            CreateMap<AssistenciaTecnica, AssistenciaTecnicaVM>()
+               .ForMember(x => x.DescricaoCategoriaAssistencia, opt => opt.MapFrom(x => x.CategoriaAssistencia.Nome))
+               .ForMember(x => x.ClienteCadastrado, opt => opt.MapFrom(x => x.IdClienteConstrutora.HasValue || string.IsNullOrEmpty(x.NomeCliente)))
+               .ForMember(x => x.NomeCliente, opt => opt.MapFrom(x => x.ClienteCadastrado ? x.ClienteConstrutora.Nome : x.NomeCliente))
+               .ForMember(x => x.DescricaoCentroCusto, opt => opt.MapFrom(x => x.CentroCusto.Codigo + " - " + x.CentroCusto.Descricao))
+               .ForMember(x => x.Atendimentos, opt => opt.MapFrom(x => x.Atendimentos.Where(y => !y.Delete).OrderByDescending(y => y.DataInicio)));
+
+            CreateMap<Atendimento, AtendimentoVM>()
+                .ForMember(x => x.DescricaoFuncionario, opt => opt.MapFrom(x => x.Funcionario.Nome))
+                .ForMember(x => x.Descricao, opt => opt.MapFrom(x => x.Descricao.Length > 100 ? x.Descricao.Substring(0, 100) + "..." : x.Descricao))
+                .ForMember(x => x.Observacoes, opt => opt.MapFrom(x => x.Observacoes.Length > 100 ? x.Descricao.Substring(0, 100) + "..." : x.Observacoes));
 
         }
     }

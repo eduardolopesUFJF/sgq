@@ -26,30 +26,24 @@ namespace SGQ.GDOL.Domain.ComercialRoot.Service
             nomeClientes.Add("GDOL");
             nomeClientes.Add("ADDY");
             nomeClientes.Add("ARCO");
-            nomeClientes.Add("ARRUELAS");
             nomeClientes.Add("ATRIUM");
             nomeClientes.Add("BAUEN");
             nomeClientes.Add("BNR");
             nomeClientes.Add("CGD");
             nomeClientes.Add("CRISTO REI");
             nomeClientes.Add("EGREGORA");
-            nomeClientes.Add("FAZ");
-            nomeClientes.Add("FORUM");
             nomeClientes.Add("GESTAO");
             nomeClientes.Add("GS");
-            nomeClientes.Add("MELHORLAR");
             nomeClientes.Add("MELO BORGES");
+            nomeClientes.Add("MML");
             nomeClientes.Add("NPA");
             nomeClientes.Add("PAINEIRA");
             nomeClientes.Add("PRIMAZ");
             nomeClientes.Add("RA");
             nomeClientes.Add("REALIZA");
-            nomeClientes.Add("RMG");
-            nomeClientes.Add("SOLTRON");
+            nomeClientes.Add("SF");
             nomeClientes.Add("SUDOESTE");
-            nomeClientes.Add("TALENT");
             nomeClientes.Add("UPTEC");
-            nomeClientes.Add("VERNAC");
             nomeClientes.Add("VILLARD");
         }
     }

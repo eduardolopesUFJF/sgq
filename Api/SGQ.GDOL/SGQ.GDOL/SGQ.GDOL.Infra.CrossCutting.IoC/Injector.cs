@@ -19,6 +19,10 @@ using SGQ.GDOL.Domain.ComercialRoot.Service;
 using SGQ.GDOL.Domain.EntregaObraRoot.Service;
 using SGQ.GDOL.Domain.EntregaObraRoot.Service.Interfaces;
 using SGQ.GDOL.Domain.EntregaObraRoot.Repository;
+using SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Repository;
+using SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Service;
+using SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Service.Interfaces;
+using SGQ.GDOL.Domain.ComercialRoot.Repository;
 
 namespace SGQ.GDOL.Infra.CrossCutting.IoC
 {
@@ -46,6 +50,9 @@ namespace SGQ.GDOL.Infra.CrossCutting.IoC
             services.AddScoped<IEntregaObraService, EntregaObraService>();
             services.AddScoped<IEntregaObraClienteService, EntregaObraClienteService>();
             services.AddScoped<IEntregaObraClienteChecklistService, EntregaObraClienteChecklistService>();
+            services.AddScoped<IAssistenciaTecnicaService, AssistenciaTecnicaService>();
+            services.AddScoped<ICentroCustoService, CentroCustoService>();
+            services.AddScoped<ICategoriaAssistenciaService, CategoriaAssistenciaService>();
 
             //Infra Data
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
@@ -63,6 +70,9 @@ namespace SGQ.GDOL.Infra.CrossCutting.IoC
             services.AddScoped<IEntregaObraRepository, EntregaObraRepository>();
             services.AddScoped<IEntregaObraClienteRepository, EntregaObraClienteRepository>();
             services.AddScoped<IEntregaObraClienteChecklistRepository, EntregaObraClienteChecklistRepository>();
+            services.AddScoped<IAssistenciaTecnicaRepository, AssistenciaTecnicaRepository>();
+            services.AddScoped<ICentroCustoRepository, CentroCustoRepository>();
+            services.AddScoped<ICategoriaAssistenciaRepository, CategoriaAssistenciaRepository>();
 
             services.AddScoped<ServiceContext>();
             services.AddScoped<NotificationHandler>();

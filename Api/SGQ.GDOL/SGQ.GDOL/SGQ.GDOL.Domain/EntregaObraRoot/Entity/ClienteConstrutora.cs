@@ -1,4 +1,5 @@
-﻿using SGQ.GDOL.Domain.ComercialRoot.Entity;
+﻿using SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Entity;
+using SGQ.GDOL.Domain.ComercialRoot.Entity;
 using System.Collections.Generic;
 
 namespace SGQ.GDOL.Domain.EntregaObraRoot.Entity
@@ -10,5 +11,6 @@ namespace SGQ.GDOL.Domain.EntregaObraRoot.Entity
         public int? IdCentroCusto { get; set; }
 
         public IEnumerable<EntregaObraCliente> EntregasObrasClientes { get; set; }
+        public IEnumerable<AssistenciaTecnica> AssistenciasTecnicas { get; set; }
     }
 }
