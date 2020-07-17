@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using SGQ.GDOL.Api.ViewModels;
+using SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Entity;
+using SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Service.Interfaces;
 using SGQ.GDOL.Domain.EntregaObraRoot.Entity;
 using SGQ.GDOL.Domain.EntregaObraRoot.Service.Interfaces;
 using SGQ.GDOL.Domain.ObraRoot.DTO;
@@ -26,6 +28,9 @@ namespace SGQ.GDOL.Api.Controllers
         private readonly IEntregaObraService _entregaObraService;
         private readonly IEntregaObraClienteService _entregaObraClienteService;
         private readonly IEntregaObraClienteChecklistService _entregaObraClienteChecklistService;
+        private readonly IAssistenciaTecnicaService _assistenciaTecnicaService;
+        private readonly IAtendimentoService _atendimentoService;
+        private readonly IAssistenciaTecnicaArquivoService _assistenciaTecnicaArquivoService;
 
         public AlteracaoController(
             IAreaService areaService,
@@ -36,7 +41,10 @@ namespace SGQ.GDOL.Api.Controllers
             IOcorrenciaService ocorrenciaService,
             IEntregaObraService entregaObraService,
             IEntregaObraClienteService entregaObraClienteService,
-            IEntregaObraClienteChecklistService entregaObraClienteChecklistService)
+            IEntregaObraClienteChecklistService entregaObraClienteChecklistService,
+            IAssistenciaTecnicaService assistenciaTecnicaService,
+            IAtendimentoService atendimentoService,
+            IAssistenciaTecnicaArquivoService assistenciaTecnicaArquivoService)
         {
             _areaService = areaService;
             _servicoService = servicoService;
@@ -47,6 +55,9 @@ namespace SGQ.GDOL.Api.Controllers
             _entregaObraService = entregaObraService;
             _entregaObraClienteService = entregaObraClienteService;
             _entregaObraClienteChecklistService = entregaObraClienteChecklistService;
+            _assistenciaTecnicaService = assistenciaTecnicaService;
+            _atendimentoService = atendimentoService;
+            _assistenciaTecnicaArquivoService = assistenciaTecnicaArquivoService;
         }
 
         #region ENTREGA OBRA
@@ -63,12 +74,21 @@ namespace SGQ.GDOL.Api.Controllers
             string status = "";
             List<EntregaObraVM> entregasObras = new List<EntregaObraVM>();
             List<EntregaObraClienteVM> entregasObrasClientes = new List<EntregaObraClienteVM>();
+            List<AssistenciaTecnicaVM> assistenciasTecnicas = new List<AssistenciaTecnicaVM>();
+            List<AtendimentoVM> atendimentos = new List<AtendimentoVM>();
+            List<AssistenciaTecnicaArquivoVM> fotos = new List<AssistenciaTecnicaArquivoVM>();
 
             PrepararEntregaObra(alteracoes, entregasObras);
             PrepararEntregaObraCliente(alteracoes, entregasObrasClientes);
+            PrepararAssistenciasTecnicas(alteracoes, assistenciasTecnicas);
+            PrepararAtendimentos(alteracoes, assistenciasTecnicas, atendimentos);
+            PrepararFotos(alteracoes, assistenciasTecnicas, fotos);
 
             status = PersistirEntregaObra(entregasObras, status);
             status = PersistirEntregaObraCliente(entregasObrasClientes, status);
+            status = PersistirAssistenciasTecnicas(assistenciasTecnicas, status);
+            status = PersistirAtendimentos(atendimentos, status);
+            status = PersistirFotos(fotos, status);
 
             return status;
         }
@@ -114,6 +134,124 @@ namespace SGQ.GDOL.Api.Controllers
             {
                 var entregaObraClienteVM = JsonConvert.DeserializeObject<EntregaObraClienteVM>(alteracao.Valor);
                 entregasObrasClientes.Add(entregaObraClienteVM);
+            }
+        }
+
+        private static void PrepararAssistenciasTecnicas(List<AlteracaoDTO> alteracoes, List<AssistenciaTecnicaVM> assistenciasTecnicas)
+        {
+            var assistenciasTecnicasCadastradas = alteracoes.Where(x => x.Entidade.ToUpper() == "ASSISTENCIATECNICA" && x.Tipo.ToUpper() == "INSERT");
+            var assistenciasTecnicasNovasAlteradas = alteracoes.Where(x => x.Entidade.ToUpper() == "ASSISTENCIATECNICA" && x.Tipo.ToUpper() == "UPDATE" && x.IdAssistenciaTecnica == 0);
+            var assistenciasTecnicasAlteradas = alteracoes.Where(x => x.Entidade.ToUpper() == "ASSISTENCIATECNICA" && x.Tipo.ToUpper() == "UPDATE" && x.IdAssistenciaTecnica != 0);
+
+            foreach (var alteracao in assistenciasTecnicasCadastradas)
+            {
+                var assistenciaTecnicaVM = JsonConvert.DeserializeObject<AssistenciaTecnicaVM>(alteracao.Valor);
+                assistenciaTecnicaVM.IdGuid = alteracao.IdGuidAssistenciaTecnica;
+
+                assistenciasTecnicas.Add(assistenciaTecnicaVM);
+            }
+
+            foreach (var alteracao in assistenciasTecnicasNovasAlteradas)
+            {
+                var assistenciaTecnicaVM = JsonConvert.DeserializeObject<AssistenciaTecnicaVM>(alteracao.Valor);
+                var indice = assistenciasTecnicas.FindIndex(x => x.IdGuid == alteracao.IdGuidAssistenciaTecnica);
+                if (indice > -1)
+                {
+                    assistenciasTecnicas.RemoveAt(indice);
+                    assistenciasTecnicas.Add(assistenciaTecnicaVM);
+                }
+            }
+
+            foreach (var alteracao in assistenciasTecnicasAlteradas)
+            {
+                var assistenciaTecnicaVM = JsonConvert.DeserializeObject<AssistenciaTecnicaVM>(alteracao.Valor);
+                assistenciasTecnicas.Add(assistenciaTecnicaVM);
+            }
+        }
+
+        private static void PrepararAtendimentos(List<AlteracaoDTO> alteracoes, List<AssistenciaTecnicaVM> assistenciasTecnicas, List<AtendimentoVM> atendimentos)
+        {
+            var atendimentosCadastradas = alteracoes.Where(x => x.Entidade.ToUpper() == "ATENDIMENTO" && x.Tipo.ToUpper() == "INSERT");
+            var atendimentosNovosAlteradas = alteracoes.Where(x => x.Entidade.ToUpper() == "ATENDIMENTO" && x.Tipo.ToUpper() == "UPDATE" && x.IdAtendimento == 0);
+            var atendimentosAlteradas = alteracoes.Where(x => x.Entidade.ToUpper() == "ATENDIMENTO" && x.Tipo.ToUpper() == "UPDATE" && x.IdAtendimento != 0);
+
+            foreach (var alteracao in atendimentosCadastradas)
+            {
+                var atendimentoVM = JsonConvert.DeserializeObject<AtendimentoVM>(alteracao.Valor);
+                atendimentoVM.IdGuid = alteracao.IdGuidAtendimento;
+
+                atendimentos.Add(atendimentoVM);
+            }
+
+            foreach (var alteracao in atendimentosNovosAlteradas)
+            {
+                var atendimentoVM = JsonConvert.DeserializeObject<AtendimentoVM>(alteracao.Valor);
+                var indice = atendimentos.FindIndex(x => x.IdGuid == alteracao.IdGuidAtendimento);
+                if (indice > -1)
+                {
+                    atendimentos.RemoveAt(indice);
+                    atendimentos.Add(atendimentoVM);
+                }
+            }
+
+            foreach (var alteracao in atendimentosAlteradas)
+            {
+                var atendimentoVM = JsonConvert.DeserializeObject<AtendimentoVM>(alteracao.Valor);
+                atendimentos.Add(atendimentoVM);
+            }
+
+            foreach (var atendimento in atendimentos)
+            {
+                if (atendimento.IdAssistenciaTecnica == 0)
+                {
+                    var assistenciaTecnica = assistenciasTecnicas.FirstOrDefault(x => x.IdGuid.Equals(atendimento.IdGuidAssistenciaTecnica));
+                    if (assistenciaTecnica != null)
+                    {
+                        var indice = assistenciaTecnica.Atendimentos.FindIndex(x => x.IdGuid == atendimento.IdGuid);
+                        if (indice == -1)
+                        {
+                            assistenciaTecnica.Atendimentos.Add(atendimento);
+                        }
+                        else
+                        {
+                            assistenciaTecnica.Atendimentos.RemoveAt(indice);
+                            assistenciaTecnica.Atendimentos.Add(atendimento);
+                        }
+                    }
+
+                }
+            }
+            atendimentos = atendimentos.Where(x => x.IdAssistenciaTecnica != 0).ToList();
+        }
+
+        private static void PrepararFotos(List<AlteracaoDTO> alteracoes, List<AssistenciaTecnicaVM> assistenciasTecnicas, List<AssistenciaTecnicaArquivoVM> fotos)
+        {
+            var fotosEnviadas = alteracoes.Where(x => x.Entidade.ToUpper() == "ASSISTENCIATECNICAARQUIVO");
+            var arquivos = fotosEnviadas.Select(x => JsonConvert.DeserializeObject<AssistenciaTecnicaArquivoVM>(x.Valor)).ToList();
+
+            foreach (var arquivo in arquivos)
+            {
+                if (arquivo.IdAssistenciaTecnica == 0)
+                {
+                    var assistenciaTecnica = assistenciasTecnicas.FirstOrDefault(x => x.IdGuid.Equals(arquivo.IdGuidAssistenciaTecnica));
+                    if (assistenciaTecnica != null)
+                    {
+                        var indice = assistenciaTecnica.Arquivos.FindIndex(x => x.IdGuid == arquivo.IdGuid);
+                        if (indice == -1)
+                        {
+                            assistenciaTecnica.Arquivos.Add(arquivo);
+                        }
+                        else
+                        {
+                            assistenciaTecnica.Arquivos.RemoveAt(indice);
+                            assistenciaTecnica.Arquivos.Add(arquivo);
+                        }
+                    }
+                }
+                else
+                {
+                    fotos.Add(arquivo);
+                }
             }
         }
 
@@ -180,6 +318,83 @@ namespace SGQ.GDOL.Api.Controllers
                 catch (Exception ex)
                 {
                     status += "Falha ao alterar persistir " + entregaObraClienteVM.LocalVistoria + " com id " + entregaObraClienteVM.Id + "; ";
+                    continue;
+                }
+            }
+            return status;
+        }
+
+        private string PersistirAssistenciasTecnicas(List<AssistenciaTecnicaVM> assistenciasTecnicas, string status)
+        {
+            foreach (var assistenciaTecnicaVM in assistenciasTecnicas)
+            {
+                try
+                {
+                    var assistenciaTecnicaBD = Mapper.Map<AssistenciaTecnica>(assistenciaTecnicaVM);
+                    if (assistenciaTecnicaBD.Id == 0)
+                    {
+                        _assistenciaTecnicaService.Adicionar(assistenciaTecnicaBD);
+                    }
+                    else
+                    {
+                        assistenciaTecnicaBD.Arquivos = null;
+                        assistenciaTecnicaBD.Atendimentos = null;
+                        assistenciaTecnicaBD.CategoriaAssistencia = null;
+                        assistenciaTecnicaBD.CentroCusto = null;
+                        assistenciaTecnicaBD.ClienteConstrutora = null;
+
+                        _assistenciaTecnicaService.Atualizar(assistenciaTecnicaBD);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    status += "Falha ao alterar persistir " + assistenciaTecnicaVM.Local+ " com id " + assistenciaTecnicaVM.Id + "; ";
+                    continue;
+                }
+            }
+            return status;
+        }
+
+        private string PersistirAtendimentos(List<AtendimentoVM> atendimentosVM, string status)
+        {
+            foreach (var atendimentoVM in atendimentosVM)
+            {
+                try
+                {
+                    var atendimentoBD = Mapper.Map<Atendimento>(atendimentoVM);
+                    if (atendimentoBD.Id == 0)
+                    {
+                        _atendimentoService.Adicionar(atendimentoBD);
+                    }
+                    else
+                    {
+                        atendimentoBD.AssistenciaTecnica = null;
+                        atendimentoBD.Funcionario = null;
+
+                        _atendimentoService.Atualizar(atendimentoBD);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    status += "Falha ao alterar persistir " + atendimentoVM.Descricao+ " com id " + atendimentoVM.Id + "; ";
+                    continue;
+                }
+            }
+            return status;
+        }
+
+        private string PersistirFotos(List<AssistenciaTecnicaArquivoVM> arquivosVM, string status)
+        {
+            foreach (var arquivoVM in arquivosVM)
+            {
+                try
+                {
+                    var arquivoBD = Mapper.Map<AssistenciaTecnicaArquivo>(arquivoVM);
+                    _assistenciaTecnicaArquivoService.Adicionar(arquivoBD);
+                }
+                catch (Exception ex)
+                {
+                    status += "Falha ao alterar persistir " + arquivoVM.Nome + " com id " + arquivoVM.Id + "; ";
                     continue;
                 }
             }

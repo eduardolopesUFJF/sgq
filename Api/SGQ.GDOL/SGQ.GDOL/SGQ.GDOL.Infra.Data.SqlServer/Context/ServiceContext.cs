@@ -35,6 +35,7 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Context
         public DbSet<AssistenciaTecnica> AssistenciaTecnica { get; set; }
         public DbSet<CategoriaAssistencia> CategoriaAssistenciaTecnica { get; set; }
         public DbSet<Atendimento> Atendimento { get; set; }
+        public DbSet<AssistenciaTecnicaArquivo> AssistenciaTecnicaArquivo { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -59,6 +60,7 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Context
             modelBuilder.ApplyConfiguration(new AssistenciaTecnicaMap());
             modelBuilder.ApplyConfiguration(new CategoriaAssistenciaTecnicaMap());
             modelBuilder.ApplyConfiguration(new AtendimentoMap());
+            modelBuilder.ApplyConfiguration(new AssistenciaTecnicaArquivoMap());
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

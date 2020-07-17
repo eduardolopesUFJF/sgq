@@ -10,16 +10,17 @@ namespace SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Entity
         public AssistenciaTecnica()
         {
             Atendimentos = new HashSet<Atendimento>();
+            Arquivos = new HashSet<AssistenciaTecnicaArquivo>();
         }
 
-        public int IdCategoriaAssistencia { get; set; }
+        public int? IdCategoriaAssistencia { get; set; }
         public virtual CategoriaAssistencia CategoriaAssistencia { get; set; }
         public string DescricaoCategoriaAssistencia { get; set; }
         public int? IdClienteConstrutora { get; set; }
         public virtual ClienteConstrutora ClienteConstrutora { get; set; }
         public string NomeCliente { get; set; }
         public bool ClienteCadastrado { get; set; }
-        public int IdCentroCusto { get; set; }
+        public int? IdCentroCusto { get; set; }
         public virtual CentroCusto CentroCusto { get; set; }
         public string Local { get; set; }
         public DateTime DataAbertura { get; set; }
@@ -34,5 +35,7 @@ namespace SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Entity
         public bool Delete { get; set; }
 
         public ICollection<Atendimento> Atendimentos { get; set; }
+        public ICollection<AssistenciaTecnicaArquivo> Arquivos { get; set; }
+        
     }
 }
