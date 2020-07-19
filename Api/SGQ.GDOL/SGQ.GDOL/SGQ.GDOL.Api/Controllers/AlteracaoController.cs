@@ -12,6 +12,7 @@ using SGQ.GDOL.Domain.ObraRoot.Service.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 
 namespace SGQ.GDOL.Api.Controllers
 {
@@ -81,7 +82,7 @@ namespace SGQ.GDOL.Api.Controllers
             PrepararEntregaObra(alteracoes, entregasObras);
             PrepararEntregaObraCliente(alteracoes, entregasObrasClientes);
             PrepararAssistenciasTecnicas(alteracoes, assistenciasTecnicas);
-            PrepararAtendimentos(alteracoes, assistenciasTecnicas, atendimentos);
+            atendimentos = PrepararAtendimentos(alteracoes, assistenciasTecnicas, atendimentos);
             PrepararFotos(alteracoes, assistenciasTecnicas, fotos);
 
             status = PersistirEntregaObra(entregasObras, status);
@@ -169,7 +170,7 @@ namespace SGQ.GDOL.Api.Controllers
             }
         }
 
-        private static void PrepararAtendimentos(List<AlteracaoDTO> alteracoes, List<AssistenciaTecnicaVM> assistenciasTecnicas, List<AtendimentoVM> atendimentos)
+        private static List<AtendimentoVM> PrepararAtendimentos(List<AlteracaoDTO> alteracoes, List<AssistenciaTecnicaVM> assistenciasTecnicas, List<AtendimentoVM> atendimentos)
         {
             var atendimentosCadastradas = alteracoes.Where(x => x.Entidade.ToUpper() == "ATENDIMENTO" && x.Tipo.ToUpper() == "INSERT");
             var atendimentosNovosAlteradas = alteracoes.Where(x => x.Entidade.ToUpper() == "ATENDIMENTO" && x.Tipo.ToUpper() == "UPDATE" && x.IdAtendimento == 0);
@@ -218,10 +219,10 @@ namespace SGQ.GDOL.Api.Controllers
                             assistenciaTecnica.Atendimentos.Add(atendimento);
                         }
                     }
-
                 }
             }
             atendimentos = atendimentos.Where(x => x.IdAssistenciaTecnica != 0).ToList();
+            return atendimentos;
         }
 
         private static void PrepararFotos(List<AlteracaoDTO> alteracoes, List<AssistenciaTecnicaVM> assistenciasTecnicas, List<AssistenciaTecnicaArquivoVM> fotos)
@@ -394,7 +395,8 @@ namespace SGQ.GDOL.Api.Controllers
                 }
                 catch (Exception ex)
                 {
-                    status += "Falha ao alterar persistir " + arquivoVM.Nome + " com id " + arquivoVM.Id + "; ";
+                    //status += "Falha ao alterar persistir " + arquivoVM.Nome + " com id " + arquivoVM.Id + "; ";
+                    status += ex.Message;
                     continue;
                 }
             }
