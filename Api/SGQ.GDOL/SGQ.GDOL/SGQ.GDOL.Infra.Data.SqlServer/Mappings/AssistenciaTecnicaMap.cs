@@ -64,6 +64,12 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Mappings
                 .HasColumnName("OBSERVACAO")
                 .IsUnicode(false);
 
+            entity.Property(e => e.AssinaturaCliente)
+                .HasColumnName("ASSINATURA_CLIENTE");
+
+            entity.Property(e => e.AssinaturaConstrutora)
+                .HasColumnName("ASSINATURA_CONSTRUTORA");
+
             entity.Property(e => e.Custo).HasColumnName("CUSTO");
 
             entity.Property(e => e.Prioridade).HasColumnName("PRIORIDADE");

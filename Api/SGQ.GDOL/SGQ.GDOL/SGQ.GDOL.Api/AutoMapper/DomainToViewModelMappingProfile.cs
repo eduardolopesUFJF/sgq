@@ -5,6 +5,7 @@ using SGQ.GDOL.Domain.ComercialRoot.Entity;
 using SGQ.GDOL.Domain.EntregaObraRoot.Entity;
 using SGQ.GDOL.Domain.ObraRoot.Entity;
 using SGQ.GDOL.Domain.RHRoot.Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -97,7 +98,11 @@ namespace SGQ.GDOL.Api.AutoMapper
                .ForMember(x => x.ClienteCadastrado, opt => opt.MapFrom(x => x.IdClienteConstrutora.HasValue || string.IsNullOrEmpty(x.NomeCliente)))
                .ForMember(x => x.NomeCliente, opt => opt.MapFrom(x => x.ClienteCadastrado ? x.ClienteConstrutora.Nome : x.NomeCliente))
                .ForMember(x => x.DescricaoCentroCusto, opt => opt.MapFrom(x => x.CentroCusto.Codigo + " - " + x.CentroCusto.Descricao))
-               .ForMember(x => x.Atendimentos, opt => opt.MapFrom(x => x.Atendimentos.Where(y => !y.Delete).OrderByDescending(y => y.DataInicio)));
+               .ForMember(x => x.Atendimentos, opt => opt.MapFrom(x => x.Atendimentos.Where(y => !y.Delete).OrderByDescending(y => y.DataInicio)))
+               .ForMember(x => x.AssinaturaCliente, opt => opt.MapFrom(x => (x.AssinaturaCliente == null || x.AssinaturaCliente.Length == 0) ? null :
+                                                                            "data:image/png;base64," + Convert.ToBase64String(x.AssinaturaCliente)))
+               .ForMember(x => x.AssinaturaConstrutora, opt => opt.MapFrom(x => (x.AssinaturaConstrutora == null || x.AssinaturaConstrutora.Length == 0) ? null :
+                                                                            "data:image/png;base64," + Convert.ToBase64String(x.AssinaturaConstrutora)));
 
             CreateMap<Atendimento, AtendimentoVM>()
                 .ForMember(x => x.DescricaoFuncionario, opt => opt.MapFrom(x => x.Funcionario.Nome))

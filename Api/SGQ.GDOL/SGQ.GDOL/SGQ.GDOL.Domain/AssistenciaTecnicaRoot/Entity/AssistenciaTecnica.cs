@@ -34,6 +34,9 @@ namespace SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Entity
         public int Prioridade { get; set; }
         public bool Delete { get; set; }
 
+        public byte[] AssinaturaCliente { get; set; }
+        public byte[] AssinaturaConstrutora { get; set; }
+
         public ICollection<Atendimento> Atendimentos { get; set; }
         public ICollection<AssistenciaTecnicaArquivo> Arquivos { get; set; }
         

@@ -1,5 +1,4 @@
-﻿using SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Entity;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace SGQ.GDOL.Api.ViewModels
@@ -26,6 +25,9 @@ namespace SGQ.GDOL.Api.ViewModels
         public decimal? Custo { get; set; }
         public int Prioridade { get; set; }
         public bool Delete { get; set; }
+
+        public string AssinaturaCliente { get; set; }
+        public string AssinaturaConstrutora { get; set; }
 
         public List<AtendimentoVM> Atendimentos { get; set; }
         public List<AssistenciaTecnicaArquivoVM> Arquivos { get; set; }
