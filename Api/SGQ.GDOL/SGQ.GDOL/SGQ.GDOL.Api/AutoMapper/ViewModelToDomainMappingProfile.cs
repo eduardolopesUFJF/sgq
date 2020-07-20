@@ -18,9 +18,14 @@ namespace SGQ.GDOL.Api.AutoMapper
             CreateMap<FuncionarioVM, Funcionario>();
             CreateMap<OcorrenciaVM, Ocorrencia>();
             CreateMap<EntregaObraVM, EntregaObra>();
-            CreateMap<EntregaObraClienteVM, EntregaObraCliente>();
             CreateMap<EntregaObraClienteChecklistVM, EntregaObraClienteChecklist>();
             CreateMap<AtendimentoVM, Atendimento>();
+
+            CreateMap<EntregaObraClienteVM, EntregaObraCliente>()
+                .ForMember(x => x.AssinaturaCliente, opt => opt.MapFrom(x => string.IsNullOrEmpty(x.AssinaturaCliente) ? null :
+                                                                            Convert.FromBase64String(x.AssinaturaCliente.Split("base64,", StringSplitOptions.None)[1])))
+                .ForMember(x => x.AssinaturaConstrutora, opt => opt.MapFrom(x => string.IsNullOrEmpty(x.AssinaturaConstrutora) ? null :
+                                                                            Convert.FromBase64String(x.AssinaturaConstrutora.Split("base64,", StringSplitOptions.None)[1])));
 
             CreateMap<AssistenciaTecnicaVM, AssistenciaTecnica>()
                 .ForMember(x => x.AssinaturaCliente, opt => opt.MapFrom(x => string.IsNullOrEmpty(x.AssinaturaCliente) ? null :

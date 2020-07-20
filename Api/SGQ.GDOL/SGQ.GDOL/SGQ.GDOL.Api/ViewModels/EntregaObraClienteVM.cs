@@ -37,6 +37,9 @@ namespace SGQ.GDOL.Api.ViewModels
         public int QtdRA { get; set; }
         public int QtdX { get; set; }
 
+        public string AssinaturaCliente { get; set; }
+        public string AssinaturaConstrutora { get; set; }
+
         public ICollection<EntregaObraClienteChecklistVM> EntregasObrasClientesChecklists { get; set; }
         public List<OcorrenciaVM> Ocorrencias { get; set; }
     }

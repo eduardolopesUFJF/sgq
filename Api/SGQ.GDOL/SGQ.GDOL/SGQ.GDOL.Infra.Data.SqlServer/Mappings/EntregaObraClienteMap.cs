@@ -78,6 +78,12 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Mappings
 
             entity.Property(e => e.Delete).HasColumnName("DELETE");
 
+            entity.Property(e => e.AssinaturaCliente)
+                .HasColumnName("ASSINATURA_CLIENTE");
+
+            entity.Property(e => e.AssinaturaConstrutora)
+                .HasColumnName("ASSINATURA_CONSTRUTORA");
+
             entity.HasOne(d => d.EntregaObra)
                     .WithMany(p => p.EntregasObrasClientes)
                     .HasForeignKey(d => d.IdEntregaObra);

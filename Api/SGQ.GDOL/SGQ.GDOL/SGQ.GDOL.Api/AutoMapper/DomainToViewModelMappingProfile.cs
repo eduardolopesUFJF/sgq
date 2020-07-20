@@ -79,7 +79,11 @@ namespace SGQ.GDOL.Api.AutoMapper
                 .ForMember(x => x.QtdR, opt => opt.MapFrom(x => x.EntregasObrasClientesChecklists.Count(y => y.Inspecao1 == "R")))
                 .ForMember(x => x.QtdRA, opt => opt.MapFrom(x => x.EntregasObrasClientesChecklists.Count(y => y.Inspecao2 == "A")))
                 .ForMember(x => x.QtdX, opt => opt.MapFrom(x => x.EntregasObrasClientesChecklists.Count(y => y.Inspecao1 == "X")))
-                .ForMember(x => x.Ocorrencias, opt => opt.MapFrom(x => new List<OcorrenciaVM>() /*x.Ocorrencias.Where(y => y.Delete.HasValue && !y.Delete.Value)*/));
+                .ForMember(x => x.Ocorrencias, opt => opt.MapFrom(x => new List<OcorrenciaVM>() /*x.Ocorrencias.Where(y => y.Delete.HasValue && !y.Delete.Value)*/))
+                .ForMember(x => x.AssinaturaCliente, opt => opt.MapFrom(x => (x.AssinaturaCliente == null || x.AssinaturaCliente.Length == 0) ? null :
+                                                                            "data:image/png;base64," + Convert.ToBase64String(x.AssinaturaCliente)))
+                .ForMember(x => x.AssinaturaConstrutora, opt => opt.MapFrom(x => (x.AssinaturaConstrutora == null || x.AssinaturaConstrutora.Length == 0) ? null :
+                                                                            "data:image/png;base64," + Convert.ToBase64String(x.AssinaturaConstrutora)));
 
             CreateMap<ChecklistItem, ChecklistItemVM>()
                 .ForMember(x => x.Descricao, opt => opt.MapFrom(x => x.Descricao))
