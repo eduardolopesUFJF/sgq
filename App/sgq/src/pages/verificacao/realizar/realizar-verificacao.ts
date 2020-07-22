@@ -31,6 +31,8 @@ export class RealizarVerificacaoPage {
     ultimoItem: ItemInspecao = new ItemInspecao();
     dataDescricao: Date;
     dataTratativa: Date;
+    dataAbertura: string;
+    dataEncerramento: string;
 
     constructor(
         public viewCtrl: ViewController,
@@ -43,24 +45,42 @@ export class RealizarVerificacaoPage {
         this.descServico = this.navParams.data.descServico;
         this.servico = this.navParams.data.servico;
         this.inspecao = this.navParams.data.inspecao;
+        this.tratarDatas();
         this.obterFuncionarios();
     }
 
-    setaFuncionarioInspecionado(event: {component: IonicSelectableComponent, value: any}) {
+    tratarDatas() {
+        if (this.inspecao.dataInspecao) {
+            if (this.inspecao.dataInspecao.toString().indexOf("GMT") == -1) {
+                this.dataAbertura = this.inspecao.dataInspecao.toString().split("T")[0];
+            } else {
+                this.dataAbertura = this.inspecao.dataInspecao.toISOString().split("T")[0];
+            }
+        }
+        if (this.inspecao.dataEncerramento) {
+            if (this.inspecao.dataEncerramento.toString().indexOf("GMT") == -1) {
+                this.dataEncerramento = this.inspecao.dataEncerramento.toString().split("T")[0];
+            } else {
+                this.dataEncerramento = this.inspecao.dataEncerramento.toISOString().split("T")[0];
+            }
+        }
+    }
+
+    setaFuncionarioInspecionado(event: { component: IonicSelectableComponent, value: any }) {
         this.inspecao.idFuncionarioInspecionado = event.value.id;
     }
 
-    setaFuncionarioAprovado(event: {component: IonicSelectableComponent, value: any}) {
+    setaFuncionarioAprovado(event: { component: IonicSelectableComponent, value: any }) {
         this.inspecao.idFuncionarioAprovado = event.value.id;
     }
 
     async obterFuncionarios() {
         await this.storage.ready();
         this.funcionarios = await this.storage.get('funcionarios');
-        
+
         const obras = await this.storage.get('obras');
         const obra = obras.find(x => x.id == this.servico.idObra);
-        
+
         this.funcionarios = [...this.funcionarios.filter(x => x.idCentroCusto == null || x.idCentroCusto == obra.idCentroCusto)];
         this.funcionarioAprovado = this.funcionarios.find(x => x.id == this.inspecao.idFuncionarioAprovado);
         this.funcionarioInspecionado = this.funcionarios.find(x => x.id == this.inspecao.idFuncionarioInspecionado);
@@ -72,6 +92,8 @@ export class RealizarVerificacaoPage {
 
     salvar(valido: boolean) {
         if (valido) {
+            this.inspecao.dataInspecao = new Date(this.dataAbertura + "T12:00:00");
+            this.inspecao.dataEncerramento = new Date(this.dataEncerramento + "T12:00:00");
             if (this.inspecao.status == 0) {
                 this.viewCtrl.dismiss({ inspecao: this.inspecao, concluido: true });
             } else {

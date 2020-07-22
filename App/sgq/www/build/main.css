@@ -35362,6 +35362,20 @@ page-realizar-verificacao ionic-selectable {
   color: white;
 }
 
+page-realizar-verificacao ion-datetime {
+  background: rgba(33, 177, 75, 0.4) !important;
+  margin: 5px 10px 0px 10px !important;
+  padding: 5px 10px !important;
+  border-radius: 4px;
+  z-index: 999;
+  height: 38px !important;
+  padding-top: 9px !important;
+}
+
+page-realizar-verificacao ion-datetime .input-cover {
+  display: none;
+}
+
 page-realizar-verificacao .button-nav {
   height: 30px !important;
   background: none !important;

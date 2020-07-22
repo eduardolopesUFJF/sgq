@@ -16,7 +16,6 @@ export class HomePage {
   constructor(public navParams: NavParams, public events: Events) {
     this.Math = Math;
     this.pages = [
-      { "title": "Home", "icon": "home", "component": "HomePage" },
       { "title": "Baixar dados", "icon": "cloud-download", "component": "Baixar" },
       { "title": "Listar alterações", "icon": "list", "component": "AlteracoesPage" },
       { "title": "Publicar alterações", "icon": "cloud-upload", "component": "Subir" },

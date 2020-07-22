@@ -58,6 +58,22 @@
                             </ion-row>
                         </ion-grid>
                     </ion-list>
+                    <ion-row>
+                        <ion-col col-6>
+                            <ion-item text-center transparent>
+                                <ion-label stacked>DATA ABERTURA</ion-label>
+                                <ion-datetime displayFormat="DD/MM/YYYY" name="dataAbertura" [(ngModel)]="dataAbertura"
+                                    [disabled]="servico.status == 1" cancelText="Cancelar" doneText="Ok"></ion-datetime>
+                            </ion-item>
+                        </ion-col>
+                        <ion-col col-6>
+                            <ion-item text-center transparent>
+                                <ion-label stacked>DATA ENCERRAMENTO</ion-label>
+                                <ion-datetime displayFormat="DD/MM/YYYY" name="dataEncerramento" [(ngModel)]="dataEncerramento"
+                                    [disabled]="servico.status == 1" cancelText="Cancelar" doneText="Ok"></ion-datetime>
+                            </ion-item>
+                        </ion-col>
+                    </ion-row>
                     <hr style="margin: 2px 0 0 0;">
                     <ion-list radio-group no-margin [(ngModel)]="item.inspecao1" name="itemInspecao1+{{i}}" *ngFor="let item of inspecao.inspecaoObraItens; let i=index;"
                         [disabled]="servico.status == 1">

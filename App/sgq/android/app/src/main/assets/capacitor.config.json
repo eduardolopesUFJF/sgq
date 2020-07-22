@@ -19,7 +19,7 @@
   "plugins": {
     "SplashScreen": {
       "showSpinner": true,
-      "launchShowDuration": 20000
+      "launchShowDuration": 10000
     }
   }
 }

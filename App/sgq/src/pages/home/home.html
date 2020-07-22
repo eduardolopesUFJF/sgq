@@ -7,7 +7,8 @@
 </ion-header>
 
 <ion-content>
-  <h1 *ngIf="!progressbarAtivo" padding text-center class="boas-vindas">Bem vindo ao Sistema de Gestão de Qualidade</h1>
+  <h1 *ngIf="!progressbarAtivo" padding text-center class="boas-vindas" style="margin-bottom: 0;padding-bottom: 0;">Checklist de Obras</h1>
+  <h1 *ngIf="!progressbarAtivo" padding text-center class="boas-vindas" style="margin-top: 5px;padding-top: 0;">Bem vindo</h1>
   <ion-grid *ngIf="!progressbarAtivo">
     <ion-row>
       <button menuClose ion-item default-item item-title main-menu no-lines class="mt-6 mb-6" *ngFor="let p of pages" (click)="openPage(p)">
