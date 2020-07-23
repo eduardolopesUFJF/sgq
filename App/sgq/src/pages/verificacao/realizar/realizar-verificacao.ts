@@ -15,8 +15,9 @@ import { IonicSelectableComponent } from 'ionic-selectable';
 })
 
 export class RealizarVerificacaoPage {
-
+    
     inspecao: Inspecao = new Inspecao();
+    exibirPorCentroCusto: boolean = true;
     servico: Servico = new Servico();
     descServico: string = '';
     funcionarios: Funcionario[] = [];
@@ -81,7 +82,9 @@ export class RealizarVerificacaoPage {
         const obras = await this.storage.get('obras');
         const obra = obras.find(x => x.id == this.servico.idObra);
 
-        this.funcionarios = [...this.funcionarios.filter(x => x.idCentroCusto == null || x.idCentroCusto == obra.idCentroCusto)];
+        if (this.exibirPorCentroCusto) {
+            this.funcionarios = [...this.funcionarios.filter(x => x.idCentroCusto == null || x.idCentroCusto == obra.idCentroCusto)];
+        }
         this.funcionarioAprovado = this.funcionarios.find(x => x.id == this.inspecao.idFuncionarioAprovado);
         this.funcionarioInspecionado = this.funcionarios.find(x => x.id == this.inspecao.idFuncionarioInspecionado);
     }

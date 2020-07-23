@@ -25,6 +25,11 @@
                     <ion-item text-center text-wrap transparent style="padding-bottom: 0 !important;">
                         <ion-label style="font-size: 18px !important; font-weight: bold;" stacked>{{descServico.toUpperCase()}}</ion-label>
                     </ion-item>
+                    <ion-item text-center transparent style="text-align: left !important; padding-bottom: 0px !important;">
+                        <ion-label>EXIBIR POR CENTRO DE CUSTO</ion-label>
+                        <ion-checkbox name="exibirPorCentroCusto" [(ngModel)]="exibirPorCentroCusto"
+                            (ngModelChange)="obterFuncionarios()"></ion-checkbox>
+                    </ion-item>
                     <ion-item text-center transparent>
                         <ion-label stacked>INSPECIONADO POR</ion-label>
                         <ionic-selectable item-content [(ngModel)]="funcionarioInspecionado" [items]="funcionarios"
