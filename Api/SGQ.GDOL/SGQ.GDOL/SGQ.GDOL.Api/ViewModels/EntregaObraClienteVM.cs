@@ -41,6 +41,7 @@ namespace SGQ.GDOL.Api.ViewModels
         public string AssinaturaConstrutora { get; set; }
 
         public ICollection<EntregaObraClienteChecklistVM> EntregasObrasClientesChecklists { get; set; }
-        public List<OcorrenciaVM> Ocorrencias { get; set; }
+        public List<EntregaObraClienteOcorrenciaVM> Ocorrencias { get; set; }
+        public List<EntregaObraClienteArquivoVM> Arquivos { get; set; }
     }
 }

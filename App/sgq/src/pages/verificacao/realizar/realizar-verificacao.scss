@@ -23,6 +23,12 @@ page-realizar-verificacao {
     }
   }
 
+  ion-checkbox {
+    .checkbox-icon {
+      border-color: black !important;
+    }
+  }
+
   .button-nav {
     height: 30px !important;
     background: none !important;

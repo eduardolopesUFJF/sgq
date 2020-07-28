@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="dom.gdolsistemas.sgq" version="1.1.21" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Checklist de Obras</name>
-    <description>Checklist de Obras</description>
+    <name>SGQ Checklist</name>
+    <description>SGQ Checklist</description>
     <author email="eduardolopes@ice.ufjf.br" href="http://ionicframework.com/">Sistema de Gestão de Qualidade</author>
     <content src="index.html" />
     <access origin="*" />

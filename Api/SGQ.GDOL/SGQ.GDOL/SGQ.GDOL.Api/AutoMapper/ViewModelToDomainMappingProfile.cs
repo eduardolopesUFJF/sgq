@@ -6,7 +6,6 @@ using SGQ.GDOL.Domain.EntregaObraRoot.Entity;
 using SGQ.GDOL.Domain.ObraRoot.Entity;
 using SGQ.GDOL.Domain.RHRoot.Entity;
 using System;
-using System.Text;
 
 namespace SGQ.GDOL.Api.AutoMapper
 {
@@ -17,6 +16,7 @@ namespace SGQ.GDOL.Api.AutoMapper
             CreateMap<CentroCustoVM, CentroCusto>();
             CreateMap<FuncionarioVM, Funcionario>();
             CreateMap<OcorrenciaVM, Ocorrencia>();
+            CreateMap<EntregaObraClienteOcorrenciaVM, EntregaObraClienteOcorrencia>();
             CreateMap<EntregaObraVM, EntregaObra>();
             CreateMap<EntregaObraClienteChecklistVM, EntregaObraClienteChecklist>();
             CreateMap<AtendimentoVM, Atendimento>();
@@ -34,6 +34,9 @@ namespace SGQ.GDOL.Api.AutoMapper
                                                                             Convert.FromBase64String(x.AssinaturaConstrutora.Split("base64,", StringSplitOptions.None)[1])));
 
             CreateMap<AssistenciaTecnicaArquivoVM, AssistenciaTecnicaArquivo>()
+                .ForMember(x => x.Arquivo, opt => opt.MapFrom(x => Convert.FromBase64String(x.Arquivo)));
+
+            CreateMap<EntregaObraClienteArquivoVM, EntregaObraClienteArquivo>()
                 .ForMember(x => x.Arquivo, opt => opt.MapFrom(x => Convert.FromBase64String(x.Arquivo)));
 
             CreateMap<ChecklistItemVM, ChecklistItem>()

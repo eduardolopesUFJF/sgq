@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace SGQ.GDOL.Api.ViewModels
 {
@@ -16,7 +15,5 @@ namespace SGQ.GDOL.Api.ViewModels
         public bool? Delete { get; set; }
         public DateTime? DataHoraInclusao { get; set; }
         public DateTime? DataHoraAlteracao { get; set; }
-
-        public List<FotoVM> Fotos { get; set; }
     }
 }

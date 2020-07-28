@@ -36,5 +36,7 @@ namespace SGQ.GDOL.Domain.EntregaObraRoot.Entity
         public byte[] AssinaturaConstrutora { get; set; }
 
         public ICollection<EntregaObraClienteChecklist> EntregasObrasClientesChecklists { get; set; }
+        public ICollection<EntregaObraClienteArquivo> Arquivos { get; set; }
+        public ICollection<EntregaObraClienteOcorrencia> Ocorrencias { get; set; }
     }
 }

@@ -20,16 +20,19 @@ namespace SGQ.GDOL.Domain.EntregaObraRoot.Service
         public void Adicionar(EntregaObraClienteChecklist entregaObraClienteChecklist)
         {
             _entregaObraClienteChecklistRepository.Adicionar(entregaObraClienteChecklist);
+            _unitOfWork.Commit();
         }
 
         public void Atualizar(EntregaObraClienteChecklist entregaObraClienteChecklist)
         {
             _entregaObraClienteChecklistRepository.Update(entregaObraClienteChecklist);
+            _unitOfWork.Commit();
         }
 
         public void RemoverAtuais(int entregaObraClienteId)
         {
             _entregaObraClienteChecklistRepository.RemoverAtuais(entregaObraClienteId);
+            _unitOfWork.Commit();
         }
     }
 }

@@ -1,6 +1,6 @@
 {
   "appId": "dom.gdolsistemas.sgq",
-  "appName": "SGQ",
+  "appName": "SGQ Checklist",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",

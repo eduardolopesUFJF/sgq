@@ -32707,7 +32707,7 @@ login-layout-2 .scroll-content ion-grid ion-row {
 }
 
 login-layout-2 .scroll-content ion-grid ion-row img {
-  height: 150px;
+  height: 180px;
   width: 275px;
 }
 
@@ -35374,6 +35374,10 @@ page-realizar-verificacao ion-datetime {
 
 page-realizar-verificacao ion-datetime .input-cover {
   display: none;
+}
+
+page-realizar-verificacao ion-checkbox .checkbox-icon {
+  border-color: black !important;
 }
 
 page-realizar-verificacao .button-nav {

@@ -32,6 +32,8 @@ namespace SGQ.GDOL.Api.Controllers
         private readonly IAssistenciaTecnicaService _assistenciaTecnicaService;
         private readonly IAtendimentoService _atendimentoService;
         private readonly IAssistenciaTecnicaArquivoService _assistenciaTecnicaArquivoService;
+        private readonly IEntregaObraClienteArquivoService _entregaObraClienteArquivoService;
+        private readonly IEntregaObraClienteOcorrenciaService _entregaObraClienteOcorrenciaService;
 
         public AlteracaoController(
             IAreaService areaService,
@@ -45,7 +47,9 @@ namespace SGQ.GDOL.Api.Controllers
             IEntregaObraClienteChecklistService entregaObraClienteChecklistService,
             IAssistenciaTecnicaService assistenciaTecnicaService,
             IAtendimentoService atendimentoService,
-            IAssistenciaTecnicaArquivoService assistenciaTecnicaArquivoService)
+            IAssistenciaTecnicaArquivoService assistenciaTecnicaArquivoService,
+            IEntregaObraClienteArquivoService entregaObraClienteArquivoService,
+            IEntregaObraClienteOcorrenciaService entregaObraClienteOcorrenciaService)
         {
             _areaService = areaService;
             _servicoService = servicoService;
@@ -59,6 +63,8 @@ namespace SGQ.GDOL.Api.Controllers
             _assistenciaTecnicaService = assistenciaTecnicaService;
             _atendimentoService = atendimentoService;
             _assistenciaTecnicaArquivoService = assistenciaTecnicaArquivoService;
+            _entregaObraClienteArquivoService = entregaObraClienteArquivoService;
+            _entregaObraClienteOcorrenciaService = entregaObraClienteOcorrenciaService;
         }
 
         #region ENTREGA OBRA
@@ -75,18 +81,27 @@ namespace SGQ.GDOL.Api.Controllers
             string status = "";
             List<EntregaObraVM> entregasObras = new List<EntregaObraVM>();
             List<EntregaObraClienteVM> entregasObrasClientes = new List<EntregaObraClienteVM>();
+            List<EntregaObraClienteOcorrenciaVM> entregasObrasClienteOcorrencias = new List<EntregaObraClienteOcorrenciaVM>();
+            List<EntregaObraClienteArquivoVM> fotosEntregaObraCliente = new List<EntregaObraClienteArquivoVM>();
+
             List<AssistenciaTecnicaVM> assistenciasTecnicas = new List<AssistenciaTecnicaVM>();
             List<AtendimentoVM> atendimentos = new List<AtendimentoVM>();
             List<AssistenciaTecnicaArquivoVM> fotos = new List<AssistenciaTecnicaArquivoVM>();
 
             PrepararEntregaObra(alteracoes, entregasObras);
             PrepararEntregaObraCliente(alteracoes, entregasObrasClientes);
+            entregasObrasClienteOcorrencias = PrepararEntregaObraClienteOcorrencia(alteracoes, entregasObrasClientes, entregasObrasClienteOcorrencias);
+            PrepararFotos(alteracoes, entregasObrasClientes, fotosEntregaObraCliente);
+
             PrepararAssistenciasTecnicas(alteracoes, assistenciasTecnicas);
             atendimentos = PrepararAtendimentos(alteracoes, assistenciasTecnicas, atendimentos);
             PrepararFotos(alteracoes, assistenciasTecnicas, fotos);
 
             status = PersistirEntregaObra(entregasObras, status);
             status = PersistirEntregaObraCliente(entregasObrasClientes, status);
+            status = PersistirOcorrencias(entregasObrasClienteOcorrencias, status);
+            status = PersistirFotos(fotosEntregaObraCliente, status);
+            
             status = PersistirAssistenciasTecnicas(assistenciasTecnicas, status);
             status = PersistirAtendimentos(atendimentos, status);
             status = PersistirFotos(fotos, status);
@@ -135,6 +150,92 @@ namespace SGQ.GDOL.Api.Controllers
             {
                 var entregaObraClienteVM = JsonConvert.DeserializeObject<EntregaObraClienteVM>(alteracao.Valor);
                 entregasObrasClientes.Add(entregaObraClienteVM);
+            }
+        }
+        
+        private static List<EntregaObraClienteOcorrenciaVM> PrepararEntregaObraClienteOcorrencia(List<AlteracaoDTO> alteracoes, List<EntregaObraClienteVM> entregasObrasClientes, List<EntregaObraClienteOcorrenciaVM> entregasObrasClienteOcorrencias)
+        {
+            var ocorrenciasCadastradas = alteracoes.Where(x => x.Entidade.ToUpper() == "ENTREGAOBRACLIENTEOCORRENCIA" && x.Tipo.ToUpper() == "INSERT");
+            var ocorrenciasNovosAlteradas = alteracoes.Where(x => x.Entidade.ToUpper() == "ENTREGAOBRACLIENTEOCORRENCIA" && x.Tipo.ToUpper() == "UPDATE" && x.IdOcorrencia == 0);
+            var ocorrenciasAlteradas = alteracoes.Where(x => x.Entidade.ToUpper() == "ENTREGAOBRACLIENTEOCORRENCIA" && x.Tipo.ToUpper() == "UPDATE" && x.IdOcorrencia != 0);
+
+            foreach (var alteracao in ocorrenciasCadastradas)
+            {
+                var ocorrenciaVM = JsonConvert.DeserializeObject<EntregaObraClienteOcorrenciaVM>(alteracao.Valor);
+                ocorrenciaVM.IdGuid = alteracao.IdGuidOcorrencia;
+
+                entregasObrasClienteOcorrencias.Add(ocorrenciaVM);
+            }
+
+            foreach (var alteracao in ocorrenciasNovosAlteradas)
+            {
+                var ocorrenciaVM = JsonConvert.DeserializeObject<EntregaObraClienteOcorrenciaVM>(alteracao.Valor);
+                var indice = entregasObrasClienteOcorrencias.FindIndex(x => x.IdGuid == alteracao.IdGuidOcorrencia);
+                if (indice > -1)
+                {
+                    entregasObrasClienteOcorrencias.RemoveAt(indice);
+                    entregasObrasClienteOcorrencias.Add(ocorrenciaVM);
+                }
+            }
+
+            foreach (var alteracao in ocorrenciasAlteradas)
+            {
+                var ocorrenciaVM = JsonConvert.DeserializeObject<EntregaObraClienteOcorrenciaVM>(alteracao.Valor);
+                entregasObrasClienteOcorrencias.Add(ocorrenciaVM);
+            }
+
+            foreach (var ocorrencia in entregasObrasClienteOcorrencias)
+            {
+                if (ocorrencia.IdEntregaObraCliente == 0)
+                {
+                    var entregaObraCliente = entregasObrasClientes.FirstOrDefault(x => x.IdGuidEntregaObraCliente.Equals(ocorrencia.IdGuidEntregaObraCliente));
+                    if (entregaObraCliente != null)
+                    {
+                        var indice = entregaObraCliente.Ocorrencias.FindIndex(x => x.IdGuid == ocorrencia.IdGuid);
+                        if (indice == -1)
+                        {
+                            entregaObraCliente.Ocorrencias.Add(ocorrencia);
+                        }
+                        else
+                        {
+                            entregaObraCliente.Ocorrencias.RemoveAt(indice);
+                            entregaObraCliente.Ocorrencias.Add(ocorrencia);
+                        }
+                    }
+                }
+            }
+            entregasObrasClienteOcorrencias = entregasObrasClienteOcorrencias.Where(x => x.IdEntregaObraCliente != 0).ToList();
+            return entregasObrasClienteOcorrencias;
+        }
+        
+        private static void PrepararFotos(List<AlteracaoDTO> alteracoes, List<EntregaObraClienteVM> entregasObrasClientes, List<EntregaObraClienteArquivoVM> fotos)
+        {
+            var fotosEnviadas = alteracoes.Where(x => x.Entidade.ToUpper() == "ENTREGAOBRACLIENTEARQUIVO");
+            var arquivos = fotosEnviadas.Select(x => JsonConvert.DeserializeObject<EntregaObraClienteArquivoVM>(x.Valor)).ToList();
+
+            foreach (var arquivo in arquivos)
+            {
+                if (arquivo.IdEntregaObraCliente == 0)
+                {
+                    var entregaObraCliente = entregasObrasClientes.FirstOrDefault(x => x.IdGuidEntregaObraCliente.Equals(arquivo.IdGuidEntregaObraCliente));
+                    if (entregaObraCliente != null)
+                    {
+                        var indice = entregaObraCliente.Arquivos.FindIndex(x => x.IdGuid == arquivo.IdGuid);
+                        if (indice == -1)
+                        {
+                            entregaObraCliente.Arquivos.Add(arquivo);
+                        }
+                        else
+                        {
+                            entregaObraCliente.Arquivos.RemoveAt(indice);
+                            entregaObraCliente.Arquivos.Add(arquivo);
+                        }
+                    }
+                }
+                else
+                {
+                    fotos.Add(arquivo);
+                }
             }
         }
 
@@ -282,6 +383,7 @@ namespace SGQ.GDOL.Api.Controllers
             {
                 try
                 {
+                    var teste = Convert.FromBase64String(entregaObraClienteVM.Arquivos.ElementAt(0).Arquivo);
                     var entregaObraClienteBD = Mapper.Map<EntregaObraCliente>(entregaObraClienteVM);
                     if (entregaObraClienteBD.Id == 0)
                     {
@@ -319,6 +421,50 @@ namespace SGQ.GDOL.Api.Controllers
                 catch (Exception ex)
                 {
                     status += "Falha ao alterar persistir " + entregaObraClienteVM.LocalVistoria + " com id " + entregaObraClienteVM.Id + "; ";
+                    continue;
+                }
+            }
+            return status;
+        }
+
+        private string PersistirOcorrencias(List<EntregaObraClienteOcorrenciaVM> ocorrenciasVM, string status)
+        {
+            foreach (var ocorrenciaVM in ocorrenciasVM)
+            {
+                try
+                {
+                    var ocorrenciaBD = Mapper.Map<EntregaObraClienteOcorrencia>(ocorrenciaVM);
+                    if (ocorrenciaBD.Id == 0)
+                    {
+                        _entregaObraClienteOcorrenciaService.Adicionar(ocorrenciaBD);
+                    }
+                    else
+                    {
+                        ocorrenciaBD.EntregaObraCliente = null;
+                        _entregaObraClienteOcorrenciaService.Atualizar(ocorrenciaBD);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    status += "Falha ao alterar persistir " + ocorrenciaVM.Descricao + " com id " + ocorrenciaVM.Id + "; ";
+                    continue;
+                }
+            }
+            return status;
+        }
+
+        private string PersistirFotos(List<EntregaObraClienteArquivoVM> arquivosVM, string status)
+        {
+            foreach (var arquivoVM in arquivosVM)
+            {
+                try
+                {
+                    var arquivoBD = Mapper.Map<EntregaObraClienteArquivo>(arquivoVM);
+                    _entregaObraClienteArquivoService.Adicionar(arquivoBD);
+                }
+                catch (Exception ex)
+                {
+                    status += "Falha ao alterar persistir " + arquivoVM.Nome + " com id " + arquivoVM.Id + "; ";
                     continue;
                 }
             }
@@ -395,8 +541,7 @@ namespace SGQ.GDOL.Api.Controllers
                 }
                 catch (Exception ex)
                 {
-                    //status += "Falha ao alterar persistir " + arquivoVM.Nome + " com id " + arquivoVM.Id + "; ";
-                    status += ex.Message;
+                    status += "Falha ao alterar persistir " + arquivoVM.Nome + " com id " + arquivoVM.Id + "; ";
                     continue;
                 }
             }
