@@ -47,7 +47,7 @@
     "ionic-angular": "3.9.2",
     "ionic-selectable": "^3.2.0",
     "ionicons": "3.0.0",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "ng-lz-string": "^1.5.3",
     "rxjs": "5.5.11",
     "sw-toolbox": "3.6.0",
