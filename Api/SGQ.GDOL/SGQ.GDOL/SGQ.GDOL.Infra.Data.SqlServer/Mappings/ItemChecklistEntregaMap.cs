@@ -1,9 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using SGQ.GDOL.Domain.EntregaObraRoot.Entity;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace SGQ.GDOL.Infra.Data.SqlServer.Mappings
 {

@@ -57,6 +57,8 @@ namespace SGQ.GDOL.Infra.CrossCutting.IoC
             services.AddScoped<IAssistenciaTecnicaArquivoService, AssistenciaTecnicaArquivoService>();
             services.AddScoped<IEntregaObraClienteArquivoService, EntregaObraClienteArquivoService>();
             services.AddScoped<IEntregaObraClienteOcorrenciaService, EntregaObraClienteOcorrenciaService>();
+            services.AddScoped<IEntregaObraClienteTermoService, EntregaObraClienteTermoService>();
+            services.AddScoped<ITermoService, TermoService>();
 
             //Infra Data
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
@@ -81,6 +83,8 @@ namespace SGQ.GDOL.Infra.CrossCutting.IoC
             services.AddScoped<IAssistenciaTecnicaArquivoRepository, AssistenciaTecnicaArquivoRepository>();
             services.AddScoped<IEntregaObraClienteArquivoRepository, EntregaObraClienteArquivoRepository>();
             services.AddScoped<IEntregaObraClienteOcorrenciaRepository, EntregaObraClienteOcorrenciaRepository>();
+            services.AddScoped<IEntregaObraClienteTermoRepository, EntregaObraClienteTermoRepository>();
+            services.AddScoped<ITermoRepository, TermoRepository>();
 
             services.AddScoped<ServiceContext>();
             services.AddScoped<NotificationHandler>();

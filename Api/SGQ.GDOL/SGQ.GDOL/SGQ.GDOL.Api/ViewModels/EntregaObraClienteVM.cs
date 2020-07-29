@@ -43,5 +43,6 @@ namespace SGQ.GDOL.Api.ViewModels
         public ICollection<EntregaObraClienteChecklistVM> EntregasObrasClientesChecklists { get; set; }
         public List<EntregaObraClienteOcorrenciaVM> Ocorrencias { get; set; }
         public List<EntregaObraClienteArquivoVM> Arquivos { get; set; }
+        public List<int> TermosIds { get; set; }
     }
 }

@@ -38,6 +38,8 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Context
         public DbSet<AssistenciaTecnicaArquivo> AssistenciaTecnicaArquivo { get; set; }
         public DbSet<EntregaObraClienteOcorrencia> EntregaObraClienteOcorrencia { get; set; }
         public DbSet<EntregaObraClienteArquivo> EntregaObraClienteArquivo { get; set; }
+        public DbSet<Termo> Termo { get; set; }
+        public DbSet<EntregaObraClienteTermo> EntregaObraClienteTermo { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -65,6 +67,8 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Context
             modelBuilder.ApplyConfiguration(new AssistenciaTecnicaArquivoMap());
             modelBuilder.ApplyConfiguration(new EntregaObraClienteOcorrenciaMap());
             modelBuilder.ApplyConfiguration(new EntregaObraClienteArquivoMap());
+            modelBuilder.ApplyConfiguration(new EntregaObraClienteTermoMap());
+            modelBuilder.ApplyConfiguration(new TermoMap());
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

@@ -7,32 +7,26 @@ namespace SGQ.GDOL.Domain.EntregaObraRoot.Service
     public class EntregaObraClienteChecklistService : IEntregaObraClienteChecklistService
     {
         private readonly IEntregaObraClienteChecklistRepository _entregaObraClienteChecklistRepository;
-        private readonly IUnitOfWork _unitOfWork;
 
         public EntregaObraClienteChecklistService(
-            IEntregaObraClienteChecklistRepository entregaObraClienteChecklistRepository,
-            IUnitOfWork unitOfWork)
+            IEntregaObraClienteChecklistRepository entregaObraClienteChecklistRepository)
         {
             _entregaObraClienteChecklistRepository = entregaObraClienteChecklistRepository;
-            _unitOfWork = unitOfWork;
         }
 
         public void Adicionar(EntregaObraClienteChecklist entregaObraClienteChecklist)
         {
             _entregaObraClienteChecklistRepository.Adicionar(entregaObraClienteChecklist);
-            _unitOfWork.Commit();
         }
 
         public void Atualizar(EntregaObraClienteChecklist entregaObraClienteChecklist)
         {
             _entregaObraClienteChecklistRepository.Update(entregaObraClienteChecklist);
-            _unitOfWork.Commit();
         }
 
         public void RemoverAtuais(int entregaObraClienteId)
         {
             _entregaObraClienteChecklistRepository.RemoverAtuais(entregaObraClienteId);
-            _unitOfWork.Commit();
         }
     }
 }

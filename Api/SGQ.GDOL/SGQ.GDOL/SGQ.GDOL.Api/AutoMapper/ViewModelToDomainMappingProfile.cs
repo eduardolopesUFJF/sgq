@@ -6,6 +6,7 @@ using SGQ.GDOL.Domain.EntregaObraRoot.Entity;
 using SGQ.GDOL.Domain.ObraRoot.Entity;
 using SGQ.GDOL.Domain.RHRoot.Entity;
 using System;
+using System.Linq;
 
 namespace SGQ.GDOL.Api.AutoMapper
 {

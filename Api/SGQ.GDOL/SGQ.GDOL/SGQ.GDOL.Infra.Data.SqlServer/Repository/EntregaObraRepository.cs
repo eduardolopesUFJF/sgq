@@ -25,6 +25,7 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Repository
                         .AsNoTracking()
                         .Include(x => x.CentroCusto)
                         .Include(x => x.EntregasObrasClientes).ThenInclude(x => x.Ocorrencias)
+                        .Include(x => x.EntregasObrasClientes).ThenInclude(x => x.Termos)
                         .Include(x => x.EntregasObrasClientes).ThenInclude(x => x.ClienteConstrutora)
                         .Include(x => x.EntregasObrasClientes).ThenInclude(x => x.ChecklistObra)
                         .Include(x => x.EntregasObrasClientes).ThenInclude(x => x.FuncionarioInspecao)

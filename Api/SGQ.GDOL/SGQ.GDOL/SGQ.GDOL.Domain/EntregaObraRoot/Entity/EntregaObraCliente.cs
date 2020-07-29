@@ -6,6 +6,11 @@ namespace SGQ.GDOL.Domain.EntregaObraRoot.Entity
 {
     public class EntregaObraCliente : EntityBase
     {
+        public EntregaObraCliente()
+        {
+            Termos = new HashSet<EntregaObraClienteTermo>();
+        }
+
         public int IdEntregaObra { get; set; }
         public virtual EntregaObra EntregaObra { get; set; }
         public int? IdClienteConstrutora { get; set; }
@@ -38,5 +43,6 @@ namespace SGQ.GDOL.Domain.EntregaObraRoot.Entity
         public ICollection<EntregaObraClienteChecklist> EntregasObrasClientesChecklists { get; set; }
         public ICollection<EntregaObraClienteArquivo> Arquivos { get; set; }
         public ICollection<EntregaObraClienteOcorrencia> Ocorrencias { get; set; }
+        public ICollection<EntregaObraClienteTermo> Termos { get; set; }
     }
 }

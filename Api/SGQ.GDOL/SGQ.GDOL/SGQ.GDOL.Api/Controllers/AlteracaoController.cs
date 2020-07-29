@@ -34,6 +34,7 @@ namespace SGQ.GDOL.Api.Controllers
         private readonly IAssistenciaTecnicaArquivoService _assistenciaTecnicaArquivoService;
         private readonly IEntregaObraClienteArquivoService _entregaObraClienteArquivoService;
         private readonly IEntregaObraClienteOcorrenciaService _entregaObraClienteOcorrenciaService;
+        private readonly IEntregaObraClienteTermoService _entregaObraClienteTermoService;
 
         public AlteracaoController(
             IAreaService areaService,
@@ -49,7 +50,8 @@ namespace SGQ.GDOL.Api.Controllers
             IAtendimentoService atendimentoService,
             IAssistenciaTecnicaArquivoService assistenciaTecnicaArquivoService,
             IEntregaObraClienteArquivoService entregaObraClienteArquivoService,
-            IEntregaObraClienteOcorrenciaService entregaObraClienteOcorrenciaService)
+            IEntregaObraClienteOcorrenciaService entregaObraClienteOcorrenciaService,
+            IEntregaObraClienteTermoService entregaObraClienteTermoService)
         {
             _areaService = areaService;
             _servicoService = servicoService;
@@ -65,6 +67,7 @@ namespace SGQ.GDOL.Api.Controllers
             _assistenciaTecnicaArquivoService = assistenciaTecnicaArquivoService;
             _entregaObraClienteArquivoService = entregaObraClienteArquivoService;
             _entregaObraClienteOcorrenciaService = entregaObraClienteOcorrenciaService;
+            _entregaObraClienteTermoService = entregaObraClienteTermoService;
         }
 
         #region ENTREGA OBRA
@@ -383,10 +386,17 @@ namespace SGQ.GDOL.Api.Controllers
             {
                 try
                 {
-                    var teste = Convert.FromBase64String(entregaObraClienteVM.Arquivos.ElementAt(0).Arquivo);
                     var entregaObraClienteBD = Mapper.Map<EntregaObraCliente>(entregaObraClienteVM);
                     if (entregaObraClienteBD.Id == 0)
                     {
+                        foreach (var idTermo in entregaObraClienteVM.TermosIds)
+                        {
+                            entregaObraClienteBD.Termos.Add(new EntregaObraClienteTermo
+                            {
+                                Delete = false,
+                                IdTermo = idTermo
+                            });
+                        }
                         _entregaObraClienteService.Inserir(entregaObraClienteBD);
                     }
                     else
@@ -408,12 +418,25 @@ namespace SGQ.GDOL.Api.Controllers
                             }
                         }
 
+                        _entregaObraClienteTermoService.RemoverAtuais(entregaObraClienteBD.Id);
+                        foreach (var idTermo in entregaObraClienteVM.TermosIds)
+                        {
+                            entregaObraClienteBD.Termos.Add(new EntregaObraClienteTermo
+                            {
+                                Delete = false,
+                                IdTermo = idTermo,
+                                IdEntregaObraCliente = entregaObraClienteBD.Id
+                            });
+                        }
+                        _entregaObraClienteTermoService.AdicionarNovos(entregaObraClienteBD.Termos);
+
                         entregaObraClienteBD.ChecklistObra = null;
                         entregaObraClienteBD.ClienteConstrutora = null;
                         entregaObraClienteBD.EntregaObra = null;
                         entregaObraClienteBD.FuncionarioInspecao = null;
                         entregaObraClienteBD.FuncionarioReinspecao = null;
                         entregaObraClienteBD.EntregasObrasClientesChecklists = null;
+                        entregaObraClienteBD.Termos = null;
                         
                         _entregaObraClienteService.Atualizar(entregaObraClienteBD);
                     }
