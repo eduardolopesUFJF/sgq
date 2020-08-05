@@ -18,6 +18,7 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Repository
         {
             var result = DbSet.AsNoTracking()
                         .Include(x => x.CentroCusto)
+                            .ThenInclude(x => x.ClienteCentrosCustos)
                         .Include(x => x.ClienteConstrutora)
                         .Include(x => x.CategoriaAssistencia)
                         .Include(x => x.Atendimentos)

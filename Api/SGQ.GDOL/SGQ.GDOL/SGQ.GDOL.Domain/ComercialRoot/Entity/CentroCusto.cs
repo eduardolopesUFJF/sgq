@@ -17,5 +17,6 @@ namespace SGQ.GDOL.Domain.ComercialRoot.Entity
         public virtual ICollection<UsuarioCentroCusto> Usuarios { get; set; }
         public virtual ICollection<EntregaObra> EntregasObras { get; set; }
         public virtual ICollection<AssistenciaTecnica> AssistenciasTecnicas { get; set; }
+        public virtual IEnumerable<ClienteCentroCusto> ClienteCentrosCustos { get; set; }
     }
 }

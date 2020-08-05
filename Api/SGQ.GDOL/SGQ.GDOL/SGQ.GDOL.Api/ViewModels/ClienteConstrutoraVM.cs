@@ -1,4 +1,6 @@
-﻿namespace SGQ.GDOL.Api.ViewModels
+﻿using System.Collections.Generic;
+
+namespace SGQ.GDOL.Api.ViewModels
 {
     public class ClienteConstrutoraVM
     {
@@ -6,5 +8,7 @@
         public string Nome { get; set; }
         public bool? Delete { get; set; }
         public int IdCentroCusto { get; set; }
+
+        public List<ClienteCentroCustoVM> ClienteCentrosCustos { get; set; }
     }
 }

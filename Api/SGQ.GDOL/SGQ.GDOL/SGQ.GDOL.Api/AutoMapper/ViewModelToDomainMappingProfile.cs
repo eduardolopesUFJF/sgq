@@ -23,12 +23,16 @@ namespace SGQ.GDOL.Api.AutoMapper
             CreateMap<AtendimentoVM, Atendimento>();
 
             CreateMap<EntregaObraClienteVM, EntregaObraCliente>()
+                .ForMember(x => x.NomeCliente, opt => opt.MapFrom(x => x.IdClienteConstrutora.HasValue ? "" : x.NomeCliente))
+                .ForMember(x => x.NomeFuncionarioInspecao, opt => opt.MapFrom(x => x.IdFuncionarioInspecao.HasValue ? "" : x.NomeFuncionarioInspecao))
+                .ForMember(x => x.NomeFuncionarioReinspecao, opt => opt.MapFrom(x => x.IdFuncionarioReinspecao.HasValue ? "" : x.NomeFuncionarioReinspecao))
                 .ForMember(x => x.AssinaturaCliente, opt => opt.MapFrom(x => string.IsNullOrEmpty(x.AssinaturaCliente) ? null :
                                                                             Convert.FromBase64String(x.AssinaturaCliente.Split("base64,", StringSplitOptions.None)[1])))
                 .ForMember(x => x.AssinaturaConstrutora, opt => opt.MapFrom(x => string.IsNullOrEmpty(x.AssinaturaConstrutora) ? null :
                                                                             Convert.FromBase64String(x.AssinaturaConstrutora.Split("base64,", StringSplitOptions.None)[1])));
 
             CreateMap<AssistenciaTecnicaVM, AssistenciaTecnica>()
+                .ForMember(x => x.NomeCliente, opt => opt.MapFrom(x => x.IdClienteConstrutora.HasValue ? "" : x.NomeCliente))
                 .ForMember(x => x.AssinaturaCliente, opt => opt.MapFrom(x => string.IsNullOrEmpty(x.AssinaturaCliente) ? null :
                                                                             Convert.FromBase64String(x.AssinaturaCliente.Split("base64,", StringSplitOptions.None)[1])))
                 .ForMember(x => x.AssinaturaConstrutora, opt => opt.MapFrom(x => string.IsNullOrEmpty(x.AssinaturaConstrutora) ? null :

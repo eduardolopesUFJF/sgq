@@ -17,7 +17,7 @@ namespace SGQ.GDOL.Domain.EntregaObraRoot.Service
 
         public IEnumerable<ClienteConstrutora> BuscarTodosAtivos()
         {
-            var result = _clienteConstrutoraRepository.Buscar(x => x.Delete.HasValue && !x.Delete.Value);
+            var result = _clienteConstrutoraRepository.BuscarComInclude();
             return result;
         }
     }

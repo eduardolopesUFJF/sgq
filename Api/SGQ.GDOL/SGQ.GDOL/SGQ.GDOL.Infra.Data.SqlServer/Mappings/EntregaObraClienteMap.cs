@@ -18,6 +18,8 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Mappings
 
             entity.Property(e => e.IdClienteConstrutora).HasColumnName("ID_CLIENTE");
 
+            entity.Property(e => e.IdClienteCentroCusto).HasColumnName("ID_CLIENTE_CENTRO_CUSTO");
+
             entity.Property(e => e.NomeCliente)
                 .HasColumnName("DESC_CLIENTE")
                 .HasMaxLength(500)
@@ -107,6 +109,10 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Mappings
             entity.HasOne(d => d.FuncionarioReinspecao)
                     .WithMany(p => p.FuncionarioReinspecao)
                     .HasForeignKey(d => d.IdFuncionarioReinspecao);
+
+            entity.HasOne(d => d.ClienteCentroCusto)
+                    .WithMany(p => p.EntregasObrasClientes)
+                    .HasForeignKey(d => d.IdClienteCentroCusto);
         }
     }
 }

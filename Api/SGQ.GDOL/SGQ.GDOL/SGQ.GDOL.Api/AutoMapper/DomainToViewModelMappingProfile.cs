@@ -18,12 +18,17 @@ namespace SGQ.GDOL.Api.AutoMapper
             CreateMap<ItemChecklistServico, ItemChecklistServicoVM>();
             CreateMap<ItemChecklistObra, ItemChecklistObraVM>();
             CreateMap<InspecaoObraItem, InspecaoObraItemVM>();
-            CreateMap<ClienteConstrutora, ClienteConstrutoraVM>();
             CreateMap<CategoriaAssistencia, CategoriaAssistenciaVM>();
             CreateMap<AssistenciaTecnicaArquivo, AssistenciaTecnicaArquivoVM>();
             CreateMap<EntregaObraClienteOcorrencia, EntregaObraClienteOcorrenciaVM>();
             CreateMap<EntregaObraClienteArquivo, EntregaObraClienteArquivoVM>();
             CreateMap<Ocorrencia, OcorrenciaVM>();
+
+            CreateMap<ClienteConstrutora, ClienteConstrutoraVM>()
+                .ForMember(x => x.ClienteCentrosCustos, opt => opt.MapFrom(x => x.ClienteCentrosCustos.Where(y => !y.Delete)));
+
+            CreateMap<ClienteCentroCusto, ClienteCentroCustoVM>()
+                .ForMember(x => x.DescricaoCentroCusto, opt => opt.MapFrom(x => x.CentroCusto.Codigo + " - " + x.CentroCusto.Descricao));
 
             CreateMap<CentroCusto, CentroCustoVM>()
                 .ForMember(x => x.Descricao, opt => opt.MapFrom(x => x.Codigo + " - " + x.Descricao));
@@ -67,6 +72,7 @@ namespace SGQ.GDOL.Api.AutoMapper
                 .ForMember(x => x.QtdX, opt => opt.MapFrom(x => x.InspecaoObraItens.Count(y => y.Inspecao1.Equals("X"))));
 
             CreateMap<EntregaObraCliente, EntregaObraClienteVM>()
+                .ForMember(x => x.Unidade, opt => opt.MapFrom(x => x.ClienteCentroCusto.Unidade))
                 .ForMember(x => x.Situacao, opt => opt.MapFrom(x => x.Status == 1 ? "Entregue" : "Em aberto"))
                 .ForMember(x => x.DescricaoTipoVistoria, opt => opt.MapFrom(x => x.TipoVistoria == 1 ? "Construtora" : "Cliente"))
                 .ForMember(x => x.DescricaoChecklistObra, opt => opt.MapFrom(x => x.ChecklistObra.Codigo + " - " + x.ChecklistObra.Descricao))
@@ -100,6 +106,10 @@ namespace SGQ.GDOL.Api.AutoMapper
 
             CreateMap<AssistenciaTecnica, AssistenciaTecnicaVM>()
                .ForMember(x => x.DescricaoCategoriaAssistencia, opt => opt.MapFrom(x => x.CategoriaAssistencia.Nome))
+               .ForMember(x => x.Unidade, opt => opt.MapFrom(x => 
+                                                        x.CentroCusto.ClienteCentrosCustos.Any(y => y.IdCliente == x.IdClienteConstrutora) ?
+                                                        x.CentroCusto.ClienteCentrosCustos.Where(y => y.IdCliente == x.IdClienteConstrutora).FirstOrDefault().Unidade
+                                                        : ""))
                .ForMember(x => x.ClienteCadastrado, opt => opt.MapFrom(x => x.IdClienteConstrutora.HasValue || string.IsNullOrEmpty(x.NomeCliente)))
                .ForMember(x => x.NomeCliente, opt => opt.MapFrom(x => x.ClienteCadastrado ? x.ClienteConstrutora.Nome : x.NomeCliente))
                .ForMember(x => x.DescricaoCentroCusto, opt => opt.MapFrom(x => x.CentroCusto.Codigo + " - " + x.CentroCusto.Descricao))

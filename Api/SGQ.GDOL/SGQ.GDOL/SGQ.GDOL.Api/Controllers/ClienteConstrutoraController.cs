@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
+using SGQ.GDOL.Api.ViewModels;
 using SGQ.GDOL.Domain.EntregaObraRoot.Service.Interfaces;
+using System.Collections.Generic;
 
 namespace SGQ.GDOL.Api.Controllers
 {
@@ -18,8 +21,9 @@ namespace SGQ.GDOL.Api.Controllers
         [HttpGet("ativos")]
         public IActionResult Get()
         {
-            var clientes = _clienteConstrutoraService.BuscarTodosAtivos();
-            return Ok(clientes);
+            var clientesBD = _clienteConstrutoraService.BuscarTodosAtivos();
+            var clientesVM = Mapper.Map<IEnumerable<ClienteConstrutoraVM>>(clientesBD);
+            return Ok(clientesVM);
         }
     }
 }

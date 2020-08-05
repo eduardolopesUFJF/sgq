@@ -17,6 +17,10 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Mappings
             entity.Property(e => e.Nome)
                     .HasColumnName("NOME")
                     .IsUnicode(false);
+            
+            entity.Property(e => e.Descricao)
+                    .HasColumnName("DESCRICAO")
+                    .IsUnicode(false);
 
             entity.Property(e => e.Delete).HasColumnName("DELETE");
         }

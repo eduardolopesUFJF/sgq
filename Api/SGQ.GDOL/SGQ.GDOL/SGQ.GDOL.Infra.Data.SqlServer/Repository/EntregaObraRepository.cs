@@ -24,6 +24,7 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Repository
                 var entregasObraDB = ServiceContext.EntregaObra
                         .AsNoTracking()
                         .Include(x => x.CentroCusto)
+                        .Include(x => x.EntregasObrasClientes).ThenInclude(x => x.ClienteCentroCusto)
                         .Include(x => x.EntregasObrasClientes).ThenInclude(x => x.Ocorrencias)
                         .Include(x => x.EntregasObrasClientes).ThenInclude(x => x.Termos)
                         .Include(x => x.EntregasObrasClientes).ThenInclude(x => x.ClienteConstrutora)

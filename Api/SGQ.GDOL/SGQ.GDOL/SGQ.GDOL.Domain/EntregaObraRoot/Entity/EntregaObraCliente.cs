@@ -1,4 +1,5 @@
-﻿using SGQ.GDOL.Domain.RHRoot.Entity;
+﻿using SGQ.GDOL.Domain.ComercialRoot.Entity;
+using SGQ.GDOL.Domain.RHRoot.Entity;
 using System;
 using System.Collections.Generic;
 
@@ -15,6 +16,8 @@ namespace SGQ.GDOL.Domain.EntregaObraRoot.Entity
         public virtual EntregaObra EntregaObra { get; set; }
         public int? IdClienteConstrutora { get; set; }
         public virtual ClienteConstrutora ClienteConstrutora { get; set; }
+        public int? IdClienteCentroCusto { get; set; }
+        public virtual ClienteCentroCusto ClienteCentroCusto { get; set; }
         public string NomeCliente { get; set; }
         public bool ClienteCadastrado { get; set; }
         public string LocalVistoria { get; set; }
