@@ -72,7 +72,10 @@ namespace SGQ.GDOL.Api.AutoMapper
                 .ForMember(x => x.QtdX, opt => opt.MapFrom(x => x.InspecaoObraItens.Count(y => y.Inspecao1.Equals("X"))));
 
             CreateMap<EntregaObraCliente, EntregaObraClienteVM>()
-                .ForMember(x => x.Unidade, opt => opt.MapFrom(x => x.ClienteCentroCusto.Unidade))
+                .ForMember(x => x.Unidade, opt => opt.MapFrom(x =>
+                                                        x.CentroCusto.ClienteCentrosCustos.Any(y => y.IdCliente == x.IdClienteConstrutora) ?
+                                                        x.CentroCusto.ClienteCentrosCustos.Where(y => y.IdCliente == x.IdClienteConstrutora).FirstOrDefault().Unidade
+                                                        : ""))
                 .ForMember(x => x.Situacao, opt => opt.MapFrom(x => x.Status == 1 ? "Entregue" : "Em aberto"))
                 .ForMember(x => x.DescricaoTipoVistoria, opt => opt.MapFrom(x => x.TipoVistoria == 1 ? "Construtora" : "Cliente"))
                 .ForMember(x => x.DescricaoChecklistObra, opt => opt.MapFrom(x => x.ChecklistObra.Codigo + " - " + x.ChecklistObra.Descricao))

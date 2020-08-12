@@ -1,5 +1,4 @@
 ﻿using SGQ.GDOL.Domain.ComercialRoot.Entity;
-using System.Collections.Generic;
 
 namespace SGQ.GDOL.Domain.EntregaObraRoot.Entity
 {
@@ -12,6 +11,5 @@ namespace SGQ.GDOL.Domain.EntregaObraRoot.Entity
         public string Unidade { get; set; }
         public bool Principal { get; set; }
         public bool Delete { get; set; }
-        public virtual IEnumerable<EntregaObraCliente> EntregasObrasClientes { get; set; }
     }
 }

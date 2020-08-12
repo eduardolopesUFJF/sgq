@@ -9,7 +9,7 @@ namespace SGQ.GDOL.Api.ViewModels
         public string IdGuidEntregaObraCliente { get; set; }
         public int IdEntregaObra { get; set; }
         public int? IdClienteConstrutora { get; set; }
-        public int? IdClienteCentroCusto { get; set; }
+        public int? IdCentroCusto { get; set; }
         public string Unidade { get; set; }
         public string NomeCliente { get; set; }
         public bool ClienteCadastrado { get; set; }
