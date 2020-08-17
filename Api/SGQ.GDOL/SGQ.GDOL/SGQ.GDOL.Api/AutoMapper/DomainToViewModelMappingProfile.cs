@@ -124,8 +124,8 @@ namespace SGQ.GDOL.Api.AutoMapper
 
             CreateMap<Atendimento, AtendimentoVM>()
                 .ForMember(x => x.DescricaoFuncionario, opt => opt.MapFrom(x => x.Funcionario.Nome))
-                .ForMember(x => x.Descricao, opt => opt.MapFrom(x => x.Descricao.Length > 100 ? x.Descricao.Substring(0, 100) + "..." : x.Descricao))
-                .ForMember(x => x.Observacoes, opt => opt.MapFrom(x => x.Observacoes.Length > 100 ? x.Descricao.Substring(0, 100) + "..." : x.Observacoes));
+                .ForMember(x => x.Descricao, opt => opt.MapFrom(x => x.Descricao.Length > 100 ? x.Descricao.Substring(0, 100) + "..." : x.Descricao));
+                //.ForMember(x => x.Observacoes, opt => opt.MapFrom(x => x.Observacoes.Length > 100 ? x.Descricao.Substring(0, 100) + "..." : x.Observacoes));
 
         }
     }

@@ -22,7 +22,7 @@ namespace SGQ.GDOL.Api.Controllers
         [HttpGet("itens-ativos")]
         public IActionResult Get()
         {
-            var resultBD = _assistenciaTecnicaService.ObterTodosAtivos().OrderByDescending(x => x.DataAbertura);
+            var resultBD = _assistenciaTecnicaService.ObterTodosAtivos().OrderByDescending(x => x.DataAbertura).ToList();
             var resultVM = Mapper.Map<List<AssistenciaTecnicaVM>>(resultBD);
             return Ok(resultVM);
         }
