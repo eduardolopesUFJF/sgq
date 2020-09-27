@@ -42,6 +42,7 @@ namespace SGQ.GDOL.Domain.ComercialRoot.Service
             nomeClientes.Add("RA");
             nomeClientes.Add("REALIZA");
             nomeClientes.Add("SF");
+            nomeClientes.Add("SMART");
             nomeClientes.Add("SUDOESTE");
             nomeClientes.Add("UPTEC");
             nomeClientes.Add("VILLARD");
