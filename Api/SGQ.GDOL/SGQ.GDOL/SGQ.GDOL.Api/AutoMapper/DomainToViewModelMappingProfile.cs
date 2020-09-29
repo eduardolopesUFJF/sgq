@@ -5,6 +5,8 @@ using SGQ.GDOL.Domain.ComercialRoot.Entity;
 using SGQ.GDOL.Domain.EntregaObraRoot.Entity;
 using SGQ.GDOL.Domain.ObraRoot.Entity;
 using SGQ.GDOL.Domain.RHRoot.Entity;
+using SGQ.GDOL.Domain.TreinamentoRoot.DTO;
+using SGQ.GDOL.Domain.TreinamentoRoot.Entity;
 using System;
 using System.Linq;
 
@@ -23,6 +25,16 @@ namespace SGQ.GDOL.Api.AutoMapper
             CreateMap<EntregaObraClienteOcorrencia, EntregaObraClienteOcorrenciaVM>();
             CreateMap<EntregaObraClienteArquivo, EntregaObraClienteArquivoVM>();
             CreateMap<Ocorrencia, OcorrenciaVM>();
+
+            CreateMap<Treinamento, TreinamentoVM>()
+                .ForMember(x => x.Nome, opt => opt.MapFrom(x => x.Nome + " (Versão: " + x.Descricao + ")"));
+
+            CreateMap<TreinamentoFuncionario, TreinamentoFuncionarioVM>()
+                .ForMember(x => x.DataPrevisaAvaliacao, opt => opt.MapFrom(x => x.DataInicio.HasValue ? 
+                                                                                x.DataInicio.Value.AddDays(x.DiasPrevisaoAvaliacao ?? 0)
+                                                                                : x.DataInicio))
+                .ForMember(x => x.NomeFuncionario, opt => opt.MapFrom(x => x.Funcionario.Nome))
+                .ForMember(x => x.NomeTreinamento, opt => opt.MapFrom(x => x.Treinamento.Nome + " (Versão: " + x.Treinamento.Descricao + ")"));
 
             CreateMap<ClienteConstrutora, ClienteConstrutoraVM>()
                 .ForMember(x => x.ClienteCentrosCustos, opt => opt.MapFrom(x => x.ClienteCentrosCustos.Where(y => !y.Delete)));

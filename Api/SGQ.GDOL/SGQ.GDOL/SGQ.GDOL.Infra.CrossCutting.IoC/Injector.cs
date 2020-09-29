@@ -23,6 +23,10 @@ using SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Repository;
 using SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Service;
 using SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Service.Interfaces;
 using SGQ.GDOL.Domain.ComercialRoot.Repository;
+using SGQ.GDOL.Domain.TreinamentoRoot.Service.Interfaces;
+using SGQ.GDOL.Domain.TreinamentoRoot.Service;
+using SGQ.GDOL.Domain.TreinamentoRoot.Service.Interface;
+using SGQ.GDOL.Domain.TreinamentoRoot.Repository;
 
 namespace SGQ.GDOL.Infra.CrossCutting.IoC
 {
@@ -59,6 +63,8 @@ namespace SGQ.GDOL.Infra.CrossCutting.IoC
             services.AddScoped<IEntregaObraClienteOcorrenciaService, EntregaObraClienteOcorrenciaService>();
             services.AddScoped<IEntregaObraClienteTermoService, EntregaObraClienteTermoService>();
             services.AddScoped<ITermoService, TermoService>();
+            services.AddScoped<ITreinamentoService, TreinamentoService>();
+            services.AddScoped<ITreinamentoFuncionarioService, TreinamentoFuncionarioService>();
 
             //Infra Data
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
@@ -85,6 +91,8 @@ namespace SGQ.GDOL.Infra.CrossCutting.IoC
             services.AddScoped<IEntregaObraClienteOcorrenciaRepository, EntregaObraClienteOcorrenciaRepository>();
             services.AddScoped<IEntregaObraClienteTermoRepository, EntregaObraClienteTermoRepository>();
             services.AddScoped<ITermoRepository, TermoRepository>();
+            services.AddScoped<ITreinamentoRepository, TreinamentoRepository>();
+            services.AddScoped<ITreinamentoFuncionarioRepository, TreinamentoFuncionarioRepository>();
 
             services.AddScoped<ServiceContext>();
             services.AddScoped<NotificationHandler>();

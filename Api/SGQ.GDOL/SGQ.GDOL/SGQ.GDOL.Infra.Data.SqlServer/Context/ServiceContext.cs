@@ -6,6 +6,7 @@ using SGQ.GDOL.Domain.ComercialRoot.Entity;
 using SGQ.GDOL.Domain.EntregaObraRoot.Entity;
 using SGQ.GDOL.Domain.ObraRoot.Entity;
 using SGQ.GDOL.Domain.RHRoot.Entity;
+using SGQ.GDOL.Domain.TreinamentoRoot.Entity;
 using SGQ.GDOL.Domain.UsuarioRoot.Entity;
 using SGQ.GDOL.Infra.Data.SqlServer.Mappings;
 using System.IO;
@@ -41,6 +42,8 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Context
         public DbSet<Termo> Termo { get; set; }
         public DbSet<EntregaObraClienteTermo> EntregaObraClienteTermo { get; set; }
         public DbSet<ClienteCentroCusto> ClienteCentroCusto { get; set; }
+        public DbSet<Treinamento> Treinamento { get; set; }
+        public DbSet<TreinamentoFuncionario> TreinamentoFuncionario { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -71,6 +74,8 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Context
             modelBuilder.ApplyConfiguration(new EntregaObraClienteTermoMap());
             modelBuilder.ApplyConfiguration(new TermoMap());
             modelBuilder.ApplyConfiguration(new ClienteCentroCustoMap());
+            modelBuilder.ApplyConfiguration(new TreinamentoMap());
+            modelBuilder.ApplyConfiguration(new TreinamentoFuncionarioMap());
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

@@ -1,6 +1,7 @@
 ﻿using SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Entity;
 using SGQ.GDOL.Domain.EntregaObraRoot.Entity;
 using SGQ.GDOL.Domain.ObraRoot.Entity;
+using SGQ.GDOL.Domain.TreinamentoRoot.Entity;
 using System.Collections.Generic;
 
 namespace SGQ.GDOL.Domain.RHRoot.Entity
@@ -18,5 +19,7 @@ namespace SGQ.GDOL.Domain.RHRoot.Entity
         public IEnumerable<EntregaObraCliente> FuncionarioReinspecao { get; set; }
 
         public ICollection<Atendimento> Atendimentos { get; set; }
+
+        public ICollection<TreinamentoFuncionario> TreinamentosFuncionarios { get; set; }
     }
 }

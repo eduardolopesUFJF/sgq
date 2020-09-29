@@ -28,6 +28,10 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Mappings
                 .HasMaxLength(1)
                 .IsUnicode(false);
 
+            entity.Property(e => e.Descricao)
+                .HasColumnName("DESCRICAO")
+                .IsUnicode(false);
+
             entity.Property(e => e.Delete).HasColumnName("DELETE");
 
             entity.HasOne(d => d.EntregaObraCliente)
