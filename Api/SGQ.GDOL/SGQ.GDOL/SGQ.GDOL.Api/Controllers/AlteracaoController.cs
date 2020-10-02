@@ -35,6 +35,7 @@ namespace SGQ.GDOL.Api.Controllers
         private readonly IEntregaObraClienteArquivoService _entregaObraClienteArquivoService;
         private readonly IEntregaObraClienteOcorrenciaService _entregaObraClienteOcorrenciaService;
         private readonly IEntregaObraClienteTermoService _entregaObraClienteTermoService;
+        private readonly IItemChecklistEntregaService _itemChecklistEntregaService;
 
         public AlteracaoController(
             IAreaService areaService,
@@ -51,7 +52,8 @@ namespace SGQ.GDOL.Api.Controllers
             IAssistenciaTecnicaArquivoService assistenciaTecnicaArquivoService,
             IEntregaObraClienteArquivoService entregaObraClienteArquivoService,
             IEntregaObraClienteOcorrenciaService entregaObraClienteOcorrenciaService,
-            IEntregaObraClienteTermoService entregaObraClienteTermoService)
+            IEntregaObraClienteTermoService entregaObraClienteTermoService,
+            IItemChecklistEntregaService itemChecklistEntregaService)
         {
             _areaService = areaService;
             _servicoService = servicoService;
@@ -68,6 +70,7 @@ namespace SGQ.GDOL.Api.Controllers
             _entregaObraClienteArquivoService = entregaObraClienteArquivoService;
             _entregaObraClienteOcorrenciaService = entregaObraClienteOcorrenciaService;
             _entregaObraClienteTermoService = entregaObraClienteTermoService;
+            _itemChecklistEntregaService = itemChecklistEntregaService;
         }
 
         #region ENTREGA OBRA
@@ -382,6 +385,7 @@ namespace SGQ.GDOL.Api.Controllers
 
         private string PersistirEntregaObraCliente(List<EntregaObraClienteVM> entregasObrasClientes, string status)
         {
+            var itensChecklistEntrega = _itemChecklistEntregaService.ObterTodos();
             foreach (var entregaObraClienteVM in entregasObrasClientes)
             {
                 try
@@ -396,6 +400,16 @@ namespace SGQ.GDOL.Api.Controllers
                                 Delete = false,
                                 IdTermo = idTermo
                             });
+                        }
+                        foreach (var item in entregaObraClienteBD.EntregasObrasClientesChecklists)
+                        {
+                            var itemChecklistEntrega = itensChecklistEntrega.FirstOrDefault(x => x.Id == item.IdItemChecklistEntrega);
+                            if (itemChecklistEntrega != null)
+                            {
+                                item.Descricao = itemChecklistEntrega.Descricao;
+                                item.Ordem = itemChecklistEntrega.Ordem;
+                                item.IdChecklistEntrega = entregaObraClienteBD.IdChecklistObra;
+                            }
                         }
                         _entregaObraClienteService.Inserir(entregaObraClienteBD);
                     }

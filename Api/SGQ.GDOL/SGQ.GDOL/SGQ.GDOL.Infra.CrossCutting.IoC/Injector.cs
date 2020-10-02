@@ -65,6 +65,7 @@ namespace SGQ.GDOL.Infra.CrossCutting.IoC
             services.AddScoped<ITermoService, TermoService>();
             services.AddScoped<ITreinamentoService, TreinamentoService>();
             services.AddScoped<ITreinamentoFuncionarioService, TreinamentoFuncionarioService>();
+            services.AddScoped<IItemChecklistEntregaService, ItemChecklistEntregaService>();
 
             //Infra Data
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
@@ -93,6 +94,7 @@ namespace SGQ.GDOL.Infra.CrossCutting.IoC
             services.AddScoped<ITermoRepository, TermoRepository>();
             services.AddScoped<ITreinamentoRepository, TreinamentoRepository>();
             services.AddScoped<ITreinamentoFuncionarioRepository, TreinamentoFuncionarioRepository>();
+            services.AddScoped<IItemChecklistEntregaRepository, ItemChecklistEntregaRepository>();
 
             services.AddScoped<ServiceContext>();
             services.AddScoped<NotificationHandler>();

@@ -14,6 +14,8 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Mappings
 
             entity.Property(e => e.Id).HasColumnName("ID_VERIFICACAO_CLIENTE");
 
+            entity.Property(e => e.IdChecklistEntrega).HasColumnName("ID_CHECKLIST_ENTREGA");
+
             entity.Property(e => e.IdEntregaObraCliente).HasColumnName("ID_ENTREGA_OBRA_CLIENTE");
 
             entity.Property(e => e.IdItemChecklistEntrega).HasColumnName("ID_ITEM_CHECKLIST_ENTREGA");
@@ -30,6 +32,10 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Mappings
 
             entity.Property(e => e.Descricao)
                 .HasColumnName("DESCRICAO")
+                .IsUnicode(false);
+
+            entity.Property(e => e.Ordem)
+                .HasColumnName("ORDEM")
                 .IsUnicode(false);
 
             entity.Property(e => e.Delete).HasColumnName("DELETE");

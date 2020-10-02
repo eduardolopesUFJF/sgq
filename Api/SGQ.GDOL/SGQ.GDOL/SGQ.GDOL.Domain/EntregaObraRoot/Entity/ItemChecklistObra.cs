@@ -2,9 +2,8 @@
 
 namespace SGQ.GDOL.Domain.EntregaObraRoot.Entity
 {
-    public class ItemChecklistObra
+    public class ItemChecklistObra : EntityBase
     {
-        public int Id { get; set; }
         public string Ordem { get; set; }
         public string Descricao { get; set; }
         public bool? Delete { get; set; }
