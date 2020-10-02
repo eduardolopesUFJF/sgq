@@ -418,6 +418,15 @@ namespace SGQ.GDOL.Api.Controllers
                         for (int i = 0; i < entregaObraClienteBD.EntregasObrasClientesChecklists.Count; i++)
                         {
                             var entregaObraClienteChecklist = entregaObraClienteBD.EntregasObrasClientesChecklists.ElementAt(i);
+                            
+                            var itemChecklistEntrega = itensChecklistEntrega.FirstOrDefault(x => x.Id == entregaObraClienteChecklist.IdItemChecklistEntrega);
+                            if (itemChecklistEntrega != null)
+                            {
+                                entregaObraClienteChecklist.Descricao = itemChecklistEntrega.Descricao;
+                                entregaObraClienteChecklist.Ordem = itemChecklistEntrega.Ordem;
+                                entregaObraClienteChecklist.IdChecklistEntrega = entregaObraClienteBD.IdChecklistObra;
+                            }
+
                             if (entregaObraClienteChecklist.Id == 0)
                             {
                                 if (i == 0)
