@@ -51,7 +51,7 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Repository
                                     Local = y.Local,
                                     NomeFuncionario = y.Funcionario.Nome,
                                     NomeTreinamento = y.Treinamento.Nome
-                                }).ToList()
+                                }).OrderBy(y => y.IdFuncionario).ToList()
                         })
                     .OrderByDescending(x => x.DataInicio)
                     .ToList();
