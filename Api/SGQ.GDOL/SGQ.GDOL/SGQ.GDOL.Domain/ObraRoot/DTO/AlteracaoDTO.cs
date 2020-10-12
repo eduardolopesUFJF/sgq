@@ -34,6 +34,12 @@ namespace SGQ.GDOL.Domain.ObraRoot.DTO
 
         public string IdGuidFoto{ get; set; }
 
+        public string IdGuidTreinamento { get; set; }
+        public int IdFuncionario { get; set; }
+        public string Local { get; set; }
+        public string Instrutor { get; set; }
+        public DateTime DataInicio { get; set; }
+
         public string Valor { get; set; }
     }
 }

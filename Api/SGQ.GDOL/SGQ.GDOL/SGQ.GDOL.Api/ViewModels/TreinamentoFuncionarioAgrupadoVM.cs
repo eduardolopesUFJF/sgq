@@ -5,6 +5,7 @@ namespace SGQ.GDOL.Api.ViewModels
 {
     public class TreinamentoFuncionarioAgrupadoVM
     {
+        public string IdGuid { get; set; }
         public DateTime DataInicio { get; set; }
         public string Instrutor { get; set; }
         public string Local { get; set; }
@@ -12,7 +13,7 @@ namespace SGQ.GDOL.Api.ViewModels
         public DateTime DataPrevisaAvaliacao { get; set; }
         public bool Delete { get; set; }
 
-        public List<TreinamentoFuncionarioVM> TreinamentosPorFuncionarios { get; set; }
+        public List<TreinamentoFuncionarioVM> Funcionarios { get; set; }
 
     }
 }

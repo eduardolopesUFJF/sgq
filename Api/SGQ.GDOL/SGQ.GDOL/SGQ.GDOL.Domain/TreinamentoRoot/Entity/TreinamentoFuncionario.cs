@@ -16,6 +16,6 @@ namespace SGQ.GDOL.Domain.TreinamentoRoot.Entity
         public virtual Treinamento Treinamento { get; set; }
         public DateTime? DataPrevisaoAvaliacao { get; set; }
         public bool Delete { get; set; }
-
+        public byte[] Assinatura { get; set; }
     }
 }

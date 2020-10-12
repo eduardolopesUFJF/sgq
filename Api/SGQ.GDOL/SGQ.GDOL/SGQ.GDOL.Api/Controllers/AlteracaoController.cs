@@ -9,6 +9,10 @@ using SGQ.GDOL.Domain.EntregaObraRoot.Service.Interfaces;
 using SGQ.GDOL.Domain.ObraRoot.DTO;
 using SGQ.GDOL.Domain.ObraRoot.Entity;
 using SGQ.GDOL.Domain.ObraRoot.Service.Interfaces;
+using SGQ.GDOL.Domain.TreinamentoRoot.DTO;
+using SGQ.GDOL.Domain.TreinamentoRoot.Entity;
+using SGQ.GDOL.Domain.TreinamentoRoot.Service.Interface;
+using SGQ.GDOL.Domain.TreinamentoRoot.Service.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,6 +40,8 @@ namespace SGQ.GDOL.Api.Controllers
         private readonly IEntregaObraClienteOcorrenciaService _entregaObraClienteOcorrenciaService;
         private readonly IEntregaObraClienteTermoService _entregaObraClienteTermoService;
         private readonly IItemChecklistEntregaService _itemChecklistEntregaService;
+        private readonly ITreinamentoService _treinamentoService;
+        private readonly ITreinamentoFuncionarioService _treinamentoFuncionarioService;
 
         public AlteracaoController(
             IAreaService areaService,
@@ -53,7 +59,9 @@ namespace SGQ.GDOL.Api.Controllers
             IEntregaObraClienteArquivoService entregaObraClienteArquivoService,
             IEntregaObraClienteOcorrenciaService entregaObraClienteOcorrenciaService,
             IEntregaObraClienteTermoService entregaObraClienteTermoService,
-            IItemChecklistEntregaService itemChecklistEntregaService)
+            IItemChecklistEntregaService itemChecklistEntregaService,
+            ITreinamentoService treinamentoService,
+            ITreinamentoFuncionarioService treinamentoFuncionarioService)
         {
             _areaService = areaService;
             _servicoService = servicoService;
@@ -71,6 +79,8 @@ namespace SGQ.GDOL.Api.Controllers
             _entregaObraClienteOcorrenciaService = entregaObraClienteOcorrenciaService;
             _entregaObraClienteTermoService = entregaObraClienteTermoService;
             _itemChecklistEntregaService = itemChecklistEntregaService;
+            _treinamentoService = treinamentoService;
+            _treinamentoFuncionarioService = treinamentoFuncionarioService;
         }
 
         #region ENTREGA OBRA
@@ -94,6 +104,9 @@ namespace SGQ.GDOL.Api.Controllers
             List<AtendimentoVM> atendimentos = new List<AtendimentoVM>();
             List<AssistenciaTecnicaArquivoVM> fotos = new List<AssistenciaTecnicaArquivoVM>();
 
+            List<TreinamentoFuncionarioAgrupadoVM> treinamentosFuncionariosAgrupado = new List<TreinamentoFuncionarioAgrupadoVM>();
+            List<TreinamentoFuncionarioVM> treinamentosFuncionariosAssinaturas = new List<TreinamentoFuncionarioVM>();
+
             PrepararEntregaObra(alteracoes, entregasObras);
             PrepararEntregaObraCliente(alteracoes, entregasObrasClientes);
             entregasObrasClienteOcorrencias = PrepararEntregaObraClienteOcorrencia(alteracoes, entregasObrasClientes, entregasObrasClienteOcorrencias);
@@ -103,6 +116,10 @@ namespace SGQ.GDOL.Api.Controllers
             atendimentos = PrepararAtendimentos(alteracoes, assistenciasTecnicas, atendimentos);
             PrepararFotos(alteracoes, assistenciasTecnicas, fotos);
 
+            PrepararTreinamentoFuncionarioAgrupado(alteracoes, treinamentosFuncionariosAgrupado);
+
+            PrepararTreinamentoFuncionarioAssinatura(alteracoes, treinamentosFuncionariosAssinaturas);
+
             status = PersistirEntregaObra(entregasObras, status);
             status = PersistirEntregaObraCliente(entregasObrasClientes, status);
             status = PersistirOcorrencias(entregasObrasClienteOcorrencias, status);
@@ -111,6 +128,10 @@ namespace SGQ.GDOL.Api.Controllers
             status = PersistirAssistenciasTecnicas(assistenciasTecnicas, status);
             status = PersistirAtendimentos(atendimentos, status);
             status = PersistirFotos(fotos, status);
+
+            PersistirTreinamentoFuncionarioAgrupado(treinamentosFuncionariosAgrupado, status);
+
+            PersistirTreinamentoFuncionarioAssinatura(treinamentosFuncionariosAssinaturas, status);
 
             return status;
         }
@@ -361,6 +382,115 @@ namespace SGQ.GDOL.Api.Controllers
                     fotos.Add(arquivo);
                 }
             }
+        }
+
+        private static void PrepararTreinamentoFuncionarioAgrupado(List<AlteracaoDTO> alteracoes, List<TreinamentoFuncionarioAgrupadoVM> treinamentosFuncionariosAgrupados)
+        {
+            var treinamentosFuncionariosAgrupadosInseridos = alteracoes.Where(x => x.Entidade.ToUpper() == "TREINAMENTO" && x.Tipo.ToUpper() == "INSERT");
+            var treinamentosFuncionariosAgrupadosNovosAlterados = alteracoes.Where(x => x.Entidade.ToUpper() == "TREINAMENTO" && x.Tipo.ToUpper() == "UPDATE" && !string.IsNullOrEmpty(x.IdGuidTreinamento));
+            var treinamentosFuncionariosAgrupadosAlterados = alteracoes.Where(x => x.Entidade.ToUpper() == "TREINAMENTO" && x.Tipo.ToUpper() == "UPDATE" && string.IsNullOrEmpty(x.IdGuidTreinamento));
+
+            foreach (var alteracao in treinamentosFuncionariosAgrupadosInseridos)
+            {
+                var treinamentoFuncionarioAgrupadoVM = JsonConvert.DeserializeObject<TreinamentoFuncionarioAgrupadoVM>(alteracao.Valor);
+                treinamentoFuncionarioAgrupadoVM.IdGuid = alteracao.IdGuidTreinamento;
+
+                treinamentosFuncionariosAgrupados.Add(treinamentoFuncionarioAgrupadoVM);
+            }
+
+            foreach (var alteracao in treinamentosFuncionariosAgrupadosNovosAlterados)
+            {
+                var treinamentoFuncionarioAgrupadoVM = JsonConvert.DeserializeObject<TreinamentoFuncionarioAgrupadoVM>(alteracao.Valor);
+                var indice = treinamentosFuncionariosAgrupados.FindIndex(x => x.IdGuid == alteracao.IdGuidTreinamento);
+                if (indice > -1)
+                {
+                    treinamentosFuncionariosAgrupados.RemoveAt(indice);
+                    treinamentosFuncionariosAgrupados.Add(treinamentoFuncionarioAgrupadoVM);
+                }
+            }
+
+            foreach (var alteracao in treinamentosFuncionariosAgrupadosAlterados)
+            {
+                var treinamentoFuncionarioAgrupadoVM = JsonConvert.DeserializeObject<TreinamentoFuncionarioAgrupadoVM>(alteracao.Valor);
+                treinamentosFuncionariosAgrupados.Add(treinamentoFuncionarioAgrupadoVM);
+            }
+        }
+
+        private static void PrepararTreinamentoFuncionarioAssinatura(List<AlteracaoDTO> alteracoes, List<TreinamentoFuncionarioVM> treinamentosFuncionariosAssinaturas)
+        {
+            var treinamentosFuncionariosAssinaturasNovos = alteracoes.Where(x => x.Entidade.ToUpper() == "TREINAMENTOASSINATURA");
+
+            foreach (var alteracao in treinamentosFuncionariosAssinaturasNovos)
+            {
+                var treinamentoFuncionarioVM = JsonConvert.DeserializeObject<TreinamentoFuncionarioVM>(alteracao.Valor);
+                var indice = treinamentosFuncionariosAssinaturas.FindIndex(x => x.IdFuncionario == alteracao.IdFuncionario && x.Local == alteracao.Local && x.Instrutor == alteracao.Instrutor && x.DataInicio.Date == alteracao.DataInicio.Date);
+                if (indice > -1)
+                {
+                    treinamentosFuncionariosAssinaturas.RemoveAt(indice);
+                }
+                treinamentosFuncionariosAssinaturas.Add(treinamentoFuncionarioVM);
+            }
+        }
+
+        private string PersistirTreinamentoFuncionarioAgrupado(List<TreinamentoFuncionarioAgrupadoVM> treinamentosFuncionariosAgrupados, string status)
+        {
+            var treinamentos = _treinamentoService.ObterTodosAtivos();
+            foreach (var treinamentoFuncionarioAgrupadoVM in treinamentosFuncionariosAgrupados)
+            {
+                try
+                {
+                    if (string.IsNullOrEmpty(treinamentoFuncionarioAgrupadoVM.IdGuid))
+                    {
+                        _treinamentoFuncionarioService.RemoverTodos(treinamentoFuncionarioAgrupadoVM.Instrutor, treinamentoFuncionarioAgrupadoVM.Local, treinamentoFuncionarioAgrupadoVM.DataInicio);
+                    }
+                    foreach (var item in treinamentoFuncionarioAgrupadoVM.Funcionarios)
+                    {
+                        var treinamento = treinamentos.FirstOrDefault(x => x.Id == item.IdTreinamento);
+                        var treinamentoFuncionario = new TreinamentoFuncionario
+                        {
+                            CargaHoraria = treinamento.CargaHoraria,
+                            DataInicio = treinamentoFuncionarioAgrupadoVM.DataInicio,
+                            DataPrevisaoAvaliacao = treinamentoFuncionarioAgrupadoVM.DataInicio.AddDays(treinamentoFuncionarioAgrupadoVM.DiasPrevisaoAvaliacao),
+                            Delete = false,
+                            DiasPrevisaoAvaliacao = treinamentoFuncionarioAgrupadoVM.DiasPrevisaoAvaliacao,
+                            IdFuncionario = item.IdFuncionario,
+                            IdTreinamento = item.IdTreinamento,
+                            Instrutor = treinamentoFuncionarioAgrupadoVM.Instrutor,
+                            Local = treinamentoFuncionarioAgrupadoVM.Local
+                        };
+                        _treinamentoFuncionarioService.Adicionar(treinamentoFuncionario);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    status += "Falha ao alterar persistir " + treinamentoFuncionarioAgrupadoVM.Local + "; ";
+                    continue;
+                }
+            }
+            return status;
+        }
+
+        private string PersistirTreinamentoFuncionarioAssinatura(List<TreinamentoFuncionarioVM> treinamentosFuncionariosAssinaturas, string status)
+        {
+            foreach (var treinamentoFuncionarioVM in treinamentosFuncionariosAssinaturas)
+            {
+                try
+                {
+                    var treinamentosFuncionarios = _treinamentoFuncionarioService.Obter(treinamentoFuncionarioVM.Instrutor, treinamentoFuncionarioVM.Local, treinamentoFuncionarioVM.DataInicio, treinamentoFuncionarioVM.IdFuncionario);
+                    foreach (var item in treinamentosFuncionarios)
+                    {
+                        item.Assinatura = string.IsNullOrEmpty(treinamentoFuncionarioVM.Assinatura) ? null :
+                                                                            Convert.FromBase64String(treinamentoFuncionarioVM.Assinatura.Split("base64,", StringSplitOptions.None)[1]);
+                        _treinamentoFuncionarioService.Atualizar(item);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    status += "Falha ao alterar persistir " + treinamentoFuncionarioVM.Local + "; ";
+                    continue;
+                }
+            }
+            return status;
         }
 
         private string PersistirEntregaObra(List<EntregaObraVM> entregasObras, string status)

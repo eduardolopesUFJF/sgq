@@ -16,5 +16,6 @@ namespace SGQ.GDOL.Domain.TreinamentoRoot.DTO
         public string NomeFuncionario { get; set; }
         public int IdTreinamento { get; set; }
         public string NomeTreinamento { get; set; }
+        public string Assinatura { get; set; }
     }
 }
