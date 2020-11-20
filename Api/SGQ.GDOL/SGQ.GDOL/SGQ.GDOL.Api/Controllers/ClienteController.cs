@@ -17,9 +17,16 @@ namespace SGQ.GDOL.Api.Controllers
         }
 
         [HttpGet("{appServicos}")]
-        public IActionResult Get([FromQuery] bool appServicos)
+        public IActionResult GetServicos([FromQuery] bool appServicos)
         {
             var clientes = _clienteService.BuscarTodos(appServicos);
+            return Ok(clientes);
+        }
+
+        [HttpGet]
+        public IActionResult GetChecklist()
+        {
+            var clientes = _clienteService.BuscarTodos(false);
             return Ok(clientes);
         }
     }
