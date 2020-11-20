@@ -7,10 +7,18 @@ namespace SGQ.GDOL.Domain.ComercialRoot.Service
 {
     public class ClienteService : IClienteService
     {
-        public List<ClienteDTO> BuscarTodos()
+        public List<ClienteDTO> BuscarTodos(bool appServicos)
         {
             List<string> nomeClientes = new List<string>();
-            PopularClientes(nomeClientes);
+
+            if (appServicos)
+            {
+                PopularClientes(nomeClientes);
+            }
+            else
+            {
+                PopularClientes(nomeClientes);
+            }
 
             List<ClienteDTO> clientes = new List<ClienteDTO>();
             for (int i = 1; i <= nomeClientes.Count; i++)
@@ -30,9 +38,11 @@ namespace SGQ.GDOL.Domain.ComercialRoot.Service
             nomeClientes.Add("BAUEN");
             nomeClientes.Add("BNR");
             nomeClientes.Add("CGD");
+            nomeClientes.Add("CONVICTA");
             nomeClientes.Add("CRISTO REI");
             nomeClientes.Add("EGREGORA");
             nomeClientes.Add("GESTAO");
+            nomeClientes.Add("GRANCORP");
             nomeClientes.Add("GS");
             nomeClientes.Add("MELO BORGES");
             nomeClientes.Add("MML");
@@ -45,6 +55,7 @@ namespace SGQ.GDOL.Domain.ComercialRoot.Service
             nomeClientes.Add("SMART");
             nomeClientes.Add("SUDOESTE");
             nomeClientes.Add("UPTEC");
+            nomeClientes.Add("VERBASCO");
             nomeClientes.Add("VILLARD");
         }
     }

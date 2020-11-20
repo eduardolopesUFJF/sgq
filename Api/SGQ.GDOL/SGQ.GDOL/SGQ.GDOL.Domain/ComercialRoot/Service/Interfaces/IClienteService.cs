@@ -5,6 +5,6 @@ namespace SGQ.GDOL.Domain.ComercialRoot.Service.Interfaces
 {
     public interface IClienteService
     {
-        List<ClienteDTO> BuscarTodos();
+        List<ClienteDTO> BuscarTodos(bool appServicos);
     }
 }

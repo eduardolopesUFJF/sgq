@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SGQ.GDOL.Domain.ComercialRoot.Service.Interfaces;
+using System;
 
 namespace SGQ.GDOL.Api.Controllers
 {
@@ -15,10 +16,10 @@ namespace SGQ.GDOL.Api.Controllers
             _clienteService = clienteService;
         }
 
-        [HttpGet]
-        public IActionResult Get()
+        [HttpGet("{appServicos}")]
+        public IActionResult Get([FromQuery] bool appServicos)
         {
-            var clientes = _clienteService.BuscarTodos();
+            var clientes = _clienteService.BuscarTodos(appServicos);
             return Ok(clientes);
         }
     }

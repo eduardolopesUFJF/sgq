@@ -17,7 +17,7 @@ namespace SGQ.GDOL.Domain.RHRoot.Service
 
         public List<Funcionario> ObterTodosAtivos()
         {
-            var result = _funcionarioRepository.Buscar(x => x.Delete.HasValue && !x.Delete.Value).OrderBy(x => x.Nome);
+            var result = _funcionarioRepository.Buscar(x => x.Delete.HasValue && !x.Delete.Value && !x.Demitido).OrderBy(x => x.Nome);
             return result.ToList();
         }
     }
