@@ -351,13 +351,13 @@ export class MyApp {
   }
 
   async atualizarRepositorio(atualizacoes: Alteracao[]) {
-    this.loadingService.show();
+    this.loadingService.showSubida();
     this.alteracaoService.publicar(atualizacoes).subscribe(
       data => {
         this.storage.set('ultimoUpload', new Date());
         this.storage.remove('atualizacoes');
         this.nav.setRoot("HomePage");
-        this.loadingService.hide();
+        this.loadingService.hideSubida();
         this.atualizacao = true;
         this.statusAtualizacao = data;
         this.messageService.exibirMensagem("Atualizações realizadas com sucesso. Realize um novo download dos dados para atualizar o banco de dados do aparelho.");
