@@ -4,6 +4,8 @@ using Newtonsoft.Json;
 using SGQ.GDOL.Api.ViewModels;
 using SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Entity;
 using SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Service.Interfaces;
+using SGQ.GDOL.Domain.ComercialRoot.Enum;
+using SGQ.GDOL.Domain.ComercialRoot.Service.Interfaces;
 using SGQ.GDOL.Domain.EntregaObraRoot.Entity;
 using SGQ.GDOL.Domain.EntregaObraRoot.Service.Interfaces;
 using SGQ.GDOL.Domain.ObraRoot.DTO;
@@ -42,6 +44,7 @@ namespace SGQ.GDOL.Api.Controllers
         private readonly IItemChecklistEntregaService _itemChecklistEntregaService;
         private readonly ITreinamentoService _treinamentoService;
         private readonly ITreinamentoFuncionarioService _treinamentoFuncionarioService;
+        private readonly IAcessoClienteService _acessoClienteService;
 
         public AlteracaoController(
             IAreaService areaService,
@@ -61,7 +64,8 @@ namespace SGQ.GDOL.Api.Controllers
             IEntregaObraClienteTermoService entregaObraClienteTermoService,
             IItemChecklistEntregaService itemChecklistEntregaService,
             ITreinamentoService treinamentoService,
-            ITreinamentoFuncionarioService treinamentoFuncionarioService)
+            ITreinamentoFuncionarioService treinamentoFuncionarioService,
+            IAcessoClienteService acessoClienteService)
         {
             _areaService = areaService;
             _servicoService = servicoService;
@@ -81,6 +85,7 @@ namespace SGQ.GDOL.Api.Controllers
             _itemChecklistEntregaService = itemChecklistEntregaService;
             _treinamentoService = treinamentoService;
             _treinamentoFuncionarioService = treinamentoFuncionarioService;
+            _acessoClienteService = acessoClienteService;
         }
 
         #region ENTREGA OBRA
@@ -120,17 +125,28 @@ namespace SGQ.GDOL.Api.Controllers
 
             PrepararTreinamentoFuncionarioAssinatura(alteracoes, treinamentosFuncionariosAssinaturas);
 
+            if (entregasObras.Any() || entregasObrasClientes.Any() || entregasObrasClienteOcorrencias.Any() || fotosEntregaObraCliente.Any())
+            {
+                _acessoClienteService.Registrar(EnumAplicativo.SERVICOS, EnumFuncionalidadeServicos.ENTREGA_OBRA);
+            }
             status = PersistirEntregaObra(entregasObras, status);
             status = PersistirEntregaObraCliente(entregasObrasClientes, status);
             status = PersistirOcorrencias(entregasObrasClienteOcorrencias, status);
             status = PersistirFotos(fotosEntregaObraCliente, status);
-            
+
+            if (assistenciasTecnicas.Any() || atendimentos.Any() || fotos.Any())
+            {
+                _acessoClienteService.Registrar(EnumAplicativo.SERVICOS, EnumFuncionalidadeServicos.ASSISTENCIA_TECNICA);
+            }
             status = PersistirAssistenciasTecnicas(assistenciasTecnicas, status);
             status = PersistirAtendimentos(atendimentos, status);
             status = PersistirFotos(fotos, status);
 
+            if (treinamentosFuncionariosAgrupado.Any() || treinamentosFuncionariosAssinaturas.Any())
+            {
+                _acessoClienteService.Registrar(EnumAplicativo.SERVICOS, EnumFuncionalidadeServicos.TREINAMENTO);
+            }
             PersistirTreinamentoFuncionarioAgrupado(treinamentosFuncionariosAgrupado, status);
-
             PersistirTreinamentoFuncionarioAssinatura(treinamentosFuncionariosAssinaturas, status);
 
             return status;
@@ -748,6 +764,11 @@ namespace SGQ.GDOL.Api.Controllers
             PrepararServicos(alteracoes, areas, servicos, checklists);
             PrepararInspecoes(alteracoes, areas, servicos, inspecoes);
             PrepararOcorrencias(alteracoes, areas, servicos, inspecoes, ocorrencias);
+
+            if (servicos.Any() || areas.Any() || inspecoes.Any() || ocorrencias.Any())
+            {
+                _acessoClienteService.Registrar(EnumAplicativo.CHECKLIST, null);
+            }
 
             status = PersistirServicos(servicos, status);
             status = PersistirAreas(areas, status);

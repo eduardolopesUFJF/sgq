@@ -1,10 +1,10 @@
-﻿using SGQ.GDOL.Domain.ComercialRoot.DTO;
+﻿using SGQ.GDOL.Domain.ComercialRoot.Entity;
 using System.Collections.Generic;
 
 namespace SGQ.GDOL.Domain.ComercialRoot.Service.Interfaces
 {
     public interface IClienteService
     {
-        List<ClienteDTO> BuscarTodos(bool appServicos);
+        List<ConfiguracaoCliente> BuscarTodos(bool appServicos);
     }
 }

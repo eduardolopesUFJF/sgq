@@ -33,10 +33,10 @@ export class LoadingService {
     this.loadingSubida.present();
 
     this.intervalo = setInterval(() => {
-      this.porcentagem += 5;
+      this.porcentagem += 10;
       if (this.porcentagem > 100) {
         this.loadingSubida.setContent(`<img src="assets/svg/grid.svg"/>
-        <p>Finalizando...</p>`);
+        <p>Aguarde</p>`);
       } else {
         this.loadingSubida.setContent(`<img src="assets/svg/grid.svg"/><p>` + this.porcentagem + ` %</p>`);
       }

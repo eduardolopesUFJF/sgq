@@ -59,6 +59,11 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Repository
             _context.Entry(entityDB).CurrentValues.SetValues(entity);
             DbSet.Update(entityDB);
         }
-        
+
+        public void Delete(TEntity entity)
+        {
+            var entityDB = DbSet.Remove(entity);
+        }
+
     }
 }

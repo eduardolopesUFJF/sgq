@@ -1,4 +1,5 @@
-﻿using SGQ.GDOL.Domain.ComercialRoot.DTO;
+﻿using SGQ.GDOL.Domain.ComercialRoot.Entity;
+using SGQ.GDOL.Domain.ComercialRoot.Repository;
 using SGQ.GDOL.Domain.ComercialRoot.Service.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,56 +8,17 @@ namespace SGQ.GDOL.Domain.ComercialRoot.Service
 {
     public class ClienteService : IClienteService
     {
-        public List<ClienteDTO> BuscarTodos(bool appServicos)
+        private readonly IConfiguracaoClienteRepository _configuracaoClienteRepository;
+
+        public ClienteService(IConfiguracaoClienteRepository configuracaoClienteRepository)
         {
-            List<string> nomeClientes = new List<string>();
-
-            if (appServicos)
-            {
-                PopularClientes(nomeClientes);
-            }
-            else
-            {
-                PopularClientes(nomeClientes);
-            }
-
-            List<ClienteDTO> clientes = new List<ClienteDTO>();
-            for (int i = 1; i <= nomeClientes.Count; i++)
-            {
-                clientes.Add(new ClienteDTO { Id = i, Title = nomeClientes.ElementAt(i-1) });
-            }
-
-            return clientes;
+            _configuracaoClienteRepository = configuracaoClienteRepository;
         }
 
-        private static void PopularClientes(List<string> nomeClientes)
+        public List<ConfiguracaoCliente> BuscarTodos(bool appServicos)
         {
-            nomeClientes.Add("GDOL");
-            nomeClientes.Add("ADDY");
-            nomeClientes.Add("ARCO");
-            nomeClientes.Add("ATRIUM");
-            nomeClientes.Add("BAUEN");
-            nomeClientes.Add("BNR");
-            nomeClientes.Add("CGD");
-            nomeClientes.Add("CONVICTA");
-            nomeClientes.Add("CRISTO REI");
-            nomeClientes.Add("EGREGORA");
-            nomeClientes.Add("GESTAO");
-            nomeClientes.Add("GRANCORP");
-            nomeClientes.Add("GS");
-            nomeClientes.Add("MELO BORGES");
-            nomeClientes.Add("MML");
-            nomeClientes.Add("NPA");
-            nomeClientes.Add("PAINEIRA");
-            nomeClientes.Add("PRIMAZ");
-            nomeClientes.Add("RA");
-            nomeClientes.Add("REALIZA");
-            nomeClientes.Add("SF");
-            nomeClientes.Add("SMART");
-            nomeClientes.Add("SUDOESTE");
-            nomeClientes.Add("UPTEC");
-            nomeClientes.Add("VERBASCO");
-            nomeClientes.Add("VILLARD");
+            var clientes = _configuracaoClienteRepository.Buscar(x => appServicos ? x.AcessoServico : x.AcessoChecklist).ToList();
+            return clientes;
         }
     }
 }

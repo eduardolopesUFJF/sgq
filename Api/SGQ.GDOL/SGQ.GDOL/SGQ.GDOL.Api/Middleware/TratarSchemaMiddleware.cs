@@ -16,7 +16,18 @@ namespace SGQ.GDOL.Api.Middleware
 
         public async Task InvokeAsync(HttpContext context)
         {
-            CredenciaisBanco.Schema = "BPOSSAS_" + context.Request.Headers.FirstOrDefault(x => x.Key == "BancoSchema").Value.ToString().ToUpper();
+            var schema_header = context.Request.Headers.FirstOrDefault(x => x.Key == "BancoSchema").Value.ToString().ToUpper();
+
+            if (string.IsNullOrEmpty(schema_header))
+            {
+                CredenciaisBanco.Schema = "BPOSSAS_GDOL";
+                CredenciaisBanco.Cliente = "GDOL";
+            }
+            else
+            {
+                CredenciaisBanco.Schema = "BPOSSAS_" + schema_header;
+                CredenciaisBanco.Cliente = schema_header;
+            }
 
             if (CredenciaisBanco.Schema.Equals("BPOSSAS_CRISTO REI"))
             {
@@ -26,7 +37,7 @@ namespace SGQ.GDOL.Api.Middleware
             {
                 CredenciaisBanco.Schema = "BPOSSAS_MELOBORGES";
             }
-            if (CredenciaisBanco.Schema.Equals("BPOSSAS_GDOL"))
+            if (CredenciaisBanco.Schema.Equals("BPOSSAS_GDOL") || CredenciaisBanco.Schema.Equals("BPOSSAS_BPOSSAS_CONTROLE_CLIENTES"))
             {
                 CredenciaisBanco.Schema = "BPOSSAS_GDOLSISTEMAS";
             }

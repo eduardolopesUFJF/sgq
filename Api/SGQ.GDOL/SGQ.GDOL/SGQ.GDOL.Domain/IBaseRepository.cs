@@ -14,5 +14,7 @@ namespace SGQ.GDOL.Domain.UsuarioRoot.Repository
 
         void Update(TEntity t);
         void UpdateCompose(TEntity entity, object[] chaves);
+
+        void Delete(TEntity entity);
     }
 }
