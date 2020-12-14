@@ -767,7 +767,7 @@ namespace SGQ.GDOL.Api.Controllers
 
             if (servicos.Any() || areas.Any() || inspecoes.Any() || ocorrencias.Any())
             {
-                _acessoClienteService.Registrar(EnumAplicativo.CHECKLIST, null);
+                //_acessoClienteService.Registrar(EnumAplicativo.CHECKLIST, null);
             }
 
             status = PersistirServicos(servicos, status);
