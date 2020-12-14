@@ -127,7 +127,7 @@ namespace SGQ.GDOL.Api.Controllers
 
             if (entregasObras.Any() || entregasObrasClientes.Any() || entregasObrasClienteOcorrencias.Any() || fotosEntregaObraCliente.Any())
             {
-                _acessoClienteService.Registrar(EnumAplicativo.SERVICOS, EnumFuncionalidadeServicos.ENTREGA_OBRA);
+                //_acessoClienteService.Registrar(EnumAplicativo.SERVICOS, EnumFuncionalidadeServicos.ENTREGA_OBRA);
             }
             status = PersistirEntregaObra(entregasObras, status);
             status = PersistirEntregaObraCliente(entregasObrasClientes, status);
@@ -136,7 +136,7 @@ namespace SGQ.GDOL.Api.Controllers
 
             if (assistenciasTecnicas.Any() || atendimentos.Any() || fotos.Any())
             {
-                _acessoClienteService.Registrar(EnumAplicativo.SERVICOS, EnumFuncionalidadeServicos.ASSISTENCIA_TECNICA);
+                //_acessoClienteService.Registrar(EnumAplicativo.SERVICOS, EnumFuncionalidadeServicos.ASSISTENCIA_TECNICA);
             }
             status = PersistirAssistenciasTecnicas(assistenciasTecnicas, status);
             status = PersistirAtendimentos(atendimentos, status);
@@ -144,7 +144,7 @@ namespace SGQ.GDOL.Api.Controllers
 
             if (treinamentosFuncionariosAgrupado.Any() || treinamentosFuncionariosAssinaturas.Any())
             {
-                _acessoClienteService.Registrar(EnumAplicativo.SERVICOS, EnumFuncionalidadeServicos.TREINAMENTO);
+                //_acessoClienteService.Registrar(EnumAplicativo.SERVICOS, EnumFuncionalidadeServicos.TREINAMENTO);
             }
             PersistirTreinamentoFuncionarioAgrupado(treinamentosFuncionariosAgrupado, status);
             PersistirTreinamentoFuncionarioAssinatura(treinamentosFuncionariosAssinaturas, status);
