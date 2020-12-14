@@ -5,7 +5,15 @@ using SGQ.GDOL.Domain.ComercialRoot.Enum;
 using SGQ.GDOL.Domain.ComercialRoot.Repository;
 using SGQ.GDOL.Infra.Data.SqlServer.Context;
 using System;
+using System.Data.SqlClient;
 using System.Linq;
+using Dapper;
+using Microsoft.Extensions.Configuration;
+using SGQ.GDOL.Domain;
+using FireSharp.Extensions;
+using Serilog;
+using System.Threading.Tasks;
+using System.Runtime.CompilerServices;
 
 namespace SGQ.GDOL.Infra.Data.SqlServer.Repository
 {
@@ -14,6 +22,29 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Repository
         public AcessoClienteRepository(ServiceContext serviceContext) : base(serviceContext)
         {
 
+        }
+
+        public void AdicionarDapper(AcessoCliente acessoCliente)
+        {
+            var connectionString = "Data Source=162.214.76.128,1433;Initial Catalog=schema;persist security info=True;user id=usuario;password=senha;MultipleActiveResultSets=True;";
+            connectionString = connectionString.Replace("schema", "BPOSSAS_GDOLSISTEMAS").Replace("usuario", CredenciaisBanco.Usuario).Replace("senha", CredenciaisBanco.Senha);
+            using (var con = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    con.Open();
+                    var query = "INSERT INTO CONFIGURACAO_CLIENTES_ACESSOS (NOME_CLIENTE, ID_APLICATIVO_ACESSADO, ID_FUNCIONALIDADE_ACESSADA, DATA_ACESSO) VALUES (@NomeCliente, @IdAplicativoAcessado, @IdFuncionalidadeAcessada, @DataAcesso)";
+                    con.Execute(query, acessoCliente);
+                }
+                catch (Exception ex)
+                {
+                    Log.Fatal("Falha ao logar acesso:\n" + acessoCliente.ToJson() + "\nException: " + ex.Message);
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
         }
 
         public AcessoClienteDTO ObterAcessos(string cliente, DateTime dtInicio, DateTime dtFim)

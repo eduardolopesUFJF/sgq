@@ -29,6 +29,11 @@ namespace SGQ.GDOL.Api.Middleware
                 CredenciaisBanco.Cliente = schema_header;
             }
 
+            if (context.Request.Path.Equals("/api/cliente/") || context.Request.Path.Equals("/api/cliente/true"))
+            {
+                CredenciaisBanco.Schema = "BPOSSAS_GDOL";
+            }
+
             if (CredenciaisBanco.Schema.Equals("BPOSSAS_CRISTO REI"))
             {
                 CredenciaisBanco.Schema = "BPOSSAS_CR";

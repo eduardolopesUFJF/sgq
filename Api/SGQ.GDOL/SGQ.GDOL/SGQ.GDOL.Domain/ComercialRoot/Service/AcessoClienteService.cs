@@ -5,6 +5,7 @@ using SGQ.GDOL.Domain.ComercialRoot.Repository;
 using SGQ.GDOL.Domain.ComercialRoot.Service.Interfaces;
 using System;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace SGQ.GDOL.Domain.ComercialRoot.Service
 {
@@ -37,8 +38,7 @@ namespace SGQ.GDOL.Domain.ComercialRoot.Service
                 DataAcesso = DateTime.UtcNow
             };
 
-            _acessoClienteRepository.Adicionar(acessoCliente);
-            _unitOfWork.Commit();
+            Task.Run(() => _acessoClienteRepository.AdicionarDapper(acessoCliente));
         }
     }
 }
