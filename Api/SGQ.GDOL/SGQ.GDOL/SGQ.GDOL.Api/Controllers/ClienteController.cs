@@ -21,7 +21,7 @@ namespace SGQ.GDOL.Api.Controllers
         }
 
         [HttpGet("{appServicos}")]
-        public IActionResult GetServicos([FromQuery] bool appServicos)
+        public IActionResult GetServicos([FromRoute] bool appServicos)
         {
             var clientesBD = _clienteService.BuscarTodos(appServicos);
             var clientesDTO = Mapper.Map<List<ClienteDTO>>(clientesBD).OrderBy(x =>x.Title != "GDOL").ThenBy(x => x.Title);
