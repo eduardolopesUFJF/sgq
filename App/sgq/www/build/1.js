@@ -1,6 +1,6 @@
 webpackJsonp([1],{
 
-/***/ 726:
+/***/ 725:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MapsLayout3Module", function() { return MapsLayout3Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__maps_layout_3__ = __webpack_require__(857);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__maps_layout_3__ = __webpack_require__(856);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__agm_core__ = __webpack_require__(816);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__config_app_settings__ = __webpack_require__(352);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -4078,7 +4078,7 @@ var AgmCoreModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 857:
+/***/ 856:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4143,7 +4143,7 @@ var MapsLayout3 = /** @class */ (function () {
     ], MapsLayout3.prototype, "content", void 0);
     MapsLayout3 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'maps-layout-3',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\maps\layout-3\maps.html"*/'<!-- #Theme Google Maps - Full Screen Views -->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon [name]="menu"></ion-icon>\n\n    </button>\n\n    <ion-title *ngIf="data != null">{{data.headerTitle}}</ion-title>\n\n  </ion-navbar>\n\n  <ion-toolbar padding-horizontal padding-bottom *ngIf="data != null">\n\n    <!-- Content Big Title -->\n\n    <h1 header-title no-margin padding-left text-wrap>{{data.title}}</h1>\n\n  </ion-toolbar>\n\n</ion-header>\n\n<!--Content With Maps-->\n\n<ion-content>\n\n  <agm-map *ngIf="data != null" [latitude]="data.map.lat"\n\n  [longitude]="data.map.lng" [zoom]="data.map.zoom"\n\n  [mapTypeControl]="data.map.mapTypeControl"\n\n    [streetViewControl]="data.map.streetViewControl" [styles]= "data.map.styles">\n\n    <agm-marker [latitude]="data.map.lat" [longitude]="data.map.lng">\n\n    </agm-marker>\n\n  </agm-map>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\maps\layout-3\maps.html"*/
+            selector: 'maps-layout-3',template:/*ion-inline-start:"/Users/user926185/Desktop/sgq/App/sgq/src/core/maps/layout-3/maps.html"*/'<!-- #Theme Google Maps - Full Screen Views -->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon [name]="menu"></ion-icon>\n    </button>\n    <ion-title *ngIf="data != null">{{data.headerTitle}}</ion-title>\n  </ion-navbar>\n  <ion-toolbar padding-horizontal padding-bottom *ngIf="data != null">\n    <!-- Content Big Title -->\n    <h1 header-title no-margin padding-left text-wrap>{{data.title}}</h1>\n  </ion-toolbar>\n</ion-header>\n<!--Content With Maps-->\n<ion-content>\n  <agm-map *ngIf="data != null" [latitude]="data.map.lat"\n  [longitude]="data.map.lng" [zoom]="data.map.zoom"\n  [mapTypeControl]="data.map.mapTypeControl"\n    [streetViewControl]="data.map.streetViewControl" [styles]= "data.map.styles">\n    <agm-marker [latitude]="data.map.lat" [longitude]="data.map.lng">\n    </agm-marker>\n  </agm-map>\n</ion-content>\n'/*ion-inline-end:"/Users/user926185/Desktop/sgq/App/sgq/src/core/maps/layout-3/maps.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], MapsLayout3);

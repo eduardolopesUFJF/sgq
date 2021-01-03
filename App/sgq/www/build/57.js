@@ -80,7 +80,7 @@ var RangeLayout1 = /** @class */ (function () {
     ], RangeLayout1.prototype, "events", void 0);
     RangeLayout1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'range-button-layout-1',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\range\layout-1\range.html"*/'<!-- RANGE COMPONENTS - Basic -->\n\n<ion-list no-lines *ngIf="data != null">\n\n    <!--- Divider item-->\n\n    <ion-item-divider padding-top no-lines no-margin transparent>\n\n      <p color="primaryBase" ion-text>{{data.title}}</p>\n\n      <ion-badge item-end>{{data.value}}</ion-badge>\n\n    </ion-item-divider>\n\n    <ion-item transparent>\n\n        <ion-range [(ngModel)]="data.value" (ionChange)="onEvent(\'onChange\', data.value, $event)">\n\n        </ion-range>\n\n    </ion-item>\n\n</ion-list>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\range\layout-1\range.html"*/
+            selector: 'range-button-layout-1',template:/*ion-inline-start:"/Users/user926185/Desktop/sgq/App/sgq/src/core/range/layout-1/range.html"*/'<!-- RANGE COMPONENTS - Basic -->\n<ion-list no-lines *ngIf="data != null">\n    <!--- Divider item-->\n    <ion-item-divider padding-top no-lines no-margin transparent>\n      <p color="primaryBase" ion-text>{{data.title}}</p>\n      <ion-badge item-end>{{data.value}}</ion-badge>\n    </ion-item-divider>\n    <ion-item transparent>\n        <ion-range [(ngModel)]="data.value" (ionChange)="onEvent(\'onChange\', data.value, $event)">\n        </ion-range>\n    </ion-item>\n</ion-list>\n'/*ion-inline-end:"/Users/user926185/Desktop/sgq/App/sgq/src/core/range/layout-1/range.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], RangeLayout1);
