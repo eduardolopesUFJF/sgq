@@ -46,40 +46,6 @@ var RealizarVerificacaoPageModule = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Servico; });
-var Servico = /** @class */ (function () {
-    function Servico(values) {
-        if (values === void 0) { values = {}; }
-        this.id = 0;
-        this.idGuidServico = '';
-        this.descricao = '';
-        this.tipo = '';
-        this.idObra = 0;
-        this.idChecklist = 0;
-        this.idChecklistGuid = '';
-        this.idArea = 0;
-        this.idAreaGuid = "";
-        this.metaAprovacao = 90;
-        this.status = 0;
-        this.situacao = 'Em aberto';
-        this.delete = false;
-        this.dataHoraInclusao = new Date();
-        this.dataHoraAlteracao = new Date();
-        this.inspecoesObra = [];
-        this.itensChecklistServico = [];
-        Object.assign(this, values);
-    }
-    return Servico;
-}());
-
-//# sourceMappingURL=servico.js.map
-
-/***/ }),
-
-/***/ 809:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Inspecao; });
 var Inspecao = /** @class */ (function () {
     function Inspecao(values) {
@@ -108,6 +74,40 @@ var Inspecao = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=inspecao.js.map
+
+/***/ }),
+
+/***/ 809:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Servico; });
+var Servico = /** @class */ (function () {
+    function Servico(values) {
+        if (values === void 0) { values = {}; }
+        this.id = 0;
+        this.idGuidServico = '';
+        this.descricao = '';
+        this.tipo = '';
+        this.idObra = 0;
+        this.idChecklist = 0;
+        this.idChecklistGuid = '';
+        this.idArea = 0;
+        this.idAreaGuid = "";
+        this.metaAprovacao = 90;
+        this.status = 0;
+        this.situacao = 'Em aberto';
+        this.delete = false;
+        this.dataHoraInclusao = new Date();
+        this.dataHoraAlteracao = new Date();
+        this.inspecoesObra = [];
+        this.itensChecklistServico = [];
+        Object.assign(this, values);
+    }
+    return Servico;
+}());
+
+//# sourceMappingURL=servico.js.map
 
 /***/ }),
 
@@ -148,7 +148,7 @@ var ItemInspecao = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(89);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_toast_service__ = __webpack_require__(351);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__models_item_inspecao__ = __webpack_require__(825);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__models_servico__ = __webpack_require__(808);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__models_servico__ = __webpack_require__(809);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
