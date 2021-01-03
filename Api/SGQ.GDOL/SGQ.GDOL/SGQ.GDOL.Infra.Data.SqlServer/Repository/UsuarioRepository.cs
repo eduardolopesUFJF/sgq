@@ -9,11 +9,9 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Repository
 {
     public class UsuarioRepository : BaseRepository<Usuario>, IUsuarioRepository
     {
-        private readonly ServiceContext _serviceContext;
-
         public UsuarioRepository(ServiceContext serviceContext) : base(serviceContext)
         {
-            _serviceContext = serviceContext;
+        
         }
 
         public int Logar(UsuarioLoginDTO usuarioLoginDTO)

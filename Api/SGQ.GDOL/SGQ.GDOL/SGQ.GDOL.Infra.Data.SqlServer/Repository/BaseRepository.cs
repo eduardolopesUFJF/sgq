@@ -62,7 +62,7 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Repository
 
         public void Delete(TEntity entity)
         {
-            var entityDB = DbSet.Remove(entity);
+            DbSet.Remove(entity);
         }
 
     }
