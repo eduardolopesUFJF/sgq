@@ -19,8 +19,6 @@ namespace SGQ.GDOL.Api.Middleware
         {
             var schema_header = context.Request.Headers.FirstOrDefault(x => x.Key == "BancoSchema").Value.ToString().ToUpper();
 
-            Log.Fatal("Schema enviado - middle - inicio: " + schema_header + "\n");
-
             if (string.IsNullOrEmpty(schema_header))
             {
                 CredenciaisBanco.Schema = "BPOSSAS_GDOL";
@@ -49,8 +47,6 @@ namespace SGQ.GDOL.Api.Middleware
             {
                 CredenciaisBanco.Schema = "BPOSSAS_GDOLSISTEMAS";
             }
-
-            Log.Fatal("Schema enviado - middle - fim: " + CredenciaisBanco.Schema + "\n");
 
             CredenciaisBanco.Usuario = "BPOSSAS_aplicativo";
             CredenciaisBanco.Senha = "2019Gd@L@pp";

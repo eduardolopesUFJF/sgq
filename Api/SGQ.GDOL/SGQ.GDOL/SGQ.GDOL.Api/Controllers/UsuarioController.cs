@@ -26,21 +26,6 @@ namespace SGQ.GDOL.Api.Controllers
         [HttpPost("logar")]
         public IActionResult Post([FromBody] UsuarioLoginVM usuarioLoginVM)
         {
-            var body = "";
-            var req = Request;
-            req.EnableRewind();
-            req.Body.Position = 0;
-            using (StreamReader reader
-                      = new StreamReader(req.Body, Encoding.UTF8, true, 1024, true))
-            {
-                body = reader.ReadToEnd();
-            }
-            req.Body.Position = 0;
-
-            var schema = Request.Headers.FirstOrDefault(x => x.Key == "BancoSchema").Value.ToString().ToUpper();
-
-            Log.Fatal("Schema enviado - controller: " + schema + "\n" + body);
-
             var usuarioLoginDTO = Mapper.Map<UsuarioLoginDTO>(usuarioLoginVM);
             var result = _usuarioService.Logar(usuarioLoginDTO);
             return Ok(result);

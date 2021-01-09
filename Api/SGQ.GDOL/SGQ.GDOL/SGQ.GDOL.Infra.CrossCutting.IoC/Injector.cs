@@ -101,7 +101,7 @@ namespace SGQ.GDOL.Infra.CrossCutting.IoC
             services.AddScoped<IConfiguracaoClienteRepository, ConfiguracaoClienteRepository>();
             services.AddScoped<IAcessoClienteRepository, AcessoClienteRepository>();
 
-            services.AddTransient<ServiceContext>();
+            services.AddScoped<ServiceContext>();
             services.AddScoped<NotificationHandler>();
 
             ServiceProvider = services.BuildServiceProvider();

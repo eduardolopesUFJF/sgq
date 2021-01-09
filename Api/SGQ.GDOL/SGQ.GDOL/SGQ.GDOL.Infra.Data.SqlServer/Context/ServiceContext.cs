@@ -90,7 +90,6 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Context
                 .AddJsonFile("appsettings.json")
                 .Build();
 
-            Log.Fatal("Schema enviado - context: " + CredenciaisBanco.Schema);
             optionsBuilder.UseSqlServer(config.GetConnectionString("DefaultConnection").Replace("schema", CredenciaisBanco.Schema).Replace("usuario", CredenciaisBanco.Usuario).Replace("senha", CredenciaisBanco.Senha));
         }
     }
