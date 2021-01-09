@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Serilog;
 using SGQ.GDOL.Domain;
 using SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Entity;
 using SGQ.GDOL.Domain.ComercialRoot.Entity;
@@ -89,7 +90,8 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Context
                 .AddJsonFile("appsettings.json")
                 .Build();
 
-            optionsBuilder.UseSqlServer(config.GetConnectionString("NewDefaultConnection").Replace("schema", CredenciaisBanco.Schema).Replace("usuario", CredenciaisBanco.Usuario).Replace("senha", CredenciaisBanco.Senha));
+            Log.Fatal("Schema enviado: " + CredenciaisBanco.Schema);
+            optionsBuilder.UseSqlServer(config.GetConnectionString("DefaultConnection").Replace("schema", CredenciaisBanco.Schema).Replace("usuario", CredenciaisBanco.Usuario).Replace("senha", CredenciaisBanco.Senha));
         }
     }
 }
