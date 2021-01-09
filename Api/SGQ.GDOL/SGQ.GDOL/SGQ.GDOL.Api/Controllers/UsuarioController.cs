@@ -39,7 +39,7 @@ namespace SGQ.GDOL.Api.Controllers
 
             var schema = Request.Headers.FirstOrDefault(x => x.Key == "BancoSchema").Value.ToString().ToUpper();
 
-            Log.Fatal("Schema enviado: " + schema + "\n" + body);
+            Log.Fatal("Schema enviado - controller: " + schema + "\n" + body);
 
             var usuarioLoginDTO = Mapper.Map<UsuarioLoginDTO>(usuarioLoginVM);
             var result = _usuarioService.Logar(usuarioLoginDTO);
