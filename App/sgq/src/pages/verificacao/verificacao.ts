@@ -132,6 +132,7 @@ export class VerificacaoPage {
                 });
                 this.inspecoes.unshift(inspecao);
                 this.inspecoesBackup.unshift(inspecao);
+                this.servico.inspecoesObra = [...this.inspecoes];
                 this.criarInspecao(inspecao);
             }
         });
@@ -181,6 +182,7 @@ export class VerificacaoPage {
                 let index = this.inspecoesBackup.findIndex(x => inspecao.id != 0 ? (x.id == inspecao.id) : (x.idGuidInspecao == inspecao.idGuidInspecao));
                 this.inspecoesBackup[index] = inspecao;
                 this.inspecoes = [...this.inspecoesBackup];
+                this.servico.inspecoesObra = [...this.inspecoes];
                 this.editarInspecao(inspecao, "Edição da verificação");
             } else {
                 const inspecaoArray = this.inspecoes.find(x => x.idGuidInspecao ? (x.idGuidInspecao == this.inspecaoBackup.idGuidInspecao) : (x.id == this.inspecaoBackup.id));
