@@ -84,7 +84,7 @@ namespace SGQ.GDOL.Api.AutoMapper
                 .ForMember(x => x.QtdA, opt => opt.MapFrom(x => x.InspecaoObraItens.Count(y => y.Inspecao1.Equals("A"))))
                 .ForMember(x => x.QtdR, opt => opt.MapFrom(x => x.InspecaoObraItens.Count(y => y.Inspecao1.Equals("R"))))
                 .ForMember(x => x.QtdRA, opt => opt.MapFrom(x => x.InspecaoObraItens.Count(y => y.Inspecao2.Equals("A"))))
-                .ForMember(x => x.QtdX, opt => opt.MapFrom(x => x.InspecaoObraItens.Count(y => y.Inspecao1.Equals("X"))));
+                .ForMember(x => x.QtdX, opt => opt.MapFrom(x => x.InspecaoObraItens.Count(y => y.Inspecao2.Equals("X")) + x.InspecaoObraItens.Count(y => y.Inspecao1.Equals("X"))));
 
             CreateMap<EntregaObraCliente, EntregaObraClienteVM>()
                 .ForMember(x => x.Unidade, opt => opt.MapFrom(x =>

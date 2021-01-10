@@ -95,8 +95,8 @@ export class RealizarVerificacaoPage {
 
     salvar(valido: boolean) {
         if (valido) {
-            this.inspecao.dataInspecao = new Date(this.dataAbertura + "T12:00:00");
-            this.inspecao.dataEncerramento = new Date(this.dataEncerramento + "T12:00:00");
+            this.inspecao.dataInspecao = this.dataAbertura ? new Date(this.dataAbertura + "T12:00:00") : null;
+            this.inspecao.dataEncerramento = this.dataEncerramento ? new Date(this.dataEncerramento + "T12:00:00") : null;
             if (this.inspecao.status == 0) {
                 this.viewCtrl.dismiss({ inspecao: this.inspecao, concluido: true });
             } else {
@@ -104,7 +104,21 @@ export class RealizarVerificacaoPage {
                 if (naoFinalizado) {
                     this.toastService.presentToastWarning("Não é possível salvar com status de finalizado pois existem inspeções pendentes.");
                 } else {
-                    this.viewCtrl.dismiss({ inspecao: this.inspecao, concluido: true });
+                    const itens1Recusado = this.inspecao.inspecaoObraItens.filter(x => x.inspecao1 == "R").length;
+                    const itens2Recusado = this.inspecao.inspecaoObraItens.filter(x => x.inspecao2 == "X").length;
+                    const totalRecusa = itens1Recusado + itens2Recusado;
+                    const totalOcorrenciaVinculada = this.inspecao.ocorrencias.length;
+                    if (totalOcorrenciaVinculada < totalRecusa) {
+                        this.toastService.presentToastWarning("Existem inspeções retrabalhadas e reprovadas sem registro de ocorrência.");
+                    } else {
+                        const totalOcorrenciaPreenchidas = this.inspecao.ocorrencias
+                                                            .filter(x => x.dataDescricao && x.dataTratativa && x.descricao && x.tratativa).length;
+                        if (totalOcorrenciaPreenchidas < totalRecusa) {
+                            this.toastService.presentToastWarning("Existem ocorrências registradas com preenchimento incompleto.");
+                        } else {
+                            this.viewCtrl.dismiss({ inspecao: this.inspecao, concluido: true });
+                        }
+                    }
                 }
             }
         } else {
