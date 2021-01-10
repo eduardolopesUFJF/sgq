@@ -25,6 +25,7 @@ namespace SGQ.GDOL.Api.AutoMapper
             CreateMap<EntregaObraClienteOcorrencia, EntregaObraClienteOcorrenciaVM>();
             CreateMap<EntregaObraClienteArquivo, EntregaObraClienteArquivoVM>();
             CreateMap<Ocorrencia, OcorrenciaVM>();
+            CreateMap<FuncionarioTerceirizado, FuncionarioTerceirizadoVM>();
 
             CreateMap<ConfiguracaoCliente, ClienteDTO>()
                 .ForMember(x => x.Title, opt => opt.MapFrom(x => x.Nome));
@@ -33,7 +34,7 @@ namespace SGQ.GDOL.Api.AutoMapper
                 .ForMember(x => x.Nome, opt => opt.MapFrom(x => x.Nome + " (Versão: " + x.Descricao + ")"));
 
             CreateMap<TreinamentoFuncionario, TreinamentoFuncionarioVM>()
-                .ForMember(x => x.DataPrevisaAvaliacao, opt => opt.MapFrom(x => x.DataInicio.HasValue ? 
+                .ForMember(x => x.DataPrevisaAvaliacao, opt => opt.MapFrom(x => x.DataInicio.HasValue ?
                                                                                 x.DataInicio.Value.AddDays(x.DiasPrevisaoAvaliacao ?? 0)
                                                                                 : x.DataInicio))
                 .ForMember(x => x.NomeFuncionario, opt => opt.MapFrom(x => x.Funcionario.Nome))
@@ -124,7 +125,7 @@ namespace SGQ.GDOL.Api.AutoMapper
 
             CreateMap<AssistenciaTecnica, AssistenciaTecnicaVM>()
                .ForMember(x => x.DescricaoCategoriaAssistencia, opt => opt.MapFrom(x => x.CategoriaAssistencia.Nome))
-               .ForMember(x => x.Unidade, opt => opt.MapFrom(x => 
+               .ForMember(x => x.Unidade, opt => opt.MapFrom(x =>
                                                         x.CentroCusto.ClienteCentrosCustos.Any(y => y.IdCliente == x.IdClienteConstrutora) ?
                                                         x.CentroCusto.ClienteCentrosCustos.Where(y => y.IdCliente == x.IdClienteConstrutora).FirstOrDefault().Unidade
                                                         : ""))
@@ -140,7 +141,10 @@ namespace SGQ.GDOL.Api.AutoMapper
             CreateMap<Atendimento, AtendimentoVM>()
                 .ForMember(x => x.DescricaoFuncionario, opt => opt.MapFrom(x => x.Funcionario.Nome))
                 .ForMember(x => x.Descricao, opt => opt.MapFrom(x => x.Descricao.Length > 100 ? x.Descricao.Substring(0, 100) + "..." : x.Descricao));
-                //.ForMember(x => x.Observacoes, opt => opt.MapFrom(x => x.Observacoes.Length > 100 ? x.Descricao.Substring(0, 100) + "..." : x.Observacoes));
+            //.ForMember(x => x.Observacoes, opt => opt.MapFrom(x => x.Observacoes.Length > 100 ? x.Descricao.Substring(0, 100) + "..." : x.Observacoes));
+
+            CreateMap<Fornecedor, FornecedorVM>()
+                .ForMember(x => x.FuncionariosTerceirizados, opt => opt.MapFrom(x => x.FuncionariosTerceirizados.Where(y => y.Ativo.HasValue && y.Ativo.Value && y.Delete.HasValue && !y.Delete.Value).OrderBy(y => y.Nome)));
 
         }
     }

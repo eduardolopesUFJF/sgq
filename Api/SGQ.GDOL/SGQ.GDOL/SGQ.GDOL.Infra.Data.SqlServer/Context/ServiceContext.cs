@@ -47,6 +47,8 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Context
         public DbSet<TreinamentoFuncionario> TreinamentoFuncionario { get; set; }
         public DbSet<ConfiguracaoCliente> ConfiguracaoCliente { get; set; }
         public DbSet<AcessoCliente> AcessoCliente { get; set; }
+        public DbSet<Fornecedor> Fornecedor { get; set; }
+        public DbSet<FuncionarioTerceirizado> FuncionarioTerceirizado { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -81,6 +83,8 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Context
             modelBuilder.ApplyConfiguration(new TreinamentoFuncionarioMap());
             modelBuilder.ApplyConfiguration(new ConfiguracaoClienteMap());
             modelBuilder.ApplyConfiguration(new AcessoClienteMap());
+            modelBuilder.ApplyConfiguration(new FornecedorMap());
+            modelBuilder.ApplyConfiguration(new FuncionarioTerceirizadoMap());
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

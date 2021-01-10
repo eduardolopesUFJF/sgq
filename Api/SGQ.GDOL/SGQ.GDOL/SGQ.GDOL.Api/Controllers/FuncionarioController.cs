@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using SGQ.GDOL.Api.ViewModels;
 using SGQ.GDOL.Domain.RHRoot.Service.Interface;
-using System;
 using System.Collections.Generic;
 
 namespace SGQ.GDOL.Api.Controllers
