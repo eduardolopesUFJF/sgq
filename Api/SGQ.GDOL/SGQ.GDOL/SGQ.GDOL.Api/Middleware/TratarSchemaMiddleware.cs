@@ -35,6 +35,10 @@ namespace SGQ.GDOL.Api.Middleware
                 CredenciaisBanco.Schema = "BPOSSAS_GDOL";
             }
 
+            if (CredenciaisBanco.Schema.Equals("BPOSSAS_MELHOR LAR"))
+            {
+                CredenciaisBanco.Schema = "BPOSSAS_MELHORLAR";
+            }
             if (CredenciaisBanco.Schema.Equals("BPOSSAS_CRISTO REI"))
             {
                 CredenciaisBanco.Schema = "BPOSSAS_CR";
