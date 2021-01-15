@@ -113,6 +113,8 @@ namespace SGQ.GDOL.Api.Controllers
             List<TreinamentoFuncionarioAgrupadoVM> treinamentosFuncionariosAgrupado = new List<TreinamentoFuncionarioAgrupadoVM>();
             List<TreinamentoFuncionarioVM> treinamentosFuncionariosAssinaturas = new List<TreinamentoFuncionarioVM>();
 
+            Log.Fatal("Inicio da atualizacao \n");
+
             PrepararEntregaObra(alteracoes, entregasObras);
             PrepararEntregaObraCliente(alteracoes, entregasObrasClientes);
             entregasObrasClienteOcorrencias = PrepararEntregaObraClienteOcorrencia(alteracoes, entregasObrasClientes, entregasObrasClienteOcorrencias);
