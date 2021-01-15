@@ -735,6 +735,7 @@ namespace SGQ.GDOL.Api.Controllers
                 }
                 catch (Exception ex)
                 {
+                    Log.Fatal("Falha ao logar acesso:\n" + arquivoVM.Arquivo + "\nException: " + ex.Message + "| " +ex.InnerException);
                     status += "Falha ao alterar persistir " + arquivoVM.Nome + " com id " + arquivoVM.Id + "; ";
                     continue;
                 }
