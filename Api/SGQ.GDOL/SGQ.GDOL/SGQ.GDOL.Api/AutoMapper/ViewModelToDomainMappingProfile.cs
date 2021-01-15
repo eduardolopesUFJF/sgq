@@ -34,6 +34,7 @@ namespace SGQ.GDOL.Api.AutoMapper
                                                                             Convert.FromBase64String(x.AssinaturaConstrutora.Split("base64,", StringSplitOptions.None)[1])));
 
             CreateMap<AssistenciaTecnicaVM, AssistenciaTecnica>()
+                .ForMember(x => x.Local, opt => opt.MapFrom(x => x.IdClienteConstrutora.HasValue ? "" : x.NomeCliente))
                 .ForMember(x => x.NomeCliente, opt => opt.MapFrom(x => x.IdClienteConstrutora.HasValue ? "" : x.NomeCliente))
                 .ForMember(x => x.AssinaturaCliente, opt => opt.MapFrom(x => string.IsNullOrEmpty(x.AssinaturaCliente) ? null :
                                                                             Convert.FromBase64String(x.AssinaturaCliente.Split("base64,", StringSplitOptions.None)[1])))
