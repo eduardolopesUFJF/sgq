@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using Serilog;
 using SGQ.GDOL.Api.ViewModels;
 using SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Entity;
 using SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Service.Interfaces;
@@ -656,6 +657,7 @@ namespace SGQ.GDOL.Api.Controllers
                 }
                 catch (Exception ex)
                 {
+                    Log.Fatal("\n Falha ao alterar persistir " + arquivoVM.Nome + " com id " + arquivoVM.Id + "\n" + "Excpetion: " + ex.Message + " | " + ex.InnerException + "\n");
                     status += "Falha ao alterar persistir " + arquivoVM.Nome + " com id " + arquivoVM.Id + "; ";
                     continue;
                 }
