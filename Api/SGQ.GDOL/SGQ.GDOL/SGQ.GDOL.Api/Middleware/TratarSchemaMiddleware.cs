@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
+using Newtonsoft.Json;
 using Serilog;
 using SGQ.GDOL.Domain;
 
@@ -17,7 +18,7 @@ namespace SGQ.GDOL.Api.Middleware
 
         public async Task InvokeAsync(HttpContext context)
         {
-            Log.Fatal(context.Request.Headers.Select(x => x.Key) + ":\n");
+            Log.Fatal(JsonConvert.SerializeObject(context.Request.Headers.Select(x => x.Key)) + ":\n");
 
             var schema_header = context.Request.Headers.FirstOrDefault(x => x.Key == "BancoSchema").Value.ToString().ToUpper();
 
