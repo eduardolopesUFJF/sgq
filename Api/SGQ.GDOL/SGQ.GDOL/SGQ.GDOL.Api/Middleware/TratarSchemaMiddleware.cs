@@ -18,8 +18,6 @@ namespace SGQ.GDOL.Api.Middleware
 
         public async Task InvokeAsync(HttpContext context)
         {
-            Log.Fatal(JsonConvert.SerializeObject(context.Request.Headers.Select(x => x.Key)) + ":\n");
-
             var schema_header = context.Request.Headers.FirstOrDefault(x => x.Key == "BancoSchema" || x.Key == "bancoschema").Value.ToString().ToUpper();
 
             if (string.IsNullOrEmpty(schema_header))

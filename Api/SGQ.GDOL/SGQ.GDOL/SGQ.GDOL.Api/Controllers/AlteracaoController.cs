@@ -113,8 +113,6 @@ namespace SGQ.GDOL.Api.Controllers
             List<TreinamentoFuncionarioAgrupadoVM> treinamentosFuncionariosAgrupado = new List<TreinamentoFuncionarioAgrupadoVM>();
             List<TreinamentoFuncionarioVM> treinamentosFuncionariosAssinaturas = new List<TreinamentoFuncionarioVM>();
 
-            Log.Fatal("Inicio da atualizacao \n");
-
             PrepararEntregaObra(alteracoes, entregasObras);
             PrepararEntregaObraCliente(alteracoes, entregasObrasClientes);
             entregasObrasClienteOcorrencias = PrepararEntregaObraClienteOcorrencia(alteracoes, entregasObrasClientes, entregasObrasClienteOcorrencias);
@@ -482,6 +480,7 @@ namespace SGQ.GDOL.Api.Controllers
                 }
                 catch (Exception ex)
                 {
+                    Log.Fatal("\nFalha ao persisistir TreinamentoFuncionario:\n" + JsonConvert.SerializeObject(treinamentoFuncionarioAgrupadoVM) + "\nException: " + ex.Message + "\n");
                     status += "Falha ao alterar persistir " + treinamentoFuncionarioAgrupadoVM.Local + "; ";
                     continue;
                 }
@@ -505,6 +504,7 @@ namespace SGQ.GDOL.Api.Controllers
                 }
                 catch (Exception ex)
                 {
+                    Log.Fatal("\nFalha ao persisistir assinatura de treinamento de funcionario :\n" + JsonConvert.SerializeObject(treinamentoFuncionarioVM) + "\nException: " + ex.Message + "\n");
                     status += "Falha ao alterar persistir " + treinamentoFuncionarioVM.Local + "; ";
                     continue;
                 }
@@ -525,6 +525,7 @@ namespace SGQ.GDOL.Api.Controllers
                 }
                 catch (Exception ex)
                 {
+                    Log.Fatal("\nFalha ao atualizar entrega de obra :\n" + JsonConvert.SerializeObject(entregaObraVM) + "\nException: " + ex.Message + "\n");
                     status += "Falha ao alterar situação da obra " + entregaObraVM.Descricao + " com id " + entregaObraVM.Id + "; ";
                     continue;
                 }
@@ -615,6 +616,7 @@ namespace SGQ.GDOL.Api.Controllers
                 }
                 catch (Exception ex)
                 {
+                    Log.Fatal("\nFalha ao persisistir entregaObraCliente:\n" + JsonConvert.SerializeObject(entregaObraClienteVM) + "\nException: " + ex.Message + "\n");
                     status += "Falha ao alterar persistir " + entregaObraClienteVM.LocalVistoria + " com id " + entregaObraClienteVM.Id + "; ";
                     continue;
                 }
@@ -641,6 +643,7 @@ namespace SGQ.GDOL.Api.Controllers
                 }
                 catch (Exception ex)
                 {
+                    Log.Fatal("\nFalha ao persisistir ocorrencias de entrega de obra:\n" + JsonConvert.SerializeObject(ocorrenciaVM) + "\nException: " + ex.Message + "\n");
                     status += "Falha ao alterar persistir " + ocorrenciaVM.Descricao + " com id " + ocorrenciaVM.Id + "; ";
                     continue;
                 }
@@ -659,7 +662,7 @@ namespace SGQ.GDOL.Api.Controllers
                 }
                 catch (Exception ex)
                 {
-                    Log.Fatal("\n Falha ao alterar persistir " + arquivoVM.Nome + " com id " + arquivoVM.Id + "\n" + "Excpetion: " + ex.Message + " | " + ex.InnerException + "\n");
+                    Log.Fatal("\nFalha ao persisistir foto de entrega de obra:\n" + JsonConvert.SerializeObject(arquivosVM) + "\nException: " + ex.Message + "\n");
                     status += "Falha ao alterar persistir " + arquivoVM.Nome + " com id " + arquivoVM.Id + "; ";
                     continue;
                 }
@@ -694,6 +697,7 @@ namespace SGQ.GDOL.Api.Controllers
                 }
                 catch (Exception ex)
                 {
+                    Log.Fatal("\nFalha ao persisistir assistencia tecnica:\n" + JsonConvert.SerializeObject(assistenciaTecnicaVM) + "\nException: " + ex.Message + "\n");
                     status += "Falha ao alterar persistir " + assistenciaTecnicaVM.Local+ " com id " + assistenciaTecnicaVM.Id + "; ";
                     continue;
                 }
@@ -722,6 +726,7 @@ namespace SGQ.GDOL.Api.Controllers
                 }
                 catch (Exception ex)
                 {
+                    Log.Fatal("\nFalha ao persisistir atendimento:\n" + JsonConvert.SerializeObject(atendimentosVM) + "\nException: " + ex.Message + "\n");
                     status += "Falha ao alterar persistir " + atendimentoVM.Descricao+ " com id " + atendimentoVM.Id + "; ";
                     continue;
                 }
@@ -740,7 +745,7 @@ namespace SGQ.GDOL.Api.Controllers
                 }
                 catch (Exception ex)
                 {
-                    Log.Fatal("Falha ao logar acesso:\n" + arquivoVM.Arquivo + "\nException: " + ex.Message + "| " +ex.InnerException);
+                    Log.Fatal("\nFalha ao persisistir fotos de assistencia tecnica:\n" + JsonConvert.SerializeObject(arquivosVM) + "\nException: " + ex.Message + "\n");
                     status += "Falha ao alterar persistir " + arquivoVM.Nome + " com id " + arquivoVM.Id + "; ";
                     continue;
                 }
@@ -1110,6 +1115,7 @@ namespace SGQ.GDOL.Api.Controllers
                 }
                 catch (Exception ex)
                 {
+                    Log.Fatal("\nFalha ao persisistir area:\n" + JsonConvert.SerializeObject(areaVM) + "\nException: " + ex.Message + "\n");
                     status += "Falha ao " + (areaVM.Id != 0 ? (areaVM.Delete.HasValue && areaVM.Delete.Value ? "inativar" : "reativar") : "inserir") + " área " + areaVM.Descricao + " com id " + areaVM.Id + "; ";
                     continue;
                 }
@@ -1132,6 +1138,7 @@ namespace SGQ.GDOL.Api.Controllers
                 }
                 catch (Exception ex)
                 {
+                    Log.Fatal("\nFalha ao persisistir servico:\n" + JsonConvert.SerializeObject(servicoVM) + "\nException: " + ex.Message + "\n");
                     status += "Falha ao " + (servicoVM.Delete.HasValue && servicoVM.Delete.Value ? "inativar" : "reativar") + " serviço " + servicoVM.Descricao + " com id " + servicoVM.Id + "; ";
                     continue;
                 }
@@ -1170,6 +1177,7 @@ namespace SGQ.GDOL.Api.Controllers
                 }
                 catch (Exception ex)
                 {
+                    Log.Fatal("\nFalha ao persisistir inspecao de obra:\n" + JsonConvert.SerializeObject(inspecaoVM) + "\nException: " + ex.Message + "\n");
                     status += "Falha ao " + (inspecaoVM.Id != 0 ? "editar" : "inserir") + " inspeção " + inspecaoVM.Campo1 + " com id " + inspecaoVM.Id + "; ";
                     continue;
                 }
@@ -1196,6 +1204,7 @@ namespace SGQ.GDOL.Api.Controllers
                 }
                 catch (Exception ex)
                 {
+                    Log.Fatal("\nFalha ao persisistir ocorrencia:\n" + JsonConvert.SerializeObject(ocorrenciaVM) + "\nException: " + ex.Message + "\n");
                     status += "Falha ao criar/editar/excluir a ocorrência " + ocorrenciaVM.Descricao + ";";
                     continue;
                 }

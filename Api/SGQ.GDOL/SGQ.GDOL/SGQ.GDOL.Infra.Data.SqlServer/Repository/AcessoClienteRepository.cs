@@ -1,4 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Dapper;
+using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
+using Serilog;
+using SGQ.GDOL.Domain;
 using SGQ.GDOL.Domain.ComercialRoot.DTO;
 using SGQ.GDOL.Domain.ComercialRoot.Entity;
 using SGQ.GDOL.Domain.ComercialRoot.Enum;
@@ -7,13 +11,6 @@ using SGQ.GDOL.Infra.Data.SqlServer.Context;
 using System;
 using System.Data.SqlClient;
 using System.Linq;
-using Dapper;
-using Microsoft.Extensions.Configuration;
-using SGQ.GDOL.Domain;
-using FireSharp.Extensions;
-using Serilog;
-using System.Threading.Tasks;
-using System.Runtime.CompilerServices;
 
 namespace SGQ.GDOL.Infra.Data.SqlServer.Repository
 {
@@ -38,7 +35,7 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Repository
                 }
                 catch (Exception ex)
                 {
-                    Log.Fatal("Falha ao logar acesso:\n" + acessoCliente.ToJson() + "\nException: " + ex.Message);
+                    Log.Fatal("\nFalha ao logar acesso:\n" + JsonConvert.SerializeObject(acessoCliente) + "\nException: " + ex.Message + "\n");
                 }
                 finally
                 {
