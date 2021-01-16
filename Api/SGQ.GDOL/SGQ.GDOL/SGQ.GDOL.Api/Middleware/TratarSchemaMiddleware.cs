@@ -20,7 +20,7 @@ namespace SGQ.GDOL.Api.Middleware
         {
             Log.Fatal(JsonConvert.SerializeObject(context.Request.Headers.Select(x => x.Key)) + ":\n");
 
-            var schema_header = context.Request.Headers.FirstOrDefault(x => x.Key == "BancoSchema").Value.ToString().ToUpper();
+            var schema_header = context.Request.Headers.FirstOrDefault(x => x.Key == "BancoSchema" || x.Key == "bancoschema").Value.ToString().ToUpper();
 
             if (string.IsNullOrEmpty(schema_header))
             {
