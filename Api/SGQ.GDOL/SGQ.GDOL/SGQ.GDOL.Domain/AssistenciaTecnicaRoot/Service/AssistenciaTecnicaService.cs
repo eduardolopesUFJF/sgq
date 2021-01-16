@@ -35,5 +35,11 @@ namespace SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Service
             _assistenciaTecnicaRepository.Update(assistenciaTecnica);
             _unitOfWork.Commit();
         }
+
+        public int ObterUltimoCodigoLivre()
+        {
+            var codigo = _assistenciaTecnicaRepository.ObterUltimoCodigoLivre();
+            return codigo;
+        }
     }
 }

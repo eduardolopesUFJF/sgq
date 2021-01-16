@@ -8,5 +8,6 @@ namespace SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Service.Interfaces
         void Adicionar(AssistenciaTecnica assistenciaTecnica);
         void Atualizar(AssistenciaTecnica assistenciaTecnica);
         List<AssistenciaTecnica> ObterTodosAtivos();
+        int ObterUltimoCodigoLivre();
     }
 }

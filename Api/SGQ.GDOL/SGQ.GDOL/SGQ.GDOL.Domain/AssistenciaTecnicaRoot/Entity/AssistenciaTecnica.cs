@@ -33,6 +33,7 @@ namespace SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Entity
         public decimal? Custo { get; set; }
         public int Prioridade { get; set; }
         public bool Delete { get; set; }
+        public int? Codigo { get; set; }
 
         public byte[] AssinaturaCliente { get; set; }
         public byte[] AssinaturaConstrutora { get; set; }

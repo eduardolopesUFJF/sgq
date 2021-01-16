@@ -7,5 +7,6 @@ namespace SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Repository
     public interface IAssistenciaTecnicaRepository : IBaseRepository<AssistenciaTecnica>
     {
         List<AssistenciaTecnica> ObterTodasAtivasComInclude();
+        int ObterUltimoCodigoLivre();
     }
 }

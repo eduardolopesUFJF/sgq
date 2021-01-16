@@ -1,14 +1,8 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Http.Internal;
 using Microsoft.AspNetCore.Mvc;
-using Serilog;
 using SGQ.GDOL.Api.ViewModels;
 using SGQ.GDOL.Domain.UsuarioRoot.DTO;
 using SGQ.GDOL.Domain.UsuarioRoot.Service.Interface;
-using System;
-using System.IO;
-using System.Linq;
-using System.Text;
 
 namespace SGQ.GDOL.Api.Controllers
 {

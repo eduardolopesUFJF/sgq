@@ -669,6 +669,7 @@ namespace SGQ.GDOL.Api.Controllers
 
         private string PersistirAssistenciasTecnicas(List<AssistenciaTecnicaVM> assistenciasTecnicas, string status)
         {
+            var codigoDisponivel = _assistenciaTecnicaService.ObterUltimoCodigoLivre() + 1;
             foreach (var assistenciaTecnicaVM in assistenciasTecnicas)
             {
                 try
@@ -676,7 +677,9 @@ namespace SGQ.GDOL.Api.Controllers
                     var assistenciaTecnicaBD = Mapper.Map<AssistenciaTecnica>(assistenciaTecnicaVM);
                     if (assistenciaTecnicaBD.Id == 0)
                     {
+                        assistenciaTecnicaBD.Codigo = codigoDisponivel;
                         _assistenciaTecnicaService.Adicionar(assistenciaTecnicaBD);
+                        codigoDisponivel++;
                     }
                     else
                     {

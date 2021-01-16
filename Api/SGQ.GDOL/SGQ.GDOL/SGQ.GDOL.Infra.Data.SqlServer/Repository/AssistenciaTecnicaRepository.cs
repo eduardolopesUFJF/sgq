@@ -26,5 +26,13 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Repository
 
             return result;
         }
+
+        public int ObterUltimoCodigoLivre()
+        {
+            var result = DbSet.AsNoTracking().Where(x => x.Codigo.HasValue)
+                        .OrderByDescending(x => x.Codigo).FirstOrDefault();
+
+            return result == null ? 0 : result.Codigo.Value;
+        }
     }
 }
