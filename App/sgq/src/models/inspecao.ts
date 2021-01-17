@@ -1,5 +1,6 @@
 import { ItemInspecao } from "./item-inspecao";
 import { Ocorrencia } from "./ocorrencia";
+import { RealizadoPor } from "./realizado-por";
 
 export class Inspecao {
     
@@ -28,6 +29,7 @@ export class Inspecao {
 
     inspecaoObraItens: ItemInspecao[] = [];
     ocorrencias: Ocorrencia[] = [];
+    realizadosPor: RealizadoPor[] = [];
 
     constructor(values: Object = {}) {
         Object.assign(this, values);

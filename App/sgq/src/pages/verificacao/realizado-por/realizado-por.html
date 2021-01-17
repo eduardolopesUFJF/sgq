@@ -1,0 +1,78 @@
+<ion-header>
+    <ion-navbar class="pad-nav-page-nt2">
+
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid no-padding>
+        <ion-row *ngIf="!cadastrando">
+            <button ion-button default-button block text-capitalize box-shadow margin-bottom class="button-novo"
+                (click)="cadastrando = true">Adicionar</button>
+        </ion-row>
+        <ion-col col-12 *ngIf="!cadastrando">
+            <ion-list no-margin>
+                <ion-item default-item no-lines [ngClass]="{'novo-item': !item.id, 'item-removido': item.delete}"
+                    *ngFor="let item of inspecao.realizadosPor; let i = index;">
+                    <ion-row class="espacamento">
+                        <ion-col col-10>
+                            <h2 item-title text-wrap>Empresa: {{ item.tipoFuncionario == 0 ? item.nomeFornecedor :
+                                item.nomeCentroCusto }}</h2>
+                            <h2 item-title text-wrap>Funcionários: {{ item.nomesFuncionarios }}</h2>
+                        </ion-col>
+                        <ion-col col-2>
+                            <ion-icon name="trash" icon-small item-right style="font-size: 32px !important; margin: 0px"
+                                (click)="remover(item)"></ion-icon>
+                        </ion-col>
+                    </ion-row>
+                </ion-item>
+            </ion-list>
+        </ion-col>
+        <ion-row padding-left padding-right *ngIf="cadastrando">
+            <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
+                <form #cadastroForm="ngForm" padding-top>
+                    <ion-list radio-group no-margin [(ngModel)]="realizadoPor.tipoFuncionario" name="tipoFuncionario"
+                        (ngModelChange)="limparSelecoes()">
+                        <ion-grid>
+                            <ion-row>
+                                <ion-col col-6>
+                                    <ion-item radio>
+                                        <ion-label>Terceirizado</ion-label>
+                                        <ion-radio [value]="0" checked></ion-radio>
+                                    </ion-item>
+                                </ion-col>
+                                <ion-col col-6>
+                                    <ion-item radio>
+                                        <ion-label>Próprio</ion-label>
+                                        <ion-radio [value]="1"></ion-radio>
+                                    </ion-item>
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </ion-list>
+                    <ion-item text-center transparent *ngIf="realizadoPor.tipoFuncionario == 0">
+                        <ion-label stacked>EMPRESA</ion-label>
+                        <ionic-selectable item-content [(ngModel)]="fornecedorSelecionado" [items]="fornecedores"
+                            itemValueField="id" itemTextField="nome" [canSearch]="true" name="fornecedorSelecionado"
+                            required>
+                        </ionic-selectable>
+                    </ion-item>
+                    <ion-item text-center transparent *ngIf="realizadoPor.tipoFuncionario == 1 || (realizadoPor.tipoFuncionario == 0 && fornecedorSelecionado.id)">
+                        <ion-label stacked>FUNCIONÁRIOS</ion-label>
+                        <ionic-selectable *ngIf="realizadoPor.tipoFuncionario == 1" item-content [(ngModel)]="funcionariosSelecionados"
+                            [items]="funcionarios" itemValueField="id" itemTextField="nome" [canSearch]="true"
+                            [isMultiple]="true" name="funcionariosSelecionados" required>
+                        </ionic-selectable>
+                        <ionic-selectable *ngIf="realizadoPor.tipoFuncionario == 0" item-content [(ngModel)]="funcionariosTerceirizadosSelecionados"
+                            [items]="fornecedorSelecionado.funcionariosTerceirizados" itemValueField="id" itemTextField="nome"
+                            [canSearch]="true" [isMultiple]="true" name="funcionariosTerceirizadosSelecionados"
+                            required>
+                        </ionic-selectable>
+                    </ion-item>
+                    <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: rgb(33,177,75) !important;"
+                        (click)="salvar(cadastroForm.valid)">Salvar</button>
+                </form>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

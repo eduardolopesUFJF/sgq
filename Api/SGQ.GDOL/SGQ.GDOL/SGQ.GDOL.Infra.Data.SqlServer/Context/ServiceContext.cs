@@ -49,6 +49,8 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Context
         public DbSet<AcessoCliente> AcessoCliente { get; set; }
         public DbSet<Fornecedor> Fornecedor { get; set; }
         public DbSet<FuncionarioTerceirizado> FuncionarioTerceirizado { get; set; }
+        public DbSet<RealizadoPor> ExecutadoPor { get; set; }
+        public DbSet<RealizadoPorFuncionario> ExecutadoPorFuncionario { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -85,6 +87,8 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Context
             modelBuilder.ApplyConfiguration(new AcessoClienteMap());
             modelBuilder.ApplyConfiguration(new FornecedorMap());
             modelBuilder.ApplyConfiguration(new FuncionarioTerceirizadoMap());
+            modelBuilder.ApplyConfiguration(new RealizadoPorMap());
+            modelBuilder.ApplyConfiguration(new RealizadoPorFuncionarioMap());
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

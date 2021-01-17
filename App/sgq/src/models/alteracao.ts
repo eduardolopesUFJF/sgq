@@ -15,6 +15,9 @@ export class Alteracao {
     idOcorrencia: number;
     idGuidOcorrencia: string;
 
+    idRealizadoPor: number;
+    idGuidRealizadoPor: string;
+
     tipo: string;
     entidade: string;
     valor: string;

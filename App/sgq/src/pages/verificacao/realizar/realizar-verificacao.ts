@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, ViewController, NavParams, ModalController, NavController } from 'ionic-angular';
+import { IonicPage, ViewController, NavParams, ModalController, NavController, ActionSheetController } from 'ionic-angular';
 import { Inspecao } from '../../../models/inspecao';
 import { Funcionario } from '../../../models/funcionario';
 import { Storage } from '@ionic/storage';
@@ -15,7 +15,7 @@ import { IonicSelectableComponent } from 'ionic-selectable';
 })
 
 export class RealizarVerificacaoPage {
-    
+
     inspecao: Inspecao = new Inspecao();
     exibirPorCentroCusto: boolean = true;
     servico: Servico = new Servico();
@@ -38,6 +38,7 @@ export class RealizarVerificacaoPage {
     constructor(
         public viewCtrl: ViewController,
         public storage: Storage,
+        public actionSheetCtrl: ActionSheetController,
         public toastService: ToastService,
         public modalCtrl: ModalController,
         public navParams: NavParams,
@@ -112,7 +113,7 @@ export class RealizarVerificacaoPage {
                         this.toastService.presentToastWarning("Existem inspeções retrabalhadas e reprovadas sem registro de ocorrência.");
                     } else {
                         const totalOcorrenciaPreenchidas = this.inspecao.ocorrencias
-                                                            .filter(x => x.dataDescricao && x.dataTratativa && x.descricao && x.tratativa).length;
+                            .filter(x => x.dataDescricao && x.dataTratativa && x.descricao && x.tratativa).length;
                         if (totalOcorrenciaPreenchidas < totalRecusa) {
                             this.toastService.presentToastWarning("Existem ocorrências registradas com preenchimento incompleto.");
                         } else {
@@ -130,8 +131,29 @@ export class RealizarVerificacaoPage {
         this.viewCtrl.dismiss({ inspecao: this.inspecao, concluido: false });
     }
 
-    abrirOcorrencias() {
-        this.navCtrl.push("OcorrenciaPage", { inspecao: this.inspecao, broadcomb: this.descServico, servico: this.servico });
+    exibirOpcoes() {
+        const actionSheet = this.actionSheetCtrl.create(
+            {
+                "buttons": [
+                    {
+                        "text": "Ocorrências",
+                        handler: () => {
+                            this.navCtrl.push("OcorrenciaPage", { inspecao: this.inspecao, broadcomb: this.descServico, servico: this.servico });
+                        }
+                    },
+                    {
+                        "text": "Realizado Por",
+                        handler: () => {
+                            this.navCtrl.push("RealizadoPorPage", { inspecao: this.inspecao, servico: this.servico });
+                        }
+                    },
+                    {
+                        "text": "Cancelar",
+                        "role": "cancel"
+                    }
+                ]
+            }
+        );
+        actionSheet.present();
     }
-
 }

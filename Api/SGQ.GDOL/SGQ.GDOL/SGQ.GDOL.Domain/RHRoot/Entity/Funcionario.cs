@@ -24,5 +24,6 @@ namespace SGQ.GDOL.Domain.RHRoot.Entity
         public ICollection<Atendimento> Atendimentos { get; set; }
 
         public ICollection<TreinamentoFuncionario> TreinamentosFuncionarios { get; set; }
+        public ICollection<RealizadoPorFuncionario> RealizadosPorFuncionarios { get; set; }
     }
 }

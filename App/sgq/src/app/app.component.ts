@@ -13,10 +13,11 @@ import { Alteracao } from '../models/alteracao';
 import { Obra } from '../models/obra';
 import { FuncionarioService } from '../services/funcionario.service';
 import { StorageServiceUtils } from '../utils/storage-service-utils';
+import { FornecedorService } from '../services/fornecedor.service';
 
 @Component({
   templateUrl: 'app.html',
-  providers: [ObraService, ChecklistService, AlteracaoService, FuncionarioService]
+  providers: [ObraService, ChecklistService, AlteracaoService, FuncionarioService, FornecedorService]
 })
 
 export class MyApp {
@@ -43,6 +44,7 @@ export class MyApp {
     public obraService: ObraService,
     public alteracaoService: AlteracaoService,
     public funcionarioService: FuncionarioService,
+    public fornecedorService: FornecedorService,
     public alertCtrl: AlertController,
     public checklistService: ChecklistService,
     public network: Network,
@@ -151,6 +153,7 @@ export class MyApp {
             this.nav.setRoot("HomePage");
             this.obterChecklistServico();
             this.obterFuncionarios();
+            this.obterFornecedores();
             this.atualizacao = false;
             this.obterObras();
           }
@@ -345,6 +348,17 @@ export class MyApp {
     );
   }
 
+  obterFornecedores() {
+    this.fornecedorService.obterTodos().subscribe(
+      data => {
+        this.storage.set('fornecedores', data);
+      },
+      error => {
+        this.messageService.exibirMensagem("Falha na comunicação com o servidor ao buscar fornecedores, contate o suporte.");
+      }
+    );
+  }
+
   confirmarAtualizarRepositorio(atualizacoes: Alteracao[]) {
     let mensagem = "Deseja atualizar o banco com as alterações realizadas?";
     this.messageService.exibirMensagemConfirmacao(mensagem, () => { this.atualizarRepositorio(atualizacoes) });
@@ -361,12 +375,10 @@ export class MyApp {
         this.atualizacao = true;
         this.statusAtualizacao = data;
         this.messageService.exibirMensagem("Atualizações realizadas com sucesso. Realize um novo download dos dados para atualizar o banco de dados do aparelho.");
-        // this.obterObras();
-        // this.obterChecklistServico();
         this.storageServiceUtils.montarObraBackup();
       },
       error => {
-        this.loadingService.hide();
+        this.loadingService.hideSubida();
         this.messageService.exibirMensagem("Falha na comunicação com o servidor, contate o suporte.");
       }
     );

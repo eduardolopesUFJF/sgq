@@ -32,6 +32,9 @@ namespace SGQ.GDOL.Domain.ObraRoot.DTO
         public int IdAtendimento { get; set; }
         public string IdGuidAtendimento { get; set; }
 
+        public int IdRealizadoPor { get; set; }
+        public string IdGuidRealizadoPor { get; set; }
+
         public string IdGuidFoto{ get; set; }
 
         public string IdGuidTreinamento { get; set; }

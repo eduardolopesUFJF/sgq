@@ -31,5 +31,6 @@ namespace SGQ.GDOL.Api.ViewModels
 
         public List<InspecaoObraItemVM> InspecaoObraItens { get; set; }
         public List<OcorrenciaVM> Ocorrencias { get; set; }
+        public List<RealizadoPorVM> RealizadosPor { get; set; }
     }
 }

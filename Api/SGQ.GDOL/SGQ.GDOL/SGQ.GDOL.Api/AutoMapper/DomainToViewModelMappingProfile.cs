@@ -26,9 +26,15 @@ namespace SGQ.GDOL.Api.AutoMapper
             CreateMap<EntregaObraClienteArquivo, EntregaObraClienteArquivoVM>();
             CreateMap<Ocorrencia, OcorrenciaVM>();
             CreateMap<FuncionarioTerceirizado, FuncionarioTerceirizadoVM>();
+            CreateMap<RealizadoPorFuncionario, RealizadoPorFuncionarioVM>();
 
             CreateMap<ConfiguracaoCliente, ClienteDTO>()
                 .ForMember(x => x.Title, opt => opt.MapFrom(x => x.Nome));
+
+            CreateMap<RealizadoPor, RealizadoPorVM>()
+                .ForMember(x => x.NomeFornecedor, opt => opt.MapFrom(x => x.Fornecedor.Nome))
+                .ForMember(x => x.NomeCentroCusto, opt => opt.MapFrom(x => x.CentroCusto.Descricao))
+                .ForMember(x => x.NomesFuncionarios, opt => opt.MapFrom(x => x.RealizadosPorFuncionarios.Select(y => x.TipoFuncionario == 0 ? y.FuncionarioTerceirizado.Nome : y.Funcionario.Nome)));
 
             CreateMap<Treinamento, TreinamentoVM>()
                 .ForMember(x => x.Nome, opt => opt.MapFrom(x => x.Nome + " (Versão: " + x.Descricao + ")"));
@@ -78,6 +84,7 @@ namespace SGQ.GDOL.Api.AutoMapper
             CreateMap<InspecaoObra, InspecaoObraVM>()
                 .ForMember(x => x.Situacao, opt => opt.MapFrom(x => x.Status == 1 ? "Finalizado" : "Em aberto"))
                 .ForMember(x => x.InspecaoObraItens, opt => opt.MapFrom(x => x.InspecaoObraItens.Where(y => !y.Delete).OrderBy(y => y.Ordem)))
+                .ForMember(x => x.RealizadosPor, opt => opt.MapFrom(x => x.RealizadosPor.Where(y => y.Delete.HasValue && !y.Delete.Value)))
                 .ForMember(x => x.FuncionarioAprovado, opt => opt.MapFrom(x => x.FuncionarioAprovadoObj.Nome))
                 .ForMember(x => x.FuncionarioInspecionado, opt => opt.MapFrom(x => x.FuncionarioInspecionadoObj.Nome))
                 .ForMember(x => x.Ocorrencias, opt => opt.MapFrom(x => x.Ocorrencias.Where(y => y.Delete.HasValue && !y.Delete.Value)))

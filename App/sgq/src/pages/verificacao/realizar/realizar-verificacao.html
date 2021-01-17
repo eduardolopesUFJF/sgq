@@ -1,16 +1,14 @@
 <ion-header>
     <ion-navbar class="pad-nav-page-nt">
         <ion-row>
-            <ion-col col-3 class="ptb-0" (click)="voltar()">
-                <button class="button-nav" style="padding-left: 10px;">
-                    <span ion-text style="font-size: 0.7em;">Voltar</span>
+            <ion-col col-5 class="ptb-0" (click)="voltar()">
+                <button class="button-nav">
+                    <span ion-text>Voltar</span>
                 </button>
             </ion-col>
-            <ion-col col-6 class="ptb-0" m-auto>
-            </ion-col>
-            <ion-col col-3 class="ptb-0" (click)="abrirOcorrencias()">
-                <button class="button-nav">
-                    <span ion-text style="font-size: 0.7em;">Ocorrências</span>
+            <ion-col col-7 class="ptb-0 registros-align" style="padding-right: 20px !important;">
+                <button class="button-nav" (click)="exibirOpcoes()">
+                    <span ion-text>Registros</span>
                 </button>
             </ion-col>
         </ion-row>

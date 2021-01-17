@@ -46,6 +46,7 @@ namespace SGQ.GDOL.Api.Controllers
         private readonly ITreinamentoService _treinamentoService;
         private readonly ITreinamentoFuncionarioService _treinamentoFuncionarioService;
         private readonly IAcessoClienteService _acessoClienteService;
+        private readonly IRealizadoPorService _realizadoPorService;
 
         public AlteracaoController(
             IAreaService areaService,
@@ -66,7 +67,8 @@ namespace SGQ.GDOL.Api.Controllers
             IItemChecklistEntregaService itemChecklistEntregaService,
             ITreinamentoService treinamentoService,
             ITreinamentoFuncionarioService treinamentoFuncionarioService,
-            IAcessoClienteService acessoClienteService)
+            IAcessoClienteService acessoClienteService,
+            IRealizadoPorService realizadoPorService)
         {
             _areaService = areaService;
             _servicoService = servicoService;
@@ -87,6 +89,7 @@ namespace SGQ.GDOL.Api.Controllers
             _treinamentoService = treinamentoService;
             _treinamentoFuncionarioService = treinamentoFuncionarioService;
             _acessoClienteService = acessoClienteService;
+            _realizadoPorService = realizadoPorService;
         }
 
         #region ENTREGA OBRA
@@ -771,12 +774,14 @@ namespace SGQ.GDOL.Api.Controllers
             List<InspecaoObraVM> inspecoes = new List<InspecaoObraVM>();
             List<OcorrenciaVM> ocorrencias = new List<OcorrenciaVM>();
             List<ChecklistItem> checklists = new List<ChecklistItem>();
+            List<RealizadoPorVM> realizadosPor = new List<RealizadoPorVM>();
 
             PrepararChecklists(alteracoes, checklists);
             PrepararAreas(alteracoes, areas, checklists);
             PrepararServicos(alteracoes, areas, servicos, checklists);
             PrepararInspecoes(alteracoes, areas, servicos, inspecoes);
             PrepararOcorrencias(alteracoes, areas, servicos, inspecoes, ocorrencias);
+            PrepararRealizadosPor(alteracoes, realizadosPor, inspecoes);
 
             if (servicos.Any() || areas.Any() || inspecoes.Any() || ocorrencias.Any())
             {
@@ -787,6 +792,7 @@ namespace SGQ.GDOL.Api.Controllers
             status = PersistirAreas(areas, status);
             status = PersistirInspecoes(inspecoes, status);
             status = PersistirOcorrencias(ocorrencias, status);
+            status = PersistirRealizadosPor(realizadosPor, status);
 
             return status;
         }
@@ -1095,6 +1101,35 @@ namespace SGQ.GDOL.Api.Controllers
             }
         }
 
+        private static void PrepararRealizadosPor(List<AlteracaoDTO> alteracoes, List<RealizadoPorVM> realizadosPor, List<InspecaoObraVM> inspecoes)
+        {
+            var realizadosPorCadastrados = alteracoes.Where(x => x.Entidade.ToUpper() == "REALIZADOPOR" && x.Tipo.ToUpper() == "INSERT");
+            var realizadosPorAlterados = alteracoes.Where(x => x.Entidade.ToUpper() == "REALIZADOPOR" && x.Tipo.ToUpper() == "UPDATE");
+
+            foreach (var alteracao in realizadosPorCadastrados)
+            {
+                var realizadoPorVM = JsonConvert.DeserializeObject<RealizadoPorVM>(alteracao.Valor);
+                realizadosPor.Add(realizadoPorVM);
+            }
+
+            foreach (var alteracao in realizadosPorAlterados)
+            {
+                var realizadoPorVM = JsonConvert.DeserializeObject<RealizadoPorVM>(alteracao.Valor);
+                if (realizadoPorVM.Id != 0)
+                {
+                    realizadosPor.Add(realizadoPorVM);
+                }
+                else
+                {
+                    var realizadoPorCadastrado = realizadosPor.FindIndex(x => x.IdGuid == realizadoPorVM.IdGuid);
+                    if (realizadoPorCadastrado != -1)
+                    {
+                        realizadosPor.RemoveAt(realizadoPorCadastrado);
+                    }
+                }
+            }
+        }
+
         private string PersistirAreas(List<AreaVM> areas, string status)
         {
             foreach (var areaVM in areas)
@@ -1155,6 +1190,7 @@ namespace SGQ.GDOL.Api.Controllers
                     var inspecaoBD = Mapper.Map<InspecaoObra>(inspecaoVM);
                     if (inspecaoVM.Id == 0)
                     {
+                        inspecaoBD.RealizadosPor = null;
                         _inspecaoService.Adicionar(inspecaoBD);
                     }
                     else
@@ -1162,6 +1198,7 @@ namespace SGQ.GDOL.Api.Controllers
                         inspecaoBD.ObraChecklistServico = null;
                         inspecaoBD.FuncionarioAprovadoObj = null;
                         inspecaoBD.FuncionarioInspecionadoObj = null;
+                        inspecaoBD.RealizadosPor = null;
                         _inspecaoService.Atualizar(inspecaoBD);
                         foreach (var item in inspecaoVM.InspecaoObraItens)
                         {
@@ -1206,6 +1243,44 @@ namespace SGQ.GDOL.Api.Controllers
                 {
                     Log.Fatal("\nFalha ao persisistir ocorrencia:\n" + JsonConvert.SerializeObject(ocorrenciaVM) + "\nException: " + ex.Message + "\n");
                     status += "Falha ao criar/editar/excluir a ocorrência " + ocorrenciaVM.Descricao + ";";
+                    continue;
+                }
+            }
+            return status;
+        }
+
+        private string PersistirRealizadosPor(List<RealizadoPorVM> realizadosPor, string status)
+        {
+            foreach (var realizadoPorVM in realizadosPor)
+            {
+                try
+                {
+                    var realizadoPorBD = Mapper.Map<RealizadoPor>(realizadoPorVM);
+                    realizadoPorBD.CentroCusto = null;
+                    realizadoPorBD.Fornecedor = null;
+                    realizadoPorBD.InspecaoObra = null;
+                    if (realizadoPorBD.Id != 0)
+                    {
+                        realizadoPorBD.RealizadosPorFuncionarios = null;
+                        _realizadoPorService.Atualizar(realizadoPorBD);
+                    }
+                    else
+                    {
+                        foreach (var item in realizadoPorVM.Funcionarios)
+                        {
+                            realizadoPorBD.RealizadosPorFuncionarios.Add(new RealizadoPorFuncionario { 
+                                Delete = false,
+                                IdFuncionario = item.IdFuncionario,
+                                IdFuncionarioTerceirizado = item.IdFuncionarioTerceirizado
+                            });
+                        }
+                        _realizadoPorService.Adicionar(realizadoPorBD);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Log.Fatal("\nFalha ao persisistir realizadoPor:\n" + JsonConvert.SerializeObject(realizadoPorVM) + "\nException: " + ex.Message + "\n");
+                    status += "Falha ao criar/editar/excluir o realizadoPor: " + realizadoPorVM.NomesFuncionarios + ";";
                     continue;
                 }
             }

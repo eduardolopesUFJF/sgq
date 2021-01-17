@@ -21,6 +21,7 @@ namespace SGQ.GDOL.Domain.ObraRoot.Entity
 
         public ICollection<InspecaoObraItem> InspecaoObraItens { get; set; }
         public ICollection<Ocorrencia> Ocorrencias { get; set; }
+        public ICollection<RealizadoPor> RealizadosPor { get; set; }
         public Servico ObraChecklistServico { get; set; }
         public Funcionario FuncionarioAprovadoObj { get; set; }
         public Funcionario FuncionarioInspecionadoObj { get; set; }

@@ -1,4 +1,7 @@
-﻿namespace SGQ.GDOL.Domain.RHRoot.Entity
+﻿using SGQ.GDOL.Domain.ObraRoot.Entity;
+using System.Collections.Generic;
+
+namespace SGQ.GDOL.Domain.RHRoot.Entity
 {
     public class FuncionarioTerceirizado : EntityBase
     {
@@ -8,5 +11,6 @@
         public bool? Ativo { get; set; }
 
         public virtual Fornecedor Fornecedor { get; set; }
+        public ICollection<RealizadoPorFuncionario> RealizadosPorFuncionarios { get; set; }
     }
 }
