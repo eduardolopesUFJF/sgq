@@ -7,6 +7,7 @@ namespace SGQ.GDOL.Api.ViewModels
         public int Id { get; set; }
         public string IdGuid { get; set; }
         public int IdInspecao { get; set; }
+        public string IdGuidInspecao { get; set; }
         public int TipoFuncionario { get; set; }
         public int? IdFornecedor { get; set; }
         public string NomeFornecedor { get; set; }

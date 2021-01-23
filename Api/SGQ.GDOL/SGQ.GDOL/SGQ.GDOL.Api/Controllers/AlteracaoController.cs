@@ -779,9 +779,9 @@ namespace SGQ.GDOL.Api.Controllers
             PrepararChecklists(alteracoes, checklists);
             PrepararAreas(alteracoes, areas, checklists);
             PrepararServicos(alteracoes, areas, servicos, checklists);
-            PrepararInspecoes(alteracoes, areas, servicos, inspecoes);
-            PrepararOcorrencias(alteracoes, areas, servicos, inspecoes, ocorrencias);
-            PrepararRealizadosPor(alteracoes, realizadosPor, inspecoes);
+            PrepararInspecoes(alteracoes, areas, inspecoes);
+            PrepararOcorrencias(alteracoes, areas, inspecoes, ocorrencias);
+            PrepararRealizadosPor(alteracoes, realizadosPor);
 
             if (servicos.Any() || areas.Any() || inspecoes.Any() || ocorrencias.Any())
             {
@@ -792,7 +792,7 @@ namespace SGQ.GDOL.Api.Controllers
             status = PersistirAreas(areas, status);
             status = PersistirInspecoes(inspecoes, status);
             status = PersistirOcorrencias(ocorrencias, status);
-            status = PersistirRealizadosPor(realizadosPor, status);
+            status = PersistirRealizadosPor(realizadosPor, inspecoes, status);
 
             return status;
         }
@@ -889,7 +889,7 @@ namespace SGQ.GDOL.Api.Controllers
             }
         }
 
-        private static void PrepararInspecoes(List<AlteracaoDTO> alteracoes, List<AreaVM> areas, List<ServicoVM> servicos, List<InspecaoObraVM> inspecoes)
+        private static void PrepararInspecoes(List<AlteracaoDTO> alteracoes, List<AreaVM> areas, List<InspecaoObraVM> inspecoes)
         {
             var inspecoesAlteradas = alteracoes.Where(x => x.Entidade.ToUpper() == "INSPECAO");
 
@@ -987,7 +987,7 @@ namespace SGQ.GDOL.Api.Controllers
             }
         }
 
-        private static void PrepararOcorrencias(List<AlteracaoDTO> alteracoes, List<AreaVM> areas, List<ServicoVM> servicos, List<InspecaoObraVM> inspecoes, List<OcorrenciaVM> ocorrencias)
+        private static void PrepararOcorrencias(List<AlteracaoDTO> alteracoes, List<AreaVM> areas, List<InspecaoObraVM> inspecoes, List<OcorrenciaVM> ocorrencias)
         {
             var ocorrenciasAlteradas = alteracoes.Where(x => x.Entidade.ToUpper() == "OCORRENCIA");
 
@@ -1101,7 +1101,7 @@ namespace SGQ.GDOL.Api.Controllers
             }
         }
 
-        private static void PrepararRealizadosPor(List<AlteracaoDTO> alteracoes, List<RealizadoPorVM> realizadosPor, List<InspecaoObraVM> inspecoes)
+        private static void PrepararRealizadosPor(List<AlteracaoDTO> alteracoes, List<RealizadoPorVM> realizadosPor)
         {
             var realizadosPorCadastrados = alteracoes.Where(x => x.Entidade.ToUpper() == "REALIZADOPOR" && x.Tipo.ToUpper() == "INSERT");
             var realizadosPorAlterados = alteracoes.Where(x => x.Entidade.ToUpper() == "REALIZADOPOR" && x.Tipo.ToUpper() == "UPDATE");
@@ -1191,7 +1191,8 @@ namespace SGQ.GDOL.Api.Controllers
                     if (inspecaoVM.Id == 0)
                     {
                         inspecaoBD.RealizadosPor = null;
-                        _inspecaoService.Adicionar(inspecaoBD);
+                        var idInspecaoAdicionada = _inspecaoService.Adicionar(inspecaoBD);
+                        inspecaoVM.Id = idInspecaoAdicionada;
                     }
                     else
                     {
@@ -1249,7 +1250,7 @@ namespace SGQ.GDOL.Api.Controllers
             return status;
         }
 
-        private string PersistirRealizadosPor(List<RealizadoPorVM> realizadosPor, string status)
+        private string PersistirRealizadosPor(List<RealizadoPorVM> realizadosPor, List<InspecaoObraVM> inspecoes, string status)
         {
             foreach (var realizadoPorVM in realizadosPor)
             {
@@ -1259,6 +1260,12 @@ namespace SGQ.GDOL.Api.Controllers
                     realizadoPorBD.CentroCusto = null;
                     realizadoPorBD.Fornecedor = null;
                     realizadoPorBD.InspecaoObra = null;
+
+                    if (realizadoPorVM.IdInspecao == 0)
+                    {
+                        realizadoPorBD.IdInspecao = inspecoes.FirstOrDefault(x => x.IdGuidInspecao == realizadoPorVM.IdGuidInspecao).Id;
+                    }
+
                     if (realizadoPorBD.Id != 0)
                     {
                         realizadoPorBD.RealizadosPorFuncionarios = null;
@@ -1280,7 +1287,7 @@ namespace SGQ.GDOL.Api.Controllers
                 catch (Exception ex)
                 {
                     Log.Fatal("\nFalha ao persisistir realizadoPor:\n" + JsonConvert.SerializeObject(realizadoPorVM) + "\nException: " + ex.Message + "\n");
-                    status += "Falha ao criar/editar/excluir o realizadoPor: " + realizadoPorVM.NomesFuncionarios + ";";
+                    status += "Falha ao criar/editar/excluir o realizadoPor;";
                     continue;
                 }
             }

@@ -18,10 +18,12 @@ namespace SGQ.GDOL.Domain.ObraRoot.Service
             _unitOfWork = unitOfWork;
         }
 
-        public void Adicionar(InspecaoObra inspecao)
+        public int Adicionar(InspecaoObra inspecao)
         {
-            _inspecaoRepository.Adicionar(inspecao);
+            var inspecaoAdicionada = _inspecaoRepository.AdicionarComRetorno(inspecao);
             _unitOfWork.Commit();
+
+            return inspecaoAdicionada.Id;
         }
 
         public void Atualizar(InspecaoObra inspecao)

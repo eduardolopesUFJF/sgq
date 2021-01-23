@@ -104,6 +104,7 @@ namespace SGQ.GDOL.Infra.CrossCutting.IoC
             services.AddScoped<IAcessoClienteRepository, AcessoClienteRepository>();
             services.AddScoped<IFornecedorRepository, FornecedorRepository>();
             services.AddScoped<IRealizadoPorRepository, RealizadoPorRepository>();
+            services.AddScoped<IPesquisaSatisfacaoRepository, PesquisaSatisfacaoRepository>();
 
             services.AddScoped<ServiceContext>();
             services.AddScoped<NotificationHandler>();

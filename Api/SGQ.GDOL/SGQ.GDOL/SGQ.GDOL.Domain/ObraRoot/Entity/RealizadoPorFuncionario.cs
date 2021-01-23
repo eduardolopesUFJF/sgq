@@ -4,7 +4,7 @@ namespace SGQ.GDOL.Domain.ObraRoot.Entity
 {
     public class RealizadoPorFuncionario : EntityBase
     {
-        public int IdExecutadoPor { get; set; }
+        public int IdRealizadoPor { get; set; }
         public virtual RealizadoPor RealizadosPor { get; set; }
         public int? IdFuncionario { get; set; }
         public virtual Funcionario Funcionario { get; set; }

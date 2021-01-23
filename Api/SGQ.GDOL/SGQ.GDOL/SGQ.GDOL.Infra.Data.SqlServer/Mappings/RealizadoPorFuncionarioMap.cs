@@ -14,7 +14,7 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Mappings
 
             entity.Property(e => e.Id).HasColumnName("ID_EXECUTADO_POR_FUNCIONARIO");
 
-            entity.Property(e => e.IdExecutadoPor)
+            entity.Property(e => e.IdRealizadoPor)
                 .HasColumnName("ID_EXECUTADO_POR");
 
             entity.Property(e => e.IdFuncionario)
@@ -27,7 +27,7 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Mappings
 
             entity.HasOne(d => d.RealizadosPor)
                 .WithMany(p => p.RealizadosPorFuncionarios)
-                .HasForeignKey(d => d.IdExecutadoPor);
+                .HasForeignKey(d => d.IdRealizadoPor);
 
             entity.HasOne(d => d.Funcionario)
                 .WithMany(p => p.RealizadosPorFuncionarios)

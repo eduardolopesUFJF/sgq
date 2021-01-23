@@ -26,5 +26,13 @@ namespace SGQ.GDOL.Api.Controllers
             var resultVM = Mapper.Map<List<AssistenciaTecnicaVM>>(resultBD);
             return Ok(resultVM);
         }
+
+        [HttpGet("pesquisas")]
+        public IActionResult GetPesquisas()
+        {
+            var resultBD = _assistenciaTecnicaService.ObterPesquisas();
+            var resultVM = Mapper.Map<List<PesquisaSatisfacaoVM>>(resultBD);
+            return Ok(resultVM);
+        }
     }
 }

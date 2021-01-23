@@ -114,7 +114,7 @@ export class RealizadoPorPage {
             let atualizacoesArray: Alteracao[] = [];
             this.storage.get('atualizacoes').then(
                 atualizacoes => {
-                    let alteracao = new Alteracao({ id: UUID.UUID(), idRealizadoPor: realizadoPor.id, idGuidRealizadoPor: realizadoPor.idGuid, tipo: "Insert", entidade: "RealizadoPor", valor: JSON.stringify(realizadoPor), data: new Date(), descricao: "Definição de 'Realizado Por' no serviço '" + this.servico.descricao + "." });
+                    let alteracao = new Alteracao({ id: UUID.UUID(), idRealizadoPor: realizadoPor.id, idGuidRealizadoPor: realizadoPor.idGuid, idInspecao: this.inspecao.id, idGuidInspecao: this.inspecao.idGuidInspecao, tipo: "Insert", entidade: "RealizadoPor", valor: JSON.stringify(realizadoPor), data: new Date(), descricao: "Definição de 'Realizado Por' no serviço '" + this.servico.descricao + "." });
                     if (atualizacoes) {
                         atualizacoesArray = atualizacoes;
                         atualizacoesArray.push(alteracao);

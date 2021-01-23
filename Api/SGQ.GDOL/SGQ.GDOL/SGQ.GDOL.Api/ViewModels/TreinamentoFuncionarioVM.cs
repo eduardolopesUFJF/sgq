@@ -6,7 +6,7 @@ namespace SGQ.GDOL.Api.ViewModels
     {
         public int Id { get; set; }
         public DateTime DataInicio { get; set; }
-        public int CargaHoraria { get; set; }
+        public int? CargaHoraria { get; set; }
         public string Instrutor { get; set; }
         public string Local { get; set; }
         public int DiasPrevisaoAvaliacao { get; set; }

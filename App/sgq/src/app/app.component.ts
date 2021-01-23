@@ -374,7 +374,12 @@ export class MyApp {
         this.loadingService.hideSubida();
         this.atualizacao = true;
         this.statusAtualizacao = data;
-        this.messageService.exibirMensagem("Atualizações realizadas com sucesso. Realize um novo download dos dados para atualizar o banco de dados do aparelho.");
+        if (this.statusAtualizacao == "") {
+          this.messageService.exibirMensagem("Atualizações realizadas com sucesso. Realize um novo download dos dados para atualizar o banco de dados do aparelho.");
+        } else {
+          this.messageService.exibirMensagem("Algumas atualizações não foram realizadas: " + this.statusAtualizacao);
+          this.statusAtualizacao = "";
+        }
         this.storageServiceUtils.montarObraBackup();
       },
       error => {

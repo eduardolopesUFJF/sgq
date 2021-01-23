@@ -8,13 +8,16 @@ namespace SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Service
     public class AssistenciaTecnicaService : IAssistenciaTecnicaService
     {
         private readonly IAssistenciaTecnicaRepository _assistenciaTecnicaRepository;
+        private readonly IPesquisaSatisfacaoRepository _pesquisaSatisfacaoRepository;
         IUnitOfWork _unitOfWork;
 
         public AssistenciaTecnicaService(
             IAssistenciaTecnicaRepository assistenciaTecnicaRepository,
+            IPesquisaSatisfacaoRepository pesquisaSatisfacaoRepository,
             IUnitOfWork unitOfWork)
         {
             _assistenciaTecnicaRepository = assistenciaTecnicaRepository;
+            _pesquisaSatisfacaoRepository = pesquisaSatisfacaoRepository;
             _unitOfWork = unitOfWork;
         }
 
@@ -40,6 +43,12 @@ namespace SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Service
         {
             var codigo = _assistenciaTecnicaRepository.ObterUltimoCodigoLivre();
             return codigo;
+        }
+
+        public List<PesquisaSatisfacao> ObterPesquisas()
+        {
+            var result = _pesquisaSatisfacaoRepository.ObterPesquisas();
+            return result;
         }
     }
 }

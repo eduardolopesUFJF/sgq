@@ -105,19 +105,24 @@ export class RealizarVerificacaoPage {
                 if (naoFinalizado) {
                     this.toastService.presentToastWarning("Não é possível salvar com status de finalizado pois existem inspeções pendentes.");
                 } else {
-                    const itens1Recusado = this.inspecao.inspecaoObraItens.filter(x => x.inspecao1 == "R").length;
-                    const itens2Recusado = this.inspecao.inspecaoObraItens.filter(x => x.inspecao2 == "X").length;
-                    const totalRecusa = itens1Recusado + itens2Recusado;
-                    const totalOcorrenciaVinculada = this.inspecao.ocorrencias.length;
-                    if (totalOcorrenciaVinculada < totalRecusa) {
-                        this.toastService.presentToastWarning("Existem inspeções retrabalhadas e reprovadas sem registro de ocorrência.");
+                    if (!this.inspecao.dataEncerramento) {
+                        this.toastService.presentToastWarning("Não é possível salvar com status de finalizado sem informar a data de encerramento.");
                     } else {
-                        const totalOcorrenciaPreenchidas = this.inspecao.ocorrencias
-                            .filter(x => x.dataDescricao && x.dataTratativa && x.descricao && x.tratativa).length;
-                        if (totalOcorrenciaPreenchidas < totalRecusa) {
-                            this.toastService.presentToastWarning("Existem ocorrências registradas com preenchimento incompleto.");
+                        const itens1Recusado = this.inspecao.inspecaoObraItens.filter(x => x.inspecao1 == "R").length;
+                        const itens2Recusado = this.inspecao.inspecaoObraItens.filter(x => x.inspecao2 == "X").length;
+                        const totalRecusa = itens1Recusado + itens2Recusado;
+                        const totalOcorrenciaVinculada = this.inspecao.ocorrencias.length;
+                        if (totalOcorrenciaVinculada < totalRecusa) {
+                            this.toastService.presentToastWarning("Existem inspeções retrabalhadas e reprovadas sem registro de ocorrência.");
                         } else {
-                            this.viewCtrl.dismiss({ inspecao: this.inspecao, concluido: true });
+                            const ocorrenciasPreenchidas = this.inspecao.ocorrencias
+                                .filter(x => x.dataDescricao && x.dataTratativa && x.descricao && x.tratativa && !x.delete).length;
+                            const ocorrenciasAtivas = this.inspecao.ocorrencias.filter(x => !x.delete).length;                            
+                            if (ocorrenciasPreenchidas < ocorrenciasAtivas) {
+                                this.toastService.presentToastWarning("Existem ocorrências registradas com preenchimento incompleto.");
+                            } else {
+                                this.viewCtrl.dismiss({ inspecao: this.inspecao, concluido: true });
+                            }
                         }
                     }
                 }

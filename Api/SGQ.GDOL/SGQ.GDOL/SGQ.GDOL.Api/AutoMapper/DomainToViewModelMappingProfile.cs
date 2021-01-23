@@ -27,6 +27,10 @@ namespace SGQ.GDOL.Api.AutoMapper
             CreateMap<Ocorrencia, OcorrenciaVM>();
             CreateMap<FuncionarioTerceirizado, FuncionarioTerceirizadoVM>();
             CreateMap<RealizadoPorFuncionario, RealizadoPorFuncionarioVM>();
+            CreateMap<ItemPesquisaSatisfacao, ItemPesquisaSatisfacaoVM>();
+            
+            CreateMap<PesquisaSatisfacao, PesquisaSatisfacaoVM>()
+                .ForMember(x => x.ItensPesquisaSatisfacao, opt => opt.MapFrom(x => x.ItensPesquisaSatisfacao.Where(y => y.Delete.HasValue && !y.Delete.Value).OrderBy(y => y.Ordem)));
 
             CreateMap<ConfiguracaoCliente, ClienteDTO>()
                 .ForMember(x => x.Title, opt => opt.MapFrom(x => x.Nome));
@@ -34,7 +38,8 @@ namespace SGQ.GDOL.Api.AutoMapper
             CreateMap<RealizadoPor, RealizadoPorVM>()
                 .ForMember(x => x.NomeFornecedor, opt => opt.MapFrom(x => x.Fornecedor.Nome))
                 .ForMember(x => x.NomeCentroCusto, opt => opt.MapFrom(x => x.CentroCusto.Descricao))
-                .ForMember(x => x.NomesFuncionarios, opt => opt.MapFrom(x => x.RealizadosPorFuncionarios.Select(y => x.TipoFuncionario == 0 ? y.FuncionarioTerceirizado.Nome : y.Funcionario.Nome)));
+                .ForMember(x => x.NomesFuncionarios, opt => opt.MapFrom(x => x.RealizadosPorFuncionarios.Select(y => x.TipoFuncionario == 1 ? y.Funcionario.Nome
+                                : (y.IdFuncionarioTerceirizado.HasValue ? y.FuncionarioTerceirizado.Nome : ""))));
 
             CreateMap<Treinamento, TreinamentoVM>()
                 .ForMember(x => x.Nome, opt => opt.MapFrom(x => x.Nome + " (Versão: " + x.Descricao + ")"));

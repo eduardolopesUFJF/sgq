@@ -65,8 +65,7 @@
                         </ionic-selectable>
                         <ionic-selectable *ngIf="realizadoPor.tipoFuncionario == 0" item-content [(ngModel)]="funcionariosTerceirizadosSelecionados"
                             [items]="fornecedorSelecionado.funcionariosTerceirizados" itemValueField="id" itemTextField="nome"
-                            [canSearch]="true" [isMultiple]="true" name="funcionariosTerceirizadosSelecionados"
-                            required>
+                            [canSearch]="true" [isMultiple]="true" name="funcionariosTerceirizadosSelecionados">
                         </ionic-selectable>
                     </ion-item>
                     <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: rgb(33,177,75) !important;"

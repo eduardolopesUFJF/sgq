@@ -4,7 +4,7 @@ namespace SGQ.GDOL.Domain.ObraRoot.Service.Interfaces
 {
     public interface IInspecaoService
     {
-        void Adicionar(InspecaoObra inspecao);
+        int Adicionar(InspecaoObra inspecao);
         void Atualizar(InspecaoObra inspecao);
     }
 }
