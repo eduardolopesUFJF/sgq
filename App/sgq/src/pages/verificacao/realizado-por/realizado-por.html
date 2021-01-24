@@ -5,12 +5,12 @@
 </ion-header>
 
 <ion-content>
-    <ion-grid no-padding>
+    <ion-grid no-padding style="display: table-cell !important">
         <ion-row *ngIf="!cadastrando">
             <button ion-button default-button block text-capitalize box-shadow margin-bottom class="button-novo"
                 (click)="cadastrando = true">Adicionar</button>
         </ion-row>
-        <ion-col col-12 *ngIf="!cadastrando">
+        <ion-row *ngIf="!cadastrando">
             <ion-list no-margin>
                 <ion-item default-item no-lines [ngClass]="{'novo-item': !item.id, 'item-removido': item.delete}"
                     *ngFor="let item of inspecao.realizadosPor; let i = index;">
@@ -27,7 +27,7 @@
                     </ion-row>
                 </ion-item>
             </ion-list>
-        </ion-col>
+        </ion-row>
         <ion-row padding-left padding-right *ngIf="cadastrando">
             <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
                 <form #cadastroForm="ngForm" padding-top>
