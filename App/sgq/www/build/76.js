@@ -1,14 +1,14 @@
 webpackJsonp([76],{
 
-/***/ 706:
+/***/ 708:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppearanceAnimationLayout3Module", function() { return AppearanceAnimationLayout3Module; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppearanceAnimationLayout4Module", function() { return AppearanceAnimationLayout4Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_3__ = __webpack_require__(837);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_4__ = __webpack_require__(840);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,37 +18,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AppearanceAnimationLayout3Module = /** @class */ (function () {
-    function AppearanceAnimationLayout3Module() {
+var AppearanceAnimationLayout4Module = /** @class */ (function () {
+    function AppearanceAnimationLayout4Module() {
     }
-    AppearanceAnimationLayout3Module = __decorate([
+    AppearanceAnimationLayout4Module = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_3__["a" /* AppearanceAnimationLayout3 */],
+                __WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_4__["a" /* AppearanceAnimationLayout4 */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_3__["a" /* AppearanceAnimationLayout3 */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_4__["a" /* AppearanceAnimationLayout4 */]),
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_3__["a" /* AppearanceAnimationLayout3 */]
+                __WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_4__["a" /* AppearanceAnimationLayout4 */]
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"]]
         })
-    ], AppearanceAnimationLayout3Module);
-    return AppearanceAnimationLayout3Module;
+    ], AppearanceAnimationLayout4Module);
+    return AppearanceAnimationLayout4Module;
 }());
 
-//# sourceMappingURL=appearance-animation-layout-3.module.js.map
+//# sourceMappingURL=appearance-animation-layout-4.module.js.map
 
 /***/ }),
 
-/***/ 837:
+/***/ 840:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppearanceAnimationLayout3; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppearanceAnimationLayout4; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -60,12 +60,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var AppearanceAnimationLayout3 = /** @class */ (function () {
-    function AppearanceAnimationLayout3() {
+var AppearanceAnimationLayout4 = /** @class */ (function () {
+    function AppearanceAnimationLayout4() {
         this.animateItems = [];
-        this.animateClass = { 'fade-in-down-item': true };
+        this.animateClass = { 'fade-in-item': true };
     }
-    AppearanceAnimationLayout3.prototype.onEvent = function (event, item, e) {
+    AppearanceAnimationLayout4.prototype.onEvent = function (event, item, e) {
         if (e) {
             e.stopPropagation();
         }
@@ -73,7 +73,7 @@ var AppearanceAnimationLayout3 = /** @class */ (function () {
             this.events[event](item);
         }
     };
-    AppearanceAnimationLayout3.prototype.ngOnChanges = function (changes) {
+    AppearanceAnimationLayout4.prototype.ngOnChanges = function (changes) {
         var that = this;
         that.data = changes['data'].currentValue;
         if (that.data && that.data.items) {
@@ -91,25 +91,25 @@ var AppearanceAnimationLayout3 = /** @class */ (function () {
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", Object)
-    ], AppearanceAnimationLayout3.prototype, "data", void 0);
+    ], AppearanceAnimationLayout4.prototype, "data", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", Object)
-    ], AppearanceAnimationLayout3.prototype, "events", void 0);
+    ], AppearanceAnimationLayout4.prototype, "events", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */])
-    ], AppearanceAnimationLayout3.prototype, "content", void 0);
-    AppearanceAnimationLayout3 = __decorate([
+    ], AppearanceAnimationLayout4.prototype, "content", void 0);
+    AppearanceAnimationLayout4 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'appearance-animation-layout-3',template:/*ion-inline-start:"/Users/user926185/Desktop/sgq/App/sgq/src/core/list-view/appearance-animation/layout-3/appearance-animation.html"*/'<!--Theme Appearance animation (Fade In Down)-->\n<ion-content>\n    <ion-grid no-padding *ngIf="data != null">\n        <ion-row>\n            <ion-col col-12>\n                <ion-list no-margin>\n                    <ion-item default-item no-lines [ngClass]="animateClass" *ngFor="let item of animateItems; let i = index;" (click)="onEvent(\'onItemClick\', item, $event)">\n                        <ion-thumbnail item-left>\n                            <img [src]="item.image" [alt]="item.title" />\n                        </ion-thumbnail>\n                        <h2 item-title>{{item.title}}</h2>\n                        <ion-icon icon-small item-right (click)="onEvent(\'onFavorite\', item, $event)">\n                            <i class="icon" [ngClass]="{\'icon-heart\': item.favorite, \'icon-heart-outline\': !item.favorite}"></i>\n                        </ion-icon>\n                    </ion-item>\n                </ion-list>\n            </ion-col>\n        </ion-row>\n    </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/Users/user926185/Desktop/sgq/App/sgq/src/core/list-view/appearance-animation/layout-3/appearance-animation.html"*/
+            selector: 'appearance-animation-layout-4',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\appearance-animation\layout-4\appearance-animation.html"*/'<!--Theme Appearance animation (Fade In)-->\n\n<ion-content>\n\n    <ion-grid no-padding *ngIf="data != null">\n\n        <ion-row>\n\n            <ion-col col-12>\n\n                <ion-list no-margin>\n\n                    <ion-item default-item no-lines [ngClass]="animateClass" *ngFor="let item of animateItems; let i = index;" (click)="onEvent(\'onItemClick\', item, $event)">\n\n                        <ion-thumbnail item-left>\n\n                            <img [src]="item.image" [alt]="item.title" />\n\n                        </ion-thumbnail>\n\n                        <h2 item-title>{{item.title}}</h2>\n\n                        <ion-icon icon-small item-right (click)="onEvent(\'onFavorite\', item, $event)">\n\n                            <i class="icon" [ngClass]="{\'icon-heart\': item.favorite, \'icon-heart-outline\': !item.favorite}"></i>\n\n                        </ion-icon>\n\n                    </ion-item>\n\n                </ion-list>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\appearance-animation\layout-4\appearance-animation.html"*/
         }),
         __metadata("design:paramtypes", [])
-    ], AppearanceAnimationLayout3);
-    return AppearanceAnimationLayout3;
+    ], AppearanceAnimationLayout4);
+    return AppearanceAnimationLayout4;
 }());
 
-//# sourceMappingURL=appearance-animation-layout-3.js.map
+//# sourceMappingURL=appearance-animation-layout-4.js.map
 
 /***/ })
 

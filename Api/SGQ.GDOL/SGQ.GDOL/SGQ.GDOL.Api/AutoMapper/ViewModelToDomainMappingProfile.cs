@@ -22,6 +22,11 @@ namespace SGQ.GDOL.Api.AutoMapper
             CreateMap<AtendimentoVM, Atendimento>();
             CreateMap<RealizadoPorVM, RealizadoPor>();
 
+            CreateMap<PesquisaSatisfacaoClienteVM, PesquisaSatisfacaoCliente>()
+                .ForMember(x => x.TotalPontos, opt => opt.MapFrom(x => x.ItensPesquisaSatisfacaoCliente.Where(y => y.Nota.HasValue).Sum(y => y.Nota.Value)));
+
+            CreateMap<ItemPesquisaSatisfacaoClienteVM, ItemPesquisaSatisfacaoCliente>();
+
             CreateMap<EntregaObraClienteChecklistVM, EntregaObraClienteChecklist>()
                 .ForMember(x => x.Descricao, opt => opt.MapFrom(x => ""));
 

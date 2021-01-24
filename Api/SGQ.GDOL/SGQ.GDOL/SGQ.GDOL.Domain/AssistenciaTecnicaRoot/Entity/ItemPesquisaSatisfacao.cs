@@ -1,4 +1,6 @@
-﻿namespace SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Entity
+﻿using System.Collections.Generic;
+
+namespace SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Entity
 {
     public class ItemPesquisaSatisfacao : EntityBase
     {
@@ -7,5 +9,6 @@
         public string Ordem { get; set; }
         public string Descricao { get; set; }
         public bool? Delete { get; set; }
+        public ICollection<ItemPesquisaSatisfacaoCliente> ItensPesquisaSatisfacaoCliente { get; set; }
     }
 }

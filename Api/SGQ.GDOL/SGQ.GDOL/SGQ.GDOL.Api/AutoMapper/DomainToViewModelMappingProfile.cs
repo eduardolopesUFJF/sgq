@@ -32,6 +32,12 @@ namespace SGQ.GDOL.Api.AutoMapper
             CreateMap<PesquisaSatisfacao, PesquisaSatisfacaoVM>()
                 .ForMember(x => x.ItensPesquisaSatisfacao, opt => opt.MapFrom(x => x.ItensPesquisaSatisfacao.Where(y => y.Delete.HasValue && !y.Delete.Value).OrderBy(y => y.Ordem)));
 
+            CreateMap<PesquisaSatisfacaoCliente, PesquisaSatisfacaoClienteVM>()
+                .ForMember(x => x.DescricaoPesquisaSatisfacao, opt => opt.MapFrom(x => x.PesquisaSatisfacao.Codigo + " - " + x.PesquisaSatisfacao.Descricao));
+
+            CreateMap<ItemPesquisaSatisfacaoCliente, ItemPesquisaSatisfacaoClienteVM>()
+                .ForMember(x => x.DescricaoItemPesquisaSatisfacao, opt => opt.MapFrom(x => x.ItemPesquisaSatisfacao.Descricao));
+
             CreateMap<ConfiguracaoCliente, ClienteDTO>()
                 .ForMember(x => x.Title, opt => opt.MapFrom(x => x.Nome));
 
@@ -136,6 +142,7 @@ namespace SGQ.GDOL.Api.AutoMapper
                 .ForMember(x => x.ItensChecklistEntrega, opt => opt.MapFrom(x => x.ItensChecklistEntrega.OrderBy(y => y.Ordem)));
 
             CreateMap<AssistenciaTecnica, AssistenciaTecnicaVM>()
+               .ForMember(x => x.PesquisasSatisfacaoCliente, opt => opt.MapFrom(x => x.PesquisasSatisfacaoCliente.Where(y => y.Delete.HasValue && !y.Delete.Value)))
                .ForMember(x => x.DescricaoCategoriaAssistencia, opt => opt.MapFrom(x => x.CategoriaAssistencia.Nome))
                .ForMember(x => x.Unidade, opt => opt.MapFrom(x =>
                                                         x.CentroCusto.ClienteCentrosCustos.Any(y => y.IdCliente == x.IdClienteConstrutora) ?

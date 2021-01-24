@@ -1,14 +1,15 @@
 webpackJsonp([4],{
 
-/***/ 775:
+/***/ 776:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VerificacaoPageModule", function() { return VerificacaoPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RealizadoPorPageModule", function() { return RealizadoPorPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__verificacao__ = __webpack_require__(912);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__realizado_por__ = __webpack_require__(913);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_selectable__ = __webpack_require__(353);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,28 +19,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var VerificacaoPageModule = /** @class */ (function () {
-    function VerificacaoPageModule() {
+
+var RealizadoPorPageModule = /** @class */ (function () {
+    function RealizadoPorPageModule() {
     }
-    VerificacaoPageModule = __decorate([
+    RealizadoPorPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__verificacao__["a" /* VerificacaoPage */]
+                __WEBPACK_IMPORTED_MODULE_2__realizado_por__["a" /* RealizadoPorPage */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__verificacao__["a" /* VerificacaoPage */])
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__realizado_por__["a" /* RealizadoPorPage */]),
+                __WEBPACK_IMPORTED_MODULE_3_ionic_selectable__["a" /* IonicSelectableModule */]
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"]]
         })
-    ], VerificacaoPageModule);
-    return VerificacaoPageModule;
+    ], RealizadoPorPageModule);
+    return RealizadoPorPageModule;
 }());
 
-//# sourceMappingURL=verificacao.module.js.map
+//# sourceMappingURL=realizado-por.module.js.map
 
 /***/ }),
 
-/***/ 779:
+/***/ 781:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -83,7 +86,7 @@ exports.UUID = UUID;
 
 /***/ }),
 
-/***/ 795:
+/***/ 786:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -100,65 +103,7 @@ var Alteracao = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 796:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ItemChecklist; });
-var ItemChecklist = /** @class */ (function () {
-    function ItemChecklist(values) {
-        if (values === void 0) { values = {}; }
-        this.id = 0;
-        this.campo1 = "";
-        this.campo2 = "";
-        this.campo3 = "";
-        this.campo4 = "";
-        this.itensChecklistServico = [];
-        Object.assign(this, values);
-    }
-    return ItemChecklist;
-}());
-
-//# sourceMappingURL=item-checklist.js.map
-
-/***/ }),
-
-/***/ 808:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Inspecao; });
-var Inspecao = /** @class */ (function () {
-    function Inspecao(values) {
-        if (values === void 0) { values = {}; }
-        this.id = 0;
-        this.idGuidInspecao = '';
-        this.idGuidServico = '';
-        this.campo1 = "";
-        this.campo2 = "";
-        this.campo3 = "";
-        this.campo4 = "";
-        this.status = 0;
-        this.situacao = 'Em aberto';
-        this.delete = false;
-        this.dataHoraAlteracao = new Date();
-        this.qtdNA = 0;
-        this.qtdA = 0;
-        this.qtdR = 0;
-        this.qtdRA = 0;
-        this.qtdX = 0;
-        this.inspecaoObraItens = [];
-        this.ocorrencias = [];
-        Object.assign(this, values);
-    }
-    return Inspecao;
-}());
-
-//# sourceMappingURL=inspecao.js.map
-
-/***/ }),
-
-/***/ 809:
+/***/ 798:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -192,48 +137,60 @@ var Servico = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 825:
+/***/ 800:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ItemInspecao; });
-var ItemInspecao = /** @class */ (function () {
-    function ItemInspecao(values) {
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Inspecao; });
+var Inspecao = /** @class */ (function () {
+    function Inspecao(values) {
         if (values === void 0) { values = {}; }
         this.id = 0;
-        this.idInspecaoObra = 0;
         this.idGuidInspecao = '';
-        this.idGuidItemServico = '';
-        this.inspecao1 = '';
-        this.inspecao2 = '';
+        this.idGuidServico = '';
+        this.campo1 = "";
+        this.campo2 = "";
+        this.campo3 = "";
+        this.campo4 = "";
+        this.status = 0;
+        this.situacao = 'Em aberto';
         this.delete = false;
         this.dataHoraAlteracao = new Date();
+        this.qtdNA = 0;
+        this.qtdA = 0;
+        this.qtdR = 0;
+        this.qtdRA = 0;
+        this.qtdX = 0;
+        this.inspecaoObraItens = [];
+        this.ocorrencias = [];
+        this.realizadosPor = [];
         Object.assign(this, values);
     }
-    return ItemInspecao;
+    return Inspecao;
 }());
 
-//# sourceMappingURL=item-inspecao.js.map
+//# sourceMappingURL=inspecao.js.map
 
 /***/ }),
 
-/***/ 912:
+/***/ 913:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VerificacaoPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RealizadoPorPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_servico__ = __webpack_require__(809);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_inspecao__ = __webpack_require__(808);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__models_alteracao__ = __webpack_require__(795);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__ = __webpack_require__(779);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_uuid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_angular2_uuid__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__utils_message_service__ = __webpack_require__(155);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__models_item_inspecao__ = __webpack_require__(825);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__models_item_checklist__ = __webpack_require__(796);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__utils_storage_service_utils__ = __webpack_require__(156);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_inspecao__ = __webpack_require__(800);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_realizado_por__ = __webpack_require__(914);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_storage_service_utils__ = __webpack_require__(156);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__models_servico__ = __webpack_require__(798);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__models_fornecedor__ = __webpack_require__(915);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utils_toast_service__ = __webpack_require__(350);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__models_realizado_por_funcionario__ = __webpack_require__(916);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_angular2_uuid__ = __webpack_require__(781);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_angular2_uuid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_angular2_uuid__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__models_alteracao__ = __webpack_require__(786);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -289,245 +246,122 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 
 
 
-var VerificacaoPage = /** @class */ (function () {
-    function VerificacaoPage(navParams, storage, storageServiceUtils, actionSheetCtrl, modalCtrl, messageService, navCtrl) {
-        this.navParams = navParams;
+
+var RealizadoPorPage = /** @class */ (function () {
+    function RealizadoPorPage(viewCtrl, storage, storageServiceUtils, toastService, navParams) {
+        this.viewCtrl = viewCtrl;
         this.storage = storage;
         this.storageServiceUtils = storageServiceUtils;
-        this.actionSheetCtrl = actionSheetCtrl;
-        this.modalCtrl = modalCtrl;
-        this.messageService = messageService;
-        this.navCtrl = navCtrl;
-        this.servico = new __WEBPACK_IMPORTED_MODULE_2__models_servico__["a" /* Servico */]();
-        this.itemChecklist = new __WEBPACK_IMPORTED_MODULE_9__models_item_checklist__["a" /* ItemChecklist */]();
-        this.inspecoes = [];
-        this.inspecoesBackup = [];
-        this.itensBackup = [];
-        this.inspecaoBackup = new __WEBPACK_IMPORTED_MODULE_3__models_inspecao__["a" /* Inspecao */]();
-        this.servico = navParams.data.servico;
-        this.inspecoes = this.ordenar(this.servico.inspecoesObra).slice();
-        this.inspecoesBackup = this.servico.inspecoesObra.slice();
-        this.obterItemChecklist();
-        this.broadcomb = navParams.data.broadcomb + " >> " + this.servico.descricao;
+        this.toastService = toastService;
+        this.navParams = navParams;
+        this.inspecao = new __WEBPACK_IMPORTED_MODULE_2__models_inspecao__["a" /* Inspecao */]();
+        this.servico = new __WEBPACK_IMPORTED_MODULE_6__models_servico__["a" /* Servico */]();
+        this.realizadoPor = new __WEBPACK_IMPORTED_MODULE_4__models_realizado_por__["a" /* RealizadoPor */]();
+        this.cadastrando = false;
+        this.funcionarios = [];
+        this.funcionariosSelecionados = [];
+        this.fornecedores = [];
+        this.fornecedorSelecionado = new __WEBPACK_IMPORTED_MODULE_7__models_fornecedor__["a" /* Fornecedor */]();
+        this.funcionariosTerceirizadosSelecionados = [];
+        this.inspecao = this.navParams.data.inspecao;
+        if (!this.inspecao.realizadosPor) {
+            this.inspecao.realizadosPor = [];
+        }
+        this.servico = this.navParams.data.servico;
+        this.obterFuncionarios();
+        this.obterFornecedores();
     }
-    VerificacaoPage.prototype.ordenar = function (inspecoes) {
-        return inspecoes.sort(function (a, b) {
-            if (a.dataInspecao > b.dataInspecao)
-                return -1;
-            else
-                return 1;
-        });
-    };
-    VerificacaoPage.prototype.atualizarStatus = function () {
-        var _this = this;
-        setTimeout(function () {
-            if (_this.servico.status == 0) {
-                _this.servico.situacao = 'Em aberto';
-                _this.criarAtualizacaoStatus();
-            }
-            else {
-                if (_this.servico.inspecoesObra.some(function (x) { return x.status == 0; })) {
-                    _this.servico.status = 0;
-                    _this.messageService.exibirMensagem("Não foi possível finalizar o Serviço, existem inspeções em aberto.");
-                }
-                else {
-                    _this.servico.situacao = 'Finalizado';
-                    _this.criarAtualizacaoStatus();
-                }
-            }
-        }, 100);
-    };
-    VerificacaoPage.prototype.criarAtualizacaoStatus = function () {
-        var _this = this;
-        this.storage.ready().then(function () {
-            var atualizacoesArray = [];
-            _this.storage.get('atualizacoes').then(function (atualizacoes) {
-                var alteracao = new __WEBPACK_IMPORTED_MODULE_5__models_alteracao__["a" /* Alteracao */]({ id: __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__["UUID"].UUID(), idServico: _this.servico.id, idGuidServico: _this.servico.idGuidServico, idArea: _this.servico.idArea, idGuidArea: _this.servico.idAreaGuid, tipo: "Update", entidade: "Servico", valor: JSON.stringify(_this.servico), data: new Date(), descricao: (_this.servico.status == 0 ? "Reabertura" : "Finalização") + " do serviço '" + _this.servico.descricao + "' em '" + _this.broadcomb.toUpperCase() + "'.", obraId: _this.servico.idObra });
-                if (atualizacoes) {
-                    atualizacoesArray = atualizacoes;
-                    atualizacoesArray.push(alteracao);
-                }
-                else {
-                    atualizacoesArray.push(alteracao);
-                }
-                _this.storage.set('atualizacoes', atualizacoesArray);
-                _this.atualizarObra(_this.servico);
-            });
-        });
-    };
-    VerificacaoPage.prototype.atualizarObra = function (item) {
+    RealizadoPorPage.prototype.obterFuncionarios = function () {
         return __awaiter(this, void 0, void 0, function () {
             var _this = this;
-            var obras;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.storageServiceUtils.montarObra()];
+            var _a, obras, obra;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0: return [4 /*yield*/, this.storage.ready()];
                     case 1:
-                        obras = _a.sent();
-                        obras.find(function (x) { return x.id == _this.servico.idObra; }).areas.find(function (x) { return _this.servico.idAreaGuid ? (x.idGuid == _this.servico.idAreaGuid) : (x.id == _this.servico.idArea); }).servicos.find(function (x) { return item.idGuidServico ? (x.idGuidServico == item.idGuidServico) : (x.id == item.id); }).status = item.status;
-                        this.storageServiceUtils.armazenarObraNoStorage(obras);
+                        _b.sent();
+                        _a = this;
+                        return [4 /*yield*/, this.storage.get('funcionarios')];
+                    case 2:
+                        _a.funcionarios = _b.sent();
+                        return [4 /*yield*/, this.storageServiceUtils.montarObra()];
+                    case 3:
+                        obras = _b.sent();
+                        obra = obras.find(function (x) { return x.id == _this.servico.idObra; });
+                        this.idCentroCusto = obra.idCentroCusto;
+                        this.descricaoCentroCusto = obra.descricao;
+                        this.funcionarios = this.funcionarios.filter(function (x) { return x.idCentroCusto == null || x.idCentroCusto == _this.idCentroCusto; }).slice();
                         return [2 /*return*/];
                 }
             });
         });
     };
-    VerificacaoPage.prototype.obterItemChecklist = function () {
-        var _this = this;
-        this.storage.ready().then(function () {
-            _this.storage.get('itensChecklist').then(function (itens) {
-                _this.itemChecklist = itens.find(function (x) { return x.id == _this.servico.idChecklist; });
-                if (!_this.itemChecklist) {
-                    _this.itemChecklist = itens.find(function (x) { return x.idGuid == _this.servico.idChecklistGuid; });
+    RealizadoPorPage.prototype.obterFornecedores = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _a;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0: return [4 /*yield*/, this.storage.ready()];
+                    case 1:
+                        _b.sent();
+                        _a = this;
+                        return [4 /*yield*/, this.storage.get('fornecedores')];
+                    case 2:
+                        _a.fornecedores = _b.sent();
+                        return [2 /*return*/];
                 }
             });
         });
     };
-    VerificacaoPage.prototype.novaInspecao = function () {
-        var _this = this;
-        var modal = this.modalCtrl.create("ManterVerificacaoPage", { inspecao: new __WEBPACK_IMPORTED_MODULE_3__models_inspecao__["a" /* Inspecao */](), itemChecklist: this.itemChecklist });
-        modal.present();
-        modal.onWillDismiss(function (inspecao) {
-            if (inspecao) {
-                inspecao.idGuidInspecao = __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__["UUID"].UUID();
-                inspecao.idGuidServico = _this.servico.idGuidServico;
-                inspecao.idServico = _this.servico.id;
-                _this.itemChecklist.itensChecklistServico.forEach(function (item) {
-                    var novoItem = new __WEBPACK_IMPORTED_MODULE_8__models_item_inspecao__["a" /* ItemInspecao */]();
-                    novoItem.dataHoraInclusao = new Date();
-                    novoItem.descricao = item.descricao;
-                    novoItem.idGuidInspecao = inspecao.idGuidInspecao;
-                    novoItem.ordem = item.ordem.toString();
-                    novoItem.idGuidItemServico = item.idGuid;
-                    novoItem.idItemServico = item.id;
-                    inspecao.inspecaoObraItens.push(novoItem);
+    RealizadoPorPage.prototype.limparSelecoes = function () {
+        this.funcionariosSelecionados = [];
+        this.fornecedorSelecionado = new __WEBPACK_IMPORTED_MODULE_7__models_fornecedor__["a" /* Fornecedor */]();
+        this.funcionariosTerceirizadosSelecionados = [];
+    };
+    RealizadoPorPage.prototype.salvar = function (valid) {
+        if (valid) {
+            var realizadoPor_1 = new __WEBPACK_IMPORTED_MODULE_4__models_realizado_por__["a" /* RealizadoPor */]({
+                idGuid: __WEBPACK_IMPORTED_MODULE_10_angular2_uuid__["UUID"].UUID(),
+                idInspecao: this.inspecao.id,
+                idGuidInspecao: this.inspecao.idGuidInspecao,
+                tipoFuncionario: this.realizadoPor.tipoFuncionario,
+                idCentroCusto: this.realizadoPor.tipoFuncionario == 1 ? this.idCentroCusto : null,
+                nomeCentroCusto: this.realizadoPor.tipoFuncionario == 1 ? this.descricaoCentroCusto : null,
+                idFornecedor: this.realizadoPor.tipoFuncionario == 0 ? this.fornecedorSelecionado.id : null,
+                nomeFornecedor: this.realizadoPor.tipoFuncionario == 0 ? this.fornecedorSelecionado.nome : null,
+                delete: false,
+                nomesFuncionarios: this.realizadoPor.tipoFuncionario == 0 ?
+                    this.funcionariosTerceirizadosSelecionados.map(function (x) { return x.nome; }) : this.funcionariosSelecionados.map(function (x) { return x.nome; })
+            });
+            if (this.realizadoPor.tipoFuncionario == 0) {
+                this.funcionariosTerceirizadosSelecionados.forEach(function (item) {
+                    realizadoPor_1.funcionarios.push(new __WEBPACK_IMPORTED_MODULE_9__models_realizado_por_funcionario__["a" /* RealizadoPorFuncionario */]({
+                        idFuncionarioTerceirizado: item.id
+                    }));
                 });
-                _this.inspecoes.unshift(inspecao);
-                _this.inspecoesBackup.unshift(inspecao);
-                _this.criarInspecao(inspecao);
-            }
-        });
-    };
-    VerificacaoPage.prototype.abrirItensInspecao = function (inspecao) {
-        var _this = this;
-        var modal = this.modalCtrl.create("RealizarVerificacaoPage", { inspecao: inspecao, descServico: this.broadcomb, servico: this.servico });
-        this.itensBackup = [];
-        this.statusBackup = inspecao.status;
-        this.idFuncionarioAprovadoBackup = inspecao.idFuncionarioAprovado;
-        this.idFuncionarioInspecionadoBackup = inspecao.idFuncionarioInspecionado;
-        inspecao.inspecaoObraItens.forEach(function (element) {
-            _this.itensBackup.push(new __WEBPACK_IMPORTED_MODULE_8__models_item_inspecao__["a" /* ItemInspecao */](element));
-        });
-        modal.present();
-        modal.onWillDismiss(function (data) {
-            if (data.concluido) {
-                data.inspecao.qtdA = data.inspecao.inspecaoObraItens.filter(function (x) { return x.inspecao1 == 'A'; }).length;
-                data.inspecao.qtdNA = data.inspecao.inspecaoObraItens.filter(function (x) { return x.inspecao1 == 'N'; }).length;
-                data.inspecao.qtdR = data.inspecao.inspecaoObraItens.filter(function (x) { return x.inspecao1 == 'R'; }).length;
-                data.inspecao.qtdX = data.inspecao.inspecaoObraItens.filter(function (x) { return x.inspecao1 == 'X'; }).length;
-                data.inspecao.qtdRA = data.inspecao.inspecaoObraItens.filter(function (x) { return x.inspecao2 == 'A'; }).length;
-                var index = _this.inspecoesBackup.findIndex(function (x) { return data.inspecao.id != 0 ? (x.id == data.inspecao.id) : (x.idGuidInspecao == data.inspecao.idGuidInspecao); });
-                _this.inspecoesBackup[index] = data.inspecao;
-                _this.inspecoes = _this.inspecoesBackup.slice();
-                _this.editarInspecao(data.inspecao, "Realização da verificação");
             }
             else {
-                data.inspecao.inspecaoObraItens = _this.itensBackup.slice();
-                data.inspecao.status = _this.statusBackup;
-                data.inspecao.idFuncionarioAprovado = _this.idFuncionarioAprovadoBackup;
-                data.inspecao.idFuncionarioInspecionado = _this.idFuncionarioInspecionadoBackup;
-                var index = _this.inspecoesBackup.findIndex(function (x) { return data.inspecao.id != 0 ? (x.id == data.inspecao.id) : (x.idGuidInspecao == data.inspecao.idGuidInspecao); });
-                _this.inspecoesBackup[index] = data.inspecao;
-                _this.inspecoes = _this.inspecoesBackup.slice();
+                this.funcionariosSelecionados.forEach(function (item) {
+                    realizadoPor_1.funcionarios.push(new __WEBPACK_IMPORTED_MODULE_9__models_realizado_por_funcionario__["a" /* RealizadoPorFuncionario */]({
+                        idFuncionario: item.id
+                    }));
+                });
             }
-        });
-    };
-    VerificacaoPage.prototype.editar = function (inspecao) {
-        var _this = this;
-        var modal = this.modalCtrl.create("ManterVerificacaoPage", { inspecao: inspecao, itemChecklist: this.itemChecklist });
-        this.inspecaoBackup = new __WEBPACK_IMPORTED_MODULE_3__models_inspecao__["a" /* Inspecao */](inspecao);
-        modal.present();
-        modal.onWillDismiss(function (inspecao) {
-            if (inspecao) {
-                var index = _this.inspecoesBackup.findIndex(function (x) { return inspecao.id != 0 ? (x.id == inspecao.id) : (x.idGuidInspecao == inspecao.idGuidInspecao); });
-                _this.inspecoesBackup[index] = inspecao;
-                _this.inspecoes = _this.inspecoesBackup.slice();
-                _this.editarInspecao(inspecao, "Edição da verificação");
-            }
-            else {
-                var inspecaoArray = _this.inspecoes.find(function (x) { return x.idGuidInspecao ? (x.idGuidInspecao == _this.inspecaoBackup.idGuidInspecao) : (x.id == _this.inspecaoBackup.id); });
-                inspecaoArray.dataInspecao = _this.inspecaoBackup.dataInspecao;
-                inspecaoArray.dataEncerramento = _this.inspecaoBackup.dataEncerramento;
-                inspecaoArray.campo1 = _this.inspecaoBackup.campo1;
-                inspecaoArray.campo2 = _this.inspecaoBackup.campo2;
-                inspecaoArray.campo3 = _this.inspecaoBackup.campo3;
-                inspecaoArray.campo4 = _this.inspecaoBackup.campo4;
-            }
-        });
-    };
-    VerificacaoPage.prototype.editarInspecao = function (inspecao, acao) {
-        var _this = this;
-        this.storage.ready().then(function () {
-            var atualizacoesArray = [];
-            _this.storage.get('atualizacoes').then(function (atualizacoes) {
-                var alteracao = new __WEBPACK_IMPORTED_MODULE_5__models_alteracao__["a" /* Alteracao */]({ id: __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__["UUID"].UUID(), idInspecao: inspecao.id, idGuidInspecao: inspecao.idGuidInspecao, idArea: _this.servico.idArea, idGuidArea: _this.servico.idAreaGuid, idServico: _this.servico.id, idGuidServico: _this.servico.idGuidServico, tipo: "Update", entidade: "Inspecao", valor: JSON.stringify(inspecao), data: new Date(), descricao: acao + " '" + inspecao.campo1 + "' no serviço '" + _this.servico.descricao + "'.", obraId: _this.servico.idObra });
-                if (atualizacoes) {
-                    atualizacoesArray = atualizacoes;
-                    atualizacoesArray.push(alteracao);
-                }
-                else {
-                    atualizacoesArray.push(alteracao);
-                }
-                _this.storage.set('atualizacoes', atualizacoesArray);
-                _this.atualizarObraEdicao(inspecao);
-            });
-        });
-    };
-    VerificacaoPage.prototype.criarInspecao = function (inspecao) {
-        var _this = this;
-        this.storage.ready().then(function () {
-            var atualizacoesArray = [];
-            _this.storage.get('atualizacoes').then(function (atualizacoes) {
-                var alteracao = new __WEBPACK_IMPORTED_MODULE_5__models_alteracao__["a" /* Alteracao */]({ id: __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__["UUID"].UUID(), idInspecao: inspecao.id, idGuidInspecao: inspecao.idGuidInspecao, idArea: _this.servico.idArea, idGuidArea: _this.servico.idAreaGuid, idServico: _this.servico.id, idGuidServico: _this.servico.idGuidServico, tipo: "Insert", entidade: "Inspecao", valor: JSON.stringify(inspecao), data: new Date(), descricao: "Criação da verificação '" + inspecao.campo1 + "' no serviço '" + _this.servico.descricao + "'.", obraId: _this.servico.idObra });
-                if (atualizacoes) {
-                    atualizacoesArray = atualizacoes;
-                    atualizacoesArray.push(alteracao);
-                }
-                else {
-                    atualizacoesArray.push(alteracao);
-                }
-                _this.storage.set('atualizacoes', atualizacoesArray);
-                _this.atualizarObraCriacao(inspecao);
-            });
-        });
-    };
-    VerificacaoPage.prototype.filtrar = function (valor) {
-        if (valor.length == 0) {
-            this.inspecoes = this.inspecoesBackup.slice();
+            this.inspecao.realizadosPor.push(realizadoPor_1);
+            this.gerarAtualizacaoDeCriacao(realizadoPor_1);
+            this.realizadoPor = new __WEBPACK_IMPORTED_MODULE_4__models_realizado_por__["a" /* RealizadoPor */]();
+            this.cadastrando = false;
         }
         else {
-            this.inspecoes = this.inspecoesBackup.filter(function (item) {
-                return item.campo1.toLowerCase().indexOf(valor.toLowerCase()) > -1;
-            });
+            this.toastService.presentToastWarning("Você precisa preencher todos os campos.");
         }
     };
-    VerificacaoPage.prototype.confirmarExclusao = function (item) {
-        var _this = this;
-        var mensagem;
-        if (!item.delete) {
-            mensagem = "Deseja realmente excluir a verificação '" + item.campo1 + "'?";
-        }
-        else {
-            mensagem = "Deseja realmente reativar a verificação '" + item.campo1 + "'?";
-        }
-        this.messageService.exibirMensagemConfirmacao(mensagem, function () { _this.alterarSituacaoVerificacao(item); });
-    };
-    VerificacaoPage.prototype.alterarSituacaoVerificacao = function (item) {
+    RealizadoPorPage.prototype.gerarAtualizacaoDeCriacao = function (realizadoPor) {
         var _this = this;
         this.storage.ready().then(function () {
             var atualizacoesArray = [];
             _this.storage.get('atualizacoes').then(function (atualizacoes) {
-                item.delete = !item.delete;
-                var alteracao = new __WEBPACK_IMPORTED_MODULE_5__models_alteracao__["a" /* Alteracao */]({ id: __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__["UUID"].UUID(), idInspecao: item.id, idGuidInspecao: item.idGuidInspecao, idArea: _this.servico.idArea, idGuidArea: _this.servico.idAreaGuid, idServico: _this.servico.id, idGuidServico: _this.servico.idGuidServico, tipo: "Update", entidade: "Inspecao", valor: JSON.stringify(item), data: new Date(), descricao: (item.delete ? "Inativação" : "Ativação") + " da verificação '" + item.campo1 + "' no serviço '" + _this.servico.descricao + "'.", obraId: _this.servico.idObra });
+                var alteracao = new __WEBPACK_IMPORTED_MODULE_11__models_alteracao__["a" /* Alteracao */]({ id: __WEBPACK_IMPORTED_MODULE_10_angular2_uuid__["UUID"].UUID(), idRealizadoPor: realizadoPor.id, idGuidRealizadoPor: realizadoPor.idGuid, idInspecao: _this.inspecao.id, idGuidInspecao: _this.inspecao.idGuidInspecao, tipo: "Insert", entidade: "RealizadoPor", valor: JSON.stringify(realizadoPor), data: new Date(), descricao: "Definição de 'Realizado Por' no serviço '" + _this.servico.descricao + "." });
                 if (atualizacoes) {
                     atualizacoesArray = atualizacoes;
                     atualizacoesArray.push(alteracao);
@@ -536,27 +370,40 @@ var VerificacaoPage = /** @class */ (function () {
                     atualizacoesArray.push(alteracao);
                 }
                 _this.storage.set('atualizacoes', atualizacoesArray);
-                _this.atualizarObraSituacao(item);
+                _this.atualizarObraEdicao(_this.inspecao);
             });
         });
     };
-    VerificacaoPage.prototype.atualizarObraSituacao = function (item) {
-        return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
-            var obras;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.storageServiceUtils.montarObra()];
-                    case 1:
-                        obras = _a.sent();
-                        obras.find(function (x) { return x.id == _this.servico.idObra; }).areas.find(function (x) { return _this.servico.idAreaGuid ? (x.idGuid == _this.servico.idAreaGuid) : (x.id == _this.servico.idArea); }).servicos.find(function (x) { return _this.servico.idGuidServico ? (x.idGuidServico == _this.servico.idGuidServico) : (x.id == _this.servico.id); }).inspecoesObra.find(function (x) { return item.idGuidInspecao ? (x.idGuidInspecao == item.idGuidInspecao) : (x.id == item.id); }).delete = item.delete;
-                        this.storageServiceUtils.armazenarObraNoStorage(obras);
-                        return [2 /*return*/];
+    RealizadoPorPage.prototype.gerarAtualizacaoDeStatus = function (realizadoPor) {
+        var _this = this;
+        this.storage.ready().then(function () {
+            var atualizacoesArray = [];
+            _this.storage.get('atualizacoes').then(function (atualizacoes) {
+                var alteracao = new __WEBPACK_IMPORTED_MODULE_11__models_alteracao__["a" /* Alteracao */]({ id: __WEBPACK_IMPORTED_MODULE_10_angular2_uuid__["UUID"].UUID(), idRealizadoPor: realizadoPor.id, idGuidRealizadoPor: realizadoPor.idGuid, tipo: "Update", entidade: "RealizadoPor", valor: JSON.stringify(realizadoPor), data: new Date(), descricao: "Remoção de 'Realizado Por' no serviço '" + _this.servico.descricao + "." });
+                if (atualizacoes) {
+                    atualizacoesArray = atualizacoes;
+                    atualizacoesArray.push(alteracao);
                 }
+                else {
+                    atualizacoesArray.push(alteracao);
+                }
+                _this.storage.set('atualizacoes', atualizacoesArray);
+                _this.atualizarObraEdicao(_this.inspecao);
             });
         });
     };
-    VerificacaoPage.prototype.atualizarObraEdicao = function (item) {
+    RealizadoPorPage.prototype.remover = function (item) {
+        var realizadoPor = this.inspecao.realizadosPor.find(function (x) { return item.id ? x.id == item.id : x.idGuid == item.idGuid; });
+        if (item.id) {
+            realizadoPor.delete = !realizadoPor.delete;
+        }
+        else {
+            var indice = this.inspecao.realizadosPor.findIndex(function (x) { return x.idGuid == item.idGuid; });
+            this.inspecao.realizadosPor.splice(indice, 1);
+        }
+        this.gerarAtualizacaoDeStatus(realizadoPor);
+    };
+    RealizadoPorPage.prototype.atualizarObraEdicao = function (item) {
         return __awaiter(this, void 0, void 0, function () {
             var _this = this;
             var obras, inspecao;
@@ -566,114 +413,84 @@ var VerificacaoPage = /** @class */ (function () {
                     case 1:
                         obras = _a.sent();
                         inspecao = obras.find(function (x) { return x.id == _this.servico.idObra; }).areas.find(function (x) { return _this.servico.idAreaGuid ? (x.idGuid == _this.servico.idAreaGuid) : (x.id == _this.servico.idArea); }).servicos.find(function (x) { return _this.servico.idGuidServico ? (x.idGuidServico == _this.servico.idGuidServico) : (x.id == _this.servico.id); }).inspecoesObra.find(function (x) { return item.idGuidInspecao ? (x.idGuidInspecao == item.idGuidInspecao) : (x.id == item.id); });
-                        inspecao.campo1 = item.campo1;
-                        inspecao.campo2 = item.campo2;
-                        inspecao.campo3 = item.campo3;
-                        inspecao.campo4 = item.campo4;
-                        inspecao.dataInspecao = item.dataInspecao;
-                        inspecao.dataEncerramento = item.dataEncerramento;
-                        inspecao.idFuncionarioAprovado = item.idFuncionarioAprovado;
-                        inspecao.idFuncionarioInspecionado = item.idFuncionarioInspecionado;
-                        inspecao.status = item.status;
-                        inspecao.situacao = item.situacao;
-                        inspecao.inspecaoObraItens = item.inspecaoObraItens;
+                        inspecao.realizadosPor = item.realizadosPor;
                         this.storageServiceUtils.armazenarObraNoStorage(obras);
                         return [2 /*return*/];
                 }
             });
         });
     };
-    VerificacaoPage.prototype.atualizarObraCriacao = function (item) {
-        return __awaiter(this, void 0, void 0, function () {
-            var _this = this;
-            var obras;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.storageServiceUtils.montarObra()];
-                    case 1:
-                        obras = _a.sent();
-                        obras.find(function (x) { return x.id == _this.servico.idObra; }).areas.find(function (x) { return _this.servico.idAreaGuid ? (x.idGuid == _this.servico.idAreaGuid) : (x.id == _this.servico.idArea); }).servicos.find(function (x) { return _this.servico.idGuidServico ? (x.idGuidServico == _this.servico.idGuidServico) : (x.id == _this.servico.id); }).inspecoesObra.unshift(item);
-                        this.storageServiceUtils.armazenarObraNoStorage(obras);
-                        return [2 /*return*/];
-                }
-            });
-        });
-    };
-    VerificacaoPage.prototype.exibirOpcoes = function (inspecao) {
-        if (inspecao.status == 0) {
-            this.exibirTodasOpcoes(inspecao);
-        }
-        else {
-            this.exibirOpcoesRestritas(inspecao);
-        }
-    };
-    VerificacaoPage.prototype.exibirTodasOpcoes = function (inspecao) {
-        var _this = this;
-        var actionSheet = this.actionSheetCtrl.create({
-            "buttons": [
-                {
-                    "text": "Realizar inspeção",
-                    handler: function () {
-                        _this.abrirItensInspecao(inspecao);
-                    }
-                },
-                {
-                    "text": "Editar",
-                    handler: function () {
-                        _this.editar(inspecao);
-                    }
-                },
-                {
-                    "text": !inspecao.delete ? "Excluir" : "Reativar",
-                    handler: function () {
-                        _this.confirmarExclusao(inspecao);
-                    }
-                },
-                {
-                    "text": "Cancelar",
-                    "role": "cancel"
-                }
-            ]
-        });
-        actionSheet.present();
-    };
-    VerificacaoPage.prototype.exibirOpcoesRestritas = function (inspecao) {
-        var _this = this;
-        var actionSheet = this.actionSheetCtrl.create({
-            "buttons": [
-                {
-                    "text": "Realizar inspeção",
-                    handler: function () {
-                        _this.abrirItensInspecao(inspecao);
-                    }
-                },
-                {
-                    "text": "Cancelar",
-                    "role": "cancel"
-                }
-            ]
-        });
-        actionSheet.present();
-    };
-    VerificacaoPage.prototype.voltarHome = function () {
-        this.navCtrl.setRoot("HomePage");
-    };
-    VerificacaoPage = __decorate([
+    RealizadoPorPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-verificacao',template:/*ion-inline-start:"/Users/user926185/Desktop/sgq/App/sgq/src/pages/verificacao/verificacao.html"*/'<ion-header>\n    <ion-navbar class="pad-nav-page-nt">\n        <ion-row>\n            <ion-col col-10 class="ptb-0">\n            </ion-col>\n            <ion-col col-2 class="ptb-0" (click)="voltarHome()">\n                <div buy>\n                    <ion-icon class="icon-menu home-icon" name="home"></ion-icon>\n                </div>\n            </ion-col>\n        </ion-row>\n    </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <h2 text-center text-wrap class="broadcomb">{{broadcomb.toUpperCase()}}</h2>\n    <h2 padding text-center class="aviso" *ngIf="inspecoes.length < 1">Nenhum registro encontrado.</h2>\n    <ion-grid no-padding>\n        <ion-row *ngIf="servico.status == 0">\n            <button ion-button default-button block text-capitalize box-shadow margin-bottom class="button-novo"\n                (click)="novaInspecao()">Nova inspeção</button>\n        </ion-row>\n        <ion-row>\n            <ion-col class="col-search" col-12 *ngIf="inspecoesBackup.length > 0">\n                <ion-searchbar [placeholder]="\'Filtrar pelo local\'" (ionInput)="filtrar($event.target.value)"></ion-searchbar>\n            </ion-col>\n            <ion-col col-12>\n                <ion-list radio-group no-margin [(ngModel)]="servico.status" name="status" (ngModelChange)="atualizarStatus()">\n                    <ion-grid>\n                        <ion-row>\n                            <ion-col col-6>\n                                <ion-item radio>\n                                    <ion-label text-center>Em aberto</ion-label>\n                                    <ion-radio [value]="0"></ion-radio>\n                                </ion-item>\n                            </ion-col>\n                            <ion-col col-6>\n                                <ion-item radio>\n                                    <ion-label text-center>Finalizado</ion-label>\n                                    <ion-radio [value]="1"></ion-radio>\n                                </ion-item>\n                            </ion-col>\n                        </ion-row>\n                    </ion-grid>\n                </ion-list>\n            </ion-col>\n            <ion-col col-12>\n                <ion-list no-margin>\n                    <ion-item default-item no-lines [ngClass]="{\'novo-item\': !item.id, \'item-removido\': item.delete}"\n                        *ngFor="let item of inspecoes; let i = index;">\n                        <ion-row class="espacamento">\n                            <ion-col col-10 (click)="abrirItensInspecao(item)">\n                                <h2 item-title text-wrap *ngIf="itemChecklist.campo1">{{itemChecklist.campo1}}:\n                                    {{item.campo1}}</h2>\n                                <h2 item-title text-wrap *ngIf="itemChecklist.campo2">{{itemChecklist.campo2}}:\n                                    {{item.campo2}}</h2>\n                                <h2 item-title text-wrap *ngIf="itemChecklist.campo3">{{itemChecklist.campo3}}:\n                                    {{item.campo3}}</h2>\n                                <h2 item-title text-wrap *ngIf="itemChecklist.campo4">{{itemChecklist.campo4}}:\n                                    {{item.campo4}}</h2>\n                                <h3 item-situacao text-wrap>Situação: {{item.situacao}}</h3>\n                                <h3 item-situacao text-wrap>Abertura: {{item.dataInspecao ? (item.dataInspecao | date:\n                                    \'dd/MM/yyyy\') : \'Não informada\'}}</h3>\n                                <h3 item-situacao text-wrap>Encerramento: {{item.dataEncerramento ?\n                                    (item.dataEncerramento | date: \'dd/MM/yyyy\') : \'Não informada\'}}</h3>\n                            </ion-col>\n                            <ion-col col-2>\n                                <ion-icon name="more" icon-small item-right style="font-size: 32px !important; margin: 0px"\n                                    (click)="exibirOpcoes(item)"></ion-icon>\n                            </ion-col>\n                        </ion-row>\n                        <ion-row class="espacamento" style="padding: 0 0 10px 0 !important;">\n                            <ion-col col-1></ion-col>\n                            <ion-col col-2 style="background-color: blue;">\n                                <h2 item-title text-wrap no-margin text-center>NA</h2>\n                                <h3 item-situacao text-wrap no-margin text-center>{{item.qtdNA}}</h3>\n                            </ion-col>\n                            <ion-col col-2 style="background-color: darkgreen;">\n                                <h2 item-title text-wrap no-margin text-center>A</h2>\n                                <h3 item-situacao text-wrap no-margin text-center>{{item.qtdA}}</h3>\n                            </ion-col>\n                            <ion-col col-2 style="background-color: yellow;">\n                                <h2 text-wrap negrito no-margin text-center>R</h2>\n                                <h3 text-wrap negrito no-margin text-center>{{item.qtdR}}</h3>\n                            </ion-col>\n                            <ion-col col-2 style="background-color: red;">\n                                <h2 item-title text-wrap no-margin text-center>X</h2>\n                                <h3 item-situacao text-wrap no-margin text-center>{{item.qtdX}}</h3>\n                            </ion-col>\n                            <ion-col col-2 style="background-color: orange;">\n                                <h2 item-title text-wrap no-margin text-center>RA</h2>\n                                <h3 item-situacao text-wrap no-margin text-center>{{item.qtdRA}}</h3>\n                            </ion-col>\n                            <ion-col col-1></ion-col>\n                        </ion-row>\n                    </ion-item>\n                </ion-list>\n            </ion-col>\n        </ion-row>\n    </ion-grid>\n</ion-content>'/*ion-inline-end:"/Users/user926185/Desktop/sgq/App/sgq/src/pages/verificacao/verificacao.html"*/
+            selector: 'page-realizado-por',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\verificacao\realizado-por\realizado-por.html"*/'<ion-header>\n\n    <ion-navbar class="pad-nav-page-nt2">\n\n\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n    <ion-grid no-padding style="display: table-cell !important">\n\n        <ion-row *ngIf="!cadastrando">\n\n            <button ion-button default-button block text-capitalize box-shadow margin-bottom class="button-novo"\n\n                (click)="cadastrando = true">Adicionar</button>\n\n        </ion-row>\n\n        <ion-row *ngIf="!cadastrando">\n\n            <ion-list no-margin>\n\n                <ion-item default-item no-lines [ngClass]="{\'novo-item\': !item.id, \'item-removido\': item.delete}"\n\n                    *ngFor="let item of inspecao.realizadosPor; let i = index;">\n\n                    <ion-row class="espacamento">\n\n                        <ion-col col-10>\n\n                            <h2 item-title text-wrap>Empresa: {{ item.tipoFuncionario == 0 ? item.nomeFornecedor :\n\n                                item.nomeCentroCusto }}</h2>\n\n                            <h2 item-title text-wrap>Funcionários: {{ item.nomesFuncionarios }}</h2>\n\n                        </ion-col>\n\n                        <ion-col col-2>\n\n                            <ion-icon name="trash" icon-small item-right style="font-size: 32px !important; margin: 0px"\n\n                                (click)="remover(item)"></ion-icon>\n\n                        </ion-col>\n\n                    </ion-row>\n\n                </ion-item>\n\n            </ion-list>\n\n        </ion-row>\n\n        <ion-row padding-left padding-right *ngIf="cadastrando">\n\n            <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n\n                <form #cadastroForm="ngForm" padding-top>\n\n                    <ion-list radio-group no-margin [(ngModel)]="realizadoPor.tipoFuncionario" name="tipoFuncionario"\n\n                        (ngModelChange)="limparSelecoes()">\n\n                        <ion-grid>\n\n                            <ion-row>\n\n                                <ion-col col-6>\n\n                                    <ion-item radio>\n\n                                        <ion-label>Terceirizado</ion-label>\n\n                                        <ion-radio [value]="0" checked></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                                <ion-col col-6>\n\n                                    <ion-item radio>\n\n                                        <ion-label>Próprio</ion-label>\n\n                                        <ion-radio [value]="1"></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                            </ion-row>\n\n                        </ion-grid>\n\n                    </ion-list>\n\n                    <ion-item text-center transparent *ngIf="realizadoPor.tipoFuncionario == 0">\n\n                        <ion-label stacked>EMPRESA</ion-label>\n\n                        <ionic-selectable item-content [(ngModel)]="fornecedorSelecionado" [items]="fornecedores"\n\n                            itemValueField="id" itemTextField="nome" [canSearch]="true" name="fornecedorSelecionado"\n\n                            required>\n\n                        </ionic-selectable>\n\n                    </ion-item>\n\n                    <ion-item text-center transparent *ngIf="realizadoPor.tipoFuncionario == 1 || (realizadoPor.tipoFuncionario == 0 && fornecedorSelecionado.id)">\n\n                        <ion-label stacked>FUNCIONÁRIOS</ion-label>\n\n                        <ionic-selectable *ngIf="realizadoPor.tipoFuncionario == 1" item-content [(ngModel)]="funcionariosSelecionados"\n\n                            [items]="funcionarios" itemValueField="id" itemTextField="nome" [canSearch]="true"\n\n                            [isMultiple]="true" name="funcionariosSelecionados" required>\n\n                        </ionic-selectable>\n\n                        <ionic-selectable *ngIf="realizadoPor.tipoFuncionario == 0" item-content [(ngModel)]="funcionariosTerceirizadosSelecionados"\n\n                            [items]="fornecedorSelecionado.funcionariosTerceirizados" itemValueField="id" itemTextField="nome"\n\n                            [canSearch]="true" [isMultiple]="true" name="funcionariosTerceirizadosSelecionados">\n\n                        </ionic-selectable>\n\n                    </ion-item>\n\n                    <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: rgb(33,177,75) !important;"\n\n                        (click)="salvar(cadastroForm.valid)">Salvar</button>\n\n                </form>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-grid>\n\n</ion-content>'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\verificacao\realizado-por\realizado-por.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */],
-            __WEBPACK_IMPORTED_MODULE_10__utils_storage_service_utils__["a" /* StorageServiceUtils */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ModalController */],
-            __WEBPACK_IMPORTED_MODULE_7__utils_message_service__["a" /* MessageService */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */]])
-    ], VerificacaoPage);
-    return VerificacaoPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["u" /* ViewController */],
+            __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */],
+            __WEBPACK_IMPORTED_MODULE_5__utils_storage_service_utils__["a" /* StorageServiceUtils */],
+            __WEBPACK_IMPORTED_MODULE_8__utils_toast_service__["a" /* ToastService */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */]])
+    ], RealizadoPorPage);
+    return RealizadoPorPage;
 }());
 
-//# sourceMappingURL=verificacao.js.map
+//# sourceMappingURL=realizado-por.js.map
+
+/***/ }),
+
+/***/ 914:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RealizadoPor; });
+var RealizadoPor = /** @class */ (function () {
+    function RealizadoPor(values) {
+        if (values === void 0) { values = {}; }
+        this.tipoFuncionario = 0;
+        this.nomeCentroCusto = "";
+        this.nomeFornecedor = "";
+        this.funcionarios = [];
+        this.nomesFuncionarios = [];
+        Object.assign(this, values);
+    }
+    return RealizadoPor;
+}());
+
+//# sourceMappingURL=realizado-por.js.map
+
+/***/ }),
+
+/***/ 915:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Fornecedor; });
+var Fornecedor = /** @class */ (function () {
+    function Fornecedor(values) {
+        if (values === void 0) { values = {}; }
+        this.funcionariosTerceirizados = [];
+        Object.assign(this, values);
+    }
+    return Fornecedor;
+}());
+
+//# sourceMappingURL=fornecedor.js.map
+
+/***/ }),
+
+/***/ 916:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RealizadoPorFuncionario; });
+var RealizadoPorFuncionario = /** @class */ (function () {
+    function RealizadoPorFuncionario(values) {
+        if (values === void 0) { values = {}; }
+        Object.assign(this, values);
+    }
+    return RealizadoPorFuncionario;
+}());
+
+//# sourceMappingURL=realizado-por-funcionario.js.map
 
 /***/ })
 

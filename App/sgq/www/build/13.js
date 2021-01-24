@@ -1,14 +1,14 @@
 webpackJsonp([13],{
 
-/***/ 764:
+/***/ 777:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AreaCadastroPageModule", function() { return AreaCadastroPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RealizarVerificacaoPageModule", function() { return RealizarVerificacaoPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__area_cadastro__ = __webpack_require__(896);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__realizar_verificacao__ = __webpack_require__(917);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_selectable__ = __webpack_require__(353);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -20,90 +20,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AreaCadastroPageModule = /** @class */ (function () {
-    function AreaCadastroPageModule() {
+var RealizarVerificacaoPageModule = /** @class */ (function () {
+    function RealizarVerificacaoPageModule() {
     }
-    AreaCadastroPageModule = __decorate([
+    RealizarVerificacaoPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__area_cadastro__["a" /* AreaCadastroPage */]
+                __WEBPACK_IMPORTED_MODULE_2__realizar_verificacao__["a" /* RealizarVerificacaoPage */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__area_cadastro__["a" /* AreaCadastroPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__realizar_verificacao__["a" /* RealizarVerificacaoPage */]),
                 __WEBPACK_IMPORTED_MODULE_3_ionic_selectable__["a" /* IonicSelectableModule */]
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"]]
         })
-    ], AreaCadastroPageModule);
-    return AreaCadastroPageModule;
+    ], RealizarVerificacaoPageModule);
+    return RealizarVerificacaoPageModule;
 }());
 
-//# sourceMappingURL=area-cadastro.module.js.map
+//# sourceMappingURL=realizar-verificacao.module.js.map
 
 /***/ }),
 
-/***/ 779:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var UUID = (function () {
-    function UUID() {
-        // no-op
-    }
-    UUID.UUID = function () {
-        if (typeof (window) !== "undefined" && typeof (window.crypto) !== "undefined" && typeof (window.crypto.getRandomValues) !== "undefined") {
-            // If we have a cryptographically secure PRNG, use that
-            // http://stackoverflow.com/questions/6906916/collisions-when-generating-uuids-in-javascript
-            var buf = new Uint16Array(8);
-            window.crypto.getRandomValues(buf);
-            return (this.pad4(buf[0]) + this.pad4(buf[1]) + "-" + this.pad4(buf[2]) + "-" + this.pad4(buf[3]) + "-" + this.pad4(buf[4]) + "-" + this.pad4(buf[5]) + this.pad4(buf[6]) + this.pad4(buf[7]));
-        }
-        else {
-            // Otherwise, just use Math.random
-            // https://stackoverflow.com/questions/105034/create-guid-uuid-in-javascript
-            // https://stackoverflow.com/questions/11605068/why-does-jshint-argue-against-bitwise-operators-how-should-i-express-this-code
-            return this.random4() + this.random4() + "-" + this.random4() + "-" + this.random4() + "-" +
-                this.random4() + "-" + this.random4() + this.random4() + this.random4();
-        }
-    };
-    UUID.pad4 = function (num) {
-        var ret = num.toString(16);
-        while (ret.length < 4) {
-            ret = "0" + ret;
-        }
-        return ret;
-    };
-    UUID.random4 = function () {
-        return Math.floor((1 + Math.random()) * 0x10000)
-            .toString(16)
-            .substring(1);
-    };
-    return UUID;
-}());
-exports.UUID = UUID;
-//# sourceMappingURL=index.js.map
-
-/***/ }),
-
-/***/ 795:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Alteracao; });
-var Alteracao = /** @class */ (function () {
-    function Alteracao(values) {
-        if (values === void 0) { values = {}; }
-        Object.assign(this, values);
-    }
-    return Alteracao;
-}());
-
-//# sourceMappingURL=alteracao.js.map
-
-/***/ }),
-
-/***/ 809:
+/***/ 798:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -137,45 +76,80 @@ var Servico = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 823:
+/***/ 800:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Area; });
-var Area = /** @class */ (function () {
-    function Area(values) {
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Inspecao; });
+var Inspecao = /** @class */ (function () {
+    function Inspecao(values) {
         if (values === void 0) { values = {}; }
         this.id = 0;
-        this.idGuid = '';
-        this.idObra = 0;
+        this.idGuidInspecao = '';
+        this.idGuidServico = '';
+        this.campo1 = "";
+        this.campo2 = "";
+        this.campo3 = "";
+        this.campo4 = "";
         this.status = 0;
         this.situacao = 'Em aberto';
         this.delete = false;
-        this.servicos = [];
+        this.dataHoraAlteracao = new Date();
+        this.qtdNA = 0;
+        this.qtdA = 0;
+        this.qtdR = 0;
+        this.qtdRA = 0;
+        this.qtdX = 0;
+        this.inspecaoObraItens = [];
+        this.ocorrencias = [];
+        this.realizadosPor = [];
         Object.assign(this, values);
     }
-    return Area;
+    return Inspecao;
 }());
 
-//# sourceMappingURL=area.js.map
+//# sourceMappingURL=inspecao.js.map
 
 /***/ }),
 
-/***/ 896:
+/***/ 827:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AreaCadastroPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ItemInspecao; });
+var ItemInspecao = /** @class */ (function () {
+    function ItemInspecao(values) {
+        if (values === void 0) { values = {}; }
+        this.id = 0;
+        this.idInspecaoObra = 0;
+        this.idGuidInspecao = '';
+        this.idGuidItemServico = '';
+        this.inspecao1 = '';
+        this.inspecao2 = '';
+        this.delete = false;
+        this.dataHoraAlteracao = new Date();
+        Object.assign(this, values);
+    }
+    return ItemInspecao;
+}());
+
+//# sourceMappingURL=item-inspecao.js.map
+
+/***/ }),
+
+/***/ 917:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RealizarVerificacaoPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_area__ = __webpack_require__(823);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_alteracao__ = __webpack_require__(795);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_toast_service__ = __webpack_require__(351);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__ = __webpack_require__(779);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_uuid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_angular2_uuid__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__models_servico__ = __webpack_require__(809);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utils_storage_service_utils__ = __webpack_require__(156);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_inspecao__ = __webpack_require__(800);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_funcionario__ = __webpack_require__(918);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_toast_service__ = __webpack_require__(350);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__models_item_inspecao__ = __webpack_require__(827);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__models_servico__ = __webpack_require__(798);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -228,125 +202,192 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 
 
 
-
-var AreaCadastroPage = /** @class */ (function () {
-    function AreaCadastroPage(storage, navParams, storageServiceUtils, toastService, viewCtrl) {
-        this.storage = storage;
-        this.navParams = navParams;
-        this.storageServiceUtils = storageServiceUtils;
-        this.toastService = toastService;
+var RealizarVerificacaoPage = /** @class */ (function () {
+    function RealizarVerificacaoPage(viewCtrl, storage, actionSheetCtrl, toastService, modalCtrl, navParams, navCtrl) {
         this.viewCtrl = viewCtrl;
-        this.itens = [];
-        this.area = new __WEBPACK_IMPORTED_MODULE_2__models_area__["a" /* Area */]();
-        this.opcoesItens = [];
-        this.opcoesEscolhidas = [];
-        this.servicosEscolhidos = [];
-        this.servicosEscolhidosNovos = [];
-        this.obraId = this.navParams.data.obraId;
-        this.obterItensChecklist();
+        this.storage = storage;
+        this.actionSheetCtrl = actionSheetCtrl;
+        this.toastService = toastService;
+        this.modalCtrl = modalCtrl;
+        this.navParams = navParams;
+        this.navCtrl = navCtrl;
+        this.inspecao = new __WEBPACK_IMPORTED_MODULE_2__models_inspecao__["a" /* Inspecao */]();
+        this.exibirPorCentroCusto = true;
+        this.servico = new __WEBPACK_IMPORTED_MODULE_7__models_servico__["a" /* Servico */]();
+        this.descServico = '';
+        this.funcionarios = [];
+        this.funcionarioInspecionado = new __WEBPACK_IMPORTED_MODULE_3__models_funcionario__["a" /* Funcionario */]();
+        this.funcionarioAprovado = new __WEBPACK_IMPORTED_MODULE_3__models_funcionario__["a" /* Funcionario */]();
+        this.limpaNA1 = false;
+        this.limpaA1 = false;
+        this.limpaR1 = false;
+        this.limpaX1 = false;
+        this.limpaRA2 = false;
+        this.limpaX2 = false;
+        this.ultimoItem = new __WEBPACK_IMPORTED_MODULE_6__models_item_inspecao__["a" /* ItemInspecao */]();
+        this.descServico = this.navParams.data.descServico;
+        this.servico = this.navParams.data.servico;
+        this.inspecao = this.navParams.data.inspecao;
+        this.tratarDatas();
+        this.obterFuncionarios();
     }
-    AreaCadastroPage.prototype.obterItensChecklist = function () {
-        var _this = this;
-        this.storage.ready().then(function () {
-            _this.storage.get('itensChecklist').then(function (itens) {
-                _this.opcoesItens = itens;
-                _this.opcoesItens.forEach(function (item) {
-                    item.descricao = item.codigo + " - " + item.descricao;
-                    item.idGuid = item.idGuid ? item.idGuid : (item.id + "");
-                });
-            });
-        });
-    };
-    AreaCadastroPage.prototype.setaServicoEscolhido = function (event) {
-        this.servicosEscolhidos = event.value.map(function (x) { return x.id; });
-        this.servicosEscolhidosNovos = event.value.map(function (x) { return x.idGuid; });
-        this.servicosEscolhidos = this.servicosEscolhidos.filter(function (x) { return x != 0; });
-        this.servicosEscolhidosNovos = this.servicosEscolhidosNovos.filter(function (x) { return x.length > 10; });
-    };
-    AreaCadastroPage.prototype.salvar = function (formValido) {
-        var _this = this;
-        if (formValido) {
-            this.area.idGuid = __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__["UUID"].UUID();
-            this.servicosEscolhidos.forEach(function (item) {
-                var servico = new __WEBPACK_IMPORTED_MODULE_7__models_servico__["a" /* Servico */]();
-                servico.idGuidServico = __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__["UUID"].UUID();
-                servico.idChecklist = item;
-                servico.idObra = _this.obraId;
-                servico.idAreaGuid = _this.area.idGuid;
-                var servicoEscolhido = _this.opcoesItens.find(function (x) { return x.id == item; });
-                servico.itensChecklistServico = servicoEscolhido.itensChecklistServico;
-                servico.descricao = servicoEscolhido.descricao;
-                servico.tipo = servicoEscolhido.tipo;
-                _this.area.servicos.push(servico);
-            });
-            this.servicosEscolhidosNovos.forEach(function (item) {
-                var servico = new __WEBPACK_IMPORTED_MODULE_7__models_servico__["a" /* Servico */]();
-                servico.idGuidServico = __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__["UUID"].UUID();
-                servico.idChecklistGuid = item;
-                servico.idObra = _this.obraId;
-                servico.idAreaGuid = _this.area.idGuid;
-                var servicoEscolhido = _this.opcoesItens.find(function (x) { return x.idGuid == item; });
-                servico.itensChecklistServico = servicoEscolhido.itensChecklistServico;
-                servico.descricao = servicoEscolhido.descricao;
-                servico.tipo = servicoEscolhido.tipo;
-                _this.area.servicos.push(servico);
-            });
-            this.storage.ready().then(function () {
-                var atualizacoesArray = [];
-                _this.storage.get('atualizacoes').then(function (atualizacoes) {
-                    _this.area.idObra = _this.obraId;
-                    var alteracao = new __WEBPACK_IMPORTED_MODULE_4__models_alteracao__["a" /* Alteracao */]({ id: __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__["UUID"].UUID(), idArea: _this.area.id, idGuidArea: _this.area.idGuid, tipo: "Insert", entidade: "Area", valor: JSON.stringify(_this.area), data: new Date(), descricao: "Inserção da área: " + _this.area.descricao, obraId: _this.obraId });
-                    if (atualizacoes) {
-                        atualizacoesArray = atualizacoes;
-                        atualizacoesArray.push(alteracao);
-                    }
-                    else {
-                        atualizacoesArray.push(alteracao);
-                    }
-                    _this.storage.set('atualizacoes', atualizacoesArray);
-                    _this.atualizarObra();
-                });
-            });
+    RealizarVerificacaoPage.prototype.tratarDatas = function () {
+        if (this.inspecao.dataInspecao) {
+            if (this.inspecao.dataInspecao.toString().indexOf("GMT") == -1) {
+                this.dataAbertura = this.inspecao.dataInspecao.toString().split("T")[0];
+            }
+            else {
+                this.dataAbertura = this.inspecao.dataInspecao.toISOString().split("T")[0];
+            }
         }
-        else {
-            this.toastService.presentToastWarning("Preencha todos os campos.");
+        if (this.inspecao.dataEncerramento) {
+            if (this.inspecao.dataEncerramento.toString().indexOf("GMT") == -1) {
+                this.dataEncerramento = this.inspecao.dataEncerramento.toString().split("T")[0];
+            }
+            else {
+                this.dataEncerramento = this.inspecao.dataEncerramento.toISOString().split("T")[0];
+            }
         }
     };
-    AreaCadastroPage.prototype.atualizarObra = function () {
+    RealizarVerificacaoPage.prototype.setaFuncionarioInspecionado = function (event) {
+        this.inspecao.idFuncionarioInspecionado = event.value.id;
+    };
+    RealizarVerificacaoPage.prototype.setaFuncionarioAprovado = function (event) {
+        this.inspecao.idFuncionarioAprovado = event.value.id;
+    };
+    RealizarVerificacaoPage.prototype.obterFuncionarios = function () {
         return __awaiter(this, void 0, void 0, function () {
             var _this = this;
-            var obras;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.storageServiceUtils.montarObra()];
+            var _a, obras, obra;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0: return [4 /*yield*/, this.storage.ready()];
                     case 1:
-                        obras = _a.sent();
-                        this.area.situacao = this.area.status == 0 ? 'Em aberto' : 'Finalizado';
-                        obras.find(function (x) { return x.id == _this.obraId; }).areas.unshift(this.area);
-                        this.storageServiceUtils.armazenarObraNoStorage(obras);
-                        this.viewCtrl.dismiss(this.area);
+                        _b.sent();
+                        _a = this;
+                        return [4 /*yield*/, this.storage.get('funcionarios')];
+                    case 2:
+                        _a.funcionarios = _b.sent();
+                        return [4 /*yield*/, this.storage.get('obras')];
+                    case 3:
+                        obras = _b.sent();
+                        obra = obras.find(function (x) { return x.id == _this.servico.idObra; });
+                        if (this.exibirPorCentroCusto) {
+                            this.funcionarios = this.funcionarios.filter(function (x) { return x.idCentroCusto == null || x.idCentroCusto == obra.idCentroCusto; }).slice();
+                        }
+                        this.funcionarioAprovado = this.funcionarios.find(function (x) { return x.id == _this.inspecao.idFuncionarioAprovado; });
+                        this.funcionarioInspecionado = this.funcionarios.find(function (x) { return x.id == _this.inspecao.idFuncionarioInspecionado; });
                         return [2 /*return*/];
                 }
             });
         });
     };
-    AreaCadastroPage.prototype.voltar = function () {
-        this.viewCtrl.dismiss(null);
+    RealizarVerificacaoPage.prototype.atualizarSituacao = function () {
+        this.inspecao.situacao = this.inspecao.status == 0 ? 'Em aberto' : 'Finalizado';
     };
-    AreaCadastroPage = __decorate([
+    RealizarVerificacaoPage.prototype.salvar = function (valido) {
+        if (valido) {
+            this.inspecao.dataInspecao = this.dataAbertura ? new Date(this.dataAbertura + "T12:00:00") : null;
+            this.inspecao.dataEncerramento = this.dataEncerramento ? new Date(this.dataEncerramento + "T12:00:00") : null;
+            if (this.inspecao.status == 0) {
+                this.viewCtrl.dismiss({ inspecao: this.inspecao, concluido: true });
+            }
+            else {
+                var naoFinalizado = this.inspecao.inspecaoObraItens.some(function (x) { return x.inspecao1 == "" || (x.inspecao1 == "R" && x.inspecao2 == ""); });
+                if (naoFinalizado) {
+                    this.toastService.presentToastWarning("Não é possível salvar com status de finalizado pois existem inspeções pendentes.");
+                }
+                else {
+                    if (!this.inspecao.dataEncerramento) {
+                        this.toastService.presentToastWarning("Não é possível salvar com status de finalizado sem informar a data de encerramento.");
+                    }
+                    else {
+                        var itens1Recusado = this.inspecao.inspecaoObraItens.filter(function (x) { return x.inspecao1 == "R"; }).length;
+                        var itens2Recusado = this.inspecao.inspecaoObraItens.filter(function (x) { return x.inspecao2 == "X"; }).length;
+                        var totalRecusa = itens1Recusado + itens2Recusado;
+                        var totalOcorrenciaVinculada = this.inspecao.ocorrencias.length;
+                        if (totalOcorrenciaVinculada < totalRecusa) {
+                            this.toastService.presentToastWarning("Existem inspeções retrabalhadas e reprovadas sem registro de ocorrência.");
+                        }
+                        else {
+                            var ocorrenciasPreenchidas = this.inspecao.ocorrencias
+                                .filter(function (x) { return x.dataDescricao && x.dataTratativa && x.descricao && x.tratativa && !x.delete; }).length;
+                            var ocorrenciasAtivas = this.inspecao.ocorrencias.filter(function (x) { return !x.delete; }).length;
+                            if (ocorrenciasPreenchidas < ocorrenciasAtivas) {
+                                this.toastService.presentToastWarning("Existem ocorrências registradas com preenchimento incompleto.");
+                            }
+                            else {
+                                this.viewCtrl.dismiss({ inspecao: this.inspecao, concluido: true });
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        else {
+            this.toastService.presentToastWarning("É obrigatório informar o funcionário da inspeção.");
+        }
+    };
+    RealizarVerificacaoPage.prototype.voltar = function () {
+        this.viewCtrl.dismiss({ inspecao: this.inspecao, concluido: false });
+    };
+    RealizarVerificacaoPage.prototype.exibirOpcoes = function () {
+        var _this = this;
+        var actionSheet = this.actionSheetCtrl.create({
+            "buttons": [
+                {
+                    "text": "Ocorrências",
+                    handler: function () {
+                        _this.navCtrl.push("OcorrenciaPage", { inspecao: _this.inspecao, broadcomb: _this.descServico, servico: _this.servico });
+                    }
+                },
+                {
+                    "text": "Realizado Por",
+                    handler: function () {
+                        _this.navCtrl.push("RealizadoPorPage", { inspecao: _this.inspecao, servico: _this.servico });
+                    }
+                },
+                {
+                    "text": "Cancelar",
+                    "role": "cancel"
+                }
+            ]
+        });
+        actionSheet.present();
+    };
+    RealizarVerificacaoPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-area-cadastro',template:/*ion-inline-start:"/Users/user926185/Desktop/sgq/App/sgq/src/pages/area/cadastro/area-cadastro.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-row class="pad-nav-page" (click)="voltar()">\n            <button class="button-nav">\n                <span ion-text>Voltar</span>\n            </button>\n        </ion-row>\n    </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <ion-grid no-padding>\n        <ion-row padding-left padding-right>\n            <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n                <form #cadastroForm="ngForm" padding-top>\n                    <ion-list radio-group no-margin [(ngModel)]="area.status" name="status">\n                        <ion-grid>\n                            <ion-row>\n                                <ion-col col-6>\n                                    <ion-item radio>\n                                        <ion-label>Em aberto</ion-label>\n                                        <ion-radio [value]="0" checked></ion-radio>\n                                    </ion-item>\n                                </ion-col>\n                                <ion-col col-6>\n                                    <ion-item radio>\n                                        <ion-label>Finalizado</ion-label>\n                                        <ion-radio [value]="1"></ion-radio>\n                                    </ion-item>\n                                </ion-col>\n                            </ion-row>\n                        </ion-grid>\n                    </ion-list>\n                    <ion-item text-center transparent>\n                        <ion-label stacked>ÁREA</ion-label>\n                        <ion-input text-center required type="text" [(ngModel)]="area.descricao" name="area"></ion-input>\n                    </ion-item>\n                    <ion-item text-center transparent>\n                        <ion-label stacked>CHECKLIST</ion-label>\n                        <ionic-selectable \n                            item-content\n                            [(ngModel)]="servicoEscolhido"\n                            [items]="opcoesItens"\n                            itemValueField="idGuid"\n                            itemTextField="descricao"\n                            [canSearch]="true"\n                            [isMultiple]="true"\n                            name="servicosEscolhidos"\n                            (onChange)="setaServicoEscolhido($event)"\n                            required>\n                        </ionic-selectable>\n                    </ion-item>\n                    <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: rgb(33,177,75) !important;"\n                        (click)="salvar(cadastroForm.valid)">Salvar</button>\n                </form>\n            </ion-col>\n        </ion-row>\n    </ion-grid>\n</ion-content>'/*ion-inline-end:"/Users/user926185/Desktop/sgq/App/sgq/src/pages/area/cadastro/area-cadastro.html"*/
+            selector: 'page-realizar-verificacao',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\verificacao\realizar\realizar-verificacao.html"*/'<ion-header>\n\n    <ion-navbar class="pad-nav-page-nt2">\n\n        <ion-row>\n\n            <ion-col col-5 class="ptb-0" (click)="voltar()" style="padding-left: 15px !important;">\n\n                <button class="button-nav">\n\n                    <span ion-text>Voltar</span>\n\n                </button>\n\n            </ion-col>\n\n            <ion-col col-7 class="ptb-0 registros-align" style="padding-right: 20px !important;">\n\n                <button class="button-nav" (click)="exibirOpcoes()">\n\n                    <span ion-text>Registros</span>\n\n                </button>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n    <ion-grid no-padding>\n\n        <ion-row padding-left padding-right>\n\n            <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n\n                <form #cadastroForm="ngForm" padding-top>\n\n                    <ion-item text-center text-wrap transparent style="padding-bottom: 0 !important;">\n\n                        <ion-label style="font-size: 18px !important; font-weight: bold;" stacked>{{descServico.toUpperCase()}}</ion-label>\n\n                    </ion-item>\n\n                    <ion-item text-center transparent style="text-align: left !important; padding-bottom: 0px !important;">\n\n                        <ion-label>EXIBIR POR CENTRO DE CUSTO</ion-label>\n\n                        <ion-checkbox name="exibirPorCentroCusto" [(ngModel)]="exibirPorCentroCusto"\n\n                            (ngModelChange)="obterFuncionarios()"></ion-checkbox>\n\n                    </ion-item>\n\n                    <ion-item text-center transparent>\n\n                        <ion-label stacked>INSPECIONADO POR</ion-label>\n\n                        <ionic-selectable item-content [(ngModel)]="funcionarioInspecionado" [items]="funcionarios"\n\n                            itemValueField="id" itemTextField="nome" [canSearch]="true" [disabled]="servico.status == 1"\n\n                            name="idFuncionarioInspecionado" (onChange)="setaFuncionarioInspecionado($event)" required>\n\n                        </ionic-selectable>\n\n                    </ion-item>\n\n                    <ion-item text-center transparent>\n\n                        <ion-label stacked>APROVADOR POR</ion-label>\n\n                        <ionic-selectable item-content [(ngModel)]="funcionarioAprovado" [items]="funcionarios"\n\n                            itemValueField="id" itemTextField="nome" [canSearch]="true" [disabled]="servico.status == 1"\n\n                            name="idFuncionarioAprovado" (onChange)="setaFuncionarioAprovado($event)">\n\n                        </ionic-selectable>\n\n                    </ion-item>\n\n                    <ion-list radio-group no-margin [(ngModel)]="inspecao.status" name="status" (ngModelChange)="atualizarSituacao()"\n\n                        [disabled]="servico.status == 1">\n\n                        <ion-grid>\n\n                            <ion-row>\n\n                                <ion-col col-6>\n\n                                    <ion-item radio>\n\n                                        <ion-label>Em aberto</ion-label>\n\n                                        <ion-radio [value]="0"></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                                <ion-col col-6>\n\n                                    <ion-item radio>\n\n                                        <ion-label>Finalizado</ion-label>\n\n                                        <ion-radio [value]="1"></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                            </ion-row>\n\n                        </ion-grid>\n\n                    </ion-list>\n\n                    <ion-row>\n\n                        <ion-col col-6>\n\n                            <ion-item text-center transparent>\n\n                                <ion-label stacked>DATA ABERTURA</ion-label>\n\n                                <ion-datetime displayFormat="DD/MM/YYYY" name="dataAbertura" [(ngModel)]="dataAbertura"\n\n                                    [disabled]="servico.status == 1" cancelText="Cancelar" doneText="Ok"></ion-datetime>\n\n                            </ion-item>\n\n                        </ion-col>\n\n                        <ion-col col-6>\n\n                            <ion-item text-center transparent>\n\n                                <ion-label stacked>DATA ENCERRAMENTO</ion-label>\n\n                                <ion-datetime displayFormat="DD/MM/YYYY" name="dataEncerramento" [(ngModel)]="dataEncerramento"\n\n                                    [disabled]="servico.status == 1" cancelText="Cancelar" doneText="Ok"></ion-datetime>\n\n                            </ion-item>\n\n                        </ion-col>\n\n                    </ion-row>\n\n                    <hr style="margin: 2px 0 0 0;">\n\n                    <ion-list radio-group no-margin [(ngModel)]="item.inspecao1" name="itemInspecao1+{{i}}" *ngFor="let item of inspecao.inspecaoObraItens; let i=index;"\n\n                        [disabled]="servico.status == 1">\n\n                        <h2 text-wrap style="font-weight: bold;margin-top: 10px;">{{item.descricao}}</h2>\n\n                        <ion-grid>\n\n                            <ion-row>\n\n                                <ion-col col-3>\n\n                                    <ion-item radio style="background-color: blue;">\n\n                                        <ion-label>NA</ion-label>\n\n                                        <ion-radio [value]="\'N\'"></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                                <ion-col col-3>\n\n                                    <ion-item radio style="background-color: darkgreen;">\n\n                                        <ion-label>A</ion-label>\n\n                                        <ion-radio [value]="\'A\'"></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                                <ion-col col-3>\n\n                                    <ion-item radio style="background-color: yellow;">\n\n                                        <ion-label>R</ion-label>\n\n                                        <ion-radio [value]="\'R\'"></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                                <ion-col col-3>\n\n                                    <ion-item radio style="background-color: red;">\n\n                                        <ion-label>X</ion-label>\n\n                                        <ion-radio [value]="\'X\'"></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                            </ion-row>\n\n                            <ion-row *ngIf="item.inspecao1 == \'R\'">\n\n                                <ion-list radio-group no-margin [(ngModel)]="item.inspecao2" name="itemInspecao2+{{i}}"\n\n                                    style="width: 100%" [disabled]="servico.status == 1">\n\n                                    <ion-grid>\n\n                                        <ion-row>\n\n                                            <ion-col col-3></ion-col>\n\n                                            <ion-col col-3>\n\n                                                <ion-item radio style="background-color: orange;">\n\n                                                    <ion-label>RA</ion-label>\n\n                                                    <ion-radio [value]="\'A\'"></ion-radio>\n\n                                                </ion-item>\n\n                                            </ion-col>\n\n                                            <ion-col col-3>\n\n                                                <ion-item radio style="background-color: red;">\n\n                                                    <ion-label>X</ion-label>\n\n                                                    <ion-radio [value]="\'X\'"></ion-radio>\n\n                                                </ion-item>\n\n                                            </ion-col>\n\n                                            <ion-col col-3></ion-col>\n\n                                        </ion-row>\n\n                                    </ion-grid>\n\n                                </ion-list>\n\n                            </ion-row>\n\n                            <ion-row>\n\n                                <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: black !important;"\n\n                                    (click)="item.inspecao1=\'\';item.inspecao2=\'\'" [disabled]="servico.status == 1">Limpar</button>\n\n                            </ion-row>\n\n                        </ion-grid>\n\n                        <hr style="margin: 2px 0 0 0;">\n\n                    </ion-list>\n\n                </form>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-grid>\n\n</ion-content>\n\n\n\n<ion-footer>\n\n    <button ion-button default-button block text-capitalize box-shadow margin-bottom no-margin style="background-color: rgb(33,177,75) !important;"\n\n        (click)="salvar(cadastroForm.valid)" [disabled]="servico.status == 1">Salvar</button>\n\n</ion-footer>'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\verificacao\realizar\realizar-verificacao.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_8__utils_storage_service_utils__["a" /* StorageServiceUtils */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["u" /* ViewController */],
+            __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */],
             __WEBPACK_IMPORTED_MODULE_5__utils_toast_service__["a" /* ToastService */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["u" /* ViewController */]])
-    ], AreaCadastroPage);
-    return AreaCadastroPage;
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ModalController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */]])
+    ], RealizarVerificacaoPage);
+    return RealizarVerificacaoPage;
 }());
 
-//# sourceMappingURL=area-cadastro.js.map
+//# sourceMappingURL=realizar-verificacao.js.map
+
+/***/ }),
+
+/***/ 918:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Funcionario; });
+var Funcionario = /** @class */ (function () {
+    function Funcionario(values) {
+        if (values === void 0) { values = {}; }
+        Object.assign(this, values);
+    }
+    return Funcionario;
+}());
+
+//# sourceMappingURL=funcionario.js.map
 
 /***/ })
 

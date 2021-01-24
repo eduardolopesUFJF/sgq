@@ -9,5 +9,7 @@ namespace SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Entity
         public bool? Delete { get; set; }
         public bool? Ativo { get; set; }
         public ICollection<ItemPesquisaSatisfacao> ItensPesquisaSatisfacao { get; set; }
+        public ICollection<PesquisaSatisfacaoCliente> PesquisasSatisfacaoCliente { get; set; }
+        public ICollection<ItemPesquisaSatisfacaoCliente> ItensPesquisaSatisfacaoCliente { get; set; }
     }
 }

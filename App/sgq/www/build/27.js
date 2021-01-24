@@ -1,14 +1,14 @@
 webpackJsonp([27],{
 
-/***/ 767:
+/***/ 773:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomePageModule", function() { return HomePageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ManterOcorrenciaPageModule", function() { return ManterOcorrenciaPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(900);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__manter_ocorrencia__ = __webpack_require__(910);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,35 +18,60 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var HomePageModule = /** @class */ (function () {
-    function HomePageModule() {
+var ManterOcorrenciaPageModule = /** @class */ (function () {
+    function ManterOcorrenciaPageModule() {
     }
-    HomePageModule = __decorate([
+    ManterOcorrenciaPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_2__manter_ocorrencia__["a" /* ManterOcorrenciaPage */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__home__["a" /* HomePage */])
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__manter_ocorrencia__["a" /* ManterOcorrenciaPage */])
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"]]
         })
-    ], HomePageModule);
-    return HomePageModule;
+    ], ManterOcorrenciaPageModule);
+    return ManterOcorrenciaPageModule;
 }());
 
-//# sourceMappingURL=home.module.js.map
+//# sourceMappingURL=manter-ocorrencia.module.js.map
 
 /***/ }),
 
-/***/ 900:
+/***/ 826:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Ocorrencia; });
+var Ocorrencia = /** @class */ (function () {
+    function Ocorrencia(values) {
+        if (values === void 0) { values = {}; }
+        this.id = 0;
+        this.idGuidOcorrencia = '';
+        this.idInspecaoObra = 0;
+        this.idGuidInspecao = '';
+        this.descricao = '';
+        this.tratativa = '';
+        this.dataHoraAlteracao = new Date();
+        Object.assign(this, values);
+    }
+    return Ocorrencia;
+}());
+
+//# sourceMappingURL=ocorrencia.js.map
+
+/***/ }),
+
+/***/ 910:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ManterOcorrenciaPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_component__ = __webpack_require__(354);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_ocorrencia__ = __webpack_require__(826);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_toast_service__ = __webpack_require__(350);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -59,55 +84,38 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var HomePage = /** @class */ (function () {
-    function HomePage(navParams, events) {
+
+var ManterOcorrenciaPage = /** @class */ (function () {
+    function ManterOcorrenciaPage(viewCtrl, toastService, navParams) {
+        this.viewCtrl = viewCtrl;
+        this.toastService = toastService;
         this.navParams = navParams;
-        this.events = events;
-        this.Math = Math;
-        this.pages = [
-            { "title": "Baixar dados", "icon": "cloud-download", "component": "Baixar" },
-            { "title": "Listar alterações", "icon": "list", "component": "AlteracoesPage" },
-            { "title": "Publicar alterações", "icon": "cloud-upload", "component": "Subir" },
-            { "title": "Descartar alterações", "icon": "trash", "component": "Descartar" },
-            { "title": "Cadastrar Checklist", "icon": "checkmark-circle-outline", "component": "ChecklistPage" },
-            { "title": "Acesso ás obras", "icon": "build", "component": "ObraPage" },
-            { "title": "Sair", "icon": "exit", "component": "LoginPage" },
-        ];
+        this.ocorrencia = new __WEBPACK_IMPORTED_MODULE_2__models_ocorrencia__["a" /* Ocorrencia */]();
+        this.ocorrencia = this.navParams.data.ocorrencia;
     }
-    Object.defineProperty(HomePage.prototype, "progressbarAtivo", {
-        get: function () {
-            return __WEBPACK_IMPORTED_MODULE_2__app_app_component__["a" /* MyApp */].progressbarAtivo;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(HomePage.prototype, "progress", {
-        get: function () {
-            return __WEBPACK_IMPORTED_MODULE_2__app_app_component__["a" /* MyApp */].progress;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    Object.defineProperty(HomePage.prototype, "segundos", {
-        get: function () {
-            return __WEBPACK_IMPORTED_MODULE_2__app_app_component__["a" /* MyApp */].segundos;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    HomePage.prototype.openPage = function (page) {
-        this.events.publish('openPage', page);
+    ManterOcorrenciaPage.prototype.salvar = function (valido) {
+        if (valido) {
+            this.viewCtrl.dismiss(this.ocorrencia);
+        }
+        else {
+            this.toastService.presentToastWarning("É obrigatório informar a descrição e sua data.");
+        }
     };
-    HomePage = __decorate([
+    ManterOcorrenciaPage.prototype.voltar = function () {
+        this.viewCtrl.dismiss(null);
+    };
+    ManterOcorrenciaPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/user926185/Desktop/sgq/App/sgq/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar class="pad-nav-page">\n    <button ion-button menuToggle>\n      <ion-icon class="icon-menu" name="menu"></ion-icon>\n    </button>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <h1 *ngIf="!progressbarAtivo" padding text-center class="boas-vindas" style="margin-bottom: 0;padding-bottom: 0;">Checklist de Obras</h1>\n  <h1 *ngIf="!progressbarAtivo" padding text-center class="boas-vindas" style="margin-top: 5px;padding-top: 0;">Bem vindo</h1>\n  <ion-grid *ngIf="!progressbarAtivo">\n    <ion-row>\n      <button menuClose ion-item default-item item-title main-menu no-lines class="mt-6 mb-6" *ngFor="let p of pages" (click)="openPage(p)">\n        <ion-icon outline icon-small icon-left>\n          <ion-icon [name]="p.icon"></ion-icon>\n        </ion-icon>\n        {{p.title}}\n      </button>\n    </ion-row>\n  </ion-grid>\n  <div class="progress-outer" *ngIf="progressbarAtivo">\n    <div class="progress-inner" [style.width]="progress + \'%\'">\n      {{this.Math.round(progress*100)/100}}%\n    </div>\n  </div>\n  <h2 *ngIf="progressbarAtivo" text-center style="color: red; font-weight: bold;">{{segundos}} segundos</h2>\n</ion-content>'/*ion-inline-end:"/Users/user926185/Desktop/sgq/App/sgq/src/pages/home/home.html"*/
+            selector: 'page-manter-ocorrencia',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\ocorrencia\manter\manter-ocorrencia.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <ion-row class="pad-nav-page" (click)="voltar()">\n\n            <button class="button-nav">\n\n                <span ion-text>Voltar</span>\n\n            </button>\n\n        </ion-row>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n    <ion-grid no-padding>\n\n        <ion-row padding-left padding-right>\n\n            <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n\n                <form #cadastroForm="ngForm" padding-top>\n\n                    <ion-item text-center transparent>\n\n                        <ion-label stacked>DATA DA DESCRIÇÃO</ion-label>\n\n                        <ion-datetime displayFormat="DD/MM/YYYY" name="dataDescricao" [(ngModel)]="ocorrencia.dataDescricao"\n\n                            cancelText="Cancelar" doneText="Ok" required></ion-datetime>\n\n                    </ion-item>\n\n                    <ion-item text-center transparent>\n\n                        <ion-label stacked>DESCRIÇÃO</ion-label>\n\n                        <ion-textarea text-center type="text" rows="4" [(ngModel)]="ocorrencia.descricao" name="descricao"\n\n                            required></ion-textarea>\n\n                    </ion-item>\n\n                    <ion-item text-center transparent>\n\n                        <ion-label stacked>DATA DA TRATATIVA</ion-label>\n\n                        <ion-datetime displayFormat="DD/MM/YYYY" name="dataTratativa" [(ngModel)]="ocorrencia.dataTratativa"\n\n                            cancelText="Cancelar" doneText="Ok"></ion-datetime>\n\n                    </ion-item>\n\n                    <ion-item text-center transparent>\n\n                        <ion-label stacked>TRATATIVA</ion-label>\n\n                        <ion-textarea text-center type="text" rows="4" [(ngModel)]="ocorrencia.tratativa" name="tratativa"></ion-textarea>\n\n                    </ion-item>\n\n                    <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: rgb(33,177,75) !important;"\n\n                        (click)="salvar(cadastroForm.valid)">Salvar</button>\n\n                </form>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-grid>\n\n</ion-content>'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\ocorrencia\manter\manter-ocorrencia.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Events */]])
-    ], HomePage);
-    return HomePage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["u" /* ViewController */],
+            __WEBPACK_IMPORTED_MODULE_3__utils_toast_service__["a" /* ToastService */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */]])
+    ], ManterOcorrenciaPage);
+    return ManterOcorrenciaPage;
 }());
 
-//# sourceMappingURL=home.js.map
+//# sourceMappingURL=manter-ocorrencia.js.map
 
 /***/ })
 

@@ -71,6 +71,8 @@ namespace SGQ.GDOL.Infra.CrossCutting.IoC
             services.AddScoped<IAcessoClienteService, AcessoClienteService>();
             services.AddScoped<IFornecedorService, FornecedorService>();
             services.AddScoped<IRealizadoPorService, RealizadoPorService>();
+            services.AddScoped<IPesquisaSatisfacaoClienteService, PesquisaSatisfacaoClienteService>();
+            services.AddScoped<IItemPesquisaSatisfacaoClienteService, ItemPesquisaSatisfacaoClienteService>();
 
             //Infra Data
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
@@ -105,6 +107,8 @@ namespace SGQ.GDOL.Infra.CrossCutting.IoC
             services.AddScoped<IFornecedorRepository, FornecedorRepository>();
             services.AddScoped<IRealizadoPorRepository, RealizadoPorRepository>();
             services.AddScoped<IPesquisaSatisfacaoRepository, PesquisaSatisfacaoRepository>();
+            services.AddScoped<IPesquisaSatisfacaoClienteRepository, PesquisaSatisfacaoClienteRepository>();
+            services.AddScoped<IItemPesquisaSatisfacaoClienteRepository, ItemPesquisaSatisfacaoClienteRepository>();
 
             services.AddScoped<ServiceContext>();
             services.AddScoped<NotificationHandler>();

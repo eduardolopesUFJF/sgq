@@ -1,14 +1,14 @@
 webpackJsonp([35],{
 
-/***/ 754:
+/***/ 756:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabsLayout2Module", function() { return TabsLayout2Module; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabsLayout3Module", function() { return TabsLayout3Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs_layout_2__ = __webpack_require__(885);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs_layout_3__ = __webpack_require__(888);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,35 +18,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var TabsLayout2Module = /** @class */ (function () {
-    function TabsLayout2Module() {
+var TabsLayout3Module = /** @class */ (function () {
+    function TabsLayout3Module() {
     }
-    TabsLayout2Module = __decorate([
+    TabsLayout3Module = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__tabs_layout_2__["a" /* TabsLayout2 */],
+                __WEBPACK_IMPORTED_MODULE_2__tabs_layout_3__["a" /* TabsLayout3 */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__tabs_layout_2__["a" /* TabsLayout2 */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__tabs_layout_3__["a" /* TabsLayout3 */]),
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_2__tabs_layout_2__["a" /* TabsLayout2 */]
+                __WEBPACK_IMPORTED_MODULE_2__tabs_layout_3__["a" /* TabsLayout3 */]
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"]]
         })
-    ], TabsLayout2Module);
-    return TabsLayout2Module;
+    ], TabsLayout3Module);
+    return TabsLayout3Module;
 }());
 
-//# sourceMappingURL=tabs-layout-2.module.js.map
+//# sourceMappingURL=tabs-layout-3.module.js.map
 
 /***/ }),
 
-/***/ 885:
+/***/ 888:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsLayout2; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsLayout3; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -58,31 +58,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var TabsLayout2 = /** @class */ (function () {
-    function TabsLayout2() {
+var TabsLayout3 = /** @class */ (function () {
+    function TabsLayout3() {
     }
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('data'),
         __metadata("design:type", Object)
-    ], TabsLayout2.prototype, "data", void 0);
+    ], TabsLayout3.prototype, "data", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('events'),
         __metadata("design:type", Object)
-    ], TabsLayout2.prototype, "events", void 0);
+    ], TabsLayout3.prototype, "events", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('tabs'),
         __metadata("design:type", Object)
-    ], TabsLayout2.prototype, "tabRef", void 0);
-    TabsLayout2 = __decorate([
+    ], TabsLayout3.prototype, "tabRef", void 0);
+    TabsLayout3 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'tabs-layout-2',template:/*ion-inline-start:"/Users/user926185/Desktop/sgq/App/sgq/src/core/tabs/layout-2/tabs.html"*/'<!-- Theme Tabs Footer tab - icons -->\n<ion-tabs #tabs tabsPlacement=\'bottom\'>\n    <ion-tab [tabIcon]="item.icon" [root]="item.page" *ngFor="let item of data;let i = index"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/Users/user926185/Desktop/sgq/App/sgq/src/core/tabs/layout-2/tabs.html"*/
+            selector: 'tabs-layout-3',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\tabs\layout-3\tabs.html"*/'<!-- Theme Tabs Header tab - text -->\n\n<ion-tabs #tabs tabsPlacement=\'top\' tabs-content>\n\n  <!-- Background -->\n\n  <div header>\n\n    <ion-item transparent  no-lines>\n\n      <!-- <div title-header> -->\n\n        <h1 item-title text-wrap>Worldwide Model Agency</h1>\n\n        <h2 item-subtitle>BEST MODELS</h2>\n\n      <!-- </div> -->\n\n    </ion-item>\n\n  </div>\n\n\n\n    <ion-tab [tabTitle]="item.title" [root]="item.page" *ngFor="let item of data.data;let i = index">\n\n    </ion-tab>\n\n</ion-tabs>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\tabs\layout-3\tabs.html"*/
         }),
         __metadata("design:paramtypes", [])
-    ], TabsLayout2);
-    return TabsLayout2;
+    ], TabsLayout3);
+    return TabsLayout3;
 }());
 
-//# sourceMappingURL=tabs-layout-2.js.map
+//# sourceMappingURL=tabs-layout-3.js.map
 
 /***/ })
 

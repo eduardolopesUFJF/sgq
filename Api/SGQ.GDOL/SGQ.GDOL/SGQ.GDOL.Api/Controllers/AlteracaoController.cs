@@ -47,6 +47,8 @@ namespace SGQ.GDOL.Api.Controllers
         private readonly ITreinamentoFuncionarioService _treinamentoFuncionarioService;
         private readonly IAcessoClienteService _acessoClienteService;
         private readonly IRealizadoPorService _realizadoPorService;
+        private readonly IPesquisaSatisfacaoClienteService _pesquisaSatisfacaoClienteService;
+        private readonly IItemPesquisaSatisfacaoClienteService _itemPesquisaSatisfacaoClienteService;
 
         public AlteracaoController(
             IAreaService areaService,
@@ -68,7 +70,9 @@ namespace SGQ.GDOL.Api.Controllers
             ITreinamentoService treinamentoService,
             ITreinamentoFuncionarioService treinamentoFuncionarioService,
             IAcessoClienteService acessoClienteService,
-            IRealizadoPorService realizadoPorService)
+            IRealizadoPorService realizadoPorService,
+            IPesquisaSatisfacaoClienteService pesquisaSatisfacaoClienteService,
+            IItemPesquisaSatisfacaoClienteService itemPesquisaSatisfacaoClienteService)
         {
             _areaService = areaService;
             _servicoService = servicoService;
@@ -90,6 +94,8 @@ namespace SGQ.GDOL.Api.Controllers
             _treinamentoFuncionarioService = treinamentoFuncionarioService;
             _acessoClienteService = acessoClienteService;
             _realizadoPorService = realizadoPorService;
+            _pesquisaSatisfacaoClienteService = pesquisaSatisfacaoClienteService;
+            _itemPesquisaSatisfacaoClienteService = itemPesquisaSatisfacaoClienteService;
         }
 
         #region ENTREGA OBRA
@@ -112,6 +118,7 @@ namespace SGQ.GDOL.Api.Controllers
             List<AssistenciaTecnicaVM> assistenciasTecnicas = new List<AssistenciaTecnicaVM>();
             List<AtendimentoVM> atendimentos = new List<AtendimentoVM>();
             List<AssistenciaTecnicaArquivoVM> fotos = new List<AssistenciaTecnicaArquivoVM>();
+            List<PesquisaSatisfacaoClienteVM> pesquisas = new List<PesquisaSatisfacaoClienteVM>();
 
             List<TreinamentoFuncionarioAgrupadoVM> treinamentosFuncionariosAgrupado = new List<TreinamentoFuncionarioAgrupadoVM>();
             List<TreinamentoFuncionarioVM> treinamentosFuncionariosAssinaturas = new List<TreinamentoFuncionarioVM>();
@@ -124,9 +131,9 @@ namespace SGQ.GDOL.Api.Controllers
             PrepararAssistenciasTecnicas(alteracoes, assistenciasTecnicas);
             atendimentos = PrepararAtendimentos(alteracoes, assistenciasTecnicas, atendimentos);
             PrepararFotos(alteracoes, assistenciasTecnicas, fotos);
+            PrepararPesquisas(alteracoes, pesquisas);
 
             PrepararTreinamentoFuncionarioAgrupado(alteracoes, treinamentosFuncionariosAgrupado);
-
             PrepararTreinamentoFuncionarioAssinatura(alteracoes, treinamentosFuncionariosAssinaturas);
 
             if (entregasObras.Any() || entregasObrasClientes.Any() || entregasObrasClienteOcorrencias.Any() || fotosEntregaObraCliente.Any())
@@ -138,13 +145,14 @@ namespace SGQ.GDOL.Api.Controllers
             status = PersistirOcorrencias(entregasObrasClienteOcorrencias, status);
             status = PersistirFotos(fotosEntregaObraCliente, status);
 
-            if (assistenciasTecnicas.Any() || atendimentos.Any() || fotos.Any())
+            if (assistenciasTecnicas.Any() || atendimentos.Any() || fotos.Any() || pesquisas.Any())
             {
                 _acessoClienteService.Registrar(EnumAplicativo.SERVICOS, EnumFuncionalidadeServicos.ASSISTENCIA_TECNICA);
             }
             status = PersistirAssistenciasTecnicas(assistenciasTecnicas, status);
             status = PersistirAtendimentos(atendimentos, status);
             status = PersistirFotos(fotos, status);
+            status = PersistirPesquisas(pesquisas, assistenciasTecnicas, status);
 
             if (treinamentosFuncionariosAgrupado.Any() || treinamentosFuncionariosAssinaturas.Any())
             {
@@ -451,6 +459,30 @@ namespace SGQ.GDOL.Api.Controllers
                 treinamentosFuncionariosAssinaturas.Add(treinamentoFuncionarioVM);
             }
         }
+        
+        private static void PrepararPesquisas(List<AlteracaoDTO> alteracoes, List<PesquisaSatisfacaoClienteVM> pesquisas)
+        {
+            var pesquisasAlteradas = alteracoes.Where(x => x.Entidade.ToUpper() == "PESQUISASATISFACAOCLIENTE" && x.Tipo.ToUpper() == "INSERT");
+            var pesquisasRemovidas = alteracoes.Where(x => x.Entidade.ToUpper() == "PESQUISASATISFACAOCLIENTE" && x.Tipo.ToUpper() == "UPDATE");
+
+            foreach (var alteracao in pesquisasRemovidas)
+            {
+                var pesquisaSatisfacaoClienteVM = JsonConvert.DeserializeObject<PesquisaSatisfacaoClienteVM>(alteracao.Valor);
+                if (pesquisaSatisfacaoClienteVM.Id != 0)
+                {
+                    pesquisas.Add(pesquisaSatisfacaoClienteVM);
+                }
+            }
+
+            foreach (var alteracao in pesquisasAlteradas)
+            {
+                var pesquisaSatisfacaoClienteVM = JsonConvert.DeserializeObject<PesquisaSatisfacaoClienteVM>(alteracao.Valor);
+                if (!pesquisasRemovidas.Any(x => x.IdGuidPesquisaSatisfacaoCliente == pesquisaSatisfacaoClienteVM.IdGuid))
+                {
+                    pesquisas.Add(pesquisaSatisfacaoClienteVM);
+                }
+            }
+        }
 
         private string PersistirTreinamentoFuncionarioAgrupado(List<TreinamentoFuncionarioAgrupadoVM> treinamentosFuncionariosAgrupados, string status)
         {
@@ -684,7 +716,9 @@ namespace SGQ.GDOL.Api.Controllers
                     if (assistenciaTecnicaBD.Id == 0)
                     {
                         assistenciaTecnicaBD.Codigo = codigoDisponivel;
-                        _assistenciaTecnicaService.Adicionar(assistenciaTecnicaBD);
+                        var idAssistenciaTecnicaCriada = _assistenciaTecnicaService.Adicionar(assistenciaTecnicaBD);
+                        assistenciaTecnicaVM.Id = idAssistenciaTecnicaCriada;
+
                         codigoDisponivel++;
                     }
                     else
@@ -694,6 +728,7 @@ namespace SGQ.GDOL.Api.Controllers
                         assistenciaTecnicaBD.CategoriaAssistencia = null;
                         assistenciaTecnicaBD.CentroCusto = null;
                         assistenciaTecnicaBD.ClienteConstrutora = null;
+                        assistenciaTecnicaBD.PesquisasSatisfacaoCliente = null;
 
                         _assistenciaTecnicaService.Atualizar(assistenciaTecnicaBD);
                     }
@@ -756,6 +791,55 @@ namespace SGQ.GDOL.Api.Controllers
             return status;
         }
 
+        private string PersistirPesquisas(List<PesquisaSatisfacaoClienteVM> pesquisas, List<AssistenciaTecnicaVM> assistenciasTecnicas, string status)
+        {
+            foreach (var pesquisaVM in pesquisas)
+            {
+                try
+                {
+                    var pesquisaBD = Mapper.Map<PesquisaSatisfacaoCliente>(pesquisaVM);
+                    pesquisaBD.AssistenciaTecnica = null;
+                    pesquisaBD.PesquisaSatisfacao = null;
+
+                    if (pesquisaVM.IdAssistenciaTecnica == 0 || !pesquisaVM.IdAssistenciaTecnica.HasValue)
+                    {
+                        pesquisaBD.IdAssistenciaTecnica = assistenciasTecnicas.FirstOrDefault(x => x.IdGuid == pesquisaVM.IdGuidAssistenciaTecnica).Id;
+                    }
+
+                    if (pesquisaBD.TotalPontos == 0)
+                    {
+                        pesquisaBD.TotalPontos = null;
+                    }
+                    if (pesquisaBD.TotalPontos.HasValue)
+                    {
+                        var qtd = pesquisaBD.ItensPesquisaSatisfacaoCliente.Count;
+                        pesquisaBD.Percentual = ((decimal) pesquisaBD.TotalPontos.Value) / (qtd != 0 ? (qtd * 5) : 1);
+                    }
+
+                    if (pesquisaBD.Id != 0)
+                    {
+                        foreach (var item in pesquisaBD.ItensPesquisaSatisfacaoCliente)
+                        {
+                            _itemPesquisaSatisfacaoClienteService.Atualizar(item);
+                        }
+                        pesquisaBD.ItensPesquisaSatisfacaoCliente = null;
+                        _pesquisaSatisfacaoClienteService.Atualizar(pesquisaBD);
+                    }
+                    else
+                    {
+                        _pesquisaSatisfacaoClienteService.Adicionar(pesquisaBD);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Log.Fatal("\nFalha ao persisistir pesquisa de satisfação:\n" + JsonConvert.SerializeObject(pesquisaVM) + "\nException: " + ex.Message + "\n");
+                    status += "Falha ao criar/editar/excluir pesquisa de satisfação;";
+                    continue;
+                }
+            }
+            return status;
+        }
+
         #endregion
 
         #region CHECKLIST 
@@ -783,7 +867,7 @@ namespace SGQ.GDOL.Api.Controllers
             PrepararOcorrencias(alteracoes, areas, inspecoes, ocorrencias);
             PrepararRealizadosPor(alteracoes, realizadosPor);
 
-            if (servicos.Any() || areas.Any() || inspecoes.Any() || ocorrencias.Any())
+            if (servicos.Any() || areas.Any() || inspecoes.Any() || ocorrencias.Any() || realizadosPor.Any())
             {
                 _acessoClienteService.Registrar(EnumAplicativo.CHECKLIST, null);
             }

@@ -22,6 +22,8 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Repository
                         .Include(x => x.ClienteConstrutora)
                         .Include(x => x.CategoriaAssistencia)
                         .Include(x => x.Atendimentos)
+                        .Include(x => x.PesquisasSatisfacaoCliente).ThenInclude(x => x.PesquisaSatisfacao)
+                        .Include(x => x.PesquisasSatisfacaoCliente).ThenInclude(x => x.ItensPesquisaSatisfacaoCliente).ThenInclude(x => x.ItemPesquisaSatisfacao)
                         .Where(x => !x.Delete).ToList();
 
             return result;

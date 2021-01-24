@@ -497,8 +497,8 @@ Copyright (c) 2015 Daniel Eden
     transform: skewX(-0.78125deg) skewY(-0.78125deg);
   }
   77.7% {
-    -webkit-transform: skewX(0.39062deg) skewY(0.39062deg);
-    transform: skewX(0.39062deg) skewY(0.39062deg);
+    -webkit-transform: skewX(0.39063deg) skewY(0.39063deg);
+    transform: skewX(0.39063deg) skewY(0.39063deg);
   }
   88.8% {
     -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg);
@@ -534,8 +534,8 @@ Copyright (c) 2015 Daniel Eden
     transform: skewX(-0.78125deg) skewY(-0.78125deg);
   }
   77.7% {
-    -webkit-transform: skewX(0.39062deg) skewY(0.39062deg);
-    transform: skewX(0.39062deg) skewY(0.39062deg);
+    -webkit-transform: skewX(0.39063deg) skewY(0.39063deg);
+    transform: skewX(0.39063deg) skewY(0.39063deg);
   }
   88.8% {
     -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg);
@@ -3807,7 +3807,7 @@ ion-reorder .ion-ios-reorder {
 }
 
 .platform-ios .pad-nav-page-nt {
-  padding: 15px 0px 10px 0px !important;
+  padding: 20px 0px 10px 0px !important;
 }
 
 .platform-ios .pad-nav-page-nt2 {
@@ -14101,10 +14101,6 @@ textarea {
 }
 
 textarea::-webkit-input-placeholder {
-  padding-left: 2px;
-}
-
-textarea::-moz-placeholder {
   padding-left: 2px;
 }
 
@@ -35371,6 +35367,179 @@ page-manter-verificacao .scroll-content ion-grid ion-row [radio] {
   border-radius: 10px;
 }
 
+page-realizado-por ionic-selectable {
+  background: rgba(33, 177, 75, 0.6) !important;
+  margin: 5px 0px 0px 0px !important;
+  padding: 10px !important;
+  border-radius: 4px;
+  z-index: 999;
+  color: white;
+}
+
+page-realizado-por .button-nav {
+  height: 30px !important;
+  background: none !important;
+  color: white !important;
+  font-size: 1.5em;
+  margin: 8px 0px 0px 15px !important;
+  padding: 0;
+}
+
+page-realizado-por .novo-item {
+  border: 4px solid navy !important;
+}
+
+page-realizado-por .item-removido {
+  border: 4px solid red !important;
+}
+
+page-realizado-por .button-novo {
+  background-color: black !important;
+  margin: 4px 8px 8px 8px !important;
+}
+
+page-realizado-por [background-size] {
+  background-position: right !important;
+}
+
+page-realizado-por .scroll-content {
+  padding-bottom: 0 !important;
+  top: 0px !important;
+}
+
+page-realizado-por .scroll-content ion-grid {
+  height: 100%;
+}
+
+page-realizado-por .scroll-content ion-grid ion-row {
+  height: 100%;
+}
+
+page-realizado-por .scroll-content ion-grid ion-row img {
+  height: 150px;
+  width: 275px;
+}
+
+page-realizado-por .scroll-content ion-grid ion-row form ion-item {
+  padding-left: 0 !important;
+  padding-bottom: 15px !important;
+}
+
+page-realizado-por .scroll-content ion-grid ion-row form ion-item.item-input-has-value ion-input {
+  background: rgba(33, 177, 75, 0.6) !important;
+}
+
+page-realizado-por .scroll-content ion-grid ion-row form ion-item.item-input-has-value ion-select {
+  background: rgba(33, 177, 75, 0.6) !important;
+}
+
+page-realizado-por .scroll-content ion-grid ion-row form ion-item.item-input-has-focus ion-input {
+  background: rgba(33, 177, 75, 0.6) !important;
+}
+
+page-realizado-por .scroll-content ion-grid ion-row form ion-item.item-input-has-focus ion-select {
+  background: rgba(33, 177, 75, 0.6) !important;
+}
+
+page-realizado-por .scroll-content ion-grid ion-row form ion-item [error-field] {
+  margin: 0 !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  right: 5px !important;
+  font-size: 12px;
+}
+
+page-realizado-por .scroll-content ion-grid ion-row form ion-item .item-inner {
+  border-bottom: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  padding-right: 0 !important;
+}
+
+page-realizado-por .scroll-content ion-grid ion-row form ion-item ion-label {
+  margin: 0 5px !important;
+  color: black;
+}
+
+page-realizado-por .scroll-content ion-grid ion-row form ion-item ion-input {
+  background: rgba(33, 177, 75, 0.4) !important;
+  margin: 5px 10px 0px 10px !important;
+  padding: 5px 10px !important;
+  border-radius: 4px;
+  z-index: 999;
+}
+
+page-realizado-por .scroll-content ion-grid ion-row form ion-item ion-input .input-cover {
+  display: none;
+}
+
+page-realizado-por .scroll-content ion-grid ion-row form ion-item ion-datetime {
+  background: rgba(33, 177, 75, 0.4) !important;
+  margin: 5px 10px 0px 10px !important;
+  padding: 5px 10px !important;
+  border-radius: 4px;
+  z-index: 999;
+  height: 38px !important;
+  padding-top: 9px !important;
+}
+
+page-realizado-por .scroll-content ion-grid ion-row form ion-item ion-datetime .input-cover {
+  display: none;
+}
+
+page-realizado-por .scroll-content ion-grid ion-row form ion-item ion-select {
+  background: rgba(33, 177, 75, 0.4) !important;
+  margin: 5px 0px 0px 0px !important;
+  padding: 10px !important;
+  border-radius: 4px;
+  z-index: 999;
+}
+
+page-realizado-por .scroll-content ion-grid ion-row form ion-item ion-select .input-cover {
+  display: none;
+}
+
+page-realizado-por .scroll-content ion-grid ion-row form [stacked] {
+  font-size: 14px !important;
+  color: black !important;
+}
+
+page-realizado-por .scroll-content ion-grid ion-row form [bottom-form] {
+  position: relative;
+  display: inline-block;
+  padding-top: 50px;
+  width: 100%;
+}
+
+page-realizado-por .scroll-content ion-grid ion-row form [bottom-form]::after {
+  content: "or try";
+  font-size: 12px;
+  color: #f1f1f1;
+  width: 140px;
+  border-bottom: 1px solid #21b14b;
+  position: absolute;
+  top: 30px;
+  left: calc(50% - 70px);
+}
+
+page-realizado-por .scroll-content ion-grid ion-row form [button-icon-clear] {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+page-realizado-por .scroll-content ion-grid ion-row [login-title] {
+  color: black;
+}
+
+page-realizado-por .scroll-content ion-grid ion-row [padding-top] {
+  padding-top: 10px;
+}
+
+page-realizado-por .scroll-content ion-grid ion-row [radio] {
+  padding: 0px !important;
+  border-radius: 10px;
+}
+
 page-realizar-verificacao ionic-selectable {
   background: rgba(33, 177, 75, 0.6) !important;
   margin: 5px 0px 0px 0px !important;
@@ -35405,6 +35574,10 @@ page-realizar-verificacao .button-nav {
   font-size: 1.5em;
   margin: 2px 0px 0px 2px !important;
   padding: 0;
+}
+
+page-realizar-verificacao .registros-align {
+  text-align: right;
 }
 
 page-realizar-verificacao [background-size] {

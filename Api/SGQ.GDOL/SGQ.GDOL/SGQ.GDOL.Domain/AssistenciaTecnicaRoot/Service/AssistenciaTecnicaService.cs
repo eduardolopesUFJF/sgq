@@ -27,10 +27,12 @@ namespace SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Service
             return result;
         }
 
-        public void Adicionar(AssistenciaTecnica assistenciaTecnica)
+        public int Adicionar(AssistenciaTecnica assistenciaTecnica)
         {
-            _assistenciaTecnicaRepository.Adicionar(assistenciaTecnica);
+            var assistenciaTecnicaCriada = _assistenciaTecnicaRepository.AdicionarComRetorno(assistenciaTecnica);
             _unitOfWork.Commit();
+
+            return assistenciaTecnicaCriada.Id;
         }
 
         public void Atualizar(AssistenciaTecnica assistenciaTecnica)

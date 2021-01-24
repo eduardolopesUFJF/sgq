@@ -17,6 +17,7 @@ namespace SGQ.GDOL.Api.ViewModels
         public string DescricaoCentroCusto { get; set; }
         public string Local { get; set; }
         public DateTime DataAbertura { get; set; }
+        public DateTime? DataEncerramento { get; set; }
         public string Contato { get; set; }
         public string Reclamacao { get; set; }
         public int Procedente { get; set; }
@@ -32,5 +33,6 @@ namespace SGQ.GDOL.Api.ViewModels
 
         public List<AtendimentoVM> Atendimentos { get; set; }
         public List<AssistenciaTecnicaArquivoVM> Arquivos { get; set; }
+        public List<PesquisaSatisfacaoClienteVM> PesquisasSatisfacaoCliente { get; set; }
     }
 }

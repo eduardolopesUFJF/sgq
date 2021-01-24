@@ -38,6 +38,10 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Mappings
                 .HasColumnName("DATA")
                 .HasColumnType("datetime");
 
+            entity.Property(e => e.DataEncerramento)
+                .HasColumnName("DATA_ENCERRAMENTO")
+                .HasColumnType("datetime");
+
             entity.Property(e => e.Contato)
                 .HasColumnName("CONTATO")
                 .IsUnicode(false);
