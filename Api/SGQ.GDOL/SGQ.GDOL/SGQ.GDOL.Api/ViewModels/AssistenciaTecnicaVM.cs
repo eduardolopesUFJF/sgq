@@ -27,6 +27,7 @@ namespace SGQ.GDOL.Api.ViewModels
         public decimal? Custo { get; set; }
         public int Prioridade { get; set; }
         public bool Delete { get; set; }
+        public int? Codigo { get; set; }
 
         public string AssinaturaCliente { get; set; }
         public string AssinaturaConstrutora { get; set; }
