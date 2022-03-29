@@ -2,6 +2,7 @@
 using SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Repository;
 using SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Service.Interfaces;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Service
 {
@@ -21,9 +22,9 @@ namespace SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Service
             _unitOfWork = unitOfWork;
         }
 
-        public List<AssistenciaTecnica> ObterTodosAtivos()
+        public List<AssistenciaTecnica> ObterTodosAtivos(string usuario)
         {
-            var result = _assistenciaTecnicaRepository.ObterTodasAtivasComInclude();
+            var result = _assistenciaTecnicaRepository.ObterTodasAtivasComInclude(usuario);
             return result;
         }
 
@@ -50,6 +51,12 @@ namespace SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Service
         public List<PesquisaSatisfacao> ObterPesquisas()
         {
             var result = _pesquisaSatisfacaoRepository.ObterPesquisas();
+            return result;
+        }
+
+        public AssistenciaTecnica ObterAssistenciaTecnica(int idAssistenciaTecnica)
+        {
+            var result = _assistenciaTecnicaRepository.Buscar(x => x.Id == idAssistenciaTecnica).FirstOrDefault();
             return result;
         }
     }

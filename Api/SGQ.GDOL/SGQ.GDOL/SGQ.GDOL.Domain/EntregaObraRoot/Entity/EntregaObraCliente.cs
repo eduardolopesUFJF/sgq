@@ -39,6 +39,10 @@ namespace SGQ.GDOL.Domain.EntregaObraRoot.Entity
         public string ObservacaoCliente { get; set; }
         public string ObservacaoConstrutora { get; set; }
         public bool Delete { get; set; }
+        public string Campo1 { get; set; }
+        public string Campo2 { get; set; }
+        public string Campo3 { get; set; }
+        public string Campo4 { get; set; }
 
         public byte[] AssinaturaCliente { get; set; }
         public byte[] AssinaturaConstrutora { get; set; }

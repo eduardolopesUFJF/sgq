@@ -7,8 +7,9 @@ namespace SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Service.Interfaces
     {
         int Adicionar(AssistenciaTecnica assistenciaTecnica);
         void Atualizar(AssistenciaTecnica assistenciaTecnica);
-        List<AssistenciaTecnica> ObterTodosAtivos();
+        List<AssistenciaTecnica> ObterTodosAtivos(string usuario);
         int ObterUltimoCodigoLivre();
         List<PesquisaSatisfacao> ObterPesquisas();
+        AssistenciaTecnica ObterAssistenciaTecnica(int idAssistenciaTecnica);
     }
 }

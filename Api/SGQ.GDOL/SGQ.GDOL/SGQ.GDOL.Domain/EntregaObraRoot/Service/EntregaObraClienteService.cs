@@ -1,6 +1,7 @@
 ﻿using SGQ.GDOL.Domain.EntregaObraRoot.Entity;
 using SGQ.GDOL.Domain.EntregaObraRoot.Repository;
 using SGQ.GDOL.Domain.EntregaObraRoot.Service.Interfaces;
+using System.Linq;
 
 namespace SGQ.GDOL.Domain.EntregaObraRoot.Service
 {
@@ -23,10 +24,17 @@ namespace SGQ.GDOL.Domain.EntregaObraRoot.Service
             _unitOfWork.Commit();
         }
 
-        public void Inserir(EntregaObraCliente entregaObraCliente)
+        public EntregaObraCliente Inserir(EntregaObraCliente entregaObraCliente)
         {
-            _entregaObraClienteRepository.Adicionar(entregaObraCliente);
+            var result = _entregaObraClienteRepository.AdicionarComRetorno(entregaObraCliente);
             _unitOfWork.Commit();
+            return result;
+        }
+
+        public EntregaObraCliente ObterEntregaObraCliente(int idEntregaObraCliente)
+        {
+            var result = _entregaObraClienteRepository.Buscar(x => x.Id == idEntregaObraCliente).FirstOrDefault();
+            return result;
         }
     }
 }

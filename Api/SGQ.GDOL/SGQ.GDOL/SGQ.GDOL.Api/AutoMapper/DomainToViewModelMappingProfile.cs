@@ -22,12 +22,14 @@ namespace SGQ.GDOL.Api.AutoMapper
             CreateMap<InspecaoObraItem, InspecaoObraItemVM>();
             CreateMap<CategoriaAssistencia, CategoriaAssistenciaVM>();
             CreateMap<AssistenciaTecnicaArquivo, AssistenciaTecnicaArquivoVM>();
-            CreateMap<EntregaObraClienteOcorrencia, EntregaObraClienteOcorrenciaVM>();
             CreateMap<EntregaObraClienteArquivo, EntregaObraClienteArquivoVM>();
             CreateMap<Ocorrencia, OcorrenciaVM>();
             CreateMap<FuncionarioTerceirizado, FuncionarioTerceirizadoVM>();
             CreateMap<RealizadoPorFuncionario, RealizadoPorFuncionarioVM>();
             CreateMap<ItemPesquisaSatisfacao, ItemPesquisaSatisfacaoVM>();
+
+            CreateMap<EntregaObraClienteOcorrencia, EntregaObraClienteOcorrenciaVM>()
+                .ForMember(x => x.DescricaoItemChecklistEntrega, opt => opt.MapFrom(x => x.EntregaObraClienteChecklist.Descricao));
             
             CreateMap<PesquisaSatisfacao, PesquisaSatisfacaoVM>()
                 .ForMember(x => x.ItensPesquisaSatisfacao, opt => opt.MapFrom(x => x.ItensPesquisaSatisfacao.Where(y => y.Delete.HasValue && !y.Delete.Value).OrderBy(y => y.Ordem)));
@@ -67,8 +69,8 @@ namespace SGQ.GDOL.Api.AutoMapper
                 .ForMember(x => x.Descricao, opt => opt.MapFrom(x => x.Codigo + " - " + x.Descricao));
 
             CreateMap<EntregaObraClienteChecklist, EntregaObraClienteChecklistVM>()
-                .ForMember(x => x.OrdemItemChecklistEntrega, opt => opt.MapFrom(x => x.ItemChecklistObra.Ordem))
-                .ForMember(x => x.DescricaoItemChecklistEntrega, opt => opt.MapFrom(x => x.ItemChecklistObra.Descricao));
+                .ForMember(x => x.OrdemItemChecklistEntrega, opt => opt.MapFrom(x => x.Ordem))
+                .ForMember(x => x.DescricaoItemChecklistEntrega, opt => opt.MapFrom(x => x.Descricao));
 
             CreateMap<Servico, ServicoVM>()
                 .ForMember(x => x.IdArea, opt => opt.MapFrom(x => x.IdObraAreaChecklist))
@@ -85,7 +87,7 @@ namespace SGQ.GDOL.Api.AutoMapper
 
             CreateMap<EntregaObra, EntregaObraVM>()
                 .ForMember(x => x.Descricao, opt => opt.MapFrom(x => x.CentroCusto.Codigo + " - " + x.CentroCusto.Descricao))
-                .ForMember(x => x.Situacao, opt => opt.MapFrom(x => x.Status.HasValue && x.Status.Value == 1 ? "Entregue" : "Em aberto"))
+                .ForMember(x => x.Situacao, opt => opt.MapFrom(x => x.Status.HasValue && x.Status.Value == 1 ? "Finalizado" : (x.Status.HasValue && x.Status.Value == 2 ? "Aguardando Reinspeção" : "Em aberto")))
                 .ForMember(x => x.EntregasObrasClientes, opt => opt.MapFrom(x => x.EntregasObrasClientes.Where(y => !y.Delete).OrderBy(y => y.DataInspecao)));
 
             CreateMap<Area, AreaVM>()
@@ -110,7 +112,7 @@ namespace SGQ.GDOL.Api.AutoMapper
                                                         x.CentroCusto.ClienteCentrosCustos.Any(y => y.IdCliente == x.IdClienteConstrutora) ?
                                                         x.CentroCusto.ClienteCentrosCustos.Where(y => y.IdCliente == x.IdClienteConstrutora).FirstOrDefault().Unidade
                                                         : ""))
-                .ForMember(x => x.Situacao, opt => opt.MapFrom(x => x.Status == 1 ? "Entregue" : "Em aberto"))
+                .ForMember(x => x.Situacao, opt => opt.MapFrom(x => x.Status == 1 ? "Finalizado" : "Em aberto"))
                 .ForMember(x => x.DescricaoTipoVistoria, opt => opt.MapFrom(x => x.TipoVistoria == 1 ? "Construtora" : "Cliente"))
                 .ForMember(x => x.DescricaoChecklistObra, opt => opt.MapFrom(x => x.ChecklistObra.Codigo + " - " + x.ChecklistObra.Descricao))
                 .ForMember(x => x.ClienteCadastrado, opt => opt.MapFrom(x => x.IdClienteConstrutora.HasValue || string.IsNullOrEmpty(x.NomeCliente)))
@@ -128,9 +130,15 @@ namespace SGQ.GDOL.Api.AutoMapper
                 .ForMember(x => x.Arquivos, opt => opt.MapFrom(x => x.Arquivos.Where(y => !y.Delete)))
                 .ForMember(x => x.TermosIds, opt => opt.MapFrom(x => x.Termos.Where(y => !y.Delete).Select(y => y.IdTermo)))
                 .ForMember(x => x.AssinaturaCliente, opt => opt.MapFrom(x => (x.AssinaturaCliente == null || x.AssinaturaCliente.Length == 0) ? null :
-                                                                            "data:image/png;base64," + Convert.ToBase64String(x.AssinaturaCliente)))
+                                                                            "preenchido"))
                 .ForMember(x => x.AssinaturaConstrutora, opt => opt.MapFrom(x => (x.AssinaturaConstrutora == null || x.AssinaturaConstrutora.Length == 0) ? null :
-                                                                            "data:image/png;base64," + Convert.ToBase64String(x.AssinaturaConstrutora)));
+                                                                            "preenchido"));
+                //.ForMember(x => x.AssinaturaCliente, opt => opt.MapFrom(x => (x.AssinaturaCliente == null || x.AssinaturaCliente.Length == 0) ? null :
+                //                                                            "data:image/png;base64," + Convert.ToBase64String(x.AssinaturaCliente)))
+                //.ForMember(x => x.AssinaturaConstrutora, opt => opt.MapFrom(x => (x.AssinaturaConstrutora == null || x.AssinaturaConstrutora.Length == 0) ? null :
+                //                                                            "data:image/png;base64," + Convert.ToBase64String(x.AssinaturaConstrutora)))
+                //.ForMember(x => x.AssinaturaCliente, opt => opt.MapFrom(x => "preenchida"))
+                //.ForMember(x => x.AssinaturaConstrutora, opt => opt.MapFrom(x => "preenchida"));
 
             CreateMap<ChecklistItem, ChecklistItemVM>()
                 .ForMember(x => x.Descricao, opt => opt.MapFrom(x => x.Descricao))
@@ -153,14 +161,19 @@ namespace SGQ.GDOL.Api.AutoMapper
                .ForMember(x => x.DescricaoCentroCusto, opt => opt.MapFrom(x => x.CentroCusto.Codigo + " - " + x.CentroCusto.Descricao))
                .ForMember(x => x.Atendimentos, opt => opt.MapFrom(x => x.Atendimentos.Where(y => !y.Delete).OrderByDescending(y => y.DataInicio)))
                .ForMember(x => x.AssinaturaCliente, opt => opt.MapFrom(x => (x.AssinaturaCliente == null || x.AssinaturaCliente.Length == 0) ? null :
-                                                                            "data:image/png;base64," + Convert.ToBase64String(x.AssinaturaCliente)))
+                                                                            "preenchido"))
                .ForMember(x => x.AssinaturaConstrutora, opt => opt.MapFrom(x => (x.AssinaturaConstrutora == null || x.AssinaturaConstrutora.Length == 0) ? null :
-                                                                            "data:image/png;base64," + Convert.ToBase64String(x.AssinaturaConstrutora)));
+                                                                            "preenchido"));
+               //.ForMember(x => x.AssinaturaCliente, opt => opt.MapFrom(x => (x.AssinaturaCliente == null || x.AssinaturaCliente.Length == 0) ? null :
+               //                                                             "data:image/png;base64," + Convert.ToBase64String(x.AssinaturaCliente)))
+               //.ForMember(x => x.AssinaturaConstrutora, opt => opt.MapFrom(x => (x.AssinaturaConstrutora == null || x.AssinaturaConstrutora.Length == 0) ? null :
+               //                                                             "data:image/png;base64," + Convert.ToBase64String(x.AssinaturaConstrutora)))
+               //.ForMember(x => x.AssinaturaCliente, opt => opt.MapFrom(x => ""))
+               //.ForMember(x => x.AssinaturaConstrutora, opt => opt.MapFrom(x => ""));
 
             CreateMap<Atendimento, AtendimentoVM>()
                 .ForMember(x => x.DescricaoFuncionario, opt => opt.MapFrom(x => x.Funcionario.Nome))
-                .ForMember(x => x.Descricao, opt => opt.MapFrom(x => x.Descricao.Length > 100 ? x.Descricao.Substring(0, 100) + "..." : x.Descricao));
-            //.ForMember(x => x.Observacoes, opt => opt.MapFrom(x => x.Observacoes.Length > 100 ? x.Descricao.Substring(0, 100) + "..." : x.Observacoes));
+                .ForMember(x => x.Descricao, opt => opt.MapFrom(x => x.Descricao.Length > 300 ? x.Descricao.Substring(0, 300) + "..." : x.Descricao));
 
             CreateMap<Fornecedor, FornecedorVM>()
                 .ForMember(x => x.FuncionariosTerceirizados, opt => opt.MapFrom(x => x.FuncionariosTerceirizados.Where(y => y.Ativo.HasValue && y.Ativo.Value && y.Delete.HasValue && !y.Delete.Value).OrderBy(y => y.Nome)));

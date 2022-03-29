@@ -1,4 +1,6 @@
-﻿namespace SGQ.GDOL.Domain.EntregaObraRoot.Entity
+﻿using System.Collections.Generic;
+
+namespace SGQ.GDOL.Domain.EntregaObraRoot.Entity
 {
     public class EntregaObraClienteChecklist : EntityBase
     {
@@ -12,5 +14,6 @@
         public string Descricao { get; set; }
         public string Ordem { get; set; }
         public bool? Delete { get; set; }
+        public virtual ICollection<EntregaObraClienteOcorrencia> EntregaObraClienteOcorrencias { get; set; }
     }
 }

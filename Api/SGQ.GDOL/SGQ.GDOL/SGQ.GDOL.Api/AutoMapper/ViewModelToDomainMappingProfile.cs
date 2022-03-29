@@ -32,19 +32,24 @@ namespace SGQ.GDOL.Api.AutoMapper
 
             CreateMap<EntregaObraClienteVM, EntregaObraCliente>()
                 .ForMember(x => x.NomeCliente, opt => opt.MapFrom(x => x.IdClienteConstrutora.HasValue ? "" : x.NomeCliente))
+                .ForMember(x => x.LocalVistoria, opt => opt.MapFrom(x => String.IsNullOrEmpty(x.LocalVistoria) ? "" : x.LocalVistoria))
+                .ForMember(x => x.Campo1, opt => opt.MapFrom(x => String.IsNullOrEmpty(x.Campo1) ? "" : x.Campo1))
+                .ForMember(x => x.Campo2, opt => opt.MapFrom(x => String.IsNullOrEmpty(x.Campo2) ? "" : x.Campo2))
+                .ForMember(x => x.Campo3, opt => opt.MapFrom(x => String.IsNullOrEmpty(x.Campo3) ? "" : x.Campo3))
+                .ForMember(x => x.Campo4, opt => opt.MapFrom(x => String.IsNullOrEmpty(x.Campo4) ? "" : x.Campo4))
                 .ForMember(x => x.NomeFuncionarioInspecao, opt => opt.MapFrom(x => x.IdFuncionarioInspecao.HasValue ? "" : x.NomeFuncionarioInspecao))
                 .ForMember(x => x.NomeFuncionarioReinspecao, opt => opt.MapFrom(x => x.IdFuncionarioReinspecao.HasValue ? "" : x.NomeFuncionarioReinspecao))
-                .ForMember(x => x.AssinaturaCliente, opt => opt.MapFrom(x => string.IsNullOrEmpty(x.AssinaturaCliente) ? null :
+                .ForMember(x => x.AssinaturaCliente, opt => opt.MapFrom(x => (string.IsNullOrEmpty(x.AssinaturaCliente) || x.AssinaturaCliente.Equals("preenchido")) ? null :
                                                                             Convert.FromBase64String(x.AssinaturaCliente.Split("base64,", StringSplitOptions.None)[1])))
-                .ForMember(x => x.AssinaturaConstrutora, opt => opt.MapFrom(x => string.IsNullOrEmpty(x.AssinaturaConstrutora) ? null :
+                .ForMember(x => x.AssinaturaConstrutora, opt => opt.MapFrom(x => (string.IsNullOrEmpty(x.AssinaturaConstrutora) || x.AssinaturaConstrutora.Equals("preenchido")) ? null :
                                                                             Convert.FromBase64String(x.AssinaturaConstrutora.Split("base64,", StringSplitOptions.None)[1])));
 
             CreateMap<AssistenciaTecnicaVM, AssistenciaTecnica>()
                 .ForMember(x => x.Local, opt => opt.MapFrom(x => x.IdClienteConstrutora.HasValue ? "" : x.NomeCliente))
                 .ForMember(x => x.NomeCliente, opt => opt.MapFrom(x => x.IdClienteConstrutora.HasValue ? "" : x.NomeCliente))
-                .ForMember(x => x.AssinaturaCliente, opt => opt.MapFrom(x => string.IsNullOrEmpty(x.AssinaturaCliente) ? null :
+                .ForMember(x => x.AssinaturaCliente, opt => opt.MapFrom(x => (string.IsNullOrEmpty(x.AssinaturaCliente) || x.AssinaturaCliente.Equals("preenchido")) ? null :
                                                                             Convert.FromBase64String(x.AssinaturaCliente.Split("base64,", StringSplitOptions.None)[1])))
-                .ForMember(x => x.AssinaturaConstrutora, opt => opt.MapFrom(x => string.IsNullOrEmpty(x.AssinaturaConstrutora) ? null :
+                .ForMember(x => x.AssinaturaConstrutora, opt => opt.MapFrom(x => (string.IsNullOrEmpty(x.AssinaturaConstrutora) || x.AssinaturaConstrutora.Equals("preenchido")) ? null :
                                                                             Convert.FromBase64String(x.AssinaturaConstrutora.Split("base64,", StringSplitOptions.None)[1])));
 
             CreateMap<AssistenciaTecnicaArquivoVM, AssistenciaTecnicaArquivo>()

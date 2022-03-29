@@ -25,13 +25,13 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Repository
                         .AsNoTracking()
                         .Include(x => x.CentroCusto)
                         .Include(x => x.EntregasObrasClientes).ThenInclude(x => x.CentroCusto).ThenInclude(x => x.ClienteCentrosCustos)
-                        .Include(x => x.EntregasObrasClientes).ThenInclude(x => x.Ocorrencias)
+                        .Include(x => x.EntregasObrasClientes).ThenInclude(x => x.Ocorrencias).ThenInclude(x => x.EntregaObraClienteChecklist)
                         .Include(x => x.EntregasObrasClientes).ThenInclude(x => x.Termos)
                         .Include(x => x.EntregasObrasClientes).ThenInclude(x => x.ClienteConstrutora)
                         .Include(x => x.EntregasObrasClientes).ThenInclude(x => x.ChecklistObra)
                         .Include(x => x.EntregasObrasClientes).ThenInclude(x => x.FuncionarioInspecao)
                         .Include(x => x.EntregasObrasClientes).ThenInclude(x => x.FuncionarioReinspecao)
-                        .Include(x => x.EntregasObrasClientes).ThenInclude(x => x.EntregasObrasClientesChecklists).ThenInclude(x => x.ItemChecklistObra)
+                        .Include(x => x.EntregasObrasClientes).ThenInclude(x => x.EntregasObrasClientesChecklists).ThenInclude(x => x.EntregaObraClienteOcorrencias)
                         .Where(x => !x.Delete && x.Id == entregaObra.Id)
                         .FirstOrDefault();
 

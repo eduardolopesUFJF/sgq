@@ -26,6 +26,9 @@ namespace SGQ.GDOL.Domain.AssistenciaTecnicaRoot.Entity
         public string Local { get; set; }
         public DateTime DataAbertura { get; set; }
         public DateTime? DataEncerramento { get; set; }
+        public DateTime? PrevRealizacaoVistoria { get; set; }
+        public DateTime? PrevTerminoAssistencia { get; set; }
+        public DateTime? DataReparo { get; set; }
         public string Contato { get; set; }
         public string Reclamacao { get; set; }
         public int Procedente { get; set; }

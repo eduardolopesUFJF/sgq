@@ -40,11 +40,21 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Mappings
                 .HasColumnName("TRATATIVA")
                 .IsUnicode(false);
 
+            entity.Property(e => e.NumeroInspecao)
+                .HasColumnName("INSPECAO");
+
+            entity.Property(e => e.IdItemChecklistEntrega)
+                .HasColumnName("ID_VERIFICACAO_CLIENTE");
+
             entity.Property(e => e.IdEntregaObraCliente).HasColumnName("ID_ENTREGA_OBRA_CLIENTE");
 
             entity.HasOne(d => d.EntregaObraCliente)
                 .WithMany(p => p.Ocorrencias)
                 .HasForeignKey(d => d.IdEntregaObraCliente);
+
+            entity.HasOne(d => d.EntregaObraClienteChecklist)
+                .WithMany(p => p.EntregaObraClienteOcorrencias)
+                .HasForeignKey(d => d.IdItemChecklistEntrega);
         }
     }
 }

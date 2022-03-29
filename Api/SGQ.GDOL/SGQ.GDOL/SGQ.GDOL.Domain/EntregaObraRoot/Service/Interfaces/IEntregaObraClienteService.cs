@@ -4,7 +4,8 @@ namespace SGQ.GDOL.Domain.EntregaObraRoot.Service.Interfaces
 {
     public interface IEntregaObraClienteService
     {
-        void Inserir(EntregaObraCliente entregaObraCliente);
+        EntregaObraCliente Inserir(EntregaObraCliente entregaObraCliente);
         void Atualizar(EntregaObraCliente entregaObraCliente);
+        EntregaObraCliente ObterEntregaObraCliente(int idEntregaObraCliente);
     }
 }

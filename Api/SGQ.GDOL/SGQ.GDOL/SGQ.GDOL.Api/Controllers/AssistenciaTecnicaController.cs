@@ -19,10 +19,18 @@ namespace SGQ.GDOL.Api.Controllers
             _assistenciaTecnicaService = assistenciaTecnicaService;
         }
 
+        [HttpGet("itens-ativos/{usuario}")]
+        public IActionResult GetByCC(string usuario)
+        {
+            var resultBD = _assistenciaTecnicaService.ObterTodosAtivos(usuario).OrderByDescending(x => x.DataAbertura).ToList();
+            var resultVM = Mapper.Map<List<AssistenciaTecnicaVM>>(resultBD);
+            return Ok(resultVM);
+        }
+
         [HttpGet("itens-ativos")]
         public IActionResult Get()
         {
-            var resultBD = _assistenciaTecnicaService.ObterTodosAtivos().OrderByDescending(x => x.DataAbertura).ToList();
+            var resultBD = _assistenciaTecnicaService.ObterTodosAtivos(null).OrderByDescending(x => x.DataAbertura).ToList();
             var resultVM = Mapper.Map<List<AssistenciaTecnicaVM>>(resultBD);
             return Ok(resultVM);
         }

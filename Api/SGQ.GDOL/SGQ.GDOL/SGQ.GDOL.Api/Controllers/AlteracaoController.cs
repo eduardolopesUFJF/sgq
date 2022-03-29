@@ -249,7 +249,10 @@ namespace SGQ.GDOL.Api.Controllers
                         var indice = entregaObraCliente.Ocorrencias.FindIndex(x => x.IdGuid == ocorrencia.IdGuid);
                         if (indice == -1)
                         {
-                            entregaObraCliente.Ocorrencias.Add(ocorrencia);
+                            if (!entregasObrasClienteOcorrencias.Any(x => x.Descricao.Equals(ocorrencia.Descricao)))
+                            {
+                                entregaObraCliente.Ocorrencias.Add(ocorrencia);
+                            }
                         }
                         else
                         {
@@ -596,7 +599,18 @@ namespace SGQ.GDOL.Api.Controllers
                                 item.IdChecklistEntrega = entregaObraClienteBD.IdChecklistObra;
                             }
                         }
-                        _entregaObraClienteService.Inserir(entregaObraClienteBD);
+                        entregaObraClienteBD.Ocorrencias = null;
+                        var entregaObraClienteAdicionada = _entregaObraClienteService.Inserir(entregaObraClienteBD);
+
+                        foreach (var ocorrenciaVM in entregaObraClienteVM.Ocorrencias)
+                        {
+                            ocorrenciaVM.IdEntregaObraCliente = entregaObraClienteAdicionada.Id;
+                            var itemChecklist = entregaObraClienteAdicionada.EntregasObrasClientesChecklists.FirstOrDefault(x =>
+                                x.Descricao.Equals(ocorrenciaVM.DescricaoItemChecklistEntrega));
+                            ocorrenciaVM.IdItemChecklistEntrega = itemChecklist.Id;
+                            var ocorrenciaBD = Mapper.Map<EntregaObraClienteOcorrencia>(ocorrenciaVM);
+                            _entregaObraClienteOcorrenciaService.Adicionar(ocorrenciaBD);
+                        }
                     }
                     else
                     {
@@ -645,7 +659,22 @@ namespace SGQ.GDOL.Api.Controllers
                         entregaObraClienteBD.FuncionarioReinspecao = null;
                         entregaObraClienteBD.EntregasObrasClientesChecklists = null;
                         entregaObraClienteBD.Termos = null;
-                        
+
+                        EntregaObraCliente entregaObraClienteOriginal = null;
+                        if ( (entregaObraClienteVM.AssinaturaCliente != null && entregaObraClienteVM.AssinaturaCliente.Equals("preenchido"))
+                            || (entregaObraClienteVM.AssinaturaConstrutora != null && entregaObraClienteVM.AssinaturaConstrutora.Equals("preenchido")) )
+                        {
+                            entregaObraClienteOriginal = _entregaObraClienteService.ObterEntregaObraCliente(entregaObraClienteBD.Id);
+                        }
+                        if (entregaObraClienteVM.AssinaturaCliente != null && entregaObraClienteVM.AssinaturaCliente.Equals("preenchido"))
+                        {
+                            entregaObraClienteBD.AssinaturaCliente = entregaObraClienteOriginal.AssinaturaCliente;
+                        }
+                        if (entregaObraClienteVM.AssinaturaConstrutora != null && entregaObraClienteVM.AssinaturaConstrutora.Equals("preenchido"))
+                        {
+                            entregaObraClienteBD.AssinaturaConstrutora = entregaObraClienteOriginal.AssinaturaConstrutora;
+                        }
+
                         _entregaObraClienteService.Atualizar(entregaObraClienteBD);
                     }
                 }
@@ -729,6 +758,21 @@ namespace SGQ.GDOL.Api.Controllers
                         assistenciaTecnicaBD.CentroCusto = null;
                         assistenciaTecnicaBD.ClienteConstrutora = null;
                         assistenciaTecnicaBD.PesquisasSatisfacaoCliente = null;
+
+                        AssistenciaTecnica assistenciaTecnicaOriginal = null;
+                        if ((assistenciaTecnicaVM.AssinaturaCliente != null && assistenciaTecnicaVM.AssinaturaCliente.Equals("preenchido"))
+                            || (assistenciaTecnicaVM.AssinaturaConstrutora != null && assistenciaTecnicaVM.AssinaturaConstrutora.Equals("preenchido")))
+                        {
+                            assistenciaTecnicaOriginal = _assistenciaTecnicaService.ObterAssistenciaTecnica(assistenciaTecnicaBD.Id);
+                        }
+                        if (assistenciaTecnicaVM.AssinaturaCliente != null && assistenciaTecnicaVM.AssinaturaCliente.Equals("preenchido"))
+                        {
+                            assistenciaTecnicaBD.AssinaturaCliente = assistenciaTecnicaOriginal.AssinaturaCliente;
+                        }
+                        if (assistenciaTecnicaVM.AssinaturaConstrutora != null && assistenciaTecnicaVM.AssinaturaConstrutora.Equals("preenchido"))
+                        {
+                            assistenciaTecnicaBD.AssinaturaConstrutora = assistenciaTecnicaOriginal.AssinaturaConstrutora;
+                        }
 
                         _assistenciaTecnicaService.Atualizar(assistenciaTecnicaBD);
                     }

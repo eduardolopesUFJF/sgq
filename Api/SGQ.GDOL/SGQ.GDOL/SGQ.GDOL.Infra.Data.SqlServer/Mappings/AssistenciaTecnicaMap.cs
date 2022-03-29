@@ -38,6 +38,18 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Mappings
                 .HasColumnName("DATA")
                 .HasColumnType("datetime");
 
+            entity.Property(e => e.PrevRealizacaoVistoria)
+                .HasColumnName("DATA_INICIO")
+                .HasColumnType("datetime");
+
+            entity.Property(e => e.PrevTerminoAssistencia)
+                .HasColumnName("DATA_TERMINO")
+                .HasColumnType("datetime");
+
+            entity.Property(e => e.DataReparo)
+                .HasColumnName("DATA_REPARO")
+                .HasColumnType("datetime");
+
             entity.Property(e => e.DataEncerramento)
                 .HasColumnName("DATA_ENCERRAMENTO")
                 .HasColumnType("datetime");
