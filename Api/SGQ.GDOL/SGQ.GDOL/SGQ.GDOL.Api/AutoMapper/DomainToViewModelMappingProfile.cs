@@ -29,7 +29,7 @@ namespace SGQ.GDOL.Api.AutoMapper
             CreateMap<ItemPesquisaSatisfacao, ItemPesquisaSatisfacaoVM>();
 
             CreateMap<EntregaObraClienteOcorrencia, EntregaObraClienteOcorrenciaVM>()
-                .ForMember(x => x.DescricaoItemChecklistEntrega, opt => opt.MapFrom(x => x.EntregaObraClienteChecklist.Descricao));
+                .ForMember(x => x.DescricaoItemChecklistEntrega, opt => opt.MapFrom(x => x.EntregaObraClienteChecklist.Ordem + " - " + x.EntregaObraClienteChecklist.Descricao));
             
             CreateMap<PesquisaSatisfacao, PesquisaSatisfacaoVM>()
                 .ForMember(x => x.ItensPesquisaSatisfacao, opt => opt.MapFrom(x => x.ItensPesquisaSatisfacao.Where(y => y.Delete.HasValue && !y.Delete.Value).OrderBy(y => y.Ordem)));
@@ -70,7 +70,7 @@ namespace SGQ.GDOL.Api.AutoMapper
 
             CreateMap<EntregaObraClienteChecklist, EntregaObraClienteChecklistVM>()
                 .ForMember(x => x.OrdemItemChecklistEntrega, opt => opt.MapFrom(x => x.Ordem))
-                .ForMember(x => x.DescricaoItemChecklistEntrega, opt => opt.MapFrom(x => x.Descricao));
+                .ForMember(x => x.DescricaoItemChecklistEntrega, opt => opt.MapFrom(x => x.Ordem + " - "+ x.Descricao));
 
             CreateMap<Servico, ServicoVM>()
                 .ForMember(x => x.IdArea, opt => opt.MapFrom(x => x.IdObraAreaChecklist))

@@ -35,6 +35,11 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Repository
                         .Where(x => !x.Delete && x.Id == entregaObra.Id)
                         .FirstOrDefault();
 
+                foreach (var item in entregasObraDB.EntregasObrasClientes)
+                {
+                    item.EntregasObrasClientesChecklists = item.EntregasObrasClientesChecklists.OrderBy(x => x.Ordem).ToList();
+                }
+
                 return entregasObraDB;
             }
 
