@@ -14,6 +14,8 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Mappings
 
             entity.Property(e => e.Id).HasColumnName("ID_USUARIO");
 
+            entity.Property(e => e.IdFuncionario).HasColumnName("ID_FUNCIONARIO");
+
             entity.Property(e => e.Bloqueado).HasColumnName("BLOQUEADO");
 
             entity.Property(e => e.CentroCustoRestrito).HasColumnName("CENTRO_CUSTO_RESTRITO");
@@ -59,6 +61,10 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Mappings
                 .IsUnicode(false);
 
             entity.Property(e => e.Tipo).HasColumnName("TIPO");
+
+            entity.HasOne(d => d.Funcionario)
+                    .WithMany(p => p.FuncionariosUsuario)
+                    .HasForeignKey(d => d.IdFuncionario);
         }
     }
 }

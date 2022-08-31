@@ -535,8 +535,18 @@ namespace SGQ.GDOL.Api.Controllers
                     var treinamentosFuncionarios = _treinamentoFuncionarioService.Obter(treinamentoFuncionarioVM.Instrutor, treinamentoFuncionarioVM.Local, treinamentoFuncionarioVM.DataInicio, treinamentoFuncionarioVM.IdFuncionario);
                     foreach (var item in treinamentosFuncionarios)
                     {
-                        item.Assinatura = string.IsNullOrEmpty(treinamentoFuncionarioVM.Assinatura) ? null :
-                                                                            Convert.FromBase64String(treinamentoFuncionarioVM.Assinatura.Split("base64,", StringSplitOptions.None)[1]);
+                        if (string.IsNullOrEmpty(treinamentoFuncionarioVM.Assinatura))
+                        {
+                            item.Assinatura = null;
+                        }
+                        else if (treinamentoFuncionarioVM.Assinatura.Equals("preenchido"))
+                        {
+                            item.Assinatura = item.Assinatura;
+                        } 
+                        else
+                        {
+                            item.Assinatura = Convert.FromBase64String(treinamentoFuncionarioVM.Assinatura.Split("base64,", StringSplitOptions.None)[1]);
+                        }
                         _treinamentoFuncionarioService.Atualizar(item);
                     }
                 }

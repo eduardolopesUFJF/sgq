@@ -18,5 +18,11 @@ namespace SGQ.GDOL.Domain.UsuarioRoot.Service
             var result = _usuarioRepository.Logar(usuarioLoginDTO);
             return result;
         }
+
+        public int? ObterFuncionarioVinculado(string nomeUsuario)
+        {
+            var result = _usuarioRepository.ObterFuncionarioVinculado(nomeUsuario);
+            return result;
+        }
     }
 }

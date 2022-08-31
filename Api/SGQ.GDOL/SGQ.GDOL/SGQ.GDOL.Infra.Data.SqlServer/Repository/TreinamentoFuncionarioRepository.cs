@@ -56,9 +56,7 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Repository
                                     Local = y.Local,
                                     NomeFuncionario = y.Funcionario.Nome,
                                     NomeTreinamento = y.Treinamento.Nome,
-                                    Assinatura = ""
-                                    //Assinatura = (y.Assinatura == null || y.Assinatura.Length == 0) ? null :
-                                    //                                        "data:image/png;base64," + Convert.ToBase64String(y.Assinatura)
+                                    Assinatura = y.Assinatura == null || y.Assinatura.Length == 0 ? null : "preenchido"
                             }).OrderBy(y => y.IdFuncionario).ToList()
                         })
                     .OrderByDescending(x => x.DataInicio)

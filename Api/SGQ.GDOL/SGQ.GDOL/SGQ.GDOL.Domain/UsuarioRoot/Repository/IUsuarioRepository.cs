@@ -6,5 +6,6 @@ namespace SGQ.GDOL.Domain.UsuarioRoot.Repository
     public interface IUsuarioRepository : IBaseRepository<Usuario>
     {
         int Logar(UsuarioLoginDTO usuarioLoginDTO);
+        int? ObterFuncionarioVinculado(string nomeUsuario);
     }
 }

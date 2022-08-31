@@ -2,6 +2,7 @@
 using SGQ.GDOL.Domain.EntregaObraRoot.Entity;
 using SGQ.GDOL.Domain.ObraRoot.Entity;
 using SGQ.GDOL.Domain.TreinamentoRoot.Entity;
+using SGQ.GDOL.Domain.UsuarioRoot.Entity;
 using System;
 using System.Collections.Generic;
 
@@ -25,5 +26,6 @@ namespace SGQ.GDOL.Domain.RHRoot.Entity
 
         public ICollection<TreinamentoFuncionario> TreinamentosFuncionarios { get; set; }
         public ICollection<RealizadoPorFuncionario> RealizadosPorFuncionarios { get; set; }
+        public virtual ICollection<Usuario> FuncionariosUsuario { get; set; }
     }
 }

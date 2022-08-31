@@ -2,6 +2,7 @@
 using SGQ.GDOL.Domain.UsuarioRoot.Entity;
 using SGQ.GDOL.Domain.UsuarioRoot.Repository;
 using SGQ.GDOL.Infra.Data.SqlServer.Context;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -12,6 +13,21 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Repository
         public UsuarioRepository(ServiceContext serviceContext) : base(serviceContext)
         {
         
+        }
+
+        public int? ObterFuncionarioVinculado(string nomeUsuario)
+        {
+            var usuario = _context.Usuario.Where(x => x.Login.Equals(nomeUsuario, StringComparison.InvariantCultureIgnoreCase)).ToList();
+
+            if (!usuario.Any())
+            {
+                return null;
+            }
+            else
+            {
+                var result = usuario.FirstOrDefault().IdFuncionario;
+                return result;
+            }
         }
 
         public int Logar(UsuarioLoginDTO usuarioLoginDTO)

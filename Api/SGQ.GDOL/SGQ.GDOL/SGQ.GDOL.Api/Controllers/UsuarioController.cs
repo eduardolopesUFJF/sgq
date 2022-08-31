@@ -24,5 +24,12 @@ namespace SGQ.GDOL.Api.Controllers
             var result = _usuarioService.Logar(usuarioLoginDTO);
             return Ok(result);
         }
+
+        [HttpGet("funcionario-vinculado/{nomeUsuario}")]
+        public IActionResult GetFuncionarioVinculado(string nomeUsuario)
+        {
+            var idFuncionarioVinculado = _usuarioService.ObterFuncionarioVinculado(nomeUsuario);
+            return Ok(idFuncionarioVinculado);
+        }
     }
 }

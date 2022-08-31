@@ -57,7 +57,9 @@ namespace SGQ.GDOL.Api.AutoMapper
                                                                                 x.DataInicio.Value.AddDays(x.DiasPrevisaoAvaliacao ?? 0)
                                                                                 : x.DataInicio))
                 .ForMember(x => x.NomeFuncionario, opt => opt.MapFrom(x => x.Funcionario.Nome))
-                .ForMember(x => x.NomeTreinamento, opt => opt.MapFrom(x => x.Treinamento.Nome + " (Versão: " + x.Treinamento.Descricao + ")"));
+                .ForMember(x => x.NomeTreinamento, opt => opt.MapFrom(x => x.Treinamento.Nome + " (Versão: " + x.Treinamento.Descricao + ")"))
+                .ForMember(x => x.Assinatura, opt => opt.MapFrom(x => (x.Assinatura == null || x.Assinatura.Length == 0) ? null :
+                                                                            "preenchido"));
 
             CreateMap<ClienteConstrutora, ClienteConstrutoraVM>()
                 .ForMember(x => x.ClienteCentrosCustos, opt => opt.MapFrom(x => x.ClienteCentrosCustos.Where(y => !y.Delete)));
@@ -133,12 +135,6 @@ namespace SGQ.GDOL.Api.AutoMapper
                                                                             "preenchido"))
                 .ForMember(x => x.AssinaturaConstrutora, opt => opt.MapFrom(x => (x.AssinaturaConstrutora == null || x.AssinaturaConstrutora.Length == 0) ? null :
                                                                             "preenchido"));
-                //.ForMember(x => x.AssinaturaCliente, opt => opt.MapFrom(x => (x.AssinaturaCliente == null || x.AssinaturaCliente.Length == 0) ? null :
-                //                                                            "data:image/png;base64," + Convert.ToBase64String(x.AssinaturaCliente)))
-                //.ForMember(x => x.AssinaturaConstrutora, opt => opt.MapFrom(x => (x.AssinaturaConstrutora == null || x.AssinaturaConstrutora.Length == 0) ? null :
-                //                                                            "data:image/png;base64," + Convert.ToBase64String(x.AssinaturaConstrutora)))
-                //.ForMember(x => x.AssinaturaCliente, opt => opt.MapFrom(x => "preenchida"))
-                //.ForMember(x => x.AssinaturaConstrutora, opt => opt.MapFrom(x => "preenchida"));
 
             CreateMap<ChecklistItem, ChecklistItemVM>()
                 .ForMember(x => x.Descricao, opt => opt.MapFrom(x => x.Descricao))
@@ -164,12 +160,6 @@ namespace SGQ.GDOL.Api.AutoMapper
                                                                             "preenchido"))
                .ForMember(x => x.AssinaturaConstrutora, opt => opt.MapFrom(x => (x.AssinaturaConstrutora == null || x.AssinaturaConstrutora.Length == 0) ? null :
                                                                             "preenchido"));
-               //.ForMember(x => x.AssinaturaCliente, opt => opt.MapFrom(x => (x.AssinaturaCliente == null || x.AssinaturaCliente.Length == 0) ? null :
-               //                                                             "data:image/png;base64," + Convert.ToBase64String(x.AssinaturaCliente)))
-               //.ForMember(x => x.AssinaturaConstrutora, opt => opt.MapFrom(x => (x.AssinaturaConstrutora == null || x.AssinaturaConstrutora.Length == 0) ? null :
-               //                                                             "data:image/png;base64," + Convert.ToBase64String(x.AssinaturaConstrutora)))
-               //.ForMember(x => x.AssinaturaCliente, opt => opt.MapFrom(x => ""))
-               //.ForMember(x => x.AssinaturaConstrutora, opt => opt.MapFrom(x => ""));
 
             CreateMap<Atendimento, AtendimentoVM>()
                 .ForMember(x => x.DescricaoFuncionario, opt => opt.MapFrom(x => x.Funcionario.Nome))
