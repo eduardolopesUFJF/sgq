@@ -30,6 +30,10 @@
               [(ngModel)]="senha" name="senha" style="margin: 0 !important;"></ion-input>
             <ion-icon item-end name="eye" class="passwordIcon" (click)="hideShowPassword()"></ion-icon>
           </ion-item>
+          <ion-item transparent>
+            <ion-label>Salvar Senha</ion-label>
+            <ion-checkbox [(ngModel)]="salvarSenha" name="salvarSenha" (ionChange)="onEvent('onCheckSavePassword')"></ion-checkbox>
+          </ion-item>
           <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: black !important;"
             (click)="onEvent('onLogin', loginForm.valid)">{{data.login}}</button>
           <button *ngIf="data.possuiRegistrar" ion-button default-button block text-capitalize margin-bottom (click)="onEvent('onRegister')">{{data.register}}</button>

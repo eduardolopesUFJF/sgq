@@ -104,6 +104,42 @@ var Alteracao = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Inspecao; });
+var Inspecao = /** @class */ (function () {
+    function Inspecao(values) {
+        if (values === void 0) { values = {}; }
+        this.id = 0;
+        this.idGuidInspecao = '';
+        this.idGuidServico = '';
+        this.campo1 = "";
+        this.campo2 = "";
+        this.campo3 = "";
+        this.campo4 = "";
+        this.status = 0;
+        this.situacao = 'Em aberto';
+        this.delete = false;
+        this.dataHoraAlteracao = new Date();
+        this.qtdNA = 0;
+        this.qtdA = 0;
+        this.qtdR = 0;
+        this.qtdRA = 0;
+        this.qtdX = 0;
+        this.inspecaoObraItens = [];
+        this.ocorrencias = [];
+        this.realizadosPor = [];
+        Object.assign(this, values);
+    }
+    return Inspecao;
+}());
+
+//# sourceMappingURL=inspecao.js.map
+
+/***/ }),
+
+/***/ 799:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Servico; });
 var Servico = /** @class */ (function () {
     function Servico(values) {
@@ -134,7 +170,7 @@ var Servico = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 799:
+/***/ 800:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -154,42 +190,6 @@ var ItemChecklist = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=item-checklist.js.map
-
-/***/ }),
-
-/***/ 800:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Inspecao; });
-var Inspecao = /** @class */ (function () {
-    function Inspecao(values) {
-        if (values === void 0) { values = {}; }
-        this.id = 0;
-        this.idGuidInspecao = '';
-        this.idGuidServico = '';
-        this.campo1 = "";
-        this.campo2 = "";
-        this.campo3 = "";
-        this.campo4 = "";
-        this.status = 0;
-        this.situacao = 'Em aberto';
-        this.delete = false;
-        this.dataHoraAlteracao = new Date();
-        this.qtdNA = 0;
-        this.qtdA = 0;
-        this.qtdR = 0;
-        this.qtdRA = 0;
-        this.qtdX = 0;
-        this.inspecaoObraItens = [];
-        this.ocorrencias = [];
-        this.realizadosPor = [];
-        Object.assign(this, values);
-    }
-    return Inspecao;
-}());
-
-//# sourceMappingURL=inspecao.js.map
 
 /***/ }),
 
@@ -225,15 +225,15 @@ var ItemInspecao = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VerificacaoPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_servico__ = __webpack_require__(798);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_inspecao__ = __webpack_require__(800);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_servico__ = __webpack_require__(799);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_inspecao__ = __webpack_require__(798);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(89);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__models_alteracao__ = __webpack_require__(786);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__ = __webpack_require__(781);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_uuid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_angular2_uuid__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__utils_message_service__ = __webpack_require__(155);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__models_item_inspecao__ = __webpack_require__(827);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__models_item_checklist__ = __webpack_require__(799);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__models_item_checklist__ = __webpack_require__(800);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__utils_storage_service_utils__ = __webpack_require__(156);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;

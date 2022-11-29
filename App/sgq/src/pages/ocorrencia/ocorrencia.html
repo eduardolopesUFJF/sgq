@@ -25,6 +25,8 @@
                                     | date:
                                     'dd/MM/yyyy') : '--'}}</h2>
                                 <h2 item-title text-wrap>Tratativa: {{item.tratativa}}</h2>
+                                <h2 item-title text-wrap>Item: {{item.descricaoInspecaoObraItem}}</h2>
+                                <h2 item-title text-wrap>Inspeção: {{item.numeroInspecao ? item.numeroInspecao + 'ª Inspeção' : ''}}</h2>
                             </ion-col>
                             <ion-col col-2 *ngIf="servico.status != 1">
                                 <ion-icon name="more" icon-small item-right style="font-size: 32px !important; margin: 0px"

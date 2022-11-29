@@ -8,25 +8,27 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:exported="false">
 
         <activity
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
             android:name="dom.gdolsistemas.sgq.MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBarLaunch"
-            android:launchMode="singleTask">
+            android:launchMode="singleTask"
+            android:exported="false">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+            <intent-filter android:exported="false">
+                <action android:name="android.intent.action.MAIN" android:exported="false" />
+                <category android:name="android.intent.category.LAUNCHER" android:exported="false" />
             </intent-filter>
 
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="@string/custom_url_scheme" />
+            <intent-filter android:exported="false">
+                <action android:name="android.intent.action.VIEW" android:exported="false" />
+                <category android:name="android.intent.category.DEFAULT" android:exported="false" />
+                <category android:name="android.intent.category.BROWSABLE" android:exported="false" />
+                <data android:scheme="@string/custom_url_scheme" android:exported="false" />
             </intent-filter>
 
         </activity>

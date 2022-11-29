@@ -32,5 +32,13 @@ namespace SGQ.GDOL.Domain.ObraRoot.Service
                 _unitOfWork.Commit();
             }
         }
+
+        public void AtualizarIdInspecaoObraItem(int idNovaOcorrencia, int idInspecaoObraItem)
+        {
+            var ocorrencia = _ocorrenciaRepository.BuscarPorId(idNovaOcorrencia);
+            ocorrencia.IdInspecaoObraItem = idInspecaoObraItem;
+            _ocorrenciaRepository.Update(ocorrencia);
+            _unitOfWork.Commit();
+        }
     }
 }

@@ -24,6 +24,19 @@
                             required></ion-textarea>
                     </ion-item>
                     <ion-item text-center transparent>
+                        <ion-label stacked>ITEM DE INSPEÇÃO</ion-label>
+                        <ion-select name="itemInspecao" [(ngModel)]="itemInspecao" placeholder="SELECIONE" (ngModelChange)="popularDescricaoItem()" required>
+                            <ion-option *ngFor="let item of inspecao.inspecaoObraItens" [value]="item">{{item.descricao}}</ion-option>
+                        </ion-select>
+                    </ion-item>
+                    <ion-item text-center transparent>
+                        <ion-label stacked>INSPEÇÃO</ion-label>
+                        <ion-select name="inspecao" [(ngModel)]="ocorrencia.numeroInspecao" placeholder="SELECIONE" required>
+                            <ion-option value="1">1ª Inspeção</ion-option>
+                            <ion-option value="2">2ª Inspeção</ion-option>
+                        </ion-select>
+                    </ion-item>
+                    <ion-item text-center transparent>
                         <ion-label stacked>DATA DA TRATATIVA</ion-label>
                         <ion-datetime displayFormat="DD/MM/YYYY" name="dataTratativa" [(ngModel)]="ocorrencia.dataTratativa"
                             cancelText="Cancelar" doneText="Ok"></ion-datetime>

@@ -18,4 +18,9 @@ export class UsuarioService extends BaseService {
             .catch(this.handleError);
     }
 
+    public funcionarioVinculado(nomeUsuario: string): Observable<number> {
+        this.headers = this.headers.set('BancoSchema', localStorage.getItem('BancoSchema'));
+        return this.http.get<number>(this.apiUrl + 'funcionario-vinculado/' + nomeUsuario, { headers: this.headers })
+            .catch(this.handleError);
+    }
 }

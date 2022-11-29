@@ -23,10 +23,12 @@ namespace SGQ.GDOL.Api.AutoMapper
             CreateMap<CategoriaAssistencia, CategoriaAssistenciaVM>();
             CreateMap<AssistenciaTecnicaArquivo, AssistenciaTecnicaArquivoVM>();
             CreateMap<EntregaObraClienteArquivo, EntregaObraClienteArquivoVM>();
-            CreateMap<Ocorrencia, OcorrenciaVM>();
             CreateMap<FuncionarioTerceirizado, FuncionarioTerceirizadoVM>();
             CreateMap<RealizadoPorFuncionario, RealizadoPorFuncionarioVM>();
             CreateMap<ItemPesquisaSatisfacao, ItemPesquisaSatisfacaoVM>();
+            
+            CreateMap<Ocorrencia, OcorrenciaVM>()
+                .ForMember(x => x.DescricaoInspecaoObraItem, opt => opt.MapFrom(x => x.InspecaoObraItem.Ordem + " - " + x.InspecaoObraItem.Descricao));
 
             CreateMap<EntregaObraClienteOcorrencia, EntregaObraClienteOcorrenciaVM>()
                 .ForMember(x => x.DescricaoItemChecklistEntrega, opt => opt.MapFrom(x => x.EntregaObraClienteChecklist.Ordem + " - " + x.EntregaObraClienteChecklist.Descricao));

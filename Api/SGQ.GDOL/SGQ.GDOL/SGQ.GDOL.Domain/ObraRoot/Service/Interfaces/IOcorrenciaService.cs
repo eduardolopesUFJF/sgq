@@ -6,5 +6,6 @@ namespace SGQ.GDOL.Domain.ObraRoot.Service.Interfaces
     {
         void Adicionar(Ocorrencia ocorrencia);
         void Atualizar(Ocorrencia ocorrencia);
+        void AtualizarIdInspecaoObraItem(int idNovaOcorrencia, int idInspecaoObraItem);
     }
 }

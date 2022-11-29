@@ -8,6 +8,7 @@ import { Alteracao } from '../../models/alteracao';
 import { UUID } from 'angular2-uuid';
 import { Servico } from '../../models/servico';
 import { StorageServiceUtils } from '../../utils/storage-service-utils';
+import { ItemInspecao } from '../../models/item-inspecao';
 
 @IonicPage()
 @Component({
@@ -17,6 +18,7 @@ import { StorageServiceUtils } from '../../utils/storage-service-utils';
 
 export class OcorrenciaPage {
 
+    itemInspecao: ItemInspecao;
     inspecao: Inspecao = new Inspecao();
     servico: Servico = new Servico();
     broadcomb: string;
@@ -34,6 +36,11 @@ export class OcorrenciaPage {
         this.inspecao = navParams.data.inspecao;
         this.servico = navParams.data.servico;
         this.broadcomb = navParams.data.broadcomb;
+        this.itemInspecao = navParams.data.itemInspecao;
+
+        if (this.itemInspecao) {
+            this.novaOcorrencia();
+        }
     }
 
     exibirOpcoes(ocorrencia: Ocorrencia) {
@@ -63,7 +70,7 @@ export class OcorrenciaPage {
     }
 
     novaOcorrencia() {
-        let modal = this.modalCtrl.create("ManterOcorrenciaPage", { ocorrencia: new Inspecao() });
+        let modal = this.modalCtrl.create("ManterOcorrenciaPage", { ocorrencia: new Inspecao(), itemInspecao: this.itemInspecao, inspecao: this.inspecao });
         modal.present();
 
         modal.onWillDismiss((ocorrencia: Ocorrencia) => {
@@ -104,7 +111,7 @@ export class OcorrenciaPage {
 
     editar(ocorrencia: Ocorrencia) {
         if (this.servico.status != 1) {
-            let modal = this.modalCtrl.create("ManterOcorrenciaPage", { ocorrencia: ocorrencia });
+            let modal = this.modalCtrl.create("ManterOcorrenciaPage", { ocorrencia: ocorrencia, inspecao: this.inspecao });
             this.ocorrenciaBackup = new Ocorrencia(ocorrencia);
             modal.present();
 

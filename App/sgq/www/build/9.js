@@ -104,40 +104,6 @@ var Alteracao = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Servico; });
-var Servico = /** @class */ (function () {
-    function Servico(values) {
-        if (values === void 0) { values = {}; }
-        this.id = 0;
-        this.idGuidServico = '';
-        this.descricao = '';
-        this.tipo = '';
-        this.idObra = 0;
-        this.idChecklist = 0;
-        this.idChecklistGuid = '';
-        this.idArea = 0;
-        this.idAreaGuid = "";
-        this.metaAprovacao = 90;
-        this.status = 0;
-        this.situacao = 'Em aberto';
-        this.delete = false;
-        this.dataHoraInclusao = new Date();
-        this.dataHoraAlteracao = new Date();
-        this.inspecoesObra = [];
-        this.itensChecklistServico = [];
-        Object.assign(this, values);
-    }
-    return Servico;
-}());
-
-//# sourceMappingURL=servico.js.map
-
-/***/ }),
-
-/***/ 800:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Inspecao; });
 var Inspecao = /** @class */ (function () {
     function Inspecao(values) {
@@ -170,6 +136,40 @@ var Inspecao = /** @class */ (function () {
 
 /***/ }),
 
+/***/ 799:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Servico; });
+var Servico = /** @class */ (function () {
+    function Servico(values) {
+        if (values === void 0) { values = {}; }
+        this.id = 0;
+        this.idGuidServico = '';
+        this.descricao = '';
+        this.tipo = '';
+        this.idObra = 0;
+        this.idChecklist = 0;
+        this.idChecklistGuid = '';
+        this.idArea = 0;
+        this.idAreaGuid = "";
+        this.metaAprovacao = 90;
+        this.status = 0;
+        this.situacao = 'Em aberto';
+        this.delete = false;
+        this.dataHoraInclusao = new Date();
+        this.dataHoraAlteracao = new Date();
+        this.inspecoesObra = [];
+        this.itensChecklistServico = [];
+        Object.assign(this, values);
+    }
+    return Servico;
+}());
+
+//# sourceMappingURL=servico.js.map
+
+/***/ }),
+
 /***/ 826:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -182,8 +182,10 @@ var Ocorrencia = /** @class */ (function () {
         this.idGuidOcorrencia = '';
         this.idInspecaoObra = 0;
         this.idGuidInspecao = '';
+        this.descricaoInspecaoObraItem = '';
         this.descricao = '';
         this.tratativa = '';
+        this.delete = false;
         this.dataHoraAlteracao = new Date();
         Object.assign(this, values);
     }
@@ -201,14 +203,14 @@ var Ocorrencia = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OcorrenciaPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_inspecao__ = __webpack_require__(800);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_inspecao__ = __webpack_require__(798);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(89);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_message_service__ = __webpack_require__(155);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__models_ocorrencia__ = __webpack_require__(826);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__models_alteracao__ = __webpack_require__(786);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angular2_uuid__ = __webpack_require__(781);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angular2_uuid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_angular2_uuid__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__models_servico__ = __webpack_require__(798);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__models_servico__ = __webpack_require__(799);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__utils_storage_service_utils__ = __webpack_require__(156);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -279,6 +281,10 @@ var OcorrenciaPage = /** @class */ (function () {
         this.inspecao = navParams.data.inspecao;
         this.servico = navParams.data.servico;
         this.broadcomb = navParams.data.broadcomb;
+        this.itemInspecao = navParams.data.itemInspecao;
+        if (this.itemInspecao) {
+            this.novaOcorrencia();
+        }
     }
     OcorrenciaPage.prototype.exibirOpcoes = function (ocorrencia) {
         var _this = this;
@@ -306,7 +312,7 @@ var OcorrenciaPage = /** @class */ (function () {
     };
     OcorrenciaPage.prototype.novaOcorrencia = function () {
         var _this = this;
-        var modal = this.modalCtrl.create("ManterOcorrenciaPage", { ocorrencia: new __WEBPACK_IMPORTED_MODULE_2__models_inspecao__["a" /* Inspecao */]() });
+        var modal = this.modalCtrl.create("ManterOcorrenciaPage", { ocorrencia: new __WEBPACK_IMPORTED_MODULE_2__models_inspecao__["a" /* Inspecao */](), itemInspecao: this.itemInspecao, inspecao: this.inspecao });
         modal.present();
         modal.onWillDismiss(function (ocorrencia) {
             if (ocorrencia) {
@@ -355,7 +361,7 @@ var OcorrenciaPage = /** @class */ (function () {
     OcorrenciaPage.prototype.editar = function (ocorrencia) {
         var _this = this;
         if (this.servico.status != 1) {
-            var modal = this.modalCtrl.create("ManterOcorrenciaPage", { ocorrencia: ocorrencia });
+            var modal = this.modalCtrl.create("ManterOcorrenciaPage", { ocorrencia: ocorrencia, inspecao: this.inspecao });
             this.ocorrenciaBackup = new __WEBPACK_IMPORTED_MODULE_5__models_ocorrencia__["a" /* Ocorrencia */](ocorrencia);
             modal.present();
             modal.onWillDismiss(function (data) {
@@ -458,7 +464,7 @@ var OcorrenciaPage = /** @class */ (function () {
     };
     OcorrenciaPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-ocorrencia',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\ocorrencia\ocorrencia.html"*/'<ion-header>\n\n    <ion-navbar class="pad-nav-page-nt2">\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n    <h2 text-center text-wrap class="broadcomb">{{broadcomb.toUpperCase()}}</h2>\n\n    <h2 padding text-center class="aviso" *ngIf="inspecao.ocorrencias.length < 1">Nenhum registro encontrado.</h2>\n\n    <ion-grid no-padding>\n\n        <ion-row>\n\n            <button ion-button default-button block text-capitalize box-shadow margin-bottom class="button-novo"\n\n                (click)="novaOcorrencia()" [disabled]="servico.status == 1">Nova ocorrência</button>\n\n        </ion-row>\n\n        <ion-row>\n\n            <ion-col col-12>\n\n                <ion-list no-margin>\n\n                    <ion-item default-item no-lines [ngClass]="{\'novo-item\': !item.id && !item.delete, \'item-removido\': item.delete}" *ngFor="let item of inspecao.ocorrencias; let i = index;">\n\n                        <ion-row class="espacamento">\n\n                            <ion-col col-10 (click)="editar(item)">\n\n                                <h2 item-title text-wrap>Data da descrição: {{item.dataDescricao ? (item.dataDescricao\n\n                                    | date:\n\n                                    \'dd/MM/yyyy\') : \'--\'}}</h2>\n\n                                <h2 item-title text-wrap>Descrição: {{item.descricao}}</h2>\n\n                                <h2 item-title text-wrap>Data da tratativa: {{item.dataTratativa ? (item.dataTratativa\n\n                                    | date:\n\n                                    \'dd/MM/yyyy\') : \'--\'}}</h2>\n\n                                <h2 item-title text-wrap>Tratativa: {{item.tratativa}}</h2>\n\n                            </ion-col>\n\n                            <ion-col col-2 *ngIf="servico.status != 1">\n\n                                <ion-icon name="more" icon-small item-right style="font-size: 32px !important; margin: 0px"\n\n                                    (click)="exibirOpcoes(item)"></ion-icon>\n\n                            </ion-col>\n\n                        </ion-row>\n\n                    </ion-item>\n\n                </ion-list>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-grid>\n\n</ion-content>'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\ocorrencia\ocorrencia.html"*/
+            selector: 'page-ocorrencia',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\ocorrencia\ocorrencia.html"*/'<ion-header>\n\n    <ion-navbar class="pad-nav-page-nt2">\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n    <h2 text-center text-wrap class="broadcomb">{{broadcomb.toUpperCase()}}</h2>\n\n    <h2 padding text-center class="aviso" *ngIf="inspecao.ocorrencias.length < 1">Nenhum registro encontrado.</h2>\n\n    <ion-grid no-padding>\n\n        <ion-row>\n\n            <button ion-button default-button block text-capitalize box-shadow margin-bottom class="button-novo"\n\n                (click)="novaOcorrencia()" [disabled]="servico.status == 1">Nova ocorrência</button>\n\n        </ion-row>\n\n        <ion-row>\n\n            <ion-col col-12>\n\n                <ion-list no-margin>\n\n                    <ion-item default-item no-lines [ngClass]="{\'novo-item\': !item.id && !item.delete, \'item-removido\': item.delete}" *ngFor="let item of inspecao.ocorrencias; let i = index;">\n\n                        <ion-row class="espacamento">\n\n                            <ion-col col-10 (click)="editar(item)">\n\n                                <h2 item-title text-wrap>Data da descrição: {{item.dataDescricao ? (item.dataDescricao\n\n                                    | date:\n\n                                    \'dd/MM/yyyy\') : \'--\'}}</h2>\n\n                                <h2 item-title text-wrap>Descrição: {{item.descricao}}</h2>\n\n                                <h2 item-title text-wrap>Data da tratativa: {{item.dataTratativa ? (item.dataTratativa\n\n                                    | date:\n\n                                    \'dd/MM/yyyy\') : \'--\'}}</h2>\n\n                                <h2 item-title text-wrap>Tratativa: {{item.tratativa}}</h2>\n\n                                <h2 item-title text-wrap>Item: {{item.descricaoInspecaoObraItem}}</h2>\n\n                                <h2 item-title text-wrap>Inspeção: {{item.numeroInspecao ? item.numeroInspecao + \'ª Inspeção\' : \'\'}}</h2>\n\n                            </ion-col>\n\n                            <ion-col col-2 *ngIf="servico.status != 1">\n\n                                <ion-icon name="more" icon-small item-right style="font-size: 32px !important; margin: 0px"\n\n                                    (click)="exibirOpcoes(item)"></ion-icon>\n\n                            </ion-col>\n\n                        </ion-row>\n\n                    </ion-item>\n\n                </ion-list>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-grid>\n\n</ion-content>'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\ocorrencia\ocorrencia.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */],

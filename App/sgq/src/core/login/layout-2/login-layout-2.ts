@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { IonicPage } from 'ionic-angular';
 import { ToastService } from '../../../utils/toast-service';
+import { Storage } from '@ionic/storage';
 
 @IonicPage()
 @Component({
@@ -18,11 +19,37 @@ export class LoginLayout2 {
     public empresa: string;
 
     passwordType: string = 'password';
+    salvarSenha: boolean = true;
 
-    constructor(private toastService: ToastService) { }
+    constructor(private toastService: ToastService, public storage: Storage) {
+        this.popularSenhaSalva();
+     }
 
     hideShowPassword() {
         this.passwordType = this.passwordType == 'text' ? 'password' : 'text';
+    }
+
+    async popularSenhaSalva() {
+        await this.storage.ready();
+        this.usuario = await this.storage.get('UsuarioSalvo');
+        if (this.usuario) {
+            let senhaArmazenada = await this.storage.get('Senha:' + this.usuario.toUpperCase());
+            if (senhaArmazenada) {
+                this.senha = senhaArmazenada;
+            } else {
+                this.senha = "";
+            }
+            let empresaArmazenada = await this.storage.get('EmpresaSalva');
+            if (empresaArmazenada) {
+                this.empresa = empresaArmazenada;
+            } else {
+                this.empresa = "";
+            }
+        } else {
+            this.usuario = "";
+            this.senha = "";
+            this.empresa = "";
+        }
     }
 
     onEvent = (event: string, formValido): void => {

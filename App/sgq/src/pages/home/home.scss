@@ -4,6 +4,12 @@ page-home {
         font-weight: bold;
     }
 
+    .instrucao {
+        font-size: 18px !important;
+        padding: 0px !important;
+        margin-top: 0px !important;
+    }
+
     .progress-outer {
         width: 96%;
         margin: 10px 2%;
@@ -30,6 +36,18 @@ page-home {
 
     .mb-6 {
         margin-bottom: 6px !important;
+    }
+
+    .green {
+        background-color: #21b14b !important;
+    }
+
+    .orange {
+        background-color: orange !important;
+    }
+
+    .red {
+        background-color: red !important;
     }
 
 }

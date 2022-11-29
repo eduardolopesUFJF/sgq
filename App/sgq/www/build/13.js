@@ -46,40 +46,6 @@ var RealizarVerificacaoPageModule = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Servico; });
-var Servico = /** @class */ (function () {
-    function Servico(values) {
-        if (values === void 0) { values = {}; }
-        this.id = 0;
-        this.idGuidServico = '';
-        this.descricao = '';
-        this.tipo = '';
-        this.idObra = 0;
-        this.idChecklist = 0;
-        this.idChecklistGuid = '';
-        this.idArea = 0;
-        this.idAreaGuid = "";
-        this.metaAprovacao = 90;
-        this.status = 0;
-        this.situacao = 'Em aberto';
-        this.delete = false;
-        this.dataHoraInclusao = new Date();
-        this.dataHoraAlteracao = new Date();
-        this.inspecoesObra = [];
-        this.itensChecklistServico = [];
-        Object.assign(this, values);
-    }
-    return Servico;
-}());
-
-//# sourceMappingURL=servico.js.map
-
-/***/ }),
-
-/***/ 800:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Inspecao; });
 var Inspecao = /** @class */ (function () {
     function Inspecao(values) {
@@ -109,6 +75,40 @@ var Inspecao = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=inspecao.js.map
+
+/***/ }),
+
+/***/ 799:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Servico; });
+var Servico = /** @class */ (function () {
+    function Servico(values) {
+        if (values === void 0) { values = {}; }
+        this.id = 0;
+        this.idGuidServico = '';
+        this.descricao = '';
+        this.tipo = '';
+        this.idObra = 0;
+        this.idChecklist = 0;
+        this.idChecklistGuid = '';
+        this.idArea = 0;
+        this.idAreaGuid = "";
+        this.metaAprovacao = 90;
+        this.status = 0;
+        this.situacao = 'Em aberto';
+        this.delete = false;
+        this.dataHoraInclusao = new Date();
+        this.dataHoraAlteracao = new Date();
+        this.inspecoesObra = [];
+        this.itensChecklistServico = [];
+        Object.assign(this, values);
+    }
+    return Servico;
+}());
+
+//# sourceMappingURL=servico.js.map
 
 /***/ }),
 
@@ -144,12 +144,12 @@ var ItemInspecao = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RealizarVerificacaoPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_inspecao__ = __webpack_require__(800);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_inspecao__ = __webpack_require__(798);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_funcionario__ = __webpack_require__(918);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(89);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_toast_service__ = __webpack_require__(350);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__models_item_inspecao__ = __webpack_require__(827);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__models_servico__ = __webpack_require__(798);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__models_servico__ = __webpack_require__(799);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -230,15 +230,11 @@ var RealizarVerificacaoPage = /** @class */ (function () {
         this.inspecao = this.navParams.data.inspecao;
         this.tratarDatas();
         this.obterFuncionarios();
+        this.popularFuncionarioVinculado();
     }
     RealizarVerificacaoPage.prototype.tratarDatas = function () {
         if (this.inspecao.dataInspecao) {
-            if (this.inspecao.dataInspecao.toString().indexOf("GMT") == -1) {
-                this.dataAbertura = this.inspecao.dataInspecao.toString().split("T")[0];
-            }
-            else {
-                this.dataAbertura = this.inspecao.dataInspecao.toISOString().split("T")[0];
-            }
+            this.dataAbertura = this.inspecao.dataInspecao.toString().split("T")[0];
         }
         if (this.inspecao.dataEncerramento) {
             if (this.inspecao.dataEncerramento.toString().indexOf("GMT") == -1) {
@@ -247,6 +243,16 @@ var RealizarVerificacaoPage = /** @class */ (function () {
             else {
                 this.dataEncerramento = this.inspecao.dataEncerramento.toISOString().split("T")[0];
             }
+        }
+    };
+    RealizarVerificacaoPage.prototype.limparFuncionario = function (tipo) {
+        if (tipo == 'inspecionado') {
+            this.inspecao.idFuncionarioInspecionado = null;
+            this.funcionarioInspecionado = null;
+        }
+        else if (tipo == 'aprovado') {
+            this.inspecao.idFuncionarioAprovado = null;
+            this.funcionarioAprovado = null;
         }
     };
     RealizarVerificacaoPage.prototype.setaFuncionarioInspecionado = function (event) {
@@ -282,12 +288,26 @@ var RealizarVerificacaoPage = /** @class */ (function () {
             });
         });
     };
+    RealizarVerificacaoPage.prototype.popularFuncionarioVinculado = function () {
+        var _this = this;
+        this.storage.ready().then(function () {
+            _this.storage.get('usuarioVinculado').then(function (idFuncionario) {
+                if (!_this.inspecao.idFuncionarioInspecionado && idFuncionario) {
+                    _this.inspecao.idFuncionarioInspecionado = idFuncionario;
+                    _this.funcionarioInspecionado = _this.funcionarios.find(function (x) { return x.id == idFuncionario; });
+                }
+            });
+        });
+    };
+    RealizarVerificacaoPage.prototype.exibirOcorrenciasAtalho = function (item) {
+        this.navCtrl.push("OcorrenciaPage", { inspecao: this.inspecao, broadcomb: this.descServico, servico: this.servico, itemInspecao: item });
+    };
     RealizarVerificacaoPage.prototype.atualizarSituacao = function () {
         this.inspecao.situacao = this.inspecao.status == 0 ? 'Em aberto' : 'Finalizado';
     };
     RealizarVerificacaoPage.prototype.salvar = function (valido) {
         if (valido) {
-            this.inspecao.dataInspecao = this.dataAbertura ? new Date(this.dataAbertura + "T12:00:00") : null;
+            this.inspecao.dataInspecao = this.dataAbertura ? this.dataAbertura : null;
             this.inspecao.dataEncerramento = this.dataEncerramento ? new Date(this.dataEncerramento + "T12:00:00") : null;
             if (this.inspecao.status == 0) {
                 this.viewCtrl.dismiss({ inspecao: this.inspecao, concluido: true });
@@ -357,7 +377,7 @@ var RealizarVerificacaoPage = /** @class */ (function () {
     };
     RealizarVerificacaoPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-realizar-verificacao',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\verificacao\realizar\realizar-verificacao.html"*/'<ion-header>\n\n    <ion-navbar class="pad-nav-page-nt2">\n\n        <ion-row>\n\n            <ion-col col-5 class="ptb-0" (click)="voltar()" style="padding-left: 15px !important;">\n\n                <button class="button-nav">\n\n                    <span ion-text>Voltar</span>\n\n                </button>\n\n            </ion-col>\n\n            <ion-col col-7 class="ptb-0 registros-align" style="padding-right: 20px !important;">\n\n                <button class="button-nav" (click)="exibirOpcoes()">\n\n                    <span ion-text>Registros</span>\n\n                </button>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n    <ion-grid no-padding>\n\n        <ion-row padding-left padding-right>\n\n            <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n\n                <form #cadastroForm="ngForm" padding-top>\n\n                    <ion-item text-center text-wrap transparent style="padding-bottom: 0 !important;">\n\n                        <ion-label style="font-size: 18px !important; font-weight: bold;" stacked>{{descServico.toUpperCase()}}</ion-label>\n\n                    </ion-item>\n\n                    <ion-item text-center transparent style="text-align: left !important; padding-bottom: 0px !important;">\n\n                        <ion-label>EXIBIR POR CENTRO DE CUSTO</ion-label>\n\n                        <ion-checkbox name="exibirPorCentroCusto" [(ngModel)]="exibirPorCentroCusto"\n\n                            (ngModelChange)="obterFuncionarios()"></ion-checkbox>\n\n                    </ion-item>\n\n                    <ion-item text-center transparent>\n\n                        <ion-label stacked>INSPECIONADO POR</ion-label>\n\n                        <ionic-selectable item-content [(ngModel)]="funcionarioInspecionado" [items]="funcionarios"\n\n                            itemValueField="id" itemTextField="nome" [canSearch]="true" [disabled]="servico.status == 1"\n\n                            name="idFuncionarioInspecionado" (onChange)="setaFuncionarioInspecionado($event)" required>\n\n                        </ionic-selectable>\n\n                    </ion-item>\n\n                    <ion-item text-center transparent>\n\n                        <ion-label stacked>APROVADOR POR</ion-label>\n\n                        <ionic-selectable item-content [(ngModel)]="funcionarioAprovado" [items]="funcionarios"\n\n                            itemValueField="id" itemTextField="nome" [canSearch]="true" [disabled]="servico.status == 1"\n\n                            name="idFuncionarioAprovado" (onChange)="setaFuncionarioAprovado($event)">\n\n                        </ionic-selectable>\n\n                    </ion-item>\n\n                    <ion-list radio-group no-margin [(ngModel)]="inspecao.status" name="status" (ngModelChange)="atualizarSituacao()"\n\n                        [disabled]="servico.status == 1">\n\n                        <ion-grid>\n\n                            <ion-row>\n\n                                <ion-col col-6>\n\n                                    <ion-item radio>\n\n                                        <ion-label>Em aberto</ion-label>\n\n                                        <ion-radio [value]="0"></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                                <ion-col col-6>\n\n                                    <ion-item radio>\n\n                                        <ion-label>Finalizado</ion-label>\n\n                                        <ion-radio [value]="1"></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                            </ion-row>\n\n                        </ion-grid>\n\n                    </ion-list>\n\n                    <ion-row>\n\n                        <ion-col col-6>\n\n                            <ion-item text-center transparent>\n\n                                <ion-label stacked>DATA ABERTURA</ion-label>\n\n                                <ion-datetime displayFormat="DD/MM/YYYY" name="dataAbertura" [(ngModel)]="dataAbertura"\n\n                                    [disabled]="servico.status == 1" cancelText="Cancelar" doneText="Ok"></ion-datetime>\n\n                            </ion-item>\n\n                        </ion-col>\n\n                        <ion-col col-6>\n\n                            <ion-item text-center transparent>\n\n                                <ion-label stacked>DATA ENCERRAMENTO</ion-label>\n\n                                <ion-datetime displayFormat="DD/MM/YYYY" name="dataEncerramento" [(ngModel)]="dataEncerramento"\n\n                                    [disabled]="servico.status == 1" cancelText="Cancelar" doneText="Ok"></ion-datetime>\n\n                            </ion-item>\n\n                        </ion-col>\n\n                    </ion-row>\n\n                    <hr style="margin: 2px 0 0 0;">\n\n                    <ion-list radio-group no-margin [(ngModel)]="item.inspecao1" name="itemInspecao1+{{i}}" *ngFor="let item of inspecao.inspecaoObraItens; let i=index;"\n\n                        [disabled]="servico.status == 1">\n\n                        <h2 text-wrap style="font-weight: bold;margin-top: 10px;">{{item.descricao}}</h2>\n\n                        <ion-grid>\n\n                            <ion-row>\n\n                                <ion-col col-3>\n\n                                    <ion-item radio style="background-color: blue;">\n\n                                        <ion-label>NA</ion-label>\n\n                                        <ion-radio [value]="\'N\'"></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                                <ion-col col-3>\n\n                                    <ion-item radio style="background-color: darkgreen;">\n\n                                        <ion-label>A</ion-label>\n\n                                        <ion-radio [value]="\'A\'"></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                                <ion-col col-3>\n\n                                    <ion-item radio style="background-color: yellow;">\n\n                                        <ion-label>R</ion-label>\n\n                                        <ion-radio [value]="\'R\'"></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                                <ion-col col-3>\n\n                                    <ion-item radio style="background-color: red;">\n\n                                        <ion-label>X</ion-label>\n\n                                        <ion-radio [value]="\'X\'"></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                            </ion-row>\n\n                            <ion-row *ngIf="item.inspecao1 == \'R\'">\n\n                                <ion-list radio-group no-margin [(ngModel)]="item.inspecao2" name="itemInspecao2+{{i}}"\n\n                                    style="width: 100%" [disabled]="servico.status == 1">\n\n                                    <ion-grid>\n\n                                        <ion-row>\n\n                                            <ion-col col-3></ion-col>\n\n                                            <ion-col col-3>\n\n                                                <ion-item radio style="background-color: orange;">\n\n                                                    <ion-label>RA</ion-label>\n\n                                                    <ion-radio [value]="\'A\'"></ion-radio>\n\n                                                </ion-item>\n\n                                            </ion-col>\n\n                                            <ion-col col-3>\n\n                                                <ion-item radio style="background-color: red;">\n\n                                                    <ion-label>X</ion-label>\n\n                                                    <ion-radio [value]="\'X\'"></ion-radio>\n\n                                                </ion-item>\n\n                                            </ion-col>\n\n                                            <ion-col col-3></ion-col>\n\n                                        </ion-row>\n\n                                    </ion-grid>\n\n                                </ion-list>\n\n                            </ion-row>\n\n                            <ion-row>\n\n                                <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: black !important;"\n\n                                    (click)="item.inspecao1=\'\';item.inspecao2=\'\'" [disabled]="servico.status == 1">Limpar</button>\n\n                            </ion-row>\n\n                        </ion-grid>\n\n                        <hr style="margin: 2px 0 0 0;">\n\n                    </ion-list>\n\n                </form>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-grid>\n\n</ion-content>\n\n\n\n<ion-footer>\n\n    <button ion-button default-button block text-capitalize box-shadow margin-bottom no-margin style="background-color: rgb(33,177,75) !important;"\n\n        (click)="salvar(cadastroForm.valid)" [disabled]="servico.status == 1">Salvar</button>\n\n</ion-footer>'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\verificacao\realizar\realizar-verificacao.html"*/
+            selector: 'page-realizar-verificacao',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\verificacao\realizar\realizar-verificacao.html"*/'<ion-header>\n\n    <ion-navbar class="pad-nav-page-nt2">\n\n        <ion-row>\n\n            <ion-col col-5 class="ptb-0" (click)="voltar()" style="padding-left: 15px !important;">\n\n                <button class="button-nav">\n\n                    <span ion-text>Voltar</span>\n\n                </button>\n\n            </ion-col>\n\n            <ion-col col-7 class="ptb-0 registros-align" style="padding-right: 20px !important;">\n\n                <button class="button-nav" (click)="exibirOpcoes()">\n\n                    <span ion-text>Registros</span>\n\n                </button>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n    <ion-grid no-padding>\n\n        <ion-row padding-left padding-right>\n\n            <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n\n                <form #cadastroForm="ngForm" padding-top>\n\n                    <ion-item text-center text-wrap transparent style="padding-bottom: 0 !important;">\n\n                        <ion-label style="font-size: 18px !important; font-weight: bold;" stacked>{{descServico.toUpperCase()}}</ion-label>\n\n                    </ion-item>\n\n                    <ion-item text-center transparent style="text-align: left !important; padding-bottom: 0px !important;">\n\n                        <ion-label>EXIBIR POR CENTRO DE CUSTO</ion-label>\n\n                        <ion-checkbox name="exibirPorCentroCusto" [(ngModel)]="exibirPorCentroCusto" (ngModelChange)="obterFuncionarios()"></ion-checkbox>\n\n                    </ion-item>\n\n                    <ion-item text-center transparent style="padding-bottom: 3px !important;">\n\n                        <ion-label stacked>INSPECIONADO POR</ion-label>\n\n                        <ionic-selectable item-content [(ngModel)]="funcionarioInspecionado" [items]="funcionarios"\n\n                            itemValueField="id" itemTextField="nome" [canSearch]="true" [disabled]="servico.status == 1"\n\n                            name="idFuncionarioInspecionado" (onChange)="setaFuncionarioInspecionado($event)" required>\n\n                        </ionic-selectable>\n\n                    </ion-item>\n\n                    <ion-row *ngIf="funcionarioInspecionado">\n\n                        <ion-col col-8></ion-col>\n\n                        <ion-col col-4>\n\n                            <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: black !important; margin: 0 0 8px 0; height: 10px;"\n\n                                (click)="limparFuncionario(\'inspecionado\')" [disabled]="servico.status == 1">Limpar</button>\n\n                        </ion-col>\n\n                    </ion-row>\n\n                    <ion-item text-center transparent style="padding-bottom: 3px !important;">\n\n                        <ion-label stacked>APROVADOR POR</ion-label>\n\n                        <ionic-selectable item-content [(ngModel)]="funcionarioAprovado" [items]="funcionarios"\n\n                            itemValueField="id" itemTextField="nome" [canSearch]="true" [disabled]="servico.status == 1"\n\n                            name="idFuncionarioAprovado" (onChange)="setaFuncionarioAprovado($event)">\n\n                        </ionic-selectable>\n\n                    </ion-item>\n\n                    <ion-row *ngIf="funcionarioAprovado">\n\n                        <ion-col col-8></ion-col>\n\n                        <ion-col col-4>\n\n                            <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: black !important; margin: 0 0 8px 0; height: 10px;"\n\n                                (click)="limparFuncionario(\'aprovado\')" [disabled]="servico.status == 1">Limpar</button>\n\n                        </ion-col>\n\n                    </ion-row>\n\n                    <ion-list radio-group no-margin [(ngModel)]="inspecao.status" name="status" (ngModelChange)="atualizarSituacao()"\n\n                        [disabled]="servico.status == 1">\n\n                        <ion-grid>\n\n                            <ion-row>\n\n                                <ion-col col-6>\n\n                                    <ion-item radio>\n\n                                        <ion-label>Em aberto</ion-label>\n\n                                        <ion-radio [value]="0"></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                                <ion-col col-6>\n\n                                    <ion-item radio>\n\n                                        <ion-label>Finalizado</ion-label>\n\n                                        <ion-radio [value]="1"></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                            </ion-row>\n\n                        </ion-grid>\n\n                    </ion-list>\n\n                    <ion-row>\n\n                        <ion-col col-6>\n\n                            <ion-item text-center transparent>\n\n                                <ion-label stacked>DATA ABERTURA</ion-label>\n\n                                <ion-datetime displayFormat="DD/MM/YYYY" name="dataAbertura" [(ngModel)]="dataAbertura"\n\n                                    [disabled]="servico.status == 1" cancelText="Cancelar" doneText="Ok"></ion-datetime>\n\n                            </ion-item>\n\n                        </ion-col>\n\n                        <ion-col col-6>\n\n                            <ion-item text-center transparent>\n\n                                <ion-label stacked>DATA ENCERRAMENTO</ion-label>\n\n                                <ion-datetime displayFormat="DD/MM/YYYY" name="dataEncerramento" [(ngModel)]="dataEncerramento"\n\n                                    [disabled]="servico.status == 1" cancelText="Cancelar" doneText="Ok"></ion-datetime>\n\n                            </ion-item>\n\n                        </ion-col>\n\n                    </ion-row>\n\n                    <hr style="margin: 2px 0 0 0;">\n\n                    <ion-list radio-group no-margin [(ngModel)]="item.inspecao1" name="itemInspecao1+{{i}}" *ngFor="let item of inspecao.inspecaoObraItens; let i=index;"\n\n                        [disabled]="servico.status == 1">\n\n                        <h2 text-wrap style="font-weight: bold;margin-top: 10px;">{{item.descricao}}</h2>\n\n                        <ion-grid>\n\n                            <ion-row>\n\n                                <ion-col col-3>\n\n                                    <ion-item radio style="background-color: blue;">\n\n                                        <ion-label>NA</ion-label>\n\n                                        <ion-radio [value]="\'N\'"></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                                <ion-col col-3>\n\n                                    <ion-item radio style="background-color: darkgreen;">\n\n                                        <ion-label>A</ion-label>\n\n                                        <ion-radio [value]="\'A\'"></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                                <ion-col col-3>\n\n                                    <ion-item radio style="background-color: yellow;">\n\n                                        <ion-label>R</ion-label>\n\n                                        <ion-radio [value]="\'R\'"></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                                <ion-col col-3>\n\n                                    <ion-item radio style="background-color: red;">\n\n                                        <ion-label>X</ion-label>\n\n                                        <ion-radio [value]="\'X\'"></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                            </ion-row>\n\n                            <ion-row *ngIf="item.inspecao1 == \'R\'">\n\n                                <ion-list radio-group no-margin [(ngModel)]="item.inspecao2" name="itemInspecao2+{{i}}"\n\n                                    style="width: 100%" [disabled]="servico.status == 1">\n\n                                    <ion-grid>\n\n                                        <ion-row>\n\n                                            <ion-col col-3></ion-col>\n\n                                            <ion-col col-3>\n\n                                                <ion-item radio style="background-color: orange;">\n\n                                                    <ion-label>RA</ion-label>\n\n                                                    <ion-radio [value]="\'A\'"></ion-radio>\n\n                                                </ion-item>\n\n                                            </ion-col>\n\n                                            <ion-col col-3>\n\n                                                <ion-item radio style="background-color: red;">\n\n                                                    <ion-label>X</ion-label>\n\n                                                    <ion-radio [value]="\'X\'"></ion-radio>\n\n                                                </ion-item>\n\n                                            </ion-col>\n\n                                            <ion-col col-3></ion-col>\n\n                                        </ion-row>\n\n                                    </ion-grid>\n\n                                </ion-list>\n\n                            </ion-row>\n\n                            <ion-row>\n\n                                <ion-col col-6>\n\n                                    <button ion-button default-button block text-capitalize box-shadow margin-bottom\n\n                                        style="background-color: black !important;" (click)="item.inspecao1=\'\';item.inspecao2=\'\'"\n\n                                        [disabled]="servico.status == 1">Limpar</button>\n\n                                </ion-col>\n\n                                <ion-col col-6>\n\n                                    <button ion-button default-button block text-capitalize box-shadow margin-bottom\n\n                                        style="background-color: black !important;" (click)="exibirOcorrenciasAtalho(item)"\n\n                                        [disabled]="servico.status == 1">Ocorrência</button>\n\n                                </ion-col>\n\n                            </ion-row>\n\n                        </ion-grid>\n\n                        <hr style="margin: 2px 0 0 0;">\n\n                    </ion-list>\n\n                </form>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-grid>\n\n</ion-content>\n\n\n\n<ion-footer>\n\n    <button ion-button default-button block text-capitalize box-shadow margin-bottom no-margin style="background-color: rgb(33,177,75) !important;"\n\n        (click)="salvar(cadastroForm.valid)" [disabled]="servico.status == 1">Salvar</button>\n\n</ion-footer>'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\verificacao\realizar\realizar-verificacao.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["u" /* ViewController */],
             __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */],

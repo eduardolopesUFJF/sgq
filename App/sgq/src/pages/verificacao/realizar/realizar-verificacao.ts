@@ -49,15 +49,12 @@ export class RealizarVerificacaoPage {
         this.inspecao = this.navParams.data.inspecao;
         this.tratarDatas();
         this.obterFuncionarios();
+        this.popularFuncionarioVinculado();
     }
 
     tratarDatas() {
         if (this.inspecao.dataInspecao) {
-            if (this.inspecao.dataInspecao.toString().indexOf("GMT") == -1) {
-                this.dataAbertura = this.inspecao.dataInspecao.toString().split("T")[0];
-            } else {
-                this.dataAbertura = this.inspecao.dataInspecao.toISOString().split("T")[0];
-            }
+            this.dataAbertura = this.inspecao.dataInspecao.toString().split("T")[0];
         }
         if (this.inspecao.dataEncerramento) {
             if (this.inspecao.dataEncerramento.toString().indexOf("GMT") == -1) {
@@ -65,6 +62,16 @@ export class RealizarVerificacaoPage {
             } else {
                 this.dataEncerramento = this.inspecao.dataEncerramento.toISOString().split("T")[0];
             }
+        }
+    }
+    
+    limparFuncionario(tipo: string) {
+        if (tipo == 'inspecionado') {
+            this.inspecao.idFuncionarioInspecionado = null;
+            this.funcionarioInspecionado = null;
+        } else if (tipo == 'aprovado') {
+            this.inspecao.idFuncionarioAprovado = null;
+            this.funcionarioAprovado = null;
         }
     }
 
@@ -90,13 +97,28 @@ export class RealizarVerificacaoPage {
         this.funcionarioInspecionado = this.funcionarios.find(x => x.id == this.inspecao.idFuncionarioInspecionado);
     }
 
+    popularFuncionarioVinculado() {
+        this.storage.ready().then(() => {
+            this.storage.get('usuarioVinculado').then(idFuncionario => {
+                if (!this.inspecao.idFuncionarioInspecionado && idFuncionario) {
+                    this.inspecao.idFuncionarioInspecionado = idFuncionario;
+                    this.funcionarioInspecionado = this.funcionarios.find(x => x.id == idFuncionario);
+                }
+            });
+        });
+    }
+
+    exibirOcorrenciasAtalho(item: ItemInspecao) {
+        this.navCtrl.push("OcorrenciaPage", { inspecao: this.inspecao, broadcomb: this.descServico, servico: this.servico, itemInspecao: item });
+    }
+
     atualizarSituacao() {
         this.inspecao.situacao = this.inspecao.status == 0 ? 'Em aberto' : 'Finalizado';
     }
 
     salvar(valido: boolean) {
         if (valido) {
-            this.inspecao.dataInspecao = this.dataAbertura ? new Date(this.dataAbertura + "T12:00:00") : null;
+            this.inspecao.dataInspecao = this.dataAbertura ? this.dataAbertura : null;
             this.inspecao.dataEncerramento = this.dataEncerramento ? new Date(this.dataEncerramento + "T12:00:00") : null;
             if (this.inspecao.status == 0) {
                 this.viewCtrl.dismiss({ inspecao: this.inspecao, concluido: true });

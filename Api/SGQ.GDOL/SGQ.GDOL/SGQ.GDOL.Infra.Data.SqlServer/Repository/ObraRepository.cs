@@ -29,7 +29,7 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Repository
                         .Include(x => x.CentroCusto)
                         .Include(x => x.Areas).ThenInclude(x => x.Servicos).ThenInclude(x => x.ChecklistItem)
                         .Include(x => x.Areas).ThenInclude(x => x.Servicos).ThenInclude(x => x.InspecoesObra).ThenInclude(x => x.InspecaoObraItens)
-                        .Include(x => x.Areas).ThenInclude(x => x.Servicos).ThenInclude(x => x.InspecoesObra).ThenInclude(x => x.Ocorrencias)
+                        .Include(x => x.Areas).ThenInclude(x => x.Servicos).ThenInclude(x => x.InspecoesObra).ThenInclude(x => x.Ocorrencias).ThenInclude(x => x.InspecaoObraItem)
                         .Include(x => x.Areas).ThenInclude(x => x.Servicos).ThenInclude(x => x.InspecoesObra).ThenInclude(x => x.FuncionarioAprovadoObj)
                         .Include(x => x.Areas).ThenInclude(x => x.Servicos).ThenInclude(x => x.InspecoesObra).ThenInclude(x => x.FuncionarioInspecionadoObj)
                         .Include(x => x.Areas).ThenInclude(x => x.Servicos).ThenInclude(x => x.InspecoesObra).ThenInclude(x => x.RealizadosPor).ThenInclude(x => x.CentroCusto)

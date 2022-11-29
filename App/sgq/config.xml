@@ -11,9 +11,12 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application/activity">
+        <application android:exported="true" />
+    </edit-config>
     <preference name="ScrollEnabled" value="false" />
-    <preference name="android-minSdkVersion" value="19" />
-    <preference name="android-targetSdkVersion" value="28" />
+    <preference name="android-minSdkVersion" value="31" />
+    <preference name="android-targetSdkVersion" value="31" />
     <preference name="BackupWebStorage" value="none" />
     <preference name="SplashMaintainAspectRatio" value="true" />
     <preference name="FadeSplashScreenDuration" value="300" />

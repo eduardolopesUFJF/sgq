@@ -5,9 +5,9 @@ namespace SGQ.GDOL.Api.ViewModels
     public class EntregaObraClienteOcorrenciaVM
     {
         public int Id { get; set; }
+        public string IdGuid { get; set; }
         public int IdItemChecklistEntrega { get; set; }
         public string DescricaoItemChecklistEntrega { get; set; }
-        public string IdGuid { get; set; }
         public int IdEntregaObraCliente { get; set; }
         public string IdGuidEntregaObraCliente { get; set; }
         public DateTime? DataDescricao { get; set; }

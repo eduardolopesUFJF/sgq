@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SGQ.GDOL.Domain.ObraRoot.Entity
 {
@@ -15,5 +16,6 @@ namespace SGQ.GDOL.Domain.ObraRoot.Entity
         public DateTime? DataHoraAlteracao { get; set; }
 
         public InspecaoObra InspecaoObra { get; set; }
+        public virtual ICollection<Ocorrencia> Ocorrencias { get; set; }
     }
 }

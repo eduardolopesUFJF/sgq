@@ -1134,6 +1134,11 @@ namespace SGQ.GDOL.Api.Controllers
                 var ocorrenciaVM = JsonConvert.DeserializeObject<OcorrenciaVM>(alteracao.Valor);
                 var areaCadastrada = areas.FirstOrDefault(x => x.IdGuidArea == alteracao.IdGuidArea && alteracao.IdGuidArea != null);
 
+                if (ocorrenciaVM.IdInspecaoObraItem.HasValue && ocorrenciaVM.IdInspecaoObraItem.Value == 0)
+                {
+                    ocorrenciaVM.IdInspecaoObraItem = null;
+                }
+
                 if (areaCadastrada != null)
                 {
                     ServicoVM servicoCadastrado;
@@ -1194,6 +1199,10 @@ namespace SGQ.GDOL.Api.Controllers
                         {
                             if (!inspecaoCadastrada.Ocorrencias.Any(x => x.IdGuidOcorrencia == ocorrenciaVM.IdGuidOcorrencia))
                             {
+                                if (ocorrenciaVM.IdInspecaoObraItem.HasValue && ocorrenciaVM.IdInspecaoObraItem == 0)
+                                {
+                                    ocorrenciaVM.IdInspecaoObraItem = null;
+                                }
                                 inspecaoCadastrada.Ocorrencias.Add(ocorrenciaVM);
                             }
                         }
@@ -1329,8 +1338,28 @@ namespace SGQ.GDOL.Api.Controllers
                     if (inspecaoVM.Id == 0)
                     {
                         inspecaoBD.RealizadosPor = null;
+
+                        foreach (var ocorrencia in inspecaoBD.Ocorrencias)
+                        {
+                            if (ocorrencia.IdInspecaoObraItem.HasValue && ocorrencia.IdInspecaoObraItem.Value == 0)
+                            {
+                                ocorrencia.IdInspecaoObraItem = null;
+                            }
+                        }
+
                         var idInspecaoAdicionada = _inspecaoService.Adicionar(inspecaoBD);
                         inspecaoVM.Id = idInspecaoAdicionada;
+
+                        foreach (var ocorrencia in inspecaoVM.Ocorrencias)
+                        {
+                            var inspecaoObraItem = inspecaoBD.InspecaoObraItens.FirstOrDefault(x => x.Descricao.Equals(ocorrencia.DescricaoInspecaoObraItem));
+                            if (inspecaoObraItem != null)
+                            {
+                                var ocorrenciaBD = inspecaoBD.Ocorrencias.FirstOrDefault(x => x.Descricao.Equals(ocorrencia.Descricao));
+                                ocorrenciaBD.IdInspecaoObraItem = inspecaoObraItem.Id;
+                                _ocorrenciaService.Atualizar(ocorrenciaBD);
+                            }
+                        }
                     }
                     else
                     {

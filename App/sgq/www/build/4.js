@@ -107,40 +107,6 @@ var Alteracao = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Servico; });
-var Servico = /** @class */ (function () {
-    function Servico(values) {
-        if (values === void 0) { values = {}; }
-        this.id = 0;
-        this.idGuidServico = '';
-        this.descricao = '';
-        this.tipo = '';
-        this.idObra = 0;
-        this.idChecklist = 0;
-        this.idChecklistGuid = '';
-        this.idArea = 0;
-        this.idAreaGuid = "";
-        this.metaAprovacao = 90;
-        this.status = 0;
-        this.situacao = 'Em aberto';
-        this.delete = false;
-        this.dataHoraInclusao = new Date();
-        this.dataHoraAlteracao = new Date();
-        this.inspecoesObra = [];
-        this.itensChecklistServico = [];
-        Object.assign(this, values);
-    }
-    return Servico;
-}());
-
-//# sourceMappingURL=servico.js.map
-
-/***/ }),
-
-/***/ 800:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Inspecao; });
 var Inspecao = /** @class */ (function () {
     function Inspecao(values) {
@@ -173,6 +139,40 @@ var Inspecao = /** @class */ (function () {
 
 /***/ }),
 
+/***/ 799:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Servico; });
+var Servico = /** @class */ (function () {
+    function Servico(values) {
+        if (values === void 0) { values = {}; }
+        this.id = 0;
+        this.idGuidServico = '';
+        this.descricao = '';
+        this.tipo = '';
+        this.idObra = 0;
+        this.idChecklist = 0;
+        this.idChecklistGuid = '';
+        this.idArea = 0;
+        this.idAreaGuid = "";
+        this.metaAprovacao = 90;
+        this.status = 0;
+        this.situacao = 'Em aberto';
+        this.delete = false;
+        this.dataHoraInclusao = new Date();
+        this.dataHoraAlteracao = new Date();
+        this.inspecoesObra = [];
+        this.itensChecklistServico = [];
+        Object.assign(this, values);
+    }
+    return Servico;
+}());
+
+//# sourceMappingURL=servico.js.map
+
+/***/ }),
+
 /***/ 913:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -180,11 +180,11 @@ var Inspecao = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RealizadoPorPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_inspecao__ = __webpack_require__(800);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_inspecao__ = __webpack_require__(798);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(89);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_realizado_por__ = __webpack_require__(914);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_storage_service_utils__ = __webpack_require__(156);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__models_servico__ = __webpack_require__(798);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__models_servico__ = __webpack_require__(799);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__models_fornecedor__ = __webpack_require__(915);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utils_toast_service__ = __webpack_require__(350);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__models_realizado_por_funcionario__ = __webpack_require__(916);

@@ -59,14 +59,14 @@ export class MyApp {
     });
 
     this.pages = [
-      { "title": "Home", "icon": "home", "component": "HomePage" },
-      { "title": "Baixar dados", "icon": "cloud-download", "component": "Baixar" },
-      { "title": "Listar alterações", "icon": "list", "component": "AlteracoesPage" },
-      { "title": "Publicar alterações", "icon": "cloud-upload", "component": "Subir" },
-      { "title": "Descartar alterações", "icon": "trash", "component": "Descartar" },
-      { "title": "Cadastrar Checklist", "icon": "checkmark-circle-outline", "component": "ChecklistPage" },
-      { "title": "Acesso às obras", "icon": "build", "component": "ObraPage" },
-      { "title": "Sair", "icon": "exit", "component": "LoginPage" },
+      { "title": "Home", "icon": "home", "component": "HomePage", "color": "green" },
+      { "title": "Baixar dados", "icon": "cloud-download", "component": "Baixar", "color": "green" },
+      { "title": "Publicar alterações", "icon": "cloud-upload", "component": "Subir", "color": "green" },
+      { "title": "Listar alterações", "icon": "list", "component": "AlteracoesPage", "color": "orange" },
+      { "title": "Descartar alterações", "icon": "trash", "component": "Descartar", "color": "red" },
+      { "title": "Cadastrar Checklist", "icon": "checkmark-circle-outline", "component": "ChecklistPage", "color": "orange" },
+      { "title": "Acesso às obras", "icon": "build", "component": "ObraPage", "color": "green" },
+      { "title": "Sair", "icon": "exit", "component": "LoginPage", "color": "red" },
     ];
 
     this.params = {
@@ -137,9 +137,15 @@ export class MyApp {
     }
   }
 
-  deslogar() {
+  async deslogar() {
     localStorage.clear();
+    let usuarioSalvo = await this.storage.get('UsuarioSalvo');
+    let senha = await this.storage.get('Senha:'+usuarioSalvo);
+    let empresa = await this.storage.get('EmpresaSalva');
     this.storage.clear();
+    this.storage.set('UsuarioSalvo', usuarioSalvo);
+    this.storage.set('Senha:'+usuarioSalvo, senha);
+    this.storage.set('EmpresaSalva', empresa);
     this.nav.setRoot("LoginPage");
   }
 

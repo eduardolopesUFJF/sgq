@@ -4,11 +4,14 @@ export class Ocorrencia {
     idGuidOcorrencia: string = '';
     idInspecaoObra: number = 0;
     idGuidInspecao: string = '';
-    dataDescricao: Date;
+    idInspecaoObraItem: number;
+    descricaoInspecaoObraItem: string = '';
+    numeroInspecao: number;
+    dataDescricao: string;
     dataTratativa: Date;
     descricao: string = '';
     tratativa: string = '';
-    delete?: boolean;
+    delete?: boolean = false;
     dataHoraInclusao: Date;
     dataHoraAlteracao: Date = new Date();
     

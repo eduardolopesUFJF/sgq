@@ -16,6 +16,7 @@ import { ClienteService } from '../../services/cliente.service';
 export class LoginPage {
 
     usuarioLogin: UsuarioLogin = new UsuarioLogin();
+    salvarSenha: boolean = true;
 
     data = {
         "background": "assets/images/background/login.png",
@@ -44,6 +45,9 @@ export class LoginPage {
     events = {
         onLogin: (data) => {
             this.logar(data.usuario, data.senha, data.empresa);
+        },
+        onCheckSavePassword: (data) => {
+            this.salvarSenha = data.salvarSenha;
         }
     };
 
@@ -57,7 +61,7 @@ export class LoginPage {
         public toastService: ToastService) {
     }
 
-    ngAfterViewInit() {
+    ionViewDidLoad() {
         this.loading.show();
         this.clienteService.obterTodas().subscribe(
             result => {
@@ -129,12 +133,30 @@ export class LoginPage {
     }
 
     gravarDadosLogin() {
+        this.obterFuncionarioVinculado();
         localStorage.setItem('isLogged','true');
         this.navCtrl.setRoot("HomePage");
         this.storage.ready().then(() => {
             this.storage.set('BancoSchema', this.usuarioLogin.empresa.toUpperCase());
             this.storage.set('Usuario', this.usuarioLogin.usuario.toUpperCase());
+            if (this.salvarSenha) {
+                this.storage.set('Senha:' + this.usuarioLogin.usuario.toUpperCase(), this.usuarioLogin.senha);
+                this.storage.set('UsuarioSalvo', this.usuarioLogin.usuario.toUpperCase());
+                this.storage.set('EmpresaSalva', this.usuarioLogin.empresa.toUpperCase());
+            } else {
+                this.storage.remove('Senha:' + this.usuarioLogin.usuario.toUpperCase());
+                this.storage.remove('UsuarioSalvo');
+                this.storage.remove('EmpresaSalva');
+            }
         });
+    }
+
+    obterFuncionarioVinculado() {
+        this.usuarioService.funcionarioVinculado(this.usuarioLogin.usuario.toLowerCase()).subscribe(
+            data => {
+                this.storage.set('usuarioVinculado', data);
+            }
+        );
     }
 
 }

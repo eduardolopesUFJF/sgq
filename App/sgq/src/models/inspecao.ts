@@ -8,7 +8,7 @@ export class Inspecao {
     idGuidInspecao: string = '';
     idServico: number;
     idGuidServico: string = '';
-    dataInspecao: Date;
+    dataInspecao: string;
     dataEncerramento: Date;
     campo1: string = "";
     campo2: string = "";
