@@ -1,6 +1,6 @@
 webpackJsonp([14],{
 
-/***/ 765:
+/***/ 764:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AreaCadastroPageModule", function() { return AreaCadastroPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__area_cadastro__ = __webpack_require__(898);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__area_cadastro__ = __webpack_require__(897);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_selectable__ = __webpack_require__(353);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -42,7 +42,7 @@ var AreaCadastroPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 781:
+/***/ 780:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -86,7 +86,7 @@ exports.UUID = UUID;
 
 /***/ }),
 
-/***/ 786:
+/***/ 785:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -103,7 +103,7 @@ var Alteracao = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 799:
+/***/ 798:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -137,7 +137,7 @@ var Servico = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 825:
+/***/ 824:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -161,20 +161,20 @@ var Area = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 898:
+/***/ 897:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AreaCadastroPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_area__ = __webpack_require__(825);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_alteracao__ = __webpack_require__(786);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_area__ = __webpack_require__(824);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_alteracao__ = __webpack_require__(785);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_toast_service__ = __webpack_require__(350);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__ = __webpack_require__(781);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__ = __webpack_require__(780);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_uuid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_angular2_uuid__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__models_servico__ = __webpack_require__(799);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__models_servico__ = __webpack_require__(798);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utils_storage_service_utils__ = __webpack_require__(156);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;

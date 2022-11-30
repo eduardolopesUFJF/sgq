@@ -62,8 +62,8 @@ var MessageService = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return StorageServiceUtils; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_storage__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__loading_service__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_storage__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__loading_service__ = __webpack_require__(89);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -237,63 +237,63 @@ webpackEmptyAsyncContext.id = 167;
 
 var map = {
 	"../core/action-sheet/layout-1/action-sheet-layout-1.module": [
-		696,
+		695,
 		27
 	],
 	"../core/action-sheet/layout-2/action-sheet-layout-2.module": [
-		697,
+		696,
 		26
 	],
 	"../core/action-sheet/layout-3/action-sheet-layout-3.module": [
-		698,
+		697,
 		86
 	],
 	"../core/check-box/layout-1/check-box-layout-1.module": [
-		699,
+		698,
 		85
 	],
 	"../core/check-box/layout-2/check-box-layout-2.module": [
-		700,
+		699,
 		84
 	],
 	"../core/check-box/layout-3/check-box-layout-3.module": [
-		701,
+		700,
 		83
 	],
 	"../core/full-screen-gallery/full-screen-gallery.module": [
-		702,
+		701,
 		82
 	],
 	"../core/image-gallery/layout-1/image-gallery-layout-1.module": [
-		703,
+		702,
 		81
 	],
 	"../core/image-gallery/layout-2/image-gallery-layout-2.module": [
-		704,
+		703,
 		80
 	],
 	"../core/list-view/appearance-animation/layout-1/appearance-animation-layout-1.module": [
-		705,
+		704,
 		79
 	],
 	"../core/list-view/appearance-animation/layout-2/appearance-animation-layout-2.module": [
-		706,
+		705,
 		78
 	],
 	"../core/list-view/appearance-animation/layout-3/appearance-animation-layout-3.module": [
-		707,
+		706,
 		77
 	],
 	"../core/list-view/appearance-animation/layout-4/appearance-animation-layout-4.module": [
-		708,
+		707,
 		76
 	],
 	"../core/list-view/appearance-animation/layout-5/appearance-animation-layout-5.module": [
-		692,
+		691,
 		75
 	],
 	"../core/list-view/drag-and-drop/layout-1/drag-and-drop-layout-1.module": [
-		710,
+		708,
 		74
 	],
 	"../core/list-view/drag-and-drop/layout-2/drag-and-drop-layout-2.module": [
@@ -301,287 +301,287 @@ var map = {
 		73
 	],
 	"../core/list-view/drag-and-drop/layout-3/drag-and-drop-layout-3.module": [
-		711,
+		710,
 		72
 	],
 	"../core/list-view/expandable/layout-1/expandable-layout-1.module": [
-		712,
+		711,
 		71
 	],
 	"../core/list-view/expandable/layout-2/expandable-layout-2.module": [
-		713,
+		712,
 		70
 	],
 	"../core/list-view/expandable/layout-3/expandable-layout-3.module": [
-		714,
+		713,
 		69
 	],
 	"../core/list-view/google-card/layout-1/google-card-layout-1.module": [
-		715,
+		714,
 		68
 	],
 	"../core/list-view/google-card/layout-2/google-card-layout-2.module": [
-		716,
+		715,
 		67
 	],
 	"../core/list-view/google-card/layout-3/google-card-layout-3.module": [
-		717,
+		716,
 		66
 	],
 	"../core/list-view/sticky-list-header/layout-1/sticky-list-header-layout-1.module": [
-		718,
+		717,
 		8
 	],
 	"../core/list-view/sticky-list-header/layout-2/sticky-list-header-layout-2.module": [
-		719,
+		718,
 		7
 	],
 	"../core/list-view/sticky-list-header/layout-3/sticky-list-header-layout-3.module": [
-		720,
+		719,
 		6
 	],
 	"../core/list-view/swipe-to-dismiss/layout-1/swipe-to-dismiss-layout-1.module": [
-		721,
+		720,
 		65
 	],
 	"../core/list-view/swipe-to-dismiss/layout-2/swipe-to-dismiss-layout-2.module": [
-		722,
+		721,
 		64
 	],
 	"../core/list-view/swipe-to-dismiss/layout-3/swipe-to-dismiss-layout-3.module": [
-		723,
+		722,
 		63
 	],
 	"../core/login/layout-1/login-layout-1.module": [
-		724,
+		723,
 		62
 	],
 	"../core/login/layout-2/login-layout-2.module": [
-		694,
+		693,
 		19
 	],
 	"../core/maps/layout-1/maps-layout-1.module": [
-		725,
+		724,
 		0
 	],
 	"../core/maps/layout-2/maps-layout-2.module": [
-		726,
+		725,
 		2
 	],
 	"../core/maps/layout-3/maps-layout-3.module": [
-		727,
+		726,
 		1
 	],
 	"../core/parallax/layout-1/parallax-layout-1.module": [
-		728,
+		727,
 		25
 	],
 	"../core/parallax/layout-2/parallax-layout-2.module": [
-		729,
+		728,
 		24
 	],
 	"../core/parallax/layout-3/parallax-layout-3.module": [
-		730,
+		729,
 		23
 	],
 	"../core/parallax/layout-4/parallax-layout-4.module": [
-		731,
+		730,
 		22
 	],
 	"../core/radio-button/layout-1/radio-button-layout-1.module": [
-		732,
+		731,
 		61
 	],
 	"../core/radio-button/layout-2/radio-button-layout-2.module": [
-		733,
+		732,
 		60
 	],
 	"../core/radio-button/layout-3/radio-button-layout-3.module": [
-		734,
+		733,
 		59
 	],
 	"../core/range/layout-1/range-layout-1.module": [
-		735,
+		734,
 		58
 	],
 	"../core/range/layout-2/range-layout-2.module": [
-		736,
+		735,
 		57
 	],
 	"../core/range/layout-3/range-layout-3.module": [
-		737,
+		736,
 		56
 	],
 	"../core/range/layout-4/range-layout-4.module": [
-		738,
+		737,
 		55
 	],
 	"../core/register/layout-1/register-layout-1.module": [
-		739,
+		738,
 		54
 	],
 	"../core/register/layout-2/register-layout-2.module": [
-		740,
+		739,
 		53
 	],
 	"../core/search-bar/layout-1/search-bar-layout-1.module": [
-		741,
+		740,
 		52
 	],
 	"../core/search-bar/layout-2/search-bar-layout-2.module": [
-		742,
+		741,
 		51
 	],
 	"../core/search-bar/layout-3/search-bar-layout-3.module": [
-		743,
+		742,
 		50
 	],
 	"../core/select/layout-1/select-layout-1.module": [
-		693,
+		692,
 		49
 	],
 	"../core/select/layout-2/select-layout-2.module": [
-		744,
+		743,
 		48
 	],
 	"../core/select/layout-3/select-layout-3.module": [
-		695,
+		694,
 		47
 	],
 	"../core/select/layout-4/select-layout-4.module": [
-		745,
+		744,
 		46
 	],
 	"../core/select/layout-5/select-layout-5.module": [
-		746,
+		745,
 		45
 	],
 	"../core/select/layout-6/select-layout-6.module": [
-		747,
+		746,
 		44
 	],
 	"../core/spinner/spinner.module": [
-		748,
+		747,
 		43
 	],
 	"../core/splash-screen/layout-1/splash-screen-layout-1.module": [
-		749,
+		748,
 		42
 	],
 	"../core/splash-screen/layout-2/splash-screen-layout-2.module": [
-		750,
+		749,
 		41
 	],
 	"../core/splash-screen/layout-3/splash-screen-layout-3.module": [
-		751,
+		750,
 		40
 	],
 	"../core/sub-image-gallery/layout-1/sub-image-gallery-layout-1.module": [
-		752,
+		751,
 		39
 	],
 	"../core/sub-image-gallery/layout-2/sub-image-gallery-layout-2.module": [
-		753,
+		752,
 		38
 	],
 	"../core/tabs/layout-1/tabs-layout-1.module": [
-		754,
+		753,
 		37
 	],
 	"../core/tabs/layout-2/tabs-layout-2.module": [
-		755,
+		754,
 		36
 	],
 	"../core/tabs/layout-3/tabs-layout-3.module": [
-		756,
+		755,
 		35
 	],
 	"../core/toggle/layout-1/toggle-layout-1.module": [
-		757,
+		756,
 		34
 	],
 	"../core/toggle/layout-2/toggle-layout-2.module": [
-		758,
+		757,
 		33
 	],
 	"../core/toggle/layout-3/toggle-layout-3.module": [
-		759,
+		758,
 		32
 	],
 	"../core/wizard/layout-1/wizard-layout-1.module": [
-		760,
+		759,
 		31
 	],
 	"../core/wizard/layout-2/wizard-layout-2.module": [
-		761,
+		760,
 		30
 	],
 	"../core/wizard/layout-3/wizard-layout-3.module": [
-		762,
+		761,
 		29
 	],
 	"../pages/alteracoes/alteracoes.module": [
-		763,
+		762,
 		21
 	],
 	"../pages/area/area.module": [
-		764,
+		763,
 		10
 	],
 	"../pages/area/cadastro/area-cadastro.module": [
-		765,
+		764,
 		14
 	],
 	"../pages/checklist/cadastro-item/cadastro-item.module": [
-		766,
+		765,
 		15
 	],
 	"../pages/checklist/cadastro/checklist-cadastro.module": [
-		767,
+		766,
 		16
 	],
 	"../pages/checklist/checklist.module": [
-		768,
+		767,
 		11
 	],
 	"../pages/home/home.module": [
-		769,
+		768,
 		28
 	],
 	"../pages/item-area/item-area.module": [
-		770,
+		769,
 		12
 	],
 	"../pages/login/login.component.module": [
-		771,
+		770,
 		3
 	],
 	"../pages/obra/obra.module": [
-		772,
+		771,
 		20
 	],
 	"../pages/ocorrencia/manter/manter-ocorrencia.module": [
-		773,
+		772,
 		17
 	],
 	"../pages/ocorrencia/ocorrencia.module": [
-		774,
+		773,
 		9
 	],
 	"../pages/verificacao/manter/manter-verificacao.module": [
-		775,
+		774,
 		18
 	],
 	"../pages/verificacao/realizado-por/realizado-por.module": [
-		776,
+		775,
 		4
 	],
 	"../pages/verificacao/realizar/realizar-verificacao.module": [
-		777,
+		776,
 		13
 	],
 	"../pages/verificacao/verificacao.module": [
-		778,
+		777,
 		5
 	]
 };
@@ -698,9 +698,9 @@ var AppSettings = Object.freeze({
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(309);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_network__ = __webpack_require__(310);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_message_service__ = __webpack_require__(155);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__utils_loading_service__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__utils_loading_service__ = __webpack_require__(89);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_obra_service__ = __webpack_require__(355);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_storage__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_storage__ = __webpack_require__(88);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__services_checklist_service__ = __webpack_require__(667);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__services_alteracao_service__ = __webpack_require__(668);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_funcionario_service__ = __webpack_require__(669);
@@ -1290,23 +1290,21 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(354);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_network__ = __webpack_require__(310);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__utils_toast_service__ = __webpack_require__(350);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utils_loading_service__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utils_loading_service__ = __webpack_require__(89);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_common_http__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_storage__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_storage__ = __webpack_require__(88);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__directives_mask_directive__ = __webpack_require__(688);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__ionic_native_date_picker__ = __webpack_require__(689);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__utils_message_service__ = __webpack_require__(155);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_ionic_selectable__ = __webpack_require__(353);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_ng_lz_string__ = __webpack_require__(690);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_ng_lz_string___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15_ng_lz_string__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__utils_storage_service_utils__ = __webpack_require__(156);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__utils_message_service__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_ionic_selectable__ = __webpack_require__(353);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_ng_lz_string__ = __webpack_require__(689);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_ng_lz_string___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14_ng_lz_string__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__utils_storage_service_utils__ = __webpack_require__(156);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
 
 
 
@@ -1351,8 +1349,8 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../core/list-view/appearance-animation/layout-3/appearance-animation-layout-3.module#AppearanceAnimationLayout3Module', name: 'AppearanceAnimationLayout3', segment: 'appearance-animation-layout-3', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/list-view/appearance-animation/layout-4/appearance-animation-layout-4.module#AppearanceAnimationLayout4Module', name: 'AppearanceAnimationLayout4', segment: 'appearance-animation-layout-4', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/list-view/appearance-animation/layout-5/appearance-animation-layout-5.module#AppearanceAnimationLayout5Module', name: 'AppearanceAnimationLayout5', segment: 'appearance-animation-layout-5', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../core/list-view/drag-and-drop/layout-2/drag-and-drop-layout-2.module#DragAndDropLayout2Module', name: 'DragAndDropLayout2', segment: 'drag-and-drop-layout-2', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/list-view/drag-and-drop/layout-1/drag-and-drop-layout-1.module#DragAndDropLayout1Module', name: 'DragAndDropLayout1', segment: 'drag-and-drop-layout-1', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../core/list-view/drag-and-drop/layout-2/drag-and-drop-layout-2.module#DragAndDropLayout2Module', name: 'DragAndDropLayout2', segment: 'drag-and-drop-layout-2', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/list-view/drag-and-drop/layout-3/drag-and-drop-layout-3.module#DragAndDropLayout3Module', name: 'DragAndDropLayout3', segment: 'drag-and-drop-layout-3', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/list-view/expandable/layout-1/expandable-layout-1.module#ExpandableLayout1Module', name: 'ExpandableLayout1', segment: 'expandable-layout-1', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../core/list-view/expandable/layout-2/expandable-layout-2.module#ExpandableLayout2Module', name: 'ExpandableLayout2', segment: 'expandable-layout-2', priority: 'low', defaultHistory: [] },
@@ -1428,8 +1426,8 @@ var AppModule = /** @class */ (function () {
                 }),
                 __WEBPACK_IMPORTED_MODULE_10__ionic_storage__["a" /* IonicStorageModule */].forRoot(),
                 // IonicStorageModule.forRoot({ name: '__mydb', driverOrder: ['sqlite', 'websql', 'indexeddb'] }),
-                __WEBPACK_IMPORTED_MODULE_14_ionic_selectable__["a" /* IonicSelectableModule */],
-                __WEBPACK_IMPORTED_MODULE_15_ng_lz_string__["LZStringModule"]
+                __WEBPACK_IMPORTED_MODULE_13_ionic_selectable__["a" /* IonicSelectableModule */],
+                __WEBPACK_IMPORTED_MODULE_14_ng_lz_string__["LZStringModule"]
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* IonicApp */]],
             entryComponents: [
@@ -1440,12 +1438,11 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
                 __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
                 __WEBPACK_IMPORTED_MODULE_7__utils_toast_service__["a" /* ToastService */],
-                __WEBPACK_IMPORTED_MODULE_16__utils_storage_service_utils__["a" /* StorageServiceUtils */],
-                __WEBPACK_IMPORTED_MODULE_15_ng_lz_string__["LZStringService"],
+                __WEBPACK_IMPORTED_MODULE_15__utils_storage_service_utils__["a" /* StorageServiceUtils */],
+                __WEBPACK_IMPORTED_MODULE_14_ng_lz_string__["LZStringService"],
                 __WEBPACK_IMPORTED_MODULE_8__utils_loading_service__["a" /* LoadingService */],
-                __WEBPACK_IMPORTED_MODULE_13__utils_message_service__["a" /* MessageService */],
+                __WEBPACK_IMPORTED_MODULE_12__utils_message_service__["a" /* MessageService */],
                 __WEBPACK_IMPORTED_MODULE_6__ionic_native_network__["a" /* Network */],
-                __WEBPACK_IMPORTED_MODULE_12__ionic_native_date_picker__["a" /* DatePicker */],
                 { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ErrorHandler"], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* IonicErrorHandler */] }
             ]
         })
@@ -1832,7 +1829,7 @@ var MaskDirective = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 90:
+/***/ 89:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

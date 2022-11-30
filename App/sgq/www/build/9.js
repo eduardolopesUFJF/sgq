@@ -1,6 +1,6 @@
 webpackJsonp([9],{
 
-/***/ 774:
+/***/ 773:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OcorrenciaPageModule", function() { return OcorrenciaPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ocorrencia__ = __webpack_require__(911);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ocorrencia__ = __webpack_require__(910);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -39,7 +39,7 @@ var OcorrenciaPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 781:
+/***/ 780:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -83,7 +83,7 @@ exports.UUID = UUID;
 
 /***/ }),
 
-/***/ 786:
+/***/ 785:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -100,7 +100,7 @@ var Alteracao = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 798:
+/***/ 797:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -136,7 +136,7 @@ var Inspecao = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 799:
+/***/ 798:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -170,7 +170,7 @@ var Servico = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 826:
+/***/ 825:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -196,21 +196,21 @@ var Ocorrencia = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 911:
+/***/ 910:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OcorrenciaPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_inspecao__ = __webpack_require__(798);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_inspecao__ = __webpack_require__(797);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(88);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_message_service__ = __webpack_require__(155);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__models_ocorrencia__ = __webpack_require__(826);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__models_alteracao__ = __webpack_require__(786);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angular2_uuid__ = __webpack_require__(781);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__models_ocorrencia__ = __webpack_require__(825);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__models_alteracao__ = __webpack_require__(785);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angular2_uuid__ = __webpack_require__(780);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angular2_uuid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_angular2_uuid__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__models_servico__ = __webpack_require__(799);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__models_servico__ = __webpack_require__(798);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__utils_storage_service_utils__ = __webpack_require__(156);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;

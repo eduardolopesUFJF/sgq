@@ -11,7 +11,6 @@ import { LoadingService } from '../utils/loading-service';
 import { HttpClientModule } from '@angular/common/http';
 import { IonicStorageModule } from '@ionic/storage';
 import { MaskDirective } from '../directives/mask.directive';
-import { DatePicker } from '@ionic-native/date-picker';
 import { MessageService } from '../utils/message-service';
 import { IonicSelectableModule } from 'ionic-selectable';
 import { LZStringModule, LZStringService } from 'ng-lz-string';
@@ -45,7 +44,6 @@ import { StorageServiceUtils } from '../utils/storage-service-utils';
     LoadingService,
     MessageService,
     Network,
-    DatePicker,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

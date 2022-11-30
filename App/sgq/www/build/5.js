@@ -1,6 +1,6 @@
 webpackJsonp([5],{
 
-/***/ 778:
+/***/ 777:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VerificacaoPageModule", function() { return VerificacaoPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__verificacao__ = __webpack_require__(919);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__verificacao__ = __webpack_require__(918);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -39,7 +39,7 @@ var VerificacaoPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 781:
+/***/ 780:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -83,7 +83,7 @@ exports.UUID = UUID;
 
 /***/ }),
 
-/***/ 786:
+/***/ 785:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -100,7 +100,7 @@ var Alteracao = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 798:
+/***/ 797:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -136,7 +136,7 @@ var Inspecao = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 799:
+/***/ 798:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -170,7 +170,7 @@ var Servico = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 800:
+/***/ 799:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -193,7 +193,7 @@ var ItemChecklist = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 827:
+/***/ 826:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -218,22 +218,22 @@ var ItemInspecao = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 919:
+/***/ 918:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return VerificacaoPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_servico__ = __webpack_require__(799);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_inspecao__ = __webpack_require__(798);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__models_alteracao__ = __webpack_require__(786);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__ = __webpack_require__(781);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_servico__ = __webpack_require__(798);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_inspecao__ = __webpack_require__(797);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_storage__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__models_alteracao__ = __webpack_require__(785);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__ = __webpack_require__(780);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_uuid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_angular2_uuid__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__utils_message_service__ = __webpack_require__(155);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__models_item_inspecao__ = __webpack_require__(827);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__models_item_checklist__ = __webpack_require__(800);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__models_item_inspecao__ = __webpack_require__(826);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__models_item_checklist__ = __webpack_require__(799);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__utils_storage_service_utils__ = __webpack_require__(156);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
