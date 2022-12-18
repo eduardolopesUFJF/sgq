@@ -34,7 +34,7 @@
     "@ionic-native/status-bar": "~4.15.0",
     "@ionic/storage": "2.2.0",
     "angular2-uuid": "^1.1.1",
-    "cordova-ios": "~5.0.0",
+    "cordova-ios": "~6.2.0",
     "ion-affix": "^2.0.0",
     "ionic-angular": "3.9.2",
     "ionic-selectable": "^3.2.0",
