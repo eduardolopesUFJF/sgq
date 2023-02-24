@@ -120,6 +120,7 @@ export class RealizarVerificacaoPage {
         if (valido) {
             this.inspecao.dataInspecao = this.dataAbertura ? this.dataAbertura : null;
             this.inspecao.dataEncerramento = this.dataEncerramento ? new Date(this.dataEncerramento + "T12:00:00") : null;
+            this.inspecao.usuarioEdicao = localStorage.getItem('Usuario');
             if (this.inspecao.status == 0) {
                 this.viewCtrl.dismiss({ inspecao: this.inspecao, concluido: true });
             } else {

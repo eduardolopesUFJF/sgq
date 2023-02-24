@@ -6,5 +6,6 @@ namespace SGQ.GDOL.Domain.UsuarioRoot.Service.Interface
     {
         int Logar(UsuarioLoginDTO usuarioLoginDTO);
         int? ObterFuncionarioVinculado(string nomeUsuario);
+        int ObterIdFuncionario(string nomeUsuario);
     }
 }

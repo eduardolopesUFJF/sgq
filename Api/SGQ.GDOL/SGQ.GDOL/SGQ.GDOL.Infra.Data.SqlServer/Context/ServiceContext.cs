@@ -55,6 +55,7 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Context
         public DbSet<ItemPesquisaSatisfacao> ItemPesquisaSatisfacao { get; set; }
         public DbSet<ItemPesquisaSatisfacaoCliente> ItemPesquisaSatisfacaoCliente { get; set; }
         public DbSet<PesquisaSatisfacaoCliente> PesquisaSatisfacaoCliente { get; set; }
+        public DbSet<LogAlteracao> LogAlteracao { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -97,6 +98,7 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Context
             modelBuilder.ApplyConfiguration(new ItemPesquisaSatisfacaoMap());
             modelBuilder.ApplyConfiguration(new PesquisaSatisfacaoClienteMap());
             modelBuilder.ApplyConfiguration(new ItemPesquisaSatisfacaoClienteMap());
+            modelBuilder.ApplyConfiguration(new LogAlteracaoMap());
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

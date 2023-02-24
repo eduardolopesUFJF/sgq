@@ -61,6 +61,8 @@ var Inspecao = /** @class */ (function () {
         this.situacao = 'Em aberto';
         this.delete = false;
         this.dataHoraAlteracao = new Date();
+        this.usuarioInclusao = "";
+        this.usuarioEdicao = "";
         this.qtdNA = 0;
         this.qtdA = 0;
         this.qtdR = 0;
@@ -309,6 +311,7 @@ var RealizarVerificacaoPage = /** @class */ (function () {
         if (valido) {
             this.inspecao.dataInspecao = this.dataAbertura ? this.dataAbertura : null;
             this.inspecao.dataEncerramento = this.dataEncerramento ? new Date(this.dataEncerramento + "T12:00:00") : null;
+            this.inspecao.usuarioEdicao = localStorage.getItem('Usuario');
             if (this.inspecao.status == 0) {
                 this.viewCtrl.dismiss({ inspecao: this.inspecao, concluido: true });
             }

@@ -20,6 +20,8 @@ export class Inspecao {
     situacao: string = 'Em aberto';
     delete: boolean = false;
     dataHoraAlteracao: Date = new Date();
+    usuarioInclusao: string = "";
+    usuarioEdicao: string = "";
 
     qtdNA: number = 0;
     qtdA: number = 0;

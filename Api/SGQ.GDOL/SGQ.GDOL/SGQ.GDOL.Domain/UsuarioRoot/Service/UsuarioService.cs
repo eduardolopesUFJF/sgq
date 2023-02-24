@@ -1,6 +1,7 @@
 ﻿using SGQ.GDOL.Domain.UsuarioRoot.DTO;
 using SGQ.GDOL.Domain.UsuarioRoot.Repository;
 using SGQ.GDOL.Domain.UsuarioRoot.Service.Interface;
+using System.Linq;
 
 namespace SGQ.GDOL.Domain.UsuarioRoot.Service
 {
@@ -23,6 +24,17 @@ namespace SGQ.GDOL.Domain.UsuarioRoot.Service
         {
             var result = _usuarioRepository.ObterFuncionarioVinculado(nomeUsuario);
             return result;
+        }
+
+        public int ObterIdFuncionario(string nomeUsuario)
+        {
+            int id = 0;
+            var result = _usuarioRepository.Buscar(x => x.Login.Equals(nomeUsuario, System.StringComparison.InvariantCultureIgnoreCase));
+            if (result.Any())
+            {
+                id = result.FirstOrDefault().Id;
+            }
+            return id;
         }
     }
 }

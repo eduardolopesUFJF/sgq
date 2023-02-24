@@ -1513,8 +1513,8 @@ var BaseService = /** @class */ (function () {
 var environment = {
     production: false,
     // urlAPI: 'http://localhost:49754/api/',
-    // urlAPI: 'http://localhost:7099/api/',
-    urlAPI: 'https://solvercompany.com:7099/api/',
+    urlAPI: 'http://localhost:7099/api/',
+    // urlAPI: 'https://solvercompany.com:7099/api/',
     versao: '1.0.2'
 };
 //# sourceMappingURL=environment.js.map

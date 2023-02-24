@@ -22,6 +22,8 @@ namespace SGQ.GDOL.Api.ViewModels
         public string Situacao { get; set; }
         public bool Delete { get; set; }
         public DateTime? DataHoraAlteracao { get; set; }
+        public string UsuarioInclusao { get; set; }
+        public string UsuarioEdicao { get; set; }
 
         public int QtdNA { get; set; }
         public int QtdA { get; set; }

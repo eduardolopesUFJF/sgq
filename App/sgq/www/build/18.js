@@ -58,6 +58,8 @@ var Inspecao = /** @class */ (function () {
         this.situacao = 'Em aberto';
         this.delete = false;
         this.dataHoraAlteracao = new Date();
+        this.usuarioInclusao = "";
+        this.usuarioEdicao = "";
         this.qtdNA = 0;
         this.qtdA = 0;
         this.qtdR = 0;
@@ -127,6 +129,12 @@ var ManterVerificacaoPage = /** @class */ (function () {
         this.inspecao = new __WEBPACK_IMPORTED_MODULE_2__models_inspecao__["a" /* Inspecao */]();
         this.itemChecklist = new __WEBPACK_IMPORTED_MODULE_3__models_item_checklist__["a" /* ItemChecklist */]();
         this.inspecao = this.navParams.data.inspecao;
+        if (this.inspecao.id) {
+            this.inspecao.usuarioEdicao = localStorage.getItem('Usuario');
+        }
+        else {
+            this.inspecao.usuarioInclusao = localStorage.getItem('Usuario');
+        }
         this.itemChecklist = this.navParams.data.itemChecklist;
         var hoje = new Date();
         this.inspecao.dataInspecao = this.converterData(hoje);

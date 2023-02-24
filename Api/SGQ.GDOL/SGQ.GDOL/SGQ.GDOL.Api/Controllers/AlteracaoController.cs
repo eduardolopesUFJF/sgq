@@ -12,14 +12,13 @@ using SGQ.GDOL.Domain.EntregaObraRoot.Service.Interfaces;
 using SGQ.GDOL.Domain.ObraRoot.DTO;
 using SGQ.GDOL.Domain.ObraRoot.Entity;
 using SGQ.GDOL.Domain.ObraRoot.Service.Interfaces;
-using SGQ.GDOL.Domain.TreinamentoRoot.DTO;
 using SGQ.GDOL.Domain.TreinamentoRoot.Entity;
 using SGQ.GDOL.Domain.TreinamentoRoot.Service.Interface;
 using SGQ.GDOL.Domain.TreinamentoRoot.Service.Interfaces;
+using SGQ.GDOL.Domain.UsuarioRoot.Service.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 
 namespace SGQ.GDOL.Api.Controllers
 {
@@ -49,6 +48,8 @@ namespace SGQ.GDOL.Api.Controllers
         private readonly IRealizadoPorService _realizadoPorService;
         private readonly IPesquisaSatisfacaoClienteService _pesquisaSatisfacaoClienteService;
         private readonly IItemPesquisaSatisfacaoClienteService _itemPesquisaSatisfacaoClienteService;
+        private readonly IUsuarioService _usuarioService;
+        private readonly ILogService _logService;
 
         public AlteracaoController(
             IAreaService areaService,
@@ -72,7 +73,9 @@ namespace SGQ.GDOL.Api.Controllers
             IAcessoClienteService acessoClienteService,
             IRealizadoPorService realizadoPorService,
             IPesquisaSatisfacaoClienteService pesquisaSatisfacaoClienteService,
-            IItemPesquisaSatisfacaoClienteService itemPesquisaSatisfacaoClienteService)
+            IItemPesquisaSatisfacaoClienteService itemPesquisaSatisfacaoClienteService,
+            IUsuarioService usuarioService,
+            ILogService logService)
         {
             _areaService = areaService;
             _servicoService = servicoService;
@@ -96,6 +99,8 @@ namespace SGQ.GDOL.Api.Controllers
             _realizadoPorService = realizadoPorService;
             _pesquisaSatisfacaoClienteService = pesquisaSatisfacaoClienteService;
             _itemPesquisaSatisfacaoClienteService = itemPesquisaSatisfacaoClienteService;
+            _usuarioService = usuarioService;
+            _logService = logService;
         }
 
         #region ENTREGA OBRA
@@ -1076,6 +1081,8 @@ namespace SGQ.GDOL.Api.Controllers
                                 inspecaoCadastrada.IdFuncionarioAprovado = inspecaoVM.IdFuncionarioAprovado;
                                 inspecaoCadastrada.IdFuncionarioInspecionado = inspecaoVM.IdFuncionarioInspecionado;
                                 inspecaoCadastrada.Status = inspecaoVM.Status;
+                                inspecaoCadastrada.UsuarioInclusao = inspecaoVM.UsuarioInclusao;
+                                inspecaoCadastrada.UsuarioEdicao = inspecaoVM.UsuarioEdicao;
                                 for (int i = 0; i < inspecaoVM.InspecaoObraItens.ToArray().Length; i++)
                                 {
                                     inspecaoCadastrada.InspecaoObraItens[i].Inspecao1 = inspecaoVM.InspecaoObraItens[i].Inspecao1;
@@ -1330,6 +1337,21 @@ namespace SGQ.GDOL.Api.Controllers
 
         private string PersistirInspecoes(List<InspecaoObraVM> inspecoes, string status)
         {
+            int? idUsuarioAcao = null;
+            string usuario;
+            if (inspecoes.Any())
+            {
+                if (!string.IsNullOrEmpty(inspecoes.FirstOrDefault().UsuarioEdicao))
+                {
+                    usuario = inspecoes.FirstOrDefault().UsuarioEdicao;
+                }
+                else
+                {
+                    usuario = inspecoes.FirstOrDefault().UsuarioInclusao;
+                }
+                idUsuarioAcao =  _usuarioService.ObterIdFuncionario(usuario);
+            }
+
             foreach (var inspecaoVM in inspecoes)
             {
                 try
@@ -1350,6 +1372,8 @@ namespace SGQ.GDOL.Api.Controllers
                         var idInspecaoAdicionada = _inspecaoService.Adicionar(inspecaoBD);
                         inspecaoVM.Id = idInspecaoAdicionada;
 
+                        AdicionarLog(idInspecaoAdicionada, 3, 0, idUsuarioAcao, inspecaoVM.UsuarioInclusao);
+
                         foreach (var ocorrencia in inspecaoVM.Ocorrencias)
                         {
                             var inspecaoObraItem = inspecaoBD.InspecaoObraItens.FirstOrDefault(x => x.Descricao.Equals(ocorrencia.DescricaoInspecaoObraItem));
@@ -1367,6 +1391,9 @@ namespace SGQ.GDOL.Api.Controllers
                         inspecaoBD.FuncionarioAprovadoObj = null;
                         inspecaoBD.FuncionarioInspecionadoObj = null;
                         inspecaoBD.RealizadosPor = null;
+
+                        AdicionarLog(inspecaoBD.Id, 3, 1, idUsuarioAcao, inspecaoVM.UsuarioEdicao);
+                        
                         _inspecaoService.Atualizar(inspecaoBD);
                         foreach (var item in inspecaoVM.InspecaoObraItens)
                         {
@@ -1461,6 +1488,21 @@ namespace SGQ.GDOL.Api.Controllers
             return status;
         }
 
-        #endregion 
+        private void AdicionarLog(int idInspecaoAdicionada, int tipoTabela, int tipoAcao, int? idUsuarioAcao, string usuarioAcao)
+        {
+            if (idUsuarioAcao.HasValue && idInspecaoAdicionada != 0) 
+            {
+                var log = new LogAlteracao();
+                log.DataHora = DateTime.Now;
+                log.IdTabela = idInspecaoAdicionada;
+                log.IdUsuario = idUsuarioAcao.Value;
+                log.LoginUsuario = usuarioAcao;
+                log.TipoAcao = tipoAcao;
+                log.TipoTabela = tipoTabela;
+
+                _logService.Adicionar(log);
+            }
+        }
+        #endregion
     }
 }

@@ -19,6 +19,11 @@ export class ManterVerificacaoPage {
         public navParams: NavParams
     ) {
         this.inspecao = this.navParams.data.inspecao;
+        if (this.inspecao.id) {
+            this.inspecao.usuarioEdicao = localStorage.getItem('Usuario');
+        } else {
+            this.inspecao.usuarioInclusao = localStorage.getItem('Usuario');
+        }
         this.itemChecklist = this.navParams.data.itemChecklist;
         let hoje = new Date();
         this.inspecao.dataInspecao = this.converterData(hoje);
