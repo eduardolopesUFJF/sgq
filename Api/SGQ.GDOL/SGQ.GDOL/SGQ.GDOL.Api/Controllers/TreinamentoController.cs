@@ -14,13 +14,16 @@ namespace SGQ.GDOL.Api.Controllers
     {
         private readonly ITreinamentoService _treinamentoService;
         private readonly ITreinamentoFuncionarioService _treinamentoFuncionarioService;
+        private readonly ITreinamentoFuncionarioTerceirizadoService _treinamentoFuncionarioTerceirizadoService;
 
         public TreinamentoController(
             ITreinamentoService treinamentoService,
-            ITreinamentoFuncionarioService treinamentoFuncionarioService)
+            ITreinamentoFuncionarioService treinamentoFuncionarioService,
+            ITreinamentoFuncionarioTerceirizadoService treinamentoFuncionarioTerceirizadoService)
         {
             _treinamentoService = treinamentoService;
             _treinamentoFuncionarioService = treinamentoFuncionarioService;
+            _treinamentoFuncionarioTerceirizadoService = treinamentoFuncionarioTerceirizadoService;
         }
 
         [HttpGet("itens-ativos")]
@@ -35,6 +38,13 @@ namespace SGQ.GDOL.Api.Controllers
         public IActionResult GetFuncionarios()
         {
             var resultDTO = _treinamentoFuncionarioService.ObterTodosAtivos();
+            return Ok(resultDTO);
+        }
+
+        [HttpGet("funcionarios-terceirizados")]
+        public IActionResult GetFuncionariosTerceirizados()
+        {
+            var resultDTO = _treinamentoFuncionarioTerceirizadoService.ObterTodosAtivos();
             return Ok(resultDTO);
         }
     }

@@ -1,14 +1,14 @@
 webpackJsonp([12],{
 
-/***/ 765:
+/***/ 774:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChecklistCadastroPageModule", function() { return ChecklistCadastroPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OcorrenciaPageModule", function() { return OcorrenciaPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__cadastro_item__ = __webpack_require__(870);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ocorrencia__ = __webpack_require__(912);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,28 +18,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ChecklistCadastroPageModule = /** @class */ (function () {
-    function ChecklistCadastroPageModule() {
+var OcorrenciaPageModule = /** @class */ (function () {
+    function OcorrenciaPageModule() {
     }
-    ChecklistCadastroPageModule = __decorate([
+    OcorrenciaPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__cadastro_item__["a" /* CadastroItemPage */]
+                __WEBPACK_IMPORTED_MODULE_2__ocorrencia__["a" /* OcorrenciaPage */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__cadastro_item__["a" /* CadastroItemPage */])
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__ocorrencia__["a" /* OcorrenciaPage */])
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"]]
         })
-    ], ChecklistCadastroPageModule);
-    return ChecklistCadastroPageModule;
+    ], OcorrenciaPageModule);
+    return OcorrenciaPageModule;
 }());
 
-//# sourceMappingURL=cadastro-item.module.js.map
+//# sourceMappingURL=ocorrencia.module.js.map
 
 /***/ }),
 
-/***/ 778:
+/***/ 781:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -83,44 +83,137 @@ exports.UUID = UUID;
 
 /***/ }),
 
-/***/ 785:
+/***/ 786:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ItemChecklist; });
-var ItemChecklist = /** @class */ (function () {
-    function ItemChecklist(values) {
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Alteracao; });
+var Alteracao = /** @class */ (function () {
+    function Alteracao(values) {
+        if (values === void 0) { values = {}; }
+        Object.assign(this, values);
+    }
+    return Alteracao;
+}());
+
+//# sourceMappingURL=alteracao.js.map
+
+/***/ }),
+
+/***/ 799:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Inspecao; });
+var Inspecao = /** @class */ (function () {
+    function Inspecao(values) {
         if (values === void 0) { values = {}; }
         this.id = 0;
+        this.idGuidInspecao = '';
+        this.idGuidServico = '';
         this.campo1 = "";
         this.campo2 = "";
         this.campo3 = "";
         this.campo4 = "";
-        this.itensChecklistServico = [];
+        this.status = 0;
+        this.situacao = 'Em aberto';
+        this.delete = false;
+        this.dataHoraAlteracao = new Date();
+        this.usuarioInclusao = "";
+        this.usuarioEdicao = "";
+        this.qtdNA = 0;
+        this.qtdA = 0;
+        this.qtdR = 0;
+        this.qtdRA = 0;
+        this.qtdX = 0;
+        this.inspecaoObraItens = [];
+        this.ocorrencias = [];
+        this.realizadosPor = [];
         Object.assign(this, values);
     }
-    return ItemChecklist;
+    return Inspecao;
 }());
 
-//# sourceMappingURL=item-checklist.js.map
+//# sourceMappingURL=inspecao.js.map
 
 /***/ }),
 
-/***/ 870:
+/***/ 800:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CadastroItemPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Servico; });
+var Servico = /** @class */ (function () {
+    function Servico(values) {
+        if (values === void 0) { values = {}; }
+        this.id = 0;
+        this.idGuidServico = '';
+        this.descricao = '';
+        this.tipo = '';
+        this.idObra = 0;
+        this.idChecklist = 0;
+        this.idChecklistGuid = '';
+        this.idArea = 0;
+        this.idAreaGuid = "";
+        this.metaAprovacao = 90;
+        this.status = 0;
+        this.situacao = 'Em aberto';
+        this.delete = false;
+        this.dataHoraInclusao = new Date();
+        this.dataHoraAlteracao = new Date();
+        this.inspecoesObra = [];
+        this.itensChecklistServico = [];
+        Object.assign(this, values);
+    }
+    return Servico;
+}());
+
+//# sourceMappingURL=servico.js.map
+
+/***/ }),
+
+/***/ 827:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Ocorrencia; });
+var Ocorrencia = /** @class */ (function () {
+    function Ocorrencia(values) {
+        if (values === void 0) { values = {}; }
+        this.id = 0;
+        this.idGuidOcorrencia = '';
+        this.idInspecaoObra = 0;
+        this.idGuidInspecao = '';
+        this.descricaoInspecaoObraItem = '';
+        this.descricao = '';
+        this.tratativa = '';
+        this.delete = false;
+        this.dataHoraAlteracao = new Date();
+        Object.assign(this, values);
+    }
+    return Ocorrencia;
+}());
+
+//# sourceMappingURL=ocorrencia.js.map
+
+/***/ }),
+
+/***/ 912:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OcorrenciaPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_toast_service__ = __webpack_require__(350);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_item_checklist__ = __webpack_require__(785);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_uuid__ = __webpack_require__(778);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_uuid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_angular2_uuid__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__models_item_checklist_servico__ = __webpack_require__(871);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__utils_loading_service__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utils_message_service__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_inspecao__ = __webpack_require__(799);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_message_service__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__models_ocorrencia__ = __webpack_require__(827);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__models_alteracao__ = __webpack_require__(786);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angular2_uuid__ = __webpack_require__(781);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angular2_uuid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_angular2_uuid__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__models_servico__ = __webpack_require__(800);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__utils_storage_service_utils__ = __webpack_require__(156);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -130,6 +223,41 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
 
 
 
@@ -139,101 +267,219 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var CadastroItemPage = /** @class */ (function () {
-    function CadastroItemPage(storage, navCtrl, navParams, toastService, viewCtrl, loadingService, messageService) {
-        this.storage = storage;
-        this.navCtrl = navCtrl;
+
+var OcorrenciaPage = /** @class */ (function () {
+    function OcorrenciaPage(navParams, storage, viewCtrl, actionSheetCtrl, storageServiceUtils, modalCtrl, messageService) {
         this.navParams = navParams;
-        this.toastService = toastService;
+        this.storage = storage;
         this.viewCtrl = viewCtrl;
-        this.loadingService = loadingService;
+        this.actionSheetCtrl = actionSheetCtrl;
+        this.storageServiceUtils = storageServiceUtils;
+        this.modalCtrl = modalCtrl;
         this.messageService = messageService;
-        this.checklist = new __WEBPACK_IMPORTED_MODULE_4__models_item_checklist__["a" /* ItemChecklist */]();
-        this.itemChecklist = new __WEBPACK_IMPORTED_MODULE_6__models_item_checklist_servico__["a" /* ItemChecklistServico */]();
-        this.itens = [];
-        this.isEdicao = false;
-        this.checklist = this.navParams.data.checklist;
-        this.itens = this.checklist.itensChecklistServico.slice();
+        this.inspecao = new __WEBPACK_IMPORTED_MODULE_2__models_inspecao__["a" /* Inspecao */]();
+        this.servico = new __WEBPACK_IMPORTED_MODULE_8__models_servico__["a" /* Servico */]();
+        this.ocorrenciaBackup = new __WEBPACK_IMPORTED_MODULE_5__models_ocorrencia__["a" /* Ocorrencia */]();
+        this.inspecao = navParams.data.inspecao;
+        this.servico = navParams.data.servico;
+        this.broadcomb = navParams.data.broadcomb;
+        this.itemInspecao = navParams.data.itemInspecao;
+        if (this.itemInspecao) {
+            this.novaOcorrencia();
+        }
     }
-    CadastroItemPage.prototype.voltar = function () {
-        this.navCtrl.setRoot("HomePage");
-    };
-    CadastroItemPage.prototype.limpar = function () {
-        this.itemChecklist = new __WEBPACK_IMPORTED_MODULE_6__models_item_checklist_servico__["a" /* ItemChecklistServico */]();
-    };
-    CadastroItemPage.prototype.editarItem = function (item) {
-        this.isEdicao = true;
-        this.itemChecklist = new __WEBPACK_IMPORTED_MODULE_6__models_item_checklist_servico__["a" /* ItemChecklistServico */](item);
-    };
-    CadastroItemPage.prototype.adicionar = function (formValido) {
+    OcorrenciaPage.prototype.exibirOpcoes = function (ocorrencia) {
         var _this = this;
-        if (formValido) {
-            if (this.isEdicao) {
-                var indice = this.itens.findIndex(function (x) { return x.idGuid == _this.itemChecklist.idGuid; });
-                if (indice == -1) {
-                    indice = this.itens.findIndex(function (x) { return x.id == _this.itemChecklist.id; });
+        var actionSheet = this.actionSheetCtrl.create({
+            "buttons": [
+                {
+                    "text": "Editar",
+                    handler: function () {
+                        _this.editar(ocorrencia);
+                    }
+                },
+                {
+                    "text": !ocorrencia.delete ? "Excluir" : "Reativar",
+                    handler: function () {
+                        _this.confirmarExclusao(ocorrencia);
+                    }
+                },
+                {
+                    "text": "Cancelar",
+                    "role": "cancel"
                 }
-                this.itens[indice] = this.itemChecklist;
-            }
-            else {
-                this.itemChecklist.idGuid = __WEBPACK_IMPORTED_MODULE_5_angular2_uuid__["UUID"].UUID();
-                this.itens.unshift(this.itemChecklist);
-            }
-            this.itemChecklist = new __WEBPACK_IMPORTED_MODULE_6__models_item_checklist_servico__["a" /* ItemChecklistServico */]();
-            this.isEdicao = false;
-        }
-        else {
-            this.toastService.presentToastWarning("Preencha todos os campos.");
-        }
+            ]
+        });
+        actionSheet.present();
     };
-    CadastroItemPage.prototype.concluir = function () {
+    OcorrenciaPage.prototype.novaOcorrencia = function () {
         var _this = this;
-        if (this.itens.length == 0) {
-            this.messageService.exibirMensagemConfirmacao("Nenhum item foi adicionado a esse checklist e não é possível adicionar via aplicativo posteriormente. Deseja salvar mesmo assim?", function () { _this.realizarConclusao(); });
+        var modal = this.modalCtrl.create("ManterOcorrenciaPage", { ocorrencia: new __WEBPACK_IMPORTED_MODULE_2__models_inspecao__["a" /* Inspecao */](), itemInspecao: this.itemInspecao, inspecao: this.inspecao });
+        modal.present();
+        modal.onWillDismiss(function (ocorrencia) {
+            if (ocorrencia) {
+                ocorrencia.idGuidOcorrencia = __WEBPACK_IMPORTED_MODULE_7_angular2_uuid__["UUID"].UUID();
+                ocorrencia.idInspecaoObra = _this.inspecao.id;
+                ocorrencia.idGuidInspecao = _this.inspecao.idGuidInspecao;
+                _this.inspecao.ocorrencias.unshift(ocorrencia);
+                _this.gerarNovaOcorrencia(ocorrencia);
+            }
+        });
+    };
+    OcorrenciaPage.prototype.gerarNovaOcorrencia = function (ocorrencia) {
+        var _this = this;
+        this.storage.ready().then(function () {
+            var atualizacoesArray = [];
+            _this.storage.get('atualizacoes').then(function (atualizacoes) {
+                var alteracao = new __WEBPACK_IMPORTED_MODULE_6__models_alteracao__["a" /* Alteracao */]({ id: __WEBPACK_IMPORTED_MODULE_7_angular2_uuid__["UUID"].UUID(), idOcorrencia: ocorrencia.id, idGuidOcorrencia: ocorrencia.idGuidOcorrencia, idInspecao: _this.inspecao.id, idGuidInspecao: _this.inspecao.idGuidInspecao, idArea: _this.servico.idArea, idGuidArea: _this.servico.idAreaGuid, idServico: _this.servico.id, idGuidServico: _this.servico.idGuidServico, tipo: "Insert", entidade: "Ocorrencia", valor: JSON.stringify(ocorrencia), data: new Date(), descricao: "Criação da ocorrência '" + ocorrencia.descricao + "' em '" + _this.broadcomb + "'.", obraId: _this.servico.idObra });
+                if (atualizacoes) {
+                    atualizacoesArray = atualizacoes;
+                    atualizacoesArray.push(alteracao);
+                }
+                else {
+                    atualizacoesArray.push(alteracao);
+                }
+                _this.storage.set('atualizacoes', atualizacoesArray);
+                _this.atualizarOcorrenciaCriacao(ocorrencia);
+            });
+        });
+    };
+    OcorrenciaPage.prototype.atualizarOcorrenciaCriacao = function (item) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            var obras;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.storageServiceUtils.montarObra()];
+                    case 1:
+                        obras = _a.sent();
+                        obras.find(function (x) { return x.id == _this.servico.idObra; }).areas.find(function (x) { return _this.servico.idAreaGuid ? (x.idGuid == _this.servico.idAreaGuid) : (x.id == _this.servico.idArea); }).servicos.find(function (x) { return _this.servico.idGuidServico ? (x.idGuidServico == _this.servico.idGuidServico) : (x.id == _this.servico.id); }).inspecoesObra.find(function (x) { return _this.inspecao.idGuidInspecao ? (x.idGuidInspecao == _this.inspecao.idGuidInspecao) : (x.id == _this.inspecao.id); }).ocorrencias.unshift(item);
+                        this.storageServiceUtils.armazenarObraNoStorage(obras);
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    OcorrenciaPage.prototype.editar = function (ocorrencia) {
+        var _this = this;
+        if (this.servico.status != 1) {
+            var modal = this.modalCtrl.create("ManterOcorrenciaPage", { ocorrencia: ocorrencia, inspecao: this.inspecao });
+            this.ocorrenciaBackup = new __WEBPACK_IMPORTED_MODULE_5__models_ocorrencia__["a" /* Ocorrencia */](ocorrencia);
+            modal.present();
+            modal.onWillDismiss(function (data) {
+                if (data) {
+                    _this.editarOcorrencias(data);
+                }
+                else {
+                    var ocorrenciaArray = _this.inspecao.ocorrencias.find(function (x) { return _this.ocorrenciaBackup.idGuidOcorrencia ? (x.idGuidOcorrencia == _this.ocorrenciaBackup.idGuidOcorrencia) : (x.id == _this.ocorrenciaBackup.id); });
+                    ocorrenciaArray.dataDescricao = _this.ocorrenciaBackup.dataDescricao;
+                    ocorrenciaArray.descricao = _this.ocorrenciaBackup.descricao;
+                    ocorrenciaArray.dataTratativa = _this.ocorrenciaBackup.dataTratativa;
+                    ocorrenciaArray.tratativa = _this.ocorrenciaBackup.tratativa;
+                }
+            });
+        }
+    };
+    OcorrenciaPage.prototype.editarOcorrencias = function (ocorrencia) {
+        var _this = this;
+        this.storage.ready().then(function () {
+            var atualizacoesArray = [];
+            _this.storage.get('atualizacoes').then(function (atualizacoes) {
+                var alteracao = new __WEBPACK_IMPORTED_MODULE_6__models_alteracao__["a" /* Alteracao */]({ id: __WEBPACK_IMPORTED_MODULE_7_angular2_uuid__["UUID"].UUID(), idOcorrencia: ocorrencia.id, idGuidOcorrencia: ocorrencia.idGuidOcorrencia, idInspecao: _this.inspecao.id, idGuidInspecao: _this.inspecao.idGuidInspecao, idArea: _this.servico.idArea, idGuidArea: _this.servico.idAreaGuid, idServico: _this.servico.id, idGuidServico: _this.servico.idGuidServico, tipo: "Update", entidade: "Ocorrencia", valor: JSON.stringify(ocorrencia), data: new Date(), descricao: "Edição da ocorrência '" + ocorrencia.descricao + "' em '" + _this.broadcomb + "'.", obraId: _this.servico.idObra });
+                if (atualizacoes) {
+                    atualizacoesArray = atualizacoes;
+                    atualizacoesArray.push(alteracao);
+                }
+                else {
+                    atualizacoesArray.push(alteracao);
+                }
+                _this.storage.set('atualizacoes', atualizacoesArray);
+                _this.atualizarOcorrenciaEdicao(ocorrencia);
+            });
+        });
+    };
+    OcorrenciaPage.prototype.atualizarOcorrenciaEdicao = function (item) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            var obras, ocorrencia;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.storageServiceUtils.montarObra()];
+                    case 1:
+                        obras = _a.sent();
+                        ocorrencia = obras.find(function (x) { return x.id == _this.servico.idObra; }).areas.find(function (x) { return _this.servico.idAreaGuid ? (x.idGuid == _this.servico.idAreaGuid) : (x.id == _this.servico.idArea); }).servicos.find(function (x) { return _this.servico.idGuidServico ? (x.idGuidServico == _this.servico.idGuidServico) : (x.id == _this.servico.id); }).inspecoesObra.find(function (x) { return _this.inspecao.idGuidInspecao ? (x.idGuidInspecao == _this.inspecao.idGuidInspecao) : (x.id == _this.inspecao.id); }).ocorrencias.find(function (x) { return x.idGuidOcorrencia ? (x.idGuidOcorrencia == item.idGuidOcorrencia) : (x.id == item.id); });
+                        ocorrencia.dataDescricao = item.dataDescricao;
+                        ocorrencia.descricao = item.descricao;
+                        ocorrencia.dataTratativa = item.dataTratativa;
+                        ocorrencia.tratativa = item.tratativa;
+                        this.storageServiceUtils.armazenarObraNoStorage(obras);
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    OcorrenciaPage.prototype.confirmarExclusao = function (ocorrencia) {
+        var _this = this;
+        var mensagem;
+        if (!ocorrencia.delete) {
+            mensagem = "Deseja realmente excluir a ocorrência selecionada?";
         }
         else {
-            this.realizarConclusao();
+            mensagem = "Deseja realmente reativar a ocorrência selecionada?";
         }
+        this.messageService.exibirMensagemConfirmacao(mensagem, function () { _this.alterarSituacaoOcorrencia(ocorrencia); });
     };
-    CadastroItemPage.prototype.realizarConclusao = function () {
-        this.checklist.itensChecklistServico = this.itens.slice();
-        this.viewCtrl.dismiss(this.checklist);
+    OcorrenciaPage.prototype.alterarSituacaoOcorrencia = function (ocorrencia) {
+        var _this = this;
+        this.storage.ready().then(function () {
+            var atualizacoesArray = [];
+            _this.storage.get('atualizacoes').then(function (atualizacoes) {
+                ocorrencia.delete = !ocorrencia.delete;
+                var alteracao = new __WEBPACK_IMPORTED_MODULE_6__models_alteracao__["a" /* Alteracao */]({ id: __WEBPACK_IMPORTED_MODULE_7_angular2_uuid__["UUID"].UUID(), idOcorrencia: ocorrencia.id, idGuidOcorrencia: ocorrencia.idGuidOcorrencia, idInspecao: _this.inspecao.id, idGuidInspecao: _this.inspecao.idGuidInspecao, idServico: _this.servico.id, idGuidServico: _this.servico.idGuidServico, tipo: "Update", entidade: "Ocorrencia", valor: JSON.stringify(ocorrencia), data: new Date(), descricao: (ocorrencia.delete ? "Inativação" : "Ativação") + " da ocorrência '" + ocorrencia.descricao + "' em '" + _this.broadcomb.toUpperCase() + "'." });
+                if (atualizacoes) {
+                    atualizacoesArray = atualizacoes;
+                    atualizacoesArray.push(alteracao);
+                }
+                else {
+                    atualizacoesArray.push(alteracao);
+                }
+                _this.storage.set('atualizacoes', atualizacoesArray);
+                _this.atualizarOcorrenciaSituacao(ocorrencia);
+            });
+        });
     };
-    CadastroItemPage = __decorate([
+    OcorrenciaPage.prototype.atualizarOcorrenciaSituacao = function (ocorrencia) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            var obras;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.storageServiceUtils.montarObra()];
+                    case 1:
+                        obras = _a.sent();
+                        obras.find(function (x) { return x.id == _this.servico.idObra; }).areas.find(function (x) { return _this.servico.idAreaGuid ? (x.idGuid == _this.servico.idAreaGuid) : (x.id == _this.servico.idArea); }).servicos.find(function (x) { return _this.servico.idGuidServico ? (x.idGuidServico == _this.servico.idGuidServico) : (x.id == _this.servico.id); }).inspecoesObra.find(function (x) { return _this.inspecao.idGuidInspecao ? (x.idGuidInspecao == _this.inspecao.idGuidInspecao) : (x.id == _this.inspecao.id); }).ocorrencias.find(function (x) { return ocorrencia.idGuidOcorrencia ? (x.idGuidOcorrencia == ocorrencia.idGuidOcorrencia) : (x.id == ocorrencia.id); }).delete = ocorrencia.delete;
+                        this.storageServiceUtils.armazenarObraNoStorage(obras);
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    OcorrenciaPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-cadastro-item',template:/*ion-inline-start:"/Users/user227439/Desktop/sgq/App/sgq/src/pages/checklist/cadastro-item/cadastro-item.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-row class="pad-nav-page" (click)="voltar()">\n            <button class="button-nav">\n                <span ion-text>Voltar</span>\n            </button>\n        </ion-row>\n    </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <ion-grid no-padding>\n        <ion-row padding-left padding-right>\n            <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n                <form #cadastroForm="ngForm" padding-top>\n                    <ion-item text-center transparent>\n                        <ion-label stacked>ORDEM</ion-label>\n                        <ion-input text-center required type="number" [(ngModel)]="itemChecklist.ordem" name="ordem"></ion-input>\n                    </ion-item>\n                    <ion-item text-center transparent>\n                        <ion-label stacked>DESCRIÇÃO</ion-label>\n                        <ion-textarea rows="3" text-center required type="text" [(ngModel)]="itemChecklist.descricao"\n                            name="descricao"></ion-textarea>\n                    </ion-item>\n\n                    <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: rgb(33,177,75) !important;"\n                        (click)="adicionar(cadastroForm.valid)">{{isEdicao ? \'Atualizar\' : \'Adicionar\'}}</button>\n                    <button *ngIf="isEdicao" ion-button default-button block text-capitalize box-shadow margin-bottom\n                        style="background-color: rgb(33,177,75) !important;" (click)="limpar()">Limpar</button>\n                    <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: rgb(33,177,75) !important;"\n                        (click)="concluir()">Concluir</button>\n\n                    <h3 text-center *ngIf="itens.length > 0" class="locais" style="margin-bottom: 0px;">Itens de\n                        checklist adicionados</h3>\n\n                    <h3 text-center *ngIf="itens.length == 0" class="locais">Nenhum item de checklist adicionado</h3>\n                    <ion-list *ngIf="itens.length > 0">\n                        <ion-item text-wrap class="list-item" *ngFor="let item of itens" (click)="editarItem(item)">\n                            {{item.ordem}} - {{item.descricao.toUpperCase()}}\n                        </ion-item>\n                    </ion-list>\n\n                </form>\n            </ion-col>\n        </ion-row>\n    </ion-grid>\n</ion-content>'/*ion-inline-end:"/Users/user227439/Desktop/sgq/App/sgq/src/pages/checklist/cadastro-item/cadastro-item.html"*/
+            selector: 'page-ocorrencia',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\ocorrencia\ocorrencia.html"*/'<ion-header>\n\n    <ion-navbar class="pad-nav-page-nt2">\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n    <h2 text-center text-wrap class="broadcomb">{{broadcomb.toUpperCase()}}</h2>\n\n    <h2 padding text-center class="aviso" *ngIf="inspecao.ocorrencias.length < 1">Nenhum registro encontrado.</h2>\n\n    <ion-grid no-padding>\n\n        <ion-row>\n\n            <button ion-button default-button block text-capitalize box-shadow margin-bottom class="button-novo"\n\n                (click)="novaOcorrencia()" [disabled]="servico.status == 1">Nova ocorrência</button>\n\n        </ion-row>\n\n        <ion-row>\n\n            <ion-col col-12>\n\n                <ion-list no-margin>\n\n                    <ion-item default-item no-lines [ngClass]="{\'novo-item\': !item.id && !item.delete, \'item-removido\': item.delete}" *ngFor="let item of inspecao.ocorrencias; let i = index;">\n\n                        <ion-row class="espacamento">\n\n                            <ion-col col-10 (click)="editar(item)">\n\n                                <h2 item-title text-wrap>Data da descrição: {{item.dataDescricao ? (item.dataDescricao\n\n                                    | date:\n\n                                    \'dd/MM/yyyy\') : \'--\'}}</h2>\n\n                                <h2 item-title text-wrap>Descrição: {{item.descricao}}</h2>\n\n                                <h2 item-title text-wrap>Data da tratativa: {{item.dataTratativa ? (item.dataTratativa\n\n                                    | date:\n\n                                    \'dd/MM/yyyy\') : \'--\'}}</h2>\n\n                                <h2 item-title text-wrap>Tratativa: {{item.tratativa}}</h2>\n\n                                <h2 item-title text-wrap>Item: {{item.descricaoInspecaoObraItem}}</h2>\n\n                                <h2 item-title text-wrap>Inspeção: {{item.numeroInspecao ? item.numeroInspecao + \'ª Inspeção\' : \'\'}}</h2>\n\n                            </ion-col>\n\n                            <ion-col col-2 *ngIf="servico.status != 1">\n\n                                <ion-icon name="more" icon-small item-right style="font-size: 32px !important; margin: 0px"\n\n                                    (click)="exibirOpcoes(item)"></ion-icon>\n\n                            </ion-col>\n\n                        </ion-row>\n\n                    </ion-item>\n\n                </ion-list>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-grid>\n\n</ion-content>'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\ocorrencia\ocorrencia.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_3__utils_toast_service__["a" /* ToastService */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */],
+            __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["u" /* ViewController */],
-            __WEBPACK_IMPORTED_MODULE_7__utils_loading_service__["a" /* LoadingService */],
-            __WEBPACK_IMPORTED_MODULE_8__utils_message_service__["a" /* MessageService */]])
-    ], CadastroItemPage);
-    return CadastroItemPage;
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */],
+            __WEBPACK_IMPORTED_MODULE_9__utils_storage_service_utils__["a" /* StorageServiceUtils */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ModalController */],
+            __WEBPACK_IMPORTED_MODULE_4__utils_message_service__["a" /* MessageService */]])
+    ], OcorrenciaPage);
+    return OcorrenciaPage;
 }());
 
-//# sourceMappingURL=cadastro-item.js.map
-
-/***/ }),
-
-/***/ 871:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ItemChecklistServico; });
-var ItemChecklistServico = /** @class */ (function () {
-    function ItemChecklistServico(values) {
-        if (values === void 0) { values = {}; }
-        this.descricao = "";
-        this.ordem = null;
-        Object.assign(this, values);
-    }
-    return ItemChecklistServico;
-}());
-
-//# sourceMappingURL=item-checklist-servico.js.map
+//# sourceMappingURL=ocorrencia.js.map
 
 /***/ })
 

@@ -6,5 +6,6 @@ namespace SGQ.GDOL.Domain.RHRoot.Service.Interface
     public interface IFuncionarioService
     {
         List<Funcionario> ObterTodosAtivos();
+        List<FuncionarioTerceirizado> ObterTodosTerceirosAtivos();
     }
 }

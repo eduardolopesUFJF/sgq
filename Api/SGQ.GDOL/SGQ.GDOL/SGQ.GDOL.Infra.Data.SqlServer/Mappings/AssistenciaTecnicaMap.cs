@@ -14,9 +14,6 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Mappings
 
             entity.Property(e => e.Id).HasColumnName("ID_ASSISTENCIA_TECNICA");
 
-            entity.Property(e => e.IdCategoriaAssistencia)
-                .HasColumnName("ID_CATEGORIA_ASSISTENCIA");
-
             entity.Property(e => e.IdClienteConstrutora).HasColumnName("ID_CLIENTE");
 
             entity.Property(e => e.NomeCliente)
@@ -76,7 +73,7 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Mappings
             entity.Property(e => e.Resolvido)
                 .HasColumnName("RESOLVIDO");
 
-            entity.Property(e => e.Observacao)
+            entity.Property(e => e.Observacoes)
                 .HasColumnName("OBSERVACAO")
                 .IsUnicode(false);
 
@@ -95,10 +92,6 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Mappings
             entity.HasOne(d => d.CentroCusto)
                     .WithMany(p => p.AssistenciasTecnicas)
                     .HasForeignKey(d => d.IdCentroCusto);
-
-            entity.HasOne(d => d.CategoriaAssistencia)
-                    .WithMany(p => p.AssistenciasTecnicas)
-                    .HasForeignKey(d => d.IdCategoriaAssistencia);
 
             entity.HasOne(d => d.ClienteConstrutora)
                     .WithMany(p => p.AssistenciasTecnicas)

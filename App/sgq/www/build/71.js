@@ -1,14 +1,14 @@
 webpackJsonp([71],{
 
-/***/ 709:
+/***/ 713:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExpandableLayout1Module", function() { return ExpandableLayout1Module; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExpandableLayout2Module", function() { return ExpandableLayout2Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__expandable_layout_1__ = __webpack_require__(813);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__expandable_layout_2__ = __webpack_require__(846);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,37 +18,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ExpandableLayout1Module = /** @class */ (function () {
-    function ExpandableLayout1Module() {
+var ExpandableLayout2Module = /** @class */ (function () {
+    function ExpandableLayout2Module() {
     }
-    ExpandableLayout1Module = __decorate([
+    ExpandableLayout2Module = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__expandable_layout_1__["a" /* ExpandableLayout1 */],
+                __WEBPACK_IMPORTED_MODULE_2__expandable_layout_2__["a" /* ExpandableLayout2 */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__expandable_layout_1__["a" /* ExpandableLayout1 */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__expandable_layout_2__["a" /* ExpandableLayout2 */]),
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_2__expandable_layout_1__["a" /* ExpandableLayout1 */]
+                __WEBPACK_IMPORTED_MODULE_2__expandable_layout_2__["a" /* ExpandableLayout2 */]
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"]]
         })
-    ], ExpandableLayout1Module);
-    return ExpandableLayout1Module;
+    ], ExpandableLayout2Module);
+    return ExpandableLayout2Module;
 }());
 
-//# sourceMappingURL=expandable-layout-1.module.js.map
+//# sourceMappingURL=expandable-layout-2.module.js.map
 
 /***/ }),
 
-/***/ 813:
+/***/ 846:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExpandableLayout1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ExpandableLayout2; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -60,42 +60,49 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var ExpandableLayout1 = /** @class */ (function () {
-    function ExpandableLayout1() {
+var ExpandableLayout2 = /** @class */ (function () {
+    function ExpandableLayout2() {
     }
-    ExpandableLayout1.prototype.onEvent = function (event, item, e) {
+    ExpandableLayout2.prototype.onEvent = function (event, item, e) {
         if (this.events[event]) {
             this.events[event](item);
         }
     };
-    ExpandableLayout1.prototype.toggleGroup = function (group) {
+    ExpandableLayout2.prototype.onStarClass = function (items, index, e) {
+        for (var i = 0; i < items.length; i++) {
+            items[i].isActive = i <= index;
+        }
+        this.onEvent("onRates", index, e);
+    };
+    ;
+    ExpandableLayout2.prototype.toggleGroup = function (group) {
         group.show = !group.show;
     };
-    ExpandableLayout1.prototype.isGroupShown = function (group) {
+    ExpandableLayout2.prototype.isGroupShown = function (group) {
         return group.show;
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", Object)
-    ], ExpandableLayout1.prototype, "data", void 0);
+    ], ExpandableLayout2.prototype, "data", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", Object)
-    ], ExpandableLayout1.prototype, "events", void 0);
+    ], ExpandableLayout2.prototype, "events", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */])
-    ], ExpandableLayout1.prototype, "content", void 0);
-    ExpandableLayout1 = __decorate([
+    ], ExpandableLayout2.prototype, "content", void 0);
+    ExpandableLayout2 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'expandable-layout-1',template:/*ion-inline-start:"/Users/user227439/Desktop/sgq/App/sgq/src/core/list-view/expandable/layout-1/expandable.html"*/'<!-- Theme Expandable- List big image -->\n<ion-content>\n  <ion-grid no-padding *ngIf="data != null">\n    <ion-row>\n      <ion-col col-12>\n        <!-- Header List Big Image -->\n        <ion-list no-margin>\n          <ion-list-header transparent header-section no-lines padding-horizontal>\n            <h1 header-title>{{data.header}}</h1>\n          </ion-list-header>\n          <ul collapsible no-margin no-padding>\n            <li *ngFor="let group of data.items;">\n              <!-- List big image Header -->\n              <div collapsible-header (click)="toggleGroup(group)">\n                <ion-item default-item no-lines>\n                  <ion-thumbnail item-start>\n                    <img [src]="group.image" alt="{{group.title}}" />\n                  </ion-thumbnail>\n                  <h2 item-title>{{group.title}}</h2>\n                  <h3 item-subtitle text-wrap>{{group.description}}</h3>\n                </ion-item>\n              </div>\n              <!-- End List big image Header -->\n              <!-- List big image Body -->\n              <div item-accordion [ngClass]="{\'active\': isGroupShown(group) }" [hidden]="!isGroupShown(group)">\n                <ion-item default-item no-lines *ngFor="let item of group.expandItems;"\n                (click)="onEvent(\'onItemClick\', item, $event)">\n                  <!-- Avatar -->\n                  <ion-thumbnail item-start>\n                    <img [src]="item.image" [alt]="item.title" />\n                  </ion-thumbnail>\n                  <!-- Title -->\n                  <h2 subitem-title text-wrap>{{item.title}}</h2>\n                  <!-- Subtitle -->\n                  <h3 subitem-subtitle text-wrap>{{item.description}}</h3>\n                  <!-- Details item-->\n                  <span span-small>{{item.details}}</span>\n                </ion-item>\n              </div>\n              <!-- End List big image Body -->\n            </li>\n          </ul>\n        </ion-list>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/Users/user227439/Desktop/sgq/App/sgq/src/core/list-view/expandable/layout-1/expandable.html"*/
+            selector: 'expandable-layout-2',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\expandable\layout-2\expandable.html"*/'<!-- Themes Expandable - Full image with CTA -->\n\n<ion-content>\n\n  <ion-grid no-padding *ngIf="data != null">\n\n    <ion-row>\n\n      <ion-col col-12 no-padding no-margin>\n\n        <ion-list>\n\n          <ul no-margin no-padding class="collapsible">\n\n            <li margin *ngFor="let group of data.items;">\n\n              <!-- Expandable Full image with CTA Header-->\n\n              <div class="collapsible-header" (click)="toggleGroup(group)">\n\n                <ion-item no-margin no-padding no-lines background-size text-center [ngStyle]="{\'background-image\': \'url(\' + group.backgroundImage + \')\'}">\n\n                  <div watch-now text-center>\n\n                    <!-- Icon And Text For Read More-->\n\n                    <button ion-button button-icon icon-center>\n\n                    <ion-icon icon-large [name]="group.icon"></ion-icon>\n\n                  </button >\n\n                    </div>\n\n                </ion-item>\n\n              </div>\n\n              <!-- Expandable Full image with CTA Body -->\n\n              <div class="item-accordion" background-size [ngClass]="{\'active\': isGroupShown(group) }" [hidden]="!isGroupShown(group)" [ngStyle]="{\'background-image\': \'url(\' + data.listBackgroundImage + \')\'}">\n\n                <ion-item text-wrap no-lines text-center padding transparent>\n\n                  <!-- Titile -->\n\n                  <h2 subitem-title>{{group.expandItems.title}}</h2>\n\n                  <!-- Icon Rating Star -->\n\n                  <ion-icon padding-top *ngFor="let item of group.expandItems.iconsStars;let i = index"\n\n                  (click)="onStarClass(group.expandItems.iconsStars, i, $event);">\n\n                    <i icon-small *ngIf="item.isActive" class="icon {{item.iconActive}}"></i>\n\n                    <i icon-small *ngIf="!item.isActive" class="icon {{item.iconInactive}}"></i>\n\n                  </ion-icon>\n\n                  <!-- Reviews Star -->\n\n                  <span span-medium>{{group.expandItems.reviews}}</span>\n\n                  <div padding-top (click)="onEvent(\'onItemClick\', group, $event)">\n\n                    <!-- Description -->\n\n                    <p subitem-subtitle>{{group.expandItems.description}}</p>\n\n                  </div>\n\n                </ion-item>\n\n              </div>\n\n            </li>\n\n          </ul>\n\n        </ion-list>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\expandable\layout-2\expandable.html"*/
         }),
         __metadata("design:paramtypes", [])
-    ], ExpandableLayout1);
-    return ExpandableLayout1;
+    ], ExpandableLayout2);
+    return ExpandableLayout2;
 }());
 
-//# sourceMappingURL=expandable-layout-1.js.map
+//# sourceMappingURL=expandable-layout-2.js.map
 
 /***/ })
 

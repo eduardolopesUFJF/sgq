@@ -9,6 +9,12 @@ page-manter-ocorrencia {
         padding: 0;
     }
 
+    .fullHeight {
+        height: auto;
+        contain: content;
+        white-space: normal;
+    }
+
     [background-size] {
         background-position: right !important;
     }

@@ -9,14 +9,11 @@
           <h1 ion-text login-title no-margin text-wrap text-capitalize>{{data.title}}</h1>
         </ion-item>
         <form #loginForm="ngForm">
-          <!-- <ion-item text-center margin-top transparent>
-            <select-layout-3 [data]="data.selectData" [events]="data.selectEvents"></select-layout-3>
-          </ion-item> -->
           <ion-item text-center transparent>
             <ion-label stacked>EMPRESA</ion-label>
-            <ion-select required [(ngModel)]="empresa" multiple="false" name="empresa" okText="Ok" cancelText="Cancelar">
-              <ion-option *ngFor="let item of data.selectData.items; let i= index" [value]="item.title">{{item.title}}</ion-option>
-            </ion-select>
+            <ionic-selectable item-content [(ngModel)]="empresa"
+                [items]="data.selectData.items" itemValueField="title" itemTextField="title" [canSearch]="true" name="empresa" required>
+            </ionic-selectable>
           </ion-item>
           <!---Input field username-->
           <ion-item text-center transparent>

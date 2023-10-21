@@ -1,14 +1,14 @@
 webpackJsonp([60],{
 
-/***/ 731:
+/***/ 734:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RadioButtonLayout2Module", function() { return RadioButtonLayout2Module; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RadioButtonLayout3Module", function() { return RadioButtonLayout3Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__radio_button_layout_2__ = __webpack_require__(835);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__radio_button_layout_3__ = __webpack_require__(867);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,35 +18,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var RadioButtonLayout2Module = /** @class */ (function () {
-    function RadioButtonLayout2Module() {
+var RadioButtonLayout3Module = /** @class */ (function () {
+    function RadioButtonLayout3Module() {
     }
-    RadioButtonLayout2Module = __decorate([
+    RadioButtonLayout3Module = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__radio_button_layout_2__["a" /* RadioButtonLayout2 */],
+                __WEBPACK_IMPORTED_MODULE_2__radio_button_layout_3__["a" /* RadioButtonLayout3 */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__radio_button_layout_2__["a" /* RadioButtonLayout2 */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__radio_button_layout_3__["a" /* RadioButtonLayout3 */]),
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_2__radio_button_layout_2__["a" /* RadioButtonLayout2 */]
+                __WEBPACK_IMPORTED_MODULE_2__radio_button_layout_3__["a" /* RadioButtonLayout3 */]
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"]]
         })
-    ], RadioButtonLayout2Module);
-    return RadioButtonLayout2Module;
+    ], RadioButtonLayout3Module);
+    return RadioButtonLayout3Module;
 }());
 
-//# sourceMappingURL=radio-button-layout-2.module.js.map
+//# sourceMappingURL=radio-button-layout-3.module.js.map
 
 /***/ }),
 
-/***/ 835:
+/***/ 867:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RadioButtonLayout2; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RadioButtonLayout3; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -58,8 +58,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var RadioButtonLayout2 = /** @class */ (function () {
-    function RadioButtonLayout2() {
+var RadioButtonLayout3 = /** @class */ (function () {
+    function RadioButtonLayout3() {
         var _this = this;
         this.onEvent = function (event, item) {
             if (_this.events[event]) {
@@ -70,21 +70,21 @@ var RadioButtonLayout2 = /** @class */ (function () {
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('data'),
         __metadata("design:type", Object)
-    ], RadioButtonLayout2.prototype, "data", void 0);
+    ], RadioButtonLayout3.prototype, "data", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('events'),
         __metadata("design:type", Object)
-    ], RadioButtonLayout2.prototype, "events", void 0);
-    RadioButtonLayout2 = __decorate([
+    ], RadioButtonLayout3.prototype, "events", void 0);
+    RadioButtonLayout3 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'radio-button-layout-2',template:/*ion-inline-start:"/Users/user227439/Desktop/sgq/App/sgq/src/core/radio-button/layout-2/radio-button.html"*/'<!--Themes Radio Button - With Avatars -->\n<ion-content>\n  <ion-grid no-padding *ngIf="data != null">\n    <ion-list radio-group [(ngModel)]="data.selectedItem">\n      <!-- Header Title Top -->\n      <ion-list-header header-section no-lines>\n        <h1 header-title text-capitalize>{{data.title}}</h1>\n      </ion-list-header>\n      <!--Content -->\n      <ion-item default-item no-lines *ngFor="let item of data.items; let i= index">\n        <!-- Content Avatar -->\n        <ion-thumbnail item-start>\n          <img [src]="item.avatar" />\n        </ion-thumbnail >\n        <!-- Content Title -->\n        <ion-label item-title padding-top>{{item.title}}</ion-label>\n        <!-- Content Subtitle -->\n        <ion-label item-subtitle text-wrap>{{item.subtitle}}</ion-label>\n        <ion-radio item-end [value]="item.id" (ionSelect)="onEvent(\'onSelect\',item)" [checked]="item.isChecked"></ion-radio>\n      </ion-item>\n    </ion-list>\n  </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/Users/user227439/Desktop/sgq/App/sgq/src/core/radio-button/layout-2/radio-button.html"*/
+            selector: 'radio-button-layout-3',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\radio-button\layout-3\radio-button.html"*/'<!--Themes Radio Button - Simple 2-->\n\n<ion-content>\n\n  <ion-grid no-padding *ngIf="data != null">\n\n    <ion-list radio-group [(ngModel)]="data.selectedItem">\n\n      <!-- Header Title Top -->\n\n      <ion-list-header header-section no-lines>\n\n        <h1 header-title text-capitalize>{{data.title}}</h1>\n\n      </ion-list-header>\n\n      <!--Content -->\n\n      <ion-item default-item no-lines *ngFor="let item of data.items; let i= index">\n\n        <ion-radio item-start [value]="item.id" (ionSelect)="onEvent(\'onSelect\',item)"></ion-radio>\n\n        <!--Content Title-->\n\n        <ion-label item-title>{{item.title}}</ion-label>\n\n        <!--Content Subtitle-->\n\n        <ion-label item-end text-right item-subtitle>{{item.subtitle}}</ion-label>\n\n      </ion-item>\n\n    </ion-list>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\radio-button\layout-3\radio-button.html"*/
         }),
         __metadata("design:paramtypes", [])
-    ], RadioButtonLayout2);
-    return RadioButtonLayout2;
+    ], RadioButtonLayout3);
+    return RadioButtonLayout3;
 }());
 
-//# sourceMappingURL=radio-button-layout-2.js.map
+//# sourceMappingURL=radio-button-layout-3.js.map
 
 /***/ })
 

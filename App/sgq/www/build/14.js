@@ -1,14 +1,15 @@
 webpackJsonp([14],{
 
-/***/ 766:
+/***/ 765:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChecklistCadastroPageModule", function() { return ChecklistCadastroPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AreaCadastroPageModule", function() { return AreaCadastroPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__checklist_cadastro__ = __webpack_require__(872);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__area_cadastro__ = __webpack_require__(899);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_selectable__ = __webpack_require__(352);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,28 +19,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ChecklistCadastroPageModule = /** @class */ (function () {
-    function ChecklistCadastroPageModule() {
+
+var AreaCadastroPageModule = /** @class */ (function () {
+    function AreaCadastroPageModule() {
     }
-    ChecklistCadastroPageModule = __decorate([
+    AreaCadastroPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__checklist_cadastro__["a" /* ChecklistCadastroPage */]
+                __WEBPACK_IMPORTED_MODULE_2__area_cadastro__["a" /* AreaCadastroPage */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__checklist_cadastro__["a" /* ChecklistCadastroPage */])
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__area_cadastro__["a" /* AreaCadastroPage */]),
+                __WEBPACK_IMPORTED_MODULE_3_ionic_selectable__["a" /* IonicSelectableModule */]
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"]]
         })
-    ], ChecklistCadastroPageModule);
-    return ChecklistCadastroPageModule;
+    ], AreaCadastroPageModule);
+    return AreaCadastroPageModule;
 }());
 
-//# sourceMappingURL=checklist-cadastro.module.js.map
+//# sourceMappingURL=area-cadastro.module.js.map
 
 /***/ }),
 
-/***/ 778:
+/***/ 781:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -83,41 +86,96 @@ exports.UUID = UUID;
 
 /***/ }),
 
-/***/ 785:
+/***/ 786:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ItemChecklist; });
-var ItemChecklist = /** @class */ (function () {
-    function ItemChecklist(values) {
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Alteracao; });
+var Alteracao = /** @class */ (function () {
+    function Alteracao(values) {
         if (values === void 0) { values = {}; }
-        this.id = 0;
-        this.campo1 = "";
-        this.campo2 = "";
-        this.campo3 = "";
-        this.campo4 = "";
-        this.itensChecklistServico = [];
         Object.assign(this, values);
     }
-    return ItemChecklist;
+    return Alteracao;
 }());
 
-//# sourceMappingURL=item-checklist.js.map
+//# sourceMappingURL=alteracao.js.map
 
 /***/ }),
 
-/***/ 872:
+/***/ 800:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChecklistCadastroPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Servico; });
+var Servico = /** @class */ (function () {
+    function Servico(values) {
+        if (values === void 0) { values = {}; }
+        this.id = 0;
+        this.idGuidServico = '';
+        this.descricao = '';
+        this.tipo = '';
+        this.idObra = 0;
+        this.idChecklist = 0;
+        this.idChecklistGuid = '';
+        this.idArea = 0;
+        this.idAreaGuid = "";
+        this.metaAprovacao = 90;
+        this.status = 0;
+        this.situacao = 'Em aberto';
+        this.delete = false;
+        this.dataHoraInclusao = new Date();
+        this.dataHoraAlteracao = new Date();
+        this.inspecoesObra = [];
+        this.itensChecklistServico = [];
+        Object.assign(this, values);
+    }
+    return Servico;
+}());
+
+//# sourceMappingURL=servico.js.map
+
+/***/ }),
+
+/***/ 826:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Area; });
+var Area = /** @class */ (function () {
+    function Area(values) {
+        if (values === void 0) { values = {}; }
+        this.id = 0;
+        this.idGuid = '';
+        this.idObra = 0;
+        this.status = 0;
+        this.situacao = 'Em aberto';
+        this.delete = false;
+        this.servicos = [];
+        Object.assign(this, values);
+    }
+    return Area;
+}());
+
+//# sourceMappingURL=area.js.map
+
+/***/ }),
+
+/***/ 899:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AreaCadastroPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_toast_service__ = __webpack_require__(350);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_item_checklist__ = __webpack_require__(785);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_uuid__ = __webpack_require__(778);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_uuid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_angular2_uuid__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_area__ = __webpack_require__(826);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_alteracao__ = __webpack_require__(786);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_toast_service__ = __webpack_require__(350);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__ = __webpack_require__(781);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_uuid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_angular2_uuid__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__models_servico__ = __webpack_require__(800);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utils_storage_service_utils__ = __webpack_require__(156);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -127,59 +185,168 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+    var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+    return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+    function verb(n) { return function (v) { return step([n, v]); }; }
+    function step(op) {
+        if (f) throw new TypeError("Generator is already executing.");
+        while (_) try {
+            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [0, t.value];
+            switch (op[0]) {
+                case 0: case 1: t = op; break;
+                case 4: _.label++; return { value: op[1], done: false };
+                case 5: _.label++; y = op[1]; op = [0]; continue;
+                case 7: op = _.ops.pop(); _.trys.pop(); continue;
+                default:
+                    if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+                    if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+                    if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+                    if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+                    if (t[2]) _.ops.pop();
+                    _.trys.pop(); continue;
+            }
+            op = body.call(thisArg, _);
+        } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+        if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+    }
+};
 
 
 
 
 
 
-var ChecklistCadastroPage = /** @class */ (function () {
-    function ChecklistCadastroPage(storage, navParams, modalCtrl, toastService, viewCtrl) {
+
+
+
+var AreaCadastroPage = /** @class */ (function () {
+    function AreaCadastroPage(storage, navParams, storageServiceUtils, toastService, viewCtrl) {
         this.storage = storage;
         this.navParams = navParams;
-        this.modalCtrl = modalCtrl;
+        this.storageServiceUtils = storageServiceUtils;
         this.toastService = toastService;
         this.viewCtrl = viewCtrl;
-        this.checklist = new __WEBPACK_IMPORTED_MODULE_4__models_item_checklist__["a" /* ItemChecklist */]();
-        this.checklist = this.navParams.data.checklist ? new __WEBPACK_IMPORTED_MODULE_4__models_item_checklist__["a" /* ItemChecklist */](this.navParams.data.checklist) : new __WEBPACK_IMPORTED_MODULE_4__models_item_checklist__["a" /* ItemChecklist */]();
-        this.checklist.tipo = this.checklist.tipo ? this.checklist.tipo.slice(0, 1) : null;
+        this.itens = [];
+        this.area = new __WEBPACK_IMPORTED_MODULE_2__models_area__["a" /* Area */]();
+        this.opcoesItens = [];
+        this.opcoesEscolhidas = [];
+        this.servicosEscolhidos = [];
+        this.servicosEscolhidosNovos = [];
+        this.obraId = this.navParams.data.obraId;
+        this.obterItensChecklist();
     }
-    ChecklistCadastroPage.prototype.voltar = function () {
-        this.viewCtrl.dismiss(null);
+    AreaCadastroPage.prototype.obterItensChecklist = function () {
+        var _this = this;
+        this.storage.ready().then(function () {
+            _this.storage.get('itensChecklist').then(function (itens) {
+                _this.opcoesItens = itens;
+                _this.opcoesItens.forEach(function (item) {
+                    item.descricao = item.codigo + " - " + item.descricao;
+                    item.idGuid = item.idGuid ? item.idGuid : (item.id + "");
+                });
+            });
+        });
     };
-    ChecklistCadastroPage.prototype.salvar = function (formValido) {
-        if (formValido && this.checklist.tipo) {
-            this.checklist.idGuid = __WEBPACK_IMPORTED_MODULE_5_angular2_uuid__["UUID"].UUID();
-            this.adicionarItens();
+    AreaCadastroPage.prototype.setaServicoEscolhido = function (event) {
+        this.servicosEscolhidos = event.value.map(function (x) { return x.id; });
+        this.servicosEscolhidosNovos = event.value.map(function (x) { return x.idGuid; });
+        this.servicosEscolhidos = this.servicosEscolhidos.filter(function (x) { return x != 0; });
+        this.servicosEscolhidosNovos = this.servicosEscolhidosNovos.filter(function (x) { return x.length > 10; });
+    };
+    AreaCadastroPage.prototype.salvar = function (formValido) {
+        var _this = this;
+        if (formValido) {
+            this.area.idGuid = __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__["UUID"].UUID();
+            this.servicosEscolhidos.forEach(function (item) {
+                var servico = new __WEBPACK_IMPORTED_MODULE_7__models_servico__["a" /* Servico */]();
+                servico.idGuidServico = __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__["UUID"].UUID();
+                servico.idChecklist = item;
+                servico.idObra = _this.obraId;
+                servico.idAreaGuid = _this.area.idGuid;
+                var servicoEscolhido = _this.opcoesItens.find(function (x) { return x.id == item; });
+                servico.itensChecklistServico = servicoEscolhido.itensChecklistServico;
+                servico.descricao = servicoEscolhido.descricao;
+                servico.tipo = servicoEscolhido.tipo;
+                _this.area.servicos.push(servico);
+            });
+            this.servicosEscolhidosNovos.forEach(function (item) {
+                var servico = new __WEBPACK_IMPORTED_MODULE_7__models_servico__["a" /* Servico */]();
+                servico.idGuidServico = __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__["UUID"].UUID();
+                servico.idChecklistGuid = item;
+                servico.idObra = _this.obraId;
+                servico.idAreaGuid = _this.area.idGuid;
+                var servicoEscolhido = _this.opcoesItens.find(function (x) { return x.idGuid == item; });
+                servico.itensChecklistServico = servicoEscolhido.itensChecklistServico;
+                servico.descricao = servicoEscolhido.descricao;
+                servico.tipo = servicoEscolhido.tipo;
+                _this.area.servicos.push(servico);
+            });
+            this.storage.ready().then(function () {
+                var atualizacoesArray = [];
+                _this.storage.get('atualizacoes').then(function (atualizacoes) {
+                    _this.area.idObra = _this.obraId;
+                    var alteracao = new __WEBPACK_IMPORTED_MODULE_4__models_alteracao__["a" /* Alteracao */]({ id: __WEBPACK_IMPORTED_MODULE_6_angular2_uuid__["UUID"].UUID(), idArea: _this.area.id, idGuidArea: _this.area.idGuid, tipo: "Insert", entidade: "Area", valor: JSON.stringify(_this.area), data: new Date(), descricao: "Inserção da área: " + _this.area.descricao, obraId: _this.obraId });
+                    if (atualizacoes) {
+                        atualizacoesArray = atualizacoes;
+                        atualizacoesArray.push(alteracao);
+                    }
+                    else {
+                        atualizacoesArray.push(alteracao);
+                    }
+                    _this.storage.set('atualizacoes', atualizacoesArray);
+                    _this.atualizarObra();
+                });
+            });
         }
         else {
             this.toastService.presentToastWarning("Preencha todos os campos.");
         }
     };
-    ChecklistCadastroPage.prototype.adicionarItens = function () {
-        var _this = this;
-        var modal = this.modalCtrl.create("CadastroItemPage", { checklist: this.checklist });
-        modal.present();
-        modal.onWillDismiss(function (checklist) {
-            if (checklist) {
-                _this.viewCtrl.dismiss(checklist);
-            }
+    AreaCadastroPage.prototype.atualizarObra = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            var obras;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.storageServiceUtils.montarObra()];
+                    case 1:
+                        obras = _a.sent();
+                        this.area.situacao = this.area.status == 0 ? 'Em aberto' : 'Finalizado';
+                        obras.find(function (x) { return x.id == _this.obraId; }).areas.unshift(this.area);
+                        this.storageServiceUtils.armazenarObraNoStorage(obras);
+                        this.viewCtrl.dismiss(this.area);
+                        return [2 /*return*/];
+                }
+            });
         });
     };
-    ChecklistCadastroPage = __decorate([
+    AreaCadastroPage.prototype.voltar = function () {
+        this.viewCtrl.dismiss(null);
+    };
+    AreaCadastroPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-checklist-cadastro',template:/*ion-inline-start:"/Users/user227439/Desktop/sgq/App/sgq/src/pages/checklist/cadastro/checklist-cadastro.html"*/'<ion-header>\n    <ion-navbar>\n        <ion-row class="pad-nav-page" (click)="voltar()">\n            <button class="button-nav">\n                <span ion-text>Voltar</span>\n            </button>\n        </ion-row>\n    </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <ion-grid no-padding>\n        <ion-row padding-left padding-right>\n            <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n                <form #cadastroForm="ngForm" padding-top>\n                    <ion-list radio-group no-margin [(ngModel)]="checklist.tipo" name="tipo">\n                        <ion-grid>\n                            <ion-row>\n                                <ion-col col-6>\n                                    <ion-item radio>\n                                        <ion-label>Controlado</ion-label>\n                                        <ion-radio value="C"></ion-radio>\n                                    </ion-item>\n                                </ion-col>\n                                <ion-col col-6>\n                                    <ion-item radio>\n                                        <ion-label>Especializado</ion-label>\n                                        <ion-radio value="E"></ion-radio>\n                                    </ion-item>\n                                </ion-col>\n                            </ion-row>\n                        </ion-grid>\n                    </ion-list>\n                    <ion-item text-center transparent>\n                        <ion-label stacked>CÓDIGO</ion-label>\n                        <ion-input text-center required type="text" [(ngModel)]="checklist.codigo" name="codigo"></ion-input>\n                    </ion-item>\n                    <ion-item text-center transparent>\n                        <ion-label stacked>DESCRIÇÃO</ion-label>\n                        <ion-textarea rows="3" text-center required type="text" [(ngModel)]="checklist.descricao" name="descricao"></ion-textarea>\n                    </ion-item>\n\n                    <h3 text-center class="locais">Critérios de localização do serviço</h3>\n                    <ion-item text-center transparent>\n                        <ion-label stacked>CAMPO 1</ion-label>\n                        <ion-input text-center type="text" [(ngModel)]="checklist.campo1" name="campo1"></ion-input>\n                    </ion-item>\n                    <ion-item text-center transparent>\n                        <ion-label stacked>CAMPO 2</ion-label>\n                        <ion-input text-center type="text" [(ngModel)]="checklist.campo2" name="campo2"></ion-input>\n                    </ion-item>\n                    <ion-item text-center transparent>\n                        <ion-label stacked>CAMPO 3</ion-label>\n                        <ion-input text-center type="text" [(ngModel)]="checklist.campo3" name="campo3"></ion-input>\n                    </ion-item>\n                    <ion-item text-center transparent>\n                        <ion-label stacked>CAMPO 4</ion-label>\n                        <ion-input text-center type="text" [(ngModel)]="checklist.campo4" name="campo4"></ion-input>\n                    </ion-item>\n\n                    <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: rgb(33,177,75) !important;"\n                        (click)="salvar(cadastroForm.valid)">Definir Itens</button>\n                </form>\n            </ion-col>\n        </ion-row>\n    </ion-grid>\n</ion-content>'/*ion-inline-end:"/Users/user227439/Desktop/sgq/App/sgq/src/pages/checklist/cadastro/checklist-cadastro.html"*/
+            selector: 'page-area-cadastro',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\area\cadastro\area-cadastro.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <ion-row class="pad-nav-page" (click)="voltar()">\n\n            <button class="button-nav">\n\n                <span ion-text>Voltar</span>\n\n            </button>\n\n        </ion-row>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n    <ion-grid no-padding>\n\n        <ion-row padding-left padding-right>\n\n            <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n\n                <form #cadastroForm="ngForm" padding-top>\n\n                    <ion-list radio-group no-margin [(ngModel)]="area.status" name="status">\n\n                        <ion-grid>\n\n                            <ion-row>\n\n                                <ion-col col-6>\n\n                                    <ion-item radio>\n\n                                        <ion-label>Em aberto</ion-label>\n\n                                        <ion-radio [value]="0" checked></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                                <ion-col col-6>\n\n                                    <ion-item radio>\n\n                                        <ion-label>Finalizado</ion-label>\n\n                                        <ion-radio [value]="1"></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                            </ion-row>\n\n                        </ion-grid>\n\n                    </ion-list>\n\n                    <ion-item text-center transparent>\n\n                        <ion-label stacked>ÁREA</ion-label>\n\n                        <ion-input text-center required type="text" [(ngModel)]="area.descricao" name="area"></ion-input>\n\n                    </ion-item>\n\n                    <ion-item text-center transparent>\n\n                        <ion-label stacked>CHECKLIST</ion-label>\n\n                        <ionic-selectable \n\n                            item-content\n\n                            [(ngModel)]="servicoEscolhido"\n\n                            [items]="opcoesItens"\n\n                            itemValueField="idGuid"\n\n                            itemTextField="descricao"\n\n                            [canSearch]="true"\n\n                            [isMultiple]="true"\n\n                            name="servicosEscolhidos"\n\n                            (onChange)="setaServicoEscolhido($event)"\n\n                            required>\n\n                        </ionic-selectable>\n\n                    </ion-item>\n\n                    <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: rgb(33,177,75) !important;"\n\n                        (click)="salvar(cadastroForm.valid)">Salvar</button>\n\n                </form>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-grid>\n\n</ion-content>'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\area\cadastro\area-cadastro.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* ModalController */],
-            __WEBPACK_IMPORTED_MODULE_3__utils_toast_service__["a" /* ToastService */],
+            __WEBPACK_IMPORTED_MODULE_8__utils_storage_service_utils__["a" /* StorageServiceUtils */],
+            __WEBPACK_IMPORTED_MODULE_5__utils_toast_service__["a" /* ToastService */],
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["u" /* ViewController */]])
-    ], ChecklistCadastroPage);
-    return ChecklistCadastroPage;
+    ], AreaCadastroPage);
+    return AreaCadastroPage;
 }());
 
-//# sourceMappingURL=checklist-cadastro.js.map
+//# sourceMappingURL=area-cadastro.js.map
 
 /***/ })
 

@@ -10,5 +10,6 @@ namespace SGQ.GDOL.Domain.TreinamentoRoot.Entity
         public bool? Ativo { get; set; }
 
         public ICollection<TreinamentoFuncionario> TreinamentosFuncionarios { get; set; }
+        public ICollection<TreinamentoFuncionarioTerceirizado> TreinamentosFuncionariosTerceirizados { get; set; }
     }
 }

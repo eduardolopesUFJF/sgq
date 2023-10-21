@@ -14,10 +14,11 @@ import { Obra } from '../models/obra';
 import { FuncionarioService } from '../services/funcionario.service';
 import { StorageServiceUtils } from '../utils/storage-service-utils';
 import { FornecedorService } from '../services/fornecedor.service';
+import { PermissaoService } from '../services/permissao.service';
 
 @Component({
   templateUrl: 'app.html',
-  providers: [ObraService, ChecklistService, AlteracaoService, FuncionarioService, FornecedorService]
+  providers: [ObraService, ChecklistService, AlteracaoService, FuncionarioService, FornecedorService, PermissaoService]
 })
 
 export class MyApp {
@@ -45,6 +46,7 @@ export class MyApp {
     public alteracaoService: AlteracaoService,
     public funcionarioService: FuncionarioService,
     public fornecedorService: FornecedorService,
+    public permissaoService: PermissaoService,
     public alertCtrl: AlertController,
     public checklistService: ChecklistService,
     public network: Network,
@@ -162,6 +164,7 @@ export class MyApp {
             this.obterFornecedores();
             this.atualizacao = false;
             this.obterObras();
+            this.obterPermissoesExclusao();
           }
         }
       );
@@ -361,6 +364,18 @@ export class MyApp {
       },
       error => {
         this.messageService.exibirMensagem("Falha na comunicação com o servidor ao buscar fornecedores, contate o suporte.");
+      }
+    );
+  }
+
+  async obterPermissoesExclusao() {
+    let usuarioSalvo = await this.storage.get('UsuarioSalvo');
+    this.permissaoService.obterPermissoesExclusao(usuarioSalvo).subscribe(
+      data => {
+        this.storage.set('permissoesExclusao', data);
+      },
+      error => {
+        this.messageService.exibirMensagem("Falha na comunicação com o servidor ao buscar permissoes, contate o suporte.");
       }
     );
   }

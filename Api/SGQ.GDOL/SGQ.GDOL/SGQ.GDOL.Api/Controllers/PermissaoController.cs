@@ -21,5 +21,12 @@ namespace SGQ.GDOL.Api.Controllers
             var permissoes = _permissaoService.ObterPermissoes(cliente);
             return Ok(permissoes);
         }
+
+        [HttpGet("delecoes/{cliente}")]
+        public IActionResult ObterPermissoesExclusao([FromRoute] string cliente)
+        {
+            var permissoes = _permissaoService.ObterPermissoesExclusao(cliente);
+            return Ok(permissoes);
+        }
     }
 }

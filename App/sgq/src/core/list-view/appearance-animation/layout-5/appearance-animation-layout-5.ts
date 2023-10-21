@@ -1,6 +1,7 @@
 import { Component, Input, ViewChild, OnChanges } from '@angular/core';
 import { IonicPage, Content } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
+import { PermissaoExclusao } from '../../../../models/permissao-exclusao';
 
 @IonicPage()
 @Component({
@@ -23,6 +24,8 @@ export class AppearanceAnimationLayout5 implements OnChanges {
     ultimoDownload: any;
     ultimoUpload: any;
     situacao: number = 0;
+    permissoesExclusao: PermissaoExclusao = new PermissaoExclusao();
+    permitirExclusao: boolean;
 
     constructor(public storage: Storage) {
         this.animateClass = { 'zoom-in': true };
@@ -46,6 +49,21 @@ export class AppearanceAnimationLayout5 implements OnChanges {
         }
         if (this.events[event]) {
             this.events[event](item);
+        }
+    }
+
+    ngOnInit() {
+        if (this.config.exclusaoPossivel) {
+            this.storage.get('permissoesExclusao').then(
+                data => {
+                    this.permissoesExclusao = data;
+                    if (this.config.btnNovoLabel == 'Adicionar área') {
+                        this.permitirExclusao = !this.permissoesExclusao.possuiBloqueioExclusaoArea;
+                    } else {
+                        this.permitirExclusao = !this.permissoesExclusao.possuiBloqueioExclusaoChecklist;
+                    }
+                }
+            );
         }
     }
     

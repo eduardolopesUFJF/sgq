@@ -239,7 +239,12 @@ export class VerificacaoPage {
             this.inspecoes = [...this.inspecoesBackup];
         } else {
             this.inspecoes = this.inspecoesBackup.filter((item) => {
-                return item.campo1.toLowerCase().indexOf(valor.toLowerCase()) > -1;
+                return (
+                    item.campo1.toLowerCase().indexOf(valor.toLowerCase()) > -1
+                    || item.campo2.toLowerCase().indexOf(valor.toLowerCase()) > -1
+                    || item.campo3.toLowerCase().indexOf(valor.toLowerCase()) > -1
+                    || item.campo4.toLowerCase().indexOf(valor.toLowerCase()) > -1
+                );
             });
         }
     }
