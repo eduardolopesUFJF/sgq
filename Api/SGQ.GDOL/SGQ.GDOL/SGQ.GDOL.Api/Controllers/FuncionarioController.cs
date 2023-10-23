@@ -24,5 +24,13 @@ namespace SGQ.GDOL.Api.Controllers
             var resultVM = Mapper.Map<List<FuncionarioVM>>(resultBD);
             return Ok(resultVM);
         }
+
+        [HttpGet("terceiros-ativos")]
+        public IActionResult GetTerceiros()
+        {
+            var resultBD = _funcionarioService.ObterTodosTerceirosAtivos();
+            var resultVM = Mapper.Map<List<FuncionarioTerceirizadoVM>>(resultBD);
+            return Ok(resultVM);
+        }
     }
 }

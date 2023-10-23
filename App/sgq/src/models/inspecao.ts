@@ -17,7 +17,7 @@ export class Inspecao {
     idFuncionarioAprovado: number;
     idFuncionarioInspecionado: number;
     status: number = 0;
-    situacao: string = 'Em aberto';
+    situacao: string = 'Verificação não iniciada';
     delete: boolean = false;
     dataHoraAlteracao: Date = new Date();
     usuarioInclusao: string = "";

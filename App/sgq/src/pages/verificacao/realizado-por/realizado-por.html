@@ -5,10 +5,12 @@
 </ion-header>
 
 <ion-content>
-    <ion-grid no-padding style="display: table-cell !important">
+    <ion-grid no-padding>
         <ion-row *ngIf="!cadastrando">
-            <button ion-button default-button block text-capitalize box-shadow margin-bottom class="button-novo"
+            <ion-col col-12>
+                <button ion-button default-button block text-capitalize box-shadow margin-bottom class="button-novo"
                 (click)="cadastrando = true">Adicionar</button>
+            </ion-col>
         </ion-row>
         <ion-row *ngIf="!cadastrando">
             <ion-list no-margin>

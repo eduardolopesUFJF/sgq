@@ -1,14 +1,23 @@
 webpackJsonp([38],{
 
+<<<<<<< HEAD
 /***/ 752:
+=======
+/***/ 753:
+>>>>>>> e231fdfa1cb4eccbf9b4b4416cebb1aa15234b51
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SubImageGalleryLayout2Module", function() { return SubImageGalleryLayout2Module; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabsLayout1Module", function() { return TabsLayout1Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+<<<<<<< HEAD
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sub_image_gallery_layout_2__ = __webpack_require__(856);
+=======
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs_layout_1__ = __webpack_require__(886);
+>>>>>>> e231fdfa1cb4eccbf9b4b4416cebb1aa15234b51
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,37 +27,40 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SubImageGalleryLayout2Module = /** @class */ (function () {
-    function SubImageGalleryLayout2Module() {
+var TabsLayout1Module = /** @class */ (function () {
+    function TabsLayout1Module() {
     }
-    SubImageGalleryLayout2Module = __decorate([
+    TabsLayout1Module = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__sub_image_gallery_layout_2__["a" /* SubImageGalleryLayout2 */],
+                __WEBPACK_IMPORTED_MODULE_2__tabs_layout_1__["a" /* TabsLayout1 */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__sub_image_gallery_layout_2__["a" /* SubImageGalleryLayout2 */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__tabs_layout_1__["a" /* TabsLayout1 */]),
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_2__sub_image_gallery_layout_2__["a" /* SubImageGalleryLayout2 */]
+                __WEBPACK_IMPORTED_MODULE_2__tabs_layout_1__["a" /* TabsLayout1 */]
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"]]
         })
-    ], SubImageGalleryLayout2Module);
-    return SubImageGalleryLayout2Module;
+    ], TabsLayout1Module);
+    return TabsLayout1Module;
 }());
 
-//# sourceMappingURL=sub-image-gallery-layout-2.module.js.map
+//# sourceMappingURL=tabs-layout-1.module.js.map
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 856:
+=======
+/***/ 886:
+>>>>>>> e231fdfa1cb4eccbf9b4b4416cebb1aa15234b51
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SubImageGalleryLayout2; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsLayout1; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -59,44 +71,35 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-
-var SubImageGalleryLayout2 = /** @class */ (function () {
-    function SubImageGalleryLayout2(navCtrl, navParams) {
-        var _this = this;
-        this.navCtrl = navCtrl;
-        this.onEvent = function (event, item, e) {
-            if (e) {
-                e.stopPropagation();
-            }
-            if (_this.events[event]) {
-                _this.events[event](item);
-            }
-        };
-        this.openImageSlider = function (group, index) {
-            _this.navCtrl.push(group.fullscreen, {
-                'group': group.items,
-                'index': index
-            });
-        };
+var TabsLayout1 = /** @class */ (function () {
+    function TabsLayout1() {
     }
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('data'),
         __metadata("design:type", Object)
-    ], SubImageGalleryLayout2.prototype, "data", void 0);
+    ], TabsLayout1.prototype, "data", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('events'),
         __metadata("design:type", Object)
-    ], SubImageGalleryLayout2.prototype, "events", void 0);
-    SubImageGalleryLayout2 = __decorate([
+    ], TabsLayout1.prototype, "events", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('tabs'),
+        __metadata("design:type", Object)
+    ], TabsLayout1.prototype, "tabRef", void 0);
+    TabsLayout1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+<<<<<<< HEAD
             selector: 'sub-image-gallery-layout-2',template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/core/sub-image-gallery/layout-2/sub-image-gallery-layout-2.html"*/'<!-- Theme Image Sub-Gallery for Thumb grid -->\n<ion-grid *ngIf="data != null">\n    <ion-row>\n        <ion-col no-padding col-4 col-sm-3 col-md-6 col-lg-4 col-xl-3 *ngFor="let item of data.items;let i = index;">\n            <ion-card background-size (click)="openImageSlider(data, i)">\n              <img [src]="item.image"  />\n            </ion-card>\n        </ion-col>\n    </ion-row>\n</ion-grid>\n'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/core/sub-image-gallery/layout-2/sub-image-gallery-layout-2.html"*/
+=======
+            selector: 'tabs-layout-1',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\tabs\layout-1\tabs.html"*/'<!-- Theme Tabs Footer tab - text -->\n\n<ion-tabs #tabs tabsPlacement="bottom">\n\n    <ion-tab [tabTitle]="item.title" [tabIcon]="item.icon" [root]="item.page" *ngFor="let item of data;let i = index"></ion-tab>\n\n</ion-tabs>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\tabs\layout-1\tabs.html"*/
+>>>>>>> e231fdfa1cb4eccbf9b4b4416cebb1aa15234b51
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */]])
-    ], SubImageGalleryLayout2);
-    return SubImageGalleryLayout2;
+        __metadata("design:paramtypes", [])
+    ], TabsLayout1);
+    return TabsLayout1;
 }());
 
-//# sourceMappingURL=sub-image-gallery-layout-2.js.map
+//# sourceMappingURL=tabs-layout-1.js.map
 
 /***/ })
 

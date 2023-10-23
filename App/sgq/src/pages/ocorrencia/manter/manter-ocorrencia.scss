@@ -1,5 +1,11 @@
 page-manter-ocorrencia {
-    
+
+    .fullHeight {
+        height: auto;
+        contain: content;
+        white-space: normal;
+    }
+
     .button-nav {
         height: 30px !important;
         background: none !important;
@@ -12,145 +18,165 @@ page-manter-ocorrencia {
     [background-size] {
         background-position: right !important;
     }
-    
-    .scroll-content {
-    padding-bottom: 0 !important;
-    top: 0px !important;
 
-    ion-grid {
-        height: 100%;
-
-        ion-row {
-        height: 100%;
-        // Settings Logo
-        img {
-            height: 150px;
-            width: 275px;
-        }
-        // Settings Form
-        form {
-            ion-item {
-            padding-left: 0 !important;
-            padding-bottom: 15px !important;
-
-            &.item-input-has-value {
-                ion-textarea {
-                background: rgba(33, 177, 75, 0.6) !important;
-                }
-                ion-select {
-                background: rgba(33, 177, 75, 0.6) !important;
-                }
-            }
-
-            &.item-input-has-focus {
-                ion-textarea {
-                background: rgba(33, 177, 75, 0.6) !important;
-                }
-                ion-select {
-                background: rgba(33, 177, 75, 0.6) !important;
-                }
-            }
-
-            [error-field] {
-                margin: 0 !important;
-                position: absolute !important;
-                bottom: 0 !important;
-                right: 5px !important;
-                font-size: $h6-font-size;
-            }
-
-            .item-inner {
-                border-bottom: none !important;
-                box-shadow: none !important;
-                padding-right: 0 !important;
-            }
-
-            ion-label {
-                margin: 0 5px !important;
-                color: black;
-            }
-
-            ion-textarea {
-                background: rgba(33, 177, 75, 0.4) !important;
-                margin: 5px 10px 0px 0px !important;
-                padding: 5px 10px !important;
-                border-radius: $border-radius;
-                z-index: 999;
-
-                .input-cover {
-                display: none;
-                }
-            }
-
-            ion-datetime {
-                background: rgba(33, 177, 75, 0.4) !important;
-                margin: 5px 10px 0px 10px !important;
-                padding: 5px 10px !important;
-                border-radius: $border-radius;
-                z-index: 999;
-                height: 38px !important;
-                padding-top: 9px !important;
-
-                .input-cover {
-                display: none;
-                }
-            }
-
-            ion-select {
-                background: rgba(33, 177, 75, 0.4) !important;
-                margin: 5px 0px 0px 0px !important;
-                padding: 10px !important;
-                border-radius: $border-radius;
-                z-index: 999;
-
-                .input-cover {
-                display: none;
-                }
-            }
-            }
-
-            [stacked] {
-            font-size: $text-font-size !important;
-            color: black !important;
-            }
-
-            [bottom-form] {
-            position: relative;
-            display: inline-block;
-            padding-top: 50px;
-            width: 100%;
-
-            &::after {
-                content: "or try";
-                font-size: $h6-font-size;
-                color: theme-colors('textColors', 'primary');
-                width: 140px;
-                border-bottom: 1px solid rgb(33, 177, 75);
-                position: absolute;
-                top: 30px;
-                left: calc(50% - 70px);
-            }
-            }
-
-            [button-icon-clear] {
-            box-shadow: none !important;
-            }
-        }
-        // Settings Login Title
-        [login-title] {
-            color: black;
-        }
-
-        [padding-top] {
-            padding-top: 10px;
-        }
-
-        [radio] {
-            padding: 0px !important;
-            border-radius: 10px;
-        }
-        }
+    .novo-item {
+        border: 4px solid navy !important;
     }
+
+    .item-removido {
+        border: 4px solid red !important;
+    }
+
+    .scroll-content {
+        padding-bottom: 0 !important;
+        top: 0px !important;
+
+        ion-grid {
+            height: 100%;
+
+            ion-row {
+                height: 100%;
+
+                // Settings Logo
+                img {
+                    height: 150px;
+                    width: 275px;
+                }
+
+                // Settings Form
+                form {
+                    ion-item {
+                        padding-left: 0 !important;
+                        padding-bottom: 15px !important;
+
+                        &.item-input-has-value {
+                            ion-textarea {
+                                background: rgba(124, 130, 134, 0.6) !important;
+                            }
+
+                            ion-select {
+                                background: rgba(124, 130, 134, 0.6) !important;
+                            }
+                        }
+
+                        &.item-input-has-focus {
+                            ion-textarea {
+                                background: rgba(124, 130, 134, 0.6) !important;
+                            }
+
+                            ion-select {
+                                background: rgba(124, 130, 134, 0.6) !important;
+                            }
+                        }
+
+                        [error-field] {
+                            margin: 0 !important;
+                            position: absolute !important;
+                            bottom: 0 !important;
+                            right: 5px !important;
+                            font-size: $h6-font-size;
+                        }
+
+                        .item-inner {
+                            border-bottom: none !important;
+                            box-shadow: none !important;
+                            padding-right: 0 !important;
+                        }
+
+                        ion-label {
+                            margin: 0 5px !important;
+                            color: black;
+                        }
+
+                        ion-textarea {
+                            background: rgba(124, 130, 134, 0.4) !important;
+                            margin: 5px 10px 0px 0px !important;
+                            padding: 5px 10px !important;
+                            border-radius: $border-radius;
+                            z-index: 999;
+
+                            .input-cover {
+                                display: none;
+                            }
+                        }
+
+                        ion-datetime {
+                            background: rgba(124, 130, 134, 0.4) !important;
+                            margin: 5px 10px 0px 10px !important;
+                            padding: 5px 10px !important;
+                            border-radius: $border-radius;
+                            z-index: 999;
+                            height: 38px !important;
+                            padding-top: 9px !important;
+
+                            .input-cover {
+                                display: none;
+                            }
+                        }
+
+                        ion-select {
+                            background: rgba(124, 130, 134, 0.4) !important;
+                            margin: 5px 0px 0px 0px !important;
+                            padding: 10px !important;
+                            border-radius: $border-radius;
+                            z-index: 999;
+
+                            .input-cover {
+                                display: none;
+                            }
+
+                            .select-text {
+                                height: auto;
+                                contain: content;
+                                white-space: normal;
+                            }
+                        }
+                    }
+
+                    [stacked] {
+                        font-size: $text-font-size !important;
+                        color: black !important;
+                        font-weight: bold !important;
+                    }
+
+                    [bottom-form] {
+                        position: relative;
+                        display: inline-block;
+                        padding-top: 50px;
+                        width: 100%;
+
+                        &::after {
+                            content: "or try";
+                            font-size: $h6-font-size;
+                            color: theme-colors('textColors', 'primary');
+                            width: 140px;
+                            border-bottom: 1px solid rgb(127, 138, 130);
+                            position: absolute;
+                            top: 30px;
+                            left: calc(50% - 70px);
+                        }
+                    }
+
+                    [button-icon-clear] {
+                        box-shadow: none !important;
+                    }
+                }
+
+                // Settings Login Title
+                [login-title] {
+                    color: black;
+                }
+
+                [padding-top] {
+                    padding-top: 10px;
+                }
+
+                [radio] {
+                    padding: 0px !important;
+                    border-radius: 10px;
+                }
+            }
+        }
     }
 
 }

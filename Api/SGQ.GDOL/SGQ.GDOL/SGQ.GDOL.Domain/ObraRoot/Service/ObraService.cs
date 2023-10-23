@@ -18,6 +18,11 @@ namespace SGQ.GDOL.Domain.ObraRoot.Service
         public Obra ObterObraComInclude(Obra obra)
         {
             var result = _obraRepository.ObterObraComInclude(obra);
+            int? id = obra.Id;
+            foreach (var area in result.Areas)
+            {
+                area.Servicos = area.Servicos.Where(x => x.IdObra == id).ToList();
+            }
             return result;
         }
 

@@ -16,7 +16,7 @@ export class LoginLayout2 {
     public background: string = '';
     public usuario: string;
     public senha: string;
-    public empresa: string;
+    public empresa;
 
     passwordType: string = 'password';
     salvarSenha: boolean = true;
@@ -41,14 +41,14 @@ export class LoginLayout2 {
             }
             let empresaArmazenada = await this.storage.get('EmpresaSalva');
             if (empresaArmazenada) {
-                this.empresa = empresaArmazenada;
+                this.empresa = { id: 1, title: empresaArmazenada };
             } else {
-                this.empresa = "";
+                this.empresa = null;
             }
         } else {
             this.usuario = "";
             this.senha = "";
-            this.empresa = "";
+            this.empresa = null;
         }
     }
 
@@ -62,7 +62,7 @@ export class LoginLayout2 {
                 this.events[event]({
                     'usuario': this.usuario,
                     'senha': this.senha,
-                    'empresa': this.empresa
+                    'empresa': this.empresa.title
                 });
             }
         } else {

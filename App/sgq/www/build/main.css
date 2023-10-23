@@ -497,8 +497,8 @@ Copyright (c) 2015 Daniel Eden
     transform: skewX(-0.78125deg) skewY(-0.78125deg);
   }
   77.7% {
-    -webkit-transform: skewX(0.39062deg) skewY(0.39062deg);
-    transform: skewX(0.39062deg) skewY(0.39062deg);
+    -webkit-transform: skewX(0.39063deg) skewY(0.39063deg);
+    transform: skewX(0.39063deg) skewY(0.39063deg);
   }
   88.8% {
     -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg);
@@ -534,8 +534,8 @@ Copyright (c) 2015 Daniel Eden
     transform: skewX(-0.78125deg) skewY(-0.78125deg);
   }
   77.7% {
-    -webkit-transform: skewX(0.39062deg) skewY(0.39062deg);
-    transform: skewX(0.39062deg) skewY(0.39062deg);
+    -webkit-transform: skewX(0.39063deg) skewY(0.39063deg);
+    transform: skewX(0.39063deg) skewY(0.39063deg);
   }
   88.8% {
     -webkit-transform: skewX(-0.19531deg) skewY(-0.19531deg);
@@ -3806,6 +3806,10 @@ ion-reorder .ion-ios-reorder {
   padding: 15px 0px 10px 5px !important;
 }
 
+.laranja {
+  background-color: orange !important;
+}
+
 .platform-ios .pad-nav-page-nt {
   padding: 20px 0px 10px 0px !important;
 }
@@ -3816,6 +3820,10 @@ ion-reorder .ion-ios-reorder {
 
 .platform-ios .ptb-0 {
   padding: 0px !important;
+}
+
+.orange {
+  background-color: orange !important;
 }
 
 .loading-content p {
@@ -14101,10 +14109,6 @@ textarea {
 }
 
 textarea::-webkit-input-placeholder {
-  padding-left: 2px;
-}
-
-textarea::-moz-placeholder {
   padding-left: 2px;
 }
 
@@ -31224,20 +31228,8 @@ ion-navbar.toolbar {
   pointer-events: none;
 }
 
-.ionic-selectable-icon-template {
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
-  margin-left: 5px;
-}
-
 .ionic-selectable-item-button {
   width: 25px;
-}
-
-.ionic-selectable-item-icon-template[item-left] {
-  /*Correct item icon template position.*/
-  margin: 0 0 0 1px;
 }
 
 .ionic-selectable-ios.ionic-selectable-has-placeholder .ionic-selectable-value-item {
@@ -31294,31 +31286,31 @@ ion-navbar.toolbar {
   background-color: #ffffff;
 }
 
-.ionic-selectable-modal-ios .ionic-selectable-message {
+.ionic-selectable-page-ios .ionic-selectable-message {
   padding: 8px;
 }
 
-.ionic-selectable-modal-md .ionic-selectable-message {
+.ionic-selectable-page-md .ionic-selectable-message {
   padding: 8px 12px;
 }
 
-.ionic-selectable-modal.ionic-selectable-modal-can-clear.ionic-selectable-modal-is-multiple .footer .col:first-child {
+.ionic-selectable-page.ionic-selectable-page-can-clear.ionic-selectable-page-is-multiple .footer .col:first-child {
   padding-right: 8px;
 }
 
-.ionic-selectable-modal.ionic-selectable-modal-can-clear.ionic-selectable-modal-is-multiple .footer .col:last-child {
+.ionic-selectable-page.ionic-selectable-page-can-clear.ionic-selectable-page-is-multiple .footer .col:last-child {
   padding-left: 8px;
 }
 
-.ionic-selectable-modal.ionic-selectable-modal-is-searching .scroll-content {
+.ionic-selectable-page.ionic-selectable-page-is-searching .scroll-content {
   overflow-y: hidden;
 }
 
-.ionic-selectable-modal.ionic-selectable-modal-is-add-item-template-visible > .content > .scroll-content {
+.ionic-selectable-page.ionic-selectable-page-is-add-item-template-visible > .content > .scroll-content {
   overflow-y: hidden;
 }
 
-.ionic-selectable-modal ion-footer ion-toolbar {
+.ionic-selectable-page ion-footer ion-toolbar {
   padding: 5px 16px;
 }
 
@@ -31929,6 +31921,14 @@ appearance-animation-layout-4 .fade-in-item {
 ================================================*/
 appearance-animation-layout-5 ion-label {
   margin: 5px 0px !important;
+}
+
+appearance-animation-layout-5 .laranja {
+  background-color: orange !important;
+}
+
+appearance-animation-layout-5 .orange {
+  background-color: orange !important;
 }
 
 appearance-animation-layout-5 .margin-top-10 {
@@ -32720,6 +32720,15 @@ login-layout-1 .scroll-content ion-grid ion-row [register-title] {
 
 /*  #Style Login + logo 2
 ================================================*/
+login-layout-2 ionic-selectable {
+  background: rgba(124, 130, 134, 0.6) !important;
+  margin: 5px 0px 0px 0px !important;
+  padding: 10px !important;
+  border-radius: 4px;
+  z-index: 999;
+  color: white;
+}
+
 login-layout-2 [background-size] {
   background-position: right !important;
 }
@@ -35025,6 +35034,12 @@ page-ocorrencia [radio] {
   border-radius: 10px;
 }
 
+page-manter-ocorrencia .fullHeight {
+  height: auto;
+  contain: content;
+  white-space: normal;
+}
+
 page-manter-ocorrencia .button-nav {
   height: 30px !important;
   background: none !important;
@@ -35036,6 +35051,14 @@ page-manter-ocorrencia .button-nav {
 
 page-manter-ocorrencia [background-size] {
   background-position: right !important;
+}
+
+page-manter-ocorrencia .novo-item {
+  border: 4px solid navy !important;
+}
+
+page-manter-ocorrencia .item-removido {
+  border: 4px solid red !important;
 }
 
 page-manter-ocorrencia .scroll-content {
@@ -35062,19 +35085,19 @@ page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item {
 }
 
 page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item.item-input-has-value ion-textarea {
-  background: rgba(33, 177, 75, 0.6) !important;
+  background: rgba(124, 130, 134, 0.6) !important;
 }
 
 page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item.item-input-has-value ion-select {
-  background: rgba(33, 177, 75, 0.6) !important;
+  background: rgba(124, 130, 134, 0.6) !important;
 }
 
 page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item.item-input-has-focus ion-textarea {
-  background: rgba(33, 177, 75, 0.6) !important;
+  background: rgba(124, 130, 134, 0.6) !important;
 }
 
 page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item.item-input-has-focus ion-select {
-  background: rgba(33, 177, 75, 0.6) !important;
+  background: rgba(124, 130, 134, 0.6) !important;
 }
 
 page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item [error-field] {
@@ -35098,7 +35121,7 @@ page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item ion-label 
 }
 
 page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item ion-textarea {
-  background: rgba(33, 177, 75, 0.4) !important;
+  background: rgba(124, 130, 134, 0.4) !important;
   margin: 5px 10px 0px 0px !important;
   padding: 5px 10px !important;
   border-radius: 4px;
@@ -35110,7 +35133,7 @@ page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item ion-textar
 }
 
 page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item ion-datetime {
-  background: rgba(33, 177, 75, 0.4) !important;
+  background: rgba(124, 130, 134, 0.4) !important;
   margin: 5px 10px 0px 10px !important;
   padding: 5px 10px !important;
   border-radius: 4px;
@@ -35124,7 +35147,7 @@ page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item ion-dateti
 }
 
 page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item ion-select {
-  background: rgba(33, 177, 75, 0.4) !important;
+  background: rgba(124, 130, 134, 0.4) !important;
   margin: 5px 0px 0px 0px !important;
   padding: 10px !important;
   border-radius: 4px;
@@ -35135,9 +35158,16 @@ page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item ion-select
   display: none;
 }
 
+page-manter-ocorrencia .scroll-content ion-grid ion-row form ion-item ion-select .select-text {
+  height: auto;
+  contain: content;
+  white-space: normal;
+}
+
 page-manter-ocorrencia .scroll-content ion-grid ion-row form [stacked] {
   font-size: 14px !important;
   color: black !important;
+  font-weight: bold !important;
 }
 
 page-manter-ocorrencia .scroll-content ion-grid ion-row form [bottom-form] {
@@ -35152,7 +35182,7 @@ page-manter-ocorrencia .scroll-content ion-grid ion-row form [bottom-form]::afte
   font-size: 12px;
   color: #f1f1f1;
   width: 140px;
-  border-bottom: 1px solid #21b14b;
+  border-bottom: 1px solid #7f8a82;
   position: absolute;
   top: 30px;
   left: calc(50% - 70px);

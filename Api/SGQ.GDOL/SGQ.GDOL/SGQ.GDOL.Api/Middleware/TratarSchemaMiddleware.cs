@@ -60,6 +60,30 @@ namespace SGQ.GDOL.Api.Middleware
             {
                 CredenciaisBanco.Schema = "BPOSSAS_RIOMANSO";
             }
+            if (CredenciaisBanco.Schema.Equals("BPOSSAS_MUDE CONSTRUTORA"))
+            {
+                CredenciaisBanco.Schema = "BPOSSAS_MUDECONSTRUTORA";
+            }
+            if (CredenciaisBanco.Schema.Equals("BPOSSAS_GG CONSTRUTORA"))
+            {
+                CredenciaisBanco.Schema = "BPOSSAS_GGCONSTRUTORA";
+            }
+            if (CredenciaisBanco.Schema.Equals("BPOSSAS_VASCONCELOS COPARI"))
+            {
+                CredenciaisBanco.Schema = "BPOSSAS_VASCONCELOSCOPARI";
+            }
+            if (CredenciaisBanco.Schema.Equals("BPOSSAS_METRO A MAIS"))
+            {
+                CredenciaisBanco.Schema = "BPOSSAS_METROAMAIS";
+            }
+            if (CredenciaisBanco.Schema.Equals("BPOSSAS_SMART CONSTRUTORA"))
+            {
+                CredenciaisBanco.Schema = "BPOSSAS_SMARTCONSTRUTORA";
+            }
+            if (CredenciaisBanco.Schema.Equals("BPOSSAS_SMART HOUSE"))
+            {
+                CredenciaisBanco.Schema = "BPOSSAS_SMART";
+            }
             if (CredenciaisBanco.Schema.Equals("BPOSSAS_GDOL") || CredenciaisBanco.Schema.Equals("BPOSSAS_BPOSSAS_CONTROLE_CLIENTES"))
             {
                 CredenciaisBanco.Schema = "BPOSSAS_GDOLSISTEMAS";

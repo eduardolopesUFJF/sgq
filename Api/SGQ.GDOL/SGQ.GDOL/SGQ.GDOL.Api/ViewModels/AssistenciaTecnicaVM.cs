@@ -7,7 +7,7 @@ namespace SGQ.GDOL.Api.ViewModels
     {
         public int Id { get; set; }
         public string IdGuid { get; set; }
-        public int? IdCategoriaAssistencia { get; set; }
+        public int[] IdCategoriaAssistencia { get; set; }
         public string DescricaoCategoriaAssistencia { get; set; }
         public int? IdClienteConstrutora { get; set; }
         public bool ClienteCadastrado { get; set; }
@@ -26,7 +26,7 @@ namespace SGQ.GDOL.Api.ViewModels
         public int Procedente { get; set; }
         public string AcaoCorretiva { get; set; }
         public int Resolvido { get; set; }
-        public string Observacao { get; set; }
+        public string Observacoes { get; set; }
         public decimal? Custo { get; set; }
         public int Prioridade { get; set; }
         public bool Delete { get; set; }

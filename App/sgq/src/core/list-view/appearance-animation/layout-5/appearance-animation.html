@@ -50,7 +50,7 @@
             <ion-row>
                 <ion-col col-12>
                     <ion-list no-margin *ngIf="animacaoAtiva">
-                        <ion-item default-item no-lines [ngClass]="{'novo-item': verificaNovoItem(item) && !config.alteracoes, 'zoom-in': true}"
+                        <ion-item default-item no-lines [ngClass]="{'novo-item': verificaNovoItem(item) && !config.alteracoes, 'zoom-in': true, 'laranja': impar(i)}"
                             *ngFor="let item of animateItems; let i = index;" (click)="onEvent('onItemClick', item, $event)">
                             <ion-row class="espacamento">
                                 <ion-col col-10>
@@ -61,7 +61,7 @@
                                         {{config.alteracoes ? (item.data | date: 'dd/MM/yyyy hh:mm') :
                                         item.situacao }}</h3>
                                 </ion-col>
-                                <ion-col col-2 *ngIf="config.exclusaoPossivel" (click)="onEvent('onIconClick', item, $event)">
+                                <ion-col col-2 *ngIf="config.exclusaoPossivel && permitirExclusao" (click)="onEvent('onIconClick', item, $event)">
                                     <ion-icon icon-small name="{{config.icon}}" item-right style="font-size: 25px !important; margin: 0px"
                                         [ngClass]="{'color-black': !item.delete , 'color-red' : item.delete}"></ion-icon>
                                 </ion-col>
@@ -77,7 +77,7 @@
                     </ion-list>
 
                     <ion-list no-margin *ngIf="!animacaoAtiva">
-                        <ion-item default-item no-lines [ngClass]="{'novo-item': verificaNovoItem(item) && !config.alteracoes}"
+                        <ion-item default-item no-lines [ngClass]="{'novo-item': verificaNovoItem(item) && !config.alteracoes, 'laranja': impar(i)}"
                             *ngFor="let item of data; let i = index;" (click)="onEvent('onItemClick', item, $event)">
                             <ion-row class="espacamento">
                                 <ion-col col-10>
@@ -88,7 +88,7 @@
                                         {{config.alteracoes ? (item.data | date: 'dd/MM/yyyy hh:mm') :
                                         item.situacao}}</h3>
                                 </ion-col>
-                                <ion-col col-2 *ngIf="config.exclusaoPossivel">
+                                <ion-col col-2 *ngIf="config.exclusaoPossivel && permitirExclusao">
                                     <ion-icon icon-small name="{{config.icon}}" item-right (click)="onEvent('onIconClick', item, $event)"
                                         style="font-size: 25px !important; margin: 0px" [ngClass]="{'color-black': !item.delete , 'color-red' : item.delete}"></ion-icon>
                                 </ion-col>

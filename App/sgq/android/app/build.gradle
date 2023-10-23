@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 33
     defaultConfig {
         applicationId "dom.gdolsistemas.sgq"
         minSdkVersion 21
-        targetSdkVersion 31
-        versionCode 90999
-        versionName "9.9.99"
+        targetSdkVersion 33
+        versionCode 100004
+        versionName "10.0.04"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

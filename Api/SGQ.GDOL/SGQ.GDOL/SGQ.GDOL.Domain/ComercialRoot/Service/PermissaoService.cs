@@ -10,10 +10,12 @@ namespace SGQ.GDOL.Domain.ComercialRoot.Service
     public class PermissaoService : IPermissaoService
     {
         private readonly IConfiguracaoClienteRepository _configuracaoClienteRepository;
+        private readonly IPermissaoExclusaoRepository _permissaoExclusaoRepository;
 
-        public PermissaoService(IConfiguracaoClienteRepository configuracaoClienteRepository)
+        public PermissaoService(IConfiguracaoClienteRepository configuracaoClienteRepository, IPermissaoExclusaoRepository permissaoExclusaoRepository)
         {
             _configuracaoClienteRepository = configuracaoClienteRepository;
+            _permissaoExclusaoRepository = permissaoExclusaoRepository;
         }
 
         public List<Permissao> ObterPermissoes(string cliente)
@@ -33,7 +35,8 @@ namespace SGQ.GDOL.Domain.ComercialRoot.Service
 
                 if (configuracao.AcessoServicoTreinamento)
                 {
-                    permissoes.Add(new Permissao { Title = "Treinamentos", Icon = "book", Component = "TreinamentoPage", Color = "green" });
+                    permissoes.Add(new Permissao { Title = "Treinamentos RH", Icon = "book", Component = "TreinamentoPage", Color = "green" });
+                    permissoes.Add(new Permissao { Title = "Treinamentos Terceirizados", Icon = "bookmarks", Component = "TreinamentoTerceiroPage", Color = "orange" });
                 }
                 if (configuracao.AcessoServicoEntregaObras)
                 {
@@ -48,6 +51,12 @@ namespace SGQ.GDOL.Domain.ComercialRoot.Service
             permissoes.Add(new Permissao { Title = "Sair", Icon = "exit", Component = "LoginPage", Color = "red" });
 
             return permissoes;
+        }
+
+        public PermissaoExclusao ObterPermissoesExclusao(string cliente)
+        {
+            var result = _permissaoExclusaoRepository.ObterPermissoesExclusao(cliente);
+            return result;
         }
     }
 }

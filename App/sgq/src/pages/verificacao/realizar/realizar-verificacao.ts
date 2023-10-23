@@ -113,7 +113,8 @@ export class RealizarVerificacaoPage {
     }
 
     atualizarSituacao() {
-        this.inspecao.situacao = this.inspecao.status == 0 ? 'Em aberto' : 'Finalizado';
+        this.inspecao.situacao = this.inspecao.status == 0 ? 'Verificação não iniciada' : 
+        (this.inspecao.status == 1 ? 'Encerrada' : (this.inspecao.status == 2 ? 'Aprovada' : 'Verificação iniciada'));
     }
 
     salvar(valido: boolean) {
@@ -121,7 +122,11 @@ export class RealizarVerificacaoPage {
             this.inspecao.dataInspecao = this.dataAbertura ? this.dataAbertura : null;
             this.inspecao.dataEncerramento = this.dataEncerramento ? new Date(this.dataEncerramento + "T12:00:00") : null;
             this.inspecao.usuarioEdicao = localStorage.getItem('Usuario');
-            if (this.inspecao.status == 0) {
+            if (this.inspecao.status != 1) {
+                if (this.inspecao.status == 0 && this.inspecao.inspecaoObraItens.some(x => x.inspecao1 != "")) {
+                    this.inspecao.status = 3;
+                    this.inspecao.situacao = 'Verificação iniciada';
+                }
                 this.viewCtrl.dismiss({ inspecao: this.inspecao, concluido: true });
             } else {
                 const naoFinalizado = this.inspecao.inspecaoObraItens.some(x => x.inspecao1 == "" || (x.inspecao1 == "R" && x.inspecao2 == ""));

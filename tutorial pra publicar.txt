@@ -13,3 +13,16 @@ SENHA DA CHAVE: Dudu1234*
 
 tutorial completasso: https://www.youtube.com/watch?v=GjOt_GY-7AY
 
+olhar link no favorito de como que instala o vnm
+nvm install Node 12.4
+deletar node modules inteira
+npm install
+Deletar pasta @node-sas na node module
+ionic build
+Deletar pasta ios
+npx cap add ios
+pegar .workspace e .project e pasta app e substituir dentro da pasta ios que foi criada
+rodar pod install dentro de ios->app->pod install
+
+Se der erro: switch must be exhaustive
+adicionar o código solicitado no arquivo que der erro

@@ -99,7 +99,8 @@ namespace SGQ.GDOL.Api.AutoMapper
                 .ForMember(x => x.Servicos, opt => opt.MapFrom(x => x.Servicos.Where(y => y.Delete.HasValue && !y.Delete.Value)));
 
             CreateMap<InspecaoObra, InspecaoObraVM>()
-                .ForMember(x => x.Situacao, opt => opt.MapFrom(x => x.Status == 1 ? "Finalizado" : "Em aberto"))
+                .ForMember(x => x.Situacao, opt => opt.MapFrom(x => x.Status == 0 ? "Verificação não iniciada" :
+                                                                   (x.Status == 1 ? "Encerrada" : (x.Status == 2 ? "Aprovada" : "Verificação iniciada"))))
                 .ForMember(x => x.InspecaoObraItens, opt => opt.MapFrom(x => x.InspecaoObraItens.Where(y => !y.Delete).OrderBy(y => y.Ordem)))
                 .ForMember(x => x.RealizadosPor, opt => opt.MapFrom(x => x.RealizadosPor.Where(y => y.Delete.HasValue && !y.Delete.Value)))
                 .ForMember(x => x.FuncionarioAprovado, opt => opt.MapFrom(x => x.FuncionarioAprovadoObj.Nome))
@@ -149,7 +150,8 @@ namespace SGQ.GDOL.Api.AutoMapper
 
             CreateMap<AssistenciaTecnica, AssistenciaTecnicaVM>()
                .ForMember(x => x.PesquisasSatisfacaoCliente, opt => opt.MapFrom(x => x.PesquisasSatisfacaoCliente.Where(y => y.Delete.HasValue && !y.Delete.Value)))
-               .ForMember(x => x.DescricaoCategoriaAssistencia, opt => opt.MapFrom(x => x.CategoriaAssistencia.Nome))
+               .ForMember(x => x.IdCategoriaAssistencia, opt => opt.MapFrom(x => x.AssistenciaTecnicaCategorias.Select(z => z.IdCategoriaAssistencia)))
+               .ForMember(x => x.DescricaoCategoriaAssistencia, opt => opt.MapFrom(x => string.Join(", ", x.AssistenciaTecnicaCategorias.Select(z => z.CategoriaAssistencia.Nome))))
                .ForMember(x => x.Unidade, opt => opt.MapFrom(x =>
                                                         x.CentroCusto.ClienteCentrosCustos.Any(y => y.IdCliente == x.IdClienteConstrutora) ?
                                                         x.CentroCusto.ClienteCentrosCustos.Where(y => y.IdCliente == x.IdClienteConstrutora).FirstOrDefault().Unidade
