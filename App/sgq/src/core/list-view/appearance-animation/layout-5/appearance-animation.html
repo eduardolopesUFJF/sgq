@@ -77,7 +77,7 @@
                     </ion-list>
 
                     <ion-list no-margin *ngIf="!animacaoAtiva">
-                        <ion-item default-item no-lines [ngClass]="{'novo-item': verificaNovoItem(item) && !config.alteracoes}"
+                        <ion-item default-item no-lines [ngClass]="{'novo-item': verificaNovoItem(item) && !config.alteracoes, 'laranja': impar(i)}"
                             *ngFor="let item of data; let i = index;" (click)="onEvent('onItemClick', item, $event)">
                             <ion-row class="espacamento">
                                 <ion-col col-10>

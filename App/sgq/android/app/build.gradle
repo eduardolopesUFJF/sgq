@@ -6,8 +6,8 @@ android {
         applicationId "dom.gdolsistemas.sgq"
         minSdkVersion 21
         targetSdkVersion 33
-        versionCode 100001
-        versionName "10.0.01"
+        versionCode 100004
+        versionName "10.0.04"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

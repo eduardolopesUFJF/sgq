@@ -110,4 +110,8 @@ export class AppearanceAnimationLayout5 implements OnChanges {
             });
         }
     }
+
+    impar(indice: number) {
+        return indice % 2 != 0;
+    }
 }

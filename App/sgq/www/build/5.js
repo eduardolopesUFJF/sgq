@@ -116,7 +116,7 @@ var Inspecao = /** @class */ (function () {
         this.campo3 = "";
         this.campo4 = "";
         this.status = 0;
-        this.situacao = 'Em aberto';
+        this.situacao = 'Verificação não iniciada';
         this.delete = false;
         this.dataHoraAlteracao = new Date();
         this.usuarioInclusao = "";
@@ -325,18 +325,15 @@ var VerificacaoPage = /** @class */ (function () {
         var _this = this;
         setTimeout(function () {
             if (_this.servico.status == 0) {
-                _this.servico.situacao = 'Em aberto';
+                _this.servico.situacao = 'Verificação não iniciada';
                 _this.criarAtualizacaoStatus();
             }
+            else if (_this.servico.status == 1 && _this.servico.inspecoesObra.some(function (x) { return x.status == 0; })) {
+                _this.servico.status = 0;
+                _this.messageService.exibirMensagem("Não foi possível finalizar o Serviço, existem inspeções em aberto.");
+            }
             else {
-                if (_this.servico.inspecoesObra.some(function (x) { return x.status == 0; })) {
-                    _this.servico.status = 0;
-                    _this.messageService.exibirMensagem("Não foi possível finalizar o Serviço, existem inspeções em aberto.");
-                }
-                else {
-                    _this.servico.situacao = 'Finalizado';
-                    _this.criarAtualizacaoStatus();
-                }
+                _this.criarAtualizacaoStatus();
             }
         }, 100);
     };

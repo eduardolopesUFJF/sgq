@@ -123,6 +123,10 @@ export class RealizarVerificacaoPage {
             this.inspecao.dataEncerramento = this.dataEncerramento ? new Date(this.dataEncerramento + "T12:00:00") : null;
             this.inspecao.usuarioEdicao = localStorage.getItem('Usuario');
             if (this.inspecao.status != 1) {
+                if (this.inspecao.status == 0 && this.inspecao.inspecaoObraItens.some(x => x.inspecao1 != "")) {
+                    this.inspecao.status = 3;
+                    this.inspecao.situacao = 'Verificação iniciada';
+                }
                 this.viewCtrl.dismiss({ inspecao: this.inspecao, concluido: true });
             } else {
                 const naoFinalizado = this.inspecao.inspecaoObraItens.some(x => x.inspecao1 == "" || (x.inspecao1 == "R" && x.inspecao2 == ""));

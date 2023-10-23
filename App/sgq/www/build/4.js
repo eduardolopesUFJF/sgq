@@ -1,6 +1,6 @@
 webpackJsonp([4],{
 
-/***/ 776:
+/***/ 775:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RealizadoPorPageModule", function() { return RealizadoPorPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__realizado_por__ = __webpack_require__(914);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__realizado_por__ = __webpack_require__(913);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_selectable__ = __webpack_require__(352);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -119,7 +119,7 @@ var Inspecao = /** @class */ (function () {
         this.campo3 = "";
         this.campo4 = "";
         this.status = 0;
-        this.situacao = 'Em aberto';
+        this.situacao = 'Verificação não iniciada';
         this.delete = false;
         this.dataHoraAlteracao = new Date();
         this.usuarioInclusao = "";
@@ -175,7 +175,7 @@ var Servico = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 914:
+/***/ 913:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -184,12 +184,12 @@ var Servico = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_inspecao__ = __webpack_require__(799);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_realizado_por__ = __webpack_require__(915);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_realizado_por__ = __webpack_require__(914);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_storage_service_utils__ = __webpack_require__(156);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__models_servico__ = __webpack_require__(800);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__models_fornecedor__ = __webpack_require__(916);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__models_fornecedor__ = __webpack_require__(915);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utils_toast_service__ = __webpack_require__(350);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__models_realizado_por_funcionario__ = __webpack_require__(917);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__models_realizado_por_funcionario__ = __webpack_require__(916);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_angular2_uuid__ = __webpack_require__(781);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_angular2_uuid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_angular2_uuid__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__models_alteracao__ = __webpack_require__(786);
@@ -439,7 +439,7 @@ var RealizadoPorPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 915:
+/***/ 914:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -461,7 +461,7 @@ var RealizadoPor = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 916:
+/***/ 915:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -479,7 +479,7 @@ var Fornecedor = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 917:
+/***/ 916:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
