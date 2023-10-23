@@ -1,6 +1,6 @@
 webpackJsonp([50],{
 
-/***/ 741:
+/***/ 742:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SearchBarLayout3Module", function() { return SearchBarLayout3Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__search_bar_layout_3__ = __webpack_require__(845);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__search_bar_layout_3__ = __webpack_require__(846);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -42,7 +42,7 @@ var SearchBarLayout3Module = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 845:
+/***/ 846:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -93,7 +93,7 @@ var SearchBarLayout3 = /** @class */ (function () {
     ], SearchBarLayout3.prototype, "events", void 0);
     SearchBarLayout3 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'search-bar-layout-3',template:/*ion-inline-start:"/Users/user227439/Desktop/sgq/App/sgq/src/core/search-bar/layout-3/search-bar.html"*/'<!-- Theme Search Field + Header 2 -->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n    <ion-title *ngIf="data != null">{{data.headerTitle}}</ion-title>\n  </ion-navbar>\n  <ion-toolbar no-padding transparent>\n    <div background-size *ngIf="data != null" [ngStyle]="{\'background-image\': \'url(\' + data.headerImage + \')\'}">\n      <div search-bar-bcg>\n        <!-- Header Title -->\n        <h1 ion-text no-margin search-bar-title>{{data.title}}</h1>\n        <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="onEvent(\'onTextChange\', $event)"></ion-searchbar>\n      </div>\n    </div>\n  </ion-toolbar>\n</ion-header>\n<!--Content -->\n<ion-content>\n  <ion-grid no-padding>\n    <ion-row>\n      <!-- List Search-->\n      <ion-col col-12 *ngIf="data != null">\n        <!-- Content List -->\n        <ion-list no-margin>\n          <ion-item default-item no-lines *ngFor="let item of data.items;" (click)="onEvent(\'onItemClick\', item)">\n            <ion-thumbnail item-start>\n              <img [src]="item.avatar">\n            </ion-thumbnail>\n            <!--Title -->\n            <h2 ion-text item-title>{{item.title}}</h2>\n            <!--Subtitle -->\n            <p ion-text item-subtitle>{{item.subtitle}}</p>\n            <span span-medium>\n              {{item.detail}}\n            </span>\n          </ion-item>\n        </ion-list>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/Users/user227439/Desktop/sgq/App/sgq/src/core/search-bar/layout-3/search-bar.html"*/
+            selector: 'search-bar-layout-3',template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/core/search-bar/layout-3/search-bar.html"*/'<!-- Theme Search Field + Header 2 -->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n        <ion-icon name="menu"></ion-icon>\n      </button>\n    <ion-title *ngIf="data != null">{{data.headerTitle}}</ion-title>\n  </ion-navbar>\n  <ion-toolbar no-padding transparent>\n    <div background-size *ngIf="data != null" [ngStyle]="{\'background-image\': \'url(\' + data.headerImage + \')\'}">\n      <div search-bar-bcg>\n        <!-- Header Title -->\n        <h1 ion-text no-margin search-bar-title>{{data.title}}</h1>\n        <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="onEvent(\'onTextChange\', $event)"></ion-searchbar>\n      </div>\n    </div>\n  </ion-toolbar>\n</ion-header>\n<!--Content -->\n<ion-content>\n  <ion-grid no-padding>\n    <ion-row>\n      <!-- List Search-->\n      <ion-col col-12 *ngIf="data != null">\n        <!-- Content List -->\n        <ion-list no-margin>\n          <ion-item default-item no-lines *ngFor="let item of data.items;" (click)="onEvent(\'onItemClick\', item)">\n            <ion-thumbnail item-start>\n              <img [src]="item.avatar">\n            </ion-thumbnail>\n            <!--Title -->\n            <h2 ion-text item-title>{{item.title}}</h2>\n            <!--Subtitle -->\n            <p ion-text item-subtitle>{{item.subtitle}}</p>\n            <span span-medium>\n              {{item.detail}}\n            </span>\n          </ion-item>\n        </ion-list>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/core/search-bar/layout-3/search-bar.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], SearchBarLayout3);

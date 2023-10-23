@@ -1,6 +1,6 @@
 webpackJsonp([66],{
 
-/***/ 715:
+/***/ 716:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GoogleCardLayout3Module", function() { return GoogleCardLayout3Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__google_card_layout_3__ = __webpack_require__(819);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__google_card_layout_3__ = __webpack_require__(820);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -42,7 +42,7 @@ var GoogleCardLayout3Module = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 819:
+/***/ 820:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -109,7 +109,7 @@ var GoogleCardLayout3 = /** @class */ (function () {
     ], GoogleCardLayout3.prototype, "content", void 0);
     GoogleCardLayout3 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'google-card-layout-3',template:/*ion-inline-start:"/Users/user227439/Desktop/sgq/App/sgq/src/core/list-view/google-card/layout-3/google-card.html"*/'<!--Theme Google Card - Styled cards-->\n<ion-content>\n  <ion-grid no-padding>\n    <ion-row *ngIf="data != null">\n      <ion-col col-12 col-md-6 col-lg-6 col-xl-4 *ngFor="let item of data.items;let i = index">\n        <!--Header Styled cards-->\n        <ion-item padding-top no-lines transparent>\n          <!-- Card Title -->\n          <h2 card-title>{{item.title}}</h2>\n          <!-- Card Subtitle -->\n          <h3 card-subtitle>{{item.subtitle}}</h3>\n          <!-- Card Badge -->\n          <ion-badge box-shadow item-end badge-light>{{item.button}}</ion-badge>\n        </ion-item>\n        <!-- End Header Styled Cards-->\n        <!-- Card Background -->\n        <ion-card box-shadow (click)="onEvent(\'onItemClick\', item.subtitle, $event)">\n          <img [src]="item.image" />\n          <span new-category transparent no-padding text-uppercase>{{item.category}}</span>\n        </ion-card>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/Users/user227439/Desktop/sgq/App/sgq/src/core/list-view/google-card/layout-3/google-card.html"*/
+            selector: 'google-card-layout-3',template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/core/list-view/google-card/layout-3/google-card.html"*/'<!--Theme Google Card - Styled cards-->\n<ion-content>\n  <ion-grid no-padding>\n    <ion-row *ngIf="data != null">\n      <ion-col col-12 col-md-6 col-lg-6 col-xl-4 *ngFor="let item of data.items;let i = index">\n        <!--Header Styled cards-->\n        <ion-item padding-top no-lines transparent>\n          <!-- Card Title -->\n          <h2 card-title>{{item.title}}</h2>\n          <!-- Card Subtitle -->\n          <h3 card-subtitle>{{item.subtitle}}</h3>\n          <!-- Card Badge -->\n          <ion-badge box-shadow item-end badge-light>{{item.button}}</ion-badge>\n        </ion-item>\n        <!-- End Header Styled Cards-->\n        <!-- Card Background -->\n        <ion-card box-shadow (click)="onEvent(\'onItemClick\', item.subtitle, $event)">\n          <img [src]="item.image" />\n          <span new-category transparent no-padding text-uppercase>{{item.category}}</span>\n        </ion-card>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/core/list-view/google-card/layout-3/google-card.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], GoogleCardLayout3);

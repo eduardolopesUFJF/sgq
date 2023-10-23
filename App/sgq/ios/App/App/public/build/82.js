@@ -103,7 +103,7 @@ var FullScreenGallery = /** @class */ (function () {
     ], FullScreenGallery.prototype, "slider", void 0);
     FullScreenGallery = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'full-screen-gallery',template:/*ion-inline-start:"/Users/user227439/Desktop/sgq/App/sgq/src/core/full-screen-gallery/full-screen-gallery.html"*/'<!--Screen Gallery-->\n<ion-slides #slider pager="true" zoom="true" [initialSlide]="data.index">\n    <ion-slide *ngFor="let item of data.items;">\n        <img [src]="item.image" />\n    </ion-slide>\n</ion-slides>'/*ion-inline-end:"/Users/user227439/Desktop/sgq/App/sgq/src/core/full-screen-gallery/full-screen-gallery.html"*/
+            selector: 'full-screen-gallery',template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/core/full-screen-gallery/full-screen-gallery.html"*/'<!--Screen Gallery-->\n<ion-slides #slider pager="true" zoom="true" [initialSlide]="data.index">\n    <ion-slide *ngFor="let item of data.items;">\n        <img [src]="item.image" />\n    </ion-slide>\n</ion-slides>'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/core/full-screen-gallery/full-screen-gallery.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */]])
     ], FullScreenGallery);

@@ -1,6 +1,6 @@
 webpackJsonp([5],{
 
-/***/ 716:
+/***/ 717:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StickyListHeaderLayout1Module", function() { return StickyListHeaderLayout1Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sticky_list_header_layout_1__ = __webpack_require__(820);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sticky_list_header_layout_1__ = __webpack_require__(821);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ion_affix__ = __webpack_require__(787);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -206,32 +206,13 @@ var IonAffix = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Inspecao; });
-var Inspecao = /** @class */ (function () {
-    function Inspecao(values) {
-        if (values === void 0) { values = {}; }
-        this.id = 0;
-        this.idGuidInspecao = '';
-        this.idGuidServico = '';
-        this.campo1 = "";
-        this.campo2 = "";
-        this.campo3 = "";
-        this.campo4 = "";
-        this.status = 0;
-        this.situacao = 'Em aberto';
-        this.delete = false;
-        this.dataHoraAlteracao = new Date();
-        this.usuarioInclusao = "";
-        this.usuarioEdicao = "";
-        this.qtdNA = 0;
-        this.qtdA = 0;
-        this.qtdR = 0;
-        this.qtdRA = 0;
-        this.qtdX = 0;
-        this.inspecaoObraItens = [];
-        this.ocorrencias = [];
-        this.realizadosPor = [];
-        Object.assign(this, values);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IonAffixModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__directives_ion_affix__ = __webpack_require__(786);
+
+
+var IonAffixModule = (function () {
+    function IonAffixModule() {
     }
     IonAffixModule.decorators = [
         { type: __WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"], args: [{
@@ -380,7 +361,7 @@ ScrollAdapter = (function () {
 
 /***/ }),
 
-/***/ 820:
+/***/ 821:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -427,7 +408,7 @@ var StickyListHeaderLayout1 = /** @class */ (function () {
     ], StickyListHeaderLayout1.prototype, "content", void 0);
     StickyListHeaderLayout1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'sticky-list-header-layout-1',template:/*ion-inline-start:"/Users/user227439/Desktop/sgq/App/sgq/src/core/list-view/sticky-list-header/layout-1/sticky-list-header.html"*/'<!-- Theme Sticky List Header - Basic -->\n<ion-content>\n  <div *ngIf="data != null">\n    <ion-list no-margin *ngFor="let item of data.items">\n      <!-- Header Top -->\n      <ion-item-divider text-capitalize no-margin no-lines header-title ion-affix [content]="content">{{item.groupName}}\n      </ion-item-divider>\n      <ion-item default-item *ngFor="let element of item.items" no-lines (click)="onEvent(\'onItemClick\', element.title, $event)">\n        <!-- Avatar -->\n        <ion-thumbnail item-start>\n          <img [src]="element.image" [alt]="element.title" />\n        </ion-thumbnail>\n        <!-- Title -->\n        <h2 item-title text-capitalize>{{element.title}}</h2>\n        <!-- Subtitle -->\n        <p item-subtitle>{{element.subtitle}}</p>\n        <!-- Badge -->\n        <ion-badge item-end box-shadow (click)="onEvent(\'onProceed\', element.price, $event)" badge-light>{{element.price}}</ion-badge>\n      </ion-item>\n    </ion-list>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/user227439/Desktop/sgq/App/sgq/src/core/list-view/sticky-list-header/layout-1/sticky-list-header.html"*/
+            selector: 'sticky-list-header-layout-1',template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/core/list-view/sticky-list-header/layout-1/sticky-list-header.html"*/'<!-- Theme Sticky List Header - Basic -->\n<ion-content>\n  <div *ngIf="data != null">\n    <ion-list no-margin *ngFor="let item of data.items">\n      <!-- Header Top -->\n      <ion-item-divider text-capitalize no-margin no-lines header-title ion-affix [content]="content">{{item.groupName}}\n      </ion-item-divider>\n      <ion-item default-item *ngFor="let element of item.items" no-lines (click)="onEvent(\'onItemClick\', element.title, $event)">\n        <!-- Avatar -->\n        <ion-thumbnail item-start>\n          <img [src]="element.image" [alt]="element.title" />\n        </ion-thumbnail>\n        <!-- Title -->\n        <h2 item-title text-capitalize>{{element.title}}</h2>\n        <!-- Subtitle -->\n        <p item-subtitle>{{element.subtitle}}</p>\n        <!-- Badge -->\n        <ion-badge item-end box-shadow (click)="onEvent(\'onProceed\', element.price, $event)" badge-light>{{element.price}}</ion-badge>\n      </ion-item>\n    </ion-list>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/core/list-view/sticky-list-header/layout-1/sticky-list-header.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], StickyListHeaderLayout1);

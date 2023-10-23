@@ -1,6 +1,6 @@
 webpackJsonp([4],{
 
-/***/ 717:
+/***/ 718:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StickyListHeaderLayout2Module", function() { return StickyListHeaderLayout2Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sticky_list_header_layout_2__ = __webpack_require__(821);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sticky_list_header_layout_2__ = __webpack_require__(822);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ion_affix__ = __webpack_require__(787);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -361,7 +361,7 @@ ScrollAdapter = (function () {
 
 /***/ }),
 
-/***/ 821:
+/***/ 822:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -408,7 +408,7 @@ var StickyListHeaderLayout2 = /** @class */ (function () {
     ], StickyListHeaderLayout2.prototype, "content", void 0);
     StickyListHeaderLayout2 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'sticky-list-header-layout-2',template:/*ion-inline-start:"/Users/user227439/Desktop/sgq/App/sgq/src/core/list-view/sticky-list-header/layout-2/sticky-list-header.html"*/'<!-- Theme Sticky List Header - Product -->\n<ion-content no-padding>\n  <div *ngIf="data != null">\n    <ion-list *ngFor="let item of data.items">\n      <!--Text Header Top-->\n      <ion-list-header no-lines header-title text-capitalize ion-affix [content]="content">\n        {{item.groupName}}\n      </ion-list-header>\n      <ion-card *ngFor="let element of item.items">\n        <h2 card-title item-start text-wrap>{{element.title}}</h2>\n        <!--Big Card -->\n        <div images-gallery>\n          <div big-image>\n            <img [src]="element.image1" [alt]="element.title" />\n          </div>\n          <!--Gallery Card -->\n          <div list-images (click)="onEvent(\'onItemClick\', element.title, $event)">\n            <div images background-size [ngStyle]="{\'background-image\': \'url(\' + element.image2 + \')\'}" [title]="element.title"></div>\n            <div images background-size [ngStyle]="{\'background-image\': \'url(\' + element.image3 + \')\'}" [title]="element.title"></div>\n            <div images background-size [ngStyle]="{\'background-image\': \'url(\' + element.image4 + \')\'}" [title]="element.title"></div>\n          </div>\n        </div>\n\n        <!-- Card Content -->\n        <ion-card-content>\n          <ion-item no-padding no-lines transparent>\n            <span padding-left span-large>{{element.price}}</span>\n            <span new-category no-padding transparent text-uppercase text-wrap>{{element.subtitle}}</span>\n            <div margin-right button-block item-content>\n              <button box-shadow full ion-button default-button (click)="onEvent(\'onBuy\', \'Buy\', $event)">{{element.buy}}</button>\n            </div>\n          </ion-item>\n        </ion-card-content>\n      </ion-card>\n    </ion-list>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/user227439/Desktop/sgq/App/sgq/src/core/list-view/sticky-list-header/layout-2/sticky-list-header.html"*/
+            selector: 'sticky-list-header-layout-2',template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/core/list-view/sticky-list-header/layout-2/sticky-list-header.html"*/'<!-- Theme Sticky List Header - Product -->\n<ion-content no-padding>\n  <div *ngIf="data != null">\n    <ion-list *ngFor="let item of data.items">\n      <!--Text Header Top-->\n      <ion-list-header no-lines header-title text-capitalize ion-affix [content]="content">\n        {{item.groupName}}\n      </ion-list-header>\n      <ion-card *ngFor="let element of item.items">\n        <h2 card-title item-start text-wrap>{{element.title}}</h2>\n        <!--Big Card -->\n        <div images-gallery>\n          <div big-image>\n            <img [src]="element.image1" [alt]="element.title" />\n          </div>\n          <!--Gallery Card -->\n          <div list-images (click)="onEvent(\'onItemClick\', element.title, $event)">\n            <div images background-size [ngStyle]="{\'background-image\': \'url(\' + element.image2 + \')\'}" [title]="element.title"></div>\n            <div images background-size [ngStyle]="{\'background-image\': \'url(\' + element.image3 + \')\'}" [title]="element.title"></div>\n            <div images background-size [ngStyle]="{\'background-image\': \'url(\' + element.image4 + \')\'}" [title]="element.title"></div>\n          </div>\n        </div>\n\n        <!-- Card Content -->\n        <ion-card-content>\n          <ion-item no-padding no-lines transparent>\n            <span padding-left span-large>{{element.price}}</span>\n            <span new-category no-padding transparent text-uppercase text-wrap>{{element.subtitle}}</span>\n            <div margin-right button-block item-content>\n              <button box-shadow full ion-button default-button (click)="onEvent(\'onBuy\', \'Buy\', $event)">{{element.buy}}</button>\n            </div>\n          </ion-item>\n        </ion-card-content>\n      </ion-card>\n    </ion-list>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/core/list-view/sticky-list-header/layout-2/sticky-list-header.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], StickyListHeaderLayout2);

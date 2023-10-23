@@ -46,45 +46,7 @@ var MapsLayout1Module = /** @class */ (function () {
     return MapsLayout1Module;
 }());
 
-//# sourceMappingURL=realizar-verificacao.module.js.map
-
-/***/ }),
-
-/***/ 797:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Inspecao; });
-var Inspecao = /** @class */ (function () {
-    function Inspecao(values) {
-        if (values === void 0) { values = {}; }
-        this.id = 0;
-        this.idGuidInspecao = '';
-        this.idGuidServico = '';
-        this.campo1 = "";
-        this.campo2 = "";
-        this.campo3 = "";
-        this.campo4 = "";
-        this.status = 0;
-        this.situacao = 'Em aberto';
-        this.delete = false;
-        this.dataHoraAlteracao = new Date();
-        this.usuarioInclusao = "";
-        this.usuarioEdicao = "";
-        this.qtdNA = 0;
-        this.qtdA = 0;
-        this.qtdR = 0;
-        this.qtdRA = 0;
-        this.qtdX = 0;
-        this.inspecaoObraItens = [];
-        this.ocorrencias = [];
-        this.realizadosPor = [];
-        Object.assign(this, values);
-    }
-    return Inspecao;
-}());
-
-//# sourceMappingURL=inspecao.js.map
+//# sourceMappingURL=maps-layout-1.module.js.map
 
 /***/ }),
 
@@ -1078,18 +1040,17 @@ var DataLayerManager = /** @class */ (function () {
             });
         });
     };
-    RealizarVerificacaoPage.prototype.salvar = function (valido) {
-        if (valido) {
-            this.inspecao.dataInspecao = this.dataAbertura ? this.dataAbertura : null;
-            this.inspecao.dataEncerramento = this.dataEncerramento ? new Date(this.dataEncerramento + "T12:00:00") : null;
-            this.inspecao.usuarioEdicao = localStorage.getItem('Usuario');
-            if (this.inspecao.status == 0) {
-                this.viewCtrl.dismiss({ inspecao: this.inspecao, concluido: true });
-            }
-            else {
-                var naoFinalizado = this.inspecao.inspecaoObraItens.some(function (x) { return x.inspecao1 == "" || (x.inspecao1 == "R" && x.inspecao2 == ""); });
-                if (naoFinalizado) {
-                    this.toastService.presentToastWarning("Não é possível salvar com status de finalizado pois existem inspeções pendentes.");
+    /**
+     * Extract features from a geoJson using google.maps Data Class
+     * @param d : google.maps.Data class instance
+     * @param geoJson : url or geojson object
+     */
+    DataLayerManager.prototype.getDataFeatures = function (d, geoJson) {
+        return new Promise(function (resolve, reject) {
+            if (typeof geoJson === 'object') {
+                try {
+                    var features = d.addGeoJson(geoJson);
+                    resolve(features);
                 }
                 catch (e) {
                     reject(e);
@@ -5076,7 +5037,7 @@ var MapsLayout1 = /** @class */ (function () {
     ], MapsLayout1.prototype, "content", void 0);
     MapsLayout1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'maps-layout-1',template:/*ion-inline-start:"/Users/user227439/Desktop/sgq/App/sgq/src/core/maps/layout-1/maps.html"*/'<!-- Theme Google Maps - Gmaps + Location  Details -->\n<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon [name]="menu"></ion-icon>\n    </button>\n        <ion-title *ngIf="data != null">{{data.headerTitle}}</ion-title>\n    </ion-navbar>\n</ion-header>\n<!--Content -->\n<ion-content elastic-header>\n    <div id="elastic-header">\n        <agm-map *ngIf="data != null" [latitude]="data.map.lat" [longitude]="data.map.lng"\n        [zoom]="data.map.zoom" [mapTypeControl]="data.map.mapTypeControl"\n        [streetViewControl]="data.map.streetViewControl" [styles]= "data.map.styles">\n            <agm-marker [latitude]="data.map.lat" [longitude]="data.map.lng"></agm-marker>\n        </agm-map>\n    </div>\n    <ion-grid no-padding *ngIf="data != null">\n        <ion-row>\n            <ion-col col-12 map-header>\n                <ion-item no-lines padding-left>\n                    <!--Maps Title-->\n                    <h1 maps-title margin-top margin-bottom text-wrap>{{data.title}}</h1>\n                    <!--Parallax Rateing-->\n                    <div  margin-right float-left>\n                        <ion-icon float-left *ngFor="let item of data.iconsStars;let i = index" (click)="onStarClass(data.iconsStars, i, $event)">\n                            <i icon-medium *ngIf="item.isActive" class="icon {{item.iconActive}}"></i>\n                            <i icon-medium *ngIf="!item.isActive" class="icon {{item.iconInactive}}"></i>\n                        </ion-icon>\n                    </div>\n                    <span span-medium>{{data.reviews}}</span>\n                </ion-item>\n            </ion-col>\n            <!---Content-->\n            <ion-col col-12 map-content>\n                <ion-item-group>\n                    <ion-item-divider no-lines>\n                        <h2 maps-description-title text-wrap margin-bottom>{{data.contentTitle}}</h2>\n                        <p maps-description text-wrap>{{data.contentDescription}}</p>\n                    </ion-item-divider>\n                    <!--Info Location-->\n                    <ion-item no-lines>\n                        <ion-icon icon-medium [name]="data.icon" item-start></ion-icon>\n                        <h2 maps-info-description no-paddnig>{{data.location}}</h2>\n                    </ion-item>\n                    <!--Info Time-->\n                    <ion-item no-lines>\n                        <ion-icon icon-medium [name]="data.icon" item-start></ion-icon>\n                        <h2 maps-info-description no-paddnig>{{data.time}}</h2>\n                    </ion-item>\n                    <!--Info Phone-->\n                    <ion-item no-lines>\n                        <ion-icon icon-medium [name]="data.icon" item-start></ion-icon>\n                        <h2 maps-info-description no-paddnig>{{data.phone}}</h2>\n                    </ion-item>\n                    <!--Info WebSite-->\n                    <ion-item no-lines>\n                        <ion-icon icon-medium [name]="data.icon" item-start></ion-icon>\n                        <h2 maps-info-description no-paddnig>{{data.webSite}}</h2>\n                    </ion-item>\n                    <!--Info Email-->\n                    <ion-item no-lines>\n                        <ion-icon icon-medium [name]="data.icon" item-start></ion-icon>\n                        <h2 maps-info-description no-paddnig>{{data.email}}</h2>\n                    </ion-item>\n                </ion-item-group>\n            </ion-col>\n        </ion-row>\n    </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/Users/user227439/Desktop/sgq/App/sgq/src/core/maps/layout-1/maps.html"*/
+            selector: 'maps-layout-1',template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/core/maps/layout-1/maps.html"*/'<!-- Theme Google Maps - Gmaps + Location  Details -->\n<ion-header>\n    <ion-navbar>\n        <button ion-button menuToggle>\n      <ion-icon [name]="menu"></ion-icon>\n    </button>\n        <ion-title *ngIf="data != null">{{data.headerTitle}}</ion-title>\n    </ion-navbar>\n</ion-header>\n<!--Content -->\n<ion-content elastic-header>\n    <div id="elastic-header">\n        <agm-map *ngIf="data != null" [latitude]="data.map.lat" [longitude]="data.map.lng"\n        [zoom]="data.map.zoom" [mapTypeControl]="data.map.mapTypeControl"\n        [streetViewControl]="data.map.streetViewControl" [styles]= "data.map.styles">\n            <agm-marker [latitude]="data.map.lat" [longitude]="data.map.lng"></agm-marker>\n        </agm-map>\n    </div>\n    <ion-grid no-padding *ngIf="data != null">\n        <ion-row>\n            <ion-col col-12 map-header>\n                <ion-item no-lines padding-left>\n                    <!--Maps Title-->\n                    <h1 maps-title margin-top margin-bottom text-wrap>{{data.title}}</h1>\n                    <!--Parallax Rateing-->\n                    <div  margin-right float-left>\n                        <ion-icon float-left *ngFor="let item of data.iconsStars;let i = index" (click)="onStarClass(data.iconsStars, i, $event)">\n                            <i icon-medium *ngIf="item.isActive" class="icon {{item.iconActive}}"></i>\n                            <i icon-medium *ngIf="!item.isActive" class="icon {{item.iconInactive}}"></i>\n                        </ion-icon>\n                    </div>\n                    <span span-medium>{{data.reviews}}</span>\n                </ion-item>\n            </ion-col>\n            <!---Content-->\n            <ion-col col-12 map-content>\n                <ion-item-group>\n                    <ion-item-divider no-lines>\n                        <h2 maps-description-title text-wrap margin-bottom>{{data.contentTitle}}</h2>\n                        <p maps-description text-wrap>{{data.contentDescription}}</p>\n                    </ion-item-divider>\n                    <!--Info Location-->\n                    <ion-item no-lines>\n                        <ion-icon icon-medium [name]="data.icon" item-start></ion-icon>\n                        <h2 maps-info-description no-paddnig>{{data.location}}</h2>\n                    </ion-item>\n                    <!--Info Time-->\n                    <ion-item no-lines>\n                        <ion-icon icon-medium [name]="data.icon" item-start></ion-icon>\n                        <h2 maps-info-description no-paddnig>{{data.time}}</h2>\n                    </ion-item>\n                    <!--Info Phone-->\n                    <ion-item no-lines>\n                        <ion-icon icon-medium [name]="data.icon" item-start></ion-icon>\n                        <h2 maps-info-description no-paddnig>{{data.phone}}</h2>\n                    </ion-item>\n                    <!--Info WebSite-->\n                    <ion-item no-lines>\n                        <ion-icon icon-medium [name]="data.icon" item-start></ion-icon>\n                        <h2 maps-info-description no-paddnig>{{data.webSite}}</h2>\n                    </ion-item>\n                    <!--Info Email-->\n                    <ion-item no-lines>\n                        <ion-icon icon-medium [name]="data.icon" item-start></ion-icon>\n                        <h2 maps-info-description no-paddnig>{{data.email}}</h2>\n                    </ion-item>\n                </ion-item-group>\n            </ion-col>\n        </ion-row>\n    </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/core/maps/layout-1/maps.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], MapsLayout1);

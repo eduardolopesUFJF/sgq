@@ -1,6 +1,6 @@
 webpackJsonp([29],{
 
-/***/ 759:
+/***/ 761:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WizardLayout3Module", function() { return WizardLayout3Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wizard_layout_3__ = __webpack_require__(863);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__wizard_layout_3__ = __webpack_require__(865);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -42,7 +42,7 @@ var WizardLayout3Module = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 863:
+/***/ 865:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -104,7 +104,7 @@ var WizardLayout3 = /** @class */ (function () {
     ], WizardLayout3.prototype, "slider", void 0);
     WizardLayout3 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'wizard-layout-3',template:/*ion-inline-start:"/Users/user227439/Desktop/sgq/App/sgq/src/core/wizard/layout-3/wizard.html"*/'<!--Theme Wizard Big Image With Text -->\n<ion-slides #wizardSlider (ionSlideDidChange)="slideHasChanged()" pager="true" *ngIf="data != null">\n  <ion-slide background-size padding *ngFor="let item of data.items;" [ngStyle]="{\'background-image\': \'url(\' + item.backgroundImage + \')\'}">\n    <!--Wizard Content -->\n    <div wizard-content text-center>\n      <!--Wizard Subitem -->\n      <h3 wizard-subtitle margin-bottom>{{item.subtitle}}</h3>\n      <!--Wizard Title -->\n      <h1 wizard-title no-margin>{{item.title}}</h1>\n    </div>\n  </ion-slide>\n</ion-slides>\n<!--Button section-->\n<div *ngIf="data != null" text-center>\n  <button ion-button default-button wizard-button text-capitalize (click)="changeSlide(1)" *ngIf="next">\n        {{data.btnNext}}\n    </button>\n  <button ion-button default-button wizard-button text-capitalize (click)="onEvent(\'onFinish\')" *ngIf="finish">\n        {{data.btnFinish}}\n    </button>\n</div>\n'/*ion-inline-end:"/Users/user227439/Desktop/sgq/App/sgq/src/core/wizard/layout-3/wizard.html"*/
+            selector: 'wizard-layout-3',template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/core/wizard/layout-3/wizard.html"*/'<!--Theme Wizard Big Image With Text -->\n<ion-slides #wizardSlider (ionSlideDidChange)="slideHasChanged()" pager="true" *ngIf="data != null">\n  <ion-slide background-size padding *ngFor="let item of data.items;" [ngStyle]="{\'background-image\': \'url(\' + item.backgroundImage + \')\'}">\n    <!--Wizard Content -->\n    <div wizard-content text-center>\n      <!--Wizard Subitem -->\n      <h3 wizard-subtitle margin-bottom>{{item.subtitle}}</h3>\n      <!--Wizard Title -->\n      <h1 wizard-title no-margin>{{item.title}}</h1>\n    </div>\n  </ion-slide>\n</ion-slides>\n<!--Button section-->\n<div *ngIf="data != null" text-center>\n  <button ion-button default-button wizard-button text-capitalize (click)="changeSlide(1)" *ngIf="next">\n        {{data.btnNext}}\n    </button>\n  <button ion-button default-button wizard-button text-capitalize (click)="onEvent(\'onFinish\')" *ngIf="finish">\n        {{data.btnFinish}}\n    </button>\n</div>\n'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/core/wizard/layout-3/wizard.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], WizardLayout3);

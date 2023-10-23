@@ -1,6 +1,6 @@
 webpackJsonp([61],{
 
-/***/ 729:
+/***/ 731:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RadioButtonLayout1Module", function() { return RadioButtonLayout1Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__radio_button_layout_1__ = __webpack_require__(833);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__radio_button_layout_1__ = __webpack_require__(835);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -42,7 +42,7 @@ var RadioButtonLayout1Module = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 833:
+/***/ 835:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -77,7 +77,7 @@ var RadioButtonLayout1 = /** @class */ (function () {
     ], RadioButtonLayout1.prototype, "events", void 0);
     RadioButtonLayout1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'radio-button-layout-1',template:/*ion-inline-start:"/Users/user227439/Desktop/sgq/App/sgq/src/core/radio-button/layout-1/radio-button.html"*/'<!--Themes Radio Button - Simple -->\n<ion-content>\n  <ion-grid no-padding *ngIf="data != null">\n    <ion-list radio-group [(ngModel)]="data.selectedItem">\n      <!-- Header Title Top -->\n      <ion-list-header transparent header-section no-lines>\n        <h1 header-title text-capitalize>{{data.title}}</h1>\n      </ion-list-header>\n      <!-- Content List -->\n      <ion-item no-lines default-item *ngFor="let item of data.items; let i= index">\n        <!-- Content List Title -->\n        <ion-label item-title>{{item.title}}</ion-label>\n        <ion-radio [value]="item.id" (ionSelect)="onEvent(\'onSelect\',item)"></ion-radio>\n      </ion-item>\n    </ion-list>\n  </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/Users/user227439/Desktop/sgq/App/sgq/src/core/radio-button/layout-1/radio-button.html"*/
+            selector: 'radio-button-layout-1',template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/core/radio-button/layout-1/radio-button.html"*/'<!--Themes Radio Button - Simple -->\n<ion-content>\n  <ion-grid no-padding *ngIf="data != null">\n    <ion-list radio-group [(ngModel)]="data.selectedItem">\n      <!-- Header Title Top -->\n      <ion-list-header transparent header-section no-lines>\n        <h1 header-title text-capitalize>{{data.title}}</h1>\n      </ion-list-header>\n      <!-- Content List -->\n      <ion-item no-lines default-item *ngFor="let item of data.items; let i= index">\n        <!-- Content List Title -->\n        <ion-label item-title>{{item.title}}</ion-label>\n        <ion-radio [value]="item.id" (ionSelect)="onEvent(\'onSelect\',item)"></ion-radio>\n      </ion-item>\n    </ion-list>\n  </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/core/radio-button/layout-1/radio-button.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], RadioButtonLayout1);

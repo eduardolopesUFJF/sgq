@@ -77,7 +77,7 @@ var SelectLayout5 = /** @class */ (function () {
     ], SelectLayout5.prototype, "events", void 0);
     SelectLayout5 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'select-layout-5',template:/*ion-inline-start:"/Users/user227439/Desktop/sgq/App/sgq/src/core/select/layout-5/select.html"*/'<ion-item color="secondary" no-lines *ngIf="data != null">\n    <ion-label>{{data.title}}</ion-label>\n    <ion-select [(ngModel)]="data.selectedItem" multiple="true" interface="action-sheet">\n        <ion-option *ngFor="let item of data.items; let i= index" [value]="item.id">{{item.title}}</ion-option>\n    </ion-select>\n</ion-item>\n'/*ion-inline-end:"/Users/user227439/Desktop/sgq/App/sgq/src/core/select/layout-5/select.html"*/
+            selector: 'select-layout-5',template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/core/select/layout-5/select.html"*/'<ion-item color="secondary" no-lines *ngIf="data != null">\n    <ion-label>{{data.title}}</ion-label>\n    <ion-select [(ngModel)]="data.selectedItem" multiple="true" interface="action-sheet">\n        <ion-option *ngFor="let item of data.items; let i= index" [value]="item.id">{{item.title}}</ion-option>\n    </ion-select>\n</ion-item>\n'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/core/select/layout-5/select.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], SelectLayout5);

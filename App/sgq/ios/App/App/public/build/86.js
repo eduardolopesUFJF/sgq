@@ -1,6 +1,6 @@
 webpackJsonp([86],{
 
-/***/ 696:
+/***/ 697:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ActionSheetLayout3Module", function() { return ActionSheetLayout3Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__action_sheet_layout_3__ = __webpack_require__(800);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__action_sheet_layout_3__ = __webpack_require__(801);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -42,7 +42,7 @@ var ActionSheetLayout3Module = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 800:
+/***/ 801:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -113,7 +113,7 @@ var ActionSheetLayout3 = /** @class */ (function () {
     ], ActionSheetLayout3.prototype, "content", void 0);
     ActionSheetLayout3 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'action-sheet-layout-3',template:/*ion-inline-start:"/Users/user227439/Desktop/sgq/App/sgq/src/core/action-sheet/layout-3/action-sheet.html"*/'<!-- Theme Action Sheet - With Text Header -->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle *ngIf="data.showMenu">\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title *ngIf="data != null">{{data.headerTitle}}</ion-title>\n  </ion-navbar>\n</ion-header>\n<!-- List Content -->\n<ion-content padding-top>\n  <ion-grid no-padding *ngIf="data != null">\n    <ion-row *ngIf="data != null">\n      <!-- Cards Full Image-->\n      <ion-col col-12 col-sm-6 col-lg-4 *ngFor="let item of data.items;let i = index" (click)="onEvent(\'onItemClick\', item, $event)">\n        <ion-item no-lines transparent>\n          <!-- Card Categoty-->\n          <span new-category transparent no-padding text-uppercase>{{item.category}}</span>\n          <!-- Card Title-->\n          <h2 card-title text-wrap>{{item.title}}</h2>\n          <!-- Card Subtitle-->\n          <h3 card-subtitle>{{item.subtitle}}</h3>\n          <!-- Card Action Sheet Button-->\n          <div item-content text-right>\n            <button *ngIf="data.actionSheet.buttons.length > 0" ion-button ion-text button-action-shit (click)="presentActionSheet(data)">\n              <ion-icon [name]="data.shareIcon"></ion-icon>\n            </button>\n            <ion-badge box-shadow badge-light>{{item.button}}</ion-badge>\n            <ion-badge box-shadow badge-light>{{item.porUsuario}}</ion-badge>\n          </div>\n        </ion-item>\n        <!-- Card Big Image-->\n        <ion-card>\n          <img [src]="item.image" />\n        </ion-card>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>'/*ion-inline-end:"/Users/user227439/Desktop/sgq/App/sgq/src/core/action-sheet/layout-3/action-sheet.html"*/
+            selector: 'action-sheet-layout-3',template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/core/action-sheet/layout-3/action-sheet.html"*/'<!-- Theme Action Sheet - With Text Header -->\n<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle *ngIf="data.showMenu">\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title *ngIf="data != null">{{data.headerTitle}}</ion-title>\n  </ion-navbar>\n</ion-header>\n<!-- List Content -->\n<ion-content padding-top>\n  <ion-grid no-padding *ngIf="data != null">\n    <ion-row *ngIf="data != null">\n      <!-- Cards Full Image-->\n      <ion-col col-12 col-sm-6 col-lg-4 *ngFor="let item of data.items;let i = index" (click)="onEvent(\'onItemClick\', item, $event)">\n        <ion-item no-lines transparent>\n          <!-- Card Categoty-->\n          <span new-category transparent no-padding text-uppercase>{{item.category}}</span>\n          <!-- Card Title-->\n          <h2 card-title text-wrap>{{item.title}}</h2>\n          <!-- Card Subtitle-->\n          <h3 card-subtitle>{{item.subtitle}}</h3>\n          <!-- Card Action Sheet Button-->\n          <div item-content text-right>\n            <button *ngIf="data.actionSheet.buttons.length > 0" ion-button ion-text button-action-shit (click)="presentActionSheet(data)">\n              <ion-icon [name]="data.shareIcon"></ion-icon>\n            </button>\n            <ion-badge box-shadow badge-light>{{item.button}}</ion-badge>\n            <ion-badge box-shadow badge-light>{{item.porUsuario}}</ion-badge>\n          </div>\n        </ion-item>\n        <!-- Card Big Image-->\n        <ion-card>\n          <img [src]="item.image" />\n        </ion-card>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/core/action-sheet/layout-3/action-sheet.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */]])
     ], ActionSheetLayout3);

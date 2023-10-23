@@ -1,6 +1,6 @@
 webpackJsonp([24],{
 
-/***/ 695:
+/***/ 696:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ActionSheetLayout2Module", function() { return ActionSheetLayout2Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__action_sheet_layout_2__ = __webpack_require__(799);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__action_sheet_layout_2__ = __webpack_require__(800);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__elastic_header_elastic_header_module__ = __webpack_require__(779);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -147,7 +147,7 @@ var ElasticHeader = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 799:
+/***/ 800:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -232,7 +232,7 @@ var ActionSheetLayout2 = /** @class */ (function () {
     ], ActionSheetLayout2.prototype, "content", void 0);
     ActionSheetLayout2 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'action-sheet-layout-2',template:/*ion-inline-start:"/Users/user227439/Desktop/sgq/App/sgq/src/core/action-sheet/layout-2/action-sheet.html"*/'<ion-header>\n  <ion-navbar transparent [ngClass]="{\'active\':isClassActive()}">\n    <button ion-button menuToggle *ngIf="data.showMenu">\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title *ngIf="data != null">{{data.headerTitle}}</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content elastic-header>\n  <ion-item no-lines background-size id="elastic-header" [ngStyle]="{\'background-image\': \'url(\' + headerImage + \')\'}">\n    <div title-block *ngIf="data != null">\n      <h1 padding-left parallax-title text-wrap>{{data.title}}</h1>\n      <span new-category transparent padding-left padding-bottom text-uppercase>{{data.category}}</span>\n    </div>\n  </ion-item>\n  <ion-item-group *ngIf="data != null">\n    <ion-item-divider no-lines>\n      <ion-thumbnail item-start>\n        <img [src]="data.avatar" />\n      </ion-thumbnail>\n      <h2 item-title>{{data.subtitle}}</h2>\n      <button *ngIf="data.actionSheet.buttons.length > 0" item-end ion-button ion-text button-action-shit (click)="presentActionSheet(data)">\n        <ion-icon [name]="data.shareIcon"></ion-icon>\n      </button>\n    </ion-item-divider>\n    <ion-item no-margin no-lines>\n      <p parallax-description text-wrap>{{data.description}}</p>\n    </ion-item>\n    <button *ngIf="data.realizarOrcamento" ion-button default-button block text-capitalize box-shadow margin-bottom (click)="onEvent(\'onRegister\')">Ver preços</button>\n    <ion-item no-margin no-lines *ngFor="let item of data.items;let i = index">\n      <h2 parallax-subtitle margin-bottom text-wrap>{{item.title}}</h2>\n      <p parallax-description text-wrap>{{item.subtitle}}</p>\n    </ion-item>\n    <button *ngIf="data.realizarOrcamento" ion-button default-button block text-capitalize box-shadow margin-bottom (click)="onEvent(\'onRegister\')">Ver preços</button>\n  </ion-item-group>\n</ion-content>'/*ion-inline-end:"/Users/user227439/Desktop/sgq/App/sgq/src/core/action-sheet/layout-2/action-sheet.html"*/
+            selector: 'action-sheet-layout-2',template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/core/action-sheet/layout-2/action-sheet.html"*/'<ion-header>\n  <ion-navbar transparent [ngClass]="{\'active\':isClassActive()}">\n    <button ion-button menuToggle *ngIf="data.showMenu">\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title *ngIf="data != null">{{data.headerTitle}}</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content elastic-header>\n  <ion-item no-lines background-size id="elastic-header" [ngStyle]="{\'background-image\': \'url(\' + headerImage + \')\'}">\n    <div title-block *ngIf="data != null">\n      <h1 padding-left parallax-title text-wrap>{{data.title}}</h1>\n      <span new-category transparent padding-left padding-bottom text-uppercase>{{data.category}}</span>\n    </div>\n  </ion-item>\n  <ion-item-group *ngIf="data != null">\n    <ion-item-divider no-lines>\n      <ion-thumbnail item-start>\n        <img [src]="data.avatar" />\n      </ion-thumbnail>\n      <h2 item-title>{{data.subtitle}}</h2>\n      <button *ngIf="data.actionSheet.buttons.length > 0" item-end ion-button ion-text button-action-shit (click)="presentActionSheet(data)">\n        <ion-icon [name]="data.shareIcon"></ion-icon>\n      </button>\n    </ion-item-divider>\n    <ion-item no-margin no-lines>\n      <p parallax-description text-wrap>{{data.description}}</p>\n    </ion-item>\n    <button *ngIf="data.realizarOrcamento" ion-button default-button block text-capitalize box-shadow margin-bottom (click)="onEvent(\'onRegister\')">Ver preços</button>\n    <ion-item no-margin no-lines *ngFor="let item of data.items;let i = index">\n      <h2 parallax-subtitle margin-bottom text-wrap>{{item.title}}</h2>\n      <p parallax-description text-wrap>{{item.subtitle}}</p>\n    </ion-item>\n    <button *ngIf="data.realizarOrcamento" ion-button default-button block text-capitalize box-shadow margin-bottom (click)="onEvent(\'onRegister\')">Ver preços</button>\n  </ion-item-group>\n</ion-content>'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/core/action-sheet/layout-2/action-sheet.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */]])
     ], ActionSheetLayout2);
