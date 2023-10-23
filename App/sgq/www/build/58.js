@@ -1,23 +1,14 @@
 webpackJsonp([58],{
 
-<<<<<<< HEAD
-/***/ 734:
-=======
-/***/ 736:
->>>>>>> e231fdfa1cb4eccbf9b4b4416cebb1aa15234b51
+/***/ 735:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RangeLayout2Module", function() { return RangeLayout2Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__range_layout_1__ = __webpack_require__(838);
-=======
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__range_layout_2__ = __webpack_require__(869);
->>>>>>> e231fdfa1cb4eccbf9b4b4416cebb1aa15234b51
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__range_layout_2__ = __webpack_require__(840);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -51,11 +42,7 @@ var RangeLayout2Module = /** @class */ (function () {
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 838:
-=======
-/***/ 869:
->>>>>>> e231fdfa1cb4eccbf9b4b4416cebb1aa15234b51
+/***/ 840:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -93,11 +80,7 @@ var RangeLayout2 = /** @class */ (function () {
     ], RangeLayout2.prototype, "events", void 0);
     RangeLayout2 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-<<<<<<< HEAD
-            selector: 'range-button-layout-1',template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/core/range/layout-1/range.html"*/'<!-- RANGE COMPONENTS - Basic -->\n<ion-list no-lines *ngIf="data != null">\n    <!--- Divider item-->\n    <ion-item-divider padding-top no-lines no-margin transparent>\n      <p color="primaryBase" ion-text>{{data.title}}</p>\n      <ion-badge item-end>{{data.value}}</ion-badge>\n    </ion-item-divider>\n    <ion-item transparent>\n        <ion-range [(ngModel)]="data.value" (ionChange)="onEvent(\'onChange\', data.value, $event)">\n        </ion-range>\n    </ion-item>\n</ion-list>\n'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/core/range/layout-1/range.html"*/
-=======
-            selector: 'range-button-layout-2',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\range\layout-2\range.html"*/'<!-- RANGE COMPONENTS - With icons -->\n\n<ion-list no-lines *ngIf="data != null">\n\n   <!--- Divider item-->\n\n    <ion-item-divider no-lines no-margin transparent>\n\n      <p ion-text color="primaryBase">{{data.title}}</p>\n\n      <ion-badge item-end>{{data.value}}</ion-badge>\n\n    </ion-item-divider>\n\n    <ion-item transparent>\n\n        <ion-range [min]="data.min" [max]="data.max" pin="true" (ionChange)="onEvent(\'onChange\', data.value, $event)" [(ngModel)]="data.value">\n\n            <ion-icon range-left color="primaryBase" [name]="data.iconLeft"></ion-icon>\n\n            <ion-icon range-right color="primaryBase" [name]="data.iconRight"></ion-icon>\n\n        </ion-range>\n\n    </ion-item>\n\n</ion-list>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\range\layout-2\range.html"*/
->>>>>>> e231fdfa1cb4eccbf9b4b4416cebb1aa15234b51
+            selector: 'range-button-layout-2',template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/core/range/layout-2/range.html"*/'<!-- RANGE COMPONENTS - With icons -->\n<ion-list no-lines *ngIf="data != null">\n   <!--- Divider item-->\n    <ion-item-divider no-lines no-margin transparent>\n      <p ion-text color="primaryBase">{{data.title}}</p>\n      <ion-badge item-end>{{data.value}}</ion-badge>\n    </ion-item-divider>\n    <ion-item transparent>\n        <ion-range [min]="data.min" [max]="data.max" pin="true" (ionChange)="onEvent(\'onChange\', data.value, $event)" [(ngModel)]="data.value">\n            <ion-icon range-left color="primaryBase" [name]="data.iconLeft"></ion-icon>\n            <ion-icon range-right color="primaryBase" [name]="data.iconRight"></ion-icon>\n        </ion-range>\n    </ion-item>\n</ion-list>\n'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/core/range/layout-2/range.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], RangeLayout2);

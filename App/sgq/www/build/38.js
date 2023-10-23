@@ -1,23 +1,14 @@
 webpackJsonp([38],{
 
-<<<<<<< HEAD
-/***/ 752:
-=======
-/***/ 753:
->>>>>>> e231fdfa1cb4eccbf9b4b4416cebb1aa15234b51
+/***/ 754:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabsLayout1Module", function() { return TabsLayout1Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sub_image_gallery_layout_2__ = __webpack_require__(856);
-=======
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs_layout_1__ = __webpack_require__(886);
->>>>>>> e231fdfa1cb4eccbf9b4b4416cebb1aa15234b51
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs_layout_1__ = __webpack_require__(859);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -51,11 +42,7 @@ var TabsLayout1Module = /** @class */ (function () {
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 856:
-=======
-/***/ 886:
->>>>>>> e231fdfa1cb4eccbf9b4b4416cebb1aa15234b51
+/***/ 859:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -88,11 +75,7 @@ var TabsLayout1 = /** @class */ (function () {
     ], TabsLayout1.prototype, "tabRef", void 0);
     TabsLayout1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-<<<<<<< HEAD
-            selector: 'sub-image-gallery-layout-2',template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/core/sub-image-gallery/layout-2/sub-image-gallery-layout-2.html"*/'<!-- Theme Image Sub-Gallery for Thumb grid -->\n<ion-grid *ngIf="data != null">\n    <ion-row>\n        <ion-col no-padding col-4 col-sm-3 col-md-6 col-lg-4 col-xl-3 *ngFor="let item of data.items;let i = index;">\n            <ion-card background-size (click)="openImageSlider(data, i)">\n              <img [src]="item.image"  />\n            </ion-card>\n        </ion-col>\n    </ion-row>\n</ion-grid>\n'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/core/sub-image-gallery/layout-2/sub-image-gallery-layout-2.html"*/
-=======
-            selector: 'tabs-layout-1',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\tabs\layout-1\tabs.html"*/'<!-- Theme Tabs Footer tab - text -->\n\n<ion-tabs #tabs tabsPlacement="bottom">\n\n    <ion-tab [tabTitle]="item.title" [tabIcon]="item.icon" [root]="item.page" *ngFor="let item of data;let i = index"></ion-tab>\n\n</ion-tabs>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\tabs\layout-1\tabs.html"*/
->>>>>>> e231fdfa1cb4eccbf9b4b4416cebb1aa15234b51
+            selector: 'tabs-layout-1',template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/core/tabs/layout-1/tabs.html"*/'<!-- Theme Tabs Footer tab - text -->\n<ion-tabs #tabs tabsPlacement="bottom">\n    <ion-tab [tabTitle]="item.title" [tabIcon]="item.icon" [root]="item.page" *ngFor="let item of data;let i = index"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/core/tabs/layout-1/tabs.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], TabsLayout1);

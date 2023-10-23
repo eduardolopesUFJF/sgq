@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SplashScreenLayout3Module", function() { return SplashScreenLayout3Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__splash_screen_layout_3__ = __webpack_require__(884);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__splash_screen_layout_3__ = __webpack_require__(856);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -42,7 +42,7 @@ var SplashScreenLayout3Module = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 884:
+/***/ 856:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -96,11 +96,7 @@ var SplashScreenLayout3 = /** @class */ (function () {
     ], SplashScreenLayout3.prototype, "events", void 0);
     SplashScreenLayout3 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-<<<<<<< HEAD
-            selector: 'splash-screen-layout-2',template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/core/splash-screen/layout-2/splash-screen.html"*/'<!--Theme Logo + fade in + Ken Burns-->\n<div id="splash-background-image">\n  <img class="splash-screen" [src]="data.backgroundImage" />\n  <img logo animation [src]="data.logo" />\n</div>\n'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/core/splash-screen/layout-2/splash-screen.html"*/
-=======
-            selector: 'splash-screen-layout-3',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\splash-screen\layout-3\splash-screen.html"*/'<!--Theme Logo + Title + Ken Burns-->\n\n<div id="splash-background-image">\n\n  <img splash-screen [src]="data.backgroundImage" />\n\n    <img logo [src]="data.logo" />\n\n    <h1 header-title text-wrap>{{data.title}}</h1>\n\n</div>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\splash-screen\layout-3\splash-screen.html"*/
->>>>>>> e231fdfa1cb4eccbf9b4b4416cebb1aa15234b51
+            selector: 'splash-screen-layout-3',template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/core/splash-screen/layout-3/splash-screen.html"*/'<!--Theme Logo + Title + Ken Burns-->\n<div id="splash-background-image">\n  <img splash-screen [src]="data.backgroundImage" />\n    <img logo [src]="data.logo" />\n    <h1 header-title text-wrap>{{data.title}}</h1>\n</div>\n'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/core/splash-screen/layout-3/splash-screen.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], SplashScreenLayout3);

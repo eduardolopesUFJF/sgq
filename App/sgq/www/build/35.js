@@ -1,23 +1,14 @@
 webpackJsonp([35],{
 
-<<<<<<< HEAD
-/***/ 755:
-=======
-/***/ 759:
->>>>>>> e231fdfa1cb4eccbf9b4b4416cebb1aa15234b51
+/***/ 757:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ToggleLayout1Module", function() { return ToggleLayout1Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs_layout_3__ = __webpack_require__(859);
-=======
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__toggle_layout_1__ = __webpack_require__(892);
->>>>>>> e231fdfa1cb4eccbf9b4b4416cebb1aa15234b51
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__toggle_layout_1__ = __webpack_require__(862);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -51,11 +42,7 @@ var ToggleLayout1Module = /** @class */ (function () {
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 859:
-=======
-/***/ 892:
->>>>>>> e231fdfa1cb4eccbf9b4b4416cebb1aa15234b51
+/***/ 862:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -93,11 +80,7 @@ var ToggleLayout1 = /** @class */ (function () {
     ], ToggleLayout1.prototype, "events", void 0);
     ToggleLayout1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-<<<<<<< HEAD
-            selector: 'tabs-layout-3',template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/core/tabs/layout-3/tabs.html"*/'<!-- Theme Tabs Header tab - text -->\n<ion-tabs #tabs tabsPlacement=\'top\' tabs-content>\n  <!-- Background -->\n  <div header>\n    <ion-item transparent  no-lines>\n      <!-- <div title-header> -->\n        <h1 item-title text-wrap>Worldwide Model Agency</h1>\n        <h2 item-subtitle>BEST MODELS</h2>\n      <!-- </div> -->\n    </ion-item>\n  </div>\n\n    <ion-tab [tabTitle]="item.title" [root]="item.page" *ngFor="let item of data.data;let i = index">\n    </ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/core/tabs/layout-3/tabs.html"*/
-=======
-            selector: 'toggle-layout-1',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\toggle\layout-1\toggle.html"*/'<!--Themes Toggle - With avatars -->\n\n<ion-content>\n\n  <ion-grid no-padding>\n\n    <!-- List Section -->\n\n    <ion-list no-lines *ngIf="data != null">\n\n      <ion-list-header header-section no-lines>\n\n        <!-- Header-title -->\n\n        <h1 header-title text-capitalize>{{data.title}}</h1>\n\n      </ion-list-header>\n\n      <ion-item default-item *ngFor="let item of data.items; let i= index">\n\n        <!-- Avatar-->\n\n        <ion-thumbnail item-start>\n\n          <img [src]="item.avatar" />\n\n        </ion-thumbnail>\n\n        <!-- Item-title -->\n\n        <ion-label item-title padding-top>{{item.title}}</ion-label>\n\n        <!-- Item-subtitle -->\n\n        <ion-label item-subtitle text-wrap>{{item.subtitle}}</ion-label>\n\n        <!-- Toggle -->\n\n        <ion-toggle item-end [value]="item.id" (ionChange)="onEvent(\'onSelect\',item)" [checked]="item.isChecked"></ion-toggle>\n\n      </ion-item>\n\n    </ion-list>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\toggle\layout-1\toggle.html"*/
->>>>>>> e231fdfa1cb4eccbf9b4b4416cebb1aa15234b51
+            selector: 'toggle-layout-1',template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/core/toggle/layout-1/toggle.html"*/'<!--Themes Toggle - With avatars -->\n<ion-content>\n  <ion-grid no-padding>\n    <!-- List Section -->\n    <ion-list no-lines *ngIf="data != null">\n      <ion-list-header header-section no-lines>\n        <!-- Header-title -->\n        <h1 header-title text-capitalize>{{data.title}}</h1>\n      </ion-list-header>\n      <ion-item default-item *ngFor="let item of data.items; let i= index">\n        <!-- Avatar-->\n        <ion-thumbnail item-start>\n          <img [src]="item.avatar" />\n        </ion-thumbnail>\n        <!-- Item-title -->\n        <ion-label item-title padding-top>{{item.title}}</ion-label>\n        <!-- Item-subtitle -->\n        <ion-label item-subtitle text-wrap>{{item.subtitle}}</ion-label>\n        <!-- Toggle -->\n        <ion-toggle item-end [value]="item.id" (ionChange)="onEvent(\'onSelect\',item)" [checked]="item.isChecked"></ion-toggle>\n      </ion-item>\n    </ion-list>\n  </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/core/toggle/layout-1/toggle.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], ToggleLayout1);

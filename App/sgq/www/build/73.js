@@ -1,23 +1,14 @@
 webpackJsonp([73],{
 
-<<<<<<< HEAD
-/***/ 709:
-=======
-/***/ 710:
->>>>>>> e231fdfa1cb4eccbf9b4b4416cebb1aa15234b51
+/***/ 711:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DragAndDropLayout3Module", function() { return DragAndDropLayout3Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__drag_and_drop_layout_2__ = __webpack_require__(813);
-=======
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__drag_and_drop_layout_3__ = __webpack_require__(843);
->>>>>>> e231fdfa1cb4eccbf9b4b4416cebb1aa15234b51
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__drag_and_drop_layout_3__ = __webpack_require__(816);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -51,11 +42,7 @@ var DragAndDropLayout3Module = /** @class */ (function () {
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 813:
-=======
-/***/ 843:
->>>>>>> e231fdfa1cb4eccbf9b4b4416cebb1aa15234b51
+/***/ 816:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -99,11 +86,7 @@ var DragAndDropLayout3 = /** @class */ (function () {
     ], DragAndDropLayout3.prototype, "content", void 0);
     DragAndDropLayout3 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-<<<<<<< HEAD
-            selector: 'drag-and-drop-layout-2',template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/core/list-view/drag-and-drop/layout-2/drag-and-drop.html"*/'<!-- Themes Drag and drop - Products + CTA header -->\n<ion-content>\n  <ion-grid no-padding *ngIf="data != null">\n    <ion-row>\n      <ion-col col-12>\n        <!-- Header Products + CTA header -->\n        <ion-list-header transparent header-section no-lines padding background-size [ngStyle]="{\'background-image\': \'url(\' + data.headerImage + \')\'}">\n          <!--Header Big Title-->\n          <h1 header-title text-capitalize>{{data.header}}</h1>\n          <ion-item transparent margin-vertical no-padding no-lines>\n            <!-- Title -->\n            <h2 item-title text-capitalize text-wrap>{{data.title}}</h2>\n            <!-- Subtitle -->\n            <p item-subtitle no-margin text-wrap>{{data.subtitle}}</p>\n          </ion-item>\n          <!-- Button -->\n          <button box-shadow ion-button block default-button (click)="onEvent(\'onButtonGetClick\', \'Ok\', $event)">{{data.button}}</button>\n        </ion-list-header>\n        <!-- Content Products + CTA header -->\n        <ion-list no-margin reorder="true" (ionItemReorder)="reorderItems($event)">\n          <ion-item no-lines default-item *ngFor="let item of data.items; let i = index;" (click)="onEvent(\'onItemClick\', item.title, $event)">\n            <!-- Avatar -->\n            <ion-thumbnail item-start no-margin>\n              <img [src]="item.image">\n            </ion-thumbnail>\n            <!-- Title -->\n            <h2 item-title margin-left>{{item.title}}</h2>\n            <!-- Subtitle -->\n            <p item-subtitle margin-left>{{item.subtitle}}</p>\n            <!-- Badge -->\n            <ion-badge box-shadow badge-light margin-left>{{item.price}}</ion-badge>\n          </ion-item>\n        </ion-list>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/core/list-view/drag-and-drop/layout-2/drag-and-drop.html"*/
-=======
-            selector: 'drag-and-drop-layout-3',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\drag-and-drop\layout-3\drag-and-drop.html"*/'<!-- Themes Drag and drop - Medium item with avatar-->\n\n<ion-content>\n\n  <ion-grid no-padding *ngIf="data != null">\n\n    <ion-row>\n\n      <ion-col col-12>\n\n        <!-- Header Medium item with avatar-->\n\n        <ion-list-header transparent header-section no-lines padding-horizontal>\n\n          <h1 header-title text-capitalize>{{data.header}}</h1>\n\n        </ion-list-header>\n\n        <!-- Content Medium Item With Avatar-->\n\n        <ion-list no-margin reorder="true" (ionItemReorder)="reorderItems($event)">\n\n          <ion-item no-lines default-item *ngFor="let item of data.items; let i = index;"\n\n          (click)="onEvent(\'onItemClick\', item.title, $event)">\n\n            <!--Avatar-->\n\n            <ion-thumbnail item-left>\n\n              <img [src]="item.image">\n\n            </ion-thumbnail>\n\n            <!--Title-->\n\n            <h2 item-title>{{item.title}}</h2>\n\n            <!--Subtitle-->\n\n            <h3 item-subtitle>{{item.subtitle}}</h3>\n\n          </ion-item>\n\n        </ion-list>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\drag-and-drop\layout-3\drag-and-drop.html"*/
->>>>>>> e231fdfa1cb4eccbf9b4b4416cebb1aa15234b51
+            selector: 'drag-and-drop-layout-3',template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/core/list-view/drag-and-drop/layout-3/drag-and-drop.html"*/'<!-- Themes Drag and drop - Medium item with avatar-->\n<ion-content>\n  <ion-grid no-padding *ngIf="data != null">\n    <ion-row>\n      <ion-col col-12>\n        <!-- Header Medium item with avatar-->\n        <ion-list-header transparent header-section no-lines padding-horizontal>\n          <h1 header-title text-capitalize>{{data.header}}</h1>\n        </ion-list-header>\n        <!-- Content Medium Item With Avatar-->\n        <ion-list no-margin reorder="true" (ionItemReorder)="reorderItems($event)">\n          <ion-item no-lines default-item *ngFor="let item of data.items; let i = index;"\n          (click)="onEvent(\'onItemClick\', item.title, $event)">\n            <!--Avatar-->\n            <ion-thumbnail item-left>\n              <img [src]="item.image">\n            </ion-thumbnail>\n            <!--Title-->\n            <h2 item-title>{{item.title}}</h2>\n            <!--Subtitle-->\n            <h3 item-subtitle>{{item.subtitle}}</h3>\n          </ion-item>\n        </ion-list>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/core/list-view/drag-and-drop/layout-3/drag-and-drop.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], DragAndDropLayout3);

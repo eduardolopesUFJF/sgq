@@ -1,23 +1,14 @@
 webpackJsonp([71],{
 
-<<<<<<< HEAD
-/***/ 711:
-=======
-/***/ 716:
->>>>>>> e231fdfa1cb4eccbf9b4b4416cebb1aa15234b51
+/***/ 713:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExpandableLayout2Module", function() { return ExpandableLayout2Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-<<<<<<< HEAD
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__expandable_layout_1__ = __webpack_require__(815);
-=======
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__expandable_layout_2__ = __webpack_require__(849);
->>>>>>> e231fdfa1cb4eccbf9b4b4416cebb1aa15234b51
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__expandable_layout_2__ = __webpack_require__(818);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -51,11 +42,7 @@ var ExpandableLayout2Module = /** @class */ (function () {
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 815:
-=======
-/***/ 849:
->>>>>>> e231fdfa1cb4eccbf9b4b4416cebb1aa15234b51
+/***/ 818:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -108,11 +95,7 @@ var ExpandableLayout2 = /** @class */ (function () {
     ], ExpandableLayout2.prototype, "content", void 0);
     ExpandableLayout2 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-<<<<<<< HEAD
-            selector: 'expandable-layout-1',template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/core/list-view/expandable/layout-1/expandable.html"*/'<!-- Theme Expandable- List big image -->\n<ion-content>\n  <ion-grid no-padding *ngIf="data != null">\n    <ion-row>\n      <ion-col col-12>\n        <!-- Header List Big Image -->\n        <ion-list no-margin>\n          <ion-list-header transparent header-section no-lines padding-horizontal>\n            <h1 header-title>{{data.header}}</h1>\n          </ion-list-header>\n          <ul collapsible no-margin no-padding>\n            <li *ngFor="let group of data.items;">\n              <!-- List big image Header -->\n              <div collapsible-header (click)="toggleGroup(group)">\n                <ion-item default-item no-lines>\n                  <ion-thumbnail item-start>\n                    <img [src]="group.image" alt="{{group.title}}" />\n                  </ion-thumbnail>\n                  <h2 item-title>{{group.title}}</h2>\n                  <h3 item-subtitle text-wrap>{{group.description}}</h3>\n                </ion-item>\n              </div>\n              <!-- End List big image Header -->\n              <!-- List big image Body -->\n              <div item-accordion [ngClass]="{\'active\': isGroupShown(group) }" [hidden]="!isGroupShown(group)">\n                <ion-item default-item no-lines *ngFor="let item of group.expandItems;"\n                (click)="onEvent(\'onItemClick\', item, $event)">\n                  <!-- Avatar -->\n                  <ion-thumbnail item-start>\n                    <img [src]="item.image" [alt]="item.title" />\n                  </ion-thumbnail>\n                  <!-- Title -->\n                  <h2 subitem-title text-wrap>{{item.title}}</h2>\n                  <!-- Subtitle -->\n                  <h3 subitem-subtitle text-wrap>{{item.description}}</h3>\n                  <!-- Details item-->\n                  <span span-small>{{item.details}}</span>\n                </ion-item>\n              </div>\n              <!-- End List big image Body -->\n            </li>\n          </ul>\n        </ion-list>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/core/list-view/expandable/layout-1/expandable.html"*/
-=======
-            selector: 'expandable-layout-2',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\expandable\layout-2\expandable.html"*/'<!-- Themes Expandable - Full image with CTA -->\n\n<ion-content>\n\n  <ion-grid no-padding *ngIf="data != null">\n\n    <ion-row>\n\n      <ion-col col-12 no-padding no-margin>\n\n        <ion-list>\n\n          <ul no-margin no-padding class="collapsible">\n\n            <li margin *ngFor="let group of data.items;">\n\n              <!-- Expandable Full image with CTA Header-->\n\n              <div class="collapsible-header" (click)="toggleGroup(group)">\n\n                <ion-item no-margin no-padding no-lines background-size text-center [ngStyle]="{\'background-image\': \'url(\' + group.backgroundImage + \')\'}">\n\n                  <div watch-now text-center>\n\n                    <!-- Icon And Text For Read More-->\n\n                    <button ion-button button-icon icon-center>\n\n                    <ion-icon icon-large [name]="group.icon"></ion-icon>\n\n                  </button >\n\n                    </div>\n\n                </ion-item>\n\n              </div>\n\n              <!-- Expandable Full image with CTA Body -->\n\n              <div class="item-accordion" background-size [ngClass]="{\'active\': isGroupShown(group) }" [hidden]="!isGroupShown(group)" [ngStyle]="{\'background-image\': \'url(\' + data.listBackgroundImage + \')\'}">\n\n                <ion-item text-wrap no-lines text-center padding transparent>\n\n                  <!-- Titile -->\n\n                  <h2 subitem-title>{{group.expandItems.title}}</h2>\n\n                  <!-- Icon Rating Star -->\n\n                  <ion-icon padding-top *ngFor="let item of group.expandItems.iconsStars;let i = index"\n\n                  (click)="onStarClass(group.expandItems.iconsStars, i, $event);">\n\n                    <i icon-small *ngIf="item.isActive" class="icon {{item.iconActive}}"></i>\n\n                    <i icon-small *ngIf="!item.isActive" class="icon {{item.iconInactive}}"></i>\n\n                  </ion-icon>\n\n                  <!-- Reviews Star -->\n\n                  <span span-medium>{{group.expandItems.reviews}}</span>\n\n                  <div padding-top (click)="onEvent(\'onItemClick\', group, $event)">\n\n                    <!-- Description -->\n\n                    <p subitem-subtitle>{{group.expandItems.description}}</p>\n\n                  </div>\n\n                </ion-item>\n\n              </div>\n\n            </li>\n\n          </ul>\n\n        </ion-list>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\list-view\expandable\layout-2\expandable.html"*/
->>>>>>> e231fdfa1cb4eccbf9b4b4416cebb1aa15234b51
+            selector: 'expandable-layout-2',template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/core/list-view/expandable/layout-2/expandable.html"*/'<!-- Themes Expandable - Full image with CTA -->\n<ion-content>\n  <ion-grid no-padding *ngIf="data != null">\n    <ion-row>\n      <ion-col col-12 no-padding no-margin>\n        <ion-list>\n          <ul no-margin no-padding class="collapsible">\n            <li margin *ngFor="let group of data.items;">\n              <!-- Expandable Full image with CTA Header-->\n              <div class="collapsible-header" (click)="toggleGroup(group)">\n                <ion-item no-margin no-padding no-lines background-size text-center [ngStyle]="{\'background-image\': \'url(\' + group.backgroundImage + \')\'}">\n                  <div watch-now text-center>\n                    <!-- Icon And Text For Read More-->\n                    <button ion-button button-icon icon-center>\n                    <ion-icon icon-large [name]="group.icon"></ion-icon>\n                  </button >\n                    </div>\n                </ion-item>\n              </div>\n              <!-- Expandable Full image with CTA Body -->\n              <div class="item-accordion" background-size [ngClass]="{\'active\': isGroupShown(group) }" [hidden]="!isGroupShown(group)" [ngStyle]="{\'background-image\': \'url(\' + data.listBackgroundImage + \')\'}">\n                <ion-item text-wrap no-lines text-center padding transparent>\n                  <!-- Titile -->\n                  <h2 subitem-title>{{group.expandItems.title}}</h2>\n                  <!-- Icon Rating Star -->\n                  <ion-icon padding-top *ngFor="let item of group.expandItems.iconsStars;let i = index"\n                  (click)="onStarClass(group.expandItems.iconsStars, i, $event);">\n                    <i icon-small *ngIf="item.isActive" class="icon {{item.iconActive}}"></i>\n                    <i icon-small *ngIf="!item.isActive" class="icon {{item.iconInactive}}"></i>\n                  </ion-icon>\n                  <!-- Reviews Star -->\n                  <span span-medium>{{group.expandItems.reviews}}</span>\n                  <div padding-top (click)="onEvent(\'onItemClick\', group, $event)">\n                    <!-- Description -->\n                    <p subitem-subtitle>{{group.expandItems.description}}</p>\n                  </div>\n                </ion-item>\n              </div>\n            </li>\n          </ul>\n        </ion-list>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>\n'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/core/list-view/expandable/layout-2/expandable.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], ExpandableLayout2);
