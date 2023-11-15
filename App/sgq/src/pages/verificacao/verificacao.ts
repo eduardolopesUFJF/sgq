@@ -55,12 +55,13 @@ export class VerificacaoPage {
     atualizarStatus() {
         setTimeout(() => {
             if (this.servico.status == 0) {
-                this.servico.situacao = 'Verificação não iniciada';
+                this.servico.situacao = 'Em aberto';
                 this.criarAtualizacaoStatus();
             } else if (this.servico.status == 1 && this.servico.inspecoesObra.some(x => x.status == 0)) {
                 this.servico.status = 0;
                 this.messageService.exibirMensagem("Não foi possível finalizar o Serviço, existem inspeções em aberto.");
             } else {
+                this.servico.situacao = 'Finalizado'
                 this.criarAtualizacaoStatus();
             }
         }, 100);

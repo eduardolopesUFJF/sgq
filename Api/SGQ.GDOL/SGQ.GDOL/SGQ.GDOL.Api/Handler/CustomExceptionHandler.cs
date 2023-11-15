@@ -3,7 +3,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Internal;
 using Newtonsoft.Json;
 using Serilog;
+using System;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +25,7 @@ namespace SGQ.GDOL.Api.Handler
                 context.Response.ContentType = "application/json";
                 context.Response.StatusCode = (int)httpStatus;
 
+                var schema_header = context.Request.Headers.FirstOrDefault(x => x.Key.Equals("bancoschema", StringComparison.InvariantCultureIgnoreCase)).Value.ToString().ToUpper();
                 var path = context.Request.Path;
                 var body = "";
                 var req = context.Request;
@@ -46,7 +49,7 @@ namespace SGQ.GDOL.Api.Handler
                     causa = exception.InnerException.Message;
                 }
 
-                Log.Fatal(causa + ":\n" + exception.ToString().Substring(0, 1000) + "\n" + path + "\n" + body + "\n");
+                Log.Fatal(causa + ":\n" + exception.ToString().Substring(0, 1000) + "\nPath: " + path + "\nSchema: " + schema_header + "\nBody: " + body + "\n");
 
                 await context.Response.WriteAsync(JsonConvert.SerializeObject(new
                 {

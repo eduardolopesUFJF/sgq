@@ -76,8 +76,7 @@ namespace SGQ.GDOL.Api.AutoMapper
 
             CreateMap<ServicoVM, Servico>()
                 .ForMember(x => x.IdObraAreaChecklist, opt => opt.MapFrom(x => x.IdArea))
-                .ForMember(x => x.IdChecklistServico, opt => opt.MapFrom(x => x.IdChecklist))
-                .ForMember(x => x.Status, opt => opt.MapFrom(x => x.Situacao == "Finalizado" ? 1 : 0));
+                .ForMember(x => x.IdChecklistServico, opt => opt.MapFrom(x => x.IdChecklist));
 
             CreateMap<AreaVM, Area>()
                 .ForMember(x => x.Status, opt => opt.MapFrom(x => x.Situacao == "Finalizado" ? 1 : 0));

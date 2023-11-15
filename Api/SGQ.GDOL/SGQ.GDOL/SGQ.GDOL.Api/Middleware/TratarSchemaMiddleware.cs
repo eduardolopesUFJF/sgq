@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
@@ -18,12 +19,15 @@ namespace SGQ.GDOL.Api.Middleware
 
         public async Task InvokeAsync(HttpContext context)
         {
-            var schema_header = context.Request.Headers.FirstOrDefault(x => x.Key == "BancoSchema" || x.Key == "bancoschema").Value.ToString().ToUpper();
+            var schema_header = context.Request.Headers.FirstOrDefault(x => x.Key.Equals("bancoschema", StringComparison.InvariantCultureIgnoreCase)).Value.ToString().ToUpper();
 
             if (string.IsNullOrEmpty(schema_header))
             {
                 CredenciaisBanco.Schema = "BPOSSAS_GDOL";
                 CredenciaisBanco.Cliente = "GDOL";
+
+                var path = context.Request.Path;
+                Log.Fatal("Header com schema enviado vazio no path: \n" + path + "\n\n");
             }
             else
             {

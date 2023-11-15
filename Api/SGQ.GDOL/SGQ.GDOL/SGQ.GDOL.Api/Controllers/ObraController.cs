@@ -35,7 +35,6 @@ namespace SGQ.GDOL.Api.Controllers
         {
             var obraBD = _obraService.ObterObraComInclude(new Obra{ Id = idObra});
             var obraVM = Mapper.Map<ObraVM>(obraBD);
-            var teste = obraVM.Areas.Where(x => x.Id == 12712);
             return Ok(obraVM);
         }
     }
