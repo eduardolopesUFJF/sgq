@@ -13,7 +13,7 @@ export class PermissaoService extends BaseService {
     }
 
     public obterPermissoesExclusao(cliente: string): Observable<PermissaoExclusao> {
-        this.headers = this.headers.set('BancoSchema', 'BPOSSAS_CONTROLE_CLIENTES');
+        this.headers = this.headers.set('BancoSchema', localStorage.getItem('BancoSchema'));
         return this.http.get<PermissaoExclusao>(this.apiUrl + 'delecoes/' + cliente, { headers: this.headers })
             .catch(this.handleError);
     }
