@@ -1,14 +1,15 @@
-webpackJsonp([17,49],{
+webpackJsonp([17,28],{
 
 /***/ 692:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SelectLayout1Module", function() { return SelectLayout1Module; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppearanceAnimationLayout5Module", function() { return AppearanceAnimationLayout5Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__select_layout_1__ = __webpack_require__(792);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_5__ = __webpack_require__(787);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(88);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,40 +19,42 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SelectLayout1Module = /** @class */ (function () {
-    function SelectLayout1Module() {
+
+var AppearanceAnimationLayout5Module = /** @class */ (function () {
+    function AppearanceAnimationLayout5Module() {
     }
-    SelectLayout1Module = __decorate([
+    AppearanceAnimationLayout5Module = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__select_layout_1__["a" /* SelectLayout1 */],
+                __WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_5__["a" /* AppearanceAnimationLayout5 */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__select_layout_1__["a" /* SelectLayout1 */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_5__["a" /* AppearanceAnimationLayout5 */]),
+                __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["a" /* IonicStorageModule */].forRoot()
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_2__select_layout_1__["a" /* SelectLayout1 */]
+                __WEBPACK_IMPORTED_MODULE_2__appearance_animation_layout_5__["a" /* AppearanceAnimationLayout5 */]
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"]]
         })
-    ], SelectLayout1Module);
-    return SelectLayout1Module;
+    ], AppearanceAnimationLayout5Module);
+    return AppearanceAnimationLayout5Module;
 }());
 
-//# sourceMappingURL=select-layout-1.module.js.map
+//# sourceMappingURL=appearance-animation-layout-5.module.js.map
 
 /***/ }),
 
-/***/ 693:
+/***/ 763:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginLayout2Module", function() { return LoginLayout2Module; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AlteracoesPageModule", function() { return AlteracoesPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_layout_2__ = __webpack_require__(794);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__select_layout_1_select_layout_1_module__ = __webpack_require__(692);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__alteracoes__ = __webpack_require__(896);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__core_list_view_appearance_animation_layout_5_appearance_animation_layout_5_module__ = __webpack_require__(692);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -62,37 +65,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var LoginLayout2Module = /** @class */ (function () {
-    function LoginLayout2Module() {
+var AlteracoesPageModule = /** @class */ (function () {
+    function AlteracoesPageModule() {
     }
-    LoginLayout2Module = __decorate([
+    AlteracoesPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__login_layout_2__["a" /* LoginLayout2 */],
+                __WEBPACK_IMPORTED_MODULE_2__alteracoes__["a" /* AlteracoesPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__login_layout_2__["a" /* LoginLayout2 */]),
-                __WEBPACK_IMPORTED_MODULE_3__select_layout_1_select_layout_1_module__["SelectLayout1Module"]
-            ],
-            exports: [
-                __WEBPACK_IMPORTED_MODULE_2__login_layout_2__["a" /* LoginLayout2 */]
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__alteracoes__["a" /* AlteracoesPage */]),
+                __WEBPACK_IMPORTED_MODULE_3__core_list_view_appearance_animation_layout_5_appearance_animation_layout_5_module__["AppearanceAnimationLayout5Module"]
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"]]
         })
-    ], LoginLayout2Module);
-    return LoginLayout2Module;
+    ], AlteracoesPageModule);
+    return AlteracoesPageModule;
 }());
 
-//# sourceMappingURL=login-layout-2.module.js.map
+//# sourceMappingURL=alteracoes.module.js.map
 
 /***/ }),
 
-/***/ 792:
+/***/ 787:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SelectLayout1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppearanceAnimationLayout5; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_permissao_exclusao__ = __webpack_require__(788);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -103,44 +106,160 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var SelectLayout1 = /** @class */ (function () {
-    function SelectLayout1() {
+
+
+
+var AppearanceAnimationLayout5 = /** @class */ (function () {
+    function AppearanceAnimationLayout5(storage) {
         var _this = this;
-        this.onEvent = function (event, item) {
-            if (_this.events[event]) {
-                _this.events[event](item);
-            }
-        };
+        this.storage = storage;
+        this.dataBackup = [];
+        this.searchbarDefault = "";
+        this.animateItems = [];
+        this.animacaoAtiva = false;
+        this.descricao = "";
+        this.situacao = 0;
+        this.permissoesExclusao = new __WEBPACK_IMPORTED_MODULE_3__models_permissao_exclusao__["a" /* PermissaoExclusao */]();
+        this.animateClass = { 'zoom-in': true };
+        this.storage.ready().then(function () {
+            _this.storage.get('ultimoDownload').then(function (data) {
+                _this.ultimoDownload = data ? data : "Nunca";
+            });
+            _this.storage.get('ultimoUpload').then(function (data) {
+                _this.ultimoUpload = data ? data : "Nunca";
+            });
+        });
     }
+    AppearanceAnimationLayout5.prototype.onEvent = function (event, item, e) {
+        if (e) {
+            e.stopPropagation();
+        }
+        if (this.events[event]) {
+            this.events[event](item);
+        }
+    };
+    AppearanceAnimationLayout5.prototype.ngOnInit = function () {
+        var _this = this;
+        if (this.config.exclusaoPossivel) {
+            this.storage.get('permissoesExclusao').then(function (data) {
+                _this.permissoesExclusao = data;
+                if (_this.config.btnNovoLabel == 'Adicionar área') {
+                    _this.permitirExclusao = !_this.permissoesExclusao.possuiBloqueioExclusaoArea;
+                }
+                else {
+                    _this.permitirExclusao = !_this.permissoesExclusao.possuiBloqueioExclusaoChecklist;
+                }
+            });
+        }
+    };
+    AppearanceAnimationLayout5.prototype.ngOnChanges = function (changes) {
+        var that = this;
+        that.data = changes['data'].currentValue;
+        if (that.data && that.data) {
+            that.animateItems = [];
+            var _loop_1 = function (i) {
+                setTimeout(function () {
+                    that.animateItems.push(that.data[i]);
+                }, 200 * i);
+            };
+            for (var i = 0; i < that.data.length; i++) {
+                _loop_1(i);
+            }
+        }
+        if (this.dataBackup.length == 0) {
+            this.dataBackup = this.data.slice();
+        }
+    };
+    AppearanceAnimationLayout5.prototype.filtrar = function (valor) {
+        var _this = this;
+        this.animacaoAtiva = false;
+        if (valor.length == 0) {
+            this.data = this.dataBackup.slice();
+        }
+        else {
+            this.data = this.dataBackup.filter(function (item) {
+                return item.descricao.toLowerCase().indexOf(valor.toLowerCase()) > -1;
+            });
+        }
+        if (this.config.filtrarSituacao) {
+            this.data = this.data.filter(function (x) { return x.situacao == (_this.situacao == 0 ? "Em aberto" : "Finalizado"); }).slice();
+        }
+    };
+    AppearanceAnimationLayout5.prototype.verificaNovoItem = function (item) {
+        return item.id == 0;
+    };
+    AppearanceAnimationLayout5.prototype.filtrarSituacao = function (valor) {
+        var _this = this;
+        this.animacaoAtiva = false;
+        this.data = this.dataBackup.filter(function (item) { return item.situacao == (valor == 0 ? "Em aberto" : "Finalizado"); });
+        if (this.searchbarDefault) {
+            this.data = this.data.filter(function (item) {
+                return item.descricao.toLowerCase().indexOf(_this.searchbarDefault.toLowerCase()) > -1;
+            });
+        }
+    };
+    AppearanceAnimationLayout5.prototype.impar = function (indice) {
+        return indice % 2 != 0;
+    };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('data'),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", Object)
-    ], SelectLayout1.prototype, "data", void 0);
+    ], AppearanceAnimationLayout5.prototype, "data", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('events'),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", Object)
-    ], SelectLayout1.prototype, "events", void 0);
-    SelectLayout1 = __decorate([
+    ], AppearanceAnimationLayout5.prototype, "events", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Object)
+    ], AppearanceAnimationLayout5.prototype, "config", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */])
+    ], AppearanceAnimationLayout5.prototype, "content", void 0);
+    AppearanceAnimationLayout5 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'select-layout-1',template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/core/select/layout-1/select.html"*/'<ion-item color="secondary" no-lines *ngIf="data != null">\n    <ion-label>{{data.title}}</ion-label>\n    <ion-select [(ngModel)]="data.selectedItem" multiple="false">\n        <ion-option value="0">Selecione</ion-option>\n        <ion-option *ngFor="let item of data.items; let i= index" [value]="item.id">{{item.title}}</ion-option>\n    </ion-select>\n</ion-item>'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/core/select/layout-1/select.html"*/
+            selector: 'appearance-animation-layout-5',template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/core/list-view/appearance-animation/layout-5/appearance-animation.html"*/'<!--Theme Appearance animation (Zoom In)-->\n<ion-content>\n    <h2 text-center text-wrap class="broadcomb" *ngIf="config.broadcomb">{{config.broadcomb.toUpperCase()}}</h2>\n    <h2 padding text-center class="aviso" *ngIf="!config.naoExibirMensagemListaVazia && (animateItems.length < 1 || data.length < 1)">Nenhum\n        registro encontrado.</h2>\n    <ion-grid no-padding *ngIf="data != null">\n        <ion-row *ngIf="config.exibirDatas && animateItems.length > 0">\n            <ion-col col-12>\n                <h3 item-data text-wrap text-center *ngIf="ultimoDownload != \'Nunca\'">Último download: {{ultimoDownload\n                    | date: \'dd/MM/yyyy HH:mm\'}}</h3>\n                <h3 item-data text-wrap text-center *ngIf="ultimoUpload != \'Nunca\'">Última publicação: {{ultimoUpload |\n                    date: \'dd/MM/yyyy HH:mm\'}}</h3>\n                <h3 item-data text-wrap text-center *ngIf="ultimoDownload == \'Nunca\'">Último download:\n                    {{ultimoDownload}}</h3>\n                <h3 item-data text-wrap text-center *ngIf="ultimoUpload == \'Nunca\'">Última publicação: {{ultimoUpload}}</h3>\n            </ion-col>\n        </ion-row>\n        <ion-row *ngIf="config.btnNovoLabel">\n            <button ion-button default-button block text-capitalize box-shadow margin-bottom class="button-novo"\n                (click)="onEvent(\'onAddClick\')">{{config.btnNovoLabel}}</button>\n        </ion-row>\n        <ion-grid [ngClass]="{\'filtros\': config.filtrarSituacao}">\n            <ion-list radio-group no-margin [(ngModel)]="situacao" name="situacao" id="situacao" (ngModelChange)="filtrarSituacao($event)">\n                <ion-row *ngIf="config.filtrarSituacao">\n                    <h3 item-data text-wrap text-center>Filtros:</h3>\n                </ion-row>\n                <ion-row *ngIf="config.filtrarSituacao">\n                    <ion-col col-6>\n                        <ion-item radio>\n                            <ion-label>Em aberto</ion-label>\n                            <ion-radio [value]="0" checked></ion-radio>\n                        </ion-item>\n                    </ion-col>\n                    <ion-col col-6>\n                        <ion-item radio>\n                            <ion-label>Finalizado</ion-label>\n                            <ion-radio [value]="1"></ion-radio>\n                        </ion-item>\n                    </ion-col>\n                </ion-row>\n                <ion-row>\n                    <ion-col class="col-search" col-12 *ngIf="data.length > 0 || !animacaoAtiva" [ngClass]="{\'margin-top-10\': !config.exibirDatas}">\n                        <ion-searchbar [(ngModel)]="searchbarDefault" [placeholder]="\'Filtrar pela descrição\'"\n                            (ionInput)="filtrar($event.target.value)"></ion-searchbar>\n                    </ion-col>\n                </ion-row>\n            </ion-list>\n        </ion-grid>\n        <ion-grid style="padding-top: 0;">\n            <ion-row>\n                <ion-col col-12>\n                    <ion-list no-margin *ngIf="animacaoAtiva">\n                        <ion-item default-item no-lines [ngClass]="{\'novo-item\': verificaNovoItem(item) && !config.alteracoes, \'zoom-in\': true, \'laranja\': impar(i)}"\n                            *ngFor="let item of animateItems; let i = index;" (click)="onEvent(\'onItemClick\', item, $event)">\n                            <ion-row class="espacamento">\n                                <ion-col col-10>\n                                    <h2 *ngIf="!config.concatena" item-title text-wrap>{{item.descricao}}</h2>\n                                    <h2 *ngIf="config.concatena" item-title text-wrap>{{item.codigo}} -\n                                        {{item.descricao}}</h2>\n                                    <h3 item-situacao text-wrap *ngIf="config.subTitulo">{{config.subTitulo}}:\n                                        {{config.alteracoes ? (item.data | date: \'dd/MM/yyyy hh:mm\') :\n                                        item.situacao }}</h3>\n                                </ion-col>\n                                <ion-col col-2 *ngIf="config.exclusaoPossivel && permitirExclusao" (click)="onEvent(\'onIconClick\', item, $event)">\n                                    <ion-icon icon-small name="{{config.icon}}" item-right style="font-size: 25px !important; margin: 0px"\n                                        [ngClass]="{\'color-black\': !item.delete , \'color-red\' : item.delete}"></ion-icon>\n                                </ion-col>\n                            </ion-row>\n                            <ion-row class="espacamento" *ngIf="config.tipo">\n                                <ion-col col-12 class="tipo">\n                                    <h3 no-margin item-tipo text-wrap>{{item.tipo.length > 1 ?\n                                        item.tipo.toUpperCase() :\n                                        (item.tipo == \'C\' ? \'CONTROLADO\' : \'ESPECIALIZADO\') }}</h3>\n                                </ion-col>\n                            </ion-row>\n                        </ion-item>\n                    </ion-list>\n\n                    <ion-list no-margin *ngIf="!animacaoAtiva">\n                        <ion-item default-item no-lines [ngClass]="{\'novo-item\': verificaNovoItem(item) && !config.alteracoes, \'laranja\': impar(i)}"\n                            *ngFor="let item of data; let i = index;" (click)="onEvent(\'onItemClick\', item, $event)">\n                            <ion-row class="espacamento">\n                                <ion-col col-10>\n                                    <h2 *ngIf="!config.concatena" item-title text-wrap>{{item.descricao}}</h2>\n                                    <h2 *ngIf="config.concatena" item-title text-wrap>{{item.codigo}} -\n                                        {{item.descricao}}</h2>\n                                    <h3 item-situacao text-wrap *ngIf="config.subTitulo">{{config.subTitulo}}:\n                                        {{config.alteracoes ? (item.data | date: \'dd/MM/yyyy hh:mm\') :\n                                        item.situacao}}</h3>\n                                </ion-col>\n                                <ion-col col-2 *ngIf="config.exclusaoPossivel && permitirExclusao">\n                                    <ion-icon icon-small name="{{config.icon}}" item-right (click)="onEvent(\'onIconClick\', item, $event)"\n                                        style="font-size: 25px !important; margin: 0px" [ngClass]="{\'color-black\': !item.delete , \'color-red\' : item.delete}"></ion-icon>\n                                </ion-col>\n                            </ion-row>\n                            <ion-row class="espacamento" *ngIf="config.tipo">\n                                <ion-col col-12 class="tipo">\n                                    <h3 no-margin item-tipo text-wrap>{{item.tipo.length > 1 ?\n                                        item.tipo.toUpperCase() :\n                                        (item.tipo == \'C\' ? \'CONTROLADO\' : \'ESPECIALIZADO\') }}</h3>\n                                </ion-col>\n                            </ion-row>\n                        </ion-item>\n                    </ion-list>\n                </ion-col>\n            </ion-row>\n        </ion-grid>\n    </ion-grid>\n</ion-content>'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/core/list-view/appearance-animation/layout-5/appearance-animation.html"*/
         }),
-        __metadata("design:paramtypes", [])
-    ], SelectLayout1);
-    return SelectLayout1;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]])
+    ], AppearanceAnimationLayout5);
+    return AppearanceAnimationLayout5;
 }());
 
-//# sourceMappingURL=select-layout-1.js.map
+//# sourceMappingURL=appearance-animation-layout-5.js.map
 
 /***/ }),
 
-/***/ 794:
+/***/ 788:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginLayout2; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PermissaoExclusao; });
+var PermissaoExclusao = /** @class */ (function () {
+    function PermissaoExclusao(values) {
+        if (values === void 0) { values = {}; }
+        this.possuiBloqueioExclusaoArea = false;
+        this.possuiBloqueioExclusaoChecklist = false;
+        Object.assign(this, values);
+    }
+    return PermissaoExclusao;
+}());
+
+//# sourceMappingURL=permissao-exclusao.js.map
+
+/***/ }),
+
+/***/ 896:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AlteracoesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_toast_service__ = __webpack_require__(350);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_message_service__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_loading_service__ = __webpack_require__(89);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_storage_service_utils__ = __webpack_require__(156);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -165,8 +284,8 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
-            if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [0, t.value];
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -188,99 +307,126 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 
 
 
-var LoginLayout2 = /** @class */ (function () {
-    function LoginLayout2(toastService, storage) {
+
+
+
+var AlteracoesPage = /** @class */ (function () {
+    function AlteracoesPage(storage, messageService, loadingService, storageServiceUtils, navCtrl) {
         var _this = this;
-        this.toastService = toastService;
         this.storage = storage;
-        this.background = '';
-        this.passwordType = 'password';
-        this.salvarSenha = true;
-        this.onEvent = function (event, formValido) {
-            if (event == 'onLogin') {
-                if (!formValido) {
-                    _this.toastService.presentToastError("Preencha todos os campos para logar");
-                    return;
-                }
-                if (_this.events[event]) {
-                    _this.events[event]({
-                        'usuario': _this.usuario,
-                        'senha': _this.senha,
-                        'empresa': _this.empresa
-                    });
-                }
-            }
-            else {
-                if (_this.events[event]) {
-                    _this.events[event]();
-                }
+        this.messageService = messageService;
+        this.loadingService = loadingService;
+        this.storageServiceUtils = storageServiceUtils;
+        this.navCtrl = navCtrl;
+        this.reload = true;
+        this.alteracoes = [];
+        this.events = {
+            onIconClick: function (data) {
+                _this.confirmarExclusao(data);
             }
         };
-        this.popularSenhaSalva();
+        this.config = {
+            "exclusaoPossivel": false,
+            "icon": "trash",
+            "exibirDatas": false,
+            "subTitulo": "Data",
+            "tipo": false,
+            "alteracoes": true
+        };
+        this.obterAlteracoes();
     }
-    LoginLayout2.prototype.hideShowPassword = function () {
-        this.passwordType = this.passwordType == 'text' ? 'password' : 'text';
-    };
-    LoginLayout2.prototype.popularSenhaSalva = function () {
+    AlteracoesPage.prototype.obterAlteracoes = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var _a, senhaArmazenada, empresaArmazenada;
-            return __generator(this, function (_b) {
-                switch (_b.label) {
+            var atualizacoes;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
                     case 0: return [4 /*yield*/, this.storage.ready()];
                     case 1:
-                        _b.sent();
-                        _a = this;
-                        return [4 /*yield*/, this.storage.get('UsuarioSalvo')];
+                        _a.sent();
+                        return [4 /*yield*/, this.storage.get('atualizacoes')];
                     case 2:
-                        _a.usuario = _b.sent();
-                        if (!this.usuario) return [3 /*break*/, 5];
-                        return [4 /*yield*/, this.storage.get('Senha:' + this.usuario.toUpperCase())];
-                    case 3:
-                        senhaArmazenada = _b.sent();
-                        if (senhaArmazenada) {
-                            this.senha = senhaArmazenada;
+                        atualizacoes = _a.sent();
+                        if (atualizacoes && atualizacoes.length > 0) {
+                            this.alteracoes = atualizacoes;
                         }
                         else {
-                            this.senha = "";
+                            this.alteracoes = [];
+                            this.messageService.exibirMensagem("Não há nenhuma alteração pendente.");
+                            this.navCtrl.setRoot("HomePage");
                         }
-                        return [4 /*yield*/, this.storage.get('EmpresaSalva')];
-                    case 4:
-                        empresaArmazenada = _b.sent();
-                        if (empresaArmazenada) {
-                            this.empresa = empresaArmazenada;
-                        }
-                        else {
-                            this.empresa = "";
-                        }
-                        return [3 /*break*/, 6];
-                    case 5:
-                        this.usuario = "";
-                        this.senha = "";
-                        this.empresa = "";
-                        _b.label = 6;
-                    case 6: return [2 /*return*/];
+                        return [2 /*return*/];
                 }
             });
         });
     };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
-        __metadata("design:type", Object)
-    ], LoginLayout2.prototype, "data", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
-        __metadata("design:type", Object)
-    ], LoginLayout2.prototype, "events", void 0);
-    LoginLayout2 = __decorate([
+    AlteracoesPage.prototype.confirmarExclusao = function (alteracao) {
+        var _this = this;
+        var mensagem = "Deseja realmente desfazer a alteração '" + alteracao.descricao + "'?";
+        ;
+        this.messageService.exibirMensagemConfirmacao(mensagem, function () { _this.excluirAlteracao(alteracao); });
+    };
+    AlteracoesPage.prototype.excluirAlteracao = function (alteracao) {
+        var _this = this;
+        this.storage.ready().then(function () {
+            _this.storage.get('atualizacoes').then(function (atualizacoes) {
+                var indexArea = atualizacoes.findIndex(function (x) { return x.id == alteracao.id; });
+                atualizacoes.splice(indexArea, 1);
+                _this.storage.set('atualizacoes', atualizacoes);
+                _this.alteracoes = atualizacoes;
+                _this.atualizarLista();
+                _this.atualizarObra(alteracao);
+            });
+        });
+    };
+    AlteracoesPage.prototype.atualizarLista = function () {
+        var _this = this;
+        this.reload = false;
+        this.loadingService.show();
+        setTimeout(function () {
+            _this.reload = true;
+            _this.loadingService.hide();
+        }, 700);
+    };
+    AlteracoesPage.prototype.atualizarObra = function (alteracao) {
+        return __awaiter(this, void 0, void 0, function () {
+            var obras, index;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.storageServiceUtils.montarObra()];
+                    case 1:
+                        obras = _a.sent();
+                        switch (alteracao.entidade.toLowerCase()) {
+                            case "area":
+                                if (alteracao.tipo.toLowerCase() == "insert") {
+                                    index = obras.find(function (x) { return x.id == alteracao.obraId; }).areas.findIndex(function (x) { return x.id == JSON.parse(alteracao.valor).id; });
+                                    obras.find(function (x) { return x.id == alteracao.obraId; }).areas.splice(index, 1);
+                                    break;
+                                }
+                                else {
+                                    obras.find(function (x) { return x.id == alteracao.obraId; }).areas.find(function (x) { return x.id == JSON.parse(alteracao.valor).id; }).delete = !JSON.parse(alteracao.valor).delete;
+                                    break;
+                                }
+                        }
+                        this.storageServiceUtils.armazenarObraNoStorage(obras);
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    AlteracoesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'login-layout-2',template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/core/login/layout-2/login.html"*/'<ion-content has-header *ngIf="data != null" background-size style="background-color: white;">\n  <ion-grid no-padding *ngIf="data != null">\n    <ion-row padding-left padding-right align-items-center>\n      <ion-col *ngIf="data.possuiLogo" text-center col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n        <img [src]="data.logo">\n      </ion-col>\n      <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n        <ion-item transparent text-center no-lines>\n          <h1 ion-text login-title no-margin text-wrap text-capitalize>{{data.title}}</h1>\n        </ion-item>\n        <form #loginForm="ngForm">\n          <!-- <ion-item text-center margin-top transparent>\n            <select-layout-3 [data]="data.selectData" [events]="data.selectEvents"></select-layout-3>\n          </ion-item> -->\n          <ion-item text-center transparent>\n            <ion-label stacked>EMPRESA</ion-label>\n            <ion-select required [(ngModel)]="empresa" multiple="false" name="empresa" okText="Ok" cancelText="Cancelar">\n              <ion-option *ngFor="let item of data.selectData.items; let i= index" [value]="item.title">{{item.title}}</ion-option>\n            </ion-select>\n          </ion-item>\n          <!---Input field username-->\n          <ion-item text-center transparent>\n            <ion-label stacked>{{data.labelUsername}}</ion-label>\n            <ion-input text-center required type="text" [placeholder]="data.username" [(ngModel)]="usuario" name="usuario"></ion-input>\n          </ion-item>\n          <!---Input field password-->\n          <ion-item text-center transparent>\n            <ion-label stacked>{{data.labelPassword}}</ion-label>\n            <ion-input required text-center [type]="passwordType" clearOnEdit="false" [placeholder]="data.password"\n              [(ngModel)]="senha" name="senha" style="margin: 0 !important;"></ion-input>\n            <ion-icon item-end name="eye" class="passwordIcon" (click)="hideShowPassword()"></ion-icon>\n          </ion-item>\n          <ion-item transparent>\n            <ion-label>Salvar Senha</ion-label>\n            <ion-checkbox [(ngModel)]="salvarSenha" name="salvarSenha" (ionChange)="onEvent(\'onCheckSavePassword\')"></ion-checkbox>\n          </ion-item>\n          <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: black !important;"\n            (click)="onEvent(\'onLogin\', loginForm.valid)">{{data.login}}</button>\n          <button *ngIf="data.possuiRegistrar" ion-button default-button block text-capitalize margin-bottom (click)="onEvent(\'onRegister\')">{{data.register}}</button>\n          <button *ngIf="data.possuiEsqueciSenha" ion-button button-clear text-capitalize clear float-right no-padding\n            no-margin>{{data.forgotPassword}}</button>\n        </form>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/core/login/layout-2/login.html"*/
+            selector: 'page-alteracoes',template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/pages/alteracoes/alteracoes.html"*/'<ion-header>\n    <ion-navbar class="pad-nav-page">\n        <button ion-button menuToggle>\n            <ion-icon class="icon-menu" name="menu"></ion-icon>\n        </button>\n    </ion-navbar>\n</ion-header>\n\n<appearance-animation-layout-5 has-header *ngIf="reload" [data]="alteracoes" [events]="events" [config]="config"></appearance-animation-layout-5>'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/pages/alteracoes/alteracoes.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__utils_toast_service__["a" /* ToastService */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]])
-    ], LoginLayout2);
-    return LoginLayout2;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */],
+            __WEBPACK_IMPORTED_MODULE_3__utils_message_service__["a" /* MessageService */],
+            __WEBPACK_IMPORTED_MODULE_4__utils_loading_service__["a" /* LoadingService */],
+            __WEBPACK_IMPORTED_MODULE_5__utils_storage_service_utils__["a" /* StorageServiceUtils */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */]])
+    ], AlteracoesPage);
+    return AlteracoesPage;
 }());
 
-//# sourceMappingURL=login-layout-2.js.map
+//# sourceMappingURL=alteracoes.js.map
 
 /***/ })
 

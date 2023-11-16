@@ -1,14 +1,14 @@
 webpackJsonp([47],{
 
-/***/ 694:
+/***/ 745:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SelectLayout3Module", function() { return SelectLayout3Module; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SelectLayout4Module", function() { return SelectLayout4Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__select_layout_3__ = __webpack_require__(795);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__select_layout_4__ = __webpack_require__(878);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,35 +18,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SelectLayout3Module = /** @class */ (function () {
-    function SelectLayout3Module() {
+var SelectLayout4Module = /** @class */ (function () {
+    function SelectLayout4Module() {
     }
-    SelectLayout3Module = __decorate([
+    SelectLayout4Module = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__select_layout_3__["a" /* SelectLayout3 */],
+                __WEBPACK_IMPORTED_MODULE_2__select_layout_4__["a" /* SelectLayout4 */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__select_layout_3__["a" /* SelectLayout3 */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__select_layout_4__["a" /* SelectLayout4 */]),
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_2__select_layout_3__["a" /* SelectLayout3 */]
+                __WEBPACK_IMPORTED_MODULE_2__select_layout_4__["a" /* SelectLayout4 */]
             ],
             schemas: [__WEBPACK_IMPORTED_MODULE_0__angular_core__["CUSTOM_ELEMENTS_SCHEMA"]]
         })
-    ], SelectLayout3Module);
-    return SelectLayout3Module;
+    ], SelectLayout4Module);
+    return SelectLayout4Module;
 }());
 
-//# sourceMappingURL=select-layout-3.module.js.map
+//# sourceMappingURL=select-layout-4.module.js.map
 
 /***/ }),
 
-/***/ 795:
+/***/ 878:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SelectLayout3; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SelectLayout4; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -58,8 +58,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-var SelectLayout3 = /** @class */ (function () {
-    function SelectLayout3() {
+var SelectLayout4 = /** @class */ (function () {
+    function SelectLayout4() {
         var _this = this;
         this.onEvent = function (event, item) {
             if (_this.events[event]) {
@@ -70,21 +70,21 @@ var SelectLayout3 = /** @class */ (function () {
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('data'),
         __metadata("design:type", Object)
-    ], SelectLayout3.prototype, "data", void 0);
+    ], SelectLayout4.prototype, "data", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('events'),
         __metadata("design:type", Object)
-    ], SelectLayout3.prototype, "events", void 0);
-    SelectLayout3 = __decorate([
+    ], SelectLayout4.prototype, "events", void 0);
+    SelectLayout4 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'select-layout-3',template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/core/select/layout-3/select.html"*/'<ion-item color="secondary" no-lines *ngIf="data != null">\n    <ion-label>{{data.title}}</ion-label>\n    <ion-select [(ngModel)]="data.selectedItem" multiple="false" interface="action-sheet">\n        <ion-option *ngFor="let item of data.items; let i= index" [value]="item.id">{{item.title}}</ion-option>\n    </ion-select>\n</ion-item>\n'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/core/select/layout-3/select.html"*/
+            selector: 'select-layout-4',template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/core/select/layout-4/select.html"*/'<ion-item color="secondary" no-lines *ngIf="data != null">\n  <ion-label>{{data.title}}</ion-label>\n  <ion-select interface="popover" [(ngModel)]="data.selectedItemMonth" multiple="false">\n    <ion-option *ngFor="let item of data.itemsMonth; let i= index" [value]="item.id">{{item.title}}</ion-option>\n  </ion-select>\n\n  <ion-select interface="popover" [(ngModel)]="data.selectedItemYear" [multiple]="false">\n    <ion-option *ngFor="let item of data.itemsYears; let i= index" [value]="item.id">{{item.title}}</ion-option>\n  </ion-select>\n</ion-item>\n'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/core/select/layout-4/select.html"*/
         }),
         __metadata("design:paramtypes", [])
-    ], SelectLayout3);
-    return SelectLayout3;
+    ], SelectLayout4);
+    return SelectLayout4;
 }());
 
-//# sourceMappingURL=select-layout-3.js.map
+//# sourceMappingURL=select-layout-4.js.map
 
 /***/ })
 
