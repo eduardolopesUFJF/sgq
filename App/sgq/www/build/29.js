@@ -1,6 +1,6 @@
 webpackJsonp([29],{
 
-/***/ 769:
+/***/ 768:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomePageModule", function() { return HomePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(904);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home__ = __webpack_require__(903);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -39,7 +39,7 @@ var HomePageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 904:
+/***/ 903:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -100,7 +100,7 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-home',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar class="pad-nav-page">\n    <button ion-button menuToggle>\n      <ion-icon class="icon-menu" name="menu"></ion-icon>\n    </button>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <h1 *ngIf="!progressbarAtivo" padding text-center class="boas-vindas">Bem vindo ao SGQ Checklist</h1>\n  <h1 *ngIf="!progressbarAtivo" padding text-center class="instrucao">Somente inicie alguma atividade após <b>Baixar Dados</b></h1>\n  <ion-grid *ngIf="!progressbarAtivo">\n    <ion-row>\n      <button menuClose ion-item default-item item-title main-menu no-lines class="mt-6 mb-6" [ngClass]="p.color" *ngFor="let p of pages" (click)="openPage(p)">\n        <ion-icon outline icon-small icon-left>\n          <ion-icon [name]="p.icon"></ion-icon>\n        </ion-icon>\n        {{p.title}}\n      </button>\n    </ion-row>\n  </ion-grid>\n  <div class="progress-outer" *ngIf="progressbarAtivo">\n    <div class="progress-inner" [style.width]="progress + \'%\'">\n      {{this.Math.round(progress*100)/100}}%\n    </div>\n  </div>\n  <h2 *ngIf="progressbarAtivo" text-center style="color: red; font-weight: bold;">{{segundos}} segundos</h2>\n</ion-content>'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"C:\Users\jluca\OneDrive\Documents\GitHub\sgq\App\sgq\src\pages\home\home.html"*/'<ion-header>\n\n  <ion-navbar class="pad-nav-page">\n\n    <button ion-button menuToggle>\n\n      <ion-icon class="icon-menu" name="menu"></ion-icon>\n\n    </button>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <h1 *ngIf="!progressbarAtivo" padding text-center class="boas-vindas">Bem vindo ao SGQ Checklist</h1>\n\n  <h1 *ngIf="!progressbarAtivo" padding text-center class="instrucao">Somente inicie alguma atividade após <b>Baixar Dados</b></h1>\n\n  <ion-grid *ngIf="!progressbarAtivo">\n\n    <ion-row>\n\n      <button menuClose ion-item default-item item-title main-menu no-lines class="mt-6 mb-6" [ngClass]="p.color" *ngFor="let p of pages" (click)="openPage(p)">\n\n        <ion-icon outline icon-small icon-left>\n\n          <ion-icon [name]="p.icon"></ion-icon>\n\n        </ion-icon>\n\n        {{p.title}}\n\n      </button>\n\n    </ion-row>\n\n  </ion-grid>\n\n  <div class="progress-outer" *ngIf="progressbarAtivo">\n\n    <div class="progress-inner" [style.width]="progress + \'%\'">\n\n      {{this.Math.round(progress*100)/100}}%\n\n    </div>\n\n  </div>\n\n  <h2 *ngIf="progressbarAtivo" text-center style="color: red; font-weight: bold;">{{segundos}} segundos</h2>\n\n</ion-content>'/*ion-inline-end:"C:\Users\jluca\OneDrive\Documents\GitHub\sgq\App\sgq\src\pages\home\home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Events */]])
     ], HomePage);

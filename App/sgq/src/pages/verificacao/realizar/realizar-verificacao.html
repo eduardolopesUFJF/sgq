@@ -106,7 +106,8 @@
                     </ion-row>
                     <hr style="margin: 2px 0 0 0;">
                     <ion-list radio-group no-margin [(ngModel)]="item.inspecao1" name="itemInspecao1+{{i}}" *ngFor="let item of inspecao.inspecaoObraItens; let i=index;"
-                        [disabled]="servico.status == 1">
+                        [disabled]="servico.status == 1"
+                        >
                         <h2 text-wrap style="font-weight: bold;margin-top: 10px;">{{item.descricao}}</h2>
                         <ion-grid>
                             <ion-row>
