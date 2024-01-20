@@ -1,6 +1,6 @@
 webpackJsonp([4],{
 
-/***/ 775:
+/***/ 776:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RealizadoPorPageModule", function() { return RealizadoPorPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__realizado_por__ = __webpack_require__(913);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__realizado_por__ = __webpack_require__(914);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_selectable__ = __webpack_require__(352);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -175,7 +175,7 @@ var Servico = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 913:
+/***/ 914:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -184,12 +184,12 @@ var Servico = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_inspecao__ = __webpack_require__(799);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_storage__ = __webpack_require__(88);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_realizado_por__ = __webpack_require__(914);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_realizado_por__ = __webpack_require__(915);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_storage_service_utils__ = __webpack_require__(156);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__models_servico__ = __webpack_require__(800);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__models_fornecedor__ = __webpack_require__(915);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__models_fornecedor__ = __webpack_require__(916);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utils_toast_service__ = __webpack_require__(350);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__models_realizado_por_funcionario__ = __webpack_require__(916);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__models_realizado_por_funcionario__ = __webpack_require__(917);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_angular2_uuid__ = __webpack_require__(781);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_angular2_uuid___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_angular2_uuid__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__models_alteracao__ = __webpack_require__(786);
@@ -203,10 +203,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
         function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
@@ -236,6 +237,13 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
+};
+var __spreadArrays = (this && this.__spreadArrays) || function () {
+    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+            r[k] = a[j];
+    return r;
 };
 
 
@@ -292,7 +300,7 @@ var RealizadoPorPage = /** @class */ (function () {
                         obra = obras.find(function (x) { return x.id == _this.servico.idObra; });
                         this.idCentroCusto = obra.idCentroCusto;
                         this.descricaoCentroCusto = obra.descricao;
-                        this.funcionarios = this.funcionarios.filter(function (x) { return x.idCentroCusto == null || x.idCentroCusto == _this.idCentroCusto; }).slice();
+                        this.funcionarios = __spreadArrays(this.funcionarios.filter(function (x) { return x.idCentroCusto == null || x.idCentroCusto == _this.idCentroCusto; }));
                         return [2 /*return*/];
                 }
             });
@@ -424,7 +432,7 @@ var RealizadoPorPage = /** @class */ (function () {
     };
     RealizadoPorPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-realizado-por',template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/pages/verificacao/realizado-por/realizado-por.html"*/'<ion-header>\n    <ion-navbar class="pad-nav-page-nt2">\n\n    </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <ion-grid no-padding>\n        <ion-row *ngIf="!cadastrando">\n            <ion-col col-12>\n                <button ion-button default-button block text-capitalize box-shadow margin-bottom class="button-novo"\n                (click)="cadastrando = true">Adicionar</button>\n            </ion-col>\n        </ion-row>\n        <ion-row *ngIf="!cadastrando">\n            <ion-list no-margin>\n                <ion-item default-item no-lines [ngClass]="{\'novo-item\': !item.id, \'item-removido\': item.delete}"\n                    *ngFor="let item of inspecao.realizadosPor; let i = index;">\n                    <ion-row class="espacamento">\n                        <ion-col col-10>\n                            <h2 item-title text-wrap>Empresa: {{ item.tipoFuncionario == 0 ? item.nomeFornecedor :\n                                item.nomeCentroCusto }}</h2>\n                            <h2 item-title text-wrap>Funcionários: {{ item.nomesFuncionarios }}</h2>\n                        </ion-col>\n                        <ion-col col-2>\n                            <ion-icon name="trash" icon-small item-right style="font-size: 32px !important; margin: 0px"\n                                (click)="remover(item)"></ion-icon>\n                        </ion-col>\n                    </ion-row>\n                </ion-item>\n            </ion-list>\n        </ion-row>\n        <ion-row padding-left padding-right *ngIf="cadastrando">\n            <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n                <form #cadastroForm="ngForm" padding-top>\n                    <ion-list radio-group no-margin [(ngModel)]="realizadoPor.tipoFuncionario" name="tipoFuncionario"\n                        (ngModelChange)="limparSelecoes()">\n                        <ion-grid>\n                            <ion-row>\n                                <ion-col col-6>\n                                    <ion-item radio>\n                                        <ion-label>Terceirizado</ion-label>\n                                        <ion-radio [value]="0" checked></ion-radio>\n                                    </ion-item>\n                                </ion-col>\n                                <ion-col col-6>\n                                    <ion-item radio>\n                                        <ion-label>Próprio</ion-label>\n                                        <ion-radio [value]="1"></ion-radio>\n                                    </ion-item>\n                                </ion-col>\n                            </ion-row>\n                        </ion-grid>\n                    </ion-list>\n                    <ion-item text-center transparent *ngIf="realizadoPor.tipoFuncionario == 0">\n                        <ion-label stacked>EMPRESA</ion-label>\n                        <ionic-selectable item-content [(ngModel)]="fornecedorSelecionado" [items]="fornecedores"\n                            itemValueField="id" itemTextField="nome" [canSearch]="true" name="fornecedorSelecionado"\n                            required>\n                        </ionic-selectable>\n                    </ion-item>\n                    <ion-item text-center transparent *ngIf="realizadoPor.tipoFuncionario == 1 || (realizadoPor.tipoFuncionario == 0 && fornecedorSelecionado.id)">\n                        <ion-label stacked>FUNCIONÁRIOS</ion-label>\n                        <ionic-selectable *ngIf="realizadoPor.tipoFuncionario == 1" item-content [(ngModel)]="funcionariosSelecionados"\n                            [items]="funcionarios" itemValueField="id" itemTextField="nome" [canSearch]="true"\n                            [isMultiple]="true" name="funcionariosSelecionados" required>\n                        </ionic-selectable>\n                        <ionic-selectable *ngIf="realizadoPor.tipoFuncionario == 0" item-content [(ngModel)]="funcionariosTerceirizadosSelecionados"\n                            [items]="fornecedorSelecionado.funcionariosTerceirizados" itemValueField="id" itemTextField="nome"\n                            [canSearch]="true" [isMultiple]="true" name="funcionariosTerceirizadosSelecionados">\n                        </ionic-selectable>\n                    </ion-item>\n                    <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: rgb(33,177,75) !important;"\n                        (click)="salvar(cadastroForm.valid)">Salvar</button>\n                </form>\n            </ion-col>\n        </ion-row>\n    </ion-grid>\n</ion-content>'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/pages/verificacao/realizado-por/realizado-por.html"*/
+            selector: 'page-realizado-por',template:/*ion-inline-start:"C:\Users\jluca\OneDrive\Documents\GitHub\sgq\App\sgq\src\pages\verificacao\realizado-por\realizado-por.html"*/'<ion-header>\n\n    <ion-navbar class="pad-nav-page-nt2">\n\n\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n    <ion-grid no-padding>\n\n        <ion-row *ngIf="!cadastrando">\n\n            <ion-col col-12>\n\n                <button ion-button default-button block text-capitalize box-shadow margin-bottom class="button-novo"\n\n                (click)="cadastrando = true">Adicionar</button>\n\n            </ion-col>\n\n        </ion-row>\n\n        <ion-row *ngIf="!cadastrando">\n\n            <ion-list no-margin>\n\n                <ion-item default-item no-lines [ngClass]="{\'novo-item\': !item.id, \'item-removido\': item.delete}"\n\n                    *ngFor="let item of inspecao.realizadosPor; let i = index;">\n\n                    <ion-row class="espacamento">\n\n                        <ion-col col-10>\n\n                            <h2 item-title text-wrap>Empresa: {{ item.tipoFuncionario == 0 ? item.nomeFornecedor :\n\n                                item.nomeCentroCusto }}</h2>\n\n                            <h2 item-title text-wrap>Funcionários: {{ item.nomesFuncionarios }}</h2>\n\n                        </ion-col>\n\n                        <ion-col col-2>\n\n                            <ion-icon name="trash" icon-small item-right style="font-size: 32px !important; margin: 0px"\n\n                                (click)="remover(item)"></ion-icon>\n\n                        </ion-col>\n\n                    </ion-row>\n\n                </ion-item>\n\n            </ion-list>\n\n        </ion-row>\n\n        <ion-row padding-left padding-right *ngIf="cadastrando">\n\n            <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n\n                <form #cadastroForm="ngForm" padding-top>\n\n                    <ion-list radio-group no-margin [(ngModel)]="realizadoPor.tipoFuncionario" name="tipoFuncionario"\n\n                        (ngModelChange)="limparSelecoes()">\n\n                        <ion-grid>\n\n                            <ion-row>\n\n                                <ion-col col-6>\n\n                                    <ion-item radio>\n\n                                        <ion-label>Terceirizado</ion-label>\n\n                                        <ion-radio [value]="0" checked></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                                <ion-col col-6>\n\n                                    <ion-item radio>\n\n                                        <ion-label>Próprio</ion-label>\n\n                                        <ion-radio [value]="1"></ion-radio>\n\n                                    </ion-item>\n\n                                </ion-col>\n\n                            </ion-row>\n\n                        </ion-grid>\n\n                    </ion-list>\n\n                    <ion-item text-center transparent *ngIf="realizadoPor.tipoFuncionario == 0">\n\n                        <ion-label stacked>EMPRESA</ion-label>\n\n                        <ionic-selectable item-content [(ngModel)]="fornecedorSelecionado" [items]="fornecedores"\n\n                            itemValueField="id" itemTextField="nome" [canSearch]="true" name="fornecedorSelecionado"\n\n                            required>\n\n                        </ionic-selectable>\n\n                    </ion-item>\n\n                    <ion-item text-center transparent *ngIf="realizadoPor.tipoFuncionario == 1 || (realizadoPor.tipoFuncionario == 0 && fornecedorSelecionado.id)">\n\n                        <ion-label stacked>FUNCIONÁRIOS</ion-label>\n\n                        <ionic-selectable *ngIf="realizadoPor.tipoFuncionario == 1" item-content [(ngModel)]="funcionariosSelecionados"\n\n                            [items]="funcionarios" itemValueField="id" itemTextField="nome" [canSearch]="true"\n\n                            [isMultiple]="true" name="funcionariosSelecionados" required>\n\n                        </ionic-selectable>\n\n                        <ionic-selectable *ngIf="realizadoPor.tipoFuncionario == 0" item-content [(ngModel)]="funcionariosTerceirizadosSelecionados"\n\n                            [items]="fornecedorSelecionado.funcionariosTerceirizados" itemValueField="id" itemTextField="nome"\n\n                            [canSearch]="true" [isMultiple]="true" name="funcionariosTerceirizadosSelecionados">\n\n                        </ionic-selectable>\n\n                    </ion-item>\n\n                    <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: rgb(33,177,75) !important;"\n\n                        (click)="salvar(cadastroForm.valid)">Salvar</button>\n\n                </form>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-grid>\n\n</ion-content>'/*ion-inline-end:"C:\Users\jluca\OneDrive\Documents\GitHub\sgq\App\sgq\src\pages\verificacao\realizado-por\realizado-por.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["u" /* ViewController */],
             __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */],
@@ -439,7 +447,7 @@ var RealizadoPorPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 914:
+/***/ 915:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -461,7 +469,7 @@ var RealizadoPor = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 915:
+/***/ 916:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -479,7 +487,7 @@ var Fornecedor = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 916:
+/***/ 917:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

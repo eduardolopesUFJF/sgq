@@ -1,6 +1,6 @@
 webpackJsonp([24],{
 
-/***/ 729:
+/***/ 730:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ParallaxLayout2Module", function() { return ParallaxLayout2Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__parallax_layout_2__ = __webpack_require__(862);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__parallax_layout_2__ = __webpack_require__(863);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__elastic_header_elastic_header_module__ = __webpack_require__(784);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -147,7 +147,7 @@ var ElasticHeader = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 862:
+/***/ 863:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -218,7 +218,7 @@ var ParallaxLayout2 = /** @class */ (function () {
     ], ParallaxLayout2.prototype, "content", void 0);
     ParallaxLayout2 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'parallax-layout-2',template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/core/parallax/layout-2/parallax.html"*/'<!--- Theme Parallax - Profile -->\n<ion-header header-ios>\n  <ion-navbar transparent [ngClass]="{\'active\':isClassActive()}">\n    <button ion-button menuToggle>\n            <ion-icon [name]="menu"></ion-icon>\n        </button>\n    <ion-title *ngIf="data != null">{{data.headerTitle}}</ion-title>\n  </ion-navbar>\n</ion-header>\n<!-- Content -->\n<ion-content elastic-header>\n  <div padding background-size id="elastic-header" [ngStyle]="{\'background-image\': \'url(\' + headerImage + \')\'}">\n    <!--- Info Block -->\n    <ion-item info-block transparent no-lines text-center>\n      <!-- Avatar -->\n      <ion-thumbnail *ngIf="data != null">\n        <img [src]="data.avatar" />\n      </ion-thumbnail>\n      <!-- Parallx Title -->\n      <h2 parallax-title no-margin *ngIf="data != null">{{data.title}}</h2>\n      <!-- Parallx Subtitle -->\n      <h3 parallax-subtitle *ngIf="data != null">{{data.subtitle}}</h3>\n    </ion-item>\n  </div>\n  <ion-list *ngIf="data != null">\n    <ion-item default-item no-lines *ngFor="let item of data.items;let i = index" (click)="onEvent(\'onItemClick\', item)">\n      <ion-thumbnail item-start>\n        <img [src]="item.avatar" />\n      </ion-thumbnail>\n      <h2 item-title>{{item.title}}</h2>\n      <h3 item-subtitle text-wrap>{{item.subtitle}}</h3>\n      <button box-shadow text-capitalize button-follow ion-button item-end>{{item.button}}</button>\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/core/parallax/layout-2/parallax.html"*/
+            selector: 'parallax-layout-2',template:/*ion-inline-start:"C:\Users\jluca\OneDrive\Documents\GitHub\sgq\App\sgq\src\core\parallax\layout-2\parallax.html"*/'<!--- Theme Parallax - Profile -->\n\n<ion-header header-ios>\n\n  <ion-navbar transparent [ngClass]="{\'active\':isClassActive()}">\n\n    <button ion-button menuToggle>\n\n            <ion-icon [name]="menu"></ion-icon>\n\n        </button>\n\n    <ion-title *ngIf="data != null">{{data.headerTitle}}</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<!-- Content -->\n\n<ion-content elastic-header>\n\n  <div padding background-size id="elastic-header" [ngStyle]="{\'background-image\': \'url(\' + headerImage + \')\'}">\n\n    <!--- Info Block -->\n\n    <ion-item info-block transparent no-lines text-center>\n\n      <!-- Avatar -->\n\n      <ion-thumbnail *ngIf="data != null">\n\n        <img [src]="data.avatar" />\n\n      </ion-thumbnail>\n\n      <!-- Parallx Title -->\n\n      <h2 parallax-title no-margin *ngIf="data != null">{{data.title}}</h2>\n\n      <!-- Parallx Subtitle -->\n\n      <h3 parallax-subtitle *ngIf="data != null">{{data.subtitle}}</h3>\n\n    </ion-item>\n\n  </div>\n\n  <ion-list *ngIf="data != null">\n\n    <ion-item default-item no-lines *ngFor="let item of data.items;let i = index" (click)="onEvent(\'onItemClick\', item)">\n\n      <ion-thumbnail item-start>\n\n        <img [src]="item.avatar" />\n\n      </ion-thumbnail>\n\n      <h2 item-title>{{item.title}}</h2>\n\n      <h3 item-subtitle text-wrap>{{item.subtitle}}</h3>\n\n      <button box-shadow text-capitalize button-follow ion-button item-end>{{item.button}}</button>\n\n    </ion-item>\n\n  </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\jluca\OneDrive\Documents\GitHub\sgq\App\sgq\src\core\parallax\layout-2\parallax.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], ParallaxLayout2);

@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VerificacaoPageModule", function() { return VerificacaoPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__verificacao__ = __webpack_require__(919);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__verificacao__ = __webpack_require__(918);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -220,7 +220,7 @@ var ItemInspecao = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 919:
+/***/ 918:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -247,10 +247,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
         function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
@@ -281,6 +282,13 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+var __spreadArrays = (this && this.__spreadArrays) || function () {
+    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+            r[k] = a[j];
+    return r;
+};
 
 
 
@@ -308,8 +316,8 @@ var VerificacaoPage = /** @class */ (function () {
         this.itensBackup = [];
         this.inspecaoBackup = new __WEBPACK_IMPORTED_MODULE_3__models_inspecao__["a" /* Inspecao */]();
         this.servico = navParams.data.servico;
-        this.inspecoes = this.ordenar(this.servico.inspecoesObra).slice();
-        this.inspecoesBackup = this.servico.inspecoesObra.slice();
+        this.inspecoes = __spreadArrays(this.ordenar(this.servico.inspecoesObra));
+        this.inspecoesBackup = __spreadArrays(this.servico.inspecoesObra);
         this.obterItemChecklist();
         this.broadcomb = navParams.data.broadcomb + " >> " + this.servico.descricao;
     }
@@ -325,14 +333,15 @@ var VerificacaoPage = /** @class */ (function () {
         var _this = this;
         setTimeout(function () {
             if (_this.servico.status == 0) {
-                _this.servico.situacao = 'Verificação não iniciada';
+                _this.servico.situacao = 'Em aberto';
                 _this.criarAtualizacaoStatus();
             }
-            else if (_this.servico.status == 1 && _this.servico.inspecoesObra.some(function (x) { return x.status == 0; })) {
+            else if (_this.servico.status == 1 && !_this.servico.inspecoesObra.every(function (x) { return x.status == 2 || x.status == 1; })) {
                 _this.servico.status = 0;
                 _this.messageService.exibirMensagem("Não foi possível finalizar o Serviço, existem inspeções em aberto.");
             }
             else {
+                _this.servico.situacao = 'Finalizado';
                 _this.criarAtualizacaoStatus();
             }
         }, 100);
@@ -403,7 +412,7 @@ var VerificacaoPage = /** @class */ (function () {
                 });
                 _this.inspecoes.unshift(inspecao);
                 _this.inspecoesBackup.unshift(inspecao);
-                _this.servico.inspecoesObra = _this.inspecoes.slice();
+                _this.servico.inspecoesObra = __spreadArrays(_this.inspecoes);
                 _this.criarInspecao(inspecao);
             }
         });
@@ -428,17 +437,17 @@ var VerificacaoPage = /** @class */ (function () {
                 data.inspecao.qtdRA = data.inspecao.inspecaoObraItens.filter(function (x) { return x.inspecao2 == 'A'; }).length;
                 var index = _this.inspecoesBackup.findIndex(function (x) { return data.inspecao.id != 0 ? (x.id == data.inspecao.id) : (x.idGuidInspecao == data.inspecao.idGuidInspecao); });
                 _this.inspecoesBackup[index] = data.inspecao;
-                _this.inspecoes = _this.inspecoesBackup.slice();
+                _this.inspecoes = __spreadArrays(_this.inspecoesBackup);
                 _this.editarInspecao(data.inspecao, "Realização da verificação");
             }
             else {
-                data.inspecao.inspecaoObraItens = _this.itensBackup.slice();
+                data.inspecao.inspecaoObraItens = __spreadArrays(_this.itensBackup);
                 data.inspecao.status = _this.statusBackup;
                 data.inspecao.idFuncionarioAprovado = _this.idFuncionarioAprovadoBackup;
                 data.inspecao.idFuncionarioInspecionado = _this.idFuncionarioInspecionadoBackup;
                 var index = _this.inspecoesBackup.findIndex(function (x) { return data.inspecao.id != 0 ? (x.id == data.inspecao.id) : (x.idGuidInspecao == data.inspecao.idGuidInspecao); });
                 _this.inspecoesBackup[index] = data.inspecao;
-                _this.inspecoes = _this.inspecoesBackup.slice();
+                _this.inspecoes = __spreadArrays(_this.inspecoesBackup);
             }
         });
     };
@@ -451,8 +460,8 @@ var VerificacaoPage = /** @class */ (function () {
             if (inspecao) {
                 var index = _this.inspecoesBackup.findIndex(function (x) { return inspecao.id != 0 ? (x.id == inspecao.id) : (x.idGuidInspecao == inspecao.idGuidInspecao); });
                 _this.inspecoesBackup[index] = inspecao;
-                _this.inspecoes = _this.inspecoesBackup.slice();
-                _this.servico.inspecoesObra = _this.inspecoes.slice();
+                _this.inspecoes = __spreadArrays(_this.inspecoesBackup);
+                _this.servico.inspecoesObra = __spreadArrays(_this.inspecoes);
                 _this.editarInspecao(inspecao, "Edição da verificação");
             }
             else {
@@ -504,7 +513,7 @@ var VerificacaoPage = /** @class */ (function () {
     };
     VerificacaoPage.prototype.filtrar = function (valor) {
         if (valor.length == 0) {
-            this.inspecoes = this.inspecoesBackup.slice();
+            this.inspecoes = __spreadArrays(this.inspecoesBackup);
         }
         else {
             this.inspecoes = this.inspecoesBackup.filter(function (item) {
@@ -665,7 +674,7 @@ var VerificacaoPage = /** @class */ (function () {
     };
     VerificacaoPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-verificacao',template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/pages/verificacao/verificacao.html"*/'<ion-header>\n    <ion-navbar class="pad-nav-page-nt">\n        <ion-row>\n            <ion-col col-10 class="ptb-0">\n            </ion-col>\n            <ion-col col-2 class="ptb-0" (click)="voltarHome()">\n                <div buy>\n                    <ion-icon class="icon-menu home-icon" name="home"></ion-icon>\n                </div>\n            </ion-col>\n        </ion-row>\n    </ion-navbar>\n</ion-header>\n\n<ion-content>\n    <h2 text-center text-wrap class="broadcomb">{{broadcomb.toUpperCase()}}</h2>\n    <h2 padding text-center class="aviso" *ngIf="inspecoes.length < 1">Nenhum registro encontrado.</h2>\n    <ion-grid no-padding>\n        <ion-row *ngIf="servico.status == 0">\n            <button ion-button default-button block text-capitalize box-shadow margin-bottom class="button-novo"\n                (click)="novaInspecao()">Nova inspeção</button>\n        </ion-row>\n        <ion-row>\n            <ion-col class="col-search" col-12 *ngIf="inspecoesBackup.length > 0">\n                <ion-searchbar [placeholder]="\'Filtrar pelo local\'" (ionInput)="filtrar($event.target.value)"></ion-searchbar>\n            </ion-col>\n            <ion-col col-12>\n                <ion-list radio-group no-margin [(ngModel)]="servico.status" name="status" (ngModelChange)="atualizarStatus()">\n                    <ion-grid>\n                        <ion-row>\n                            <ion-col col-6>\n                                <ion-item radio>\n                                    <ion-label text-center>Em aberto</ion-label>\n                                    <ion-radio [value]="0"></ion-radio>\n                                </ion-item>\n                            </ion-col>\n                            <ion-col col-6>\n                                <ion-item radio>\n                                    <ion-label text-center>Finalizado</ion-label>\n                                    <ion-radio [value]="1"></ion-radio>\n                                </ion-item>\n                            </ion-col>\n                        </ion-row>\n                    </ion-grid>\n                </ion-list>\n            </ion-col>\n            <ion-col col-12>\n                <ion-list no-margin>\n                    <ion-item default-item no-lines [ngClass]="{\'novo-item\': !item.id, \'item-removido\': item.delete}"\n                        *ngFor="let item of inspecoes; let i = index;">\n                        <ion-row class="espacamento">\n                            <ion-col col-10 (click)="abrirItensInspecao(item)">\n                                <h2 item-title text-wrap *ngIf="itemChecklist.campo1">{{itemChecklist.campo1}}:\n                                    {{item.campo1}}</h2>\n                                <h2 item-title text-wrap *ngIf="itemChecklist.campo2">{{itemChecklist.campo2}}:\n                                    {{item.campo2}}</h2>\n                                <h2 item-title text-wrap *ngIf="itemChecklist.campo3">{{itemChecklist.campo3}}:\n                                    {{item.campo3}}</h2>\n                                <h2 item-title text-wrap *ngIf="itemChecklist.campo4">{{itemChecklist.campo4}}:\n                                    {{item.campo4}}</h2>\n                                <h3 item-situacao text-wrap>Situação: {{item.situacao}}</h3>\n                                <h3 item-situacao text-wrap>Abertura: {{item.dataInspecao ? (item.dataInspecao | date:\n                                    \'dd/MM/yyyy\') : \'Não informada\'}}</h3>\n                                <h3 item-situacao text-wrap>Encerramento: {{item.dataEncerramento ?\n                                    (item.dataEncerramento | date: \'dd/MM/yyyy\') : \'Não informada\'}}</h3>\n                            </ion-col>\n                            <ion-col col-2>\n                                <ion-icon name="more" icon-small item-right style="font-size: 32px !important; margin: 0px"\n                                    (click)="exibirOpcoes(item)"></ion-icon>\n                            </ion-col>\n                        </ion-row>\n                        <ion-row class="espacamento" style="padding: 0 0 10px 0 !important;">\n                            <ion-col col-1></ion-col>\n                            <ion-col col-2 style="background-color: blue;">\n                                <h2 item-title text-wrap no-margin text-center>NA</h2>\n                                <h3 item-situacao text-wrap no-margin text-center>{{item.qtdNA}}</h3>\n                            </ion-col>\n                            <ion-col col-2 style="background-color: darkgreen;">\n                                <h2 item-title text-wrap no-margin text-center>A</h2>\n                                <h3 item-situacao text-wrap no-margin text-center>{{item.qtdA}}</h3>\n                            </ion-col>\n                            <ion-col col-2 style="background-color: yellow;">\n                                <h2 text-wrap negrito no-margin text-center>R</h2>\n                                <h3 text-wrap negrito no-margin text-center>{{item.qtdR}}</h3>\n                            </ion-col>\n                            <ion-col col-2 style="background-color: red;">\n                                <h2 item-title text-wrap no-margin text-center>X</h2>\n                                <h3 item-situacao text-wrap no-margin text-center>{{item.qtdX}}</h3>\n                            </ion-col>\n                            <ion-col col-2 style="background-color: orange;">\n                                <h2 item-title text-wrap no-margin text-center>RA</h2>\n                                <h3 item-situacao text-wrap no-margin text-center>{{item.qtdRA}}</h3>\n                            </ion-col>\n                            <ion-col col-1></ion-col>\n                        </ion-row>\n                    </ion-item>\n                </ion-list>\n            </ion-col>\n        </ion-row>\n    </ion-grid>\n</ion-content>'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/pages/verificacao/verificacao.html"*/
+            selector: 'page-verificacao',template:/*ion-inline-start:"C:\Users\jluca\OneDrive\Documents\GitHub\sgq\App\sgq\src\pages\verificacao\verificacao.html"*/'<ion-header>\n\n    <ion-navbar class="pad-nav-page-nt">\n\n        <ion-row>\n\n            <ion-col col-10 class="ptb-0">\n\n            </ion-col>\n\n            <ion-col col-2 class="ptb-0" (click)="voltarHome()">\n\n                <div buy>\n\n                    <ion-icon class="icon-menu home-icon" name="home"></ion-icon>\n\n                </div>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n    <h2 text-center text-wrap class="broadcomb">{{broadcomb.toUpperCase()}}</h2>\n\n    <h2 padding text-center class="aviso" *ngIf="inspecoes.length < 1">Nenhum registro encontrado.</h2>\n\n    <ion-grid no-padding>\n\n        <ion-row *ngIf="servico.status == 0">\n\n            <button ion-button default-button block text-capitalize box-shadow margin-bottom class="button-novo"\n\n                (click)="novaInspecao()">Nova inspeção</button>\n\n        </ion-row>\n\n        <ion-row>\n\n            <ion-col class="col-search" col-12 *ngIf="inspecoesBackup.length > 0">\n\n                <ion-searchbar [placeholder]="\'Filtrar pelo local\'" (ionInput)="filtrar($event.target.value)"></ion-searchbar>\n\n            </ion-col>\n\n            <ion-col col-12>\n\n                <ion-list radio-group no-margin [(ngModel)]="servico.status" name="status" (ngModelChange)="atualizarStatus()">\n\n                    <ion-grid>\n\n                        <ion-row>\n\n                            <ion-col col-6>\n\n                                <ion-item radio>\n\n                                    <ion-label text-center>Em aberto</ion-label>\n\n                                    <ion-radio [value]="0"></ion-radio>\n\n                                </ion-item>\n\n                            </ion-col>\n\n                            <ion-col col-6>\n\n                                <ion-item radio>\n\n                                    <ion-label text-center>Finalizado</ion-label>\n\n                                    <ion-radio [value]="1"></ion-radio>\n\n                                </ion-item>\n\n                            </ion-col>\n\n                        </ion-row>\n\n                    </ion-grid>\n\n                </ion-list>\n\n            </ion-col>\n\n            <ion-col col-12>\n\n                <ion-list no-margin>\n\n                    <ion-item default-item no-lines [ngClass]="{\'novo-item\': !item.id, \'item-removido\': item.delete}"\n\n                        *ngFor="let item of inspecoes; let i = index;">\n\n                        <ion-row class="espacamento">\n\n                            <ion-col col-10 (click)="abrirItensInspecao(item)">\n\n                                <h2 item-title text-wrap *ngIf="itemChecklist.campo1">{{itemChecklist.campo1}}:\n\n                                    {{item.campo1}}</h2>\n\n                                <h2 item-title text-wrap *ngIf="itemChecklist.campo2">{{itemChecklist.campo2}}:\n\n                                    {{item.campo2}}</h2>\n\n                                <h2 item-title text-wrap *ngIf="itemChecklist.campo3">{{itemChecklist.campo3}}:\n\n                                    {{item.campo3}}</h2>\n\n                                <h2 item-title text-wrap *ngIf="itemChecklist.campo4">{{itemChecklist.campo4}}:\n\n                                    {{item.campo4}}</h2>\n\n                                <h3 item-situacao text-wrap>Situação: {{item.situacao}}</h3>\n\n                                <h3 item-situacao text-wrap>Abertura: {{item.dataInspecao ? (item.dataInspecao | date:\n\n                                    \'dd/MM/yyyy\') : \'Não informada\'}}</h3>\n\n                                <h3 item-situacao text-wrap>Encerramento: {{item.dataEncerramento ?\n\n                                    (item.dataEncerramento | date: \'dd/MM/yyyy\') : \'Não informada\'}}</h3>\n\n                            </ion-col>\n\n                            <ion-col col-2>\n\n                                <ion-icon name="more" icon-small item-right style="font-size: 32px !important; margin: 0px"\n\n                                    (click)="exibirOpcoes(item)"></ion-icon>\n\n                            </ion-col>\n\n                        </ion-row>\n\n                        <ion-row class="espacamento" style="padding: 0 0 10px 0 !important;">\n\n                            <ion-col col-1></ion-col>\n\n                            <ion-col col-2 style="background-color: blue;">\n\n                                <h2 item-title text-wrap no-margin text-center>NA</h2>\n\n                                <h3 item-situacao text-wrap no-margin text-center>{{item.qtdNA}}</h3>\n\n                            </ion-col>\n\n                            <ion-col col-2 style="background-color: darkgreen;">\n\n                                <h2 item-title text-wrap no-margin text-center>A</h2>\n\n                                <h3 item-situacao text-wrap no-margin text-center>{{item.qtdA}}</h3>\n\n                            </ion-col>\n\n                            <ion-col col-2 style="background-color: yellow;">\n\n                                <h2 text-wrap negrito no-margin text-center>R</h2>\n\n                                <h3 text-wrap negrito no-margin text-center>{{item.qtdR}}</h3>\n\n                            </ion-col>\n\n                            <ion-col col-2 style="background-color: red;">\n\n                                <h2 item-title text-wrap no-margin text-center>X</h2>\n\n                                <h3 item-situacao text-wrap no-margin text-center>{{item.qtdX}}</h3>\n\n                            </ion-col>\n\n                            <ion-col col-2 style="background-color: orange;">\n\n                                <h2 item-title text-wrap no-margin text-center>RA</h2>\n\n                                <h3 item-situacao text-wrap no-margin text-center>{{item.qtdRA}}</h3>\n\n                            </ion-col>\n\n                            <ion-col col-1></ion-col>\n\n                        </ion-row>\n\n                    </ion-item>\n\n                </ion-list>\n\n            </ion-col>\n\n        </ion-row>\n\n    </ion-grid>\n\n</ion-content>'/*ion-inline-end:"C:\Users\jluca\OneDrive\Documents\GitHub\sgq\App\sgq\src\pages\verificacao\verificacao.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* NavParams */],
             __WEBPACK_IMPORTED_MODULE_4__ionic_storage__["b" /* Storage */],
