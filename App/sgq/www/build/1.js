@@ -4139,7 +4139,7 @@ var MapsLayout3 = /** @class */ (function () {
     ], MapsLayout3.prototype, "events", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */])
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]) === "function" && _a || Object)
     ], MapsLayout3.prototype, "content", void 0);
     MapsLayout3 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -4148,6 +4148,7 @@ var MapsLayout3 = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], MapsLayout3);
     return MapsLayout3;
+    var _a;
 }());
 
 //# sourceMappingURL=maps-layout-3.js.map

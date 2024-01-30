@@ -82,7 +82,7 @@ var DragAndDropLayout1 = /** @class */ (function () {
     ], DragAndDropLayout1.prototype, "events", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */])
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]) === "function" && _a || Object)
     ], DragAndDropLayout1.prototype, "content", void 0);
     DragAndDropLayout1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -91,6 +91,7 @@ var DragAndDropLayout1 = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], DragAndDropLayout1);
     return DragAndDropLayout1;
+    var _a;
 }());
 
 //# sourceMappingURL=drag-and-drop-layout-1.js.map

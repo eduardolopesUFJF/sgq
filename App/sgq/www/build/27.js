@@ -138,9 +138,10 @@ var ElasticHeader = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Directive"])({
             selector: '[elastic-header]'
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"], __WEBPACK_IMPORTED_MODULE_0__angular_core__["Renderer"]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["Renderer"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["Renderer"]) === "function" && _b || Object])
     ], ElasticHeader);
     return ElasticHeader;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=elastic-header.js.map
@@ -222,15 +223,16 @@ var ActionSheetLayout1 = /** @class */ (function () {
     ], ActionSheetLayout1.prototype, "events", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */])
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]) === "function" && _a || Object)
     ], ActionSheetLayout1.prototype, "content", void 0);
     ActionSheetLayout1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'action-sheet-layout-1',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\action-sheet\layout-1\action-sheet.html"*/'<!--- Theme Parallax - Product -->\n\n<ion-header>\n\n  <ion-navbar transparent [ngClass]="{\'active\':isClassActive()}">\n\n    <button ion-button menuToggle>\n\n      <ion-icon [name]="menu"></ion-icon>\n\n    </button>\n\n    <ion-title *ngIf="data != null">{{data.headerTitle}}</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content elastic-header *ngIf="data != null">\n\n  <!-- Parallax Big Image -->\n\n  <div id="elastic-header">\n\n    <div background-size [ngStyle]="{\'background-image\': \'url(\' + headerImage + \')\'}" *ngFor="let item of data.items;let i = index">\n\n      <div title-block>\n\n        <ion-item transparent no-lines (click)="onEvent(\'onItemClick\', data)">\n\n          <!-- Parallax Title -->\n\n          <h2 text-wrap parallax-title>{{item.title}}</h2>\n\n          <!-- Parallax Subtitle -->\n\n          <h3 text-wrap parallax-subtitle>{{item.subtitle}}</h3>\n\n          <div item-content>\n\n            <button item-end ion-button ion-text button-action-shit (click)="presentActionSheet(data)">\n\n                  <ion-icon  [name]="data.shareIcon"></ion-icon>\n\n                </button>\n\n          </div>\n\n        </ion-item>\n\n      </div>\n\n    </div>\n\n    <!-- Description Products -->\n\n    <ion-item no-lines no-padding small-description *ngFor="let item of data.items;let i = index">\n\n      <!-- Name Category-->\n\n      <span new-category text-uppercase>{{item.category}}</span>\n\n      <ion-badge float-right text-uppercase badge-clear no-padding (click)="onEvent(\'onProceed\', item, $event)">{{item.button}}</ion-badge>\n\n      <p padding-left margin-top margin-bottom parallax-description text-wrap>{{item.description}}</p>\n\n    </ion-item>\n\n  </div>\n\n  <!--Content-->\n\n  <ion-grid no-padding *ngIf="data != null">\n\n    <ion-row>\n\n      <ion-col col-12 *ngFor="let item of data.items;let i = index" (click)="onEvent(\'onItemClick\', item)">\n\n        <!--Content With Text-->\n\n        <ion-item no-lines *ngFor="let productDescription of item.productDescriptions">\n\n          <p parallax-description text-wrap>{{productDescription.description}}</p>\n\n        </ion-item>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\action-sheet\layout-1\action-sheet.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */]])
+        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */]) === "function" && _b || Object])
     ], ActionSheetLayout1);
     return ActionSheetLayout1;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=action-sheet-layout-1.js.map

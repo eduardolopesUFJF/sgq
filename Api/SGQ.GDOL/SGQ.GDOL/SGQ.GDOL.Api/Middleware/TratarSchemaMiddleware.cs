@@ -26,8 +26,11 @@ namespace SGQ.GDOL.Api.Middleware
                 CredenciaisBanco.Schema = "BPOSSAS_GDOL";
                 CredenciaisBanco.Cliente = "GDOL";
 
-                var path = context.Request.Path;
-                Log.Fatal("Header com schema enviado vazio no path: \n" + path + "\n\n");
+                if (!context.Request.Path.Equals("/api/cliente/") && !context.Request.Path.Equals("/api/cliente/true"))
+                {
+                    var path = context.Request.Path;
+                    Log.Fatal("Header com schema enviado vazio no path: \n" + path + "\n\n");
+                }
             }
             else
             {

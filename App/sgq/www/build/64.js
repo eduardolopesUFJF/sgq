@@ -88,7 +88,7 @@ var SwipeToDismissLayout3 = /** @class */ (function () {
     ], SwipeToDismissLayout3.prototype, "events", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */])
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]) === "function" && _a || Object)
     ], SwipeToDismissLayout3.prototype, "content", void 0);
     SwipeToDismissLayout3 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -97,6 +97,7 @@ var SwipeToDismissLayout3 = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], SwipeToDismissLayout3);
     return SwipeToDismissLayout3;
+    var _a;
 }());
 
 //# sourceMappingURL=swipe-to-dismiss-layout-3.js.map

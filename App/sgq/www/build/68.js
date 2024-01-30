@@ -107,7 +107,7 @@ var GoogleCardLayout2 = /** @class */ (function () {
     ], GoogleCardLayout2.prototype, "events", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */])
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]) === "function" && _a || Object)
     ], GoogleCardLayout2.prototype, "content", void 0);
     GoogleCardLayout2 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -116,6 +116,7 @@ var GoogleCardLayout2 = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], GoogleCardLayout2);
     return GoogleCardLayout2;
+    var _a;
 }());
 
 //# sourceMappingURL=google-card-layout-2.js.map

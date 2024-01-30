@@ -98,7 +98,7 @@ var AppearanceAnimationLayout4 = /** @class */ (function () {
     ], AppearanceAnimationLayout4.prototype, "events", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */])
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]) === "function" && _a || Object)
     ], AppearanceAnimationLayout4.prototype, "content", void 0);
     AppearanceAnimationLayout4 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -107,6 +107,7 @@ var AppearanceAnimationLayout4 = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], AppearanceAnimationLayout4);
     return AppearanceAnimationLayout4;
+    var _a;
 }());
 
 //# sourceMappingURL=appearance-animation-layout-4.js.map

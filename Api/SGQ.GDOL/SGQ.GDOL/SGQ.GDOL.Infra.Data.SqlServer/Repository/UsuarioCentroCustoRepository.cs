@@ -11,33 +11,22 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Repository
 {
     public class UsuarioCentroCustoRepository : BaseRepository<UsuarioCentroCusto>, IUsuarioCentroCustoRepository
     {
-        private readonly ServiceContext _serviceContext;
-
-        public UsuarioCentroCustoRepository(ServiceContext context) : base (context)
+        private readonly IUsuarioRepository _usuarioRepository;
+        public UsuarioCentroCustoRepository(ServiceContext context, IUsuarioRepository usuarioRepository) : base (context)
         {
-            _serviceContext = context;
+            _usuarioRepository = usuarioRepository;
         }
 
         public List<int> ObterCentrosCustoPorUsuario(string usuario)
         {
-            bool? possuiLimitacao = false;
-
-            var usuarioBD = _serviceContext.Usuario.FirstOrDefault(x => x.Login.Equals(usuario, StringComparison.InvariantCultureIgnoreCase) && x.Delete.HasValue && !x.Delete.Value);
-            if (usuarioBD != null) 
-            {
-                possuiLimitacao = usuarioBD.CentroCustoRestrito;
-            }
-            else
-            {
-                Log.Fatal("\nUsuario nao encontrado: ConnectionString: " + _serviceContext.Database.GetDbConnection().ConnectionString + "\nusuario: " + usuario + "\n");
-            }
+            bool possuiLimitacao = _usuarioRepository.PossuiCentroCustoRestrito(usuario);
 
             List<int> centrosCusto = null;
-            if(possuiLimitacao.HasValue && possuiLimitacao.Value)
+            if(possuiLimitacao)
             {
-                centrosCusto = _serviceContext.UsuarioCentroCusto.Include(x => x.Usuario).Where(x => x.Usuario.Login.ToUpper().Equals(usuario.ToUpper())).Select(x => x.IdCentroCusto).ToList();
+                centrosCusto = DbSet.AsNoTracking().Include(x => x.Usuario).Where(x => x.Usuario.Login.ToUpper().Equals(usuario.ToUpper())).Select(x => x.IdCentroCusto).ToList();
             }
-            
+
             return centrosCusto;
         }
     }

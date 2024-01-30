@@ -41,7 +41,7 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Repository
 
                 return obraDB;
             }
-            
+
         }
 
         public List<Obra> ObterTodasAtivasSemInclude(string usuario)

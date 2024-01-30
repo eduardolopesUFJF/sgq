@@ -7,5 +7,6 @@ namespace SGQ.GDOL.Domain.UsuarioRoot.Repository
     {
         int Logar(UsuarioLoginDTO usuarioLoginDTO);
         int? ObterFuncionarioVinculado(string nomeUsuario);
+        bool PossuiCentroCustoRestrito(string nomeUsuario);
     }
 }

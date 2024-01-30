@@ -404,7 +404,7 @@ var StickyListHeaderLayout3 = /** @class */ (function () {
     ], StickyListHeaderLayout3.prototype, "events", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */])
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* Content */]) === "function" && _a || Object)
     ], StickyListHeaderLayout3.prototype, "content", void 0);
     StickyListHeaderLayout3 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -413,6 +413,7 @@ var StickyListHeaderLayout3 = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], StickyListHeaderLayout3);
     return StickyListHeaderLayout3;
+    var _a;
 }());
 
 //# sourceMappingURL=sticky-list-header-layout-3.js.map

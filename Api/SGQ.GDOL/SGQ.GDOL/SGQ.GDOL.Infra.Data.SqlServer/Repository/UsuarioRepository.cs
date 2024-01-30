@@ -1,4 +1,5 @@
-﻿using SGQ.GDOL.Domain.UsuarioRoot.DTO;
+﻿using Microsoft.EntityFrameworkCore;
+using SGQ.GDOL.Domain.UsuarioRoot.DTO;
 using SGQ.GDOL.Domain.UsuarioRoot.Entity;
 using SGQ.GDOL.Domain.UsuarioRoot.Repository;
 using SGQ.GDOL.Infra.Data.SqlServer.Context;
@@ -66,6 +67,18 @@ namespace SGQ.GDOL.Infra.Data.SqlServer.Repository
                 }
             }
             return 1;
+        }
+
+        public bool PossuiCentroCustoRestrito(string nomeUsuario)
+        {
+            var usuarioBD = DbSet.AsNoTracking().FirstOrDefault(x => x.Login.Equals(nomeUsuario, StringComparison.InvariantCultureIgnoreCase) 
+                                                                                                     && x.Delete.HasValue && !x.Delete.Value);
+            if (usuarioBD != null && usuarioBD.CentroCustoRestrito.HasValue && usuarioBD.CentroCustoRestrito.Value)
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }
