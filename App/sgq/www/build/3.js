@@ -212,7 +212,11 @@ var SelectLayout1 = /** @class */ (function () {
     ], SelectLayout1.prototype, "events", void 0);
     SelectLayout1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+<<<<<<< HEAD
+            selector: 'select-layout-1',template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/core/select/layout-1/select.html"*/'<ion-item color="secondary" no-lines *ngIf="data != null">\n    <ion-label>{{data.title}}</ion-label>\n    <ion-select [(ngModel)]="data.selectedItem" multiple="false">\n        <ion-option value="0">Selecione</ion-option>\n        <ion-option *ngFor="let item of data.items; let i= index" [value]="item.id">{{item.title}}</ion-option>\n    </ion-select>\n</ion-item>'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/core/select/layout-1/select.html"*/
+=======
             selector: 'select-layout-1',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\select\layout-1\select.html"*/'<ion-item color="secondary" no-lines *ngIf="data != null">\n\n    <ion-label>{{data.title}}</ion-label>\n\n    <ion-select [(ngModel)]="data.selectedItem" multiple="false">\n\n        <ion-option value="0">Selecione</ion-option>\n\n        <ion-option *ngFor="let item of data.items; let i= index" [value]="item.id">{{item.title}}</ion-option>\n\n    </ion-select>\n\n</ion-item>'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\select\layout-1\select.html"*/
+>>>>>>> 1a8b13dc8a7e16c35a632b42a8cb34876192fe7d
         }),
         __metadata("design:paramtypes", [])
     ], SelectLayout1);
@@ -255,8 +259,13 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
+<<<<<<< HEAD
+            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+            if (y = 0, t) op = [op[0] & 2, t.value];
+=======
             if (f = 1, y && (t = y[op[0] & 2 ? "return" : op[0] ? "throw" : "next"]) && !(t = t.call(y, op[1])).done) return t;
             if (y = 0, t) op = [0, t.value];
+>>>>>>> 1a8b13dc8a7e16c35a632b42a8cb34876192fe7d
             switch (op[0]) {
                 case 0: case 1: t = op; break;
                 case 4: _.label++; return { value: op[1], done: false };
@@ -363,7 +372,11 @@ var LoginLayout2 = /** @class */ (function () {
     ], LoginLayout2.prototype, "events", void 0);
     LoginLayout2 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+<<<<<<< HEAD
+            selector: 'login-layout-2',template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/core/login/layout-2/login.html"*/'<ion-content has-header *ngIf="data != null" background-size style="background-color: white;">\n  <ion-grid no-padding *ngIf="data != null">\n    <ion-row padding-left padding-right align-items-center>\n      <ion-col *ngIf="data.possuiLogo" text-center col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n        <img [src]="data.logo">\n      </ion-col>\n      <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n        <ion-item transparent text-center no-lines>\n          <h1 ion-text login-title no-margin text-wrap text-capitalize>{{data.title}}</h1>\n        </ion-item>\n        <form #loginForm="ngForm">\n          <ion-item text-center transparent>\n            <ion-label stacked>EMPRESA</ion-label>\n            <ionic-selectable item-content [(ngModel)]="empresa"\n                [items]="data.selectData.items" itemValueField="title" itemTextField="title" [canSearch]="true" name="empresa" required>\n            </ionic-selectable>\n          </ion-item>\n          <!---Input field username-->\n          <ion-item text-center transparent>\n            <ion-label stacked>{{data.labelUsername}}</ion-label>\n            <ion-input text-center required type="text" [placeholder]="data.username" [(ngModel)]="usuario" name="usuario"></ion-input>\n          </ion-item>\n          <!---Input field password-->\n          <ion-item text-center transparent>\n            <ion-label stacked>{{data.labelPassword}}</ion-label>\n            <ion-input required text-center [type]="passwordType" clearOnEdit="false" [placeholder]="data.password"\n              [(ngModel)]="senha" name="senha" style="margin: 0 !important;"></ion-input>\n            <ion-icon item-end name="eye" class="passwordIcon" (click)="hideShowPassword()"></ion-icon>\n          </ion-item>\n          <ion-item transparent>\n            <ion-label>Salvar Senha</ion-label>\n            <ion-checkbox [(ngModel)]="salvarSenha" name="salvarSenha" (ionChange)="onEvent(\'onCheckSavePassword\')"></ion-checkbox>\n          </ion-item>\n          <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: black !important;"\n            (click)="onEvent(\'onLogin\', loginForm.valid)">{{data.login}}</button>\n          <button *ngIf="data.possuiRegistrar" ion-button default-button block text-capitalize margin-bottom (click)="onEvent(\'onRegister\')">{{data.register}}</button>\n          <button *ngIf="data.possuiEsqueciSenha" ion-button button-clear text-capitalize clear float-right no-padding\n            no-margin>{{data.forgotPassword}}</button>\n        </form>\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/core/login/layout-2/login.html"*/
+=======
             selector: 'login-layout-2',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\login\layout-2\login.html"*/'<ion-content has-header *ngIf="data != null" background-size style="background-color: white;">\n\n  <ion-grid no-padding *ngIf="data != null">\n\n    <ion-row padding-left padding-right align-items-center>\n\n      <ion-col *ngIf="data.possuiLogo" text-center col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n\n        <img [src]="data.logo">\n\n      </ion-col>\n\n      <ion-col no-padding col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>\n\n        <ion-item transparent text-center no-lines>\n\n          <h1 ion-text login-title no-margin text-wrap text-capitalize>{{data.title}}</h1>\n\n        </ion-item>\n\n        <form #loginForm="ngForm">\n\n          <ion-item text-center transparent>\n\n            <ion-label stacked>EMPRESA</ion-label>\n\n            <ionic-selectable item-content [(ngModel)]="empresa"\n\n                [items]="data.selectData.items" itemValueField="title" itemTextField="title" [canSearch]="true" name="empresa" required>\n\n            </ionic-selectable>\n\n          </ion-item>\n\n          <!---Input field username-->\n\n          <ion-item text-center transparent>\n\n            <ion-label stacked>{{data.labelUsername}}</ion-label>\n\n            <ion-input text-center required type="text" [placeholder]="data.username" [(ngModel)]="usuario" name="usuario"></ion-input>\n\n          </ion-item>\n\n          <!---Input field password-->\n\n          <ion-item text-center transparent>\n\n            <ion-label stacked>{{data.labelPassword}}</ion-label>\n\n            <ion-input required text-center [type]="passwordType" clearOnEdit="false" [placeholder]="data.password"\n\n              [(ngModel)]="senha" name="senha" style="margin: 0 !important;"></ion-input>\n\n            <ion-icon item-end name="eye" class="passwordIcon" (click)="hideShowPassword()"></ion-icon>\n\n          </ion-item>\n\n          <ion-item transparent>\n\n            <ion-label>Salvar Senha</ion-label>\n\n            <ion-checkbox [(ngModel)]="salvarSenha" name="salvarSenha" (ionChange)="onEvent(\'onCheckSavePassword\')"></ion-checkbox>\n\n          </ion-item>\n\n          <button ion-button default-button block text-capitalize box-shadow margin-bottom style="background-color: black !important;"\n\n            (click)="onEvent(\'onLogin\', loginForm.valid)">{{data.login}}</button>\n\n          <button *ngIf="data.possuiRegistrar" ion-button default-button block text-capitalize margin-bottom (click)="onEvent(\'onRegister\')">{{data.register}}</button>\n\n          <button *ngIf="data.possuiEsqueciSenha" ion-button button-clear text-capitalize clear float-right no-padding\n\n            no-margin>{{data.forgotPassword}}</button>\n\n        </form>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\login\layout-2\login.html"*/
+>>>>>>> 1a8b13dc8a7e16c35a632b42a8cb34876192fe7d
         }),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__utils_toast_service__["a" /* ToastService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__utils_toast_service__["a" /* ToastService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]) === "function" && _b || Object])
     ], LoginLayout2);
@@ -410,7 +423,11 @@ var SelectLayout3 = /** @class */ (function () {
     ], SelectLayout3.prototype, "events", void 0);
     SelectLayout3 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+<<<<<<< HEAD
+            selector: 'select-layout-3',template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/core/select/layout-3/select.html"*/'<ion-item color="secondary" no-lines *ngIf="data != null">\n    <ion-label>{{data.title}}</ion-label>\n    <ion-select [(ngModel)]="data.selectedItem" multiple="false" interface="action-sheet">\n        <ion-option *ngFor="let item of data.items; let i= index" [value]="item.id">{{item.title}}</ion-option>\n    </ion-select>\n</ion-item>\n'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/core/select/layout-3/select.html"*/
+=======
             selector: 'select-layout-3',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\select\layout-3\select.html"*/'<ion-item color="secondary" no-lines *ngIf="data != null">\n\n    <ion-label>{{data.title}}</ion-label>\n\n    <ion-select [(ngModel)]="data.selectedItem" multiple="false" interface="action-sheet">\n\n        <ion-option *ngFor="let item of data.items; let i= index" [value]="item.id">{{item.title}}</ion-option>\n\n    </ion-select>\n\n</ion-item>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\select\layout-3\select.html"*/
+>>>>>>> 1a8b13dc8a7e16c35a632b42a8cb34876192fe7d
         }),
         __metadata("design:paramtypes", [])
     ], SelectLayout3);
@@ -587,7 +604,11 @@ var LoginPage = /** @class */ (function () {
         });
     };
     LoginPage = __decorate([
+<<<<<<< HEAD
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"/Users/user223953/Desktop/sgq/App/sgq/src/pages/login/login.component.html"*/'<login-layout-2 [data]="data" [events]="events"></login-layout-2>\n'/*ion-inline-end:"/Users/user223953/Desktop/sgq/App/sgq/src/pages/login/login.component.html"*/,
+=======
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\login\login.component.html"*/'<login-layout-2 [data]="data" [events]="events"></login-layout-2>\n\n'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\pages\login\login.component.html"*/,
+>>>>>>> 1a8b13dc8a7e16c35a632b42a8cb34876192fe7d
             providers: [__WEBPACK_IMPORTED_MODULE_4__services_usuario_service__["a" /* UsuarioService */], __WEBPACK_IMPORTED_MODULE_7__services_cliente_service__["a" /* ClienteService */]]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["o" /* NavController */],

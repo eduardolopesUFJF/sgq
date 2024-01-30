@@ -8,7 +8,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ExpandableLayout1Module", function() { return ExpandableLayout1Module; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(44);
+<<<<<<< HEAD
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__expandable_layout_1__ = __webpack_require__(844);
+=======
+<<<<<<< HEAD
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__expandable_layout_1__ = __webpack_require__(844);
+=======
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__expandable_layout_1__ = __webpack_require__(845);
+>>>>>>> 1a8b13dc8a7e16c35a632b42a8cb34876192fe7d
+>>>>>>> affc1734646cc161b43086cc33999d1198ca017f
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -42,7 +50,15 @@ var ExpandableLayout1Module = /** @class */ (function () {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 844:
+=======
+<<<<<<< HEAD
+/***/ 844:
+=======
+/***/ 845:
+>>>>>>> 1a8b13dc8a7e16c35a632b42a8cb34876192fe7d
+>>>>>>> affc1734646cc161b43086cc33999d1198ca017f
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
