@@ -57,7 +57,7 @@ export class VerificacaoPage {
             if (this.servico.status == 0) {
                 this.servico.situacao = 'Em aberto';
                 this.criarAtualizacaoStatus();
-            } else if (this.servico.status == 1 && this.servico.inspecoesObra.some(x => x.status == 0)) {
+            } else if (this.servico.status == 1 && !this.servico.inspecoesObra.every(x => x.status == 2 || x.status == 1)) {
                 this.servico.status = 0;
                 this.messageService.exibirMensagem("Não foi possível finalizar o Serviço, existem inspeções em aberto.");
             } else {
