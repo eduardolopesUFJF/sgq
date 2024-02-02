@@ -50,55 +50,14 @@ namespace SGQ.GDOL.Api.Middleware
             {
                 CredenciaisBanco.Schema = "BPOSSAS_SMART";
             }
-            //Casos especiais como Cristo Rei e Smart House devem ser colocados manualmente aqui
-            if (CredenciaisBanco.Schema.Contains(" "))
-            {
-                CredenciaisBanco.Schema.Replace(" ", "");
-            }
-
-            //if (CredenciaisBanco.Schema.Equals("BPOSSAS_CONSTROI GOMES"))
-            //{
-            //    CredenciaisBanco.Schema = "BPOSSAS_CONSTROIGOMES";
-            //}
-            //if (CredenciaisBanco.Schema.Equals("BPOSSAS_REFORME FACIL"))
-            //{
-            //    CredenciaisBanco.Schema = "BPOSSAS_REFORMEFACIL";
-            //}
-            //if (CredenciaisBanco.Schema.Equals("BPOSSAS_MELHOR LAR"))
-            //{
-            //    CredenciaisBanco.Schema = "BPOSSAS_MELHORLAR";
-            //}
-            //if (CredenciaisBanco.Schema.Equals("BPOSSAS_MELO BORGES"))
-            //{
-            //    CredenciaisBanco.Schema = "BPOSSAS_MELOBORGES";
-            //}
-            //if (CredenciaisBanco.Schema.Equals("BPOSSAS_RIO MANSO"))
-            //{
-            //    CredenciaisBanco.Schema = "BPOSSAS_RIOMANSO";
-            //}
-            //if (CredenciaisBanco.Schema.Equals("BPOSSAS_MUDE CONSTRUTORA"))
-            //{
-            //    CredenciaisBanco.Schema = "BPOSSAS_MUDECONSTRUTORA";
-            //}
-            //if (CredenciaisBanco.Schema.Equals("BPOSSAS_GG CONSTRUTORA"))
-            //{
-            //    CredenciaisBanco.Schema = "BPOSSAS_GGCONSTRUTORA";
-            //}
-            //if (CredenciaisBanco.Schema.Equals("BPOSSAS_VASCONCELOS COPARI"))
-            //{
-            //    CredenciaisBanco.Schema = "BPOSSAS_VASCONCELOSCOPARI";
-            //}
-            //if (CredenciaisBanco.Schema.Equals("BPOSSAS_METRO A MAIS"))
-            //{
-            //    CredenciaisBanco.Schema = "BPOSSAS_METROAMAIS";
-            //}
-            //if (CredenciaisBanco.Schema.Equals("BPOSSAS_SMART CONSTRUTORA"))
-            //{
-            //    CredenciaisBanco.Schema = "BPOSSAS_SMARTCONSTRUTORA";
-            //}
             if (CredenciaisBanco.Schema.Equals("BPOSSAS_GDOL") || CredenciaisBanco.Schema.Equals("BPOSSAS_BPOSSAS_CONTROLE_CLIENTES"))
             {
                 CredenciaisBanco.Schema = "BPOSSAS_GDOLSISTEMAS";
+            }
+            //Casos especiais como Cristo Rei, Smart House e GDOL devem ser colocados manualmente aqui
+            if (CredenciaisBanco.Schema.Contains(" "))
+            {
+                CredenciaisBanco.Schema.Replace(" ", "");
             }
 
             CredenciaisBanco.Usuario = "BPOSSAS_aplicativo";
