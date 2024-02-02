@@ -57,7 +57,7 @@ namespace SGQ.GDOL.Api.Middleware
             //Casos especiais como Cristo Rei, Smart House e GDOL devem ser colocados manualmente aqui
             if (CredenciaisBanco.Schema.Contains(" "))
             {
-                CredenciaisBanco.Schema.Replace(" ", "");
+                CredenciaisBanco.Schema = CredenciaisBanco.Schema.Replace(" ", "");
             }
 
             CredenciaisBanco.Usuario = "BPOSSAS_aplicativo";
