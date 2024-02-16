@@ -74,7 +74,7 @@ var Spinner = /** @class */ (function () {
     ], Spinner.prototype, "data", void 0);
     Spinner = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'spinner',template:/*ion-inline-start:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\spinner\spinner.html"*/'<img [src]="path" />'/*ion-inline-end:"C:\Arquivos\Freelancer\SGQ\App\sgq\src\core\spinner\spinner.html"*/
+            selector: 'spinner',template:/*ion-inline-start:"C:\Users\jluca\OneDrive\Documents\GitHub\sgq\App\sgq\src\core\spinner\spinner.html"*/'<img [src]="path" />'/*ion-inline-end:"C:\Users\jluca\OneDrive\Documents\GitHub\sgq\App\sgq\src\core\spinner\spinner.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], Spinner);

@@ -58,7 +58,7 @@ export class RealizadoPorPage {
         this.idCentroCusto = obra.idCentroCusto;
         this.descricaoCentroCusto = obra.descricao;
 
-        this.funcionarios = [...this.funcionarios.filter(x => x.idCentroCusto == null || x.idCentroCusto == this.idCentroCusto)];
+        this.funcionarios = [...this.funcionarios];
     }
 
     async obterFornecedores() {
