@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { Platform, Nav, MenuController, AlertController, Events } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
+import { SplashScreen } from '@capacitor/splash-screen';
 import { Network } from '@ionic-native/network';
 import { MessageService } from '../utils/message-service';
 import { LoadingService } from '../utils/loading-service';
@@ -50,11 +50,10 @@ export class MyApp {
     public alertCtrl: AlertController,
     public checklistService: ChecklistService,
     public network: Network,
-    public events: Events,
-    splashScreen: SplashScreen) {
+    public events: Events) {
     platform.ready().then(() => {
       statusBar.styleDefault();
-      splashScreen.hide();
+      SplashScreen.hide();
       statusBar.backgroundColorByHexString('rgb(33,177,75)');
       this.definirRoot();
       this.definirEventoMenu();

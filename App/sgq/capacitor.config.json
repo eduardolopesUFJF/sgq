@@ -8,7 +8,7 @@
     "preferences": {
       "ScrollEnabled": "false",
       "android-minSdkVersion": "31",
-      "android-targetSdkVersion": "31",
+      "android-targetSdkVersion": "33",
       "BackupWebStorage": "none",
       "SplashMaintainAspectRatio": "true",
       "FadeSplashScreenDuration": "300",
@@ -19,7 +19,11 @@
   "plugins": {
     "SplashScreen": {
       "showSpinner": true,
-      "launchShowDuration": 10000
+      "launchAutoHide": true,
+      "splashFullScreen": true,
+      "splashImmersive": true,
+      "launchShowDuration": 7000,
+      "androidSplashResourceName": "splash"
     }
   }
 }
