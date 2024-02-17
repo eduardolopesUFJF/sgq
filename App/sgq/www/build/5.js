@@ -247,10 +247,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
         function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
@@ -281,6 +282,13 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+var __spreadArrays = (this && this.__spreadArrays) || function () {
+    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+            r[k] = a[j];
+    return r;
+};
 
 
 
@@ -308,8 +316,8 @@ var VerificacaoPage = /** @class */ (function () {
         this.itensBackup = [];
         this.inspecaoBackup = new __WEBPACK_IMPORTED_MODULE_3__models_inspecao__["a" /* Inspecao */]();
         this.servico = navParams.data.servico;
-        this.inspecoes = this.ordenar(this.servico.inspecoesObra).slice();
-        this.inspecoesBackup = this.servico.inspecoesObra.slice();
+        this.inspecoes = __spreadArrays(this.ordenar(this.servico.inspecoesObra));
+        this.inspecoesBackup = __spreadArrays(this.servico.inspecoesObra);
         this.obterItemChecklist();
         this.broadcomb = navParams.data.broadcomb + " >> " + this.servico.descricao;
     }
@@ -404,7 +412,7 @@ var VerificacaoPage = /** @class */ (function () {
                 });
                 _this.inspecoes.unshift(inspecao);
                 _this.inspecoesBackup.unshift(inspecao);
-                _this.servico.inspecoesObra = _this.inspecoes.slice();
+                _this.servico.inspecoesObra = __spreadArrays(_this.inspecoes);
                 _this.criarInspecao(inspecao);
             }
         });
@@ -429,17 +437,17 @@ var VerificacaoPage = /** @class */ (function () {
                 data.inspecao.qtdRA = data.inspecao.inspecaoObraItens.filter(function (x) { return x.inspecao2 == 'A'; }).length;
                 var index = _this.inspecoesBackup.findIndex(function (x) { return data.inspecao.id != 0 ? (x.id == data.inspecao.id) : (x.idGuidInspecao == data.inspecao.idGuidInspecao); });
                 _this.inspecoesBackup[index] = data.inspecao;
-                _this.inspecoes = _this.inspecoesBackup.slice();
+                _this.inspecoes = __spreadArrays(_this.inspecoesBackup);
                 _this.editarInspecao(data.inspecao, "Realização da verificação");
             }
             else {
-                data.inspecao.inspecaoObraItens = _this.itensBackup.slice();
+                data.inspecao.inspecaoObraItens = __spreadArrays(_this.itensBackup);
                 data.inspecao.status = _this.statusBackup;
                 data.inspecao.idFuncionarioAprovado = _this.idFuncionarioAprovadoBackup;
                 data.inspecao.idFuncionarioInspecionado = _this.idFuncionarioInspecionadoBackup;
                 var index = _this.inspecoesBackup.findIndex(function (x) { return data.inspecao.id != 0 ? (x.id == data.inspecao.id) : (x.idGuidInspecao == data.inspecao.idGuidInspecao); });
                 _this.inspecoesBackup[index] = data.inspecao;
-                _this.inspecoes = _this.inspecoesBackup.slice();
+                _this.inspecoes = __spreadArrays(_this.inspecoesBackup);
             }
         });
     };
@@ -452,8 +460,8 @@ var VerificacaoPage = /** @class */ (function () {
             if (inspecao) {
                 var index = _this.inspecoesBackup.findIndex(function (x) { return inspecao.id != 0 ? (x.id == inspecao.id) : (x.idGuidInspecao == inspecao.idGuidInspecao); });
                 _this.inspecoesBackup[index] = inspecao;
-                _this.inspecoes = _this.inspecoesBackup.slice();
-                _this.servico.inspecoesObra = _this.inspecoes.slice();
+                _this.inspecoes = __spreadArrays(_this.inspecoesBackup);
+                _this.servico.inspecoesObra = __spreadArrays(_this.inspecoes);
                 _this.editarInspecao(inspecao, "Edição da verificação");
             }
             else {
@@ -505,7 +513,7 @@ var VerificacaoPage = /** @class */ (function () {
     };
     VerificacaoPage.prototype.filtrar = function (valor) {
         if (valor.length == 0) {
-            this.inspecoes = this.inspecoesBackup.slice();
+            this.inspecoes = __spreadArrays(this.inspecoesBackup);
         }
         else {
             this.inspecoes = this.inspecoesBackup.filter(function (item) {

@@ -130,6 +130,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __spreadArrays = (this && this.__spreadArrays) || function () {
+    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+            r[k] = a[j];
+    return r;
+};
 
 
 
@@ -153,7 +160,7 @@ var CadastroItemPage = /** @class */ (function () {
         this.itens = [];
         this.isEdicao = false;
         this.checklist = this.navParams.data.checklist;
-        this.itens = this.checklist.itensChecklistServico.slice();
+        this.itens = __spreadArrays(this.checklist.itensChecklistServico);
     }
     CadastroItemPage.prototype.voltar = function () {
         this.navCtrl.setRoot("HomePage");
@@ -196,7 +203,7 @@ var CadastroItemPage = /** @class */ (function () {
         }
     };
     CadastroItemPage.prototype.realizarConclusao = function () {
-        this.checklist.itensChecklistServico = this.itens.slice();
+        this.checklist.itensChecklistServico = __spreadArrays(this.itens);
         this.viewCtrl.dismiss(this.checklist);
     };
     CadastroItemPage = __decorate([

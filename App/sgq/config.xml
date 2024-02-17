@@ -22,13 +22,13 @@
     <preference name="SplashScreenDelay" value="3000" />
     <platform name="android">
         <allow-intent href="market:*" />
-        <edit-config file="app/src/main/AndroidManifest.xml" target="/manifest/application/activity" mode="merge">
-            <activity android:exported="true"/>
+        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application/activity">
+            <activity android:exported="true" />
         </edit-config>
-        <edit-config file="app/src/main/AndroidManifest.xml" target="/manifest/application/service" mode="merge">
+        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application/service">
             <service android:exported="true" />
         </edit-config>
-        <edit-config file="app/src/main/AndroidManifest.xml" target="/manifest/application/provider" mode="merge">
+        <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application/provider">
             <provider android:exported="true" />
         </edit-config>
         <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />

@@ -105,6 +105,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __spreadArrays = (this && this.__spreadArrays) || function () {
+    for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+    for (var r = Array(s), k = 0, i = 0; i < il; i++)
+        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
+            r[k] = a[j];
+    return r;
+};
 
 
 
@@ -167,14 +174,14 @@ var AppearanceAnimationLayout5 = /** @class */ (function () {
             }
         }
         if (this.dataBackup.length == 0) {
-            this.dataBackup = this.data.slice();
+            this.dataBackup = __spreadArrays(this.data);
         }
     };
     AppearanceAnimationLayout5.prototype.filtrar = function (valor) {
         var _this = this;
         this.animacaoAtiva = false;
         if (valor.length == 0) {
-            this.data = this.dataBackup.slice();
+            this.data = __spreadArrays(this.dataBackup);
         }
         else {
             this.data = this.dataBackup.filter(function (item) {
@@ -182,7 +189,7 @@ var AppearanceAnimationLayout5 = /** @class */ (function () {
             });
         }
         if (this.config.filtrarSituacao) {
-            this.data = this.data.filter(function (x) { return x.situacao == (_this.situacao == 0 ? "Em aberto" : "Finalizado"); }).slice();
+            this.data = __spreadArrays(this.data.filter(function (x) { return x.situacao == (_this.situacao == 0 ? "Em aberto" : "Finalizado"); }));
         }
     };
     AppearanceAnimationLayout5.prototype.verificaNovoItem = function (item) {
@@ -272,10 +279,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
         function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
